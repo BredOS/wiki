@@ -13,7 +13,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 ## 🌟 概览
 
 BredOS 主页 欢迎来到 BredOS 文档！BredOS 是一个基于 Arch 的用户友好型 Linux 发行版，专门为基于 ARM 的单板计算机（SBC）设计。本文档将指导您完成 BredOS 的安装、配置和使用。
-The documentation will guide you through the installation, configuration, and usage of BredOS.
+文档将引导您安装、配置和使用 BredOS 。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
@@ -45,7 +45,7 @@ BredOS 旨在为基于 ARM 的单板计算机用户提供无缝且用户友好�
 - **:desktop_compute: 支持的设备**:
   - Radxa Rock 5 A/B/C
   - Radxa Rock 4 C
-  - Radxa NX5 Kit
+  - Radxa NX5 套件
   - IndieDroid Nova
   - 橙色Pi 5/5+
   - Khadas Edge 2
@@ -77,7 +77,7 @@ BredOS 使用 `pacman`，这是来自 Arch Linux 的软件包管理器。以下�
 
 ### ❓ Q: BredOS支持哪些设备？
 
-A: BredOS supports a variety of ARM-based single board computers, the complete list is available at [supported devices](#system-requirements).
+甲：BredOS 支持各种基于ARM的单个板电脑，完整列表可在 [支持的设备](#system-requires)。
 
 ### :countrockwise_arrows_buton: Q: 我如何更新 BredOS?
 
