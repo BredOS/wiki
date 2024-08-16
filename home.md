@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2024-08-16T10:07:28.898Z
+date: 2024-08-16T10:11:40.628Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -42,7 +42,7 @@ BredOS aims to provide a seamless and user-friendly experience for users of ARM-
   - Khadas Edge 2
   - Khadas VIM 4
   - Cool Pi 4B
-  - Fydetab Duo
+  - [Fydetab Duo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
 - **🧠 Minimum RAM**: 2 GB
 - **💾 Storage**: 16 GB microSD card or larger
 - **🌐 Network**: Optional
