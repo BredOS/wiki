@@ -2,7 +2,7 @@
 title: 目录
 description: null
 published: true
-date: 2024-08-16T10:11:40.628Z
+date: 2024-08-16T10：11：40.628Z
 tags: null
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -47,7 +47,7 @@ BredOS 旨在为基于 ARM 的单板计算机用户提供无缝且用户友好�
   - Khadas Edge 2
   - Khadas VIM 4
   - 酷皮4B
-  - [Fydetab Duo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
+  - [FydetabDuo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
 - **🧠 最小内存**: 2 GB
 - **💾 Storage**: 16 GB microSD card 或大于
 - **🌐 Network**: 可选的
