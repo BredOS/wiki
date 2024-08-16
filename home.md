@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2024-08-16T09:24:50.116Z
+date: 2024-08-16T10:07:28.898Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -12,6 +12,8 @@ dateCreated: 2022-08-24T12:37:36.410Z
 
 ## 🌟 Overview
 Welcome to the BredOS documentation! BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM-based single board computers (SBCs). This documentation will guide you through the installation, configuration, and usage of BredOS.
+
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
 ## 📚 Table of Contents
 1. [🔍 Introduction](#introduction)
