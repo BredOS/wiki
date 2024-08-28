@@ -1,22 +1,22 @@
 ---
-title: How To!
-description: Guides, tutorials and tips on how to install or use certain things in BredOS
+title: 如何发送到！
+description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
-date: 2024-08-28T05:48:43.860Z
+date: 2024-08-28T06:28:10.398Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
 ---
 
-\# 📚 How To!
+# 📚 如何发送！
 
-### **Description**
+### **描述**
 
-Guides, tutorials, and tips on how to install or use certain things in BredOS.
+关于如何在 BredOS 中安装或使用某些物品的指南、教程和提示。
 
-## 🛠️ Useful Links
+## 🛠️ 有用的链接
 
-- 🎥 How to play back DRM protected content (installing widevine)
-- 🐾 How to setup Panthor
+- [🎥 如何播放DRM 保护的内容(安装宽带)](/en/how-to/widevine-watch-drm-content)
+- :paw_prints：如何设置Panthor
 
-✨ Explore these guides to get the most out of BredOS!
+:sparkles：探索这些指南以获得最佳的 BredOS ！
