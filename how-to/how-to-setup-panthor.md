@@ -2,7 +2,7 @@
 title: 🐾 How to setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2024-08-31T15:34:57.748Z
+date: 2024-08-31T15:35:20.560Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -14,8 +14,7 @@ This guide walks you through the steps to enable Panthor on Mali GPUs present in
 
 # 🔧 Steps to Enable Panthor 
 
-## UEFI
-### 🖥️ 1. Initial Setup on UEFI 
+## 🖥️ 1. Initial Setup on UEFI 
 
 First, create the necessary directories for the DTB files:
 
