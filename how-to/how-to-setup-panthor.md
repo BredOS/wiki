@@ -2,7 +2,7 @@
 title: 🐾 How to setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2024-08-31T15:31:52.920Z
+date: 2024-08-31T15:34:57.748Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -27,6 +27,8 @@ Next, configure your UEFI settings. Boot into UEFI > Device Manager > Rockchip P
 
 - **Set `Config Table Mode` to `Device Tree`**
 - **Change `Support DTB override & overlays` to `Enabled`**
+
+![](/panthor/enable_tree_dtb_in_uefi.jpg)
 
 Press F10 to save and boot into your system (you can go back to the first UEFI screen and select `Continue`).
 
