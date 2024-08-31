@@ -2,7 +2,7 @@
 title: How to setup panthor 
 description: 
 published: true
-date: 2024-08-31T15:04:45.910Z
+date: 2024-08-31T15:30:16.803Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -14,7 +14,8 @@ This guide walks you through the steps to enable Panthor on Mali GPUs present in
 
 # 🔧 Steps to Enable Panthor 
 
-## 🖥️ 1. Initial Setup on EFI 
+## UEFI
+### 🖥️ 1. Initial Setup on UEFI 
 
 First, create the necessary directories for the DTB files:
 
@@ -22,7 +23,16 @@ First, create the necessary directories for the DTB files:
 sudo mkdir -p /boot/dtb/{base,overlays}
 ```
 
-## 📱 2. Setup for FydeTab Duo 
+Next, configure your UEFI settings. Boot into UEFI > Device Manager > Rockchip Platform Configuration > ACPI / Device Tree, and do the following:
+
+- **Set `Config Table Mode` to `Device Tree`**
+- **Change `Support DTB override & overlays` to `Enabled`**
+
+Press F10 to save and boot into your system (you can go back to the first UEFI screen and select `Continue`).
+
+
+
+### 📱 2. Setup for FydeTab Duo 
 If you are using a FydeTab Duo, copy the specific DTB file to the `base` folder:
 
 ```
@@ -30,7 +40,7 @@ sudo cp /boot/dtbs/rockchip/rk3588s-fydetab-duo.dtb /boot/dtb/base/
 sudo cp /boot/dtb/base/rk3588s-fydetab-duo.dtb /boot/dtb/base/rk3588s-tablet-12c-linux.dtb
 ```
 
-## 🛠️ 3. Setup for Other Boards 
+### 🛠️ 3. Setup for Other Boards 
 
 For other RK3588-based boards, replace `rk3588-board.dtb` with your actual device name:
 
