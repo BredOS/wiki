@@ -2,7 +2,7 @@
 title: 🐾 How to setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2024-09-01T15:58:41.436Z
+date: 2024-09-01T16:18:22.222Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -58,14 +58,18 @@ Regardless of the board you are using, copy the DTBO overlay file to enable Pant
 sudo cp /boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo /boot/dtb/overlays/
 ```
 Additionally, you need to modify the GRUB configuration:
+
+Open the GRUB configuration file
 ```
-# Open the GRUB configuration file
 sudo nano /etc/default/grub
+```
 
-# Comment out the following line by adding a `#` at the beginning:
+Comment out the following line by adding a `#` at the beginning:
+```
 # GRUB_DTB="dtbs/rockchip/rk3588s-fydetab-duo.dtb"
-
-# Update GRUB with the new configuration
+```
+ Update GRUB with the new configuration
+```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
