@@ -31,7 +31,7 @@ sudo pacman -Syu
 
 ## 步驟 2：添加 BredOS 多庫存儲庫
 
-要安裝 Steam 和必要的翻譯層，你需要添加 BredOS 多庫存儲庫。 用 root 權限的文字編輯器打開你的 `/etc/pacman.conf` 檔案。
+要安裝 Steam 和必要的翻譯層，你需要添加 BredOS 多庫存儲庫。 用 root 權限的文字編輯器打開你的 `/etc/pacman.conf` 檔案。 用 root 權限的文字編輯器打開你的 `/etc/pacman.conf` 檔案。
 
 ```sh
 sudo nano /etc/pacman.conf
@@ -72,7 +72,7 @@ sudo pacman -S steam
 
 ## 步驟 6：執行 Steam
 
-一切安裝完成後，你現在可以執行 Steam。 只需從應用啟動器中打開 steam 或在終端中輸入以下命令：
+一切安裝完成後，你現在可以執行 Steam。 只需從應用啟動器中打開 steam 或在終端中輸入以下命令： 只需從應用啟動器中打開 steam 或在終端中輸入以下命令：
 
 ```bash
 steam
