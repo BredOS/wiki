@@ -51,7 +51,7 @@ Si quieres instalar BredOS en el almacenamiento eMMC en lugar de usar una tarjet
 
 - [Imagen BredOS](#downloading-bredos).
 
-**📂 Descomprima todos los archivos incluyendo la imagen BredOS, que por defecto viene en un . archivo mg.xz y tenemos que descomprimirlo para convertirlo en un archivo .img.**
+\*\*📂 Descomprima todos los archivos incluyendo la imagen BredOS, que por defecto viene en un .
 
 - Lo primero que hay que hacer es instalar el controlador Rockchip que hemos descargado. Para esto, abre la carpeta `DriverAssitant_v5.0` y ejecuta el archivo `DriverInstall.exe`.
 
