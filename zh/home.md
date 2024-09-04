@@ -21,9 +21,9 @@ BredOS 主页 欢迎来到 BredOS 文档！BredOS 是一个基于 Arch 的用户
 
 1. [🔍 简介](#简介)
 2. [🚀 特征](#功能)
-3. [🛠️ 系统要求](#system-requirements)
+3. [🛠️ 系统要求](#系统要求)
 4. [💽 安装](/installation)
-5. [📦 Package Management](#package-management)
+5. [📦 包管理](#包管理)
 6. [🐞 疑难解答](#troubleshooting)
 7. [❓常见问题](#常见问题)
 8. [🌐 社区与支持](#社区与支持)
@@ -53,16 +53,16 @@ BredOS 旨在为基于 ARM 的单板计算机用户提供无缝且用户友好�
   - Cool Pi 4B
   - [FydetabDuo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
 - **🧠 最小内存**: 2 GB
-- **💾 Storage**: 16 GB microSD card 或大于
+- **💾 存储**：16 GB 或更大的 microSD 卡
 - **🌐 Network**: 可选的
 
-## :coly_disk: 安装
+## 💽 安装
 
 请参阅我们的 [安装指南](/installation) 页面以获取更多信息。
 
 ## 📦 包管理
 
-BredOS 使用 `pacman`，这是来自 Arch Linux 的软件包管理器。以下是一些常用命令： 以下是一些常见的命令：
+BredOS 使用 `pacman`，这是来自 Arch Linux 的软件包管理器。 以下是一些常见的命令：
 
 - 🔄 更新软件包列表：`sudo pacman -Syu`
 - ➕ Install a package: `sudo pacman -S [package_name]`
@@ -83,7 +83,7 @@ BredOS 使用 `pacman`，这是来自 Arch Linux 的软件包管理器。以下�
 
 答：您可以使用 `pacman` 软件包管理器通过命令 `sudo pacman -Syu` 更新 BredOS。
 
-### 问：在哪里可以找到更多的软件包？
+### 📦 Q: 我可以在哪里找到其他软件包？
 
 答：您可以在 Arch 用户仓库（AUR）中找到额外的软件包，并使用 `yay` 或 `paru` 安装它们。
 
@@ -92,12 +92,12 @@ BredOS 使用 `pacman`，这是来自 Arch Linux 的软件包管理器。以下�
 加入 BredOS 社区，获取支持、分享想法并为项目做出贡献：
 
 - [📱 Telegram](https://t.me/bredoslinux)
-- [:speech_balon: Discord](https://discord.gg/jwhuyKXaa)
+- [💬 Discord](https://discord.gg/jwhuyKXaa)
 - [💻 GitHub](http://github.com/BredOS)
 
 ## 🤝 贡献
 
-BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式进行贡献： 您可以通过以下方式做出贡献：
+BredOS 是一个开源项目，欢迎贡献！ 您可以通过以下方式做出贡献：
 
 - 🐛 报告错误和问题
 - 💻 提交补丁和改进
