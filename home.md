@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2024-08-16T18:32:54.710Z
+date: 2024-09-08T10:19:38.208Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -38,11 +38,11 @@ BredOS aims to provide a seamless and user-friendly experience for users of ARM-
 
 ## 🛠️ System Requirements
 - **🖥️ Supported Devices**: 
-	- Radxa Rock 5 A/B/C
-  - Radxa Rock 4 C
+	- Radxa Rock 5 A/B/B+/C/D
+  - Radxa Rock 4 C+
   - Radxa NX5 Kit
   - IndieDroid Nova
-  - Orange Pi 5/5+
+  - Orange Pi 5/5B/5+
   - Khadas Edge 2
   - Khadas VIM 4
   - Cool Pi 4B
