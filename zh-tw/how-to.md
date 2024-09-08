@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2024-09-08T09:39:47.295Z
+date: 2024-09-08T10:01:18.346Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -20,6 +20,6 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 
 - [🐾 How to setup Panthor on Mali GPUs with RK3588](/en/how-to/how-to-setup-panthor)
 
-- [🎮 How to install STEAM](/en/how-to/how-to-install-steam)
+- [🎮  How to Install STEAM on BredOS](/en/how-to/how-to-install-steam)
 
 ✨ Explore these guides to get the most out of BredOS!
