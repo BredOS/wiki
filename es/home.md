@@ -2,7 +2,7 @@
 title: Página web
 description: null
 published: true
-date: 2024-09-04T12:54:13.878Z
+date: 2024/09-08T10:19:38.208Z
 tags: null
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -43,11 +43,11 @@ BredOS tiene como objetivo proporcionar una experiencia fácil y amigable para l
 ## 🛠️ Requisitos del sistema
 
 - **🖥️ Dispositivos soportados**:
-  - Roca de Radxa 5 A/B/C
-  - Roca Radxa 4 C
+  - Roca de Radxa 5 A/B/B+/C/D
+  - Roca Radxa 4 C+
   - Kit Radxa NX5
   - Nova IndieDroid
-  - Pi Naranja 5/5+
+  - Pi Naranja 5/5B/5+
   - Borde Khadas 2
   - Khadas VIM 4
   - Pi Pi 4B
