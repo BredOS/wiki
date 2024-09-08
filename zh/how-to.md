@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
-date: 2024-09-08T14:17:07.609Z
+date: 2024-09-08T14：17：07.609Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -22,6 +22,6 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [🎮 How to install-steam] (/en/how to/how to install-steam)
 
-- [📶 How to use your device as a wireless hotspot](https://wiki.bredos.org/e/en/how-to/how-to-use-your-device-as-ap)
+- [:天线条: 如何将您的设备用作无线热点](https://wiki.bredos.org/e/en/ho-to/how to-use-your-device-as ap)
 
 :sparkles：探索这些指南以获得最佳的 BredOS ！
