@@ -2,7 +2,7 @@
 title: How to install STEAM
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2024-09-08T10:12:43.861Z
+date: 2024-09-08T10:15:37.655Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -69,7 +69,7 @@ You may need to add the **BredOS Multilib** repository to install Steam and the 
 If you need to uninstall Steam and reset the configuration to choose a different option:
 
 ```
-sudo pacman -Rnscu steam
+sudo pacman -Rnscu steam steam-libs-any #or steam-libs-rk3588 depending on your selection
 ```
 
 ## 🚀 Launch Steam
