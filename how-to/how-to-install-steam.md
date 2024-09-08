@@ -2,7 +2,7 @@
 title: 🎮 How to install STEAM
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2024-09-08T10:35:10.340Z
+date: 2024-09-08T10:37:40.932Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -13,7 +13,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 Welcome to the guide on how to install **Steam** on BredOS! Follow these simple steps to get Steam up and running on your system.
 
 ## 🛠️ Prerequisites
-> Note: Steam seems to work only in X11 desktops
+> Note: Steam seems to work only on X11 desktops. Also, it may not work on all devices (mainly non-RK3588 devices).
 {.is-info}
 
 - You need to have **BredOS** installed and running.
