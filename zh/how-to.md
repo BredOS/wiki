@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
-date: 2024-09-08T09:39:47.295Z
+date: 2024-09-08T10:01:18.346Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -20,6 +20,6 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [🐾 How to setup-pan-thor on Mali GPU with RK3588](/en/how to/how to setup-panthor)
 
-- [🎮 How to install STEAM](/en/how-to/how-to-install-steam)
+- [🎮 How to install-steam] (/en/how to/how to install-steam)
 
 :sparkles：探索这些指南以获得最佳的 BredOS ！
