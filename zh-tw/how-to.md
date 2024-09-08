@@ -17,6 +17,9 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 ## 🛠️ Useful Links
 
 - [🎥 How to play back DRM protected content (installing widevine)](/en/how-to/widevine-watch-drm-content)
+
 - [🐾 How to setup Panthor on Mali GPUs with RK3588](/en/how-to/how-to-setup-panthor)
+
+- [🎮  How to Install STEAM on BredOS](/en/how-to/how-to-install-steam)
 
 ✨ Explore these guides to get the most out of BredOS!
