@@ -1,8 +1,8 @@
 ---
-title: 如何使用您的设备作为无线热点
+title: ":trenna_bars: 如何使用您的设备作为无线热点"
 description: null
 published: true
-date: 2024-09-08T10:55:29.082Z
+date: 2024-09-08T14：15：47.669Z
 tags: null
 editor: markdown
 dateCreated: 2024-09-08T10：33：46.772Z
@@ -21,7 +21,7 @@ dateCreated: 2024-09-08T10：33：46.772Z
 > 支持 AP (Access Point) 模式的适当设备包括Rock 5C，Rock 5B+， Khadas Edge 2, Khadas Vim 4, all Mekotronics R58 设备，以及Orange Pi 5B。
 > {.is-info}
 
-## 创建热点
+## :ro火箭: 创建热点
 
 您可以轻松使用 NetworkManager 命令行工具`nmcli` 创建热点。
 
@@ -46,7 +46,7 @@ dateCreated: 2024-09-08T10：33：46.772Z
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
 > {.is-info}
 
-## 查看热点状态
+## :magnifying_glass_tilted_left：查看热点状态
 
 一旦创建热点后，您可以通过运行来验证其状态：
 
@@ -56,7 +56,7 @@ nmcli 连接显示
 
 您应该看到活跃连接下的热点列表。
 
-## 配置 IP 转发中
+## 🌐 配置 IP 转发器
 
 要通过热点共享您的互联网连接，您需要启用 IP 转发：
 
@@ -78,7 +78,7 @@ nmcli 连接显示
    net.ipv4.ip_forward=1
    ```
 
-## 停止热点
+## 🛑 停止热点
 
 要停止热点，只需运行：
 
