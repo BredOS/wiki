@@ -1,8 +1,8 @@
 ---
-title: Cómo usar tu dispositivo como punto de acceso inalámbrico
+title: 📶 Cómo usar tu dispositivo como punto de acceso inalámbrico
 description: null
 published: true
-date: 2024/09-08T10:55:29.082Z
+date: 2024/09-08T14:15:47.669Z
 tags: null
 editor: markdown
 dateCreated: 2024/09-08T10:33:46.772Z
@@ -21,7 +21,7 @@ Antes de comenzar, asegúrese de tener:
 > Los dispositivos apropiados que soportan el modo AP (punto de acceso) incluyen Rock 5C, Rock 5B+, Khadas Edge 2, Khadas Vim 4, todos los dispositivos Mekotronics R58 y el Orange Pi 5B.
 > {.is-info}
 
-## Crear un punto de acceso
+## 🚀 Crear un punto de acceso
 
 Puede crear fácilmente un punto de acceso utilizando la herramienta de línea de comandos de NetworkManager `nmcli`.
 
@@ -46,7 +46,7 @@ Puede crear fácilmente un punto de acceso utilizando la herramienta de línea d
 > \`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
 > {.is-info}
 
-## Ver estado del punto de acceso
+## 🔍 Ver estado de punto rápido
 
 Una vez creado el punto de acceso, puede verificar su estado ejecutando:
 
@@ -56,7 +56,7 @@ serie de conexión nmcli
 
 Deberías ver el punto de acceso en la lista de conexiones activas.
 
-## Configurar reenvío IP
+## 🌐 Configurar reenvío IP
 
 Para compartir tu conexión a Internet a través del hotspot, necesitas habilitar el reenvío de IP:
 
@@ -78,7 +78,7 @@ Para compartir tu conexión a Internet a través del hotspot, necesitas habilita
    net.ipv4.ip_forward=1
    ```
 
-## Detener el punto de acceso
+## 🛑 Detener el punto de acceso
 
 Para detener el hotspot, simplemente ejecute:
 
