@@ -2,7 +2,7 @@
 title: How to use your device as a wireless hotspot
 description: 
 published: true
-date: 2024-09-08T10:48:49.778Z
+date: 2024-09-08T10:52:02.480Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -37,6 +37,11 @@ You can easily create a hotspot using the NetworkManager command-line tool `nmcl
    This command will:
    - 📝 Create a hotspot with SSID `MyHotspot`
    - 🔑 Set the password to `mypassword`
+   
+> If you get the following error run the command again with sudo
+> `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
+{.is-info}
+
 
 ## View Hotspot Status
 
