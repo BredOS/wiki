@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2024/09-08T10:01:18.346Z
+date: 2024-31T15:05:56.028Z
 tags: null
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
