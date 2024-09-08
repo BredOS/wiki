@@ -2,7 +2,7 @@
 title: Cómo usar tu dispositivo como punto de acceso inalámbrico
 description: null
 published: true
-date: 2024-09-08T10:52:02.480Z
+date: 2024/09-08T10:55:29.082Z
 tags: null
 editor: markdown
 dateCreated: 2024/09-08T10:33:46.772Z
@@ -17,6 +17,9 @@ Esta guía le mostrará cómo configurar un punto de acceso Wi-Fi usando Network
 Antes de comenzar, asegúrese de tener:
 
 - 📡 Un adaptador Wi-Fi que soporta el modo AP (punto de acceso)
+
+> Los dispositivos apropiados que soportan el modo AP (punto de acceso) incluyen Rock 5C, Rock 5B+, Khadas Edge 2, Khadas Vim 4, todos los dispositivos Mekotronics R58 y el Orange Pi 5B.
+> {.is-info}
 
 ## Crear un punto de acceso
 
