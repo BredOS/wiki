@@ -2,7 +2,7 @@
 title: BredOS 主頁
 description: null
 published: true
-date: 2024-09-08T10:19:38.208Z
+date: 2024-07-19T14:36:23.702Z
 tags: null
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
@@ -43,11 +43,11 @@ BredOS 旨在為基於 ARM 的單板計算機用戶提供無縫且用戶友好�
 ## 🛠️ System Requirements
 
 - **🖥️ Supported Devices**:
-  - Radxa Rock 5 A/B/B+/C/D
-  - Radxa Rock 4 C+
+  - Radxa Rock 5 A/B/C
+  - Radxa Rock 4 C
   - Radxa NX5 Kit
   - IndieDroid Nova
-  - Orange Pi 5/5B/5+
+  - Orange Pi 5/5+
   - Khadas Edge 2
   - Khadas VIM 4
   - Cool Pi 4B
