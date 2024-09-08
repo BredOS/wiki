@@ -2,7 +2,7 @@
 title: How to install STEAM
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2024-09-08T10:15:37.655Z
+date: 2024-09-08T10:20:14.240Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -17,7 +17,6 @@ Welcome to the guide on how to install **Steam** on BredOS! Follow these simple 
 {.is-info}
 
 - You need to have **BredOS** installed and running.
-- Make sure you have **`pacman`** installed (this should already be available in BredOS).
 - Optionally, you can have [**Panthor** enabled](/en/how-to/how-to-setup-panthor), but it's not required.
 
 ## 📥 Installation Steps
@@ -26,22 +25,12 @@ Welcome to the guide on how to install **Steam** on BredOS! Follow these simple 
 
 You may need to add the **BredOS Multilib** repository to install Steam and the necessary translation layers. To do this, follow these steps:
 
-1. Open your `/etc/pacman.conf` file with root permissions by running:
-
+1. Install `bredos-multilib` package
 ```
-   sudo nano /etc/pacman.conf
-```
-
-2. Add the following lines to the end of the file:
-
-```
-   [BredOS-multilib]
-   Include = /etc/pacman.d/bredos-mirrorlist
+   sudo pacman -S bredos-multilib
 ```
 
-3. Save the file and exit the text editor (Ctrl + X, then Ctrl + Y, then Enter).
-
-4. Update the package database by running:
+2. Update the package database by running:
 
 ```
    sudo pacman -Sy
