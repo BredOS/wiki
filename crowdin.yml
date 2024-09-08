@@ -4,4 +4,8 @@ files:
       - README.md
     translation: /%locale%/%original_file_name%
   - source: how-to/*md
+    ignore:
+      - /es/
+      - /zh-tw/
+      - /zh/
     translation: /%locale%/%original_path%/%original_file_name%
