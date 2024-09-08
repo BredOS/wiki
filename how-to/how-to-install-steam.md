@@ -2,7 +2,7 @@
 title: How to install STEAM
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2024-09-08T10:26:58.413Z
+date: 2024-09-08T10:32:40.550Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -48,6 +48,11 @@ You may need to add the **BredOS Multilib** repository to install Steam and the 
 ```
 
 3. After executing the command, you will see a message prompting you to select an option. Choose the appropriate option based on your configuration:
+
+	- First, select `lib32-vulkan-swrast`
+
+![steam_libs_selection.png](/steam_libs_selection.png)
+
    - If you have **Panthor** enabled, select `steam-libs-any`.
    - If **Panthor** is not enabled (using Panfork instead), select `steam-libs-rk3588`.
 
