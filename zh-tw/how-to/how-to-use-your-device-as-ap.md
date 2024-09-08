@@ -2,7 +2,7 @@
 title: How to use your device as a wireless hotspot
 description: null
 published: true
-date: 2024-09-08T10:52:02.480Z
+date: 2024-09-08T10:55:29.082Z
 tags: null
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -17,6 +17,9 @@ This guide will show you how to set up a Wi-Fi hotspot using NetworkManager.
 Before you begin, make sure you have:
 
 - 📡 A Wi-Fi adapter that supports AP (Access Point) mode
+
+> Suitable devices that support AP (Access Point) mode include Rock 5C, Rock 5B+, Khadas Edge 2, Khadas Vim 4, all Mekotronics R58 devices, and the Orange Pi 5B.
+> {.is-info}
 
 ## Create a Hotspot
 
