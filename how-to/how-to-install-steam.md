@@ -2,7 +2,7 @@
 title: How to install STEAM
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2024-09-08T10:07:39.975Z
+date: 2024-09-08T10:12:43.861Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -80,4 +80,4 @@ Once the installation is complete, you can launch Steam by searching for it in y
 steam
 ```
 
-Happy gaming! 🎮✨
+**Happy gaming! 🎮✨**
