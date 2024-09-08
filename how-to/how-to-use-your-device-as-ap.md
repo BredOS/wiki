@@ -1,8 +1,8 @@
 ---
-title: How to use your device as a wireless hotspot
+title: 📶 How to use your device as a wireless hotspot
 description: 
 published: true
-date: 2024-09-08T10:55:29.082Z
+date: 2024-09-08T14:15:47.669Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -22,7 +22,7 @@ Before you begin, make sure you have:
 {.is-info}
 
 
-## Create a Hotspot
+## 🚀 Create a Hotspot
 
 You can easily create a hotspot using the NetworkManager command-line tool `nmcli`.
 
@@ -47,7 +47,7 @@ You can easily create a hotspot using the NetworkManager command-line tool `nmcl
 {.is-info}
 
 
-## View Hotspot Status
+## 🔍 View Hotspot Status
 
 Once the hotspot is created, you can verify its status by running:
 
@@ -57,7 +57,7 @@ nmcli connection show
 
 You should see the hotspot listed under the active connections.
 
-## Configure IP Forwarding 
+## 🌐 Configure IP Forwarding 
 To share your internet connection through the hotspot, you need to enable IP forwarding:
 
 1. **Enable IP forwarding**:
@@ -78,7 +78,7 @@ To share your internet connection through the hotspot, you need to enable IP for
    net.ipv4.ip_forward=1
    ```
 
-## Stopping the Hotspot
+## 🛑 Stopping the Hotspot
 
 To stop the hotspot, simply run:
 
