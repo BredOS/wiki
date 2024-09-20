@@ -2,7 +2,7 @@
 title: ":mo► _camera: Cómo reproducir contenido protegido DRM (instalando widevine)"
 description: Aprende cómo habilitar la reproducción de contenido protegido por DRM en BredOS instalando el plugin Widevine
 published: true
-date: 2024-28T05:58:27.563Z
+date: 2024-09-20T14:44:32.766Z
 tags: null
 editor: markdown
 dateCreated: 2024-28T05:58:27.563Z
@@ -14,8 +14,8 @@ Aprenda cómo habilitar la reproducción de contenido protegido por DRM en BredO
 
 ## 🛠️ Pasos para instalar Widevine
 
-1. **🔧 Instalar Widevine**\
-   Abre tu terminal y ejecuta el siguiente comando para instalar Widevine para arquitectura aarch64:
+1. **🔧 Install Widevine**\
+   Open your terminal and run the following command to install Widevine:
 
 ```
 sudo pacman -S widevine-aarch64
