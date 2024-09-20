@@ -14,8 +14,8 @@ dateCreated: 2024-08-28T05:58:27.563Z
 
 ## 🛠️ 安装宽体的步骤
 
-1. **🔧 Install Widevine**\
-   Open your terminal and run the following command to install Widevine:
+1. **🔧 安装 Widevine**\
+   打开您的终端并运行以下命令来安装 Widevine：
 
 ```
 sudo pacman -S widevine-aarch64
