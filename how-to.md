@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2024-09-20T20:10:26.306Z
+date: 2024-09-20T20:12:09.715Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
