@@ -1,14 +1,14 @@
 ---
-title: Package Managers Guide 📦✨
+title: 📦✨ Package Managers Guide 
 description: Welcome to the BredOS Package Managers guide! 🚀 Here, you'll learn how to install and manage applications
 published: true
-date: 2024-09-20T20:08:39.778Z
+date: 2024-09-20T20:10:47.203Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-20T20:08:39.778Z
 ---
 
-# Package Managers Guide 📦✨
+# 📦✨ Package Managers Guide
 
 Welcome to the BredOS Package Managers guide! 🚀 Here, you'll learn how to install and manage applications. Get ready to take control of your system's apps! 💻
 
