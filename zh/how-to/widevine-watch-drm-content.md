@@ -2,7 +2,7 @@
 title: 🎥 如何回放 DRM 保护的内容 (安装广泛)
 description: 通过安装 Widevine 插件学习如何在 BredOS 上启用 DRM保护内容的回放
 published: true
-date: 2024-08-28T05:58:27.563Z
+date: 2024-09-20T14:44:32.766Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-28T05:58:27.563Z
@@ -14,8 +14,8 @@ dateCreated: 2024-08-28T05:58:27.563Z
 
 ## 🛠️ 安装宽体的步骤
 
-1. **🔧 安装 Widevine**\
-   打开您的终端并运行以下命令来为无主64建筑安装 Widevine：
+1. **🔧 Install Widevine**\
+   Open your terminal and run the following command to install Widevine:
 
 ```
 sudo pacman -S widevine-aarch64
