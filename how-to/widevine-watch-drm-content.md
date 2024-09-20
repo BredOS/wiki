@@ -2,7 +2,7 @@
 title: 🎥 How to play back DRM protected content (installing widevine)
 description: Learn how to enable playback of DRM-protected content on BredOS by installing the Widevine plugin
 published: true
-date: 2024-08-28T05:58:27.563Z
+date: 2024-09-20T14:44:32.766Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-28T05:58:27.563Z
@@ -15,7 +15,7 @@ Learn how to enable playback of DRM-protected content on BredOS by installing th
 ## 🛠️ Steps to Install Widevine
 
 1. **🔧 Install Widevine**  
-   Open your terminal and run the following command to install Widevine for aarch64 architecture:
+   Open your terminal and run the following command to install Widevine:
 ```
 sudo pacman -S widevine-aarch64
 ```
