@@ -5,4 +5,5 @@ files:
       - /es/
       - /zh-tw/
       - /zh/
+      - /ja/
     translation: /%locale%/%original_path%/%original_file_name%
