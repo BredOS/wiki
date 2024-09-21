@@ -24,10 +24,10 @@ dateCreated: 2024-08-31T15:03:26.994Z
 sudo mkdir -p /boot/dtb/{base,overlays}
 ```
 
-接下来，配置您的 UEFI 设置。 接下来，配置您的 UEFI 设置。 启动到 UEFI > 设备管理器 > Rockchip 平台配置 > ACPI / 设备树，执行以下操作：
+接下来，配置您的 UEFI 设置。 接下来，配置您的 UEFI 设置。 接下来，配置您的 UEFI 设置。 启动到 UEFI > 设备管理器 > Rockchip 平台配置 > ACPI / 设备树，执行以下操作：
 
 - **将“配置表模式”设置为“设备树”**
-- **更改为 `Enabled`** 支持 DTB 覆盖和叠加层\\`
+- **更改为 `Enabled`** 支持 DTB 覆盖和叠加层\\\`
 
 ![](/panthor/enable_tree_dtb_in_uefi.jpg)
 
@@ -44,7 +44,7 @@ sudo mkdir -p /boot/dtb/{base,overlays}
 
 {.is-info}
 
-对于其他基于 RK3588的看板，用您的实际设备名称替换 \\`rk3588-board.dtb' ：
+对于其他基于 RK3588的看板，用您的实际设备名称替换 \\\`rk3588-board.dtb' ：
 
 ```
 sudo cp /boot/dtbs/rockchip/rk3588-board.dtb /boot/dtb/base/
