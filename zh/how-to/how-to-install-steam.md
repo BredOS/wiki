@@ -55,7 +55,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
    - 首先，选择 `lib32-vulkan-swrast`
 
-![steam\\\_libs\\\_selection.png](/steam_libs_selection.png)
+![steam\_libs\_selection.png](/steam_libs_selection.png)
 
 - 如果您已启用 **Panthor** ，请选择 `steam-libs-any`。
 - 如果**Panthor** 未启用 (使用 Panfork 代替)，请选择 `steam-libs-rk3588`。
