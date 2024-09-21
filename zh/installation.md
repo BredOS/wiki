@@ -53,9 +53,9 @@ dateCreated: 2024-07-19T00:42:37.505Z
 
 **📂 解压缩所有文件，包括默认情况下的 BredOS 图像。 mg.xz 文件，我们必须解压缩它才能将它转换为 .img 文件。**
 
-- 第一件事是安装我们下载的Rockchip 驱动程序。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。
+- 第一件事是安装我们下载的Rockchip 驱动程序。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。
 
-- 点击\\\`🟢 安装驱动器:
+- 点击\\\\`🟢 安装驱动器:
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png)
 

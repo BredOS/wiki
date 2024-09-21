@@ -22,4 +22,10 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
 
+- [📶 Cómo usar tu consola como un hotspot inalámbrico](https://wiki.bredos.org/e/es/how-to/how-to-use-your-device-as-ap)
+
+- [📦✨ Guía de Administradores de Paquetes](https://wiki.bredos.org/en/how-to/package-management)
+
+- [🧹💾 Guía de limpieza del espacio en disco](https://wiki.bredos.org/e/es/how-to/free-space-up)
+
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!

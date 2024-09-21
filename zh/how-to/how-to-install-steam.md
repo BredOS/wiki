@@ -10,11 +10,12 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 # 🎮 如何在 BredOS 上安装 Steam
 
-欢迎来到关于如何在 BredOS 上安装 **Steam** 的指南！ 跟着这些简单的步骤来让Steam在您的系统上站起来。
+欢迎来到关于如何在 BredOS 上安装 **Steam** 的指南！ 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。
 
 ## 🛠️ 前提条件
 
 > 注意：Steam似乎只能在 X11 桌面上工作。 此外，它可能无法在所有设备上运行(主要是非RK3588设备)。
+> {.is-info} 此外，它可能无法在所有设备上运行(主要是非RK3588设备)。
 > {.is-info}
 
 - 您需要安装 **BredOS** 并运行。
@@ -24,7 +25,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 ### :countrockwise_arrows_buton: 如果使用旧的 BredOS 图像：
 
-您可能需要添加 **BredOS Multilib** 仓库来安装 Steam 和必要的翻译层。 要做到这一点，请遵循以下步骤：
+您可能需要添加 **BredOS Multilib** 仓库来安装 Steam 和必要的翻译层。 要做到这一点，请遵循以下步骤： 要做到这一点，请遵循以下步骤：
 
 1. 安装 `bredos-mullib` 包
 
@@ -49,16 +50,16 @@ dateCreated: 2024-09-08T09:55:58.661Z
    sudo pacman -S steam
 ```
 
-3. 在执行命令后，您将看到一条消息，提示您选择一个选项。 选择基于您的配置的适当选项：
+3. 在执行命令后，您将看到一条消息，提示您选择一个选项。 选择基于您的配置的适当选项： 选择基于您的配置的适当选项：
 
    - 首先，选择 `lib32-vulkan-swrast`
 
-![steam\_libs\_selection.png](/steam_libs_selection.png)
+![steam\\_libs\\_selection.png](/steam_libs_selection.png)
 
 - 如果您已启用 **Panthor** ，请选择 `steam-libs-any`。
 - 如果**Panthor** 未启用 (使用 Panfork 代替)，请选择 `steam-libs-rk3588`。
 
-4. 等待安装完成，你都设置了！ 🎉
+4. 等待安装完成，你都设置了！ 🎉 🎉
 
 ## :countrockwise_arrows_buton: 卸载 Steam
 
@@ -76,4 +77,4 @@ sudo pacman -Rnscu steam steam-libs-any #or steam-libs-rk3588 取决于您的选
 steam
 ```
 
-**快乐游戏！ 🎮✨**
+**快乐游戏！ 🎮✨** 🎮✨\*\*
