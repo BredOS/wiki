@@ -53,7 +53,7 @@ Puede que tengas que añadir el repositorio **BredOS Multíb** para instalar Ste
 
    - Primero, selecciona `lib32-vulkan-swrast`
 
-![steam\_libs\_selection.png](/steam_libs_selection.png)
+![steam\\_libs\\_selection.png](/steam_libs_selection.png)
 
 - Si tienes habilitado **Panthor**, selecciona `steam-libs-any`.
 - Si **Panthor** no está habilitado (usando Panfork en su lugar), selecciona `steam-libs-rk3588`.
