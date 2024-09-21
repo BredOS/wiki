@@ -2,7 +2,7 @@
 title: Serie Roca 5
 description: null
 published: true
-date: 2024-09-21T09:16:33.150Z
+date: 2024-09-21T10:24:10.412Z
 tags: null
 editor: markdown
 dateCreated: 2024-21T09:12:56.606Z
@@ -10,17 +10,17 @@ dateCreated: 2024-21T09:12:56.606Z
 
 # Dispositivos de la Serie Rock 5 soportados
 
-| Dispositivo  | Soportado | Problemas conocidos |
-| ------------ | --------- | ------------------- |
-| Roca 5A      | ✔️        |                     |
-| Roca 5B      | ✔️        |                     |
-| Roca 5B Plus | ✔️        |                     |
-| Roca 5C      | ✔️        |                     |
-| Roca 5C Lite | ✔️        |                     |
-| Roca 5D      | ✔️        |                     |
-| Roca 5ITX    | ✔️        |                     |
-| CM5          | ✔️        |                     |
-| CM5 Lite     | ✔️        |                     |
+| Dispositivo  | Soportado | Problemas conocidos                                                                |
+| ------------ | --------- | ---------------------------------------------------------------------------------- |
+| Roca 5A      | ✔️        |                                                                                    |
+| Roca 5B      | ✔️        |                                                                                    |
+| Roca 5B Plus | ✔️        |                                                                                    |
+| Roca 5C      | ✔️        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
+| Roca 5C Lite | ✔️        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
+| Roca 5D      | ✔️        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
+| Roca 5 ITX   | ✔️        |                                                                                    |
+| CM5          | ✔️        |                                                                                    |
+| CM5 Lite     | ✔️        |                                                                                    |
 
 # Guías para todos los dispositivos
 
