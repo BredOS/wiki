@@ -26,6 +26,6 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [📦✨ Package Managers Guide](https://wiki.bredos.org/en/how-to/package-management)
 
-- [🧹💾 Disk Space Cleanup Guide](https://wiki.bredos.org/e/en/how-to/free-space-up)
+- [🧹💾 磁盘空间清理指南](https://wiki.bredos.org/e/en/how-to/free-spacup)
 
 :sparkles：探索这些指南以获得最佳的 BredOS ！
