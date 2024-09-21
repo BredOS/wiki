@@ -10,10 +10,10 @@ dateCreated: 2024-20T15:17:37.567Z
 
 # Soporte para estos dispositivos
 
-| Dispositivo                       | Soportado | Problemas conocidos                                       |
-| --------------------------------- | --------- | --------------------------------------------------------- |
-| Pi Naranja 5                      | ✔️        | SSDs de Sata M.2 puede no funcionar       |
-| Pi naranja 5B                     | ✔️        | Usa la imagen OPI5 y requiere DTBO para que funcione wifi |
-| Pi Naranja 5 Plus                 | ✔️        |                                                           |
-| Naranja Pi 5 Pro                  | ❌         |                                                           |
-| Máx. Pi Naranja 5 | ❌         |                                                           |
+| Dispositivo       | Soportado | Problemas conocidos                                       |
+| ----------------- | --------- | --------------------------------------------------------- |
+| Pi Naranja 5      | ✔️        | SSDs de Sata M.2 puede no funcionar       |
+| Pi naranja 5B     | ✔️        | Usa la imagen OPI5 y requiere DTBO para que funcione wifi |
+| Pi Naranja 5 Plus | ✔️        |                                                           |
+| Naranja Pi 5 Pro  | ❌         |                                                           |
+| Pi Naranja 5      | ❌         |                                                           |

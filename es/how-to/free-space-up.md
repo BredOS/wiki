@@ -123,23 +123,29 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
 ### Herramientas de consola ⌨️
 
 - **duc** — Un inspector de uso de disco.\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — Analizador de uso de disco con interfaz de consola.\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses el analizador de uso de disco.\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
 ### Herramientas gráficas :framed_imagen:
 
 - **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Herramienta de estadísticas de directorio basadas en Qt.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`
 
 ---
