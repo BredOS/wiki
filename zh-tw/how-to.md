@@ -22,4 +22,10 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 
 - [🎮  How to Install STEAM on BredOS](/en/how-to/how-to-install-steam)
 
+- [📶 How to use your device as a wireless hotspot](https://wiki.bredos.org/e/en/how-to/how-to-use-your-device-as-ap)
+
+- [📦✨ Package Managers Guide](https://wiki.bredos.org/en/how-to/package-management)
+
+- [🧹💾 Disk Space Cleanup Guide](https://wiki.bredos.org/e/en/how-to/free-space-up)
+
 ✨ Explore these guides to get the most out of BredOS!
