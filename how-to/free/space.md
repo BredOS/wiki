@@ -2,7 +2,7 @@
 title: 🧹💾 Disk Space Cleanup Guide 
 description: This guide will walk you through several methods to reclaim disk space on your BredOS system. 🖥️✨
 published: true
-date: 2024-09-20T20:26:57.698Z
+date: 2024-09-21T09:03:53.416Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-20T20:26:57.698Z
