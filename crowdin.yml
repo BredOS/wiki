@@ -1,9 +1,6 @@
 files:
-  - source: /*.md
-    ignore:
-      - README.md
-    translation: /%locale%/%original_file_name%
-  - source: how-to/*md
+  - source: '**/*md'
+    ignore_settings: 1
     ignore:
       - /es/
       - /zh-tw/
