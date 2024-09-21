@@ -2,7 +2,7 @@
 title: Rock 5 Series
 description: 
 published: true
-date: 2024-09-21T10:21:05.695Z
+date: 2024-09-21T10:24:10.412Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -14,9 +14,9 @@ dateCreated: 2024-09-21T09:12:56.606Z
 | Rock 5A        | ✔️        |              |
 | Rock 5B        | ✔️        |              |
 | Rock 5B Plus   | ✔️        |              |
-| Rock 5C        | ✔️        |              |
-| Rock 5C Lite   | ✔️        |              |
-| Rock 5D        | ✔️        |              |
+| Rock 5C        | ✔️        |Wi-Fi driver crashes after a few days of uptime.|
+| Rock 5C Lite   | ✔️        |Wi-Fi driver crashes after a few days of uptime.|
+| Rock 5D        | ✔️        |Wi-Fi driver crashes after a few days of uptime.|
 | Rock 5 ITX     | ✔️        |              |
 | CM5            | ✔️        |              |
 | CM5 Lite       | ✔️        |              |
