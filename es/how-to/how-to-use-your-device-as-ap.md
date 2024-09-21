@@ -43,8 +43,7 @@ Puede crear fácilmente un punto de acceso utilizando la herramienta de línea d
    - 🔑 Establece la contraseña a `mypassword`
 
 > Si obtiene el siguiente error, ejecute de nuevo el comando con sudo
-> \`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
-> {.is-info}
+> \\`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
 
 ## Ver estado del punto de acceso
 
@@ -78,7 +77,7 @@ Para compartir tu conexión a Internet a través del hotspot, necesitas habilita
    net.ipv4.ip_forward=1
    ```
 
-## Detener el punto de acceso
+## 🛑 Detener el punto de acceso
 
 Para detener el hotspot, simplemente ejecute:
 
