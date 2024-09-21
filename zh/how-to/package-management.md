@@ -1,6 +1,6 @@
 ---
 title: 📦✨ Package Managers Guide
-description: "欢迎使用 BredOS 软件包管理员指南！ :ro火箭: 在这里，你会学习如何安装和管理应用程序"
+description: "欢迎使用 BredOS 软件包管理员指南！ :rowt: 在这里，你会学习如何安装和管理应用程序。 准备好控制您的系统应用！ 💻 :ro火箭: 在这里，你会学习如何安装和管理应用程序"
 published: true
 date: 2024-09-20T20:10:47.203Z
 tags: null
@@ -10,7 +10,7 @@ dateCreated: 2024-09-20T20：08：39.778Z
 
 # 📦✨ Package Managers Guide
 
-欢迎使用 BredOS 软件包管理员指南！ :rowt: 在这里，你会学习如何安装和管理应用程序。 准备好控制您的系统应用！ 💻
+欢迎使用 BredOS 软件包管理员指南！ :ro火箭: 在这里，你会学习如何安装和管理应用程序 :rowt: 在这里，你会学习如何安装和管理应用程序。 准备好控制您的系统应用！ 💻
 
 ---
 
@@ -82,7 +82,7 @@ pacman -Q
 sudo pacman -Sc
 ```
 
-Pacman 是管理您的 BredOS 系统的重要工具。快速、高效和强大！ ⚡🐧
+Pacman 是管理您的 BredOS 系统的重要工具。快速、高效和强大！ ⚡🐧 ⚡🐧
 
 ---
 
@@ -98,7 +98,7 @@ Pacman 是管理您的 BredOS 系统的重要工具。快速、高效和强大�
 sudo pacman -S flatpak
 ```
 
-> **注意**：安装Flatpak后可能需要重新启动您的系统。 🔄
+> **注意**：安装Flatpak后可能需要重新启动您的系统。 🔄 🔄
 
 ### 如何使用 Flatpak 📥
 
@@ -123,7 +123,7 @@ sudo flatpak install <app name>
 sudo flatpak 卸载 <app name>
 ```
 
-或者，您可以使用像Pamac这样的图形商店管理Flatpak应用。 🖥️
+或者，您可以使用像Pamac这样的图形商店管理Flatpak应用。 🖥️ 🖥️
 
 ---
 
@@ -147,4 +147,4 @@ sudo pacman -S appimagelauncher
 
 ---
 
-快乐的软件包管理！ 🎉💻
+快乐的软件包管理！ 🎉💻 🎉💻
