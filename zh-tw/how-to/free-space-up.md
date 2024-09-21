@@ -123,23 +123,29 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
 ### Console Tools ⌨️
 
 - **duc** — A disk usage inspector.\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — Disk usage analyzer with console interface.\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses disk usage analyzer.\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
 ### Graphical Tools 🖼️
 
 - **Filelight** — Interactive disk usage map with concentric rings.\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **GNOME Disk Usage Analyzer (baobab)** — Disk usage analyzer for GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`
 
 ---
