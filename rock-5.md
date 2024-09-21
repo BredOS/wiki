@@ -2,7 +2,7 @@
 title: Rock 5 Series
 description: 
 published: true
-date: 2024-09-21T10:24:10.412Z
+date: 2024-09-21T12:08:14.554Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -23,13 +23,13 @@ dateCreated: 2024-09-21T09:12:56.606Z
 
 # Guides for all devices
 
--   [🐾 How to setup Panthor on Mali GPUs with RK3588](/en/how-to/how-to-setup-panthor)
--   [🎮  How to Install STEAM on BredOS](/en/how-to/how-to-install-steam)
+-   [🐾 How to setup Panthor on Mali GPUs with RK3588](/how-to/how-to-setup-panthor)
+-   [🎮  How to Install STEAM on BredOS](/how-to/how-to-install-steam)
 
 # For Rock 5B
 
--   [How to boot BredOS from NVMe](/en/rock-5/how-to-boot-from-nvme)
+-   [How to boot BredOS from NVMe](/rock-5/how-to-boot-from-nvme)
 
 # For Rock 5B Plus
 
--   [How to boot BredOS from NVMe](/en/rock-5/how-to-boot-from-nvme)
+-   [How to boot BredOS from NVMe](/rock-5/how-to-boot-from-nvme)
