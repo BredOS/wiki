@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2024-09-21T09:04:18.872Z
+date: 2024-21T09:04:18.872Z
 tags: null
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -26,6 +26,6 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [📦✨ Guía de Administradores de Paquetes](https://wiki.bredos.org/en/how-to/package-management)
 
-- [🧹💾 Disk Space Cleanup Guide](https://wiki.bredos.org/e/en/how-to/free-space-up)
+- [🧹💾 Guía de limpieza del espacio en disco](https://wiki.bredos.org/e/es/how-to/free-space-up)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
