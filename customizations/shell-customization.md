@@ -2,7 +2,7 @@
 title: BredOS Shell Customization Guide 🐚🎨
 description: This guide will help you customize your BredOS experience by changing and enhancing your shell! 🚀 Whether you prefer Bash, Zsh, Fish, or Nushell, you'll find everything you need right here. Let’s dive in! 🌊
 published: true
-date: 2024-09-20T19:45:03.972Z
+date: 2024-09-21T09:02:20.084Z
 tags: customization, shell
 editor: markdown
 dateCreated: 2024-09-20T19:39:08.509Z
@@ -40,11 +40,7 @@ sudo pacman -S bash
    ```bash
    chsh -s /usr/bin/bash
    ```
-3. If you're using systemd-homed, run:
-   ```bash
-   homectl update --shell=/usr/bin/bash user
-   ```
-4. Log out and log back in to start using Bash as your shell. 🔄
+3. Log out and log back in to start using Bash as your shell. 🔄
 
 ### Oh My Bash 💡
 Improve Bash with **Oh My Bash**, a framework that adds themes, plugins, and other cool enhancements! 🌟
@@ -76,11 +72,7 @@ sudo pacman -S zsh
    ```bash
    chsh -s /usr/bin/zsh
    ```
-3. If you're using systemd-homed, run:
-   ```bash
-   homectl update --shell=/usr/bin/zsh user
-   ```
-4. Log out and log back in to switch to Zsh! 🔄
+3. Log out and log back in to switch to Zsh! 🔄
 
 ---
 
@@ -110,11 +102,7 @@ Use **Oh My Fish** to add plugins and themes to Fish, enhancing its functionalit
    ```bash
    chsh -s /usr/bin/fish
    ```
-3. If you're using systemd-homed, run:
-   ```bash
-   homectl update --shell=/usr/bin/fish user
-   ```
-4. Log out and log back in to enjoy Fish! 🔄
+3. Log out and log back in to enjoy Fish! 🔄
 
 ---
 
@@ -141,8 +129,4 @@ sudo pacman -S nushell
    ```bash
    chsh -s /usr/bin/nu
    ```
-3. If you're using systemd-homed, run:
-   ```bash
-   homectl update --shell=/usr/bin/nu user
-   ```
-4. Log out and log back in to switch to Nushell! 🔄
+3. Log out and log back in to switch to Nushell! 🔄
