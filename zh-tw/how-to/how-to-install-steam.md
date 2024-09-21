@@ -53,7 +53,7 @@ You may need to add the **BredOS Multilib** repository to install Steam and the 
 
    - First, select `lib32-vulkan-swrast`
 
-![steam\_libs\_selection.png](/steam_libs_selection.png)
+![steam\\_libs\\_selection.png](/steam_libs_selection.png)
 
 - If you have **Panthor** enabled, select `steam-libs-any`.
 - If **Panthor** is not enabled (using Panfork instead), select `steam-libs-rk3588`.
