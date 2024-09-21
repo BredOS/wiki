@@ -2,7 +2,7 @@
 title: Rock 5 Series
 description: 
 published: true
-date: 2024-09-21T09:16:33.150Z
+date: 2024-09-21T10:21:05.695Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -17,7 +17,7 @@ dateCreated: 2024-09-21T09:12:56.606Z
 | Rock 5C        | ✔️        |              |
 | Rock 5C Lite   | ✔️        |              |
 | Rock 5D        | ✔️        |              |
-| Rock 5ITX      | ✔️        |              |
+| Rock 5 ITX     | ✔️        |              |
 | CM5            | ✔️        |              |
 | CM5 Lite       | ✔️        |              |
 
