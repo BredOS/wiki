@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
 ---
 
-# 🍞 The BladOS Wiki
+# 🍞 BredOS Wiki
 
 ## 🌟 概要
 
@@ -19,14 +19,14 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 
 ## 📚 目次
 
-1. [🔍 はじめに](#introduction)
-2. [🚀 機能](#features)
+1. [🔍 はじめに](#はじめに)
+2. [🚀 機能](#機能)
 3. [🛠️ システム要件](#system-requirements)
 4. [💽 インストール](/installation)
-5. [📦 Package Management](#package-management)
-6. [🐞 トラブルシューティング](#troubleshooting)
+5. [📦 パッケージ管理](#パッケージ管理)
+6. [🐞 トラブルシューティング](#トラブルシューティング)
 7. [❓FAQ](#faq)
-8. [🌐 コミュニティとサポート] (#community-and-support)
+8. [🌐 コミュニティとサポート](#コミュニティとサポート)
 9. [🤝 Contributing](#contributing)
 
 ## 🔍 はじめに
@@ -51,7 +51,7 @@ BredOSは、ARMベースのシングルボードコンピュータのユーザ�
   - Khadas Edge 2
   - Khadas VIM 4
   - クールなPi 4B
-  - format@@0(https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
+  - [Fydetab Duo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
 - **🧠 最小RAM**: 2 GB
 - **💾 ストレージ**: 16 GB microSD カード以上
 - **🌐 Network**: Optional
