@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2024-08-31T15:05:56.028Z
+date: 2024-09-27T19:20:51.848Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -27,5 +27,8 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 - [📦✨ Package Managers Guide](https://wiki.bredos.org/en/how-to/package-management)
 
 - [🧹💾 Disk Space Cleanup Guide](https://wiki.bredos.org/e/en/how-to/free-space-up)
+
+- 📸🔄 Btrfs Snapshots and Rollbacks with Timeshift
+
 
 ✨ Explore these guides to get the most out of BredOS!
