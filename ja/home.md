@@ -1,11 +1,11 @@
 ---
 title: ホームページ
-description: 
+description: null
 published: true
-date: 2024-09-21T12:45:24.603Z
-tags: 
+date: 2024-09-08T10:19:38.208Z
+tags: null
 editor: markdown
-dateCreated: 2024-09-21T12:32:53.311Z
+dateCreated: 2022-08-24T12:37:36.410Z
 ---
 
 # 🍞 BredOS Wiki
@@ -15,7 +15,7 @@ dateCreated: 2024-09-21T12:32:53.311Z
 BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg
 
 ## 📚 目次
 
