@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
-date: 2024-09-27T19:20:51.848Z
+date: 2024-09-27T19：20：51.848Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -28,7 +28,7 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [🧹💾 磁盘空间清理指南](https://wiki.bredos.org/e/en/how-to/free-spacup)
 
-- 📸🔄 Btrfs Snapshots and Rollbacks with Timeshift
+- :cama_with_flash:🔄 Btrfs Snapshots and Rollback, with Timeshift
 
 
 :sparkles：探索这些指南以获得最佳的 BredOS ！
