@@ -1,8 +1,8 @@
 ---
 title: "📸:countrockwise_arrows_buton: Btrfs Snapshots and Rollback, with Timeshift"
-description: 这个README提供了一个关于使用 Timeshift 设置 Btrfs 快照和系统回滚的全面指南。
+description: A comprehensive guide on setting up Btrfs snapshots and system rollbacks using Timeshift
 published: true
-date: 2024-09-27T19：19：08.209Z
+date: 2024-09-28T07:58:11.350Z
 tags: null
 editor: markdown
 dateCreated: 2024-09-27T19：19：08.209Z
