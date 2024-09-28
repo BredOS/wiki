@@ -1,8 +1,8 @@
 ---
 title: 📸🔄 Btrfs Instantáneas y Rollbacks con Timeshift
-description: A comprehensive guide on setting up Btrfs snapshots and system rollbacks using Timeshift
+description: Una guía completa sobre cómo configurar instantáneas Btrfs y retrocesos del sistema usando Timeshift
 published: true
-date: 2024-09-28T07:58:11.350Z
+date: 2024 09-28T07:58:11.350Z
 tags: null
 editor: markdown
 dateCreated: 2024-27-27T19:19:08.209Z
