@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2024-09-21T09:04:18.872Z
+date: 2024-09-27T19:20:51.848Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -27,5 +27,8 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 - [📦✨ Package Managers Guide](https://wiki.bredos.org/en/how-to/package-management)
 
 - [🧹💾 Disk Space Cleanup Guide](https://wiki.bredos.org/e/en/how-to/free-space-up)
+
+- 📸🔄 Btrfs Snapshots and Rollbacks with Timeshift
+
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！

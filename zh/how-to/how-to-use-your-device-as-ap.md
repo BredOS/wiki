@@ -44,8 +44,8 @@ dateCreated: 2024-09-08T10：33：46.772Z
    - 📝 使用 SSID `MyHotspot` 创建热点
    - 🔑 设置密码为`mypassword`
 
-> If you get the following error run the command again with sudo
-> `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
+> 如果出现以下错误，请使用 sudo 再次运行该命令
+> “错误：无法设置 Wi-Fi 热点：无权控制网络。”
 > {.is-info}
 
 ## 查看热点状态
