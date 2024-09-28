@@ -1,6 +1,6 @@
 ---
 title: 📸🔄 Btrfs スナップショットとタイムシフトによるロールバック。
-description: A comprehensive guide on setting up Btrfs snapshots and system rollbacks using Timeshift
+description: Timeshift スナップショットとシステムロールバックのセットアップに関する包括的なガイド
 published: true
 date: 2024-09-28T07:58:11.350Z
 tags: null
