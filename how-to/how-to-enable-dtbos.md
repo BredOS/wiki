@@ -1,8 +1,8 @@
 ---
 title: 📟 How to enable DTBOs
 description: 
-published: false
-date: 2024-11-10T19:18:02.429Z
+published: true
+date: 2024-11-10T19:22:27.493Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -25,7 +25,7 @@ If you have already done this before you can skip ahead to step 5.
 To determine where your ESP partition is located, run the command,
 `df | grep "/boot" | awk '{print $NF}'` and replace `<ESP>` in all of the following commands with it's output.
 
-### 💽 1: Create the necessary directories for storing the DTB files
+### 1: Create the necessary directories for storing the DTB files
 
 ```
 sudo mkdir -p <ESP>/dtb/{base,overlays}
