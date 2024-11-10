@@ -1,19 +1,19 @@
 ---
-title: How to enable DTBOs
+title: Cómo habilitar DTBOs
 description: null
 published: false
-date: 2024-11-10T18:02:07.427Z
+date: 2024-10T18:02:07.427Z
 tags: null
 editor: markdown
-dateCreated: 2024-11-10T18:02:07.427Z
+dateCreated: 2024-10T18:02:07.427Z
 ---
 
-# How to enable DTBOs
+# Cómo habilitar DTBOs
 
-**Introduction**
-Enabling different Device Tree Overlays (DTBOs) allows optional hardware or kernel modifications to be applied without recompiling the linux kernel.
-This is also the intended way to enable the panthor graphics stack.
+**Introducción**
+Habilitar diferentes capas de árboles de dispositivos (DTBOs) permite que se apliquen modificaciones de hardware o kernel opcionales sin volver a compilar el núcleo de linux.
+Esta es también la forma deseada de habilitar la pila gráfica de panthor.
 
 ---
 
-# Enabling DTBOs for UEFI-enabled systems
+# Habilitar DTBOs para sistemas con UEFI habilitados
