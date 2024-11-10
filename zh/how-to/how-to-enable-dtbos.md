@@ -1,19 +1,19 @@
 ---
-title: How to enable DTBOs
+title: 如何启用 DTBOs
 description: null
 published: false
-date: 2024-11-10T18:02:07.427Z
+date: 2024-11-10T18：02：07.427Z
 tags: null
 editor: markdown
-dateCreated: 2024-11-10T18:02:07.427Z
+dateCreated: 2024-11-10T18：02：07.427Z
 ---
 
-# How to enable DTBOs
+# 如何启用 DTBOs
 
 **Introduction**
-Enabling different Device Tree Overlays (DTBOs) allows optional hardware or kernel modifications to be applied without recompiling the linux kernel.
-This is also the intended way to enable the panthor graphics stack.
+启用不同的设备树叠加层(DTBOs) 允许在不重新编译Linux内核的情况下应用可选的硬件或内核修改。
+这也是开启地形图堆栈的预定方式。
 
 ---
 
-# Enabling DTBOs for UEFI-enabled systems
+# 为UEFI启用的系统启用 DTBOs
