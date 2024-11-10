@@ -8,12 +8,12 @@ editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
 ---
 
-# How to enable DTBOs
+# DTBOを有効にする方法
 
-**Introduction**
-Enabling different Device Tree Overlays (DTBOs) allows optional hardware or kernel modifications to be applied without recompiling the linux kernel.
-This is also the intended way to enable the panthor graphics stack.
+**はじめに**
+異なるデバイスツリーオーバーレイ(DTBOs)を有効にすると、Linuxカーネルを再コンパイルせずにオプションのハードウェアやカーネルの変更を適用できます。
+これは、パンターグラフィックスタックを有効にするための方法でもあります。
 
 ---
 
-# Enabling DTBOs for UEFI-enabled systems
+# UEFI対応システムのDTBOを有効にする
