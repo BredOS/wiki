@@ -2,7 +2,7 @@
 title: 📟 How to enable DTBOs
 description: 
 published: false
-date: 2024-11-10T19:16:41.058Z
+date: 2024-11-10T19:18:02.429Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -28,7 +28,7 @@ To determine where your ESP partition is located, run the command,
 ### 💽 1: Create the necessary directories for storing the DTB files
 
 ```
-sudo mkdir -p <ESP>/{base,overlays}
+sudo mkdir -p <ESP>/dtb/{base,overlays}
 ```
 
 ### 2: Copy over the base DTB
@@ -36,15 +36,15 @@ sudo mkdir -p <ESP>/{base,overlays}
 > If you are using a FydeTab Duo, copy the specific DTB file to the `base` folder:
 > 
 > ```
-> sudo cp /boot/dtbs/rockchip/rk3588s-fydetab-duo.dtb <ESP>/base/
-> sudo cp <ESP>/base/rk3588s-fydetab-duo.dtb <ESP>/base/rk3588s-tablet-12c-linux.dtb
+> sudo cp /boot/dtbs/rockchip/rk3588s-fydetab-duo.dtb <ESP>/dtb/base/
+> sudo cp <ESP>/dtb/base/rk3588s-fydetab-duo.dtb <ESP>/dtb/base/rk3588s-tablet-12c-linux.dtb
 > ```
 {.is-info}
 
 For other RK3588-based boards, replace `rk3588-board.dtb` with your actual device name:
 
 ``` 
-sudo cp /boot/dtbs/rockchip/rk3588-board.dtb <ESP>/base/
+sudo cp /boot/dtbs/rockchip/rk3588-board.dtb <ESP>/dtb/base/
 ```
 
 ### 3: Configure GRUB
