@@ -2,7 +2,7 @@
 title: 📟 How to enable DTBOs
 description: 
 published: false
-date: 2024-11-10T19:13:03.447Z
+date: 2024-11-10T19:15:51.227Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -17,7 +17,7 @@ This is also the intended way to enable the panthor graphics stack.
 
 # 💻 For UEFI-powered Systems
 If you are running on a UEFI-powered board, you need to configure it.
-If you have already done this before you can skip ahead to step X.
+If you have already done this before you can skip ahead to step 5.
 
 > Images after 12th of September 2024 use `/boot/efi` instead of `/boot`.
 {.is-info}
@@ -80,6 +80,8 @@ Replace `my-overlay` with the dtbo of your choice.
 sudo cp /boot/dtbs/rockchip/overlay/my-overlay.dtbo <ESP>/dtb/overlays/
 ```
 
+### 6: Reboot
+Reboot your system to apply the change.
 
 # ⚙️ On U-Boot Powered Devices
 ### 1. Edit the extlinux configuration
