@@ -2,7 +2,7 @@
 title: 📟 How to enable DTBOs
 description: 
 published: true
-date: 2024-11-10T19:22:27.493Z
+date: 2024-11-10T19:32:17.170Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -25,13 +25,13 @@ If you have already done this before you can skip ahead to step 5.
 To determine where your ESP partition is located, run the command,
 `df | grep "/boot" | awk '{print $NF}'` and replace `<ESP>` in all of the following commands with it's output.
 
-### 1: Create the necessary directories for storing the DTB files
+### 📁 1: Create the necessary directories for storing the DTB files
 
 ```
 sudo mkdir -p <ESP>/dtb/{base,overlays}
 ```
 
-### 2: Copy over the base DTB
+### 🗄️ 2: Copy over the base DTB
 
 > If you are using a FydeTab Duo, copy the specific DTB file to the `base` folder:
 > 
@@ -47,7 +47,7 @@ For other RK3588-based boards, replace `rk3588-board.dtb` with your actual devic
 sudo cp /boot/dtbs/rockchip/rk3588-board.dtb <ESP>/dtb/base/
 ```
 
-### 3: Configure GRUB
+### 🫘 3: Configure GRUB
 Open the GRUB configuration file:
 ```
 sudo nano /etc/default/grub
@@ -64,7 +64,7 @@ Update GRUB with the new configuration:
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### 4: Configure UEFI
+### 🎛️ 4: Configure UEFI
 Reboot into UEFI *(You can do this from GRUB)* > `Device Manager` > `Rockchip Platform Configuration` > `ACPI / Device Tree`, and do the following:
 
 - **Set `Config Table Mode` to `Device Tree`**
@@ -74,13 +74,13 @@ Reboot into UEFI *(You can do this from GRUB)* > `Device Manager` > `Rockchip Pl
 
 Press F10 to save and reboot back into your system (you can go back to the first UEFI screen and select `Continue`).
 
-### 5: Copy the DTBO
+### 🔄 5: Copy the DTBO
 Replace `my-overlay` with the dtbo of your choice. 
 ``` 
 sudo cp /boot/dtbs/rockchip/overlay/my-overlay.dtbo <ESP>/dtb/overlays/
 ```
 
-### 6: Reboot
+### ⏼ 6: Reboot
 Reboot your system to apply the change.
 
 # ⚙️ On U-Boot Powered Devices
