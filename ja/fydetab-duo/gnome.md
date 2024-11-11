@@ -14,59 +14,59 @@ gnome-desktop はパッケージ `gnome-meta` でインストールできます�
 
 ---
 
-適切な操作を行うには、インストール時に GDM に切り替える必要があります。 That can be done by running:
+適切な操作を行うには、インストール時に GDM に切り替える必要があります。 以下の手順で実行できます。
 
 ```
 sudo systemctl disable lightdm
 sudo systemctl enable gdm
 ```
 
-Only Gnome wayland is at all supported.
+Gnomeのウェイランドだけが全くサポートされています。
 
-## Screen rotation fix
+## 画面の回転を修正
 
-**If** on your Fydetab the screen rotates incorrectly, you need to install and configure the `Screen Rotate` extension.
+Fydetabの画面が正しく回転しない場合は、拡張機能「Screen Rotate」をインストールして設定する必要があります。
 
-### 1. Install Extension Manager
+### 1. 拡張機能マネージャのインストール
 
-Run `sudo pacman -S extension-manager` to install it, and open the application.
+`sudo pacman -S extension-manager` を実行してインストールし、アプリケーションを開きます。
 
-### 2. Install Screen Rotate
+### 2. 画面の回転をインストール
 
-After opening the app, tap `Browse` > `Search` > Type `Screen rotate` > Install `Screen Rotate` by `shyzus`.
+アプリを開いたら、`Browse` > `Search` > `Screen rotate` と入力します。
 
-### 3. Configure Screen Rotate
+### 3. 画面回転の設定
 
-Head back to the `Installed` page of Extension Manager and tap the settings cogwheel to open the extension's settings panel.
-Then you should increase the value of `Set orientation offset` to 1.
+拡張機能マネージャの「インストール済み」ページに戻り、設定の歯車をタップして拡張機能の設定パネルを開きます。
+そして、`向きをオフセットにする` の値を 1 に増やします。
 
-## Landscape stylus usage
+## ランドスケープスタイラスペンの使用状況
 
-The stylus will only point correctly when the screen is rotated vertically by default.
-To set this to instead work horizontally:
+スタイラスはデフォルトで画面が垂直方向に回転している場合にのみ正しくポイントされます。
+これを水平方向に動作させるには:
 
-### 1. Open `/etc/udev/rules.d/fydetab.rules`
+### 1. `/etc/udev/rules.d/fydetab.rules` を開く
 
-To open the file, run:
+ファイルを開くには、以下を実行します。
 
 ```
 sudo nano /etc/udev/rules.d/fydetab.rules
 ```
 
-### 2. Append the configuration line
+### 2. 設定行を追加
 
-At the bottom of the file, add:
+ファイルの一番下に以下を追加します。
 
 ```
-SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1 0 0 1"
+SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 0 1"
 ```
 
 ### 3. Reboot
 
-After reboot the pen will work correctly.
+再起動後、ペンは正常に動作します。
 
-If you mistakenly tried gnome setting's stylus calibration, remove the calibration data by running:
+誤ってGNOME設定のスタイラス校正を試した場合は、以下を実行してキャリブレーションデータを削除してください。
 
 ```
-dconf reset -f /org/gnome/desktop/peripherals/tablets
+dconf reset -f /org/gnome/desktop/pakts
 ```
