@@ -10,8 +10,8 @@ dateCreated: 2024-10T19:41:06.111Z
 
 # Escritorio GNOME en Fy.Ub Dúo
 
-The gnome-desktop can be installed with the AUR package `gnome-meta`.
-Install it with `yay -S gnome-meta`.
+El escritorio gnome-se puede instalar con el paquete AUR `gnome-meta`.
+Instálalo con `yay -S gnome-meta`.
 
 ---
 
