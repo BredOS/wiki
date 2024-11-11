@@ -2,7 +2,7 @@
 title: Fydetab上的 GNOME
 description: null
 published: true
-date: 2024-11T10：39：09.164Z
+date: 2024-11-11T14:21:42.043Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-10T19：41：06.111Z
@@ -10,7 +10,8 @@ dateCreated: 2024-11-10T19：41：06.111Z
 
 # FydetabDuo 上的 GNOME 桌面
 
-gnome-desktop 可以与软件包`gnome-meta`安装。
+The gnome-desktop can be installed with the AUR package `gnome-meta`.
+Install it with `yay -S gnome-meta`.
 
 ---
 
