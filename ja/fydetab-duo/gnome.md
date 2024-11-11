@@ -10,8 +10,8 @@ dateCreated: 2024-11-10T19:41:06.111Z
 
 # Fydetab Duo上のGNOMEデスクトップ
 
-The gnome-desktop can be installed with the AUR package `gnome-meta`.
-Install it with `yay -S gnome-meta`.
+gnome-desktop は AUR パッケージ `gnome-meta` でインストールできます。
+`yay -S gnome-meta` でインストールします。
 
 ---
 
