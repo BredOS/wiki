@@ -2,7 +2,7 @@
 title: GNOME en el Desafío b
 description: null
 published: true
-date: 2024-11-11T10:39:09.164Z
+date: 2024-11-11T14:21:42.043Z
 tags: null
 editor: markdown
 dateCreated: 2024-10T19:41:06.111Z
@@ -10,7 +10,8 @@ dateCreated: 2024-10T19:41:06.111Z
 
 # Escritorio GNOME en Fy.Ub Dúo
 
-El escritorio gnome-se puede instalar con el paquete `gnome-meta`.
+The gnome-desktop can be installed with the AUR package `gnome-meta`.
+Install it with `yay -S gnome-meta`.
 
 ---
 
