@@ -14,59 +14,59 @@ El escritorio gnome-se puede instalar con el paquete `gnome-meta`.
 
 ---
 
-For proper operation you should also switch to GDM upon installation. That can be done by running:
+Para una operación adecuada también debería cambiar a GDM después de la instalación. Esto se puede hacer ejecutando:
 
 ```
-sudo systemctl disable lightdm
-sudo systemctl enable gdm
+sudo systemctl deshabilita lightdm
+sudo systemctl habilitar gdm
 ```
 
-Only Gnome wayland is at all supported.
+Sólo el wayland de Gnome está soportado.
 
-## Screen rotation fix
+## Fijar rotación de pantalla
 
-**If** on your Fydetab the screen rotates incorrectly, you need to install and configure the `Screen Rotate` extension.
+**Si** en tu ARCHIVO la pantalla gira incorrectamente, necesitas instalar y configurar la extensión `Rotar pantalla`.
 
-### 1. Install Extension Manager
+### 1. Instalar gestor de extensiones
 
-Run `sudo pacman -S extension-manager` to install it, and open the application.
+Ejecuta `sudo pacman -S extension-manager` para instalarlo, y abre la aplicación.
 
-### 2. Install Screen Rotate
+### 2. Instalar rotación de pantalla
 
-After opening the app, tap `Browse` > `Search` > Type `Screen rotate` > Install `Screen Rotate` by `shyzus`.
+Después de abrir la aplicación, pulsa `Examinar` > `Buscar` > Escribe `Rotar pantalla` > Instala `Rotar pantalla` por `shyzus`.
 
-### 3. Configure Screen Rotate
+### 3. Configurar rotación de pantalla
 
-Head back to the `Installed` page of Extension Manager and tap the settings cogwheel to open the extension's settings panel.
-Then you should increase the value of `Set orientation offset` to 1.
+Vaya de vuelta a la página 'Instalado' del Administrador de extensiones y pulse la rueda dentada de ajustes para abrir el panel de ajustes de la extensión.
+Entonces deberías aumentar el valor de `Establecer desplazamiento de orientación` a 1.
 
-## Landscape stylus usage
+## Uso del paisaje plano de uso
 
-The stylus will only point correctly when the screen is rotated vertically by default.
-To set this to instead work horizontally:
+El estilo sólo apuntará correctamente cuando la pantalla se rote verticalmente de forma predeterminada.
+Para establecer esto en su lugar trabajar horizontalmente:
 
-### 1. Open `/etc/udev/rules.d/fydetab.rules`
+### 1. Abre `mañ/udev/rules.d/fydetab.rules`
 
-To open the file, run:
-
-```
-sudo nano /etc/udev/rules.d/fydetab.rules
-```
-
-### 2. Append the configuration line
-
-At the bottom of the file, add:
+Para abrir el archivo, ejecutar:
 
 ```
-SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1 0 0 1"
+sudo nano ► /udev/rules.d/fydetab.rules
+```
+
+### 2. Añadir la línea de configuración
+
+En la parte inferior del archivo, agregar:
+
+```
+SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 0 0 0 0 1"
 ```
 
 ### 3. Reboot
 
-After reboot the pen will work correctly.
+Después de reiniciar el lápiz funcionará correctamente.
 
-If you mistakenly tried gnome setting's stylus calibration, remove the calibration data by running:
+Si intentaste con error la calibración de la configuración de gnome, elimina los datos de calibración ejecutando:
 
 ```
-dconf reset -f /org/gnome/desktop/peripherals/tablets
+reset dconf -f /org/gnome/desktop/peripherals/tablets
 ```
