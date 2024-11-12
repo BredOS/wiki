@@ -62,7 +62,7 @@ sudo nano /etc/udev/rules.d/fydetab.rules
 SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 0 1"
 ```
 
-Then press Ctrl + S to save and Ctrl + X to quit.
+Ctrl + Sを押して保存し、Ctrl + Xを押して終了します。
 
 ### 3. Reboot
 
