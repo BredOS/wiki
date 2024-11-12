@@ -2,7 +2,7 @@
 title: Fydetab上的 GNOME
 description: null
 published: true
-date: 2024-11-12T15:33:19.071Z
+date: 2024-11-12T15：33：19.071Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-10T19：41：06.111Z
@@ -62,7 +62,7 @@ sudo nano /etc/udev/rules.d/fydetab.rules
 SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1 0 0 1"
 ```
 
-Then press Ctrl + S to save and Ctrl + X to quit.
+然后按 Ctrl + S 键保存，Ctrl + X 键退出操作。
 
 ### 3. Reboot
 
