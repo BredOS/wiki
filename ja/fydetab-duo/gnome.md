@@ -2,7 +2,7 @@
 title: FydetabのGNOME
 description: null
 published: true
-date: 2024-11-11T14:21:42.043Z
+date: 2024-11-12T15:33:19.071Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-10T19:41:06.111Z
@@ -61,6 +61,8 @@ sudo nano /etc/udev/rules.d/fydetab.rules
 ```
 SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 0 1"
 ```
+
+Then press Ctrl + S to save and Ctrl + X to quit.
 
 ### 3. Reboot
 
