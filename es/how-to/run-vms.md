@@ -2,7 +2,7 @@
 title: Cómo ejecutar máquinas virtuales en BredOS
 description: null
 published: true
-date: 2024-05T22:38:06.989Z
+date: 2024-11-14T19:23:33.286Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
@@ -33,8 +33,7 @@ sudo pacman -S virt-manager virt-viewer qemu-base qemu-system-aarch64 edk2-aarch
 Una vez instalados los paquetes, habilite e inicie el servicio `libvirtd`:
 
 ```bash
-sudo systemctl habilita libvirtd
-sudo systemctl iniciar libvirtd
+sudo systemctl enable --now libvirtd
 ```
 
 Para verificar que el servicio está en ejecución:

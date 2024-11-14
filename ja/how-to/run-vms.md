@@ -2,7 +2,7 @@
 title: BredOS 上で仮想マシンを実行する方法
 description: null
 published: true
-date: 2024-10-05T22:38:06.989Z
+date: 2024-11-14T19:23:33.286Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -33,8 +33,7 @@ sudo pacman -S virt-manager qemu-base qemu-system-aarch64 edk2-aarch64 dnsmasq
 パッケージがインストールされたら、`libvirtd` サービスを有効にして起動します。
 
 ```bash
-sudo systemctl enable libvirtd
-sudo systemctl start libvirtd
+sudo systemctl enable --now libvirtd
 ```
 
 サービスが実行されていることを確認するには:
