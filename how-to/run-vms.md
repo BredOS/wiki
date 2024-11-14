@@ -2,7 +2,7 @@
 title: How to run Virtual Machines on BredOS
 description: 
 published: true
-date: 2024-10-05T22:38:06.989Z
+date: 2024-11-14T19:23:33.286Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -33,8 +33,7 @@ sudo pacman -S virt-manager virt-viewer qemu-base qemu-system-aarch64 edk2-aarch
 Once the packages are installed, enable and start the `libvirtd` service:
 
 ```bash
-sudo systemctl enable libvirtd
-sudo systemctl start libvirtd
+sudo systemctl enable --now libvirtd
 ```
 
 To verify that the service is running:
