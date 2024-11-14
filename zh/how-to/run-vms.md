@@ -2,7 +2,7 @@
 title: 如何在 BredOS 上运行虚拟机
 description: null
 published: true
-date: 2024-11-14T19:23:33.286Z
+date: 2024-11-14T19:23.286Z
 tags: vm, ho-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -33,7 +33,7 @@ sudo pacman -S virt-manager virt-viewer qemu-Base qemu-system-aarch64 edk2-aarch
 一旦安装了软件包，启用并启动 `libvirtd` 服务：
 
 ```bash
-sudo systemctl enable --now libvirtd
+sudo systemctl 启用 --now libvirtd
 ```
 
 要验证服务正在运行：
