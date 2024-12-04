@@ -2,7 +2,7 @@
 title: Switching Kernel
 description: 
 published: false
-date: 2024-12-04T17:05:09.185Z
+date: 2024-12-04T17:51:20.720Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -113,3 +113,11 @@ ls /boot/
 ### UEFI
 This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.
 
+Run:
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## 4. Reboot
+
+Once done, you can safely reboot into the new kernel.
