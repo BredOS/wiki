@@ -2,7 +2,7 @@
 title: Switching Kernel
 description: 
 published: false
-date: 2024-12-04T16:21:13.994Z
+date: 2024-12-04T17:05:09.185Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -77,3 +77,39 @@ The kernel package will generate an initramfs image. You can find it's filename 
 ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-rockchip-rkr3.img'
 ==> Initcpio image generation successful
 ```
+
+The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-rkr3.img` initramfs image. Other kernels will produce different filenames.
+
+## 3. Update bootloader config
+
+### U-Boot
+This only applies to devices that don't boot with a UEFI, if you have UEFI on your board, skip to that section.
+
+Edit `/boot/extlinux/extlinux.conf`:
+
+```
+sudo nano /boot/extlinux/extlinux.conf
+```
+
+Inside it it should be something like this:
+
+```
+label BredOS ARM
+    kernel /vmlinuz-linux-rockchip-rkr3
+    initrd /initramfs-linux-rockchip-rkr3.img
+    fdt /dtbs/rockchip/rk3588-blueberry-edge-v10-linux.dtb
+
+    append root=UUID=xxxx earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 console=tty1 consoleblank=0 loglevel=0 panic=10 rootwait rw init=/sbin/init rootflags=subvol=@ rootfstype=btrfs
+```
+
+You need to edit the kernel `initrd` line to point to the same filename (without the path).
+You also need to edit the kernel line to match that.
+To verify the filename is correct, you can list the contents of `/boot/`:
+
+```
+ls /boot/
+```
+
+### UEFI
+This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.
+
