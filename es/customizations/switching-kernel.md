@@ -2,7 +2,7 @@
 title: Kernel cambiante
 description: null
 published: false
-date: 2024-04T16:21:13.994Z
+date: 2024-12-04T17:51:20.720Z
 tags: null
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
@@ -79,3 +79,50 @@ El paquete del núcleo generará una imagen de initramfs. Puede encontrar su nom
 ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-rockchip-rkr3.img'
 ==> Initcpio image generation successful
 ```
+
+El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
+
+## 3. Actualizar configuración del cargador de arranque
+
+### Arrancar U
+
+Esto sólo se aplica a los dispositivos que no arranquen con una UEFI, si usted tiene UEFI en su tabla, salte a esa sección.
+
+Editar `/boot/extlinux/extlinux.conf`:
+
+```
+sudo nano /boot/extlinux/extlinux.conf
+```
+
+Dentro debería ser algo así:
+
+```
+etiqueta BredOS ARM
+    kernel /vmlinuz-linux-rockchip-rkr3
+    initrd /initramfs-linux-rockchip-rkr3.img
+    fdt /dtbs/rockchip/rk3588-blueberry-edge-v10-linux. tb
+
+    añadir root=UUID=xxxx earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 console=tty1 consoleblank=0 loglevel=0 panic=10 rootwait rw init=/sbin/init rootflags=subvol=@ rootfstype=btrfs
+```
+
+Necesita editar la línea `initrd` del núcleo para apuntar al mismo nombre de archivo (sin la ruta).
+También necesita editar la línea del núcleo para que coincida con eso.
+Para verificar que el nombre del archivo es correcto, puedes listar el contenido de `/boot/`:
+
+```
+ls /boot/
+```
+
+### UEFI
+
+Esta sección sólo se aplica a los dispositivos que arranquen con la UEFI. Si utiliza Arranque U en su lugar, salte a la sección anterior.
+
+Ejecutar:
+
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## 4. Reboot
+
+Una vez hecho, puede reiniciar con seguridad en el nuevo núcleo.
