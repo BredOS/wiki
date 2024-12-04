@@ -1,8 +1,8 @@
 ---
 title: 切换内核中
 description: null
-published: false
-date: 2024-12-04T17：51：20.720Z
+published: true
+date: 2024-12-04T18：04：57.653Z
 tags: null
 editor: markdown
 dateCreated: 2024-12-04T15：50：46.861Z
