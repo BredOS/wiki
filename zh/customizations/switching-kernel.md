@@ -2,7 +2,7 @@
 title: 切换内核中
 description: null
 published: false
-date: 2024-12-04T16:21:13.994Z
+date: 2024-12-04T17：51：20.720Z
 tags: null
 editor: markdown
 dateCreated: 2024-12-04T15：50：46.861Z
@@ -79,3 +79,50 @@ sudo pacman -S your new-kernel headers
 ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-rockchip-rkr3.img'
 ==> Initcpio image generation successful
 ```
+
+`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` initramfs 图像。 其它内核会生成不同的文件名。
+
+## 3. 更新引导程序配置
+
+### U-启动
+
+这只适用于不使用 UEFI 启动的设备，如果您的棋盘上有UEFI，请跳转到该部分。
+
+编辑 `/boot/extlinux/extlinux.conf`:
+
+```
+sudo nano /boot/extlinux/extlinux.conf
+```
+
+它应该是这样的东西：
+
+```
+label BredOS ARM
+    内核/vmlinuz-linux-rockchip-rkr3
+    initrd/initramfs-linux-rockchip-rkr3.img
+    fdt /dtbs/rockchip/rk3588-bluberry-edge-v10-linux. tb
+
+    附加root=UUUID=xxxx earlycon=uart850,mmio32,0xfeb50000console=ttyFIQ0 console=tty1 consoleblank=0 loglevel=0 panic=10 root等待rw init=/sbin/init rootflags=subvol=@ rootfstype=btrfs
+```
+
+您需要编辑内核`initrd`行来指向相同的文件名(无路径)。
+您还需要编辑内核行才能匹配。
+要验证文件名正确，您可以列出`/boot/`的内容：
+
+```
+ls /boot/
+```
+
+### UEFI
+
+本节仅适用于使用 UEFI 启动的设备。 如果您使用 U-Boot，请跳转到以上部分。
+
+运行：
+
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## 4. Reboot
+
+完成后，您可以安全地重启到新内核。
