@@ -2,7 +2,7 @@
 title: カーネルの切り替え
 description: null
 published: false
-date: 2024-12-04T16:21:13.994Z
+date: 2024-12-04T17:51:20.720Z
 tags: null
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -79,3 +79,50 @@ sudo pacman -S your-new-kernel your-new-kernel-headers
 ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-rockchip-rkr3.img'
 ==> Initcpio image generation successful
 ```
+
+`linux-rockchip-rkr3` カーネルは `/boot/initramfs-linux-rockchip-rkr3.img` initramfs イメージを生成します。 他のカーネルは異なるファイル名を生成します。
+
+## 3. ブートローダーの設定を更新する
+
+### U-Boot
+
+これは、UEFIがボードにある場合は、UEFIで起動しないデバイスにのみ適用されます。そのセクションにスキップしてください。
+
+`/boot/extlinux/extlinux.conf`を編集:
+
+```
+sudo nano /boot/extlinux/extlinux.conf
+```
+
+その中には以下のようなものがあります:
+
+```
+label BredOS ARM
+    kernel /vmlinuz-linux-rockchip-rkr3
+    initrd /initramfs-linux-rockchip-rkr3.img
+    fdt /dtbs/rockchip/rk3588-blueberry-edge-v10-linux.dtb
+
+    append root=UUID=xxxx earlycon=uart8250,mmio32,0xfeb50000 console=ttyFIQ0 console=tty1 consoleblank=0 loglevel=0 panic=10 rootwait rw init=/sbin/init rootflags=subvol=@ rootfstype=btrfs
+```
+
+カーネル`initrd`行を編集して同じファイル名を指すようにする必要があります (パスなし)。
+それに合わせてカーネル行を編集する必要があります。
+ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
+
+```
+ls /boot/
+```
+
+### UEFI
+
+このセクションは UEFI で起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。
+
+実行:
+
+```
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## 4. Reboot
+
+完了したら、安全に新しいカーネルに再起動できます。
