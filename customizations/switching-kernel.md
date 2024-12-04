@@ -2,7 +2,7 @@
 title: Switching Kernel
 description: 
 published: false
-date: 2024-12-04T16:20:53.171Z
+date: 2024-12-04T16:21:13.994Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -64,7 +64,6 @@ The kernel package will generate an initramfs image. You can find it's filename 
   -> Running build hook: [base]
   -> Running build hook: [udev]
   -> Running build hook: [autodetect]
-==> ERROR: failed to detect root filesystem
   -> Running build hook: [modconf]
   -> Running build hook: [kms]
   -> Running build hook: [keyboard]
