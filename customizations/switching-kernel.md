@@ -2,7 +2,7 @@
 title: Switching Kernel
 description: 
 published: false
-date: 2024-12-04T16:14:22.945Z
+date: 2024-12-04T16:20:53.171Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -56,5 +56,25 @@ sudo pacman -S your-new-kernel your-new-kernel-headers
 The kernel package will generate an initramfs image. You can find it's filename from the install log:
 
 ```
-
+(14/30) Updating linux initcpios...
+==> Building image from preset: /etc/mkinitcpio.d/linux-rockchip-rkr3.preset: 'default'
+==> Using configuration file: '/etc/mkinitcpio.conf'
+  -> -k /boot/vmlinuz-linux-rockchip-rkr3 -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-rockchip-rkr3.img
+==> Starting build: '6.1.75-rkr3'
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [autodetect]
+==> ERROR: failed to detect root filesystem
+  -> Running build hook: [modconf]
+  -> Running build hook: [kms]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [keymap]
+  -> Running build hook: [consolefont]
+==> WARNING: consolefont: no font found in configuration
+  -> Running build hook: [block]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-rockchip-rkr3.img'
+==> Initcpio image generation successful
 ```
