@@ -84,7 +84,7 @@ sudo pacman -S your-new-kernel your-new-kernel-headers
 
 ## 3. ブートローダーの設定を更新する
 
-If during board power-on you see a BredOS logo, you are using UEFI.
+ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
 
 ### U-Boot
 
