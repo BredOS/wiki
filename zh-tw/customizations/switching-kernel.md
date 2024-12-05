@@ -2,7 +2,7 @@
 title: Switching Kernel
 description: null
 published: true
-date: 2024-12-04T18:04:57.653Z
+date: 2024-12-05T20:07:16.898Z
 tags: null
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -83,6 +83,8 @@ The kernel package will generate an initramfs image. You can find it's filename 
 The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-rkr3.img` initramfs image. Other kernels will produce different filenames.
 
 ## 3. Update bootloader config
+
+If during board power-on you see a BredOS logo, you are using UEFI.
 
 ### U-Boot
 
