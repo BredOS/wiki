@@ -2,7 +2,7 @@
 title: 切换内核中
 description: null
 published: true
-date: 2024-12-05T20:07:16.898Z
+date: 2024-12-05T20：07：16.898Z
 tags: null
 editor: markdown
 dateCreated: 2024-12-04T15：50：46.861Z
@@ -84,7 +84,7 @@ sudo pacman -S your new-kernel headers
 
 ## 3. 更新引导程序配置
 
-If during board power-on you see a BredOS logo, you are using UEFI.
+如果你在棋盘上看到一个 BredOS 标志，你正在使用 UEFI 。
 
 ### U-启动
 
