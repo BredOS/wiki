@@ -2,7 +2,7 @@
 title: カーネルの切り替え
 description: null
 published: true
-date: 2024-12-04T18:04:57.653Z
+date: 2024-12-05T20:07:16.898Z
 tags: null
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -83,6 +83,8 @@ sudo pacman -S your-new-kernel your-new-kernel-headers
 `linux-rockchip-rkr3` カーネルは `/boot/initramfs-linux-rockchip-rkr3.img` initramfs イメージを生成します。 他のカーネルは異なるファイル名を生成します。
 
 ## 3. ブートローダーの設定を更新する
+
+If during board power-on you see a BredOS logo, you are using UEFI.
 
 ### U-Boot
 
