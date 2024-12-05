@@ -2,7 +2,7 @@
 title: 切换内核中
 description: null
 published: true
-date: 2024-12-04T18：04：57.653Z
+date: 2024-12-05T20:07:16.898Z
 tags: null
 editor: markdown
 dateCreated: 2024-12-04T15：50：46.861Z
@@ -83,6 +83,8 @@ sudo pacman -S your new-kernel headers
 `linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` initramfs 图像。 其它内核会生成不同的文件名。
 
 ## 3. 更新引导程序配置
+
+If during board power-on you see a BredOS logo, you are using UEFI.
 
 ### U-启动
 
