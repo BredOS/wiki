@@ -2,7 +2,7 @@
 title: Kernel cambiante
 description: null
 published: true
-date: 2024-12-05T20:07:16.898Z
+date: 2024-05T20:07:16.898Z
 tags: null
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
@@ -84,7 +84,7 @@ El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3
 
 ## 3. Actualizar configuración del cargador de arranque
 
-If during board power-on you see a BredOS logo, you are using UEFI.
+Si durante el encendido del tablero ves un logotipo de BredOS, estás usando UEFI.
 
 ### Arrancar U
 
