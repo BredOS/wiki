@@ -2,7 +2,7 @@
 title: Kernel cambiante
 description: null
 published: true
-date: 2024-04T18:04:57.653Z
+date: 2024-12-05T20:07:16.898Z
 tags: null
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
@@ -83,6 +83,8 @@ El paquete del núcleo generará una imagen de initramfs. Puede encontrar su nom
 El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
 
 ## 3. Actualizar configuración del cargador de arranque
+
+If during board power-on you see a BredOS logo, you are using UEFI.
 
 ### Arrancar U
 
