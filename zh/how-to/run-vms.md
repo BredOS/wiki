@@ -2,7 +2,7 @@
 title: 如何在 BredOS 上运行虚拟机
 description: null
 published: true
-date: 2024-10-05T22：38：06.989Z
+date: 2024-12-10T22：18：35.474Z
 tags: vm, ho-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -33,8 +33,7 @@ sudo pacman -S virt-manager virt-viewer qemu-Base qemu-system-aarch64 edk2-aarch
 一旦安装了软件包，启用并启动 `libvirtd` 服务：
 
 ```bash
-sudo systemctl 启用 libvirtd
-sudo systemctl 启动 libvirtd
+sudo systemctl 启用 --now libvirtd
 ```
 
 要验证服务正在运行：
@@ -108,7 +107,29 @@ Locate `<vcpu>XYZ</vcpu>` and replace it with
 如果cpu 设置是你想要使用的核心，则0-3是rk3588上的E核心，4-7是性能核心和核心数量。 在上面的例子中，vm将有两个核心，它们是死亡本身的高效核核心1和2。
 ![vcpuxml2.jpg](/vms/vcpuxml2.jpg)
 
-5. 一旦配置完毕，启动虚拟机。 🟢
+6. 添加附带硬件和图形支持。 🖥️
+
+返回虚拟机页面，按“添加硬件”。
+
+![addhw.png](/vms/addhw.png)
+
+然后从将显示的窗口中选择"视频"和模型选择, 选择"ramfb", 然后单击"完成"。
+
+![gpu.png](/vms/gpu.png)
+
+现在添加图形服务器，再次选择"添加硬件"，"图形"，然后单击"完成"。
+
+![graphics.png](/vms/graphics.png)
+
+Now for keyboard and mouse, repeat the same procedure by selecting:
+"Input" -> "USB Keyboard"
+and
+"Input" -> "EvTouch USB Graphics Tablet"
+
+![tab.png](/vms/kb.png)
+![tab.png](/vms/tab.png)
+
+7. 一旦配置完毕，启动虚拟机。 🟢
 
 ![startvm.jpg](/vms/startvm.jpg)
 

@@ -2,7 +2,7 @@
 title: How to run Virtual Machines on BredOS
 description: null
 published: true
-date: 2024-10-05T22:38:06.989Z
+date: 2024-12-10T22:18:35.474Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -33,8 +33,7 @@ sudo pacman -S virt-manager virt-viewer qemu-base qemu-system-aarch64 edk2-aarch
 Once the packages are installed, enable and start the `libvirtd` service:
 
 ```bash
-sudo systemctl enable libvirtd
-sudo systemctl start libvirtd
+sudo systemctl enable --now libvirtd
 ```
 
 To verify that the service is running:
@@ -108,7 +107,29 @@ Locate `<vcpu>XYZ</vcpu>` and replace it with
 Where cpu set is the cores you want to use 0-3 are the E cores on the rk3588 and 4-7 are the performance cores and the number of cores. In the example above the vm will have 2 cores with them being efficiency cores aka cores 1 and 2 on the die itself.
 ![vcpuxml2.jpg](/vms/vcpuxml2.jpg)
 
-5. Once configured, start the VM. 🟢
+6. Add peripheral hardware and graphics support. 🖥️
+
+Head back to the VM page, press "Add Hardware".
+
+![addhw.png](/vms/addhw.png)
+
+Then from the window that will appear select "Video" and from the model selection, select "ramfb" and click "Finish".
+
+![gpu.png](/vms/gpu.png)
+
+Now to add the graphics server, select "Add hardware" again, "Graphics" and click "Finish".
+
+![graphics.png](/vms/graphics.png)
+
+Now for keyboard and mouse, repeat the same procedure by selecting:
+"Input" -> "USB Keyboard"
+and
+"Input" -> "EvTouch USB Graphics Tablet"
+
+![tab.png](/vms/kb.png)
+![tab.png](/vms/tab.png)
+
+7. Once configured, start the VM. 🟢
 
 ![startvm.jpg](/vms/startvm.jpg)
 

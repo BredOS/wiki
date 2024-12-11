@@ -2,7 +2,7 @@
 title: Cómo ejecutar máquinas virtuales en BredOS
 description: null
 published: true
-date: 2024-05T22:38:06.989Z
+date: 2024-10T22:18:35.474Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
@@ -33,8 +33,7 @@ sudo pacman -S virt-manager virt-viewer qemu-base qemu-system-aarch64 edk2-aarch
 Una vez instalados los paquetes, habilite e inicie el servicio `libvirtd`:
 
 ```bash
-sudo systemctl habilita libvirtd
-sudo systemctl iniciar libvirtd
+sudo systemctl habilitar --now libvirtd
 ```
 
 Para verificar que el servicio está en ejecución:
@@ -108,7 +107,29 @@ Localice `<vcpu>XYZ</vcpu>` y reemplácelo con
 Donde el set de cpu son los núcleos que quieres usar 0-3 son los núcleos E en el rk3588 y 4-7 son los núcleos de rendimiento y el número de núcleos. En el ejemplo de arriba la vm tendrá 2 núms. con ellos es la eficiencia núm. 1 y 2 núm.
 ¡[vcpuxml2.jpg](/vms/vcpuxml2.jpg)
 
-5. Una vez configurado, inicie la máquina virtual. 🟢
+6. Añadir soporte para hardware periférico y gráficos. 🖥️
+
+Diríjase a la página de la MV, presione "Añadir Hardware".
+
+![addhw.png](/vms/addhw.png)
+
+Luego, en la ventana que aparecerá seleccione "Video" y en la selección del modelo, seleccione "ramfb" y haga clic en "Finalizar".
+
+![gpu.png](/vms/gpu.png)
+
+Ahora para añadir el servidor de gráficos, selecciona "Añadir hardware" de nuevo, "Gráficos" y haz clic en "Finalizar".
+
+![graphics.png](/vms/graphics.png)
+
+Ahora para el teclado y el ratón, repita el mismo procedimiento seleccionando:
+"Entrada" -> "Tabla USB de teclado"
+y
+"Entrada" -> "EvTouch USB Graphics Tablet"
+
+![tab.png](/vms/kb.png)
+![tab.png](/vms/tab.png)
+
+7. Una vez configurado, inicie la máquina virtual. 🟢
 
 ![startvm.jpg](/vms/startvm.jpg)
 
