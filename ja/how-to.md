@@ -26,7 +26,7 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [📦✨ Package Managers Guide](/en/how-to/package-management)
 
-- [🧹💾 Disk Space Cleanup Guide](/en/how-to/free-space-up)
+- [🧹💾 ディスク領域クリーンアップガイド](/ja/how-to/free-space-up)
 
 - [📸🔄 Timeshiftによるスナップショットとロールバック](/ja/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
