@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
-date: 2024-10-05T22:39:59.166Z
+date: 2024-12-14T20：43：43.996Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -22,13 +22,13 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [🎮 How to install-steam] (/en/how to/how to install-steam)
 
-- [:天线条: 如何将您的设备用作无线热点](https://wiki.bredos.org/e/en/ho-to/how to-use-your-device-as ap)
+- [:天线条: 如何将您的设备用作无线热点](/en/how to/how to/how to-use-your device-as ap)
 
-- [📦✨ Package Managers Guide](https://wiki.bredos.org/en/how-to/package-management)
+- [📦✨ Package Managers Guide](/en/how-to/package-management)
 
-- [🧹💾 磁盘空间清理指南](https://wiki.bredos.org/e/en/how-to/free-spacup)
+- [🧹💾 Disk Space Cleanup Guide](/en/how-to/free-space-up)
 
-- [:cama_with_flash:🔄 Btrfs Snapshots and Rollbacks with Timeshif](https://wiki.bredos.org/en/how-to/timeshift-system-snapshotsand-rowbacks-on-btrfs)
+- [📸:counterclockwise_arrows_buton: Btrfs Snapshots and Rollbacks with Timeshif](/en/how-to/timeshift-system-snapshots and rolbacks-on-btrfs)
 
 - [如何运行虚拟机](/en/how-to/run-vms)
 
