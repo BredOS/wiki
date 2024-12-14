@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2024-05T22:39:59.166Z
+date: 2024-14T20:43:43.996Z
 tags: null
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -22,13 +22,13 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
 
-- [📶 Cómo usar tu consola como un hotspot inalámbrico](https://wiki.bredos.org/e/es/how-to/how-to-use-your-device-as-ap)
+- [📶 How to use your device as a wireless hotspot](/en/how-to/how-to-use-your-device-as-ap)
 
-- [📦✨ Guía de Administradores de Paquetes](https://wiki.bredos.org/en/how-to/package-management)
+- [📦✨ Package Managers Guide](/en/how-to/package-management)
 
-- [🧹💾 Guía de limpieza del espacio en disco](https://wiki.bredos.org/e/es/how-to/free-space-up)
+- [🧹💾 Disk Space Cleanup Guide](/en/how-to/free-space-up)
 
-- [📸🔄 Snapshots Btrfs y Rollbacks con Timeshift](https://wiki.bredos.org/es/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
+- [📸🔄 Btrfs Snapshots and Rollbacks with Timeshift](/en/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
 - [Cómo ejecutar máquinas virtuales](/es/cómo/run-vms)
 
