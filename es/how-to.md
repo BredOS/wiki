@@ -22,13 +22,13 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
 
-- [📶 How to use your device as a wireless hotspot](/en/how-to/how-to-use-your-device-as-ap)
+- [📶 Cómo usar tu consola como un hotspot inalámbrico](/es/how-to/how-to-use-your-device-as-ap)
 
-- [📦✨ Package Managers Guide](/en/how-to/package-management)
+- [📦✨ Guía de Administradores de Paquetes](/es/how-to/package-management)
 
-- [🧹💾 Disk Space Cleanup Guide](/en/how-to/free-space-up)
+- [🧹💾 Guía de limpieza del espacio en disco](/es/how-to/free-space-up)
 
-- [📸🔄 Btrfs Snapshots and Rollbacks with Timeshift](/en/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
+- [📸🔄 Snapshots y Rollbacks Btrfs con Timeshift](/es/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
 - [Cómo ejecutar máquinas virtuales](/es/cómo/run-vms)
 
