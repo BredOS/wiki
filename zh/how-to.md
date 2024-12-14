@@ -26,7 +26,7 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [📦✨ Package Managers Guide](/en/how-to/package-management)
 
-- [🧹💾 Disk Space Cleanup Guide](/en/how-to/free-space-up)
+- [🧹💾 磁盘空间清理指南](/en/how-to/free-spacup)
 
 - [📸:counterclockwise_arrows_buton: Btrfs Snapshots and Rollbacks with Timeshif](/en/how-to/timeshift-system-snapshots and rolbacks-on-btrfs)
 
