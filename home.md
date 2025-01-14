@@ -75,6 +75,9 @@ A: You can update BredOS using the `pacman` package manager with the command `su
 ### 📦 Q: Where can I find additional software packages?
 A: You can find additional software packages in the Arch User Repository (AUR) and install them using `yay` or `paru`.
 
+### Q: The power consumption of my device is high, how can I reduce it?
+A: You can reduce the power consumption by changing the CPU governor to `ondemand` or `conservative` by editing the `/etc/default/cpupower` file.
+
 ## 🌐 Community and Support
 Join the BredOS community to get support, share ideas, and contribute to the project:
 - [📱 Telegram](https://t.me/bredoslinux)
