@@ -15,7 +15,10 @@ The device has and supports Cinnamon and KDE, but workarounds to working with gn
 Briefly, we use `rkdeveloptool` to flash the image to the eMMC. Commands are as follows:
 
 ```bash
+# first, put the device in maskrom mode
+# and flash the spi loader
 sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+# then flash the os image
 sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 ```
 
