@@ -87,6 +87,10 @@ BredOS 使用 `pacman`，这是来自 Arch Linux 的软件包管理器。 以下
 
 答：您可以在 Arch 用户仓库（AUR）中找到额外的软件包，并使用 `yay` 或 `paru` 安装它们。
 
+### 问：我的设备耗电量很高，我如何减少它？
+
+甲：您可以通过编辑 `/etc/default/cpupower` 文件将CPU 调节器更改为`ondemand` 或 `conservative` 来降低电量消耗。
+
 ## 🌐 社区和支持
 
 加入 BredOS 社区，获取支持、分享想法并为项目做出贡献：
