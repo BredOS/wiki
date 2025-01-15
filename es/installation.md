@@ -69,6 +69,13 @@ Si quieres instalar BredOS en el almacenamiento eMMC en lugar de usar una tarjet
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
+para los usuarios de Linux, puede usar el `rkdeveloptool` para flashear la imagen al eMMC. Los comandos son los siguientes:
+
+```bash
+sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
+```
+
 ## 💻 Sigue el instalador de BredOS
 
 1. Siga las instrucciones en pantalla para completar el proceso de instalación.
