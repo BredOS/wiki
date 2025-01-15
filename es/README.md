@@ -10,8 +10,8 @@ dateCreated: 2024-20T07:39:21.434Z
 
 # wiki-backups
 
-This is the wiki repository for [BredOS](https://wiki.bredos.org/en/home), a user-friendly Arch-based Linux distribution specifically designed for ARM-based single board computers (SBCs).
+Este es el repositorio wiki para [BredOS](https://wiki.bredos.org/en/home), una distribución Linux fácil de usar diseñada específicamente para ordenadores de una sola placa (SBCs).
 
-You can contribute to the documentation by creating a pull request with your changes.
+Puede contribuir a la documentación creando un pull request con sus cambios.
 
 [![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg)](https://bredos.crowdin.com/wiki)
