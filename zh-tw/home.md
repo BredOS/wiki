@@ -87,6 +87,10 @@ A: BredOS supports a variety of ARM-based single board computers, the complete l
 
 答：您可以在 Arch 用戶倉庫（AUR）中找到額外的軟件包，並使用 `yay` 或 `paru` 安裝它們。
 
+### Q: The power consumption of my device is high, how can I reduce it?
+
+A: You can reduce the power consumption by changing the CPU governor to `ondemand` or `conservative` by editing the `/etc/default/cpupower` file.
+
 ## 🌐 Community and Support
 
 加入 BredOS 社區，獲取支持、分享想法並為項目做出貢獻：
