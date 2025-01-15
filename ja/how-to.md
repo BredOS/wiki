@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2024-10-05T22:39:59.166Z
+date: 2024-12-14T20:43:43.996Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -22,13 +22,13 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [🎮 BredOS上でSTEAMをインストールする方法](/ja/how-to/how-to-install-steam)
 
-- [:antera_bars: デバイスをワイヤレスホットスポットとして使用する方法](https://wiki.bredos.org/e/en/how-to/how-to-use-your-device-as-ap)
+- [:antera_bars: デバイスを無線ホットスポットとして使用する方法](/ja/how-to/how-to-use-your-device-as-ap)
 
-- [📦✨ Package Managers Guide](https://wiki.bredos.org/en/how-to/package-management)
+- [📦✨ Package Managers Guide](/en/how-to/package-management)
 
-- [🧹💾 Disk Space Cleanup Guide](https://wiki.bredos.org/e/en/how-to/free-space-up)
+- [🧹💾 ディスク領域クリーンアップガイド](/ja/how-to/free-space-up)
 
-- [📸🔄 Timeshiftによるスナップショットとロールバック](https://wiki.bredos.org/en/how-to/timeshft-system-snapshots-and-rollbacks-on-btrfs)
+- [📸🔄 Timeshiftによるスナップショットとロールバック](/ja/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
 - format@@0(/ja/how-to/run-vms)
 

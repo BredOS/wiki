@@ -69,6 +69,13 @@ dateCreated: 2024-07-19T00:42:37.505Z
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
+对于Linux用户，您可以使用 "rkdeveloped tool" 刷入图像到 eMC 中。 命令如下：
+
+```bash
+sudo rkdevelopmenttoold db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+sudo rkdevelopmenttoolwl 0 ~/Downloads/BredOS.img
+```
+
 ## 💻 关注 BredOS 安装程序
 
 1. 按照屏幕指示完成安装过程。

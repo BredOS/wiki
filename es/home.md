@@ -87,6 +87,10 @@ R: Puedes actualizar BredOS usando el gestor de paquetes `pacman` con el comando
 
 R: Puede encontrar paquetes de software adicionales en el repositorio de usuarios de Arch (AUR) e instalarlos usando `yay` o `paru`.
 
+### P: El consumo de energía de mi dispositivo es alto, ¿cómo puedo reducirlo?
+
+R: Usted puede reducir el consumo de energía cambiando el gobernador de CPU a 'ondemand' o 'conservador' editando el archivo de 'is/default/cpupower'.
+
 ## 🌐 Comunidad y soporte
 
 Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:
