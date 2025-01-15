@@ -69,6 +69,13 @@ If you'd like to install BredOS to eMMC storage instead of using a microSD card,
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
+for Linux users, you can use the `rkdeveloptool` to flash the image to the eMMC. Commands are as follows:
+
+```bash
+sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
+```
+
 ## 💻 Follow BredOS Installer
 
 1. 依照畫面上的指示完成安裝
