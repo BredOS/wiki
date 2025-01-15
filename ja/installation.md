@@ -69,6 +69,13 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
+Linuxユーザーの場合、`rkdeveloptool` を使用してイメージをeMMCにフラッシュすることができます。 コマンドは次のとおりです:
+
+```bash
+sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
+sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
+```
+
 ## 💻 BredOS インストーラをフォローする
 
 1. 画面の指示に従ってインストールプロセスを完了します。
