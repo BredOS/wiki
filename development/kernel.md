@@ -23,6 +23,19 @@ The mainline variant is instead at `rk-mainline`.
 THe kernel is built and packages with the PKGBUILDs from:
 https://github.com/BredOS/sbc-pkgbuilds
 
+## Building the kernel
+Under ARM systems, just : 
+```bash
+make -j4
+```
+
+Under x86 systems, we need to cross-compile the kernel:
+```bash
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4
+```
+
+You should see the image in the `arch/arm64/boot/` directory.
+
 ## Important directories
 Inside the `sbc-pkgbuilds` repository there is a folder named `linux-rockchip-rkr3`.
 It should be used as the current working directory during building.
