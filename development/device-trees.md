@@ -19,7 +19,7 @@ GRUB_DTB= dtbs/rockchip/xxx.dtb
 ```
 Then update the grub configuration:
 ```bash
-sudo update-grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## Updating Device Trees in U-Boot systems with extlinux
