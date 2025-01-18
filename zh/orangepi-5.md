@@ -17,3 +17,5 @@ dateCreated: 2024-09-20T15：17：37.567Z
 | 橙色Pi 5 +        | ✔️  |                                     |
 | Orange Pi 5 Pro | ❌   |                                     |
 | 橙色Pi 5 最大       | ❌   |                                     |
+
+注：Orange Pi 5、5B和5Pro 使用RK3588S。 5 Plus and 5 Max 使用 RK3588 (它有更多的 PCIe 和 mipi 通道)
