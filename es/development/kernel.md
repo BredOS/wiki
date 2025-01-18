@@ -26,6 +26,22 @@ La variante principal está en su lugar en `rk-mainline`.
 El núcleo de The está construido y los paquetes con los PKGBUILDs de:
 https://github.com/BredOS/sbc-pkgbuilds
 
+## Construyendo el núcleo
+
+Bajo sistemas ARM, sólo:
+
+```bash
+hacer -j$(nproc)
+```
+
+En sistemas x86, necesitamos compilar el núcleo de forma cruzada:
+
+```bash
+hacer ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
+```
+
+Deberías ver la imagen en el directorio `arch/arm64/boot/`.
+
 ## Directorios importantes
 
 Dentro del repositorio `sbc-pkgbuilds` hay una carpeta llamada `linux-rockchip-rkr3`.
