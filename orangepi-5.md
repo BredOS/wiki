@@ -17,4 +17,4 @@ dateCreated: 2024-09-20T15:17:37.567Z
 | Orange Pi 5 Pro   | ❌        |              |
 | Orange Pi 5 Max   | ❌        |              |
 
-Note: The Orange Pi 5 and 5B uses rk3588s, while the 5 Plus to 5 Max uses rk3588(which have more I/Os)
+Note: The Orange Pi 5, 5B and 5 Pro use RK3588S, while the 5 Plus and 5 Max use RK3588 (which have more PCIe and mipi lanes available)

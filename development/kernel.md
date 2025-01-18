@@ -26,12 +26,12 @@ https://github.com/BredOS/sbc-pkgbuilds
 ## Building the kernel
 Under ARM systems, just : 
 ```bash
-make -j4
+make -j$(nproc)
 ```
 
 Under x86 systems, we need to cross-compile the kernel:
 ```bash
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j4
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ```
 
 You should see the image in the `arch/arm64/boot/` directory.

@@ -9,7 +9,8 @@ dateCreated: 2024-11-11T11:50:39.940Z
 ---
 
 # Device Trees
-Device trees is a mechanism for describing hardware in Linux ARM systems, allowing the kernel to discover and configure hardware devices without changing the kernel driver code, Unlike x86 systems, where the ACPI tables  enable automatic hardware discovery and configuration, ARM systems have to change the device tree once the hardware is changed.
+Device trees is a mechanism for describing hardware commonly used in ARM and RISC-V systems, allowing the kernel to discover and configure hardware devices without changing the kernel driver code.
+Unlike x86 systems, where the ACPI tables enable automatic hardware discovery and configuration, most ARM systems need to have their device tree modified to declare hardware changes.
 
 ## Switching Device Trees in UEFI and Grub systems
 Open the grub configuration file `/etc/default/grub`.
