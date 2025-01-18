@@ -26,6 +26,22 @@ rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
 THe カーネルはビルドされており、PKGBUILD を使用してパッケージがあります:
 https://github.com/BredOS/sbc-pkgbuilds
 
+## カーネルのビルド
+
+ARMシステムの下で, just :
+
+```bash
+make -j$(nproc)
+```
+
+x86システムでは、カーネルをクロスコンパイルする必要があります。
+
+```bash
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
+```
+
+`arch/arm64/boot/`ディレクトリに画像が表示されます。
+
 ## 重要なディレクトリ
 
 `sbc-pkgbuilds` リポジトリ内には、 `linux-rockchip-rkr3` という名前のフォルダがあります。
