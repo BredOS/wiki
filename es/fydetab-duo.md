@@ -32,3 +32,4 @@ Para instrucciones detalladas, consulte [📦 Cómo instalar eMMC](https://wiki.
 - [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
 - [🦶 GNOME en el Fydetab](/fydetab-duo/gnome)
 - [📦 Cómo instalar eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
+- [🔧 Más información en fydetabduo wiki](https://wiki.fydetabduo.com/category/-bredos)
