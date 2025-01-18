@@ -17,3 +17,5 @@ dateCreated: 2024-20T15:17:37.567Z
 | Pi Naranja 5 Plus | ✔️        |                                                           |
 | Naranja Pi 5 Pro  | ❌         |                                                           |
 | Pi Naranja 5      | ❌         |                                                           |
+
+Nota: El Orange Pi 5, 5B y 5 Pro utilizan RK3588S, mientras que los 5 Plus y 5 Max utilizan RK3588 (que tienen más carriles PCIe y mipi disponibles)
