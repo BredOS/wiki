@@ -11,8 +11,9 @@ dateCreated: 2024-11-11T11:50:39.940Z
 # Device Trees
 Device trees is a mechanism for describing hardware in Linux ARM systems, allowing the kernel to discover and configure hardware devices without changing the kernel driver code, Unlike x86 systems, where the ACPI tables  enable automatic hardware discovery and configuration, ARM systems have to change the device tree once the hardware is changed.
 
-## Updating Device Trees in UEFI and Grub systems
-Edit the grub configuration file `/etc/default/grub`, find the line that starts with `GRUB_DTB=` and add the path to the device tree file, for example:
+## Switching Device Trees in UEFI and Grub systems
+Open the grub configuration file `/etc/default/grub`.
+Find the line that starts with `GRUB_DTB=` and add the path to the device tree file, for example:
 
 ```bash
 GRUB_DTB= dtbs/rockchip/xxx.dtb
