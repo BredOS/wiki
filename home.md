@@ -78,6 +78,11 @@ A: You can find additional software packages in the Arch User Repository (AUR) a
 ### Q: The power consumption of my device is high, how can I reduce it?
 A: You can reduce the power consumption by changing the CPU governor to `ondemand` or `conservative` by editing the `/etc/default/cpupower` file.
 
+### Q: The suspend is not working.
+A: Please make sure that: 
+- Don't suspend before 10s after just  resuming, this is a known issue with the eMMC driver.
+- Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)
+
 ## 🌐 Community and Support
 Join the BredOS community to get support, share ideas, and contribute to the project:
 - [📱 Telegram](https://t.me/bredoslinux)
