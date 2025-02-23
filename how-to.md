@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-02-23T15:29:49.027Z
+date: 2025-02-23T15:46:22.447Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -32,6 +32,8 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 -   [🖥️ 🔄 Switch Desktop Environments to Use GNOME](/en/how-to/switch-desktop-environments)
 
 -   [💾 🔄 How to Update UEFI on RK3588](/en/how-to/update-uefi-rk3588)
+
+- [⚙️ 📑 How to Change the Default Boot Order on RK3588](/en/how-to/change-boot-order-rk3588)
 
 - [💻 How to run Virtual Machines](/en/how-to/run-vms)
 
