@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-02-23T15:15:40.864Z
+date: 2025-02-23T15:29:49.027Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -30,6 +30,8 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 - [📸🔄 Btrfs Snapshots and Rollbacks with Timeshift](/en/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
 -   [🖥️ 🔄 Switch Desktop Environments to Use GNOME](/en/how-to/switch-desktop-environments)
+
+-   [💾 🔄 How to Update UEFI on RK3588](/en/how-to/update-uefi-rk3588)
 
 - [💻 How to run Virtual Machines](/en/how-to/run-vms)
 
