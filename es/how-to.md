@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2024-14T20:43:43.996Z
+date: 2025-02-23T15:15:40.864Z
 tags: null
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -30,6 +30,8 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [📸🔄 Snapshots y Rollbacks Btrfs con Timeshift](/es/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- [Cómo ejecutar máquinas virtuales](/es/cómo/run-vms)
+- [🖥️ 🔄 Switch Desktop Environments to Use GNOME](/en/how-to/switch-desktop-environments)
+
+- [💻 How to run Virtual Machines](/en/how-to/run-vms)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
