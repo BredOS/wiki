@@ -2,7 +2,7 @@
 title: How to boot from a NVMe drive
 description: This guide shows how to setup booting from a NVMe drive
 published: true
-date: 2024-09-21T11:49:17.436Z
+date: 2025-03-05T18:13:00.890Z
 tags: rock-5, rock-5b, rock-5bp, nvme
 editor: markdown
 dateCreated: 2024-09-21T09:09:29.723Z
@@ -61,3 +61,7 @@ sudo dd if=/path/to/bredos_image.img of=/dev/nvme0n1 bs=4M status=progress
 ---
 
 🎉 Once the process is complete, reboot your Rock 5B/5B Plus and it should boot from the NVMe SSD!
+
+> Do not keep the SDcard or EMMC connected when booting from NVMe as it will make it so your device wont boot!!
+> {.is-warning}
+
