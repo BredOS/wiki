@@ -49,28 +49,28 @@ sudo pacman -Sc
 You can also use **paccache** to keep only the most recent 3 versions of each package:
 
 1. Install the required tool:
-   ```bash
-   sudo pacman -S pacman-contrib
-   ```
+  ```bash
+  sudo pacman -S pacman-contrib
+  ```
 2. Set up a Pacman hook to automatically clean up after each transaction:
-   ```bash
-   sudo nano /usr/share/libalpm/hooks/paccache.hook
-   ```
-   Add the following content to the file:
-   ```bash
-   [Trigger]
-   Operation = Upgrade
-   Operation = Install
-   Operation = Remove
-   Type = Package
-   Target = *
+  ```bash
+  sudo nano /usr/share/libalpm/hooks/paccache.hook
+  ```
+  Add the following content to the file:
+  ```bash
+  [Trigger]
+  Operation = Upgrade
+  Operation = Install
+  Operation = Remove
+  Type = Package
+  Target = *
 
-   [Action]
-   Description = Cleaning pacman cache with paccache…
-   When = PostTransaction
-   Exec = /usr/bin/paccache -r
-   ```
-   Save the file with **Ctrl + S** and exit with **Ctrl + X**.
+  [Action]
+  Description = Cleaning pacman cache with paccache…
+  When = PostTransaction
+  Exec = /usr/bin/paccache -r
+  ```
+  Save the file with **Ctrl + S** and exit with **Ctrl + X**.
 
 ---
 
