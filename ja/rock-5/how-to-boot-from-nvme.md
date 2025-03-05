@@ -62,6 +62,6 @@ sudo dd if =/path/to/bredos_image.img of=/dev/nvme0n1 bs=4M status=progress
 
 🎉 処理が完了したら、Rock 5B/5B Plusを再起動し、NVMe SSDから起動します!
 
-> Do not keep the SDcard or EMMC connected when booting from NVMe as it will make it so your device wont boot!!
+> NVMeから起動する際にSDカードやEMMCを接続しないでください。デバイスが起動しないようにします。
 > {.is-warning}
 
