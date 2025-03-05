@@ -80,11 +80,11 @@ To enable XML editing (Needed later) you need to open `virt-manager` go to **Edi
 ## 步骤7：创建虚拟机 :hammer_and_wrench：
 
 1. 打开\`virt-manager'。
-   ![virt.jpg](/vms/virt.jpg)
+  ![virt.jpg](/vms/virt.jpg)
 2. 点击**创建一个新的虚拟机器** ➕。
-   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
+  ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. 选择安装源 (ISO 镜像或网络安装)。
-   ![newvm.jpg](/vms/newvm.jpg)
+  ![newvm.jpg](/vms/newvm.jpg)
 4. 按照向导分配CPU、RAM和您的虚拟机存储。 ⚙️
 
 > On the RK3588 you can allocate max 4 cores per vm due to the little big architecture
