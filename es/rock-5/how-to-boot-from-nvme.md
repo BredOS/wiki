@@ -62,6 +62,6 @@ sudo dd if=/ruta/a/bredos_image.img of=/dev/nvme0n1 bs=estado 4M=progreso
 
 🎉 ¡Una vez que el proceso se haya completado, reinicie su Rock 5B/5B Plus y debería arrancar desde la SSD de NVMe!
 
-> Do not keep the SDcard or EMMC connected when booting from NVMe as it will make it so your device wont boot!!
+> No mantengas la tarjeta SDcard o EMMC conectados al arrancar desde NVMe ya que lo hará para que tu dispositivo no arranque!!
 > {.is-warning}
 
