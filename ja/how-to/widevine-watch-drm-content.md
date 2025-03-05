@@ -32,3 +32,4 @@ Mozilla/5.0 (X11; COS aarch64 15236.80.0) AppleWebKit/537.36 (KHTML, Geckoなど
 ```
 
 このFirefox拡張機能をインストールすることで簡単にユーザーエージェントを偽装できます: [User-Agent String Switcher](https://addons.mozilla.org/en-GB/fireox/addon/user-agent-string-switcher/)
+
