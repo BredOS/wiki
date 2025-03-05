@@ -19,22 +19,22 @@ If you need to modify the boot order on an RK3588-based device running BredOS, f
 1. **Turn on your device** and wait for the **BredOS logo** to appear during boot.
 2. **Press the `ESC` key once** while the logo is displayed to enter the UEFI menu.
 
-![bredos\_boot1.jpg](/boot_images/bredos_boot1.jpg)
+![bredos_boot1.jpg](/boot_images/bredos_boot1.jpg)
 
 ---
 
 ## 🛠 Navigating to the Boot Order Settings
 
 1. Use the **arrow keys (`↓` and `↑`)** to select **Boot Maintenance Manager** and press **Enter**.\
-   ![bredos\_boot2.jpg](/boot_images/bredos_boot2.jpg)
+  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 2. On the next screen, select **Boot Options** and press **Enter**.
 
-![bredos\_boot3.jpg](/boot_images/bredos_boot3.jpg)
+![bredos_boot3.jpg](/boot_images/bredos_boot3.jpg)
 
 3. Choose **Change Boot Order** and press **Enter**.
 
-![bredos\_boot4.jpg](/boot_images/bredos_boot4.jpg)
+![bredos_boot4.jpg](/boot_images/bredos_boot4.jpg)
 
 ---
 
@@ -42,12 +42,12 @@ If you need to modify the boot order on an RK3588-based device running BredOS, f
 
 1. Once inside the boot order menu, **press Enter**.
 
-![bredos\_boot5.jpg](/boot_images/bredos_boot5.jpg)
+![bredos_boot5.jpg](/boot_images/bredos_boot5.jpg)
 
 2. Use the **down arrow (`↓`)** to scroll to the bottom of the list.
 
 3. Select the entry you want to move to the top and press the **`+` key** until it reaches the top.\
-   ![bredos\_boot6.jpg](/boot_images/bredos_boot6.jpg)
+  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 4. Once the desired boot order is set, press **Enter** to confirm.
 
@@ -57,7 +57,7 @@ If you need to modify the boot order on an RK3588-based device running BredOS, f
 
 1. After setting the boot order, press **`Y`** to save the changes.
 
-![bredos\_boot7.jpg](/boot_images/bredos_boot7.jpg)
+![bredos_boot7.jpg](/boot_images/bredos_boot7.jpg)
 
 2. Exit the menu and **restart the device** to apply the new boot order.
 
