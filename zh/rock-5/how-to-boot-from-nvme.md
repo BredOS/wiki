@@ -2,7 +2,7 @@
 title: 如何从 NVMe 驱动器启动
 description: 本指南显示如何从NVMe驱动器启动程序
 published: true
-date: 2024-09-21T11:49:17.436Z
+date: 2025-03-05T18:13:00.890Z
 tags: 五岩石，五岩，五岩，nvme
 editor: markdown
 dateCreated: 2024-09-21T09：09：29.723Z
@@ -61,3 +61,7 @@ sudo dd if=/path/to/bredos_image.img of=/dev/nvme0n1 bs=4M status=progress
 ---
 
 :party_poper: 一旦进程完成，请重启你的 Rock 5B/5B Plus 并从NVMe SSD启动！
+
+> Do not keep the SDcard or EMMC connected when booting from NVMe as it will make it so your device wont boot!!
+> {.is-warning}
+
