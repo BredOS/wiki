@@ -1,5 +1,5 @@
 ---
-title: Pipewire CPU workaround
+title: Pipewire CPU puede solucionar
 description: null
 published: true
 date: 2025-03-16T16:17:09.241Z
@@ -8,33 +8,33 @@ editor: markdown
 dateCreated: 2025-03-16T16:17:09.241Z
 ---
 
-# Pipewire CPU Usage Workaround
+# Uso de Pipewire CPU
 
-Is pipewire eating one of your cores for no reason again?
+¿Se está comiendo una de tus úlceras sin motivo de nuevo?
 
-Well, best you can do right now is to just limit it's usage with `systemd`.
+Bueno, lo mejor que puedes hacer ahora es limitar su uso con `systemd`.
 
-### Step 1:
+### Paso 1:
 
-Create file `~/.config/systemd/user/pipewire.service` and place the following data inside it:
+Crea el archivo `~/.config/systemd/user/pipewire.service` y coloca los siguientes datos dentro de él:
 
 ```
 [Unit]
 Description=PipeWire Multimedia Service
 
-# We require pipewire.socket to be active before starting the daemon, because
-# while it is possible to use the service without the socket, it is not clear
-# why it would be desirable.
+# Necesitamos pipewire. octén para estar activo antes de iniciar el daemon, ya que
+# mientras es posible usar el servicio sin el socket, no está claro
+# por qué podría ser.
 #
-# A user installing pipewire and doing `systemctl --user start pipewire`
-# will not get the socket started, which might be confusing and problematic if
-# the server is to be restarted later on, as the client autospawn feature
-# might kick in. Also, a start of the socket unit will fail, adding to the
-# confusion.
+# Un usuario instalando pipewire y haciendo `systemctl --user start pipewire`
+# no iniciará el socket, que podría ser confuso y problemático si
+# el servidor será reiniciado más adelante, como la característica de autoaparición del cliente
+# podría entrar. Además, un inicio de la unidad de socket fallará, añadiendo a
+# confusión.
 #
-# After=pipewire.socket is not needed, as it is already implicit in the
-# socket-service relationship, see systemd.socket(5).
-Requires=pipewire.socket
+# Después=pipewire. ocket no es necesario, ya que ya está implícito en la relación
+# socket-service, vea systemd.socket(5).
+Requires=pipewire. ocket
 
 [Service]
 CPUAccounting=true
@@ -43,25 +43,25 @@ LockPersonality=yes
 MemoryDenyWriteExecute=yes
 NoNewPrivileges=yes
 RestrictNamespaces=yes
-SystemCallArchitectures=native
+SystemCallArchTechntures=native
 SystemCallFilter=@system-service
 Type=simple
 ExecStart=/usr/bin/pipewire
 Restart=on-failure
-Slice=session.slice
+Slice=session. cuadros
 
 [Install]
 Also=pipewire.socket
 WantedBy=default.target
 ```
 
-### Step 2:
+### Paso 2:
 
-Save the file and run: `systemctl --user daemon-reload`
+Guardar el archivo y ejecutar: `systemctl --user daemon-reload`
 
-### Step 3:
+### Paso 3:
 
-Logout, or ideally reboot. Pipewire will only be using 10% of a single core at most. **Do not restart pipewire manually.**
+Cerrar sesión o reiniciar idealmente. Pipewire sólo utilizará el 10% de un solo núcleo como máximo. **No reinicie pipewire manualmente.**
 
-This hack should not affect your audio.
-If you want to allow it some more leeway, change the percentage at line `CPUQuota`.
+Este hack no debe afectar a tu audio.
+Si desea permitirle más margen de maniobra, cambie el porcentaje en la línea `CPUQuota`.
