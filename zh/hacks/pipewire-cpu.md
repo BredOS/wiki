@@ -1,22 +1,22 @@
 ---
-title: Pipewire CPU workaround
+title: Pipewire CPU 正常工作
 description: null
 published: true
-date: 2025-03-16T16:17:09.241Z
+date: 2025-03-16T16：17：09.241Z
 tags: null
 editor: markdown
-dateCreated: 2025-03-16T16:17:09.241Z
+dateCreated: 2025-03-16T16：17：09.241Z
 ---
 
-# Pipewire CPU Usage Workaround
+# Pipewire CPU 使用情况
 
-Is pipewire eating one of your cores for no reason again?
+管道不再吃你的核心之一吗？
 
-Well, best you can do right now is to just limit it's usage with `systemd`.
+好吧，你现在能做的最好就是只限制它使用 `systemd` 。
 
-### Step 1:
+### 步骤 1：
 
-Create file `~/.config/systemd/user/pipewire.service` and place the following data inside it:
+创建文件 "~/.config/systemd/user/pipewire.service" 并将以下数据放置在它之内：
 
 ```
 [Unit]
@@ -55,13 +55,13 @@ Also=pipewire.socket
 WantedBy=default.target
 ```
 
-### Step 2:
+### 步骤 2：
 
-Save the file and run: `systemctl --user daemon-reload`
+保存文件并运行： `systemctl --user daemon-reload`
 
-### Step 3:
+### 步骤 3：
 
-Logout, or ideally reboot. Pipewire will only be using 10% of a single core at most. **Do not restart pipewire manually.**
+登出或重新启动。 Pipewire 最多只能使用单个核心的10%。 **不要手动重启 pipewire 。**
 
-This hack should not affect your audio.
-If you want to allow it some more leeway, change the percentage at line `CPUQuota`.
+这个哈克不应影响您的音频。
+如果你想让它有更多的回旋余地, 更改行`CPUQuota`的百分比。
