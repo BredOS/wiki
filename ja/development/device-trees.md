@@ -10,4 +10,30 @@ dateCreated: 2024-11-11T11:50:39.940Z
 
 # デバイスツリー
 
-WIP
+デバイス ツリーは、ARM および RISC-V システムで一般的に使用されるハードウェアを記述するためのメカニズムです。 カーネルドライバのコードを変更せずに、カーネルがハードウェアデバイスを検出して設定できるようにします。
+ACPIテーブルがハードウェアの自動検出と構成を可能にするx86システムとは異なります。 ほとんどのARMシステムでは、ハードウェアの変更を宣言するためにデバイスツリーを変更する必要があります。
+
+## UEFIおよびGrab システムでのデバイスツリーの切り替え
+
+grub 設定ファイル `/etc/default/grub` を開きます。
+`GRUB_DTB=`で始まる行を探し、デバイスのツリーファイルへのパスを追加します。例:
+
+```bash
+GRUB_DTB= dtbs/rockchip/xxx.dtb
+```
+
+次に、grub の設定を更新します。
+
+```bash
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+## U-Boot システムの extlinux を使ったデバイスツリーの更新
+
+`/boot/extlinux/extlinux.conf`を編集し、`fdt`の行を見つけます。
+
+```bash
+fdt /dtbs/rockchip/xxx.dtb
+```
+
+再起動します。

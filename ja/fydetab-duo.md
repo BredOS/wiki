@@ -32,3 +32,4 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 - [🎮 ブレッドOSにSTEAMをインストールする方法](/how-to/how-to-install-steam)
 - [🦶 FydetabのGNOME (/fydetab-duo/gnome)
 - [📦 eMMCにインストールする方法](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
+- [🔧 fydetabduo wikiの詳細情報](https://wiki.fydetabduo.com/category/-bredos)

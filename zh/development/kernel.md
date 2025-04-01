@@ -26,6 +26,22 @@ https://github.com/BredOS/linux-rockchip
 他的内核是用PKGBUILD构建的：
 https://github.com/BredOS/sbc-pkgbuild来构建和软件包
 
+## 构建内核。
+
+在 ARM 系统下，仅：
+
+```bash
+make -j$(nproc)
+```
+
+在 x86 系统下，我们需要交叉编译内核：
+
+```bash
+make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
+```
+
+您应该在 `arch/arm64/boot/` 目录中看到图像。
+
 ## 重要目录
 
 在 `sbc-pkgbuilds` 里有一个名为`linux-rockchip-rkr3`的文件夹。

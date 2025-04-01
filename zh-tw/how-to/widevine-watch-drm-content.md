@@ -32,3 +32,4 @@ Mozilla/5.0 (X11; CrOS aarch64 15236.80.0) AppleWebKit/537.36 (KHTML, like Gecko
 ```
 
 You can easily spoof your user agent by installing this Firefox extension: [User-Agent String Switcher](https://addons.mozilla.org/en-GB/firefox/addon/user-agent-string-switcher/)
+

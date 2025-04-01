@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2024-12-14T20:43:43.996Z
+date: 2025-02-23T15:46:22.447Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -30,6 +30,12 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [📸🔄 Timeshiftによるスナップショットとロールバック](/ja/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- format@@0(/ja/how-to/run-vms)
+- [🖥️ 🔄 GNOMEを使用するデスクトップ環境を切り替える](/en/how-to/switch-desktop-environments)
+
+- [💾 🔄 RK3588でUEFIを更新する方法](/en/how-to/update-uefi-rk3588)
+
+- [⚙️ 📑 RK3588のデフォルトブート順序を変更する方法](/en/how-to/change-boot-order-rk3588)
+
+- [💻 仮想マシンの実行方法](/en/how-to/run-vms)
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！

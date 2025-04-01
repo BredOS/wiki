@@ -91,6 +91,13 @@ A: BredOS supports a variety of ARM-based single board computers, the complete l
 
 A: You can reduce the power consumption by changing the CPU governor to `ondemand` or `conservative` by editing the `/etc/default/cpupower` file.
 
+### Q: The suspend is not working.
+
+A: Please make sure that:
+
+- Don't suspend before 10s after just  resuming, this is a known issue with the eMMC driver.
+- Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)
+
 ## 🌐 Community and Support
 
 加入 BredOS 社區，獲取支持、分享想法並為項目做出貢獻：

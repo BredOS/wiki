@@ -53,7 +53,7 @@ Steamと必要な翻訳レイヤーをインストールするには、**BredOS 
 
    - まず、`lib32-vulkan-swrast`を選択します。
 
-![steam\_libs\_selection.png](/steam_libs_selection.png)
+![steam_libs_selection.png](/steam_libs_selection.png)
 
 - **Panthor**を有効にしている場合は、`steam-libs-any`を選択してください。
 - **Panthor** が有効になっていない場合 (代わりに Panfork を使用)、`steam-libs-rk3588` を選択します。

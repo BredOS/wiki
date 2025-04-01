@@ -2,7 +2,7 @@
 title: Cómo arrancar desde una unidad NVMe
 description: Esta guía muestra cómo configurar el arranque desde una unidad de NVMe
 published: true
-date: 2024/09-21T11:49:17.436Z
+date: 2025-03-05T18:13:00.890Z
 tags: rock-5, rock-5b, rock-5bp, nvme
 editor: markdown
 dateCreated: 2024-09-21T09:09:29.723Z
@@ -61,3 +61,7 @@ sudo dd if=/ruta/a/bredos_image.img of=/dev/nvme0n1 bs=estado 4M=progreso
 ---
 
 🎉 ¡Una vez que el proceso se haya completado, reinicie su Rock 5B/5B Plus y debería arrancar desde la SSD de NVMe!
+
+> No mantengas la tarjeta SDcard o EMMC conectados al arrancar desde NVMe ya que lo hará para que tu dispositivo no arranque!!
+> {.is-warning}
+

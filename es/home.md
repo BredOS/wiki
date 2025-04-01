@@ -91,6 +91,13 @@ R: Puede encontrar paquetes de software adicionales en el repositorio de usuario
 
 R: Usted puede reducir el consumo de energía cambiando el gobernador de CPU a 'ondemand' o 'conservador' editando el archivo de 'is/default/cpupower'.
 
+### P: La suspensión no funciona.
+
+R: Por favor, asegúrese de que:
+
+- No suspenda antes de las 10 después de reanudarse, este es un problema conocido con el controlador eMMC.
+- ¡No configure "suspender" como la acción del botón de encendido, porque suspenderá el dispositivo inmediatamente después de reanudar! (¡Esto hará que el dispositivo introduzca un bucle de suspensión de reanudación!)
+
 ## 🌐 Comunidad y soporte
 
 Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:

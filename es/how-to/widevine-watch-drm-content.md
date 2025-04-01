@@ -32,3 +32,4 @@ Mozilla/5.0 (X11; CrOS aarch64 15236.80.0) AppleWebKit/537.36 (KHTML, como Gecko
 ```
 
 Puedes falsear fácilmente a tu agente de usuario instalando esta extensión de Firefox: [Cambiador de String del agente de usuario](https://addons.mozilla.org/en-GB/firefox/addon/user-agent-string-switcher/)
+

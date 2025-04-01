@@ -2,7 +2,7 @@
 title: NVMeドライブから起動する方法
 description: このガイドでは、NVMeドライブからの起動をセットアップする方法を説明します
 published: true
-date: 2024-09-21T11:49:17.436Z
+date: 2025-03-05T18:13:00.890Z
 tags: rock-5, rock-5b, rock-5bp, nvme
 editor: markdown
 dateCreated: 2024-09-21T09:09:29.723Z
@@ -61,3 +61,7 @@ sudo dd if =/path/to/bredos_image.img of=/dev/nvme0n1 bs=4M status=progress
 ---
 
 🎉 処理が完了したら、Rock 5B/5B Plusを再起動し、NVMe SSDから起動します!
+
+> NVMeから起動する際にSDカードやEMMCを接続しないでください。デバイスが起動しないようにします。
+> {.is-warning}
+
