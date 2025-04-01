@@ -2,24 +2,24 @@
 title: Rock 5 Series
 description: 
 published: true
-date: 2024-09-21T12:08:14.554Z
+date: 2025-04-01T12:38:55.272Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
 ---
 
 # Supported Rock 5 Series devices
-| Device         | Supported | Known Issues |
-|----------------|-----------|--------------|
-| Rock 5A        | ✔️        |              |
-| Rock 5B        | ✔️        |              |
-| Rock 5B Plus   | ✔️        |              |
-| Rock 5C        | ✔️        |Wi-Fi driver crashes after a few days of uptime.|
-| Rock 5C Lite   | ✔️        |Wi-Fi driver crashes after a few days of uptime.|
-| Rock 5D        | ✔️        |Wi-Fi driver crashes after a few days of uptime.|
-| Rock 5 ITX     | ✔️        |              |
-| CM5            | ✔️        |              |
-| CM5 Lite       | ✔️        |              |
+| Device         | UEFI | Supported | Known Issues |
+|----------------|------|-----------|--------------|
+| Rock 5A        |✔️| ✔️        |              |
+| Rock 5B        |✔️| ✔️        |              |
+| Rock 5B Plus   |✔️| ✔️        |              |
+| Rock 5C        |❌| ✔️        |Wi-Fi driver crashes after a few days of uptime.|
+| Rock 5C Lite   |❌| ✔️        |Wi-Fi driver crashes after a few days of uptime.|
+| Rock 5D        |❌| ✔️        |Wi-Fi driver crashes after a few days of uptime.|
+| Rock 5 ITX     |❌| ✔️        |              |
+| CM5            |❌| ✔️        |              |
+| CM5 Lite       |❌| ✔️        |              |
 
 # Guides for all devices
 
