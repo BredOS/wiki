@@ -1,6 +1,6 @@
 ---
 title: 最初のセットアップ（ベーカリー）
-description: This short guide will guide you through all the bakery options
+description: この短いガイドはすべてのパン屋のオプションをご案内します。
 published: true
 date: 2025-04-09T20:05:01.868Z
 tags: install, sbc
