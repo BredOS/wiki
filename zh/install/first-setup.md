@@ -1,6 +1,6 @@
 ---
 title: 首次设置 (Bakery)
-description: This short guide will guide you through all the bakery options
+description: 这个简短的指南将引导您完成所有的面包选项
 published: true
 date: 2025-04-09T20:05:01.868Z
 tags: install, sbc
