@@ -8,25 +8,25 @@ editor: markdown
 dateCreated: 2025-05-05T17:13:14.153Z
 ---
 
-# 🔐 GRUB Password Protection
+# 🔐 GRUB パスワード保護
 
-BredOS includes a utility to restrict GRUB boot options with a password.
-This prevents unauthorized users from booting non-default entries or editing boot parameters.
+BredOS には、GRUBブートオプションをパスワードで制限するユーティリティが含まれています。
+これにより、権限のないユーザーがデフォルト以外のエントリを起動したり、ブートパラメータを編集したりできなくなります。
 
-# 🟢 Enable GRUB Password
+# 🟢GRUBパスワードを有効にする
 
 `sudo grub-password`
 
-You’ll be prompted to enter and confirm a password.
-Once set, only the default GRUB entry can be booted without authentication.
+パスワードの入力と確認を求められます。
+設定すると、デフォルトのGRUBエントリのみが認証なしで起動できます。
 
-# 🔴 Disable GRUB Password
+# 🔴 GRUBパスワードを無効にする
 
 `sudo grub-password -d`
 
-This removes the password restriction and restores normal GRUB behavior.
+これによりパスワード制限が解除され、通常のGRUB動作が復元されます。
 
-## Notes
+## メモ
 
-The configuration is stored in /etc/grub.d/99-bredos-grub-password.
-The script regenerates GRUB config automatically via grub-mkconfig.
+設定は /etc/grub.d/99-bredos-grub-passwordに保存されます。
+スクリプトはgrub-mkconfig を介して自動的に GRUB 設定を再生成します。
