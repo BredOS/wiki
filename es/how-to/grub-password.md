@@ -1,6 +1,6 @@
 ---
 title: Contraseña GRUB
-description: Securing GRUB with a password
+description: Asegurando GRUB con una contraseña
 published: true
 date: 2025-05-05T17:13:59.940Z
 tags: null
@@ -8,25 +8,25 @@ editor: markdown
 dateCreated: 2025-05-05T17:13:14.153Z
 ---
 
-# 🔐 GRUB Password Protection
+# 🔐 Protección de contraseña GRUB
 
-BredOS includes a utility to restrict GRUB boot options with a password.
-This prevents unauthorized users from booting non-default entries or editing boot parameters.
+BredOS incluye una utilidad para restringir las opciones de arranque GRUB con una contraseña.
+Esto evita que los usuarios no autorizados inicien entradas no predeterminadas o editen parámetros de arranque.
 
-# 🟢 Enable GRUB Password
+# 🟢 Activar contraseña GRUB
 
 `sudo grub-password`
 
-You’ll be prompted to enter and confirm a password.
-Once set, only the default GRUB entry can be booted without authentication.
+Se te pedirá que introduzcas y confirmes una contraseña.
+Una vez establecido, sólo la entrada GRUB por defecto puede iniciarse sin autenticación.
 
-# 🔴 Disable GRUB Password
+# 🔴 Desactivar contraseña GRUB
 
 `sudo grub-password -d`
 
-This removes the password restriction and restores normal GRUB behavior.
+Esto elimina la restricción de contraseña y restaura el comportamiento normal de GRUB.
 
-## Notes
+## Notas
 
-The configuration is stored in /etc/grub.d/99-bredos-grub-password.
-The script regenerates GRUB config automatically via grub-mkconfig.
+La configuración se almacena en src/grub.d/99-bredos-grub-password.
+El script regenera la configuración GRUB automáticamente mediante grub-mkconfig.
