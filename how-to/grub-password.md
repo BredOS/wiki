@@ -2,7 +2,7 @@
 title: GRUB Password
 description: Securing GRUB with a password
 published: true
-date: 2025-05-05T17:13:14.153Z
+date: 2025-05-05T17:13:39.811Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-05T17:13:14.153Z
@@ -15,17 +15,18 @@ This prevents unauthorized users from booting non-default entries or editing boo
 
 # 🟢 Enable GRUB Password
 
-sudo /usr/bin/grub-password
+sudo grub-password
 
 You’ll be prompted to enter and confirm a password.
 Once set, only the default GRUB entry can be booted without authentication.
 
 # 🔴 Disable GRUB Password
 
-sudo /usr/bin/grub-password --disable
+sudo grub-password --disable
 
 This removes the password restriction and restores normal GRUB behavior.
-Notes
+
+## Notes
 
 The configuration is stored in /etc/grub.d/99-bredos-grub-password.
 The script regenerates GRUB config automatically via grub-mkconfig.
