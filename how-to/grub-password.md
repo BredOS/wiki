@@ -2,7 +2,7 @@
 title: GRUB Password
 description: Securing GRUB with a password
 published: true
-date: 2025-05-05T17:13:39.811Z
+date: 2025-05-05T17:13:59.940Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-05T17:13:14.153Z
@@ -15,14 +15,14 @@ This prevents unauthorized users from booting non-default entries or editing boo
 
 # 🟢 Enable GRUB Password
 
-sudo grub-password
+`sudo grub-password`
 
 You’ll be prompted to enter and confirm a password.
 Once set, only the default GRUB entry can be booted without authentication.
 
 # 🔴 Disable GRUB Password
 
-sudo grub-password --disable
+`sudo grub-password -d`
 
 This removes the password restriction and restores normal GRUB behavior.
 
