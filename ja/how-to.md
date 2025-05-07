@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-05-07T12:26:21.873Z
+date: 2025-05-07T14:37:21.899Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -41,5 +41,7 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 - [🔦 GRUBパスワードの設定方法](/en/how-to/grub-password)
 
 - [<unk> 設定知事](/en/how-to/govctl)
+
+- [🪟 BREDOS 下で Windows アプリケーションを実行する] (/en/how-to/proton-run)
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！
