@@ -2,7 +2,7 @@
 title: カーネル改造中
 description: null
 published: true
-date: 2025-05-07T13:13:10.144Z
+date: 2025-05-07T18:34:49.447Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -50,4 +50,4 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ## デバイスツリーとオーバーレイのコンパイル
 
 `dtsc`を使用するための完全なガイドが、DTBとDTBOをコンパイルするためのブレッドOSツールが利用可能になりました。
-[here](/en/how-to/dtsc) をクリックして表示します。
+[here](/en/Tools#dtsc-helper-script) をクリックして表示します。
