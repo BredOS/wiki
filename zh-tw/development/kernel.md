@@ -2,7 +2,7 @@
 title: Kernel modding
 description: null
 published: true
-date: 2025-05-07T13:13:10.144Z
+date: 2025-05-07T18:34:49.447Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -50,4 +50,4 @@ It should be used as the current working directory during building.
 ## Compiling Device Trees and Overlays
 
 A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs is now available.
-Click [here](/en/how-to/dtsc) to view it.
+Click [here](/en/Tools#dtsc-helper-script) to view it.
