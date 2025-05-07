@@ -2,7 +2,7 @@
 title: Modificación del Kernel
 description: null
 published: true
-date: 2025-05-07T13:13:10.144Z
+date: 2025-05-07T18:34:49.447Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -50,4 +50,4 @@ Debe ser usado como el directorio de trabajo actual durante la construcción.
 ## Compilar árboles y capas de dispositivos
 
 Ya está disponible una guía completa para usar `dtsc`, la herramienta BredOS para compilar DTB y DTBOS.
-Haga clic [here](/en/how-to/dtsc) para verlo.
+Haga clic [here](/en/Tools#dtsc-helper-script) para verlo.
