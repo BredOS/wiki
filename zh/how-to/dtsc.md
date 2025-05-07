@@ -1,14 +1,14 @@
 ---
-title: DTSC Helper Script
+title: DTSC助手脚本
 description: 使用 BredOS 设备树源编译器辅助脚本
 published: true
-date: 2025-05-07T13:40:24.351Z
+date: 2025-05-07T13：40：24.351Z
 tags: null
 editor: markdown
 dateCreated: 2025-05-07T13：18：58.736Z
 ---
 
-# DTSC Helper Script
+# DTSC助手脚本
 
 `dtsc` 是一个默认与BredOS和`breddos-tools`软件包一起发送的命令。
 但要让它起作用，你需要安装 `dtc`，只需运行 `yay -S dtc`
@@ -22,60 +22,60 @@ dateCreated: 2025-05-07T13：18：58.736Z
 **在您的设备上安装不正确的设备树将使它无法操作。**
 **小心，执行备份并确保一个应急计划。**
 
-# Usage
+# 用法
 
 ```
-usage: dtsc [-h] [-o OUTPUT] [-i INCLUDE] [-k KERNEL] [input]
+用法： dtsc [-h] [-o OUTPUT] [-i include] [-k KERNEL] [input]
 
-Compile a Device Tree Source (DTS) file into a Device Tree Blob (DTBO or DTB).
+将一个设备树源(DTS) 文件编译成一个设备树泡泡沫(DTBO 或 DTB)。
 
-positional arguments:
-  input                 Input DTS file
+位置参数：
+  输入 DTS 文件
 
-options:
-  -h, --help            show this help message and exit
-  -o, --output OUTPUT   Output file (default: makes input_filename.dtb)
-  -i, --include INCLUDE
-                        Source of additional device tree files (optional)
-  -k, --kernel KERNEL   Manualy specify a kernel source path (default:
-                        autodetect)
+选项：
+  - h, --help 显示此帮助消息并退出
+  -o, --output OUTPUT 输出文件(默认：生成输入文件名)。 tb)
+  - i， --include
+                        附加设备树文件(可选)
+  -k, --kernel KERNEL Manualy 指定内核源路径 (默认：
+                        自动检测)
 
-Example: ./compile_dts.py my_device_tree.dts -o output.dtbo
+示例： compile_dts.py my_device_tree.dts -o output.dtbo
 ```
 
 ## Input
 
-The script expects an input `.dts` file. If no output is specified, it generated a matching-name `.dtb`
-The output filename can be set with the `-o` parameter.
+脚本需要输入`.dts`文件。 如果没有指定输出, 它生成了匹配名称`.dtb`
+输出文件名可以设置为 `-o` 参数。
 
-## Linking against kernel
+## 与内核连接
 
-If you have more than one kernels installed onto your system, you should specify the kernel path to link against.
-It should look something like this:
+如果您有多个内核安装在您的系统上，您应该指定要链接的内核路径。
+它应该看起来像这样：
 
 ```
 dtsc example.dtc -k /usr/src/linux-rockchip-rkr3 -o example.dtbo
 ```
 
-If you have a single kernel installed, this will automatically be detected.
+如果您安装了单个内核，这将自动被检测。
 
-## Compiling base Device Trees
+## 编译基础设备树
 
-If you're compiling a base device tree and not an overlay, you'll need your kernel's full sources, which are not shipped.
-This is because these trees require the inclusion of other `.dtsi` device trees.
+如果您正在编译基础设备树而不是叠加层，您将需要您的内核全部源，这些源没有发货。
+这是因为这些树需要包含其他 ".dtsi" 设备树。
 
-To compile such a DT, clone your kernel's repository using git, onto a known path.
+要编译这样一个DT, 请使用git复制你的内核存储库到已知路径。
 
-Example for the `linux-rockchip-rkr3` kernel:
+`linux-rockchip-rkr3`内核的示例：
 
 ```
 git clone https://github.com/BredOS/linux-bredos
 ```
 
-Then run dtsc as you would, but with the `-i` flag, specifying the folder at which the files it wants to link against are.
+然后按您想要的方式运行 dtsc ，但使用"-i" 标志指定它想要链接的文件夹。
 
-For example, assuming we want to compile a rk3588 board's DT, we'll need to specify the options as follows:
+例如，假定我们想要编译一个 rk3588 棋盘的DT，我们需要指定以下选项：
 
 ```
-dtsc rk3588-example-board.dts -i /path/to/linux-bredos/arch/arm64/boot/dts/rockchip -o rk3588-example-board.dtb
+dtsc rk3588-exampleboard.dts -i /path/to/linux-bredos/arch/arm64/boot/dts/rockchip -o rk3588-exampleboard.dtb
 ```
