@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-05-05T17:11:38.959Z
+date: 2025-05-07T12:26:21.873Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -38,6 +38,8 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [💻 仮想マシンの実行方法](/en/how-to/run-vms)
 
-- [🔦GRUBパスワードの設定方法](/en/how-to/grub-password)
+- [🔦 GRUBパスワードの設定方法](/en/how-to/grub-password)
+
+- [<unk> 設定知事](/en/how-to/govctl)
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！
