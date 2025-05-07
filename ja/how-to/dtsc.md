@@ -22,7 +22,7 @@ dateCreated: 2025-05-07T13:18:58.736Z
 **デバイスに間違ったデバイス・ツリーをインストールすると、動作不能になります。**
 **バックアップを実行し、連携プランを確認してください。**
 
-# Usage
+# 使用法
 
 ```
 usage: dtsc [-h] [-o OUTPUT] [-i INCLUDE] [-k KERNEL] [input]
@@ -45,36 +45,36 @@ Example: ./compile_dts.py my_device_tree.dts -o output.dtbo
 
 ## Input
 
-The script expects an input `.dts` file. If no output is specified, it generated a matching-name `.dtb`
-The output filename can be set with the `-o` parameter.
+The script expects an input `.dts` file. 出力が指定されていない場合は、一致する名前 `.dtb`
+を生成します。出力ファイル名は `-o` パラメータで設定できます。
 
 ## Linking against kernel
 
-If you have more than one kernels installed onto your system, you should specify the kernel path to link against.
-It should look something like this:
+システムに複数のカーネルがインストールされている場合は、リンク先のカーネルパスを指定してください。
+以下のようになります。
 
 ```
 dtsc example.dtc -k /usr/src/linux-rockchip-rkr3 -o example.dtbo
 ```
 
-If you have a single kernel installed, this will automatically be detected.
+単一のカーネルがインストールされている場合、これは自動的に検出されます。
 
-## Compiling base Device Trees
+## 基本デバイスツリーのコンパイル
 
 If you're compiling a base device tree and not an overlay, you'll need your kernel's full sources, which are not shipped.
-This is because these trees require the inclusion of other `.dtsi` device trees.
+これは、これらのツリーには他の `.dtsi` デバイスツリーが含まれている必要があるためです。
 
 To compile such a DT, clone your kernel's repository using git, onto a known path.
 
-Example for the `linux-rockchip-rkr3` kernel:
+`linux-rockchip-rkr3` カーネルの例:
 
 ```
 git clone https://github.com/BredOS/linux-bredos
 ```
 
-Then run dtsc as you would, but with the `-i` flag, specifying the folder at which the files it wants to link against are.
+次に、dtsc を実行しますが、`-i` フラグを使用して、リンクしたいファイルのフォルダを指定します。
 
-For example, assuming we want to compile a rk3588 board's DT, we'll need to specify the options as follows:
+例えば、rk3588 ボードの DT をコンパイルする場合、次のようにオプションを指定する必要があります。
 
 ```
 dtsc rk3588-example-board.dts -i /path/to/linux-bredos/arch/arm64/boot/dts/rockchip -o rk3588-example-board.dtb
