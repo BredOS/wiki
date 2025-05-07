@@ -2,28 +2,32 @@
 title: Kernel modding
 description: 
 published: true
-date: 2024-11-11T12:14:07.650Z
+date: 2025-05-07T13:13:10.144Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
 ---
 
 # Kernel modding
-This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel.
+
+This guide primarily focuses on RK3588 and the `linux-rockchip-rkr3` kernel.
 This guide should however mostly carry over to other kernels.
 
 ## BredOS kernel Repository
-BredOS stores it's linux-rockchip kernel fork at:
-https://github.com/BredOS/linux-rockchip
+
+BredOS stores it's `linux-rockchip` kernel fork at:
+https://github.com/BredOS/linux-bredos
 
 The branch used for the rkr3 kernel is `rk6.1-rkr3`.
 The mainline variant is instead at `rk-mainline`.
 
 ## BredOS kernel PKGBUILD
-THe kernel is built and packages with the PKGBUILDs from:
+
+The kernel is built and packages with the PKGBUILDs from:
 https://github.com/BredOS/sbc-pkgbuilds
 
 ## Building the kernel
+
 Under ARM systems, just : 
 ```bash
 make -j$(nproc)
@@ -37,5 +41,11 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 You should see the image in the `arch/arm64/boot/` directory.
 
 ## Important directories
+
 Inside the `sbc-pkgbuilds` repository there is a folder named `linux-rockchip-rkr3`.
 It should be used as the current working directory during building.
+
+## Compiling Device Trees and Overlays
+
+A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs is now available.
+Click [here](/en/how-to/dtsc) to view it.
