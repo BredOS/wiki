@@ -38,8 +38,8 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [💻 Cómo ejecutar máquinas virtuales](/en/how-to/run-vms)
 
-- [🔦 How to set a GRUB password](/en/how-to/grub-password)
+- [🔦 Cómo establecer una contraseña GRUB](/en/how-to/grub-password)
 
-- [🗲 Configuring Governors](/en/how-to/govctl)
+- [✫ Configurando Gobernadores](/en/how-to/govctl)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
