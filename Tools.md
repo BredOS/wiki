@@ -2,7 +2,7 @@
 title: BredOS Tools
 description: Utilities and Tools provided by BredOS
 published: true
-date: 2025-05-07T18:29:49.134Z
+date: 2025-05-07T18:31:34.455Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-07T18:27:16.781Z
@@ -24,7 +24,7 @@ BredOS doesn't ship preferences, it ships tools and functionality.
 BredOS includes a utility to restrict GRUB boot options with a password.
 This prevents unauthorized users from booting non-default entries or editing boot parameters.
 
-### 🟢 Enable GRUB Password
+## 🟢 Enable GRUB Password
 
 ```
 sudo grub-password
@@ -33,7 +33,7 @@ sudo grub-password
 You’ll be prompted to enter and confirm a password.
 Once set, only the default GRUB entry can be booted without authentication.
 
-### 🔴 Disable GRUB Password
+## 🔴 Disable GRUB Password
 ```
 sudo grub-password -d
 ```
@@ -58,7 +58,7 @@ It automatically determines and generates base device trees or overlays accordin
 **Installing an incorrect device tree on your device will render it inoperable.**
 **Be careful, perform backups and ensure a contigency plan.**
 
-# Usage
+## Usage
 
 ```
 usage: dtsc [-h] [-o OUTPUT] [-i INCLUDE] [-k KERNEL] [input]
