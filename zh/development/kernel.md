@@ -2,7 +2,7 @@
 title: 内核moding
 description: null
 published: true
-date: 2025-05-07T13：13：10.144Z
+date: 2025-05-07T18：34：49.447Z
 tags: null
 editor: markdown
 dateCreated: 2024-11T11:49:44.206Z
@@ -50,4 +50,4 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ## 编译设备树和叠加
 
 使用`dtsc`、BredOS工具编译DTB和DTBO的完整指南现已可供使用。
-Click [here](/en/how-to/dtsc) to view it.
+Click [here](/en/Tools#dtsc-helper-script) to view it.
