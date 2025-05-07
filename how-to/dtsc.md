@@ -1,8 +1,8 @@
 ---
 title: DTSC Helper Script
 description: Using the BredOS Device Tree Source Compiler helper script
-published: true
-date: 2025-05-07T13:40:24.351Z
+published: false
+date: 2025-05-07T18:33:42.192Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-07T13:18:58.736Z
