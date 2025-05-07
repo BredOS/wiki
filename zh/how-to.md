@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
-date: 2025-05-07T12：26：21.873Z
+date: 2025-05-07T14:37:21.899Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -41,5 +41,7 @@ dateCreated: 2024-08-27T06:01:06.954Z
 - [🔦 如何设置 GRUB 密码](/en/how-to/grub-password)
 
 - [配置省长](/en/how-to/govctl)
+
+- [🪟 Running Windows Applications under BredOS](/en/how-to/proton-run)
 
 :sparkles：探索这些指南以获得最佳的 BredOS ！
