@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-05-07T12:26:21.873Z
+date: 2025-05-07T14:37:21.899Z
 tags: null
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -41,5 +41,7 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 - [🔦 Cómo establecer una contraseña GRUB](/en/how-to/grub-password)
 
 - [✫ Configurando Gobernadores](/en/how-to/govctl)
+
+- [🪟 Ejecutando aplicaciones de Windows bajo BredOS](/en/how-to/proton-run)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
