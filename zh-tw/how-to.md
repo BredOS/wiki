@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-05-05T17:11:38.959Z
+date: 2025-05-07T12:26:21.873Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -38,6 +38,8 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 
 - [💻 How to run Virtual Machines](/en/how-to/run-vms)
 
-- [🔦How to set a GRUB password](/en/how-to/grub-password)
+- [🔦 How to set a GRUB password](/en/how-to/grub-password)
+
+- [🗲 Configuring Governors](/en/how-to/govctl)
 
 ✨ Explore these guides to get the most out of BredOS!
