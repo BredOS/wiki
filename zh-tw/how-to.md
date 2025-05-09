@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-02-23T15:46:22.447Z
+date: 2025-05-07T14:37:21.899Z
 tags: null
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -37,5 +37,11 @@ Guides, tutorials, and tips on how to install or use certain things in BredOS.
 - [⚙️ 📑 How to Change the Default Boot Order on RK3588](/en/how-to/change-boot-order-rk3588)
 
 - [💻 How to run Virtual Machines](/en/how-to/run-vms)
+
+- [🔦 How to set a GRUB password](/en/how-to/grub-password)
+
+- [🗲 Configuring Governors](/en/how-to/govctl)
+
+- [🪟 Running Windows Applications under BredOS](/en/how-to/proton-run)
 
 ✨ Explore these guides to get the most out of BredOS!
