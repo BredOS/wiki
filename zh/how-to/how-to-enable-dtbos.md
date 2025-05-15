@@ -2,7 +2,7 @@
 title: 📟 如何启用 DTBOs
 description: null
 published: true
-date: 2024-11-10T19：32：58.662Z
+date: 2025-05-15T13:00:37.165Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-10T18：02：07.427Z
@@ -25,7 +25,7 @@ dateCreated: 2024-11-10T18：02：07.427Z
 > {.is-info}
 
 To determine where your ESP partition is located, run the command,
-`df | grep "/boot" | awk '{print $NF}'` and replace `<ESP>` in all of the following commands with it's output.
+`df | grep "/boot" | awk '{print $NF}'` and **replace **`<ESP>`** IN ALL OF THE FOLLOWING commands** with it's output.
 
 ### 📁 1: 创建存储DTB 文件的必要目录
 
@@ -109,4 +109,16 @@ sudo nano /boot/extlinux/extlinux.conf
 
 ```
 fdtovery/dtbs/rockchip/overy/my-overlay.dtbo
+```
+
+### 未输入
+
+**DO NOT** 在这些行中添加`/boot`或`<ESP>`物品。
+
+**不要** 添加多个“fdtovery”行。
+如果您想要启用多个DTBO，请将其附在一条直线上，由空白处隔开。
+例如：
+
+```
+fdtoverlays /dtbs/rockchip/overlay/overlay1.dtbo /dtbs/rockchip/overlay/overlay2.dtbo
 ```
