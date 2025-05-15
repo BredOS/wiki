@@ -2,7 +2,7 @@
 title: Árboles de dispositivos
 description: null
 published: true
-date: 2024-11-11T11:50:39.940Z
+date: 2025-05-15T12:51:43.781Z
 tags: null
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
@@ -28,12 +28,16 @@ Luego actualiza la configuración de grub:
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Actualizando Árboles de Dispositivos en sistemas de Arranque U con extlinux
+**Note:** There can only be one DTB specified.
 
-Edita el archivo de configuración de extlinux `/boot/extlinux/extlinux.conf`, encuentra la línea con `fdt`, por ejemplo:
+## Updating Device Trees in U-Boot systems with extlinux
+
+Edit the extlinux configuration file `/boot/extlinux/extlinux.conf`, find the line with `fdt`, for example:
 
 ```bash
 fdt /dtbs/rockchip/xxx.dtb
 ```
 
-Luego reiniciar.
+Then reboot.
+
+**Note:** There can only be one DTB specified.
