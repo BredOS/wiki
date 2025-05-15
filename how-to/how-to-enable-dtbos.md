@@ -2,7 +2,7 @@
 title: 📟 How to enable DTBOs
 description: 
 published: true
-date: 2025-05-15T12:59:22.120Z
+date: 2025-05-15T13:00:37.165Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -102,8 +102,8 @@ fdtoverlays /dtbs/rockchip/overlay/my-overlay.dtbo
 **DO NOT** add `/boot` or the `<ESP>` stuff in these lines.
 
 **DO NOT** add more than one `fdtoverlays` line.
-If you wish to enable more than one DTBOs, append them onto the one line, seperated by space.
-Example:
+If you wish to enable more than one DTBOs, append them onto the one line, seperated by a whitespace.
+For example:
 
 ```
 fdtoverlays /dtbs/rockchip/overlay/overlay1.dtbo /dtbs/rockchip/overlay/overlay2.dtbo
