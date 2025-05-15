@@ -28,7 +28,7 @@ Luego actualiza la configuración de grub:
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-**Note:** There can only be one DTB specified.
+**Nota:** Sólo puede haber un DTB especificado.
 
 ## Updating Device Trees in U-Boot systems with extlinux
 
@@ -40,4 +40,4 @@ fdt /dtbs/rockchip/xxx.dtb
 
 Then reboot.
 
-**Note:** There can only be one DTB specified.
+**Nota:** Sólo puede haber un DTB especificado.
