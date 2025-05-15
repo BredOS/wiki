@@ -28,7 +28,7 @@ GRUB_DTB= dtbs/rockchip/xxx.dtb
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-**Note:** There can only be one DTB specified.
+**注意:** DTBを指定できるのは1つだけです。
 
 ## Updating Device Trees in U-Boot systems with extlinux
 
@@ -40,4 +40,4 @@ fdt /dtbs/rockchip/xxx.dtb
 
 Then reboot.
 
-**Note:** There can only be one DTB specified.
+**注意:** DTBを指定できるのは1つだけです。
