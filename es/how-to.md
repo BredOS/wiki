@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-05-07T14:37:21.899Z
+date: 2025-06-01T09:57:16.627Z
 tags: null
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -43,5 +43,7 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 - [✫ Configurando Gobernadores](/en/how-to/govctl)
 
 - [🪟 Ejecutando aplicaciones de Windows bajo BredOS](/en/how-to/proton-run)
+
+- [🖪 How to handle reported disk failures](/en/how-to/disk-failure)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
