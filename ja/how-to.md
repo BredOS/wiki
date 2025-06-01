@@ -44,6 +44,6 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [🪟 BREDOS 下で Windows アプリケーションを実行する] (/en/how-to/proton-run)
 
-- [🖪 How to handle reported disk failures](/en/how-to/disk-failure)
+- [<unk> 報告されたディスク障害の処理方法](/en/how-to/disk-failure)
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！
