@@ -44,6 +44,6 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [🪟 Running Windows Applications under BredOS](/en/how-to/proton-run)
 
-- [🖪 How to handle reported disk failures](/en/how-to/disk-failure)
+- [变换如何处理报告的磁盘失败](/en/how-to/disk-failure)
 
 :sparkles：探索这些指南以获得最佳的 BredOS ！
