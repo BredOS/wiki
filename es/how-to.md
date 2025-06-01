@@ -44,6 +44,6 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [🪟 Ejecutando aplicaciones de Windows bajo BredOS](/en/how-to/proton-run)
 
-- [🖪 How to handle reported disk failures](/en/how-to/disk-failure)
+- [► Cómo manejar fallos de disco reportados](/en/how-to/disk-failure)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
