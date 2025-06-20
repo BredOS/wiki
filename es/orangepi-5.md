@@ -18,10 +18,10 @@ dateCreated: 2024-20T15:17:37.567Z
 | Naranja Pi 5 Pro   | ❌    | ✔️        |                                                           |
 | Pi Naranja 5       | ❌    | ✔️        |                                                           |
 | Pi Naranja 5 Ultra | ❌    | ✔️        |                                                           |
-| Orange Pi CM5      | ❌    | ✔️        |                                                           |
+| CM5 de Pi Naranja  | ❌    | ✔️        |                                                           |
 
 Nota: El Orange Pi 5, 5B y 5 Pro utilizan RK3588S, mientras que los 5 Plus y 5 Max utilizan RK3588 (que tienen más carriles PCIe y mipi disponibles)
 
-# Download
+# Descargar
 
 Puedes encontrar enlaces de descarga para imágenes en nuestra [Github](https://github.com/BredOS/images/releases/latest)
