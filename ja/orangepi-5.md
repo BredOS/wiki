@@ -18,10 +18,10 @@ dateCreated: 2024-09-20T15:17:37.567Z
 | オレンジ Pi 5 Pro   | ❌    | ✔️   |                                            |
 | オレンジPi 5 Max    | ❌    | ✔️   |                                            |
 | オレンジ Pi 5 Ultra | ❌    | ✔️   |                                            |
-| Orange Pi CM5   | ❌    | ✔️   |                                            |
+| オレンジ Pi CM5     | ❌    | ✔️   |                                            |
 
 注:Orange Pi 5、5B および 5 Pro は RK3588S を使用します。 一方、5 Plus と 5 Max は RK3588 を使用します (PCIe と mipi レーンが利用可能です)
 
-# Download
+# ダウンロード
 
 画像のダウンロードリンクは [Github](https://github.com/BredOS/images/releases/latest) にあります。
