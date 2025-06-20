@@ -3,7 +3,7 @@ title: 配置省长
 description: 使用 govctl 管理系统管理器
 published: true
 date: 2025-05-07T12:47:49.033Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
 ---
