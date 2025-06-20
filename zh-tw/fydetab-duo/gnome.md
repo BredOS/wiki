@@ -1,9 +1,9 @@
 ---
 title: GNOME on the Fydetab
-description: null
+description:
 published: true
 date: 2024-11-12T15:33:19.071Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-11-10T19:41:06.111Z
 ---
