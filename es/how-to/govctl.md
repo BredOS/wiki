@@ -3,7 +3,7 @@ title: Configurando Gobernadores
 description: Usando govctl para administrar los gobernadores del sistema
 published: true
 date: 2025-05-07T12:47:49.03Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.03Z
 ---
