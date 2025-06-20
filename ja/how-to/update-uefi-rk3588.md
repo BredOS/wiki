@@ -3,7 +3,7 @@ title: RK3588でUEFIをアップデートする方法
 description: BredOSを実行しているRK3588ベースのデバイスでUEFIファームウェアをアップデートする方法を学ぶ
 published: true
 date: 2025-02-23T15:28:48.131Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
 ---
