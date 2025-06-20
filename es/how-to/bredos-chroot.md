@@ -3,7 +3,7 @@ title: BredOS-Chroot utility
 description: Una simple herramienta para montar y hacer chroot en una instalación BredOS desde un sistema secundario
 published: true
 date: 2025-05-07T17:48:24.068Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T17:48:24.068Z
 ---
