@@ -1,9 +1,9 @@
 ---
 title: カーネル改造中
-description: null
+description:
 published: true
 date: 2025-05-07T18:34:49.447Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
 ---
