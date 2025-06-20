@@ -1,9 +1,9 @@
 ---
 title: BredOS のインストールガイド
-description: null
+description:
 published: true
 date: 2024-08-16T10:06:04.691Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-07-19T00:42:37.505Z
 ---
