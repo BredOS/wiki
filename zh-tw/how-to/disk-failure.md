@@ -3,7 +3,7 @@ title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
 date: 2025-06-01T10:33:55.798Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
 ---
@@ -216,8 +216,8 @@ No Self-tests Logged
 Here, the only important values are:
 
 - `Percentage Used`, which is the percentage of used spare blocks. It should not exceed `Available Spare Threshold`, since that usually is the point of no return for the drive.
- The rate of block failure will usually exponentially increase passed that point, leading to complete failure.
- NVME drives are likely to lock up and turn Read-Only once spare flash is exausted.
+  The rate of block failure will usually exponentially increase passed that point, leading to complete failure.
+  NVME drives are likely to lock up and turn Read-Only once spare flash is exausted.
 - `Media and Data Integrity Errors`, which indicate significant flash degredation.
 - `Error Information Log Entries`, which usually indicate how many flash regions have been masked with spare flash.
 
