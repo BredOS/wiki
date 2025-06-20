@@ -3,7 +3,7 @@ title: ガバナンスの設定
 description: govctl を使用してシステムガバナーを管理する
 published: true
 date: 2025-05-07T12:47:49.033Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
 ---
