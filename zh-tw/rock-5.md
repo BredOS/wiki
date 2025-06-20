@@ -1,9 +1,9 @@
 ---
 title: Rock 5 Series
-description: null
+description:
 published: true
 date: 2025-04-01T12:38:55.272Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
 ---
