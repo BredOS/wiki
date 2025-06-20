@@ -3,7 +3,7 @@ title: Discos de error de Manejo
 description: Una guía sobre los datos de S.M.A.R.T y la sustitución de discos
 published: true
 date: 2025-06-01T10:33:55.798Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
 ---
@@ -216,8 +216,8 @@ No Self-tests Logged
 Aquí, los únicos valores importantes son:
 
 - `Porcentaje utilizado`, que es el porcentaje de bloques de recambio usados. No debería exceder el `umbral de comparación disponible`, ya que este normalmente es el punto de no retorno de la unidad.
- La tasa de fallo de bloque normalmente aumentará exponencialmente pasado ese punto, lo que conducirá a un fallo total.
- Las unidades NVME son propensas a bloquear y girar Read-Only una vez que el flash de repuesto está exausto.
+  La tasa de fallo de bloque normalmente aumentará exponencialmente pasado ese punto, lo que conducirá a un fallo total.
+  Las unidades NVME son propensas a bloquear y girar Read-Only una vez que el flash de repuesto está exausto.
 - `Media and Data Integrity Errors`, que indican una significativa gradación del flash.
 - `Entradas de registro de información de errores`, que generalmente indican cuántas regiones de flash han sido enmascaradas con la flash.
 
