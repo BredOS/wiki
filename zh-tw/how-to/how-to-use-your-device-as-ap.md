@@ -1,9 +1,9 @@
 ---
 title: How to use your device as a wireless hotspot
-description: null
+description:
 published: true
 date: 2024-09-08T10:55:29.082Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
 ---
