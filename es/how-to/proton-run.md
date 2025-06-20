@@ -3,7 +3,7 @@ title: Proton-run
 description: Explorador rápido al usar el script `proton-run` de BredOS
 published: true
 date: 2025-05-07T14:44:47.710Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T14:44:47.710Z
 ---
