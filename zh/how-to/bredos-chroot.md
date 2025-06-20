@@ -3,7 +3,7 @@ title: BredOS-Chroot utility
 description: 一个从二级系统挂载到 BredOS 安装的简单工具
 published: true
 date: 2025-05-07T17:48:24.068Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T17:48:24.068Z
 ---
