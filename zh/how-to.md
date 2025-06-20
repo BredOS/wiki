@@ -3,7 +3,7 @@ title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
 date: 2025-06-01T09:57:16.627Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
 ---
