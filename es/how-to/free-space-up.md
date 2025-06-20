@@ -3,7 +3,7 @@ title: 🧹💾 Guía de limpieza de espacio en disco
 description: Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS. 🖥️✨
 published: true
 date: 2024-09-21T09:03:53.416Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-20T20:26:57.698Z
 ---
