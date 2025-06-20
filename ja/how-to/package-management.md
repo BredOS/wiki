@@ -3,7 +3,7 @@ title: 📦✨ パッケージマネージャガイド
 description: BredOS パッケージマネージャーガイドへようこそ! 🚀 ここでは、アプリケーションのインストールと管理方法を学びます。
 published: true
 date: 2024-09-20T20:10:47.203Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-09-20T20:08:39.778Z
 ---
