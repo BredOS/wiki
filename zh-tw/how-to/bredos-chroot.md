@@ -3,7 +3,7 @@ title: BredOS-Chroot utility
 description: A simple tool to mount and chroot into a BredOS install from a secondary system
 published: true
 date: 2025-05-07T17:48:24.068Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T17:48:24.068Z
 ---
