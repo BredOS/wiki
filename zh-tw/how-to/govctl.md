@@ -3,7 +3,7 @@ title: Configuring Governors
 description: Using govctl to manage system governors
 published: true
 date: 2025-05-07T12:47:49.033Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
 ---
