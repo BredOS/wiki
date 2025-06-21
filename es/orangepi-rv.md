@@ -10,10 +10,10 @@ dateCreated: 2025-06-21T08:33:57.285Z
 
 # Soporte para estos dispositivos
 
-| Device          | UEFI | Soportado | Known Issues |
-| --------------- | ---- | --------- | ------------ |
-| RV Pi Naranja   | ❌    | ✔️        |              |
-| Pi naranja RV 2 | ❌    | ✔️        |              |
-| Pi naranja R2S  | ❌    | ❌         |              |
+| Dispositivo     | UEFI | Soportado | Problemas conocidos |
+| --------------- | ---- | --------- | ------------------- |
+| RV Pi Naranja   | ❌    | ✔️        |                     |
+| Pi naranja RV 2 | ❌    | ✔️        |                     |
+| Pi naranja R2S  | ❌    | ❌         |                     |
 
 
