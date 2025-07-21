@@ -13,6 +13,8 @@ dateCreated: 2024-12-04T15：50：46.861Z
 默认情况下，大多数设备都使用 `linux-rockchip-rkr3` 内核。
 然而，您可以从另一个开关，或者到另一个内核。
 要做到这一点，请首先验证您已经安装了哪些内核：
+然而，您可以从另一个开关，或者到另一个内核。
+要做到这一点，请首先验证您已经安装了哪些内核：
 
 ```
 pacman -Qs linux | grep "linux"
@@ -40,6 +42,7 @@ local/util-linux-libs 240.2-1
 
 在列表中，我们可以看到linux-rockchip-rkr3和配对的头已安装。
 要安装另一个内核，请先移除已安装的内核及其头部。
+要安装另一个内核，请先移除已安装的内核及其头部。
 
 ## 1. 删除已安装的内核。
 
@@ -55,7 +58,7 @@ sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 sudo pacman -S your new-kernel headers
 ```
 
-内核包将生成一个 initramfs 图像。 您可以从安装日志中找到它的文件名：
+内核包将生成一个 initramfs 图像。 您可以从安装日志中找到它的文件名： 您可以从安装日志中找到它的文件名：
 
 ```
 (14/30) Updating linux initcpios...
@@ -80,7 +83,7 @@ sudo pacman -S your new-kernel headers
 ==> Initcpio image generation successful
 ```
 
-`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` initramfs 图像。 其它内核会生成不同的文件名。
+`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` initramfs 图像。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。
 
 ## 3. 更新引导程序配置
 
@@ -110,6 +113,8 @@ label BredOS ARM
 您需要编辑内核`initrd`行来指向相同的文件名(无路径)。
 您还需要编辑内核行才能匹配。
 要验证文件名正确，您可以列出`/boot/`的内容：
+您还需要编辑内核行才能匹配。
+要验证文件名正确，您可以列出`/boot/`的内容：
 
 ```
 ls /boot/
@@ -117,7 +122,7 @@ ls /boot/
 
 ### UEFI
 
-本节仅适用于使用 UEFI 启动的设备。 如果您使用 U-Boot，请跳转到以上部分。
+本节仅适用于使用 UEFI 启动的设备。 如果您使用 U-Boot，请跳转到以上部分。 如果您使用 U-Boot，请跳转到以上部分。
 
 运行：
 

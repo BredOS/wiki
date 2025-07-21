@@ -53,7 +53,7 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
 
 **📂 デフォルトでBredOSイメージを含むすべてのファイルを解凍します。 mg.xzファイルを解凍して.imgファイルに変換する必要があります。**
 
-- まず最初に、ダウンロードしたRockchipドライバをインストールすることです。 これを行うには、`DriverAsitant_v5.0`フォルダを開き、`DriverInstall.exe`ファイルを実行します。
+- まず最初に、ダウンロードしたRockchipドライバをインストールすることです。 これを行うには、`DriverAsitant_v5.0`フォルダを開き、`DriverInstall.exe`ファイルを実行します。 これを行うには、`DriverAsitant_v5.0`フォルダを開き、`DriverInstall.exe`ファイルを実行します。
 
 - `🟢 Driverをインストール`をクリックします:
 
@@ -69,7 +69,7 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
-Linuxユーザーの場合、`rkdeveloptool` を使用してイメージをeMMCにフラッシュすることができます。 コマンドは次のとおりです:
+Linuxユーザーの場合、`rkdeveloptool` を使用してイメージをeMMCにフラッシュすることができます。 コマンドは次のとおりです: コマンドは次のとおりです:
 
 ```bash
 sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin

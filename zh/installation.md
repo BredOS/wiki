@@ -10,7 +10,7 @@ dateCreated: 2024-07-19T00:42:37.505Z
 
 # 🍞 BredOS 安装指南
 
-## 📚 目录
+## 📚 目录表
 
 - [🔽 下载 BredOS](#downloading-bredos)
 - [💽 创建安装介质 (microSD)](#creating-the-installation-media-microsd)
@@ -53,7 +53,7 @@ dateCreated: 2024-07-19T00:42:37.505Z
 
 **📂 解压缩所有文件，包括 BredOS 镜像。默认情况下是 .img.xz 文件，我们必须解压缩它才能将它转换为 .img 文件。**
 
-- 首先安装我们下载的 Rockchip 驱动程序。打开 `DriverAssistant_v5.0` 文件夹并执行文件 `DriverInstall.exe`。
+- 首先安装我们下载的 Rockchip 驱动程序。打开 `DriverAssistant_v5.0` 文件夹并执行文件 `DriverInstall.exe`。 打开`DriverAssitant_v5.0`文件夹并执行文件 `DriverInstall.exe`。
 
 - 点击 `🟢 安装驱动程序`：
 
@@ -69,7 +69,7 @@ dateCreated: 2024-07-19T00:42:37.505Z
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
-对于 Linux 用户，您可以使用 "rkdeveloptool" 刷写镜像到 eMMC 中。命令如下：
+对于 Linux 用户，您可以使用 "rkdeveloptool" 刷写镜像到 eMMC 中。命令如下： 命令如下：
 
 ```bash
 sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
