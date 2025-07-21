@@ -11,6 +11,7 @@ dateCreated: 2025-02-23T15:13:50.035Z
 # 🎨 Escritorio GNOME en BredOS
 
 El entorno de escritorio GNOME se puede instalar con el paquete AUR `gnome-meta`.\
+Para instalarlo, ejecutar:\
 Para instalarlo, ejecutar:
 
 ```
@@ -22,6 +23,7 @@ yay -S gnome-meta
 ## 🔄 Cambiar a GDM
 
 Para una operación adecuada, necesitas cambiar a **GDM** después de la instalación.\
+Ejecutar los siguientes comandos:\
 Ejecutar los siguientes comandos:
 
 ```
