@@ -43,7 +43,7 @@ Puede crear fácilmente un punto de acceso utilizando la herramienta de línea d
    - 🔑 Establece la contraseña a `mypassword`
 
 > Si obtiene el siguiente error, ejecute de nuevo el comando con sudo
-> \\\\`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
+> \\\\\`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
 
 ## Ver estado del punto de acceso
 
