@@ -69,7 +69,7 @@ BredOS 使用 `pacman`，這是來自 Arch Linux 的軟件包管理器。 以下
 - ➖ 移除軟件包：`sudo pacman -R [package_name]`
 - 🔍 搜索軟件包：`pacman -Ss [package_name]`
 
-## 🐞 疑難排解
+## 🐞 Troubleshooting
 
 如果您遇到 BredOS 的問題，歡迎加入我們的 [Discord](https://discord.gg/jwhxuyKXaa) 進行咨詢。
 
