@@ -54,7 +54,7 @@ sudo usermod -aG libvirt $(whoami)
 
 ## ステップ 4: ネットワーク設定 🌐
 
-`virt-manager` はネットワーク管理に `dnsmasq` を使用します。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。
+`virt-manager` はネットワーク管理に `dnsmasq` を使用します。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。
 
 ```bash
 sudo virsh net-start default
@@ -71,6 +71,7 @@ virt-manager
 
 これにより、 `virt-manager` GUIが開き、仮想マシンの作成と管理ができます。
 ![virt.jpg](/vms/virt.jpg)
+![virt.jpg](/vms/virt.jpg)
 
 ## ステップ 6: XML 編集を有効にする
 
@@ -80,12 +81,15 @@ XML編集を有効にするには（後で必要）`virt-manager`を開く必要
 ## ステップ 7: 仮想マシンを作成する 🛠️
 
 1. `virt-manager` を開きます。
+  `virt-manager` を開きます。
   ![virt.jpg](/vms/virt.jpg)
 2. **新しい仮想マシンを作成** ➕をクリックしてください。
   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
+  ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. インストール元(ISOイメージまたはネットワークインストール)を選択します。
   ![newvm.jpg](/vms/newvm.jpg)
-4. ウィザードに従って、CPU、RAM、およびVMストレージを割り当てます。 ⚙️
+  ![newvm.jpg](/vms/newvm.jpg)
+4. ウィザードに従って、CPU、RAM、およびVMストレージを割り当てます。 ⚙️ ⚙️
 
 > RK3588では、小さなアーキテクチャ
 > {.is-warning} により、vmあたり最大4コアを割り当てることができます。
@@ -107,7 +111,7 @@ Locate `<vcpu>XYZ</vcpu>` and replace it with
 cpuセットは0-3を使用したいコアで、rk3588と4-7のEコアはパフォーマンスコアとコア数です。 上記の例では、vmは2つのコアを持ち、ダイ自体にコア別名コア1と2を持つことになります。
 ![vcpuxml2.jpg](/vms/vcpuxml2.jpg)
 
-6. 周辺機器のハードウェアとグラフィックスのサポートを追加します。 🖥️
+6. 周辺機器のハードウェアとグラフィックスのサポートを追加します。 🖥️ 🖥️
 
 VM ページに戻り、「ハードウェアを追加」を押します。
 
@@ -129,7 +133,7 @@ and
 ![tab.png](/vms/kb.png)
 ![tab.png](/vms/tab.png)
 
-7. 設定が完了したら、VM を起動します。 🟢
+7. 設定が完了したら、VM を起動します。 🟢 🟢
 
 ![startvm.jpg](/vms/startvm.jpg)
 
