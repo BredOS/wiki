@@ -1,5 +1,5 @@
 ---
-title: "📸:countrockwise_arrows_buton: Btrfs Snapshots and Rollback, with Timeshift"
+title: "📸🔄 Btrfs Snapshots and Rollback, with Timeshift"
 description: 使用 Timeshift 设置Btrfs 快照和系统回滚的综合指南
 published: true
 date: 2024-09-28T07：58：11.350Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2024-09-27T19：19：08.209Z
 ---
 
-# 📸:countrockwise_arrows_buton: Btrfs Snapshots and Rollback, with Timeshift
+# 📸🔄 Btrfs Snapshots and Rollback, with Timeshift
 
 **Introduction**\
 **Btrfs 文件系统**的 **快照功能** 可以用于执行系统快照和回滚。 **Timeshift** 是一个方便用户的图形应用程序，方便此流程！
@@ -91,7 +91,7 @@ sudo systemctl 启用 --now grub-btrfs.path
 sudo pacman -S timeshift-autosnap
 ```
 
-## 步骤 2: 防止重复 GRUB 更新 ❌:countrockwise_arrows_buton:
+## 步骤 2: 防止重复 GRUB 更新 ❌🔄
 
 为了避免在 Timeshift-autosnapp 创建时两次更新 GRUB，我建议修改配置文件。 通过编辑以下文件将 `updateGrub` 设置为 `false` ：
 
@@ -113,4 +113,4 @@ updateGrub=true
 
 ---
 
-我希望本指南已帮助您成功设置了 **Btrfs 系统快照** 和 **Rolbacks** 与 Timeshiff 成功！ :smiling_fac_with_smiling_eyes:🔧 拥有一个强大的快照系统可以在更新或系统更改时保存你的日子。 快乐的计算！ 🖥️✨
+我希望本指南已帮助您成功设置了 **Btrfs 系统快照** 和 **Rolbacks** 与 Timeshiff 成功！ 😊🔧 拥有一个强大的快照系统可以在更新或系统更改时保存你的日子。 快乐的计算！ 🖥️✨

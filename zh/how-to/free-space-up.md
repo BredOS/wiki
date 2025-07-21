@@ -18,7 +18,7 @@ dateCreated: 2024-09-20T20：26：57.698Z
 
 - 清除软件包缓存 📦
 - 清理旧日志文件 📝
-- 使用 BleachBit :spong:
+- 使用 BleachBit 🧽
 - 清理用户缓存 🏠
 - 查找大文件和目录 📂
 
@@ -92,7 +92,7 @@ sudo journalctl --trainum-time=3d
 
 ---
 
-## 使用 BleachBit :spong:
+## 使用 BleachBit 🧽
 
 **BleachBit** 是一个强大的工具，可以帮助您清理系统垃圾，空闲磁盘空间，并保护您的隐私。 您可以了解更多关于如何使用 BleachBit [here](https://www.bleachbit.org/)。 您可以了解更多关于如何使用 BleachBit [here](https://www.bleachbit.org/)。
 
@@ -134,7 +134,7 @@ rm -rf ~/.cache/*
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
-### 图形工具 :framed_pictic:
+### 图形工具 🖼️
 
 - **Filelight** - 具有聚合环的交互式磁盘使用图。\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\

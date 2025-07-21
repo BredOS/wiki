@@ -24,7 +24,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 ## 📥 安装步骤
 
-### :countrockwise_arrows_buton: 如果使用旧的 BredOS 图像：
+### 🔄 如果使用旧的 BredOS 图像：
 
 您可能需要添加 **BredOS Multilib** 仓库来安装 Steam 和必要的翻译层。 要做到这一点，请遵循以下步骤： 要做到这一点，请遵循以下步骤： 要做到这一点，请遵循以下步骤：
 
@@ -42,9 +42,9 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 ---
 
-### :desktop_compute: Steam安装:
+### 💻 Steam安装:
 
-1. 打开您的终端 :desktop_compute:。
+1. 打开您的终端 💻。
 2. 运行以下命令来安装 Steam：
 
 ```
@@ -62,7 +62,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 4. 等待安装完成，你都设置了！ 🎉 🎉 🎉
 
-## :countrockwise_arrows_buton: 卸载 Steam
+## 🔄 卸载 Steam
 
 如果您需要卸载 Steam 并重置配置以选择另一个选项：
 

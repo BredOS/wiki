@@ -33,7 +33,7 @@ To determine where your ESP partition is located, run the command,
 sudo mkdir -p <ESP>/dtb/{base,overlays}
 ```
 
-### :file_cabiet: 2: DTBをベースにコピーする
+### 🗄️ 2: DTBをベースにコピーする
 
 > FydeTab Duo を使っている場合は、特定の DTB ファイルを `base` フォルダにコピーします。
 >

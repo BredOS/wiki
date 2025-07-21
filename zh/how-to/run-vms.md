@@ -148,6 +148,6 @@ and
 - **权限问题**：确保您的用户在 `libvirt` 组，并且`libvirtd` 服务正在运行。
 - **Networking Issues**：如果VMs没有互联网接入，请确保默认的`virsh`网络正在运行。
 
-## :party_poper: 结论
+## 🎉 结论
 
 您在 BredOS 上成功地设置 `virt-manager` 并准备创建和管理虚拟机！

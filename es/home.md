@@ -21,7 +21,7 @@ La documentación le guiará a través de la instalación, configuración y uso 
 
 1. [🔍 Introducción](#introduction)
 2. [🚀 Características](#features)
-3. [🛠️ Requisitos del sistema](#requisitos del sistema)
+3. [🛠️ Requisitos del sistema](#system-requirements)
 4. [💽 Instalación](/installation)
 5. [📦 Administración de Paquetes](#package-management)
 6. [🐞 Resolución de problemas](#troubleshooting)
@@ -65,7 +65,7 @@ Lee más en nuestra [Guía de instalación](/installation).
 BredOS usa `pacman`, el gestor de paquetes de Arch Linux. Aquí hay algunos comandos comunes:
 
 - 🔄 Actualizar lista de paquetes: `sudo pacman -Syu`
-- ➕ Install a package: `sudo pacman -S [package_name]`
+- ➕ Instalar un paquete: `sudo pacman -S [package_name]`
 - ➖ Eliminar un paquete: `sudo pacman -R [package_name]`
 - 🔍 Busca un paquete: `pacman -Ss [package_name]`
 
@@ -103,7 +103,7 @@ R: Por favor, asegúrese de que:
 Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:
 
 - [📱 Telegram](https://t.me/bredoslinux)
-- [:speech _balloon: Discord](https://discord.gg/jwhxuyKXaa)
+- [💬 Discord](https://discord.gg/jwhxuyKXaa)
 - [💻 GitHub](http://github.com/BredOS)
 
 ## 🤝 Contribuyendo
@@ -113,6 +113,6 @@ BredOS es un proyecto de código abierto, y las contribuciones son bienvenidas! 
 - 🐛 Reportar errores y problemas
 - 💻 Enviar parches y mejoras
 - 📄 Escribe y mejora la documentación
-- :peopleple_holding_hands: Ayuda a otros usuarios en los foros de la comunidad y chatea
+- 🧑‍🤝‍🧑 Ayuda a otros usuarios en los foros de la comunidad y chatea
 
-Para más información sobre contribuir, visita [💻 GitHub](http://github.com/BredOS) o puedes enviarnos un mensaje en [:speech _balloon: Discord](https://discord.gg/jwhxuyKXaa) o unirte a nuestro [📱 Telegram](https://t.me/bredoslinux).
+Para más información sobre contribuir, visita [💻 GitHub](http://github.com/BredOS) o puedes enviarnos un mensaje en [💬 Discord](https://discord.gg/jwhxuyKXaa) o unirte a nuestro [📱 Telegram](https://t.me/bredoslinux).

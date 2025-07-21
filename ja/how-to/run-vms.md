@@ -42,7 +42,7 @@ sudo systemctl enable --now libvirtd
 sudo systemctl status libvirtd
 ```
 
-## ステップ 3: ユーザーを `libvirt` グループ :busts_in_siliette: に追加します。
+## ステップ 3: ユーザーを `libvirt` グループ 👥 に追加します。
 
 VMを管理するためのルート権限を必要としないようにするには、ユーザーを`libvirt`グループに追加してください。
 

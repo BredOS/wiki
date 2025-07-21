@@ -8,13 +8,13 @@ editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
 ---
 
-# :countrockwise_arrows_buton: 更改RK3588 设备上的默认启动顺序
+# 🔄 更改RK3588 设备上的默认启动顺序
 
 如果您需要在运行 BredOS 的 RK3588设备上修改启动订单，请遵循以下步骤：
 
 ---
 
-## :small_blu_diamond: 访问 UEFI 启动菜单
+## 🔹 访问 UEFI 启动菜单
 
 1. **打开您的设备** 并等待 **BredOS 标志** 在启动时显示。
 2. **在徽标显示时按一下`ESC`键** 进入UEFI菜单。
@@ -63,4 +63,4 @@ dateCreated: 2025-02-23T15:45:23.760Z
 
 ---
 
-:check_mark_buton: **完成！** 您的设备现在将使用新的订单启动。 🚀
+✅ **完成！** 您的设备现在将使用新的订单启动。 🚀

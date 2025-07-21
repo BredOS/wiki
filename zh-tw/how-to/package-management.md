@@ -24,11 +24,11 @@ Welcome to the BredOS Package Managers guide! 🚀 Here, you'll learn how to ins
 
 ## Pacman 🐧
 
-**Pacman** is the default package manager for BredOS, known for its speed and simplicity when managing software packages.
+**Pacman** 是 BredOS 的預設軟件包管理器，以其在管理軟件包時的速度和簡潔性而聞名。
 
-### How to Install Packages 🛠️
+### 如何安裝軟件包 🛠️
 
-To install a package with Pacman, use the following command:
+要使用 Pacman 安裝軟件包，請使用以下命令：
 
 ```bash
 sudo pacman -S <package name>
@@ -42,25 +42,25 @@ To update all installed packages on your system, run:
 sudo pacman -Syu
 ```
 
-This will synchronize the package databases and upgrade all your packages to their latest versions.
+這將同步軟件包資料庫並將您所有的軟件包升級到最新版本。
 
-### How to Remove Packages 🗑️
+### 如何移除軟件包 🗑️
 
-To uninstall a package, use:
+要卸載軟件包，請使用：
 
 ```bash
 sudo pacman -R <package name>
 ```
 
-If you want to remove a package and its unused dependencies, run:
+如果您想移除軟件包及其未使用的依賴項，請運行：
 
 ```bash
 sudo pacman -Rns <package name>
 ```
 
-### How to Search for Packages 🔍
+### 如何搜索軟件包 🔍
 
-To search for a package in the Pacman repositories, use:
+要在 Pacman 儲存庫中搜索軟件包，請使用：
 
 ```bash
 pacman -Ss <package name>

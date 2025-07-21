@@ -22,7 +22,7 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [🎮 BredOS上でSTEAMをインストールする方法](/ja/how-to/how-to-install-steam)
 
-- [:antera_bars: デバイスを無線ホットスポットとして使用する方法](/ja/how-to/how-to-use-your-device-as-ap)
+- [📶 デバイスを無線ホットスポットとして使用する方法](/ja/how-to/how-to-use-your-device-as-ap)
 
 - [📦✨ Package Managers Guide]/how-to/package-management)
 

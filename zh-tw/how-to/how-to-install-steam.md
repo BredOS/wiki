@@ -65,7 +65,7 @@ You may need to add the **BredOS Multilib** repository to install Steam and the 
 If you need to uninstall Steam and reset the configuration to choose a different option:
 
 ```
-sudo pacman -Rnscu steam steam-libs-any #or steam-libs-rk3588 depending on your selection
+sudo pacman -Rnscu steam steam-libs-any #或 steam-libs-rk3588 視您的選擇而定
 ```
 
 ## 🚀 Launch Steam

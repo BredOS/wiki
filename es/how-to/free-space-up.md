@@ -138,7 +138,7 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
-### Herramientas gráficas :framed_imagen:
+### Herramientas gráficas 🖼️
 
 - **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\

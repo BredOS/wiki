@@ -65,11 +65,11 @@ BredOSは、ARMベースのシングルボードコンピュータのユーザ�
 BredOS は Arch Linux のパッケージマネージャである `pacman` を使用します。 以下に共通のコマンドを示します。
 
 - 🔄 パッケージ一覧を更新: `sudo pacman -Syu`
-- ➕ Install a package: `sudo pacman -S [package_name]`
+- ➕ パッケージをインストール: `sudo pacman -S [package_name]`
 - ➖ パッケージを削除: `sudo pacman -R [package_name]`
 - 🔍 パッケージを検索: `pacman -Ss [package_name]`
 
-## :lady_betle: トラブルシューティング
+## 🐞 トラブルシューティング
 
 BredOS で問題が発生した場合は、 [discord](https://discord.gg/jwhxuyKXaa) に参加してください。
 

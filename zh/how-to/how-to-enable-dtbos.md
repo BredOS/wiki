@@ -83,7 +83,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 按 F10 可保存并重新启动到您的系统 (您可以返回到第一个UEFI 屏幕并选择 `Continue`)。
 
-### :countrockwise_arrows_buton: 5: 复制 DTBO
+### 🔄 5: 复制 DTBO
 
 用“dtbo”代替`my-overlay`。
 

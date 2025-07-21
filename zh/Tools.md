@@ -47,6 +47,14 @@ sudo grub-password -d
 脚本通过 `grub-mkconfig` 自动重新生成 GRUB 配置。
 修改 `/etc/grub.d/10_linux`，请不要手动恢复。
 
+配置 GRUB 密码的完整 wiki 页面可以在[这里](/how-to/grub-password)找到。
+
+## 设备树编译器助手脚本
+
+也在 `bredos-tools` 软件包下添加了 `dtsc` 程序，它可以用来快速和轻松地编译自定义系统设备树并为自定义硬件创建叠加层。
+
+使用 DTSC 的完整 wiki 页面可以在[这里](/how-to/dtsc)找到。
+
 # DTSC 助手脚本
 
 要使它起作用，你需要安装 `dtc`，只需运行 `yay -S dtc`

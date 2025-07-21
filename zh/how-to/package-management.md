@@ -1,6 +1,6 @@
 ---
 title: 📦✨ Package Managers Guide
-description: "欢迎使用 BredOS 软件包管理员指南！ :rowt: 在这里，你会学习如何安装和管理应用程序。 准备好控制您的系统应用！ 💻 :ro火箭: 在这里，你会学习如何安装和管理应用程序"
+description: "欢迎使用 BredOS 软件包管理员指南！🚀 在这里，你会学习如何安装和管理应用程序。 准备好控制您的系统应用！ 💻"
 published: true
 date: 2024-09-20T20:10:47.203Z
 tags:
@@ -10,7 +10,7 @@ dateCreated: 2024-09-20T20：08：39.778Z
 
 # 📦✨ Package Managers Guide
 
-欢迎使用 BredOS 软件包管理员指南！ :ro火箭: 在这里，你会学习如何安装和管理应用程序 :rowt: 在这里，你会学习如何安装和管理应用程序。 准备好控制您的系统应用！ 💻
+欢迎使用 BredOS 软件包管理员指南！🚀 在这里，你会学习如何安装和管理应用程序。准备好控制您的系统应用！ 💻
 
 ---
 
@@ -34,7 +34,7 @@ dateCreated: 2024-09-20T20：08：39.778Z
 sudo pacman -S <package name>
 ```
 
-### 如何更新系统 :countrockwise_arrows_buton:
+### 如何更新系统 🔄
 
 要更新系统上所有已安装的软件包，请运行：
 
@@ -44,7 +44,7 @@ sudo pacman -Syu
 
 这将同步软件包数据库并将您所有的软件包升级到他们的最新版本。
 
-### 如何删除软件包 :wastebacket:
+### 如何删除软件包 🗑️
 
 要卸载一个包，请使用：
 
