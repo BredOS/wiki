@@ -11,6 +11,7 @@ dateCreated: 2025-02-23T15:13:50.035Z
 # 🎨 GNOME Desktop on BredOS
 
 The GNOME desktop environment can be installed with the AUR package `gnome-meta`.\
+To install it, run:\
 To install it, run:
 
 ```
@@ -22,6 +23,7 @@ yay -S gnome-meta
 ## 🔄 Switch to GDM
 
 For proper operation, you need to switch to **GDM** after installation.\
+Run the following commands:\
 Run the following commands:
 
 ```
