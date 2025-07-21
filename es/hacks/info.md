@@ -14,4 +14,4 @@ En esta página, encontrará todos los recursos que necesita para solucionar pro
 
 ## 📚 Índice de contenidos
 
-- [Límite de cpu de tuberías](https://wiki.bredos.org/en/hacks/pipewire-cpu)
+- [Límite de cpu de tuberías]/hacks/pipewire-cpu)

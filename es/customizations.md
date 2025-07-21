@@ -14,5 +14,5 @@ En esta página encontrarás todos los recursos que necesitas para personalizar 
 
 ## 📚 Índice de contenidos
 
-- [Personalizar Shell 🐚](https://wiki.bredos.org/en/customizations/shell-customization)
-- [Cambiando de núcleo](https://wiki.bredos.org/en/customizations/switching-kernel)
+- [Personalizar Shell 🐚]/customizations/shell-customization)
+- [Cambiando de núcleo]/customizations/switching-kernel)

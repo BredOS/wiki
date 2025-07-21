@@ -48,4 +48,4 @@ It should be used as the current working directory during building.
 ## Compiling Device Trees and Overlays
 
 A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs is now available.
-Click [here](/en/Tools#dtsc-helper-script) to view it.
+Click [here]/Tools#dtsc-helper-script) to view it.

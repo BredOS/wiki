@@ -17,7 +17,7 @@ Welcome to the guide on how to install **Steam** on BredOS! Follow these simple 
 {.is-info}
 
 - You need to have **BredOS** installed and running.
-- Optionally, you can have [**Panthor** enabled](/en/how-to/how-to-setup-panthor), but it's not required.
+- Optionally, you can have [**Panthor** enabled]/how-to/how-to-setup-panthor), but it's not required.
 
 ## 📥 Installation Steps
 

@@ -16,7 +16,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ### 🎛️ 1. Panthor DTBO を有効にする
 
-[Device Tree Overlay guide](https://wiki.bredos.org/en/how-to/how-to-enable-dtbos) に従って、
+[Device Tree Overlay guide]/how-to/how-to-enable-dtbos) に従って、
 `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`
 **DTBOをコピーした後、システムを再起動しないでください！**
 

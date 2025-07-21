@@ -24,13 +24,13 @@ dateCreated: 2024-09-21T09:12:56.606Z
 
 # 所有设备的指南
 
-- [🐾 How to setup-pan-thor on Mali GPU with RK3588](/en/how to/how to setup-panthor)
-- [🎮 How to install-steam] (/en/how to/how to install-steam)
+- [🐾 How to setup-pan-thor on Mali GPU with RK3588]/how to/how to setup-panthor)
+- [🎮 How to install-steam] /how to/how to install-steam)
 
 # 用于摇滚5B
 
-- [如何从NVMe启动BredOS](/en/rock-5/how to boot-fro-nvme)
+- [如何从NVMe启动BredOS]/rock-5/how to boot-fro-nvme)
 
 # Rock 5B Plus
 
-- [如何从NVMe启动BredOS](/en/rock-5/how to boot-fro-nvme)
+- [如何从NVMe启动BredOS]/rock-5/how to boot-fro-nvme)

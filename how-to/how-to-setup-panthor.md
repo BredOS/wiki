@@ -15,7 +15,7 @@ This guide walks you through the steps to enable Panthor on Mali GPUs present in
 # 🔧 Steps to Enable Panthor 
 
 ### 🎛️ 1. Enable the Panthor DTBO
-Follow the [Device Tree Overlay guide](https://wiki.bredos.org/en/how-to/how-to-enable-dtbos) to enable
+Follow the [Device Tree Overlay guide]/how-to/how-to-enable-dtbos) to enable
 `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`
 **Do not reboot your system after copying the DTBO!**
 

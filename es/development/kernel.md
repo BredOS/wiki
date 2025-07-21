@@ -50,4 +50,4 @@ Debe ser usado como el directorio de trabajo actual durante la construcción.
 ## Compilar árboles y capas de dispositivos
 
 Ya está disponible una guía completa para usar `dtsc`, la herramienta BredOS para compilar DTB y DTBOS.
-Haga clic [here](/en/Tools#dtsc-helper-script) para verlo.
+Haga clic [here]/Tools#dtsc-helper-script) para verlo.

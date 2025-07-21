@@ -50,4 +50,4 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ## デバイスツリーとオーバーレイのコンパイル
 
 `dtsc`を使用するための完全なガイドが、DTBとDTBOをコンパイルするためのブレッドOSツールが利用可能になりました。
-[here](/en/Tools#dtsc-helper-script) をクリックして表示します。
+[here]/Tools#dtsc-helper-script) をクリックして表示します。

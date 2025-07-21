@@ -28,8 +28,8 @@ sudo rkdevelopmenttools wl 0 ~/Downloads/BredOS.img
 
 # 指南
 
-- [🐾 How to setup-pan-thor on Mali GPU with RK3588](/en/how to/how to setup-panthor)
-- [🎮 How to install-steam] (/en/how to/how to install-steam)
+- [🐾 How to setup-pan-thor on Mali GPU with RK3588]/how to/how to setup-panthor)
+- [🎮 How to install-steam] /how to/how to install-steam)
 - [🦶 GNOME on the Fydetab](/fydetab-duo/gnome)
 - [📦 How to install to eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
 - [🔧 fydetabduo wiki中的更多信息](https://wiki.fydetabduo.com/category/-bredos)

@@ -20,7 +20,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 > {.is-info}
 
 - 您需要安装 **BredOS** 并运行。
-- 可选，您可以启用 [**Panthor** ](/en/how-to/how to setup-panthor)，但不需要它。
+- 可选，您可以启用 [**Panthor** ]/how-to/how to setup-panthor)，但不需要它。
 
 ## 📥 安装步骤
 

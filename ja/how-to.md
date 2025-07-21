@@ -24,26 +24,26 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [:antera_bars: デバイスを無線ホットスポットとして使用する方法](/ja/how-to/how-to-use-your-device-as-ap)
 
-- [📦✨ Package Managers Guide](/en/how-to/package-management)
+- [📦✨ Package Managers Guide]/how-to/package-management)
 
 - [🧹💾 ディスク領域クリーンアップガイド](/ja/how-to/free-space-up)
 
 - [📸🔄 Timeshiftによるスナップショットとロールバック](/ja/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- [🖥️ 🔄 GNOMEを使用するデスクトップ環境を切り替える](/en/how-to/switch-desktop-environments)
+- [🖥️ 🔄 GNOMEを使用するデスクトップ環境を切り替える]/how-to/switch-desktop-environments)
 
-- [💾 🔄 RK3588でUEFIを更新する方法](/en/how-to/update-uefi-rk3588)
+- [💾 🔄 RK3588でUEFIを更新する方法]/how-to/update-uefi-rk3588)
 
-- [⚙️ 📑 RK3588のデフォルトブート順序を変更する方法](/en/how-to/change-boot-order-rk3588)
+- [⚙️ 📑 RK3588のデフォルトブート順序を変更する方法]/how-to/change-boot-order-rk3588)
 
-- [💻 仮想マシンの実行方法](/en/how-to/run-vms)
+- [💻 仮想マシンの実行方法]/how-to/run-vms)
 
-- [🔦 GRUBパスワードの設定方法](/en/how-to/grub-password)
+- [🔦 GRUBパスワードの設定方法]/how-to/grub-password)
 
-- [<unk> 設定知事](/en/how-to/govctl)
+- [<unk> 設定知事]/how-to/govctl)
 
-- [🪟 BREDOS 下で Windows アプリケーションを実行する] (/en/how-to/proton-run)
+- [🪟 BREDOS 下で Windows アプリケーションを実行する] /how-to/proton-run)
 
-- [<unk> 報告されたディスク障害の処理方法](/en/how-to/disk-failure)
+- [<unk> 報告されたディスク障害の処理方法]/how-to/disk-failure)
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！

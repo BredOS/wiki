@@ -14,5 +14,5 @@ In this page, you'll find all the resources you need to customize your BredOS sy
 
 ## 📚 Table of Contents
 
-- [Customize the Shell 🐚](https://wiki.bredos.org/en/customizations/shell-customization)
-- [Switching kernel](https://wiki.bredos.org/en/customizations/switching-kernel)
+- [Customize the Shell 🐚]/customizations/shell-customization)
+- [Switching kernel]/customizations/switching-kernel)

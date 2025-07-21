@@ -50,4 +50,4 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ## 编译设备树和叠加
 
 使用`dtsc`、BredOS工具编译DTB和DTBO的完整指南现已可供使用。
-点击 [here](/en/Tools#dtsc-helper-script) 查看它。
+点击 [here]/Tools#dtsc-helper-script) 查看它。

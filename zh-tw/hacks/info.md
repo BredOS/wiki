@@ -14,4 +14,4 @@ In this page, you'll find all the resources you need to work around issues and b
 
 ## 📚 Table of Contents
 
-- [Pipewire cpu limit](https://wiki.bredos.org/en/hacks/pipewire-cpu)
+- [Pipewire cpu limit]/hacks/pipewire-cpu)

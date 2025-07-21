@@ -14,4 +14,4 @@ dateCreated: 2025-03-16T16:08:26.697Z
 
 ## 📚 目次
 
-- [Pipewire cpu limit](https://wiki.bredos.org/en/hacks/pipewire-cpu)
+- [Pipewire cpu limit]/hacks/pipewire-cpu)

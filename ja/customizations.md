@@ -14,5 +14,5 @@ dateCreated: 2024-09-20T19:27:46.217Z
 
 ## 📚 目次
 
-- [Shell 🐚をカスタマイズする](https://wiki.bredos.org/en/customizations/shell-customization)
-- format@@0(https://wiki.bredos.org/en/customizations/switching-kernel)
+- [Shell 🐚をカスタマイズする]/customizations/shell-customization)
+- format@@0/customizations/switching-kernel)

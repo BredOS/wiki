@@ -10,7 +10,7 @@ dateCreated: 2024-20T07:39:21.434Z
 
 # wiki-backups
 
-Este es el repositorio wiki para [BredOS](https://wiki.bredos.org/en/home), una distribución Linux fácil de usar diseñada específicamente para ordenadores de una sola placa (SBCs).
+Este es el repositorio wiki para [BredOS]/home), una distribución Linux fácil de usar diseñada específicamente para ordenadores de una sola placa (SBCs).
 
 Puede contribuir a la documentación creando un pull request con sus cambios.
 

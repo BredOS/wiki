@@ -14,5 +14,5 @@ dateCreated: 2024-09-20T19：27：46.217Z
 
 ## 📚 目录
 
-- [自定义 Shell 🐚](https://wiki.bredos.org/en/customizations/shell-customization)
-- [切换内核](https://wiki.bredos.org/en/customizations/switching-kernel)
+- [自定义 Shell 🐚]/customizations/shell-customization)
+- [切换内核]/customizations/switching-kernel)
