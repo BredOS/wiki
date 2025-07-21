@@ -103,7 +103,7 @@ R: Por favor, asegúrese de que:
 Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:
 
 - [📱 Telegram](https://t.me/bredoslinux)
-- [💬 Discord](https://discord.gg/jwhxuyKXaa)
+- [:speech _balloon: Discord](https://discord.gg/jwhxuyKXaa)
 - [💻 GitHub](http://github.com/BredOS)
 
 ## 🤝 Contribuyendo
