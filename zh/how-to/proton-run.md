@@ -15,7 +15,7 @@ dateCreated: 2025-05-07T14：44：47.710Z
 ## B. 所需经费
 
 - An RK3588 system running BredOS.
-- Steam。 ([Guide here](en/how-to/how-to-install-steam))
+- Steam。 ([这里的指南](en/how-to/how-to-install-steam))
 - 通过Steam安装了质子实验。
 - 安装了软件包 `proton-run` (yay -S proton-run\`)。
 
