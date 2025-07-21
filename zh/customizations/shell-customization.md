@@ -1,6 +1,6 @@
 ---
-title: "BredOS Shell 定制指南 🐚🎨"
-description: "本指南将通过改变和提升你的 shell 体验来帮助你定制你的 BredOS 体验！🚀 无论你喜欢 Bash、Zsh、Fish 还是 Nushell，你都会在这里找到你需要的一切。让我们开始吧！🌊"
+title: BredOS Shell 定制指南 🐚🎨
+description: "本指南将通过改变和提升你的 shell 体验来帮助你定制你的 BredOS 体验！🚀 无论你喜欢 Bash、Zsh、Fish 还是 Nushell，你都会在这里找到你需要的一切。让我们开始吧！🌊 :ro火箭: 无论你喜欢Bash、Zsh、Fish还是Nushell, 你都会在这里找到你需要的一切。 让我们进去！ 🌊"
 published: true
 date: 2024-09-21T09:02:20.084Z
 tags: 自定义, shell
@@ -10,7 +10,7 @@ dateCreated: 2024-09-20T19:39:08.509Z
 
 # BredOS Shell 定制指南 🐚🎨
 
-本指南将通过改变和提升你的 shell 体验来帮助你定制你的 BredOS 体验！🚀 无论你喜欢 Bash、Zsh、Fish 还是 Nushell，你都会在这里找到你需要的一切。让我们开始吧！🌊
+本指南将通过改变和提升你的 shell 体验来帮助你定制你的 BredOS 体验！🚀 无论你喜欢 Bash、Zsh、Fish 还是 Nushell，你都会在这里找到你需要的一切。让我们开始吧！🌊 :ro火箭: 无论你喜欢Bash、Zsh、Fish还是Nushell, 你都会在这里找到你需要的一切。 让我们进去！ 🌊
 
 ---
 
@@ -25,7 +25,7 @@ dateCreated: 2024-09-20T19:39:08.509Z
 
 ## Bash 🐢
 
-Bash 是 BredOS 中的默认 shell。让我们开始设置它，或者使它成为你的默认 shell！
+Bash 是 BredOS 中的默认 shell。让我们开始设置它，或者使它成为你的默认 shell！ 📚 目录
 
 ### 安装 Bash 🔨
 
@@ -45,11 +45,11 @@ sudo pacman -S bash
    ```bash
    chsh -s /usr/bin/bash
    ```
-3. 注销并重新登录以开始使用 Bash 作为您的 shell。🔄
+3. 注销并重新登录以开始使用 Bash 作为您的 shell。🔄 🔄
 
 ### Oh My Bash 💡
 
-通过 **Oh My Bash** 来提升 Bash，一个能够添加主题、插件和其它很酷的增强功能的框架！🌟
+通过 **Oh My Bash** 来提升 Bash，一个能够添加主题、插件和其它很酷的增强功能的框架！🌟 🌟
 
 ---
 
@@ -72,7 +72,7 @@ sudo pacman -S zsh
 
 ### Oh My Zsh 🎨
 
-**Oh My Zsh** 是一个社区驱动的框架，可以通过主题和插件增强 Zsh，让您拥有更强大的功能和灵活性。✨
+**Oh My Zsh** 是一个社区驱动的框架，可以通过主题和插件增强 Zsh，让您拥有更强大的功能和灵活性。✨ ✨
 
 ### 将 Zsh 设置为默认 Shell ⚙️
 
@@ -84,7 +84,7 @@ sudo pacman -S zsh
    ```bash
    chsh -s /usr/bin/zsh
    ```
-3. 注销并重新登录以切换到 Zsh！🔄
+3. 注销并重新登录以切换到 Zsh！🔄 🔄
 
 ---
 
@@ -108,7 +108,7 @@ sudo pacman -S fish
 
 ### Oh My Fish 🎣
 
-使用 **Oh My Fish** 添加插件和主题到 Fish，增强其功能和外观。🌈
+使用 **Oh My Fish** 添加插件和主题到 Fish，增强其功能和外观。🌈 🌈
 
 ### 设置 Fish 为默认 Shell ⚙️
 
@@ -120,7 +120,7 @@ sudo pacman -S fish
    ```bash
    chsh -s /usr/bin/fish
    ```
-3. 注销并重新登录以享受 Fish！🔄
+3. 注销并重新登录以享受 Fish！🔄 🔄
 
 ---
 
@@ -152,4 +152,4 @@ sudo pacman -S nushell
    ```bash
    chsh -s /usr/bin/nu
    ```
-3. 注销并重新登录以切换到 Nushell！🔄
+3. 注销并重新登录以切换到 Nushell！🔄 🔄
