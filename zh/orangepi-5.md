@@ -5,20 +5,20 @@ published: true
 date: 2025-06-20T08:59:48.915Z
 tags: opi, opi-5
 editor: markdown
-dateCreated: 2024-09-20T15:17:37.567Z
+dateCreated: 2024-09-20T15：17：37.567Z
 ---
 
 # 支持的设备
 
-| 设备                | UEFI | 支持状态 | 已知问题                          |
-| ----------------- | ---- | ---- | ----------------------------- |
-| Orange Pi 5       | ✔️   | ✔️   | SATA M.2 SSD 可能无法工作           |
-| Orange Pi 5B      | ✔️   | ✔️   | 使用 OPI5 镜像，需要 DTBO 才能工作       |
-| Orange Pi 5 Plus  | ✔️   | ✔️   |                               |
-| Orange Pi 5 Pro   | ❌    | ✔️   |                               |
-| Orange Pi 5 Max   | ❌    | ✔️   |                               |
-| Orange Pi 5 Ultra | ❌    | ✔️   |                               |
-| Orange Pi CM5     | ❌    | ✔️   |                               |
+| 设备                | UEFI | 支持状态 | 已知问题                                |
+| ----------------- | ---- | ---- | ----------------------------------- |
+| 橙色Pi 5            | ✔️   | ✔️   | SATA M.2 SSD 可能无法工作 |
+| 橙色 Pi 5B          | ✔️   | ✔️   | 使用 OPI5 镜像，需要 DTBO 才能工作             |
+| 橙色Pi 5 +          | ✔️   | ✔️   |                                     |
+| Orange Pi 5 Pro   | ❌    | ✔️   |                                     |
+| 橙色Pi 5 最大         | ❌    | ✔️   |                                     |
+| Orange Pi 5 Ultra | ❌    | ✔️   |                                     |
+| 橙色Pi CM5          | ❌    | ✔️   |                                     |
 
 注：Orange Pi 5、5B 和 5 Pro 使用 RK3588S。Orange Pi 5 Plus 和 5 Max 使用 RK3588 (它有更多的 PCIe 和 MIPI 通道)
 
