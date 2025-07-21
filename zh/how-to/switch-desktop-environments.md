@@ -11,6 +11,7 @@ dateCreated: 2025-02-23T15:13:50.035Z
 # 🎨 BredOS 上的 GNOME 桌面
 
 GNOME 桌面环境可以安装在 AUR 包 `gnome-meta` 中。\
+要安装它，请运行：\
 要安装它，请运行：
 
 ```
@@ -22,6 +23,7 @@ yay -S gnome-meta
 ## 🔄 切换到 GDM
 
 要正常操作，您需要在安装后切换到 **GDM**。\
+运行以下命令：\
 运行以下命令：
 
 ```
@@ -63,4 +65,4 @@ sudo pacman -S extension-manager
 
 ---
 
-✅ 完成！GNOME 现在已经在 BredOS 上正确设置。🚀
+:check_mark_buton: 完成! ✅ 完成！GNOME 现在已经在 BredOS 上正确设置。🚀 🚀
