@@ -16,9 +16,9 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ### 🎛️ 1. 启用Panthor DTBO
 
-Follow the [Device Tree Overlay guide](https://wiki.bredos.org/en/how-to/how-to-enable-dtbos) to enable
-`/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`
-**Do not reboot your system after copying the DTBO!**
+按照 [设备树叠加层指南](https://wiki.bredos.org/en/how-to/how-to-enable-dtbos) 启用
+`/boot/dtbs/rockchip/overy/rockchip-rk3588-panthor-gpu.dtbo`
+**复制DTBO后，不要重启系统！**
 
 ### 🔄 2. 替换面板图形
 
