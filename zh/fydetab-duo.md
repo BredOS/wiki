@@ -14,7 +14,7 @@ dateCreated: 2024-11-10T19:37:43.624Z
 
 # 安装
 
-简而言之，我们使用 "rkdeveloptool" 刷写镜像到 eMMC。命令如下：
+简而言之，我们使用 "rkdeveloptool" 刷写镜像到 eMMC。命令如下： 命令如下：
 
 ```bash
 # 首先，将设备放入遮罩模式
