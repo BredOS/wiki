@@ -13,6 +13,7 @@ dateCreated: 2024-11-10T18：02：07.427Z
 **Introduction**
 启用不同的设备树叠加层(DTBOs) 允许启用可选的硬件或内核修改，而无需重新编译Linux内核。
 这也是开启地形图堆栈的预定方式。
+这也是开启地形图堆栈的预定方式。
 
 ---
 
@@ -20,8 +21,10 @@ dateCreated: 2024-11-10T18：02：07.427Z
 
 如果您在UEFI驱动的板上运行，您需要配置它。
 如果你已经这样做了，你可以先跳过步骤5。
+如果你已经这样做了，你可以先跳过步骤5。
 
 > 2024年9月12日之后的图像使用`/boot/efi`而不是`/boot`。
+> {.is-info}
 > {.is-info}
 
 要确定您的 ESP 分区所在位置，请运行命令。
@@ -44,7 +47,7 @@ sudo mkdir -p <ESP>/dtb/{base,overlays}
 
 {.is-info}
 
-对于其他基于 RK3588的看板，用您的实际设备名称替换 \\\\`rk3588-board.dtb' ：
+对于其他基于 RK3588的看板，用您的实际设备名称替换 \\\\\`rk3588-board.dtb' ：
 
 ```
 sudo cp /boot/dtbs/rockchip/rk3588-board.dtb <ESP>/dtb/base/
@@ -77,13 +80,13 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 重启到 UEFI _(您可以从 GRUB做到这一点)_ > `设备管理器` > `Rockchip 平台配置` > `ACPI / 设备树` ，并做以下操作：
 
 - **将“配置表模式”设置为“设备树”**
-- **更改为 `Enabled`** 支持 DTB 覆盖和叠加层\\\\`
+- **更改为 `Enabled`** 支持 DTB 覆盖和叠加层\\\\\`
 
 ![](/panthor/enable_tree_dtb_in_uefi.jpg)
 
 按 F10 可保存并重新启动到您的系统 (您可以返回到第一个UEFI 屏幕并选择 `Continue`)。
 
-### 🔄 5: 复制 DTBO
+### :countrockwise_arrows_buton: 5: 复制 DTBO
 
 用“dtbo”代替`my-overlay`。
 
@@ -116,7 +119,9 @@ fdtovery/dtbs/rockchip/overy/my-overlay.dtbo
 **DO NOT** 在这些行中添加`/boot`或`<ESP>`物品。
 
 **不要** 添加多个“fdtovery”行。
+**不要** 添加多个“fdtovery”行。
 如果您想要启用多个DTBO，请将其附在一条直线上，由空白处隔开。
+例如：
 例如：
 
 ```
