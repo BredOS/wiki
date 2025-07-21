@@ -1,19 +1,19 @@
 ---
-title: 贸易和发展会议
+title: 开发
 description:
 published: true
-date: 2024-11T11:48:32.189Z
+date: 2024-11-11T11:48:32.189Z
 tags:
 editor: markdown
-dateCreated: 2024-11T11:48:32.189Z
+dateCreated: 2024-11-11T11:48:32.189Z
 ---
 
-# 贸易和发展会议
+# 开发
 
-BredOS 完全开源，每一部分都可以自由修改和重新分配。
+BredOS 完全开源，每一部分都可以自由修改和重新分发。
 
 ## 指南：
 
 - 修改内核
-- 在设备树上工作
-- Moding UEFI
+- 设备树开发
+- 修改 UEFI
