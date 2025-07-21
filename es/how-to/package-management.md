@@ -3,7 +3,7 @@ title: 📦✨ Guía de Administradores de Paquete
 description: Bienvenido a la guía de Administradores de Paquetes BredOS! 🚀 Aquí, aprenderás a instalar y administrar aplicaciones
 published: true
 date: 20/09-20T20:10:47.203Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 20/09-20T20:08:39.778Z
 ---

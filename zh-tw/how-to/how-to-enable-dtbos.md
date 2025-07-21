@@ -1,9 +1,9 @@
 ---
 title: 📟 How to enable DTBOs
-description: null
+description:
 published: true
-date: 2024-11-10T19:32:58.662Z
-tags: null
+date: 2025-05-15T13:00:37.165Z
+tags:
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
 ---
@@ -25,7 +25,7 @@ If you have already done this before you can skip ahead to step 5.
 > {.is-info}
 
 To determine where your ESP partition is located, run the command,
-`df | grep "/boot" | awk '{print $NF}'` and replace `<ESP>` in all of the following commands with it's output.
+`df | grep "/boot" | awk '{print $NF}'` and **replace **`<ESP>`** IN ALL OF THE FOLLOWING commands** with it's output.
 
 ### 📁 1: Create the necessary directories for storing the DTB files
 
@@ -109,4 +109,16 @@ Add the following line to the bottom of the file, replacing the DTBO with the on
 
 ```
 fdtoverlays /dtbs/rockchip/overlay/my-overlay.dtbo
+```
+
+### IMPORTANT NOTES
+
+**DO NOT** add `/boot` or the `<ESP>` stuff in these lines.
+
+**DO NOT** add more than one `fdtoverlays` line.
+If you wish to enable more than one DTBOs, append them onto the one line, seperated by a whitespace.
+For example:
+
+```
+fdtoverlays /dtbs/rockchip/overlay/overlay1.dtbo /dtbs/rockchip/overlay/overlay2.dtbo
 ```

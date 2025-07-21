@@ -2,8 +2,8 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-02-23T15:46:22.447Z
-tags: null
+date: 2025-06-01T09:57:16.627Z
+tags:
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
 ---
@@ -37,5 +37,13 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 - [⚙️ 📑 Cómo cambiar la orden de inicio predeterminada en RK3588](/en/how-to/change-boot-order-rk3588)
 
 - [💻 Cómo ejecutar máquinas virtuales](/en/how-to/run-vms)
+
+- [🔦 Cómo establecer una contraseña GRUB](/en/how-to/grub-password)
+
+- [✫ Configurando Gobernadores](/en/how-to/govctl)
+
+- [🪟 Ejecutando aplicaciones de Windows bajo BredOS](/en/how-to/proton-run)
+
+- [► Cómo manejar fallos de disco reportados](/en/how-to/disk-failure)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!

@@ -2,8 +2,8 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些东西的指南、教程和提示
 published: true
-date: 2025-02-23T15:46:22.447Z
-tags: null
+date: 2025-06-01T09:57:16.627Z
+tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
 ---
@@ -37,5 +37,13 @@ dateCreated: 2024-08-27T06:01:06.954Z
 - [⚙️ 📑 如何更改RK3588上的默认启动顺序](/en/how-to/change-boot-order-rk3588)
 
 - [💻 How to run Virtual Machines](/en/how-to/run-vms)
+
+- [🔦 如何设置 GRUB 密码](/en/how-to/grub-password)
+
+- [配置省长](/en/how-to/govctl)
+
+- [🪟 Running Windows Applications under BredOS](/en/how-to/proton-run)
+
+- [变换如何处理报告的磁盘失败](/en/how-to/disk-failure)
 
 :sparkles：探索这些指南以获得最佳的 BredOS ！

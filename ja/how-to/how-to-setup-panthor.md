@@ -1,9 +1,9 @@
 ---
 title: 🐾 マリGPUでRK3588を使ってパンターをセットアップする方法
-description: null
+description:
 published: true
 date: 2024-11-10T19:29:32.381Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
 ---

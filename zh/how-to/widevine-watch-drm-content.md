@@ -3,7 +3,7 @@ title: 🎥 如何回放 DRM 保护的内容 (安装广泛)
 description: 通过安装 Widevine 插件学习如何在 BredOS 上启用 DRM保护内容的回放
 published: true
 date: 2024-09-20T14:44:32.766Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-08-28T05:58:27.563Z
 ---

@@ -3,7 +3,7 @@ title: 🎮 How to install STEAM on BredOS
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
 date: 2024-09-08T10:37:48.498Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
 ---

@@ -1,9 +1,9 @@
 ---
 title: 📟 DTBOs を有効にする方法
-description: null
+description:
 published: true
-date: 2024-11-10T19:32:58.662Z
-tags: null
+date: 2025-05-15T13:00:37.165Z
+tags:
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
 ---
@@ -25,7 +25,7 @@ UEFI搭載ボードで実行している場合は、設定する必要があり�
 > {.is-info}
 
 To determine where your ESP partition is located, run the command,
-`df | grep "/boot" | awk '{print $NF}'` and replace `<ESP>` in all of the following commands with it's output.
+`df | grep "/boot" | awk '{print $NF}'` and **replace **`<ESP>`** IN ALL OF THE FOLLOWING commands** with it's output.
 
 ### 📁 1: DTBファイルを保存するために必要なディレクトリを作成します。
 
@@ -109,4 +109,16 @@ sudo nano /boot/extlinux/extlinux.conf
 
 ```
 fdtoverlays /dtbs/rockchip/overlay/my-overlay.dtbo
+```
+
+### 重要なノート
+
+\*\*`/boot` や `<ESP>` をこれらの行に追加しないでください。
+
+**fdtoverlays**行を1つ以上追加しないでください。
+複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
+例:
+
+```
+fdtoverlays /dtbs/rockchip/overlay/overlay1.dtbo /dtbs/rockchip/overlay/overlay2.dtbo
 ```

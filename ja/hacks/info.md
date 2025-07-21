@@ -1,9 +1,9 @@
 ---
 title: Hacks
-description: null
+description:
 published: true
 date: 2025-03-16T16:08:26.697Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2025-03-16T16:08:26.697Z
 ---

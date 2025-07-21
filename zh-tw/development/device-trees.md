@@ -1,9 +1,9 @@
 ---
 title: Device Trees
-description: null
+description:
 published: true
-date: 2024-11-11T11:50:39.940Z
-tags: null
+date: 2025-05-15T12:51:43.781Z
+tags:
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
 ---
@@ -28,6 +28,8 @@ Then update the grub configuration:
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+**Note:** There can only be one DTB specified.
+
 ## Updating Device Trees in U-Boot systems with extlinux
 
 Edit the extlinux configuration file `/boot/extlinux/extlinux.conf`, find the line with `fdt`, for example:
@@ -37,3 +39,5 @@ fdt /dtbs/rockchip/xxx.dtb
 ```
 
 Then reboot.
+
+**Note:** There can only be one DTB specified.

@@ -1,9 +1,9 @@
 ---
 title: カーネルの切り替え
-description: null
+description:
 published: true
 date: 2024-12-05T20:07:16.898Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
 ---

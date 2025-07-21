@@ -3,7 +3,7 @@ title: 🎮 ブレッドOSにSTEAMをインストールする方法
 description: BredOS にSteamをインストールする簡単なガイドで、Panthor-enabled と、Panthor以外の両方の設定をステップバイステップで説明します。
 published: true
 date: 2024-09-08T10:37:48.498Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
 ---

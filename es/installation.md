@@ -1,9 +1,9 @@
 ---
 title: Guía de instalación para BredOS
-description: null
+description:
 published: true
 date: 2024-16T10:06:04.691Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-19T00:42:37.505Z
 ---

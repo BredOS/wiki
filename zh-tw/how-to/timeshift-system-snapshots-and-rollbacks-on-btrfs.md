@@ -3,7 +3,7 @@ title: 📸🔄 Btrfs Snapshots and Rollbacks with Timeshift
 description: A comprehensive guide on setting up Btrfs snapshots and system rollbacks using Timeshift
 published: true
 date: 2024-09-28T07:58:11.350Z
-tags: null
+tags:
 editor: markdown
 dateCreated: 2024-09-27T19:19:08.209Z
 ---

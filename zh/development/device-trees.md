@@ -1,9 +1,9 @@
 ---
 title: 设备树
-description: null
+description:
 published: true
-date: 2024-11T11:50:39.940Z
-tags: null
+date: 2025-05-15T12:51:43.781Z
+tags:
 editor: markdown
 dateCreated: 2024-11T11:50:39.940Z
 ---
@@ -28,12 +28,16 @@ GRUB_DTB= dtbs/rockchip/xxx.dtb
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## 用 extlinux 更新U-Boot系统中的设备树。
+**注意：** 只能指定一个 DTB。
 
-编辑extlinux 配置文件 `/boot/extlinux/extlinux.conf` ，找到`fdt`的行，例如
+## Updating Device Trees in U-Boot systems with extlinux
+
+Edit the extlinux configuration file `/boot/extlinux/extlinux.conf`, find the line with `fdt`, for example:
 
 ```bash
 fdt /dtbs/rockchip/xxx.dtb
 ```
 
-然后重启。
+Then reboot.
+
+**注意：** 只能指定一个 DTB。

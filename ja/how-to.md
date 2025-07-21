@@ -2,8 +2,8 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-02-23T15:46:22.447Z
-tags: null
+date: 2025-06-01T09:57:16.627Z
+tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
 ---
@@ -37,5 +37,13 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 - [⚙️ 📑 RK3588のデフォルトブート順序を変更する方法](/en/how-to/change-boot-order-rk3588)
 
 - [💻 仮想マシンの実行方法](/en/how-to/run-vms)
+
+- [🔦 GRUBパスワードの設定方法](/en/how-to/grub-password)
+
+- [<unk> 設定知事](/en/how-to/govctl)
+
+- [🪟 BREDOS 下で Windows アプリケーションを実行する] (/en/how-to/proton-run)
+
+- [<unk> 報告されたディスク障害の処理方法](/en/how-to/disk-failure)
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！
