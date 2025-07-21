@@ -2,24 +2,25 @@
 title: Fydetab 上的 GNOME
 description:
 published: true
-date: 2024-11-12T15:33:19.071Z
+date: 2024-11-12T15：33：19.071Z
 tags:
 editor: markdown
-dateCreated: 2024-11-10T19:41:06.111Z
+dateCreated: 2024-11-10T19：41：06.111Z
 ---
 
 # FydetabDuo 上的 GNOME 桌面
 
 GNOME 桌面可以在 AUR 包 `gnome-meta` 中安装。
 使用 `yay -S gnome-meta` 安装它。
+使用 yay -S gnome-meta\` 安装它。
 
 ---
 
-为了正常操作，您也应该在安装时切换到 GDM。要做到这一点，请运行：
+为了正常操作，您也应该在安装时切换到 GDM。要做到这一点，请运行： 要做到这一点，就必须：
 
 ```
-sudo systemctl disable lightdm
-sudo systemctl enable gdm
+sudo systemctl 禁用 lightdm
+sudo systemctl 启用 gdm
 ```
 
 只支持 Wayland 上的 GNOME。
@@ -38,13 +39,14 @@ sudo systemctl enable gdm
 
 ### 3. 配置屏幕旋转
 
-返回扩展管理器的 "已安装" 页面并点击设置图标打开扩展的设置面板。
-然后你应该将 "设置方向偏移" 的值增加到 1。
+返回扩展管理器的 "已安装" 页面并点击设置认知器打开扩展的设置面板。
+然后你应该将 "设置方向偏移" 的值增加到1。
 
 ## 横向触控笔使用
 
 触控笔只有当屏幕默认垂直方向时才会正确工作。
 要将此设置为水平工作，请使用：
+若要将此设置为水平工作，请使用：
 
 ### 1. 打开 `/etc/udev/rules.d/fydetab.rules`
 
@@ -71,5 +73,5 @@ SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}=
 如果您错误地尝试忽略设置的触控笔校准，请通过运行以下操作移除校准数据：
 
 ```
-dconf reset -f /org/gnome/desktop/peripherals/tablets
+dconf 重置 -f /org/gnome/desktop/外围/平板电脑
 ```
