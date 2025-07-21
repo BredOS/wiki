@@ -82,7 +82,7 @@ Pacman キャッシュをクリアしてスペースを解放するには、以�
 sudo pacman -Sc
 ```
 
-PacmanはBredOSシステムの管理に不可欠なツールです。迅速で効率的でパワフルです！ ⚡🐧
+PacmanはBredOSシステムの管理に不可欠なツールです。迅速で効率的でパワフルです！ ⚡🐧 🎉💻
 
 ---
 
@@ -98,7 +98,7 @@ Flatpak をインストールするには、以下を実行してください:
 sudo pacman -S flatpak
 ```
 
-> **注意**: Flatpak をインストールした後、システムを再起動する必要がある場合があります。 🔄
+> **注意**: Flatpak をインストールした後、システムを再起動する必要がある場合があります。 🔄 🔄
 
 ### Flatpak の使い方 📥
 
@@ -123,7 +123,7 @@ sudo flatpak install <app name>
 sudo flatpak uninstall <app name>
 ```
 
-また、Pamac のようなグラフィカルなストアを使用して Flatpak アプリを管理することもできます。 🖥️
+また、Pamac のようなグラフィカルなストアを使用して Flatpak アプリを管理することもできます。 🖥️ 🖥️
 
 ---
 
@@ -147,4 +147,4 @@ sudo pacman -S appimagelauncher
 
 ---
 
-ハッピーパッケージ管理! 🎉💻
+ハッピーパッケージ管理! 📚 目次
