@@ -80,7 +80,7 @@ El paquete del núcleo generará una imagen de initramfs. Puede encontrar su nom
 ==> Initcpio image generation successful
 ```
 
-El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
+El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\\\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
 
 ## 3. Actualizar configuración del cargador de arranque
 
