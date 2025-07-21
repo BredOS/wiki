@@ -1,6 +1,6 @@
 ---
-title: BredOS Tools
-description: Utilities and Tools provided by BredOS
+title: BredOS工具
+description: 由BredOS 提供的工具和工具
 published: true
 date: 2025-05-07T18:31:34.455Z
 tags:
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-05-07T18:27:16.781Z
 ---
 
-# BredOS Tools
+# BredOS工具
 
 Shipped as `bredos-tools`, compatible with any system architecture, on the `BredOS-any` repository.
 BredOS的一个组成部分。

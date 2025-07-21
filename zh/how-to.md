@@ -42,7 +42,7 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [配置省长](/en/how-to/govctl)
 
-- [🪟 Running Windows Applications under BredOS](/en/how-to/proton-run)
+- [🪟 运行 BredOS下的 Windows 应用程序](/en/how-to/proton-run)
 
 - [变换如何处理报告的磁盘失败](/en/how-to/disk-failure)
 

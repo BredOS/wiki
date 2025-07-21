@@ -24,8 +24,8 @@ dateCreated: 2024-11-10T18：02：07.427Z
 > 2024年9月12日之后的图像使用`/boot/efi`而不是`/boot`。
 > {.is-info}
 
-To determine where your ESP partition is located, run the command,
-`df | grep "/boot" | awk '{print $NF}'` and **replace **`<ESP>`** IN ALL OF THE FOLLOWING commands** with it's output.
+要确定您的 ESP 分区所在位置，请运行命令。
+`df | grep "/boot" | awk '{print $NF}'，**替换** <ESP>` **以下所有命令**以输出替换。
 
 ### 📁 1: 创建存储DTB 文件的必要目录
 

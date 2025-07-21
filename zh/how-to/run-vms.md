@@ -74,7 +74,7 @@ sudo virsh net-autostart
 
 ## 步骤6：启用 XML 编辑
 
-To enable XML editing (Needed later) you need to open `virt-manager` go to **Edit** then **Preferences** and enable XML editing
+要启用 XML 编辑 (需要稍后) ，您需要打开 `virt-manager` 到编辑然后首选项并启用 XML 编辑
 ![xmlediting.jpg](/vms/xmlediting.jpg)
 
 ## 步骤7：创建虚拟机 :hammer_and_wrench：

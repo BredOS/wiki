@@ -45,6 +45,7 @@ sudo pacman -S fydetab-duo-uefi
 ## 🛠️ Flashear el Firmware UEFI
 
 Después de la instalación, la imagen del firmware se ubicará en `/usr/share/edk2/<device-name>/`. El sistema proporcionará el comando específico para flashear el firmware.\
+El formato general del comando es:\
 El formato general del comando es:
 
 ```
