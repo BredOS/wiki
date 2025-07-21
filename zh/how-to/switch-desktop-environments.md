@@ -8,9 +8,10 @@ editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
 ---
 
-# 🎨 BredOS 上的 GNOME 桌面
+# :artist_调色板：BredOS 上的 GNOME 桌面
 
 GNOME 桌面环境可以安装在 AUR 包 `gnome-meta` 中。\
+要安装它，请运行：\
 要安装它，请运行：
 
 ```
@@ -19,21 +20,22 @@ yay -S gnome-meta
 
 ---
 
-## 🔄 切换到 GDM
+## :countrockwise_arrows_button: 切换到 GDM
 
-要正常操作，您需要在安装后切换到 **GDM**。\
+要正常操作，您需要在安装后切换到 **GDM** 。\
+运行以下命令：\
 运行以下命令：
 
 ```
-sudo systemctl disable lightdm
-sudo systemctl enable gdm
+sudo systemctl 禁用 lightdm
+sudo systemctl 启用 gdm
 ```
 
-📝**注意:** 仅支持 Wayland 上的 GNOME。
+📝**注意:** 仅支持Wayland上的 GNOME。
 
 ---
 
-## 🔄🖥️ 屏幕旋转修复
+## :countrockwise_arrows_button: :desktop_compute: 屏幕旋转修复
 
 **如果** 您的屏幕旋转不正确，您可以安装和配置**屏幕旋转** 扩展。
 
@@ -42,7 +44,7 @@ sudo systemctl enable gdm
 运行：
 
 ```
-sudo pacman -S extension-manager
+sudo pacman -S extension-Manager
 ```
 
 安装完毕后，打开应用程序。
@@ -53,14 +55,14 @@ sudo pacman -S extension-manager
 
 - 点击 `Browse` > `Search`
 - 输入 **屏幕旋转**
-- 通过 **shyzus** 安装 `Screen Rotate`。
+- 通过 **shyzus** 安装 `screen Rotate` 。
 
 ### 3️⃣ 配置屏幕旋转
 
 - 转到扩展管理中的`已安装`选项卡。
 - 点击 ⚙️ 图标打开扩展设置。
-- 将 **设置方向偏移** 值增加到 `1`。
+- 将 **设置方向偏移** 值增加到\\`1'。
 
 ---
 
-✅ 完成！GNOME 现在已经在 BredOS 上正确设置。🚀
+:check_mark_buton: 完成! GNOME现在已经在 BredOS 上正确设置。 🚀 🚀
