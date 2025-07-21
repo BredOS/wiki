@@ -1,6 +1,5 @@
 files:
   - source: '**/*md'
-    ignore_settings: 1
     ignore:
       - /es/
       - /zh-tw/
