@@ -2,7 +2,7 @@
 title: :paw_prints：如何在马里使用 RK3588 设置Panthor GPU
 description:
 published: true
-date: 2024-11-10T19：29：32.381Z
+date: 2025-07-22T00:13:05.435Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -16,7 +16,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ### 🎛️ 1. 启用Panthor DTBO
 
-按照 [设备树叠加层指南]/how-to/how-to-enable-dtbos) 启用
+按照[设备树叠加层指南](/how-to/how-to-enable-dtbos)启用
 `/boot/dtbs/rockchip/overy/rockchip-rk3588-panthor-gpu.dtbo`
 **复制DTBO后，不要重启系统！**
 
