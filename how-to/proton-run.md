@@ -2,7 +2,7 @@
 title: Proton-run
 description: Quick explainer on using the BredOS `proton-run` script
 published: true
-date: 2025-05-07T14:44:47.710Z
+date: 2025-07-22T00:13:45.447Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-07T14:44:47.710Z
@@ -15,7 +15,7 @@ dateCreated: 2025-05-07T14:44:47.710Z
 ## Requirements
 
  - An RK3588 system running BredOS.
- - Steam. ([Guide here](en/how-to/how-to-install-steam))
+ - Steam. ([Guide here](/how-to/how-to-install-steam))
  - Having installed Proton Experimental through Steam.
  - Having installed the package `proton-run` (`yay -S proton-run`).
 
