@@ -2,7 +2,7 @@
 title: BredOS Customizations
 description: In this page you'll find all the resources you need to customize your BredOS system to suit your preferences! Let's make your BredOS experience awesome! 🚀
 published: true
-date: 2024-12-04T15:50:15.244Z
+date: 2025-07-21T23:58:22.001Z
 tags: customization
 editor: markdown
 dateCreated: 2024-09-20T19:27:46.217Z
@@ -14,5 +14,5 @@ In this page, you'll find all the resources you need to customize your BredOS sy
 
 ## 📚 Table of Contents
 
-- [Customize the Shell 🐚]/customizations/shell-customization)
-- [Switching kernel]/customizations/switching-kernel)
+- [Customize the Shell 🐚](/customizations/shell-customization)
+- [Switching kernel](/customizations/switching-kernel)
