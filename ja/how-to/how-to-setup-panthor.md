@@ -2,7 +2,7 @@
 title: 🐾 マリGPUでRK3588を使ってパンターをセットアップする方法
 description:
 published: true
-date: 2024-11-10T19:29:32.381Z
+date: 2025-07-22T00:13:05.435Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -16,7 +16,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ### 🎛️ 1. Panthor DTBO を有効にする
 
-[Device Tree Overlay guide]/how-to/how-to-enable-dtbos) に従って、
+[Device Tree Overlay guide](/how-to/how-to-enable-dtbos)に従って、
 `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`
 **DTBOをコピーした後、システムを再起動しないでください！**
 
