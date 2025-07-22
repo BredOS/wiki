@@ -2,7 +2,7 @@
 title: Personalizaciones BredOS
 description: En esta página encontrarás todos los recursos que necesitas para personalizar tu sistema BredOS según tus preferencias! ¡Hagamos que tu experiencia BredOS sea increíble! 🚀
 published: true
-date: 2024-04T15:50:15.244Z
+date: 025-07-21T23:58:22.001Z
 tags: personalización
 editor: markdown
 dateCreated: 20/09-20T19:27:46.217Z
@@ -14,5 +14,5 @@ En esta página encontrarás todos los recursos que necesitas para personalizar 
 
 ## 📚 Índice de contenidos
 
-- [Personalizar Shell 🐚]/customizations/shell-customization)
-- [Cambiando de núcleo]/customizations/switching-kernel)
+- [Personalizar el proyectil 🐚](/customizations/shell-customization)
+- [Kernel de cambio](/customizations/switching-kernel)
