@@ -2,7 +2,7 @@
 title: Orange Pi 5 Series
 description: This page contains links to useful guides/tweaks for the OPI 5 Series devices
 published: true
-date: 2025-06-20T08:59:48.915Z
+date: 2025-07-28T08:21:25.791Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
@@ -24,4 +24,4 @@ Note: The Orange Pi 5, 5B and 5 Pro use RK3588S, while the 5 Plus and 5 Max use 
 
 # Download
 
-You can find download links for images in our [Github](https://github.com/BredOS/images/releases/latest)
+You can find download links for images in our [website](https://bredos.org/download.html)!
