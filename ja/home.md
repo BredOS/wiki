@@ -13,6 +13,7 @@ dateCreated: 2022-08-24T12:37:36.410Z
 ## 🌟 概要
 
 BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
+このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMベースのシングルボードコンピュータのユーザーにシームレスで使いやすい体験を提供することを目指しています。 Arch Linuxのパワーと柔軟性を活用する ブレッドOSは、幅広いユースケースに合わせてカスタマイズ可能な堅牢なプラットフォームを提供します。
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg
@@ -62,7 +63,7 @@ BredOSは、ARMベースのシングルボードコンピュータのユーザ�
 
 ## 📦パッケージ管理
 
-BredOS は Arch Linux のパッケージマネージャである `pacman` を使用します。 以下に共通のコマンドを示します。
+BredOS は Arch Linux のパッケージマネージャである `pacman` を使用します。 以下に共通のコマンドを示します。 以下に共通のコマンドを示します。
 
 - 🔄 パッケージ一覧を更新: `sudo pacman -Syu`
 - ➕ パッケージをインストール: `sudo pacman -S [package_name]`

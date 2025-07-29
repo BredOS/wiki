@@ -2,7 +2,7 @@
 title: Proton-run
 description: Explorador rápido al usar el script `proton-run` de BredOS
 published: true
-date: 2025-05-07T14:44:47.710Z
+date: 2025-07-22T00:13:45.447Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T14:44:47.710Z
@@ -15,7 +15,7 @@ dateCreated: 2025-05-07T14:44:47.710Z
 ## Requisitos
 
 - An RK3588 system running BredOS.
-- Vapor. ([Guía aquí](en/how-to/how-to-install-steam))
+- Vapor. ([Guía aquí](/how-to/how-to-install-steam))
 - Después de instalar Proton Experimental a través de Steam.
 - Habiendo instalado el paquete `proton-run` (`yay -S proton-run`).
 

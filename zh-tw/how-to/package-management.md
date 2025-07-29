@@ -42,7 +42,7 @@ To update all installed packages on your system, run:
 sudo pacman -Syu
 ```
 
-這將同步軟件包資料庫並將您所有的軟件包升級到最新版本。
+This will synchronize the package databases and upgrade all your packages to their latest versions.
 
 ### 如何移除軟件包 🗑️
 
@@ -82,7 +82,7 @@ To clear the Pacman cache and free up space, use:
 sudo pacman -Sc
 ```
 
-Pacman is an essential tool for managing your BredOS system—quick, efficient, and powerful! ⚡🐧
+這將同步軟件包資料庫並將您所有的軟件包升級到最新版本。 ⚡🐧
 
 ---
 

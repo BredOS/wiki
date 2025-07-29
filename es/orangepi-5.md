@@ -2,7 +2,7 @@
 title: Serie Naranja Pi 5
 description: Esta página contiene enlaces a guías/ajustes útiles para los dispositivos de la Serie OPI 5
 published: true
-date: 2025-06-20T08:59:48.915Z
+date: 025-07-28T08:21:25.791Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-20T15:17:37.567Z
@@ -24,4 +24,4 @@ Nota: El Orange Pi 5, 5B y 5 Pro utilizan RK3588S, mientras que los 5 Plus y 5 M
 
 # Descargar
 
-Puedes encontrar enlaces de descarga para imágenes en nuestra [Github](https://github.com/BredOS/images/releases/latest)
+¡Puedes encontrar enlaces de descarga para imágenes en nuestra [website](https://bredos.org/download.html)!

@@ -2,7 +2,7 @@
 title: オレンジ Pi 5 シリーズ
 description: このページにはOPI 5シリーズの便利なガイド/調整へのリンクが含まれています
 published: true
-date: 2025-06-20T08:59:48.915Z
+date: 2025-07-28T08:21:25.791Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
@@ -24,4 +24,4 @@ dateCreated: 2024-09-20T15:17:37.567Z
 
 # ダウンロード
 
-画像のダウンロードリンクは [Github](https://github.com/BredOS/images/releases/latest) にあります。
+画像のダウンロードリンクは、 [website](https://bredos.org/download.html)にあります!
