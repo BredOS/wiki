@@ -34,12 +34,12 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [💾 🔄 Cómo actualizar UEFI en RK3588](/how-to/update-uefi-rk3588)
 
-- [💻 How to run Virtual Machines](/how-to/run-vms)
+- [💻 Cómo ejecutar máquinas virtuales](/how-to/run-vms)
 
-- [🗲 Configuring Governors](/how-to/govctl)
+- [✫ Configurando Gobernadores](/how-to/govctl)
 
-- [🪟 Running Windows Applications under BredOS](/how-to/proton-run)
+- [🪟 Ejecutando aplicaciones de Windows bajo BredOS](/how-to/proton-run)
 
-- [🖪 How to handle reported disk failures](/how-to/disk-failure)
+- [► Cómo manejar fallos de disco reportados](/how-to/disk-failure)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
