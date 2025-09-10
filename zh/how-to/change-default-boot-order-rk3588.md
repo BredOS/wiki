@@ -26,8 +26,8 @@ dateCreated: 2025-02-23T15:45:23.760Z
 ## 🛠️ 导航到启动订单设置
 
 1. 使用 **箭头键(`ODS` 和 `cid`)** 来选择 **启动维护管理器** 并按 **Enter** 。\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
+   ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)\
+   ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 2. 在下一个屏幕上，选择 **启动选项** 并按 **Enter** 。
 
@@ -48,7 +48,7 @@ dateCreated: 2025-02-23T15:45:23.760Z
 2. 使用 **downarrow (`ODS`)** 滚动到列表底部。
 
 3. 选择您想要移动到顶部的条目，然后按\*\*`+`键\*\*直到顶部。\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
+   ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 4. 一旦设置了所需的启动订单，请按 **Enter** 确认。
 
