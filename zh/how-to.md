@@ -36,10 +36,10 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [💻 How to run Virtual Machines](/how-to/run-vms)
 
-- [🗲 Configuring Governors](/how-to/govctl)
+- [配置省长](/how-to/govctl)
 
 - [🪟 Running Windows Applications under BredOS](/how-to/proton-run)
 
-- [🖪 How to handle reported disk failures](/how-to/disk-failure)
+- [变换如何处理报告的磁盘失败](/how-to/disk-failure)
 
 ✨ 探索这些指南以获得最佳的 BredOS 体验！
