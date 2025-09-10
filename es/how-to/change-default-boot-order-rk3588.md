@@ -26,7 +26,7 @@ Si necesita modificar el orden de arranque en un dispositivo basado en RK3588 ej
 ## 🛠️ Navegando a los ajustes de orden de inicio
 
 1. Usa las **teclas de flecha (`is` y `iso`)** para seleccionar **Gerente de Mantenimiento de Arrancamiento** y presiona **Enter**.\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
+   ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 2. En la siguiente pantalla, seleccione **Opciones de Arrancamiento** y pulse **Intro**.
 
@@ -47,8 +47,8 @@ Si necesita modificar el orden de arranque en un dispositivo basado en RK3588 ej
 2. Usa la **flecha hacia abajo (`mañana`)** para desplazarte hacia la parte inferior de la lista.
 
 3. Selecciona la entrada que quieres mover a la parte superior y presiona la tecla **`+`** hasta que llegue a la parte superior.\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
+   ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)\
+   ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 4. Una vez establecido el orden de arranque deseado, presione **Enter** para confirmar.
 
