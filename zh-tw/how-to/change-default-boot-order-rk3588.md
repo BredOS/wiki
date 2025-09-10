@@ -26,8 +26,8 @@ If you need to modify the boot order on an RK3588-based device running BredOS, f
 ## 🛠 Navigating to the Boot Order Settings
 
 1. Use the **arrow keys (`↓` and `↑`)** to select **Boot Maintenance Manager** and press **Enter**.\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
+   ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)\
+   ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 2. On the next screen, select **Boot Options** and press **Enter**.
 
@@ -48,8 +48,8 @@ If you need to modify the boot order on an RK3588-based device running BredOS, f
 2. Use the **down arrow (`↓`)** to scroll to the bottom of the list.
 
 3. Select the entry you want to move to the top and press the **`+` key** until it reaches the top.\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
+   ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)\
+   ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 4. Once the desired boot order is set, press **Enter** to confirm.
 
