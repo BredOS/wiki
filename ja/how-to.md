@@ -34,12 +34,12 @@ BredOS で特定のものをインストールまたは使用する方法につ�
 
 - [💾 🔄 RK3588でUEFIを更新する方法](/how-to/update-uefi-rk3588)
 
-- [💻 How to run Virtual Machines](/how-to/run-vms)
+- [💻 仮想マシンの実行方法](/how-to/run-vms)
 
-- [🗲 Configuring Governors](/how-to/govctl)
+- [<unk> 設定知事](/how-to/govctl)
 
-- [🪟 Running Windows Applications under BredOS](/how-to/proton-run)
+- [🪟 BREDOS 下で Windows アプリケーションを実行する] (/how-to/proton-run)
 
-- [🖪 How to handle reported disk failures](/how-to/disk-failure)
+- [<unk> 報告されたディスク障害の処理方法](/how-to/disk-failure)
 
 ✨ これらのガイドを探索して、BredOSを最大限に活用しよう！
