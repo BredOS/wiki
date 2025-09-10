@@ -43,9 +43,9 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
 - [📥 Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAsitant_v5.0.zip)
 
 - 書き込みツール **(RKDevTool vX.XX)**: 以下のリンクからWindows用のツールをダウンロードできます。
-    - [🔗 Link 1](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)
-    - [🔗 Alternative in case `Link 1` doesn't work](https://dl.radxa.com/tools/windows/)
-    - [🔗 Link to version v2.96](https://dl.radxa.com/tools/windows/RKDevTool_Release_v2.96_zh.zip)
+  - [🔗 Link 1](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)
+  - [🔗 Alternative in case `Link 1` doesn't work](https://dl.radxa.com/tools/windows/)
+  - [🔗 Link to version v2.96](https://dl.radxa.com/tools/windows/RKDevTool_Release_v2.96_zh.zip)
 
 - SPI loader file for example, for the RK3588: [`rk3588_spl_loader_v1.15.11.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.11.bin)
 
@@ -62,10 +62,10 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
 - 書き込みツールが含まれるフォルダを開きます: `RKDevTool_Release_v2.96` フォルダ(ダウンロードした名前のバージョンを確認してください) そしてツール`RKDevTool.exe`を実行します。
 
 - 点滅ツールで次の設定を行い、`RUN`をクリックします。
-    - SPIローダーファイルを選択してください
-    - BredOS の画像を選択
-    - 「アドレスで書く」をチェックします。
-    - `RUN`をクリックして、プロセスが終了するまで待ちます。
+  - SPIローダーファイルを選択してください
+  - BredOS の画像を選択
+  - 「アドレスで書く」をチェックします。
+  - `RUN`をクリックして、プロセスが終了するまで待ちます。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
