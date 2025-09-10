@@ -49,28 +49,28 @@ sudo pacman -Sc
 **paccache** を使用すると、各パッケージの最新の 3 つのバージョンのみを保持できます。
 
 1. 必要なツールをインストールします:
-  ```bash
-  sudo pacman -S pacman-contrib
-  ```
+   ```bash
+   sudo pacman -S pacman-contrib
+   ```
 2. トランザクションごとに自動的にクリーンアップするには、Pacman フックを設定します。
-  ```bash
-  sudo nano /usr/share/libalpm/hooks/pacche.hook
-  ```
-  ファイルに次の内容を追加します:
-  ```bash
-  [Trigger]
-  Operation = Upgrade
-  Operation = Install
-  Operation = Remove
-  Type = Package
-  Target = *
+   ```bash
+   sudo nano /usr/share/libalpm/hooks/pacche.hook
+   ```
+   ファイルに次の内容を追加します:
+   ```bash
+   [Trigger]
+   Operation = Upgrade
+   Operation = Install
+   Operation = Remove
+   Type = Package
+   Target = *
 
-  [Action]
-  Description = Cleaning pacman cache with paccache…
-  When = PostTransaction
-  Exec = /usr/bin/paccache -r
-  ```
-  **Ctrl + S**でファイルを保存し、**Ctrl + X**で終了します。
+   [Action]
+   Description = Cleaning pacman cache with paccache…
+   When = PostTransaction
+   Exec = /usr/bin/paccache -r
+   ```
+   **Ctrl + S**でファイルを保存し、**Ctrl + X**で終了します。
 
 ---
 
