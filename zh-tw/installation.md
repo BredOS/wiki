@@ -43,9 +43,9 @@ If you'd like to install BredOS to eMMC storage instead of using a microSD card,
 - [📥 Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip)
 
 - Flashing tool **(RKDevTool vX.XX)**: You can download the tools for Windows in the following links:
-    - [🔗 Link 1](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)
-    - [🔗 Alternative in case `Link 1` doesn't work](https://dl.radxa.com/tools/windows/)
-    - [🔗 Link to version v2.96](https://dl.radxa.com/tools/windows/RKDevTool_Release_v2.96_zh.zip)
+  - [🔗 Link 1](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)
+  - [🔗 Alternative in case `Link 1` doesn't work](https://dl.radxa.com/tools/windows/)
+  - [🔗 Link to version v2.96](https://dl.radxa.com/tools/windows/RKDevTool_Release_v2.96_zh.zip)
 
 - SPI loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 
@@ -62,10 +62,10 @@ If you'd like to install BredOS to eMMC storage instead of using a microSD card,
 - Open the folder that contains the flashing tool:  `RKDevTool_Release_v2.96` folder (check the version you have downloaded for the name) and execute the tool `RKDevTool.exe`.
 
 - In the flashing tool set the following configuration and click on `RUN`:
-    - Select the SPI loader file
-    - Select the BredOS image
-    - Check `Write by Address`
-    - Click on `RUN` and wait until the process finishes
+  - Select the SPI loader file
+  - Select the BredOS image
+  - Check `Write by Address`
+  - Click on `RUN` and wait until the process finishes
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
