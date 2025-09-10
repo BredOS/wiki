@@ -80,11 +80,11 @@ To enable XML editing (Needed later) you need to open `virt-manager` go to **Edi
 ## Step 7: Create a Virtual Machine 🛠️
 
 1. Open `virt-manager`.
-  ![virt.jpg](/vms/virt.jpg)
+   ![virt.jpg](/vms/virt.jpg)
 2. Click on **Create a new virtual machine** ➕.
-  ![virtnewvm.jpg](/vms/virtnewvm.jpg)
+   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. Select the installation source (ISO image or network install).
-  ![newvm.jpg](/vms/newvm.jpg)
+   ![newvm.jpg](/vms/newvm.jpg)
 4. Follow the wizard to allocate CPU, RAM, and storage for your VM. ⚙️
 
 > On the RK3588 you can allocate max 4 cores per vm due to the little big architecture
