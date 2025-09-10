@@ -43,9 +43,9 @@ Si quieres instalar BredOS en el almacenamiento eMMC en lugar de usar una tarjet
 - [📥 Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip)
 
 - Herramienta de flasheo **(RKDevTool vX.XX)**: Puede descargar las herramientas para Windows en los siguientes enlaces:
-    - [🔗 Enlace 1](https://docs.radxa.com/es/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)
-    - [🔗 Alternativo en caso de que `Link 1` no funcione](https://dl.radxa.com/tools/windows/)
-    - [🔗 Enlace a la versión v2.96](https://dl.radxa.com/tools/windows/RKDevTool_Release_v2.96_zh.zip)
+  - [🔗 Enlace 1](https://docs.radxa.com/es/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)
+  - [🔗 Alternativo en caso de que `Link 1` no funcione](https://dl.radxa.com/tools/windows/)
+  - [🔗 Enlace a la versión v2.96](https://dl.radxa.com/tools/windows/RKDevTool_Release_v2.96_zh.zip)
 
 - Archivo de cargador SPI, por ejemplo para el RK3588: [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 
@@ -62,10 +62,10 @@ Si quieres instalar BredOS en el almacenamiento eMMC en lugar de usar una tarjet
 - Abre la carpeta que contiene la herramienta de flasheo: carpeta `RKDevTool_Release_v2.96` (comprueba la versión que has descargado para el nombre) y ejecuta la herramienta `RKDevTool.exe`.
 
 - En la herramienta de flasheo establezca la siguiente configuración y haga clic en `RUN`:
-    - Seleccione el archivo de cargador SPI
-    - Seleccione la imagen BredOS
-    - Comprueba `Escribir por Dirección`
-    - Haga clic en `RUN` y espere hasta que el proceso termine
+  - Seleccione el archivo de cargador SPI
+  - Seleccione la imagen BredOS
+  - Comprueba `Escribir por Dirección`
+  - Haga clic en `RUN` y espere hasta que el proceso termine
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
