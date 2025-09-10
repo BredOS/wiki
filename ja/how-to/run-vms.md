@@ -81,14 +81,14 @@ XML編集を有効にするには（後で必要）`virt-manager`を開く必要
 ## ステップ 7: 仮想マシンを作成する 🛠️
 
 1. `virt-manager` を開きます。
-  `virt-manager` を開きます。
-  ![virt.jpg](/vms/virt.jpg)
+   `virt-manager` を開きます。
+   ![virt.jpg](/vms/virt.jpg)
 2. **新しい仮想マシンを作成** ➕をクリックしてください。
-  ![virtnewvm.jpg](/vms/virtnewvm.jpg)
-  ![virtnewvm.jpg](/vms/virtnewvm.jpg)
+   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
+   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. インストール元(ISOイメージまたはネットワークインストール)を選択します。
-  ![newvm.jpg](/vms/newvm.jpg)
-  ![newvm.jpg](/vms/newvm.jpg)
+   ![newvm.jpg](/vms/newvm.jpg)
+   ![newvm.jpg](/vms/newvm.jpg)
 4. ウィザードに従って、CPU、RAM、およびVMストレージを割り当てます。 ⚙️ ⚙️
 
 > RK3588では、小さなアーキテクチャ
