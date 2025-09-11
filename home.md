@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2024-09-08T10:19:38.208Z
+date: 2025-09-11T18:42:23.213Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -11,7 +11,7 @@ dateCreated: 2022-08-24T12:37:36.410Z
 # 🍞 The BredOS Wiki
 
 ## 🌟 Overview
-Welcome to the BredOS documentation! BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM-based single board computers (SBCs).
+Welcome to the BredOS documentation! BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
@@ -38,15 +38,7 @@ BredOS aims to provide a seamless and user-friendly experience for users of ARM-
 
 ## 🛠️ System Requirements
 - **🖥️ Supported Devices**: 
-	- Radxa Rock 5 A/B/B+/C/D
-  - Radxa Rock 4 C+
-  - Radxa NX5 Kit
-  - IndieDroid Nova
-  - Orange Pi 5/5B/5+
-  - Khadas Edge 2
-  - Khadas VIM 4
-  - Cool Pi 4B
-  - [Fydetab Duo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
+	- Please refer to our list at https://bredos.org/download.html
 - **🧠 Minimum RAM**: 2 GB
 - **💾 Storage**: 16 GB microSD card or larger
 - **🌐 Network**: Optional
