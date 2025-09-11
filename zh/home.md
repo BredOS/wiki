@@ -2,7 +2,7 @@
 title: 主页
 description:
 published: true
-date: 2024-07-19T14:28:40.812Z
+date: 2025-09-11T18:42:23.213Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -13,7 +13,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 ## 🌟 概览
 
 欢迎来到 BredOS 文档！BredOS 是一个基于 Arch 的用户友好型 Linux 发行版，专门为基于 ARM 的单板计算机（SBC）设计。
-本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 旨在为基于 ARM 的单板计算机用户提供无缝且用户友好的体验。通过利用 Arch Linux 的强大功能和灵活性，BredOS 提供了一个可以根据广泛用例进行自定义的强大平台。
+本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。
 文档将引导您安装、配置和使用 BredOS 。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
@@ -44,15 +44,7 @@ BredOS 旨在为基于 ARM 的单板计算机用户提供无缝且用户友好�
 ## 🛠️ 系统要求
 
 - **🖥️ 支持的设备**：
-  - Radxa Rock 5 A/B/C
-  - Radxa Rock 4 C
-  - Radxa NX5 套件
-  - IndieDroid Nova
-  - Orange Pi 5/5+
-  - Khadas Edge 2
-  - Khadas VIM 4
-  - Cool Pi 4B
-  - [FydetabDuo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
+  - 请参阅我们的列表：https://bredos.org/download.html
 - **🧠 最小内存**：2 GB
 - **💾 存储**：16 GB 或更大的 microSD 卡
 - **🌐 网络**：可选
