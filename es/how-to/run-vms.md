@@ -80,11 +80,11 @@ Para habilitar la edición XML (se necesita más tarde) tienes que abrir `virt-m
 ## Paso 7: Crear una máquina virtual 🛠️
 
 1. Abrir `virt-manager`.
-  ![virt.jpg](/vms/virt.jpg)
+   ![virt.jpg](/vms/virt.jpg)
 2. Haga clic en **Crear una nueva máquina virtual** ➕.
-  ![virtnewvm.jpg](/vms/virtnewvm.jpg)
+   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. Seleccione el origen de la instalación (imagen ISO o instalación de red).
-  ![newvm.jpg](/vms/newvm.jpg)
+   ![newvm.jpg](/vms/newvm.jpg)
 4. Siga el asistente para asignar CPU, RAM y almacenamiento para su VM. ⚙️
 
 > En el RK3588 puedes asignar máximo 4 núcleos por vm debido a la pequeña arquitectura grande

@@ -132,7 +132,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 
 在所有这些情况下，下列数据对于寻找：
 
-- “SMART overall health 自我评估”，应为“PASSED”。 如果报告了任何其他值，应将驱动器替换为急速。
+- “SMART overall health 自我评估”，应为“PASSED”。 如果报告了任何其他值，应将驱动器替换为急速。 如果报告了任何其他值，应将驱动器替换为急速。
 - `重新分配Sector_Ct`，重新安置区的数目，如果一个以上的区域显示级联失败的可能性很大。
 
 # 查看S.M.A.R.T Data (NVME)
@@ -224,6 +224,7 @@ No Self-tests Logged
 # 我应该替换驱动器吗？
 
 如果你只有少数(<5)移位区块，很可能会在一段时间内不再使用磁盘。
+使用几个剩余的 nvme 闪屏块也是很好的。
 使用几个剩余的 nvme 闪屏块也是很好的。
 
 然而，通过剩余的闪光或迅速迁移，数十个区段被烧毁是即将失败的迹象。

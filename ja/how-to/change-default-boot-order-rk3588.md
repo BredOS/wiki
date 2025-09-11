@@ -25,8 +25,9 @@ BredOS を実行している RK3588 ベースのデバイスでブート順序�
 
 ## 🛠️ ブート順序設定へ移動
 
-1. **ブートメンテナンスマネージャー**を選択するには、**矢印キー(`<unk> `と\`)**を使用して**Enter**を押します。\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
+1. **ブートメンテナンスマネージャー**を選択するには、**矢印キー(`<unk> `と\\`)**を使用して**Enter**を押します。\
+   ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)\
+   ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 2. 次の画面で**ブートオプション**を選択し、**Enter**を押します。
 
@@ -47,7 +48,8 @@ BredOS を実行している RK3588 ベースのデバイスでブート順序�
 2. \*\*下向き矢印(`<unk> `)\*\*を使ってリストの一番下までスクロールします。
 
 3. 上に移動したいエントリを選択し、**`+`キー**を上に到達するまで押します。\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
+   ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)\
+   ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 4. 目的のブート順序が設定されたら、**Enter** を押して確認します。
 
@@ -63,4 +65,4 @@ BredOS を実行している RK3588 ベースのデバイスでブート順序�
 
 ---
 
-✅ **完了！** 新しい順序でデバイスが起動します。 🚀
+✅ **完了！** 新しい順序でデバイスが起動します。 🚀 🚀

@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-06-01T09:57:16.627Z
+date: 2025-09-10T05:42:44.889Z
 tags:
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -22,28 +22,24 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
 
-- [📶 Cómo usar tu consola como un hotspot inalámbrico](/es/how-to/how-to-use-your-device-as-ap)
+- [📶 Cómo usar tu dispositivo como un hotspot inalámbrico](/how-to/how-to-use-your-device-as-ap)
 
-- [📦✨ Guía de Administradores de Paquetes](/es/how-to/package-management)
+- [📦✨ Guía de Administradores de Paquetes](/how-to/package-management)
 
-- [🧹💾 Guía de limpieza del espacio en disco](/es/how-to/free-space-up)
+- [🧹💾 Guía de limpieza del espacio en disco](/how-to/free-space-up)
 
-- [📸🔄 Snapshots y Rollbacks Btrfs con Timeshift](/es/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
+- [📸🔄 Snapshots Btrfs y Rollbacks con Timeshift](/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- [🖥️ 🔄 Cambiar entornos de escritorio para usar GNOME]/how-to/switch-desktop-environments)
+- [🖥️ 🔄 Cambiar entornos de escritorio para usar GNOME](/how-to/switch-desktop-environments)
 
-- [💾 🔄 Cómo actualizar UEFI en RK3588]/how-to/update-uefi-rk3588)
+- [💾 🔄 Cómo actualizar UEFI en RK3588](/how-to/update-uefi-rk3588)
 
-- [⚙️ 📑 Cómo cambiar la orden de inicio predeterminada en RK3588]/how-to/change-boot-order-rk3588)
+- [💻 Cómo ejecutar máquinas virtuales](/how-to/run-vms)
 
-- [💻 Cómo ejecutar máquinas virtuales]/how-to/run-vms)
+- [✫ Configurando Gobernadores](/how-to/govctl)
 
-- [🔦 Cómo establecer una contraseña GRUB]/how-to/grub-password)
+- [🪟 Ejecutando aplicaciones de Windows bajo BredOS](/how-to/proton-run)
 
-- [✫ Configurando Gobernadores]/how-to/govctl)
-
-- [🪟 Ejecutando aplicaciones de Windows bajo BredOS]/how-to/proton-run)
-
-- [► Cómo manejar fallos de disco reportados]/how-to/disk-failure)
+- [► Cómo manejar fallos de disco reportados](/how-to/disk-failure)
 
 ✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!

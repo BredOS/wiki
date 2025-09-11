@@ -14,7 +14,7 @@ dateCreated: 2024-11-10T19:37:43.624Z
 
 # インストール
 
-簡単に言うと、 `rkdeveloptool` を使って画像をeMMCにフラッシュします。 コマンドは次のとおりです:
+簡単に言うと、 `rkdeveloptool` を使って画像をeMMCにフラッシュします。 コマンドは次のとおりです: コマンドは次のとおりです:
 
 ```bash
 # first, put the device in maskrom mode

@@ -2,7 +2,7 @@
 title: 黑名单
 description:
 published: true
-date: 2025-03-16T16：08：26.697Z
+date: 2025-07-22T00：11：51.375Z
 tags:
 editor: markdown
 dateCreated: 2025-03-16T16：08：26.697Z
@@ -14,4 +14,4 @@ dateCreated: 2025-03-16T16：08：26.697Z
 
 ## 📚 目录
 
-- [Pipewire cpu 限制]/hacks/pipewire-cpu)
+- [Pipewire cpu 限制](/hacks/pipewire-cpu)

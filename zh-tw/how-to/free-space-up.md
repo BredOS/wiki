@@ -49,28 +49,28 @@ sudo pacman -Sc
 You can also use **paccache** to keep only the most recent 3 versions of each package:
 
 1. Install the required tool:
-  ```bash
-  sudo pacman -S pacman-contrib
-  ```
+   ```bash
+   sudo pacman -S pacman-contrib
+   ```
 2. Set up a Pacman hook to automatically clean up after each transaction:
-  ```bash
-  sudo nano /usr/share/libalpm/hooks/paccache.hook
-  ```
-  Add the following content to the file:
-  ```bash
-  [Trigger]
-  Operation = Upgrade
-  Operation = Install
-  Operation = Remove
-  Type = Package
-  Target = *
+   ```bash
+   sudo nano /usr/share/libalpm/hooks/paccache.hook
+   ```
+   Add the following content to the file:
+   ```bash
+   [Trigger]
+   Operation = Upgrade
+   Operation = Install
+   Operation = Remove
+   Type = Package
+   Target = *
 
-  [Action]
-  Description = Cleaning pacman cache with paccache…
-  When = PostTransaction
-  Exec = /usr/bin/paccache -r
-  ```
-  Save the file with **Ctrl + S** and exit with **Ctrl + X**.
+   [Action]
+   Description = Cleaning pacman cache with paccache…
+   When = PostTransaction
+   Exec = /usr/bin/paccache -r
+   ```
+   Save the file with **Ctrl + S** and exit with **Ctrl + X**.
 
 ---
 
@@ -124,13 +124,16 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
 
 - **duc** — A disk usage inspector.\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — Disk usage analyzer with console interface.\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses disk usage analyzer.\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
@@ -138,13 +141,18 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
 
 - **Filelight** — Interactive disk usage map with concentric rings.\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **GNOME Disk Usage Analyzer (baobab)** — Disk usage analyzer for GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  **GNOME Disk Usage Analyzer (baobab)** — Disk usage analyzer for GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`
 
