@@ -19,6 +19,8 @@ dateCreated: 2024-11T11:50:39.940Z
 打开 grub 配置文件 `/etc/default/grub` 。
 打开 grub 配置文件 `/etc/default/grub` 。
 找到以 `GRUB_DTB=` 开头的行，并将路径添加到设备树文件，例如：
+打开 grub 配置文件 `/etc/default/grub` 。
+找到以 `GRUB_DTB=` 开头的行，并将路径添加到设备树文件，例如：
 
 ```bash
 GRUB_DTB= dtbs/rockchip/xxx.dtb

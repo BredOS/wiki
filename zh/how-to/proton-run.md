@@ -2,7 +2,7 @@
 title: 正在运行
 description: 快速解释使用 BredOS `proton-run` 脚本
 published: true
-date: 2025-07-22T00:13:45.447Z
+date: 2025-05-07T14：44：47.710Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T14：44：47.710Z
@@ -15,7 +15,7 @@ dateCreated: 2025-05-07T14：44：47.710Z
 ## B. 所需经费
 
 - An RK3588 system running BredOS.
-- Steam。 ([Guide here](/how-to/how-to-install-steam))
+- Steam。 Steam。 ([Guide here](/how-to/how-to-install-steam))
 - 通过Steam安装了质子实验。
 - 安装了软件包 `proton-run` (yay -S proton-run\\`)。
 

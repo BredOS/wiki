@@ -123,6 +123,10 @@ fdtoverlays /dtbs/rockchip/overlay/my-overlay.dtbo
 複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
 例:
 例:
+**fdtoverlays**行を1つ以上追加しないでください。
+複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
+例:
+例:
 
 ```
 fdtoverlays /dtbs/rockchip/overlay/overlay1.dtbo /dtbs/rockchip/overlay/overlay2.dtbo

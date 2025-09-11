@@ -54,7 +54,7 @@ sudo usermod -aG libvirt $(whoami)
 
 ## ステップ 4: ネットワーク設定 🌐
 
-`virt-manager` はネットワーク管理に `dnsmasq` を使用します。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。
+`virt-manager` はネットワーク管理に `dnsmasq` を使用します。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。 `virt-manager` はネットワーク管理に `dnsmasq` を使用します。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。
 
 ```bash
 sudo virsh net-start default
@@ -81,6 +81,8 @@ XML編集を有効にするには（後で必要）`virt-manager`を開く必要
 ## ステップ 7: 仮想マシンを作成する 🛠️
 
 1. `virt-manager` を開きます。
+   `virt-manager` を開きます。
+   ![virt.jpg](/vms/virt.jpg)
    `virt-manager` を開きます。
    ![virt.jpg](/vms/virt.jpg)
 2. **新しい仮想マシンを作成** ➕をクリックしてください。

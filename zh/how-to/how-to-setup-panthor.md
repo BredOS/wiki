@@ -2,7 +2,7 @@
 title: :paw_prints：如何在马里使用 RK3588 设置Panthor GPU
 description:
 published: true
-date: 2025-09-11T18：23：22.464Z
+date: 2025-07-22T00:13:05.435Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -10,7 +10,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 # 使用 RK3588 :routha 在马里启用Panthor GPU
 
-这个指南使你走过让马里的 Panthor 和 Vulkan 在 RK3588 芯片的板上有 GPU 的步骤。
+这个指南使你走过让马里的Panthor GPU 存在于RK3588 chipset的板上。
 
 # 🔧 启用Panthor的步骤
 
@@ -28,7 +28,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 sudo pacman -S mesa
 ```
 
-### 🌋 3. 启用 Vulkan
+### 🔁 3. 重启您的系统
 
 安装vulkan加载器和驱动器：
 
