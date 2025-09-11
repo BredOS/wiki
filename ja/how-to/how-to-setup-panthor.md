@@ -2,7 +2,7 @@
 title: 🐾 マリGPUでRK3588を使ってパンターをセットアップする方法
 description:
 published: true
-date: 2025-09-11T18:23:22.464Z
+date: 2025-07-22T00:13:05.435Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -10,7 +10,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 # RK3588 🚀 でマリGPUでPanthorを有効にする
 
-このガイドでは、Mali GPUのPanthorとVulkanをRK3588チップセットでボードに表示するための手順を説明します。
+このガイドでは、RK3588チップセットを搭載したボードに搭載されているMali GPUでPanthorを有効にするための手順を説明します。
 
 # 🔧 パンターを有効にする手順
 
@@ -28,7 +28,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 sudo pacman -S mesa
 ```
 
-### 🌋 3. Vulkanを有効化
+### 🔁 3. システムを再起動
 
 vulkanローダーとドライバーをインストールします:
 
