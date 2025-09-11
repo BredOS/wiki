@@ -21,6 +21,8 @@ https://github.com/BredOS/linux-bredos
 
 rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
 メインラインの variant は `rk-mainline` になります。
+rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
+メインラインの variant は `rk-mainline` になります。
 メインラインの variant は `rk-mainline` になります。
 
 ## BredOS kernel PKGBUILD
