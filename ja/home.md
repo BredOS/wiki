@@ -2,7 +2,7 @@
 title: ホームページ
 description:
 published: true
-date: 2024-09-08T10:19:38.208Z
+date: 2025-09-11T18:42:23.213Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -13,7 +13,7 @@ dateCreated: 2022-08-24T12:37:36.410Z
 ## 🌟 概要
 
 BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
-このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMベースのシングルボードコンピュータのユーザーにシームレスで使いやすい体験を提供することを目指しています。 Arch Linuxのパワーと柔軟性を活用する ブレッドOSは、幅広いユースケースに合わせてカスタマイズ可能な堅牢なプラットフォームを提供します。
+このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg
@@ -44,15 +44,7 @@ BredOSは、ARMベースのシングルボードコンピュータのユーザ�
 ## 🛠️ システム要件
 
 - **🖥️ サポートされているデバイス**:
-  - Radxa Rock 5 A/B/B+/C/D
-  - Radxa Rock 4 C+
-  - Radxa NX5キット
-  - IndieDroid Nova
-  - オレンジ Pi 5/5B/5+
-  - Khadas Edge 2
-  - Khadas VIM 4
-  - クールなPi 4B
-  - [Fydetab Duo](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/blob/main/Documentation/Linux_distros/bredos.md)
+  - https://bredos.org/download.html のリストを参照してください。
 - **🧠 最小RAM**: 2 GB
 - **💾 ストレージ**: 16 GB microSD カード以上
 - **🌐 Network**: Optional
