@@ -54,7 +54,7 @@ sudo usermod -aG libvirt $(whoami)
 
 ## 第 4 步： 配置网络 :globe_with_meridians：
 
-`virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
+`virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
 
 ```bash
 sudo virsh net-start 默认
