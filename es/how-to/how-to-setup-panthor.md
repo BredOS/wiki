@@ -2,7 +2,7 @@
 title: 🐾 Cómo configurar Panthor en Mali GPUs con RK3588
 description:
 published: true
-date: 2025-07-22T00:13:05.435Z
+date: 2025-09-11T18:23:22.464Z
 tags:
 editor: markdown
 dateCreated: 2024-31T15:03:26.994Z
@@ -10,7 +10,7 @@ dateCreated: 2024-31T15:03:26.994Z
 
 # Habilitar Panthor en GPUs Mali con RK3588 🚀
 
-Esta guía le guiará a través de los pasos para permitir a Panthor on Mali GPUs presentes en tablas con el chipset RK3588.
+Esta guía te guiará a través de los pasos para habilitar Panthor y Vulkan en Mali GPUs presentes en tablas con el chipset RK3588.
 
 # 🔧 Pasos para habilitar el Panteón
 
@@ -28,7 +28,15 @@ Reemplaza el paquete `mesa-panfork-git` con el paquete estándar `mesa`:
 sudo pacman -S mesa
 ```
 
-### 🔁 3. Reiniciar su sistema
+### 🌋 3. Habilitar Vulkan
+
+Instalar el cargador y controlador vulkan:
+
+```
+sudo pacman -S vulkan-icd-loader vulkan-panfrost
+```
+
+### 🔁 4. Reiniciar su sistema
 
 Si quieres validar si tus gráficos, puedes ejecutar lo siguiente:
 
