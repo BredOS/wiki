@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: false
-date: 2025-09-12T09:54:28.230Z
+date: 2025-09-12T10:08:35.415Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -33,14 +33,15 @@ The simplest way to connect to the SPI chip is by using the clip. It can be a bi
 On the other hand, if you have soldering experience, it's not a difficult task to desolder and resolder the eight pins of the SPI chip.
 
 The SPI chip is located near the SATA ports, right next to the mSATA slot. Look for the square chip labeled "JMB575" — that's the SATA controller. Next to it, you'll find a smaller 8-pin chip labeled "W25X40CL", which is the SPI chip. The label on the SPI chip can be hard to read, but once you've located the SATA controller, it should be easy to identify the SPI chip.
- ![sata-controller-text.jpg](/wiki-itx3588j-pics/sata-controller-text.jpg)
+![sata-controller-text-scaled.jpg](/sata-controller-text-scaled.jpg)
  #### 2.1 Connect the Clip
 
 Pin 1 on the clip is color-coded on the cable — the red wire indicates it. The red wire should face the edge of the board where the SATA ports are located.
 Make sure the clip is fully inserted. If it's connected correctly, you should be able to lift the board using the clip.
 ![spi-clip-connected-cut.jpg](/wiki-itx3588j-pics/spi-clip-connected-cut.jpg)
 
-Connect the other end of the cable to the flasher. The correct orientation is as follows: if the USB connector of the flasher is pointing away from you, the cable should go into the upper four holes, with the red wire in the bottom right corner.
+Connect the other end of the cable to the flasher. The correct orientation is as follows: if the USB connector of the flasher is pointing toward you, the cable should go into the lower four holes, with the red wire in the top left corner.
+![flasher-clip-connected-cut-scaled.jpg](/flasher-clip-connected-cut-scaled.jpg)
  
  
  #### 2.2 Or desolder the SPI Chip
@@ -71,7 +72,7 @@ Found Winbond flash chip "W25X40" (512 kB, SPI) on ch341a_spi.
 
 ### 3. Flash Firmware
 
-#### 3.1 Backup Firmware
+#### 3.1 Backup Old Firmware
 Before flashing a new ROM, it's a good idea to back up the existing one.
 If anything goes wrong, you'll be able to restore it using this backup.
 
@@ -111,3 +112,7 @@ Verifying flash... VERIFIED.
 ```
 
 If you see the text "VERIFIED," the firmware has been flashed correctly. If you used the clip, simply disconnect it and you're good to go. If you desoldered the chip, you know what to do.
+
+
+> 🍊 This Wiki article was created on an Orange Pi 5 Plus. 🍊
+{.is-success}
