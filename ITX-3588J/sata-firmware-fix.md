@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: false
-date: 2025-09-12T10:25:18.101Z
+date: 2025-09-12T10:31:16.475Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -48,7 +48,7 @@ Connect the other end of the cable to the flasher. The correct orientation is as
 Grab some soldering wick and flux, heat up your iron, and desolder the chip. You should know what you're doing!
 
 You can then either solder the chip directly onto the flasher (there’s a pad on the back of the flasher for this), or use one of the adapter boards included in the pack mentioned above.
-There should be an unpopulated board and a ZIF Socket. Choose wisely.
+There should be an unpopulated board and a ZIF Socket as part of the pack. Choose wisely.
 
 Pin 1 is marked on the chip with a small dot and is labeled with a "1" on the flasher or adapter board.
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
