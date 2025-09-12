@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: false
-date: 2025-09-12T10:16:12.967Z
+date: 2025-09-12T10:19:33.979Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
