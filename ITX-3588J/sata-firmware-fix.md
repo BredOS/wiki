@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: false
-date: 2025-09-12T10:24:34.706Z
+date: 2025-09-12T10:25:18.101Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -22,7 +22,7 @@ A very handy pack including the flasher, clip, and other useful accessories can 
  ![spi-flasher.png](/wiki-itx3588j-pics/spi-flasher.png)
  >If the link has expired, feel free to give us a heads-up on Discord or Telegram.
  
- ### 2. Connect to SPI
+ ## 2. Connect to SPI
 > ⚡ *Before connecting anything to power, double-check that all connectors are correctly oriented!* ⚡ 
 {.is-warning}
 
@@ -34,7 +34,7 @@ On the other hand, if you have soldering experience, it's not a difficult task t
 
 The SPI chip is located near the SATA ports, right next to the mSATA slot. Look for the square chip labeled "JMB575" — that's the SATA controller. Next to it, you'll find a smaller 8-pin chip labeled "W25X40CL", which is the SPI chip. The label on the SPI chip can be hard to read, but once you've located the SATA controller, it should be easy to identify the SPI chip.
 ![sata-controller-text-scaled.jpg](/sata-controller-text-scaled.jpg)
- #### 2.1 Connect the Clip
+ ### 2.1 Connect the Clip
 
 Pin 1 on the clip is color-coded on the cable — the red wire indicates it. The red wire should face the edge of the board where the SATA ports are located.
 Make sure the clip is fully inserted. If it's connected correctly, you should be able to lift the board using the clip.
@@ -44,7 +44,7 @@ Connect the other end of the cable to the flasher. The correct orientation is as
 ![flasher-clip-connected-cut-scaled.jpg](/flasher-clip-connected-cut-scaled.jpg)
  
  
- #### 2.2 Or desolder the SPI Chip
+ ### 2.2 Or desolder the SPI Chip
 Grab some soldering wick and flux, heat up your iron, and desolder the chip. You should know what you're doing!
 
 You can then either solder the chip directly onto the flasher (there’s a pad on the back of the flasher for this), or use one of the adapter boards included in the pack mentioned above.
@@ -55,7 +55,7 @@ Pin 1 is marked on the chip with a small dot and is labeled with a "1" on the fl
 or
 ![spi-soldered-cut.jpg](/wiki-itx3588j-pics/spi-soldered-cut.jpg)
 
-#### 2.3 Check connection
+### 2.3 Check connection
 First you need to install flashrom.
 ```
 sudo pacman -S flashrom
@@ -73,9 +73,9 @@ Found Winbond flash chip "W25X40" (512 kB, SPI) on ch341a_spi.
 ```
 
 
-### 3. Flash Firmware
+## 3. Flash Firmware
 
-#### 3.1 Backup Old Firmware
+### 3.1 Backup Old Firmware
 Before flashing a new ROM, it's a good idea to back up the existing one.
 If anything goes wrong, you'll be able to restore it using this backup.
 
@@ -91,7 +91,7 @@ diff firmware_dump.bin firmware_dump-1.bin
 If "diff" produces no output, you're good to go.
 If it does, check the connection of your clip, inspect your soldering work, and verify the orientation of all connectors.
 
-#### 3.2 Flash new Firmware
+### 3.2 Flash new Firmware
 As simple as the title suggests:
 ```
 # sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
