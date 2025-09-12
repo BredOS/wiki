@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: false
-date: 2025-09-12T10:31:16.475Z
+date: 2025-09-12T10:35:41.800Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -40,7 +40,7 @@ Pin 1 on the clip is color-coded on the cable — the red wire indicates it. The
 Make sure the clip is fully inserted. If it's connected correctly, you should be able to lift the board using the clip.
 ![spi-clip-connected-cut.jpg](/wiki-itx3588j-pics/spi-clip-connected-cut.jpg)
 
-Connect the other end of the cable to the flasher. The correct orientation is as follows: if the USB connector of the flasher is pointing toward you, the cable should go into the lower four holes, with the red wire in the top left corner.
+Connect the other end of the cable to the flasher. The correct orientation is as follows: if the USB connector of the flasher is pointing towards you, the cable should go into the lower four holes, with the red wire in the top left corner.
 ![flasher-clip-connected-cut-scaled.jpg](/flasher-clip-connected-cut-scaled.jpg)
  
  
@@ -58,7 +58,7 @@ or
 ### 2.3 Check connection
 First you need to install flashrom.
 ```
-sudo pacman -S flashrom
+# sudo pacman -S flashrom
 ```
 Check all cables and make sure your ITX-3588J board is disconnected from power if you're using the clip.
 Then, connect the flasher to your Linux device and run the following command.
@@ -71,7 +71,7 @@ flashrom is free software, get the source code at https://flashrom.org
 Using clock_gettime for delay loops (clk_id: 1, resolution: 1ns).
 Found Winbond flash chip "W25X40" (512 kB, SPI) on ch341a_spi.
 ```
-
+If it does not, check the connection of your clip or inspect your soldering work, and verify the orientation of all connectors.
 
 ## 3. Flash Firmware
 
@@ -81,15 +81,15 @@ If anything goes wrong, you'll be able to restore it using this backup.
 
 Dump the flash with the following command:
 ```
-sudo flashrom -p ch341a_spi -r firmware_dump.bin
+# sudo flashrom -p ch341a_spi -r firmware_dump.bin
 ```
 Then, dump it again and compare the two files to ensure the data was transferred correctly.
 ```
-sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
-diff firmware_dump.bin firmware_dump-1.bin
+# sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
+# diff firmware_dump.bin firmware_dump-1.bin
 ```
 If "diff" produces no output, you're good to go.
-If it does, check the connection of your clip, inspect your soldering work, and verify the orientation of all connectors.
+If it does, check the connection of your clip or inspect your soldering work, and verify the orientation of all connectors.
 
 ### 3.2 Flash new Firmware
 As simple as the title suggests:
