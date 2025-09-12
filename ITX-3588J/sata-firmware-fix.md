@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: false
-date: 2025-09-12T10:37:10.166Z
+date: 2025-09-12T10:43:12.362Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -14,7 +14,7 @@ dateCreated: 2025-09-12T09:18:06.486Z
 
 - A CH341A-based flasher
 - Either a soldering iron or an SPI clip
-- The new firmware file (download it from [here])
+- The new firmware file (download it from [here](/wiki-itx3588j-pics/satafw/sata_adapter_en25f40.bin))
 - Another device with Linux installed (Windows should work too, but is not covered here)
 
 A very handy pack including the flasher, clip, and other useful accessories can be ordered here:
