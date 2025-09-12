@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: false
-date: 2025-09-12T10:19:33.979Z
+date: 2025-09-12T10:24:34.706Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-12T09:18:06.486Z
 
 # SATA Firmware Fix
 
-### 1. Prerequisites
+## 1. Prerequisites
 
 - A CH341A-based flasher
 - Either a soldering iron or an SPI clip
