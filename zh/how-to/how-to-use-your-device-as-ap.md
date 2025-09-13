@@ -2,7 +2,7 @@
 title: 如何使用您的设备作为无线热点
 description:
 published: true
-date: 2024-09-08T10:55:29.082Z
+date: 2025-09-13T09:37:31.841Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10：33：46.772Z
@@ -34,16 +34,13 @@ dateCreated: 2024-09-08T10：33：46.772Z
    nmcli 设备状态
    ```
 
-2. **使用以下命令创建热点** (替换`wifi_interface` 用您的实际接口名称，例如`wlp2s0` 或 `wlan0`)：
+2. **使用以下命令创建热点**
 
    ```bash
-   nmcli 设备 wifi 热点ifname wifi_interface ssid MyHotspot 密码"mypassword"
+   nmcli 设备 Wifi 热点ifname <wifi_interface> ssid <MyHotspot> 密码 <mypassword>
    ```
 
-   此命令将：
-
-   - 📝 使用 SSID `MyHotspot` 创建热点
-   - 🔑 设置密码为`mypassword`
+   用您的实际接口名称替换<wifi_interface>`，比如`wlp2s0`或`wlan0`， 使用您想要的 SSID 的<MyHotspot>和 `<mypassword>的密码选择一个安全的密码。
 
 > 如果出现以下错误，请使用 sudo 再次运行该命令
 > “错误：无法设置 Wi-Fi 热点：无权控制网络。”
