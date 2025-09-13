@@ -2,7 +2,7 @@
 title: Switching Kernel
 description: 
 published: true
-date: 2025-09-13T10:23:37.666Z
+date: 2025-09-13T10:25:41.121Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -89,7 +89,7 @@ The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-r
 {.is-warning}
 
 
-### U-Boot
+### 3.1 U-Boot
 **This only applies to devices that don't boot with a UEFI, if you have UEFI on your board, skip to that section.**
 
 Edit `/boot/extlinux/extlinux.conf`:
@@ -123,7 +123,7 @@ initramfs-linux-rockchip-rkr3.img
 vmlinuz-linux-rockchip-rkr3
 ```
 
-### UEFI
+### 3.2 UEFI
 **This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.**
 
 Run the following to regenerate the grub.cfg:
