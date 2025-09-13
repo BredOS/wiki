@@ -2,7 +2,7 @@
 title: 📶 デバイスを無線ホットスポットとして使用する方法
 description:
 published: true
-date: 2024-09-08T14:15:47.669Z
+date: 2025-09-13T09:37:31.841Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -31,16 +31,13 @@ NetworkManager のコマンド ライン ツール `nmcli` を使用すると、
    nmcli デバイスの状態
    ```
 
-2. \*\*以下のコマンドを使用してホットスポットを作成します（`wlp2s0`や`wlan0`のような実際のインターフェイス名に`wifi_interface`を置き換えます）：
+2. **以下のコマンドでホットスポットを作成しましょう**
 
    ```bash
-   nmcli デバイス wifi hotspot ifname wifi_interface ssid MyHotspot password "mypassword"
+   nmcli デバイス wifi hotspot ifname <wifi_interface> ssid <MyHotspot> パスワード <mypassword>
    ```
 
-   このコマンドは次のとおりです。
-
-   - 📝 SSID `MyHotspot` でホットスポットを作成する
-   - 🔑 パスワードを `mypassword` に設定する
+   Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wlan0`,  `<MyHotspot>` with your desired SSID and `<mypassword>` with a secure passphrase of your choice.
 
 > If you get the following error run the command again with sudo
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
