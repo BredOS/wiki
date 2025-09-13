@@ -2,7 +2,7 @@
 title: :paw_prints：如何在马里使用 RK3588 设置Panthor GPU
 description:
 published: true
-date: 2025-09-13T09：17：09.327Z
+date: 2025-09-13T10:47:17.988Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -12,11 +12,9 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 这个指南使你走过让马里的Panthor GPU 存在于RK3588 chipset的板上。
 
-# 🔧 启用Panthor的步骤
+## 🎛️ 1. 启用Panthor DTBO
 
-### 🎛️ 1. 启用Panthor DTBO
-
-#### 🤖 1.1 自动使用
+### 🤖 1.1 自动使用
 
 bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为
 
@@ -31,7 +29,7 @@ sudo bredos-config
 
 bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_不能_ 更改uefi 设置。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。
 
-#### 🦶 1.2 Manual
+### 🦶 1.2 Manual
 
 按照[设备树叠加层指南](/how-to/how-to-enable-dtbos)启用
 `/boot/dtbs/rockchip/overy/rockchip-rk3588-panthor-gpu.dtbo`
@@ -39,7 +37,7 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 > 不要在安装dtb 覆盖后重启系统！
 > {.is-warning}
 
-### 🔄 2. 替换面板图形
+## 🔄 2. 替换面板图形
 
 用标准的`mesa`软件包替换`mesa-panfork-git`软件包：
 
@@ -47,7 +45,7 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 sudo pacman -S mesa
 ```
 
-### 🔁 3. 重启您的系统
+## 🔁 3. 重启您的系统
 
 安装vulkan加载器和驱动器：
 
@@ -55,7 +53,7 @@ sudo pacman -S mesa
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-### 🔁 4. 重启您的系统
+## 🔁 4. 重启您的系统
 
 重启系统以应用更改。 如果您想要验证您的图形，您可以运行以下操作：
 
