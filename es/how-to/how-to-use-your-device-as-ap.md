@@ -2,7 +2,7 @@
 title: Cómo usar tu dispositivo como punto de acceso inalámbrico
 description:
 published: true
-date: 2024/09-08T10:55:29.082Z
+date: 2025-09-13T09:37:31.841Z
 tags:
 editor: markdown
 dateCreated: 2024/09-08T10:33:46.772Z
@@ -31,16 +31,13 @@ Puede crear fácilmente un punto de acceso utilizando la herramienta de línea d
    estado del dispositivo nmcli
    ```
 
-2. **Crea el hotspot** usando el siguiente comando (reemplaza `wifi_interface` con tu nombre de interfaz real, como `wlp2s0` o `wlan0`):
+2. **Crea el hotspot** usando el siguiente comando:
 
    ```bash
-   nmcli dispositivo wifi hotspot ifname wifi_interface ssid MyHotspot contraseña "mypassword"
+   nmcli dispositivo wifi hotspot ifname <wifi_interface> ssid <MyHotspot> password <mypassword>
    ```
 
-   Este comando será:
-
-   - 📝 Crea un punto de acceso con SSID `MyHotspot`
-   - 🔑 Establece la contraseña a `mypassword`
+   Reemplaza `<wifi_interface>` con tu nombre real de interfaz, como `wlp2s0` o `wlan0`, `<MyHotspot>` con tu SSID deseado y `<mypassword>` con una contraseña segura de tu elección.
 
 > Si obtiene el siguiente error, ejecute de nuevo el comando con sudo
 > \\\\\`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
