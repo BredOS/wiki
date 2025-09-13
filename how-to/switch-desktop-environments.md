@@ -2,13 +2,12 @@
 title: Switch Desktop Environments on BredOS
 description: Learn how to install and switch to the GNOME desktop environment on BredOS
 published: true
-date: 2025-09-13T10:07:12.684Z
+date: 2025-09-13T11:03:22.861Z
 tags: customization
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
 ---
 
-# 1. Gnome
 ## 🎨 1.1. GNOME Desktop on BredOS
 
 The GNOME desktop environment can be installed with the package `gnome`.  
@@ -32,7 +31,9 @@ sudo systemctl disable lightdm
 sudo systemctl enable gdm
 ```
 
-📝 **Note:** Only GNOME on Wayland is supported.
+> Only GNOME on Wayland is supported.
+{.is-warning}
+
 
 ---
 
