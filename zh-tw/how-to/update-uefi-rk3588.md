@@ -2,7 +2,7 @@
 title: How to Update UEFI on RK3588
 description: Learn how to update the UEFI firmware on RK3588-based devices running BredOS
 published: true
-date: 2025-09-13T09:29:13.931Z
+date: 2025-09-13T10:45:27.434Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
@@ -26,7 +26,7 @@ This will list all available UEFI firmware packages. Identify the correct packag
 
 ---
 
-## 📥 Installing the Firmware
+## 1. 📥 Installing the Firmware
 
 Once you have identified the correct package for your device, install it using:
 
@@ -42,7 +42,7 @@ sudo pacman -S fydetab-duo-uefi
 
 ---
 
-## 🛠️ Flashing the UEFI Firmware
+## 2. 🛠️ Flashing the UEFI Firmware
 
 After installation, the firmware image will be located in `/usr/share/edk2/<device-name>/`.
 
@@ -67,8 +67,6 @@ For example, if you are using **eMMC storage** on a **Fydetab Duo**, the command
 ```
 sudo dd if=/usr/share/edk2/fydetab-duo/fydetab-duo_UEFI_Release_v0.12.3.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
-
----
 
 > ✅ **Done!** Your device's UEFI firmware is now updated. 🚀\
 > {.is-success}
