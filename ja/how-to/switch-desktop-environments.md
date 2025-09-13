@@ -2,13 +2,11 @@
 title: BredOS でデスクトップ環境を切り替える
 description: BredOS 上で GNOME デスクトップ環境にインストールして切り替える方法を学びます。
 published: true
-date: 2025-09-13T10:07:12.684Z
+date: 2025-09-13T11:03:22.861Z
 tags: カスタマイズ
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
 ---
-
-# 1. Gnome
 
 ## 🎨 1.1. BredOS 上の GNOME Desktop
 
@@ -34,7 +32,8 @@ sudo systemctl disable lightdm
 sudo systemctl enable gdm
 ```
 
-📝 **Note:** Wayland の GNOME のみがサポートされています。
+> Wayland の GNOME のみがサポートされています。
+> {.is-warning}
 
 ---
 
