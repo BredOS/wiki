@@ -2,7 +2,7 @@
 title: BredOS 上で仮想マシンを実行する方法
 description:
 published: true
-date: 2024-12-10T22:18:35.474Z
+date: 2025-09-13T09:21:19.167Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -96,8 +96,8 @@ XML編集を有効にするには（後で必要）`virt-manager`を開く必要
 > RK3588では、小さなアーキテクチャ
 > {.is-warning} により、vmあたり最大4コアを割り当てることができます。
 
-![disk.jpg](/vms/disk.jpg)
 ![cpuram.jpg](/vms/cpuram.jpg)
+![disk.jpg](/vms/disk.jpg)
 5. On CPUs with the little.big architecture like the RK3588 you need to check "Customize configuration before install" and edit the xml responsible for allocating cpu cores
 ![finalstep.jpg](/vms/finalstep.jpg)
 Click **Finish**
