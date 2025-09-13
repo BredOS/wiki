@@ -2,7 +2,7 @@
 title: 📶 デバイスを無線ホットスポットとして使用する方法
 description:
 published: true
-date: 2025-09-13T09:37:31.841Z
+date: 2025-09-13T10:44:39.156Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -12,7 +12,7 @@ dateCreated: 2024-09-08T10:33:46.772Z
 
 このガイドではNetworkManagerを使用してWi-Fiホットスポットを設定する方法を説明します。
 
-## 🛠️ 前提条件
+## 1. 🛠️ 前提条件
 
 始める前に、以下の内容を確認してください:
 
@@ -21,7 +21,7 @@ dateCreated: 2024-09-08T10:33:46.772Z
 > AP (アクセス ポイント) モードをサポートする適切なデバイスには、Rock 5C、Rock 5B+、が含まれます。 Khadas Edge 2, Khadas Vim 4, Mekotronics R58デバイス, Orange Pi 5B.
 > {.is-info}
 
-## 🚀 ホットスポットを作成
+## 2. 🚀 ホットスポットを作成
 
 NetworkManager のコマンド ライン ツール `nmcli` を使用すると、簡単にホットスポットを作成できます。
 
@@ -43,7 +43,7 @@ NetworkManager のコマンド ライン ツール `nmcli` を使用すると、
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
 > {.is-info}
 
-## 🔍 ホットスポットの状態を表示
+## 3. 🔍 ホットスポットの状態を表示
 
 ホットスポットが作成されると、次を実行してステータスを確認できます。
 
@@ -53,7 +53,7 @@ nmcli 接続ショー
 
 アクティブな接続の下にホットスポットが表示されます。
 
-## 🌐 IP 転送を設定する
+## 4. 🌐 IP 転送を設定する
 
 ホットスポット経由でインターネット接続を共有するには、IP転送を有効にする必要があります。
 
@@ -75,7 +75,7 @@ nmcli 接続ショー
    net.ipv4.ip_forward=1
    ```
 
-## 🛑 ホットスポットの停止
+## 5) 🛑 ホットスポットの停止
 
 ホットスポットを停止するには、以下を実行します。
 
