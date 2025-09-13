@@ -2,13 +2,11 @@
 title: Cambiar entornos de escritorio en BredOS
 description: Aprende cómo instalar y cambiar al entorno de escritorio GNOME en BredOS
 published: true
-date: 2025-09-13T10:07:12.684Z
+date: 2025-09-13T11:03:22.861Z
 tags: personalización
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
 ---
-
-# 1. Gnome
 
 ## 🎨 1.1. Escritorio GNOME en BredOS
 
@@ -35,7 +33,8 @@ sudo systemctl deshabilita lightdm
 sudo systemctl habilitar gdm
 ```
 
-📝 **Nota:** Sólo se admite GNOME en Wayland.
+> Sólo se admite GNOME en Wayland.
+> {.is-warning}
 
 ---
 
