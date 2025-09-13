@@ -2,7 +2,7 @@
 title: Cómo ejecutar máquinas virtuales en BredOS
 description:
 published: true
-date: 2024-10T22:18:35.474Z
+date: 2025-09-13T09:21:19.167Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
@@ -90,8 +90,8 @@ Para habilitar la edición XML (se necesita más tarde) tienes que abrir `virt-m
 > En el RK3588 puedes asignar máximo 4 núcleos por vm debido a la pequeña arquitectura grande
 > {.is-warning}
 
-![disk.jpg](/vms/disk.jpg)
 ![cpuram.jpg](/vms/cpuram.jpg)
+![disk.jpg](/vms/disk.jpg)
 5. En CPUs con lo poco. La arquitectura ig como el RK3588 necesita comprobar "Personalizar configuración antes de instalar" y editar el xml responsable de asignar núcleos de cpu
 ![finalstep.jpg](/vms/finalstep. pg)
 Haga clic en **Finalizar**
