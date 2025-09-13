@@ -2,7 +2,7 @@
 title: 🐾 How to setup Panthor on Mali GPUs with RK3588
 description:
 published: true
-date: 2025-09-13T08:53:13.718Z
+date: 2025-09-13T09:17:09.327Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -57,7 +57,7 @@ sudo pacman -S vulkan-icd-loader vulkan-panfrost
 
 ### 🔁 4. Reboot Your System
 
-If you want to validate if your graphics, you can do run the following:
+Reboot your System to apply the changes. If you want to validate if your graphics, you can do run the following:
 
 ```
 sudo pacman -S inxi mesa-utils
