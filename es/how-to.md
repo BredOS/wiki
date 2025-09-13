@@ -30,7 +30,7 @@ Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredO
 
 - [📸🔄 Snapshots Btrfs y Rollbacks con Timeshift](/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- [🖥️ 🔄 Switch Desktop Environments on BredOS](/how-to/switch-desktop-environments)
+- [🖥️ 🔄 Cambiar entornos de escritorio en BredOS](/how-to/switch-desktop-environments)
 
 - [💾 🔄 Cómo actualizar UEFI en RK3588](/how-to/update-uefi-rk3588)
 
