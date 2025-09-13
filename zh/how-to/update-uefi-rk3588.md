@@ -2,7 +2,7 @@
 title: 如何在 RK3588 上更新 UEFI
 description: 学习如何更新基于RK3588的运行 BredOS 设备的 UEFI 固件
 published: true
-date: 2025-09-13T09:29:13.931Z
+date: 2025-09-13T10:45:27.434Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15：28：48.131Z
@@ -26,7 +26,7 @@ sudo pacman -Ss uefi
 
 ---
 
-## 📥 安装固件
+## 1. 📥 安装固件
 
 一旦您为您的设备找到了正确的软件包，请使用以下方式安装：
 
@@ -42,7 +42,7 @@ sudo pacman -S fydetab-duo-uefi
 
 ---
 
-## 🛠️ 刷新UEFI 固件
+## 2. 🛠️ 刷新UEFI 固件
 
 安装后，固件图像将位于`/usr/shar/edk2/<device-name>/`。 系统将提供用于刷入固件的特定命令。\
 命令的一般格式是：
@@ -67,8 +67,6 @@ sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img 
 ```
 sudo dd if=/usr/share/edk2/fydetab-duo/fydetab-duo_UEFI_Release_v0.12.3.img of=/dev/mmcblk0 bs=512 skip=64 search=64 conv=notrunc
 ```
-
----
 
 > ✅ **完成！** 您的设备的 UEFI 固件现在已更新。 🚀 🚀\
 > {.is-success}
