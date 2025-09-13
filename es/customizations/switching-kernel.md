@@ -2,7 +2,7 @@
 title: Kernel cambiante
 description:
 published: true
-date: 2024-05T20:07:16.898Z
+date: 2025-09-13T10:25:41.121Z
 tags:
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
@@ -11,7 +11,7 @@ dateCreated: 2024-04T15:50:46.861Z
 # Instalando un núcleo diferente
 
 Por defecto, la mayoría de los dispositivos vienen con el núcleo `linux-rockchip-rkr3`.
-Sin embargo puede querer cambiar de otro o a otro núcleo.
+Sin embargo, puede que desee cambiar de otro o a otro núcleo.
 Para hacer esto primero valida qué núcleo tiene instalado:
 
 ```
@@ -43,16 +43,21 @@ Para instalar un núcleo diferente, primero retire el núcleo instalado, junto c
 
 ## 1. Eliminar el núcleo instalado
 
+Con el caso anterior el comando sería:
+
 ```
 sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 ```
 
-A partir de este punto NO ES SAFE REBOOT.
+> A partir de este punto NO ES SAFE REBOOT.
+> {.is-danger}
 
 ## 2. Proceda a instalar el nuevo núcleo
 
+Reemplaza `<your-new-kernel>` y `<your-new-kernel-headers>` por el paquete del núcleo de tu elección.
+
 ```
-sudo pacman -S your-new-kernel your-new-kernel-headers
+sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
 El paquete del núcleo generará una imagen de initramfs. Puede encontrar su nombre de archivo desde el registro de instalación:
@@ -84,11 +89,12 @@ El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3
 
 ## 3. Actualizar configuración del cargador de arranque
 
-Si durante el encendido del tablero ves un logotipo de BredOS, estás usando UEFI.
+> Si durante el encendido del tablero ves un logotipo de BredOS, estás usando UEFI.
+> {.is-warning}
 
-### Arrancar U
+### 3.1 Arranque U
 
-Esto sólo se aplica a los dispositivos que no arranquen con una UEFI, si usted tiene UEFI en su tabla, salte a esa sección.
+**Esto sólo se aplica a dispositivos que no arranquen con una UEFI, si tienes UEFI en tu placa, salta a esa sección.**
 
 Editar `/boot/extlinux/extlinux.conf`:
 
@@ -113,13 +119,19 @@ Para verificar que el nombre del archivo es correcto, puedes listar el contenido
 
 ```
 ls /boot/
+dtbs  
+efi  
+extlinux  
+grub  
+initramfs-linux-rockchip-rkr3.img  
+vmlinuz-linux-rockchip-rkr3
 ```
 
-### UEFI
+### 3.2 UEFI
 
-Esta sección sólo se aplica a los dispositivos que arranquen con la UEFI. Si utiliza Arranque U en su lugar, salte a la sección anterior.
+**Esta sección sólo se aplica a los dispositivos que arranquen con UEFI. Si en su lugar usas Arranque U, salta a la sección anterior.**
 
-Ejecutar:
+Ejecuta lo siguiente para regenerar el grub.cfg:
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -127,4 +139,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 4. Reboot
 
-Una vez hecho, puede reiniciar con seguridad en el nuevo núcleo.
+> Una vez hecho, puede reiniciar con seguridad en el nuevo núcleo.
+> {.is-success}
