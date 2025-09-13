@@ -2,7 +2,7 @@
 title: カーネルの切り替え
 description:
 published: true
-date: 2024-12-05T20:07:16.898Z
+date: 2025-09-13T10:25:41.121Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -13,7 +13,7 @@ dateCreated: 2024-12-04T15:50:46.861Z
 デフォルトでは、ほとんどのデバイスは `linux-rockchip-rkr3` カーネルを搭載しています。
 しかし、別のカーネルから切り替えたり、別のカーネルに切り替えたりしたいかもしれません。
 これを行うには、最初にインストールしたカーネルを確認してください:
-しかし、別のカーネルから切り替えたり、別のカーネルに切り替えたりしたいかもしれません。
+ただし、別のカーネルやカーネルに切り替えたい場合があります。
 これを行うには、最初にインストールしたカーネルを確認してください:
 
 ```
@@ -46,16 +46,21 @@ local/util-linux-libs 2.40.2-1
 
 ## 1. インストールされたカーネルを削除
 
+上記の場合、コマンドは次のようになります:
+
 ```
 sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 ```
 
-この時点から、リブートすることはできません。
+> この時点から、リブートすることはできません。
+> {.is-danger}
 
 ## 2. 新しいカーネルをインストールします。
 
+選択したカーネルパッケージに`<your-new-kernel>`と`<your-new-kernel-headers>`を置き換えます。
+
 ```
-sudo pacman -S your-new-kernel your-new-kernel-headers
+sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
 カーネルパッケージはinitramfsイメージを生成します。 インストールログからファイル名を確認できます: インストールログからファイル名を確認できます:
@@ -87,11 +92,12 @@ sudo pacman -S your-new-kernel your-new-kernel-headers
 
 ## 3. ブートローダーの設定を更新する
 
-ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
+> ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
+> {.is-warning}
 
-### U-Boot
+### 3.1 U-Boot
 
-これは、UEFIがボードにある場合は、UEFIで起動しないデバイスにのみ適用されます。そのセクションにスキップしてください。
+**これは、UEFIがボードにある場合は、UEFIで起動しないデバイスにのみ適用されます。そのセクションにスキップしてください。**
 
 `/boot/extlinux/extlinux.conf`を編集:
 
@@ -118,13 +124,19 @@ label BredOS ARM
 
 ```
 ls /boot/
+dtbs  
+efi  
+extlinux  
+grub  
+initramfs-linux-rockchip-rkr3.img  
+vmlinuz-linux-rockchip-rkr3
 ```
 
-### UEFI
+### 3.2 UEFI
 
-このセクションは UEFI で起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。
+**このセクションはUEFIで起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。**
 
-実行:
+grub.cfg を再生成するには、以下を実行します。
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -132,4 +144,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 4. Reboot
 
-完了したら、安全に新しいカーネルに再起動できます。
+> 完了したら、安全に新しいカーネルに再起動できます。
+> {.is-success}
