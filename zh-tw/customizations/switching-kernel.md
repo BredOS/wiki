@@ -2,7 +2,7 @@
 title: Switching Kernel
 description:
 published: true
-date: 2024-12-05T20:07:16.898Z
+date: 2025-09-13T10:25:41.121Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -11,7 +11,7 @@ dateCreated: 2024-12-04T15:50:46.861Z
 # Installing a different kernel
 
 By default, most devices ship with the `linux-rockchip-rkr3` kernel.
-However you may wanna switch from another, or to another kernel.
+However you may want to switch from another, or to another kernel.
 To do this first please validate which kernel you have installed:
 
 ```
@@ -43,16 +43,21 @@ To install a different kernel, first remove the installed kernel, along with it'
 
 ## 1. Remove the installed kernel
 
+With the above case the command would be:
+
 ```
 sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 ```
 
-From this point on it's NOT SAFE TO REBOOT.
+> From this point on it's NOT SAFE TO REBOOT.
+> {.is-danger}
 
 ## 2. Proceed to install the new kernel
 
+Replace `<your-new-kernel>` and `<your-new-kernel-headers>` with the kernel package of your choice.
+
 ```
-sudo pacman -S your-new-kernel your-new-kernel-headers
+sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
 The kernel package will generate an initramfs image. You can find it's filename from the install log:
@@ -84,11 +89,12 @@ The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-r
 
 ## 3. Update bootloader config
 
-If during board power-on you see a BredOS logo, you are using UEFI.
+> If during board power-on you see a BredOS logo, you are using UEFI.
+> {.is-warning}
 
-### U-Boot
+### 3.1 U-Boot
 
-This only applies to devices that don't boot with a UEFI, if you have UEFI on your board, skip to that section.
+**This only applies to devices that don't boot with a UEFI, if you have UEFI on your board, skip to that section.**
 
 Edit `/boot/extlinux/extlinux.conf`:
 
@@ -113,13 +119,19 @@ To verify the filename is correct, you can list the contents of `/boot/`:
 
 ```
 ls /boot/
+dtbs  
+efi  
+extlinux  
+grub  
+initramfs-linux-rockchip-rkr3.img  
+vmlinuz-linux-rockchip-rkr3
 ```
 
-### UEFI
+### 3.2 UEFI
 
-This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.
+**This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.**
 
-Run:
+Run the following to regenerate the grub.cfg:
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -127,4 +139,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 4. Reboot
 
-Once done, you can safely reboot into the new kernel.
+> Once done, you can safely reboot into the new kernel.
+> {.is-success}
