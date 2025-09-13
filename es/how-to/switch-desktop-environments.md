@@ -1,27 +1,29 @@
 ---
-title: Cambiar entornos de escritorio para usar GNOME en BredOS
+title: Cambiar entornos de escritorio en BredOS
 description: Aprende cómo instalar y cambiar al entorno de escritorio GNOME en BredOS
 published: true
-date: 2025-02-23T15:13:50.035Z
+date: 2025-09-13T10:07:12.684Z
 tags: personalización
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
 ---
 
-# 🎨 Escritorio GNOME en BredOS
+# 1. Gnome
 
-El entorno de escritorio GNOME se puede instalar con el paquete AUR `gnome-meta`.\
-Para instalarlo, ejecutar:\
-Para instalarlo, ejecutar:\
+## 🎨 1.1. Escritorio GNOME en BredOS
+
+El entorno de escritorio GNOME se puede instalar con el paquete `gnome`.\
 Para instalarlo, ejecutar:
 
 ```
-yay -S gnome-meta
+pacman -S gnome
 ```
+
+Se pueden instalar paquetes gnome adicionales con `gnome-circle` que contiene varias aplicaciones extra que extienden el ecosistema GNOME y `gnome-extra` que contienen herramientas de desarrollo así como otras aplicaciones y juegos que encajen bien en GNOME.
 
 ---
 
-## 🔄 Cambiar a GDM
+## 🔄 1.2. Cambiar a GDM
 
 Para una operación adecuada, necesitas cambiar a **GDM** después de la instalación.\
 Ejecutar los siguientes comandos:\
@@ -37,11 +39,11 @@ sudo systemctl habilitar gdm
 
 ---
 
-## 🔄 🖥️ Reparar rotación de pantalla
+## 🔄 🖥️ 1.3. Fijar rotación de pantalla
 
 **Si** tu pantalla gira incorrectamente, puedes instalar y configurar la extensión **Rotación de pantalla**.
 
-### 1️⃣ Instalar el gestor de extensiones
+### 1️⃣ 1.3.1 Instalar Administrador de Extensiones
 
 Ejecutar:
 
@@ -51,7 +53,7 @@ sudo pacman -S extension-manager
 
 Una vez instalado, abre la aplicación.
 
-### 2️⃣ Instalar la rotación de pantalla
+### 2️⃣ 1.3.2 Instalar Pantalla Rotar
 
 Dentro de la aplicación:
 
@@ -59,7 +61,7 @@ Dentro de la aplicación:
 - Tipo **Rotación de pantalla**
 - Instala `Screen Rotate` por **shyzus**.
 
-### 3️⃣ Configurar rotación de pantalla
+### 3️⃣ 1.3.3 Configurar la rotación de pantalla
 
 - Ve a la pestaña `Installed` en el Administrador de extensiones.
 - Toca el icono ⚙️ para abrir la configuración de la extensión.
@@ -67,4 +69,21 @@ Dentro de la aplicación:
 
 ---
 
-✅ ¡Hecho! GNOME ahora está configurado correctamente en BredOS. 🚀
+> ✅ ¡Hecho! GNOME ahora está configurado correctamente en BredOS. 🚀\
+> {.is-success}
+
+# 2. KDE Plasma
+
+## 🎨 2.1. Escritorio de plasma en BredOS
+
+El entorno de escritorio de Plasma se puede instalar con el paquete `plasma-desktop`.\
+Para instalarlo, ejecutar:
+
+```
+pacman -S plasma-desktop
+```
+
+Esto debería resultar en una instalación mínima del escritorio de plasma. Para instalar una experiencia de KDE más completa, elija el paquete `plasma` (que le permite elegir qué paquetes de plasma desea instalar) o `plasma-meta` para obtener la cosa completa. Haga clic en [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) para entender la diferencia entre un grupo y un metpaquete.
+
+> Evite el uso de SDDM ya que este software es abandonado! LightDM funciona bien con plasma.
+> {.is-warning}
