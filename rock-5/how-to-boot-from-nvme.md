@@ -2,7 +2,7 @@
 title: How to boot from a NVMe drive
 description: This guide shows how to setup booting from a NVMe drive
 published: true
-date: 2025-03-05T18:13:00.890Z
+date: 2025-09-13T12:24:45.300Z
 tags: rock-5, rock-5b, rock-5bp, nvme
 editor: markdown
 dateCreated: 2024-09-21T09:09:29.723Z
@@ -20,13 +20,13 @@ These instructions assume your Rock 5B/5B Plus is already booted into Linux (eit
 
 First, make sure you have the latest UEFI firmware installed. You can easily install the required package from the BredOS repository.
 
-For the **Rock 5B Plus**, use the following command:
+For the **Rock 5B**, use the following command:
 
 ```bash
 sudo pacman -Sy rock-5b-uefi
 ```
 
-For the **Rock 5B**, use this:
+For the **Rock 5B Plus**, use this:
 
 ```bash
 sudo pacman -Sy rock-5bplus-uefi
