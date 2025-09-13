@@ -2,13 +2,11 @@
 title: 在 BredOS 上切换桌面环境
 description: 学习如何在 BredOS 上安装并切换到 GNOME 桌面环境
 published: true
-date: 2025-09-13T10:07:12.684Z
+date: 2025-09-13T11:03:22.861Z
 tags: 自定义设置
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
 ---
-
-# 1. Gnome
 
 ## 🎨 1.1. BredOS 上的 GNOME 桌面
 
@@ -34,7 +32,8 @@ sudo systemctl disable lightdm
 sudo systemctl enable gdm
 ```
 
-📝**注意:** 仅支持 Wayland 上的 GNOME。
+> 仅支持Wayland上的 GNOME。
+> {.is-warning}
 
 ---
 
