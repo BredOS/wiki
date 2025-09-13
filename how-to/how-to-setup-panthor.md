@@ -2,7 +2,7 @@
 title: 🐾 How to setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2025-09-13T10:46:31.627Z
+date: 2025-09-13T10:47:17.988Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -12,7 +12,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 This guide walks you through the steps to enable Panthor and Vulkan on Mali GPUs present in boards with the RK3588 chipset.
 
-___
+
 
 ## 🎛️ 1. Enable the Panthor DTBO
 ### 🤖 1.1 Automatically
