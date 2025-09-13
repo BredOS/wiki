@@ -2,7 +2,7 @@
 title: 如何在 BredOS 上运行虚拟机
 description:
 published: true
-date: 2024-12-10T22：18：35.474Z
+date: 2025-09-13T09:21:19.167Z
 tags: vm, ho-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -94,8 +94,8 @@ sudo virsh net-autostart
 > On the RK3588 you can allocate max 4 cores per vm due to the little big architecture
 > {.is-warning}
 
-![disk.jpg](/vms/disk.jpg)
 ![cpuram.jpg](/vms/cpuram.jpg)
+![disk.jpg](/vms/disk.jpg)
 5. On CPUs with the little.big architecture like the RK3588 you need to check "Customize configuration before install" and edit the xml responsible for allocating cpu cores
 ![finalstep.jpg](/vms/finalstep.jpg)
 Click **Finish**
