@@ -2,7 +2,7 @@
 title: :paw_prints：如何在马里使用 RK3588 设置Panthor GPU
 description:
 published: true
-date: 2025-09-13T08:53：13.718Z
+date: 2025-09-13T09：17：09.327Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -57,7 +57,7 @@ sudo pacman -S vulkan-icd-loader vulkan-panfrost
 
 ### 🔁 4. 重启您的系统
 
-如果您想要验证您的图形，您可以运行以下操作：
+重启系统以应用更改。 如果您想要验证您的图形，您可以运行以下操作：
 
 ```
 sudo pacman -S inxi mesa-utils
