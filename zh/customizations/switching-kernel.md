@@ -2,7 +2,7 @@
 title: 切换内核中
 description:
 published: true
-date: 2025-09-14T10：26：11.108Z
+date: 2025-09-13T10:25:41.121Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15：50：46.861Z
@@ -63,7 +63,7 @@ sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-内核包将生成一个破解图像。 您可以从安装日志中找到它的文件名：
+内核包将生成一个破解图像。 您可以从安装日志中找到它的文件名： 您可以从安装日志中找到它的文件名：
 
 ```
 (14/30) Updating linux initcpios...
@@ -124,7 +124,7 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` drachut 图像。 其它内核会生成不同的文件名。
+`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` drachut 图像。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。
 
 ## 3. 更新引导程序配置
 
@@ -170,7 +170,7 @@ vmlinuz-linux-rockchip-rkr3
 
 ### 3.2 UEFI
 
-**本节仅适用于使用 UEFI 启动的设备。 如果您使用 U-Boot，请跳转到以上部分。**
+**本节仅适用于使用 UEFI 启动的设备。 如果您使用 U-Boot，请跳转到以上部分。** 如果您使用 U-Boot，请跳转到以上部分。\*\*
 
 运行以下以重新生成 grub.cfg：
 
