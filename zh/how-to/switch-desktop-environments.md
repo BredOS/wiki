@@ -2,7 +2,7 @@
 title: 在 BredOS 上切换桌面环境
 description: 学习如何在 BredOS 上安装并切换到 GNOME 桌面环境
 published: true
-date: 2025-09-13T11:03:22.861Z
+date: 2025-09-13T10:07:12.684Z
 tags: 自定义设置
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
@@ -11,6 +11,7 @@ dateCreated: 2025-02-23T15:13:50.035Z
 ## 🎨 1.1. BredOS 上的 GNOME 桌面
 
 GNOME 桌面环境可以与软件包`gnome`安装。\
+要安装它，请运行：\
 要安装它，请运行：
 
 ```
@@ -33,6 +34,7 @@ sudo systemctl enable gdm
 ```
 
 > 仅支持Wayland上的 GNOME。
+> {.is-warning}
 > {.is-warning}
 
 ---
@@ -75,13 +77,15 @@ sudo pacman -S extension-manager
 ## 🎨 2.1. BledOS 上的 Plasma 桌面
 
 Plasma 桌面环境可以安装到软件包 "plasma-desktop"。\
+要安装它，请运行：\
 要安装它，请运行：
 
 ```
 pacman -S plasma-desktop
 ```
 
-这将导致等离子体桌面安装最少。 若要安装更完整的 KDE 体验，请选择软件包 `plasma` (它允许您选择您想要安装的Plasma相关软件包)，或选择`plasma-meta` 以获取全部内容。 Click [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) to understand the difference between a group and a meta package.
+这将导致等离子体桌面安装最少。 这将导致等离子体桌面安装最少。 若要安装更完整的 KDE 体验，请选择软件包 `plasma` (它允许您选择您想要安装的Plasma相关软件包)，或选择`plasma-meta` 以获取全部内容。 Click [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) to understand the difference between a group and a meta package. Click [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) to understand the difference between a group and a meta package.
 
 > 避免使用 SDDM ，因为此软件已被遗弃！ 浅DM使用等离子体正常工作。
+> {.is-warning} 浅DM使用等离子体正常工作。
 > {.is-warning}
