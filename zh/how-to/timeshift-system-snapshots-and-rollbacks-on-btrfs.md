@@ -10,9 +10,7 @@ dateCreated: 2024-09-27T19：19：08.209Z
 
 # 📸🔄 Btrfs Snapshots and Rollback, with Timeshift
 
-**Introduction**\
-**Btrfs 文件系统**的 **快照功能** 可以用于执行系统快照和回滚。 **Timeshift** 是一个方便用户的图形应用程序，方便此流程！ **Introduction**\
-**Btrfs 文件系统**的 **快照功能** 可以用于执行系统快照和回滚。 **Timeshift** 是一个方便用户的图形应用程序，方便此流程！ **Timeshift** 是一个方便用户的图形应用程序，方便此流程！
+**Btrfs 文件系统**的**快照功能**可以用于执行系统快照和回滚。**Timeshift**是一个方便用户的图形应用程序，简化了此流程！
 
 ---
 
