@@ -71,7 +71,6 @@ virt-manager
 
 これにより、 `virt-manager` GUIが開き、仮想マシンの作成と管理ができます。
 ![virt.jpg](/vms/virt.jpg)
-![virt.jpg](/vms/virt.jpg)
 
 ## ステップ 6: XML 編集を有効にする
 
@@ -84,9 +83,7 @@ XML編集を有効にするには（後で必要）`virt-manager`を開く必要
    ![virt.jpg](/vms/virt.jpg)
 2. **新しい仮想マシンを作成** ➕をクリックしてください。
    ![virtnewvm.jpg](/vms/virtnewvm.jpg)
-   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. インストール元(ISOイメージまたはネットワークインストール)を選択します。
-   ![newvm.jpg](/vms/newvm.jpg)
    ![newvm.jpg](/vms/newvm.jpg)
 4. ウィザードに従って、CPU、RAM、およびVMストレージを割り当てます。 ⚙️ ⚙️
 

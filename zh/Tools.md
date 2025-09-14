@@ -33,7 +33,6 @@ sudo grub-password
 ```
 
 您将被提示输入并确认密码。
-您将被提示输入并确认密码。
 一旦设置，只能在没有认证的情况下启动默认的 GRUB 条目。
 
 ## 🔴 禁用 GRUB 密码
@@ -51,7 +50,6 @@ sudo grub-password -d
 修改 `/etc/grub.d/10_linux`，请不要手动恢复。
 配置保存在/etc/grub.d/99-bredos-grub-密码中。
 脚本通过 grub-mkconfig自动重新生成 GRUB配置。
-修改`/etc/grub.d/10_linux`，请不要手动恢复。
 修改`/etc/grub.d/10_linux`，请不要手动恢复。
 
 # DTSC 助手脚本
@@ -96,7 +94,6 @@ sudo grub-password -d
 
 如果您有多个内核安装在您的系统上，您应该指定要链接的内核路径。
 它应该看起来像这样：
-它应该看起来像这样：
 
 ```
 dtsc example.dts -k /usr/src/linux-rockchip-rkr3 -o example.dtbo
@@ -107,7 +104,6 @@ dtsc example.dts -k /usr/src/linux-rockchip-rkr3 -o example.dtbo
 ## 编译基础设备树
 
 如果您正在编译基础设备树而不是叠加层，您将需要您的内核全部源码，这些源码没有预装。
-这是因为这些树需要包含其他 ".dtsi" 设备树。
 这是因为这些树需要包含其他 ".dtsi" 设备树。
 
 要编译这样一个设备树，请使用 git 克隆你的内核存储库到已知路径。

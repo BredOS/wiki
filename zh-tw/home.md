@@ -10,14 +10,14 @@ dateCreated: 2024-07-19T14:36:23.702Z
 
 # 🍞 The BredOS Wiki
 
-## 🌟 Overview
+## 🌟 概述
 
 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg))
 
-## 📚 Table of Contents
+## 📚 目錄
 
 1. [🔍 Introduction](#introduction)
 2. [🚀 Features](#features)
@@ -29,18 +29,18 @@ The documentation will guide you through the installation, configuration, and us
 8. [🌐 Community and Support](#community-and-support)
 9. [🤝 Contributing](#contributing)
 
-## 🔍 Introduction
+## 🔍 介紹
 
 BredOS 旨在為基於 ARM 的單板計算機用戶提供無縫且用戶友好的體驗。 通過利用 Arch Linux 的強大功能和靈活性，BredOS 提供了一個可以根據廣泛用例進行自定義的強大平台。
 
-## 🚀 Features
+## 🚀 功能
 
 - **🖥️ User-Friendly Interface**: A simplified and intuitive user interface for easy navigation and use.
 - **🎯 Arch-Based**: Built on top of Arch Linux, ensuring access to a vast repository of packages and a rolling release model.
 - **🔧 ARM Support**: Optimized for ARM-based single board computers, making it ideal for devices like the Rock 5B, and more.
 - **⚡ Lightweight**: Minimal bloat, ensuring a lightweight and responsive system.
 
-## 🛠️ System Requirements
+## 🛠️ 系統要求
 
 - **🖥️ Supported Devices**:
   - Please refer to our list at https://bredos.org/download.html
@@ -48,24 +48,24 @@ BredOS 旨在為基於 ARM 的單板計算機用戶提供無縫且用戶友好�
 - **💾 Storage**: 16 GB microSD card or larger
 - **🌐 Network**: Optional
 
-## 💽 Installation
+## 💽 安裝
 
 請參閱我們的 [安裝指南](/installation) 頁面以獲取更多信息。
 
-## 📦 Package Management
+## 📦 包管理
 
-BredOS 使用 `pacman`，這是來自 Arch Linux 的軟件包管理器。 以下是一些常用命令： 以下是一些常用命令：
+BredOS 使用 `pacman`，這是來自 Arch Linux 的軟件包管理器。以下是一些常用命令：
 
 - 🔄 更新軟件包列表：`sudo pacman -Syu`
 - ➕ 安裝軟件包：`sudo pacman -S [package_name]`
 - ➖ 移除軟件包：`sudo pacman -R [package_name]`
 - 🔍 搜索軟件包：`pacman -Ss [package_name]`
 
-## 🐞 Troubleshooting
+## 🐞 疑難排解
 
 如果您遇到 BredOS 的問題，歡迎加入我們的 [Discord](https://discord.gg/jwhxuyKXaa) 進行咨詢。
 
-## ❓ FAQ
+## ❓ 常見問題
 
 ### ❓ Q: What devices are supported by BredOS?
 
@@ -90,7 +90,7 @@ A: Please make sure that:
 - Don't suspend before 10s after just  resuming, this is a known issue with the eMMC driver.
 - Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)
 
-## 🌐 Community and Support
+## 🌐 社群與支援
 
 加入 BredOS 社區，獲取支持、分享想法並為項目做出貢獻：
 
@@ -98,9 +98,9 @@ A: Please make sure that:
 - [💬 Discord](https://discord.gg/jwhxuyKXaa)
 - [💻 GitHub](http://github.com/BredOS)
 
-## 🤝 Contributing
+## 🤝 貢獻
 
-BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻：
+BredOS 是一個開源項目，歡迎貢獻！您可以通過以下方式進行貢獻：
 
 - 🐛 Report bugs and issues
 - 💻 Submit patches and improvements

@@ -71,7 +71,6 @@ sudo virsh net-autostart
 
 这将打开`virt-manager`GUI，您可以在那里创建和管理虚拟机器。
 ![virt.jpg](/vms/virt.jpg)
-![virt.jpg](/vms/virt.jpg)
 
 ## 步骤6：启用 XML 编辑
 
@@ -85,9 +84,7 @@ sudo virsh net-autostart
    ![virt.jpg](/vms/virt.jpg)
 2. 点击**创建一个新的虚拟机器** ➕。
    ![virtnewvm.jpg](/vms/virtnewvm.jpg)
-   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. 选择安装源 (ISO 镜像或网络安装)。
-   ![newvm.jpg](/vms/newvm.jpg)
    ![newvm.jpg](/vms/newvm.jpg)
 4. 按照向导分配CPU、RAM和您的虚拟机存储。 ⚙️ ⚙️
 

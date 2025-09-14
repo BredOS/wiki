@@ -20,9 +20,6 @@ dateCreated: 2024-09-08T10：33：46.772Z
 
 > 支持 AP (Access Point) 模式的适当设备包括Rock 5C，Rock 5B+， Khadas Edge 2, Khadas Vim 4, all Mekotronics R58 设备，以及Orange Pi 5B。
 > {.is-info}
-> {.is-info}
-> {.is-info}
-> {.is-info}
 
 ## 2. 创建热点
 

@@ -42,7 +42,6 @@ local/util-linux-libs 2.40.2-1
 
 リストにはlinux-rockchip-rkr3とそれに付随するヘッダーがインストールされています。
 別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
-別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
 
 ## 1. インストールされたカーネルを削除
 
@@ -69,7 +68,6 @@ sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 (14/30) Updating linux initcpios...
 :: Building initramfs for linux-rockchip-rkr3 (6.1.75-rkr3)
 dracut[I]: Executing: /usr/bin/dracut --force --hostonly --no-hostonly-cmdline /boot/initramfs-linux-rockchip-rkr3.img 6.1.75-rkr3
-dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
 dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
 dracut[I]: *** Including module: bash ***
 dracut[I]: *** Including module: systemd ***

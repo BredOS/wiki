@@ -24,8 +24,6 @@ Se pueden instalar paquetes gnome adicionales con `gnome-circle` que contiene va
 ## 🔄 1.2. Cambiar a GDM
 
 Para una operación adecuada, necesitas cambiar a **GDM** después de la instalación.\
-Ejecutar los siguientes comandos:\
-Ejecutar los siguientes comandos:\
 Ejecutar los siguientes comandos:
 
 ```

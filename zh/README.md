@@ -14,4 +14,4 @@ dateCreated: 2024-07-20T07:39:21.434Z
 
 您可以通过创建一个带有更改的拉请求来为文档做出贡献。
 
-[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg)](https://bredos.crowdin.com/wiki)
+[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg))](https://bredos.crowdin.com/wiki)

@@ -12,11 +12,10 @@ dateCreated: 2022-08-24T12:37:36.410Z
 
 ## 🌟 概要
 
-BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
-このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
+BredOS のドキュメントへようこそ！ BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg))
 
 ## 📚 目次
 
@@ -37,7 +36,7 @@ BredOSは、ARMベースのシングルボードコンピュータのユーザ�
 ## 🚀 機能
 
 - **🖥️ ユーザーフレンドリーなインターフェイス**: ナビゲーションと使用を簡単にするための簡単で直感的なユーザーインターフェイス。
-- **🎯 Arch-Based**: Arch-Based\*\*: ArchのLinux上に構築されており、パッケージとローリングリリースモデルの広大なリポジトリへのアクセスを保証します。
+- **🎯 Arch-Based**: Arch-Based: ArchのLinux上に構築されており、パッケージとローリングリリースモデルの広大なリポジトリへのアクセスを保証します。
 - **🔧 ARM Support**: ARMベースのシングルボードコンピュータに最適化されているため、Rock 5Bなどのデバイスに最適です。
 - **⚡ Lightweight**: 最小の膨張、軽量で応答性の高いシステムを確保します。
 
@@ -51,11 +50,11 @@ BredOSは、ARMベースのシングルボードコンピュータのユーザ�
 
 ## 💽 インストール
 
-詳細はformat@@0(/installation) のページをご覧ください。
+詳細は/installation のページをご覧ください。
 
 ## 📦パッケージ管理
 
-BredOS は Arch Linux のパッケージマネージャである `pacman` を使用します。 以下に共通のコマンドを示します。 以下に共通のコマンドを示します。
+BredOS は Arch Linux のパッケージマネージャである `pacman` を使用します。以下に共通のコマンドを示します。
 
 - 🔄 パッケージ一覧を更新: `sudo pacman -Syu`
 - ➕ パッケージをインストール: `sudo pacman -S [package_name]`
@@ -70,7 +69,7 @@ BredOS で問題が発生した場合は、 [discord](https://discord.gg/jwhxuyK
 
 ### ❓ Q: BredOS でサポートされているデバイスは何ですか？
 
-A: BredOS は、さまざまな ARM ベースのシングルボードコンピュータをサポートしており、format@@0(#system-requirements) で完全なリストをご利用いただけます。
+A: BredOS は、さまざまな ARM ベースのシングルボードコンピュータをサポートしており、#system-requirements で完全なリストをご利用いただけます。
 
 ### 🔄 Q: BredOS をアップデートするには?
 
