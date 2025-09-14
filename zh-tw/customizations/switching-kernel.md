@@ -2,7 +2,7 @@
 title: Switching Kernel
 description:
 published: true
-date: 2025-09-14T10:26:11.108Z
+date: 2025-09-13T10:25:41.121Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -11,7 +11,7 @@ dateCreated: 2024-12-04T15:50:46.861Z
 # Installing a different kernel
 
 By default, most devices ship with the `linux-rockchip-rkr3` kernel.
-However you may want to switch from another, or to another kernel.
+To do this first please validate which kernel you have installed:
 To do this first please validate which kernel you have installed:
 
 ```
@@ -60,7 +60,7 @@ Replace `<your-new-kernel>` and `<your-new-kernel-headers>` with the kernel pack
 sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-The kernel package will generate an dracut image. You can find it's filename from the install log:
+The kernel package will generate an initramfs image. You can find it's filename from the install log:
 
 ```
 (14/30) Updating linux initcpios...
@@ -121,7 +121,7 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-rkr3.img` dracut image. Other kernels will produce different filenames.
+The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-rkr3.img` initramfs image. Other kernels will produce different filenames.
 
 ## 3. Update bootloader config
 
