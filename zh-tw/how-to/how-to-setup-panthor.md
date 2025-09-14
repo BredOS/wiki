@@ -2,7 +2,7 @@
 title: 🐾 How to setup Panthor on Mali GPUs with RK3588
 description:
 published: true
-date: 2025-09-13T10:47:17.988Z
+date: 2025-09-13T09:17:09.327Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -33,6 +33,7 @@ While bredos-config is able to install dtbs and alter the grub config to load th
 
 Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable
 `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`
+**Do not reboot your system after copying the DTBO!**
 
 > Do not reboot your system after the installation of the dtb overlay!
 > {.is-warning}
