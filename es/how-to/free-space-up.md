@@ -160,10 +160,20 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
-- **qdirstat** — Herramienta de estadísticas de directorio basadas en Qt.\
-  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+- **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   **qdirstat** — Herramienta de estadísticas de directorio basadas en Qt.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   **qdirstat** — Herramienta de estadísticas de directorio basadas en Qt.\

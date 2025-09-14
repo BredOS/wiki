@@ -2,7 +2,7 @@
 title: Cómo arrancar desde una unidad NVMe
 description: Esta guía muestra cómo configurar el arranque desde una unidad de NVMe
 published: true
-date: 2025-03-05T18:13:00.890Z
+date: 2025-09-13T12:27:51.814Z
 tags: rock-5, rock-5b, rock-5bp, nvme
 editor: markdown
 dateCreated: 2024-09-21T09:09:29.723Z
@@ -16,23 +16,23 @@ Estas instrucciones asumen que su Rock 5B/5B Plus ya está arrancado en Linux (y
 
 ---
 
-## 🔄 Paso 1: Actualizar Firmware UEFI
+## 🔄 1. Actualizar Firmware UEFI
 
 Primero, asegúrese de que tiene instalado el firmware UEFI más reciente. Puede instalar fácilmente el paquete requerido desde el repositorio BredOS.
 
-Para la **Rock 5B Plus**, usa el siguiente comando:
+Para la **Roca 5B**, usa el siguiente comando:
 
 ```bash
 sudo pacman -Sy rock-5b-uefi
 ```
 
-Para la **Roca 5B**, usa esto:
+Para la **Roca 5B Plus**, usa esto:
 
 ```bash
 sudo pacman -Sy rock-5bplus-uefi
 ```
 
-## 📦 Paso 2: Flash UEFI a SPI
+## 📦 2. Flash UEFI a SPI
 
 A continuación, necesitarás flashear el firmware UEFI en la memoria SPI de tu dispositivo.
 
@@ -48,7 +48,7 @@ Para la **Roca 5B**, usa esto:
 sudo dd if=/usr/share/edk2/rock-5b/rock-5b_UEFI_Release_latest.img of=/dev/mtdblock0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-## 📥 Paso 3: Escribe Imagen BredOS a NVMe
+## 📥 3. Escribir imagen BredOS a NVMe
 
 Una vez que la UEFI esté flasheada, necesitarás descargar la última imagen de BredOS del repositorio [Images](https://github.com/BredOS/images/releases). Extrae el archivo de imagen y luego usa el comando `dd` para escribir la imagen en tu SSD NVMe.
 

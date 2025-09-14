@@ -2,7 +2,7 @@
 title: カーネル改造中
 description:
 published: true
-date: 2025-05-07T18:34:49.447Z
+date: 2025-09-13T10:54:24.895Z
 tags:
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -14,21 +14,23 @@ dateCreated: 2024-11-11T11:49:44.206Z
 しかし、このガイドはほとんどが他のカーネルに引き継ぐべきです。
 しかし、このガイドはほとんどが他のカーネルに引き継ぐべきです。
 
-## BredOS カーネルリポジトリ
+## 1. BredOS カーネルリポジトリ
 
 BredOS は `linux-rockchip` カーネルフォークを格納します:
 https://github.com/BredOS/linux-bredos
 
 rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
 メインラインの variant は `rk-mainline` になります。
+rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
+メインラインの variant は `rk-mainline` になります。
 メインラインの variant は `rk-mainline` になります。
 
-## BredOS kernel PKGBUILD
+## 2. BredOS kernel PKGBUILD
 
 カーネルはビルドされており、PKGBUILD のパッケージは
 https://github.com/BredOS/sbc-pkgbuilds
 
-## カーネルのビルド
+## 3. カーネルのビルド
 
 ARMシステムの下で, just :
 
@@ -44,14 +46,14 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 
 `arch/arm64/boot/`ディレクトリに画像が表示されます。
 
-## 重要なディレクトリ
+## 4. 重要なディレクトリ
 
 `sbc-pkgbuilds` リポジトリ内には、 `linux-rockchip-rkr3` という名前のフォルダがあります。
 ビルド中はカレント作業ディレクトリとして使用する必要があります。
 ビルド中はカレント作業ディレクトリとして使用する必要があります。
 
-## デバイスツリーとオーバーレイのコンパイル
+## 5. デバイスツリーとオーバーレイのコンパイル
 
 `dtsc`を使用するための完全なガイドが、DTBとDTBOをコンパイルするためのブレッドOSツールが利用可能になりました。
 [here]/Tools#dtsc-helper-script) をクリックして表示します。
-[here](/en/Tools#dtsc-helper-script) をクリックして表示します。
+[here](/Tools#dtsc-helper-script) をクリックして表示します。

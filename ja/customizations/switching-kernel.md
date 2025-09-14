@@ -2,7 +2,7 @@
 title: カーネルの切り替え
 description:
 published: true
-date: 2024-12-05T20:07:16.898Z
+date: 2025-09-14T10:26:11.108Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -13,7 +13,7 @@ dateCreated: 2024-12-04T15:50:46.861Z
 デフォルトでは、ほとんどのデバイスは `linux-rockchip-rkr3` カーネルを搭載しています。
 しかし、別のカーネルから切り替えたり、別のカーネルに切り替えたりしたいかもしれません。
 これを行うには、最初にインストールしたカーネルを確認してください:
-しかし、別のカーネルから切り替えたり、別のカーネルに切り替えたりしたいかもしれません。
+ただし、別のカーネルやカーネルに切り替えたい場合があります。
 これを行うには、最初にインストールしたカーネルを確認してください:
 
 ```
@@ -46,52 +46,94 @@ local/util-linux-libs 2.40.2-1
 
 ## 1. インストールされたカーネルを削除
 
+上記の場合、コマンドは次のようになります:
+
 ```
 sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 ```
 
-この時点から、リブートすることはできません。
+> この時点から、リブートすることはできません。
+> {.is-danger}
 
 ## 2. 新しいカーネルをインストールします。
 
+選択したカーネルパッケージに`<your-new-kernel>`と`<your-new-kernel-headers>`を置き換えます。
+
 ```
-sudo pacman -S your-new-kernel your-new-kernel-headers
+sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-カーネルパッケージはinitramfsイメージを生成します。 インストールログからファイル名を確認できます: インストールログからファイル名を確認できます:
+カーネルパッケージはドラクト画像を生成します。 インストールログからファイル名を確認できます:
 
 ```
 (14/30) Updating linux initcpios...
-==> Building image from preset: /etc/mkinitcpio.d/linux-rockchip-rkr3.preset: 'default'
-==> Using configuration file: '/etc/mkinitcpio.conf'
-  -> -k /boot/vmlinuz-linux-rockchip-rkr3 -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-rockchip-rkr3.img
-==> Starting build: '6.1.75-rkr3'
-  -> Running build hook: [base]
-  -> Running build hook: [udev]
-  -> Running build hook: [autodetect]
-  -> Running build hook: [modconf]
-  -> Running build hook: [kms]
-  -> Running build hook: [keyboard]
-  -> Running build hook: [keymap]
-  -> Running build hook: [consolefont]
-==> WARNING: consolefont: no font found in configuration
-  -> Running build hook: [block]
-  -> Running build hook: [filesystems]
-  -> Running build hook: [fsck]
-==> Generating module dependencies
-==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-rockchip-rkr3.img'
-==> Initcpio image generation successful
+:: Building initramfs for linux-rockchip-rkr3 (6.1.75-rkr3)
+dracut[I]: Executing: /usr/bin/dracut --force --hostonly --no-hostonly-cmdline /boot/initramfs-linux-rockchip-rkr3.img 6.1.75-rkr3
+dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: *** Including module: bash ***
+dracut[I]: *** Including module: systemd ***
+dracut[I]: *** Including module: systemd-ask-password ***
+dracut[I]: *** Including module: systemd-battery-check ***
+dracut[I]: *** Including module: systemd-cryptsetup ***
+dracut[I]: *** Including module: systemd-initrd ***
+dracut[I]: *** Including module: systemd-journald ***
+dracut[I]: *** Including module: systemd-modules-load ***
+dracut[I]: *** Including module: systemd-pcrphase ***
+dracut[I]: *** Including module: systemd-sysctl ***
+dracut[I]: *** Including module: systemd-tmpfiles ***
+dracut[I]: *** Including module: systemd-udevd ***
+dracut[I]: *** Including module: i18n ***
+dracut[I]: *** Including module: systemd-sysusers ***
+dracut[I]: *** Including module: btrfs ***
+dracut[I]: *** Including module: crypt ***
+dracut[I]: *** Including module: dm ***
+dracut[I]: *** Including module: fs-lib ***
+dracut[I]: *** Including module: kernel-modules ***
+dracut[I]: *** Including module: kernel-modules-extra ***
+dracut[I]: *** Including module: mdraid ***
+dracut[I]: *** Including module: qemu ***
+dracut[I]: *** Including module: qemu-net ***
+dracut[I]: *** Including module: hwdb ***
+dracut[I]: *** Including module: lunmask ***
+dracut[I]: *** Including module: rootfs-block ***
+dracut[I]: *** Including module: terminfo ***
+dracut[I]: *** Including module: udev-rules ***
+dracut[I]: *** Including module: virtiofs ***
+dracut[I]: *** Including module: dracut-systemd ***
+dracut[I]: *** Including module: initqueue ***
+dracut[I]: *** Including module: usrmount ***
+dracut[I]: *** Including module: base ***
+dracut[I]: *** Including module: shell-interpreter ***
+dracut[I]: *** Including module: shutdown ***
+dracut[I]: *** Including module: btrfs-snapshot-overlay ***
+dracut[I]: *** Including modules done ***
+dracut[I]: *** Installing kernel module dependencies ***
+dracut[I]: *** Installing kernel module dependencies done ***
+dracut[I]: *** Resolving executable dependencies ***
+dracut[I]: *** Resolving executable dependencies done ***
+dracut[I]: *** Store current command line parameters ***
+dracut[I]: *** Stripping files ***
+dracut[I]: *** Stripping files done ***
+dracut[I]: *** Creating image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' ***
+dracut[I]: *** Hardlinking files ***
+dracut[I]: *** Hardlinking files done ***
+dracut[I]: Using auto-determined compression method 'zstd'
+dracut[I]: *** Creating initramfs image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' done ***
+dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' ***
+dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3` カーネルは `/boot/initramfs-linux-rockchip-rkr3.img` initramfs イメージを生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。
+`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。
 
 ## 3. ブートローダーの設定を更新する
 
-ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
+> ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
+> {.is-warning}
 
-### U-Boot
+### 3.1 U-Boot
 
-これは、UEFIがボードにある場合は、UEFIで起動しないデバイスにのみ適用されます。そのセクションにスキップしてください。
+**これは、UEFIがボードにある場合は、UEFIで起動しないデバイスにのみ適用されます。そのセクションにスキップしてください。**
 
 `/boot/extlinux/extlinux.conf`を編集:
 
@@ -118,13 +160,19 @@ label BredOS ARM
 
 ```
 ls /boot/
+dtbs  
+efi  
+extlinux  
+grub  
+initramfs-linux-rockchip-rkr3.img  
+vmlinuz-linux-rockchip-rkr3
 ```
 
-### UEFI
+### 3.2 UEFI
 
-このセクションは UEFI で起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。
+**このセクションはUEFIで起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。**
 
-実行:
+grub.cfg を再生成するには、以下を実行します。
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -132,4 +180,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 4. Reboot
 
-完了したら、安全に新しいカーネルに再起動できます。
+> 完了したら、安全に新しいカーネルに再起動できます。
+> {.is-success}

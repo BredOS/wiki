@@ -2,7 +2,7 @@
 title: 如何从 NVMe 驱动器启动
 description: 本指南显示如何从NVMe驱动器启动程序
 published: true
-date: 2025-03-05T18:13:00.890Z
+date: 2025-09-13T12:27:51.814Z
 tags: 五岩石，五岩，五岩，nvme
 editor: markdown
 dateCreated: 2024-09-21T09：09：29.723Z
@@ -16,23 +16,23 @@ dateCreated: 2024-09-21T09：09：29.723Z
 
 ---
 
-## 🔄 步骤 1: 更新 UEFI 固件
+## 🔄 1. 更新 UEFI 固件
 
 首先，请确保您已安装最新的 UEFI 固件。 您可以轻松地从 BredOS 仓库安装所需的软件包。 您可以轻松地从 BredOS 仓库安装所需的软件包。
 
-对于**Rock 5B Plus**，请使用以下命令：
+对于**Rock 5B**，请使用以下命令：
 
 ```bash
 sudo pacman -Sy rock-5b-uefi
 ```
 
-对于**Rock 5B**，请使用：
+对于**Rock 5B Plus**，请使用：
 
 ```bash
 sudo pacman -Sy rock-5bplus-uefi
 ```
 
-## 📦 step 2: Flash UEFI to SPI
+## 📦 2. 刷入 UEFI 到 SPI
 
 接下来，你需要刷入 UEFI 固件到你设备的 SPI 内存。
 
@@ -48,7 +48,7 @@ sudo dd if=/usr/share/edk2/rock-5bplus/rock-5bplus_UEFI_Release_latest.img of=/d
 sudo dd if=/usr/share/edk2/rock-5b/rock-5b_UEFI_Release_latest.img of=/dev/mtdblock0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-## 📥 第 3 步: 将 BredOS 图像写入到 NVMe
+## 📥 3. 将 BredOS 图像写入 NVMe
 
 一旦UEFI被刷新，您需要从 [Images](https://github.com/BredOS/images/releases) 仓库下载最新的 BredOS 图像。 解压缩图像文件，然后使用 `dd` 命令将图像写入您的 NVMe SSD 解压缩图像文件，然后使用 `dd` 命令将图像写入您的 NVMe SSD 解压缩图像文件，然后使用 `dd` 命令将图像写入您的 NVMe SSD
 

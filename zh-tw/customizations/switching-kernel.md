@@ -2,7 +2,7 @@
 title: Switching Kernel
 description:
 published: true
-date: 2024-12-05T20:07:16.898Z
+date: 2025-09-14T10:26:11.108Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -11,7 +11,7 @@ dateCreated: 2024-12-04T15:50:46.861Z
 # Installing a different kernel
 
 By default, most devices ship with the `linux-rockchip-rkr3` kernel.
-However you may wanna switch from another, or to another kernel.
+However you may want to switch from another, or to another kernel.
 To do this first please validate which kernel you have installed:
 
 ```
@@ -43,52 +43,94 @@ To install a different kernel, first remove the installed kernel, along with it'
 
 ## 1. Remove the installed kernel
 
+With the above case the command would be:
+
 ```
 sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 ```
 
-From this point on it's NOT SAFE TO REBOOT.
+> From this point on it's NOT SAFE TO REBOOT.
+> {.is-danger}
 
 ## 2. Proceed to install the new kernel
 
+Replace `<your-new-kernel>` and `<your-new-kernel-headers>` with the kernel package of your choice.
+
 ```
-sudo pacman -S your-new-kernel your-new-kernel-headers
+sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-The kernel package will generate an initramfs image. You can find it's filename from the install log:
+The kernel package will generate an dracut image. You can find it's filename from the install log:
 
 ```
 (14/30) Updating linux initcpios...
-==> Building image from preset: /etc/mkinitcpio.d/linux-rockchip-rkr3.preset: 'default'
-==> Using configuration file: '/etc/mkinitcpio.conf'
-  -> -k /boot/vmlinuz-linux-rockchip-rkr3 -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-rockchip-rkr3.img
-==> Starting build: '6.1.75-rkr3'
-  -> Running build hook: [base]
-  -> Running build hook: [udev]
-  -> Running build hook: [autodetect]
-  -> Running build hook: [modconf]
-  -> Running build hook: [kms]
-  -> Running build hook: [keyboard]
-  -> Running build hook: [keymap]
-  -> Running build hook: [consolefont]
-==> WARNING: consolefont: no font found in configuration
-  -> Running build hook: [block]
-  -> Running build hook: [filesystems]
-  -> Running build hook: [fsck]
-==> Generating module dependencies
-==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-rockchip-rkr3.img'
-==> Initcpio image generation successful
+:: Building initramfs for linux-rockchip-rkr3 (6.1.75-rkr3)
+dracut[I]: Executing: /usr/bin/dracut --force --hostonly --no-hostonly-cmdline /boot/initramfs-linux-rockchip-rkr3.img 6.1.75-rkr3
+dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
+dracut[I]: *** Including module: bash ***
+dracut[I]: *** Including module: systemd ***
+dracut[I]: *** Including module: systemd-ask-password ***
+dracut[I]: *** Including module: systemd-battery-check ***
+dracut[I]: *** Including module: systemd-cryptsetup ***
+dracut[I]: *** Including module: systemd-initrd ***
+dracut[I]: *** Including module: systemd-journald ***
+dracut[I]: *** Including module: systemd-modules-load ***
+dracut[I]: *** Including module: systemd-pcrphase ***
+dracut[I]: *** Including module: systemd-sysctl ***
+dracut[I]: *** Including module: systemd-tmpfiles ***
+dracut[I]: *** Including module: systemd-udevd ***
+dracut[I]: *** Including module: i18n ***
+dracut[I]: *** Including module: systemd-sysusers ***
+dracut[I]: *** Including module: btrfs ***
+dracut[I]: *** Including module: crypt ***
+dracut[I]: *** Including module: dm ***
+dracut[I]: *** Including module: fs-lib ***
+dracut[I]: *** Including module: kernel-modules ***
+dracut[I]: *** Including module: kernel-modules-extra ***
+dracut[I]: *** Including module: mdraid ***
+dracut[I]: *** Including module: qemu ***
+dracut[I]: *** Including module: qemu-net ***
+dracut[I]: *** Including module: hwdb ***
+dracut[I]: *** Including module: lunmask ***
+dracut[I]: *** Including module: rootfs-block ***
+dracut[I]: *** Including module: terminfo ***
+dracut[I]: *** Including module: udev-rules ***
+dracut[I]: *** Including module: virtiofs ***
+dracut[I]: *** Including module: dracut-systemd ***
+dracut[I]: *** Including module: initqueue ***
+dracut[I]: *** Including module: usrmount ***
+dracut[I]: *** Including module: base ***
+dracut[I]: *** Including module: shell-interpreter ***
+dracut[I]: *** Including module: shutdown ***
+dracut[I]: *** Including module: btrfs-snapshot-overlay ***
+dracut[I]: *** Including modules done ***
+dracut[I]: *** Installing kernel module dependencies ***
+dracut[I]: *** Installing kernel module dependencies done ***
+dracut[I]: *** Resolving executable dependencies ***
+dracut[I]: *** Resolving executable dependencies done ***
+dracut[I]: *** Store current command line parameters ***
+dracut[I]: *** Stripping files ***
+dracut[I]: *** Stripping files done ***
+dracut[I]: *** Creating image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' ***
+dracut[I]: *** Hardlinking files ***
+dracut[I]: *** Hardlinking files done ***
+dracut[I]: Using auto-determined compression method 'zstd'
+dracut[I]: *** Creating initramfs image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' done ***
+dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' ***
+dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-rkr3.img` initramfs image. Other kernels will produce different filenames.
+The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-rkr3.img` dracut image. Other kernels will produce different filenames.
 
 ## 3. Update bootloader config
 
-If during board power-on you see a BredOS logo, you are using UEFI.
+> If during board power-on you see a BredOS logo, you are using UEFI.
+> {.is-warning}
 
-### U-Boot
+### 3.1 U-Boot
 
-This only applies to devices that don't boot with a UEFI, if you have UEFI on your board, skip to that section.
+**This only applies to devices that don't boot with a UEFI, if you have UEFI on your board, skip to that section.**
 
 Edit `/boot/extlinux/extlinux.conf`:
 
@@ -113,13 +155,19 @@ To verify the filename is correct, you can list the contents of `/boot/`:
 
 ```
 ls /boot/
+dtbs  
+efi  
+extlinux  
+grub  
+initramfs-linux-rockchip-rkr3.img  
+vmlinuz-linux-rockchip-rkr3
 ```
 
-### UEFI
+### 3.2 UEFI
 
-This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.
+**This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.**
 
-Run:
+Run the following to regenerate the grub.cfg:
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -127,4 +175,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 4. Reboot
 
-Once done, you can safely reboot into the new kernel.
+> Once done, you can safely reboot into the new kernel.
+> {.is-success}

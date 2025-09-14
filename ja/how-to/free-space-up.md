@@ -100,7 +100,7 @@ sudo journalctl --vacuum-time=3d
 
 ## ユーザーキャッシュをクリア 🏠
 
-システムを使用すると、キャッシュはホームディレクトリに蓄積されます。 キャッシュフォルダのサイズは次のとおりです。 キャッシュサイズを確認する :streate_ruler:
+システムを使用すると、キャッシュはホームディレクトリに蓄積されます。 キャッシュフォルダのサイズは次のとおりです。 場合によっては、大きなファイルが不必要にスペースを占有することがあります。 それらを識別するために使用できるツールは次のとおりです。 それらを識別するために使用できるツールは次のとおりです。
 
 ```bash
 sudo du -sh ~/.cache/
@@ -142,9 +142,13 @@ rm -rf ~/.cache/*
 
 - **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`
 
