@@ -2,7 +2,7 @@
 title: First setup (Bakery)
 description: This short guide will guide you through all the bakery options
 published: true
-date: 2025-09-14T08:22:38.477Z
+date: 2025-09-14T08:29:10.971Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -57,8 +57,8 @@ Now that the dough has risen and the oven is hot, we pause to check that we did 
 ![11-scaled.png](/first-setup/11-scaled.png)
 Please check that everything is included: flour, water, salt, and yeast. Was the kneading done properly? Did we let the dough rise long enough? If everything is okay, hit 'Install'.
 ### 2.7 There is no better smell than fresh Bred
-![13-scaled.png](/first-setup/13-scaled.png)
 Now grab a coffee or tea and stare into the oven for a while. Reflect on what you’ve learned in the Bakery while the pleasant smell of Bred tickles your nose. Enjoy this waiting time with eager anticipation as your Bred finishes baking.
+![13-scaled.png](/first-setup/13-scaled.png)
 
 ### 2.8 Enjoy your Bred
 Serve your Bred however you like it — plain, with cheese and marmalade, a generous amount of sriracha sauce, or with a nice, fresh fried egg. We know that Bred can be enjoyed in countless ways, and we love them all.
