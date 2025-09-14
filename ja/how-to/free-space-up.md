@@ -144,9 +144,13 @@ rm -rf ~/.cache/*
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
