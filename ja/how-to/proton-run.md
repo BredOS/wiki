@@ -2,7 +2,7 @@
 title: Proton-run
 description: BredOS `proton-run` スクリプトの使用方法を簡単に説明します。
 published: true
-date: 2025-09-13T09:47:37.755Z
+date: 2025-07-22T00:13:45.447Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T14:44:47.710Z
@@ -10,12 +10,12 @@ dateCreated: 2025-05-07T14:44:47.710Z
 
 # windows アプリの実行にproton-runを使用する
 
-「proton-run」ツールは最近リリースされたパッケージで、SteamのProton Experimentalを使用して、BredOS ARM64の下でx86_64のWindowsアプリケーションを実行することができます。
+`proton-run`は最近リリースされたパッケージで、SteamのProton Experimentalを使ってBredOS ARM64の下でx86_64のWindowsアプリケーションを実行することができます。
 
 ## 1. 要件
 
 - An RK3588 system running BredOS.
-- スチーム。 スチーム。 ([Guide here](/how-to/how-to-install-steam))
+- スチーム。 スチーム。 スチーム。 ([Guide here](/how-to/how-to-install-steam))
 
 ## 2. インストール
 
@@ -25,7 +25,7 @@ Steamを開き、`Library`に移動します。 検索バーをクリックし�
 
 ### 2.2 proton-runのインストール
 
-コマンドで `proton-run` をインストールする
+`proton-run`を使う
 
 ```
 yay -S proton-run
