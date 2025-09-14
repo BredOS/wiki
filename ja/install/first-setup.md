@@ -1,8 +1,8 @@
 ---
 title: 最初のセットアップ（ベーカリー）
-description: この短いガイドはすべてのパン屋のオプションをご案内します。
+description:
 published: true
-date: 2025-09-14T08:29:10.971Z
+date: 2025-09-14T12:23:40.368Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
