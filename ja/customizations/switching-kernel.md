@@ -2,7 +2,7 @@
 title: カーネルの切り替え
 description:
 published: true
-date: 2025-09-14T10:26:11.108Z
+date: 2025-09-13T10:25:41.121Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -63,7 +63,7 @@ sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-カーネルパッケージはドラクト画像を生成します。 インストールログからファイル名を確認できます:
+カーネルパッケージはドラクト画像を生成します。 インストールログからファイル名を確認できます: インストールログからファイル名を確認できます:
 
 ```
 (14/30) Updating linux initcpios...
@@ -124,7 +124,7 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。
+`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。
 
 ## 3. ブートローダーの設定を更新する
 
@@ -170,7 +170,7 @@ vmlinuz-linux-rockchip-rkr3
 
 ### 3.2 UEFI
 
-**このセクションはUEFIで起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。**
+**このセクションはUEFIで起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。** 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。\*\*
 
 grub.cfg を再生成するには、以下を実行します。
 
