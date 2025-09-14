@@ -2,7 +2,7 @@
 title: How to use your device as a wireless hotspot
 description:
 published: true
-date: 2025-09-13T10:44:39.156Z
+date: 2025-09-13T09:37:31.841Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
