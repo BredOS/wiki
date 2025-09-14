@@ -2,7 +2,7 @@
 title: 如何在 BredOS 上运行虚拟机
 description:
 published: true
-date: 2025-09-13T09:21:19.167Z
+date: 2024-12-10T22：18：35.474Z
 tags: vm, ho-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -54,7 +54,7 @@ sudo usermod -aG libvirt $(whoami)
 
 ## 第 4 步： 配置网络 :globe_with_meridians：
 
-`virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
+`virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
 
 ```bash
 sudo virsh net-start 默认
@@ -71,6 +71,7 @@ sudo virsh net-autostart
 
 这将打开`virt-manager`GUI，您可以在那里创建和管理虚拟机器。
 ![virt.jpg](/vms/virt.jpg)
+![virt.jpg](/vms/virt.jpg)
 
 ## 步骤6：启用 XML 编辑
 
@@ -84,15 +85,17 @@ sudo virsh net-autostart
    ![virt.jpg](/vms/virt.jpg)
 2. 点击**创建一个新的虚拟机器** ➕。
    ![virtnewvm.jpg](/vms/virtnewvm.jpg)
+   ![virtnewvm.jpg](/vms/virtnewvm.jpg)
 3. 选择安装源 (ISO 镜像或网络安装)。
+   ![newvm.jpg](/vms/newvm.jpg)
    ![newvm.jpg](/vms/newvm.jpg)
 4. 按照向导分配CPU、RAM和您的虚拟机存储。 ⚙️ ⚙️
 
 > On the RK3588 you can allocate max 4 cores per vm due to the little big architecture
 > {.is-warning}
 
-![cpuram.jpg](/vms/cpuram.jpg)
 ![disk.jpg](/vms/disk.jpg)
+![cpuram.jpg](/vms/cpuram.jpg)
 5. On CPUs with the little.big architecture like the RK3588 you need to check "Customize configuration before install" and edit the xml responsible for allocating cpu cores
 ![finalstep.jpg](/vms/finalstep.jpg)
 Click **Finish**
