@@ -1,8 +1,8 @@
 ---
 title: Bluetooth Fix (ITX-3588J)
 description: 
-published: false
-date: 2025-09-14T11:15:47.582Z
+published: true
+date: 2025-09-14T11:17:52.476Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
