@@ -2,7 +2,7 @@
 title: First setup (Bakery)
 description: This short guide will guide you through all the bakery options
 published: true
-date: 2025-09-14T08:14:58.223Z
+date: 2025-09-14T08:17:15.594Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -22,11 +22,11 @@ Bakery starts automatically on boot, as long as the setup hasn't been completed.
 ![1-scaled.png](/first-setup/1-scaled.png)
 
 ### 2.2 Bred is enjoyed all over the world
-Before we start our journey, we need to agree on how to communicate best. What language do you speak, what time format do you use, and what currency you are familiar with?
+Before we start our journey, we need to agree on how to communicate best. What language do you speak? What time format do you use? And what currency you are familiar with?
 ![2-scaled.png](/first-setup/2-scaled.png)
 Look up your prefered language and click on it. A window will then pop up where you can choose your locale. The time and date format, as well as your currency, should be filled in automatically. Please check them before continuing and feel free to adjust them to your preferences.
 
-### 2.3 About the knotting technice
+### 2.3 About the kneading technice
 Let's talk about kneading. Everyone is different, so there is no single 'true' kneading technique. To accommodate this, you can choose you technice based on your country.
 ![6-scaled.png](/first-setup/6-scaled.png)
 After you click on your country you can choose your layout. As the name suggests "Normal" is the layout most commonly used. If you are unsure use this. If you have an unusual keyboard, like those sold by Apple, choose the layout accordingly.
