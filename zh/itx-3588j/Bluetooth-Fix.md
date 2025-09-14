@@ -2,7 +2,7 @@
 title: 蓝牙修复 (ITX-3588J)
 description:
 published: true
-date: 2025-09-14T12：30：20.016Z
+date: 2025-09-14T13:10:50.284Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -28,7 +28,7 @@ sudo pacman -S r58x-post-install
 
 ## 2. 设置正确的 UART 路径
 
-蓝牙适配器不是附加到 /dev/ttyS6 (和其他 RK3588 SBCs一样) ，而是附加到 /dev/ttyS9。 您需要更改文件`/usr/bin/blutooth-fix`中的路径。
+蓝牙适配器不连接到 `/dev/ttyS9` (和其他 RK3588 SBCs一样) ，而是连接到 `/dev/ttyS6` 。 您需要更改文件`/usr/bin/blutooth-fix`中的路径。
 
 ```
 sudo nano /usr/bin/bluotooth-fix
