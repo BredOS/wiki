@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些功能的指南、教程和提示
 published: true
-date: 2025-09-13T10:07:51.326Z
+date: 2025-06-01T09:57:16.627Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -30,7 +30,7 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [📸🔄 使用 Timeshift 进行 Btrfs 快照和回滚](/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- [🖥️ 🔄 Switch Desktop Environments on BredOS](/how-to/switch-desktop-environments)
+- [🖥️ 🔄 切换桌面环境以使用 GNOME](/how-to/switch-desktop-environments)
 
 - [💾 🔄 如何在 RK3588 上更新 UEFI](/how-to/update-uefi-rk3588)
 
