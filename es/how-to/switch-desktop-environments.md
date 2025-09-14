@@ -2,7 +2,7 @@
 title: Cambiar entornos de escritorio en BredOS
 description: Aprende cómo instalar y cambiar al entorno de escritorio GNOME en BredOS
 published: true
-date: 2025-09-13T11:03:22.861Z
+date: 2025-09-13T10:07:12.684Z
 tags: personalización
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
@@ -11,6 +11,7 @@ dateCreated: 2025-02-23T15:13:50.035Z
 ## 🎨 1.1. Escritorio GNOME en BredOS
 
 El entorno de escritorio GNOME se puede instalar con el paquete `gnome`.\
+Para instalarlo, ejecutar:\
 Para instalarlo, ejecutar:
 
 ```
@@ -33,7 +34,7 @@ sudo systemctl deshabilita lightdm
 sudo systemctl habilitar gdm
 ```
 
-> Sólo se admite GNOME en Wayland.
+> 📝 **Nota:** Sólo se admite GNOME en Wayland.
 > {.is-warning}
 
 ---
@@ -76,6 +77,7 @@ Dentro de la aplicación:
 ## 🎨 2.1. Escritorio de plasma en BredOS
 
 El entorno de escritorio de Plasma se puede instalar con el paquete `plasma-desktop`.\
+Para instalarlo, ejecutar:\
 Para instalarlo, ejecutar:
 
 ```
