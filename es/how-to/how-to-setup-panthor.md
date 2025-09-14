@@ -2,7 +2,7 @@
 title: 🐾 Cómo configurar Panthor en Mali GPUs con RK3588
 description:
 published: true
-date: 2025-09-13T10:47:17.988Z
+date: 2025-09-13T09:17:09.327Z
 tags:
 editor: markdown
 dateCreated: 2024-31T15:03:26.994Z
@@ -31,8 +31,9 @@ Mientras que bredos-config es capaz de instalar dtbs y alterar la configuración
 
 ### 🦶 1.2 Manualmente
 
-Sigue la [Guía de la capa del árbol del dispositivo](/how-to/how-to-enable-dtbos) para habilitar
+Sigue la [Guía de la capa del árbol del dispositivo](/how-to/how-to-enable-dtbos) para activar
 `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`
+**¡No reinicie su sistema después de copiar el DTBO!**
 
 > ¡No reinicie su sistema después de la instalación de la superposición dtb!
 > {.is-warning}
