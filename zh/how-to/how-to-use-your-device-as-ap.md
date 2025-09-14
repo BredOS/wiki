@@ -2,7 +2,7 @@
 title: 如何使用您的设备作为无线热点
 description:
 published: true
-date: 2025-09-13T10：44：39.156Z
+date: 2025-09-13T09:37:31.841Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10：33：46.772Z
@@ -19,6 +19,9 @@ dateCreated: 2024-09-08T10：33：46.772Z
 - 📡 一个 Wi-Fi 适配器支持AP(接入点) 模式
 
 > 支持 AP (Access Point) 模式的适当设备包括Rock 5C，Rock 5B+， Khadas Edge 2, Khadas Vim 4, all Mekotronics R58 设备，以及Orange Pi 5B。
+> {.is-info}
+> {.is-info}
+> {.is-info}
 > {.is-info}
 
 ## 2. 创建热点
