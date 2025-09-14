@@ -12,7 +12,7 @@ dateCreated: 2022-08-24T12:37:36.410Z
 
 ## 🌟 Resumen
 
-¡Bienvenido a la documentación de BredOS! BredOS es una distribución de Linux basada en Ark específicamente diseñada para ordenadores de una sola placa (SBCs) basados en ARM y RISC-V.
+¡Bienvenido a la documentación de BredOS! La documentación le guiará a través de la instalación, configuración y uso de BredOS.
 La documentación le guiará a través de la instalación, configuración y uso de BredOS.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
