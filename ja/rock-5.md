@@ -29,8 +29,8 @@ dateCreated: 2024-09-21T09:12:56.606Z
 
 # Rock 5B用
 
-- /rock-5/how-to-boot-from-nvme
+- format@@0(/rock-5/how-to-boot-from-nvme)
 
 # Rock 5B Plus用
 
-- /rock-5/how-to-boot-from-nvme
+- format@@0(/rock-5/how-to-boot-from-nvme)
