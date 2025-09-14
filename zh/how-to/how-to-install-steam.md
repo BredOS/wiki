@@ -16,6 +16,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 > 这可能无法在所有设备上运行(主要是非RK3588设备)。
 > {.is-info}
+> {.is-info}
 
 - 您需要安装 **BredOS** 并运行。
 - 可选，您可以启用 [**Panthor** ](/how-to/how-to-setup-panthor)，但不需要它。
@@ -24,13 +25,13 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 ### 🤖 2.1 自动使用
 
-工具“bredos-config”提供了一个简单的方法来安装蒸汽和合适的蒸汽-libs。 启动工具为
+工具“bredos-config”提供了一个简单的方法来安装蒸汽和合适的蒸汽-libs。 启动工具为 启动工具为
 
 ```
 sudo bredos-config
 ```
 
-并导航到 `Packages` -> `Install Steam` 。 然后，Steam将被安装。 简单，对吗？
+并导航到 `Packages` -> `Install Steam` 。 然后，Steam将被安装。 简单，对吗？ 然后，Steam将被安装。 简单，对吗？
 
 ### 🦶 2.2 手动的
 
