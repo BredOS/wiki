@@ -64,4 +64,5 @@ sudo dd if =/path/to/bredos_image.img of=/dev/nvme0n1 bs=4M status=progress
 
 > NVMeから起動する際にSDカードやEMMCを接続しないでください。デバイスが起動しないようにします。
 > {.is-warning}
+> {.is-warning}
 
