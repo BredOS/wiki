@@ -2,7 +2,7 @@
 title: Kernel cambiante
 description:
 published: true
-date: 2025-09-14T10:26:11.108Z
+date: 2025-09-13T10:25:41.121Z
 tags:
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
@@ -60,7 +60,7 @@ Reemplaza `<your-new-kernel>` y `<your-new-kernel-headers>` por el paquete del n
 sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-El paquete del núcleo generará una imagen de dracut. Puede encontrar su nombre de archivo desde el registro de instalación:
+El paquete del núcleo generará una imagen de initramfs. Puede encontrar su nombre de archivo desde el registro de instalación:
 
 ```
 (14/30) Updating linux initcpios...
@@ -121,7 +121,7 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-El núcleo `linux-rockchip-rkr3` generó la imagen dracut `/boot/initramfs-linux-rockchip-rkr3.img`. Otros núcleos producirán diferentes nombres de archivo.
+El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\\\\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
 
 ## 3. Actualizar configuración del cargador de arranque
 
