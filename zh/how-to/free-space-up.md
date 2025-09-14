@@ -94,7 +94,7 @@ sudo journalctl --trainum-time=3d
 
 ## 使用 BleachBit 🧽
 
-**BleachBit** 是一个强大的工具，可以帮助您清理系统垃圾，空闲磁盘空间，并保护您的隐私。您可以了解更多关于如何使用 BleachBit [here](https://www.bleachbit.org/)。
+**BleachBit** 是一个强大的工具，可以帮助您清理系统垃圾，空闲磁盘空间，并保护您的隐私。 您可以了解更多关于如何使用 BleachBit [here](https://www.bleachbit.org/)。 您可以了解更多关于如何使用 BleachBit [here](https://www.bleachbit.org/)。 **BleachBit** 是一个强大的工具，可以帮助您清理系统垃圾，空闲磁盘空间，并保护您的隐私。您可以了解更多关于如何使用 BleachBit [here](https://www.bleachbit.org/)。
 
 ---
 
@@ -128,9 +128,11 @@ rm -rf ~/.cache/*
 
 - **gdu** - 控制台界面的磁盘使用情况分析器。\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`
 
 - **ncdu** - ncurses 磁盘使用情况分析器。\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
