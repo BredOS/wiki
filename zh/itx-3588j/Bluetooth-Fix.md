@@ -2,7 +2,7 @@
 title: 蓝牙修复 (ITX-3588J)
 description:
 published: true
-date: 2025-09-14T11:17:52.476Z
+date: 2025-09-14T12：30：20.016Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -55,7 +55,7 @@ brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download--tosleep 
 brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download --tosleep 200 000 --baudrate 150 000 --patchram/lib/firmware/ap6275p/BCM4362A2.hcd /dev/ttyS6
 ```
 
-### 3. 启用蓝牙服务
+## 3. 启用蓝牙服务
 
 最终我们需要启用 `蓝牙-mekotronics` 服务
 
