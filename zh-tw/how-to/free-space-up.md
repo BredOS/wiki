@@ -140,11 +140,6 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
 ### Graphical Tools 🖼️
 
 - **Filelight** — Interactive disk usage map with concentric rings.\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-  **Filelight** — Interactive disk usage map with concentric rings.\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **GNOME Disk Usage Analyzer (baobab)** — Disk usage analyzer for GNOME.\
