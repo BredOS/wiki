@@ -2,7 +2,7 @@
 title: Bluetooth Fix
 description: 
 published: false
-date: 2025-09-14T11:10:38.109Z
+date: 2025-09-14T11:13:11.265Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -18,6 +18,10 @@ sudo pacman -R itx-3588j-post-install
 ```
 
 After that install `r58x-post-install`. This packages does the same fix for standby as the above but has the service `bluetooth-mekotronics` included.
+
+```
+sudo pacman -S r58x-post-install
+```
 
 ## 2. Set correct UART path
 The Bluetooth adapter is not attached to /dev/ttyS6 (like on the other RK3588 SBCs), but to /dev/ttyS9. You need to change the path inside the file `/usr/bin/bluetooth-fix`.
@@ -43,7 +47,7 @@ brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download --tosleep
 ```
 
 ### 3. Enable bluetooth service
-At least we need to enable the service `bluetooth-mekotronics`
+At last we need to enable the service `bluetooth-mekotronics`
 
 ```
 sudo systemctl --now enable bluetooth-mekotronics
