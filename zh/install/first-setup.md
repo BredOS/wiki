@@ -2,7 +2,7 @@
 title: 首次设置 (Bakery)
 description:
 published: true
-date: 2025-09-14T12：23：40.368Z
+date: 2025-09-14T08:29:10.971Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -12,15 +12,16 @@ dateCreated: 2025-04-09T20:05:01.867Z
 
 ## 1. 简介
 
-欢迎来到Baker，它是混合物、 knead和只是你的 BredOS 最优质原料的地方， 随着面包，你将在整个过程中被引导，从挑选正确的面粉到最好的撞击技术到它需要增加的确切时间。 所以让我们开始吧！
+欢迎来到Baker，它是混合物、 knead和只是你的 BredOS 最优质原料的地方， 随着面包，你将在整个过程中被引导，从挑选正确的面粉到最好的撞击技术到它需要增加的确切时间。 所以让我们开始吧！ 随着面包，你将在整个过程中被引导，从挑选正确的面粉到最好的撞击技术到它需要增加的确切时间。 所以让我们开始吧！
 
 ## 2. 面包机
 
 ### 2.1 Warm Welcome
 
-只要安装程序尚未完成，面包就会在启动时自动启动。 还有一个桌面快捷键来启动它而不重启。 要开始安装，请选择在线安装或离线安装。
+只要安装程序尚未完成，面包就会在启动时自动启动。 还有一个桌面快捷键来启动它而不重启。 要开始安装，请选择在线安装或离线安装。 还有一个桌面快捷键来启动它而不重启。 要开始安装，请选择在线安装或离线安装。
 
 > 正在构建在线安装。 请使用离线安装。
+> {.is-info} 请使用离线安装。
 > {.is-info}
 
 ![1-scaled.png](/first-setup/1-scaled.png)
@@ -31,11 +32,12 @@ dateCreated: 2025-04-09T20:05:01.867Z
 ![2-scaled.png](/first-setup/2-scaled.png)
 Look up your prefered language and click on it. 然后一个窗口将弹出您可以选择您的区域的位置。 时间和日期格式以及您的货币应自动填写。 请在继续之前检查它们，并随时根据您的偏好调整它们。
 
-### 2.3 关于膝上型技场
+### 2.3 关于敲击性技术公司
 
 让我们谈谈膝盖。 每个人都是不同的，因此没有单一的“true”膝盖技术。 为了适应这个问题，你可以根据你的国家选择你的技术技术。
+让我们谈论敲打。 所有人都是不同的，因此没有“true”撞击技术器。 在我们的说明中，您可以根据您的国家选择您的技术。
 ![6-scaled.png](/first-setup/6-scaled.png)
-After you click on your country you can choose your layout. 名称表示“正常”是最常用的布局。 如果您不确定，请使用它。 如果您有一个不寻常的键盘，就像那些由 Apple 出售的键盘一样，选择相应的布局。
+After you clicked on your country you can choose your layout. 名称表示“正常”是最常用的布局。 如果您不确定，请使用它。 如果您有一个不寻常的键盘，就像那些由 Apple 出售的键盘一样，选择相应的布局。 如果您不确定，请使用它。 如果您有一个不寻常的键盘，就像那些由 Apple 出售的键盘一样，选择相应的布局。
 
 > 使用文本栏测试您的布局。 当您必须输入密码时，这很重要！
 > {.is-info}
@@ -43,8 +45,9 @@ After you click on your country you can choose your layout. 名称表示“正�
 ### 2.4 上升的过程
 
 在这里的Bakery，我们怀着爱情工作。 我们完全承认，布赖德需要时间才能成为我们大家都熟悉的可爱产品。 为此，我们需要知道您的时区。
+在这里的Bakery，我们怀着爱情工作。 我们完全承认，布赖德需要时间才能成为我们大家都熟悉的可爱产品。 为此，我们需要知道您的时区。
 ![9-scaled.png](/first-setup/9-scaled.png)
-Select your Region and Zone using the dropdown menus. 您当前的时间应该在下方显示，以便您可以验证时间设置是否正确。
+Select your Region and Zone using the dropdown menus. 您当前的时间应该在下方显示，以确保时间设置正确。
 
 ### 2.5 当我们等待时，我们可以相互了解
 
@@ -55,6 +58,7 @@ Select your Region and Zone using the dropdown menus. 您当前的时间应该�
 如果您想要禁用密码保护为 sudo 和 polkit, 请切换相应切换。
 
 > 请注意，禁用密码保护允许在无密码的根级运行程序！ 此 \*\*can \*\* 是危险的 ！
+> {.is-danger} 此 \*\*can \*\* 是危险的 ！
 > {.is-danger}
 
 每个用户都有分配给他们的ID。 此ID由程序、文件系统等程序内部使用。 如果你想要的话，你可以改变它，但通常是没有必要的。
@@ -67,12 +71,12 @@ Select your Region and Zone using the dropdown menus. 您当前的时间应该�
 ！[11-scaled.png](/first-setup/11-scaled.png)
 请检查所有内容是否包含面粉、水、盐和青水。 膝盖是否做得适当？ 难道我们让艰难的崛起足够长的时间吗？ 如果一切都可以，请点击“安装”。
 
-### 2.7 最好的气味莫过鲜贝雷德。
+### 2.6 最好的气味莫过鲜蓝色的味道了
 
 现在抓取一杯咖啡或茶叶，然后一定时间拖入橄榄。 思考你在面包里学到的东西，同时又有令人愉快的口味你的鼻子。 在你的Bred 完成面包时，享受这个等候时间热切期待。
 ![13-scaled.png](/first-setup/13-scaled.png)
 
-### 2.8 享受你的红包
+### 2.7 享受你的红包
 
 不管你喜欢什么样的布赖特服务——平原，用奶酪和马马拉德服务， 一个慷慨的sriracha sauce,或带着一种新鲜的小鸡蛋。 我们知道，可以无数的方式享受红牌，我们热爱他们。
 ![15-scaled.png](/first-setup/15-scaled.png)
