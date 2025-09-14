@@ -130,13 +130,9 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
 
 - **gdu** — Analizador de uso de disco con interfaz de consola.\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
-  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
-  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses el analizador de uso de disco.\
-  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
-  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   **duc** — Un inspector de uso de disco.\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
@@ -148,9 +144,7 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
 
 - **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
@@ -160,7 +154,6 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
@@ -169,10 +162,7 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
 
 - **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   **qdirstat** — Herramienta de estadísticas de directorio basadas en Qt.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\

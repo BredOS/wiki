@@ -67,7 +67,6 @@ The kernel package will generate an dracut image. You can find it's filename fro
 :: Building initramfs for linux-rockchip-rkr3 (6.1.75-rkr3)
 dracut[I]: Executing: /usr/bin/dracut --force --hostonly --no-hostonly-cmdline /boot/initramfs-linux-rockchip-rkr3.img 6.1.75-rkr3
 dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
-dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
 dracut[I]: *** Including module: bash ***
 dracut[I]: *** Including module: systemd ***
 dracut[I]: *** Including module: systemd-ask-password ***

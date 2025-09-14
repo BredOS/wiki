@@ -42,7 +42,6 @@ local/util-linux-libs 240.2-1
 
 在列表中，我们可以看到linux-rockchip-rkr3和配对的头已安装。
 要安装另一个内核，请先移除已安装的内核及其头部。
-要安装另一个内核，请先移除已安装的内核及其头部。
 
 ## 1. 删除已安装的内核。
 
@@ -69,7 +68,6 @@ sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 (14/30) Updating linux initcpios...
 :: Building initramfs for linux-rockchip-rkr3 (6.1.75-rkr3)
 dracut[I]: Executing: /usr/bin/dracut --force --hostonly --no-hostonly-cmdline /boot/initramfs-linux-rockchip-rkr3.img 6.1.75-rkr3
-dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
 dracut[I]: 74nfs: Could not find any command of 'rpcbind portmap'!
 dracut[I]: *** Including module: bash ***
 dracut[I]: *** Including module: systemd ***

@@ -14,4 +14,4 @@ dateCreated: 2024-07-20T07:39:21.434Z
 
 変更を伴うプルリクエストを作成することで、ドキュメントに貢献することができます。
 
-[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg)](https://bredos.crowdin.com/wiki)
+[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg))](https://bredos.crowdin.com/wiki)

@@ -15,7 +15,7 @@ dateCreated: 2024-07-19T14:36:23.702Z
 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg))
 
 ## 📚 Table of Contents
 
@@ -54,7 +54,7 @@ BredOS 旨在為基於 ARM 的單板計算機用戶提供無縫且用戶友好�
 
 ## 📦 Package Management
 
-BredOS 使用 `pacman`，這是來自 Arch Linux 的軟件包管理器。 以下是一些常用命令： 以下是一些常用命令：
+BredOS 使用 `pacman`，這是來自 Arch Linux 的軟件包管理器。以下是一些常用命令：
 
 - 🔄 更新軟件包列表：`sudo pacman -Syu`
 - ➕ 安裝軟件包：`sudo pacman -S [package_name]`
@@ -100,7 +100,7 @@ A: Please make sure that:
 
 ## 🤝 Contributing
 
-BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻：
+BredOS 是一個開源項目，歡迎貢獻！您可以通過以下方式進行貢獻：
 
 - 🐛 Report bugs and issues
 - 💻 Submit patches and improvements

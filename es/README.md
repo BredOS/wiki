@@ -14,4 +14,4 @@ Este es el repositorio wiki para [BredOS]/home), una distribución Linux fácil 
 
 Puede contribuir a la documentación creando un pull request con sus cambios.
 
-[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg)](https://bredos.crowdin.com/wiki)
+[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg))](https://bredos.crowdin.com/wiki)

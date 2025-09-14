@@ -57,7 +57,7 @@ dateCreated: 2024-07-19T00:42:37.505Z
 
 - 点击 `🟢 安装驱动程序`：
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png)
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png))
 
 - 打开包含刷写工具的文件夹：`RKDevTool_Release_v2.96` 文件夹（请检查您已下载的版本名称）并执行工具 `RKDevTool.exe`。
 
@@ -67,7 +67,7 @@ dateCreated: 2024-07-19T00:42:37.505Z
   - 勾选 "Write by Address"
   - 点击 `RUN`，等待进程完成
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png))
 
 对于 Linux 用户，您可以使用 "rkdeveloptool" 刷写镜像到 eMMC 中。命令如下： 命令如下：
 
@@ -83,7 +83,7 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 3. 设置用户帐户和密码。
 4. 完成安装并重启设备。
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/breddOS_installer.jpg)
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/breddOS_installer.jpg))
 
 ## 🛠️ 初始配置
 
@@ -93,4 +93,4 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 - 🔄 使用软件包管理器更新系统
 - 🛠️ 根据需要安装额外的软件包
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg))

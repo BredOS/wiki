@@ -128,11 +128,9 @@ rm -rf ~/.cache/*
 
 - **gdu** - 控制台界面的磁盘使用情况分析器。\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
-  [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`
 
 - **ncdu** - ncurses 磁盘使用情况分析器。\
-  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 

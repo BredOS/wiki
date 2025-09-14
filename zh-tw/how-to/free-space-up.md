@@ -124,16 +124,13 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
 
 - **duc** — A disk usage inspector.\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
-  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — Disk usage analyzer with console interface.\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
-  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses disk usage analyzer.\
-  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
@@ -145,7 +142,6 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
 - **GNOME Disk Usage Analyzer (baobab)** — Disk usage analyzer for GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **GNOME Disk Usage Analyzer (baobab)** — Disk usage analyzer for GNOME.\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **GNOME Disk Usage Analyzer (baobab)** — Disk usage analyzer for GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\

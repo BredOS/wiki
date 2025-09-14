@@ -12,7 +12,6 @@ dateCreated: 2024-11T11:49:44.206Z
 
 本指南主要侧重于RK3588和`linux-rockchip-rkr3`内核。
 但本指南大多应传送到其他内核。
-但本指南大多应传送到其他内核。
 
 ## 1. BredOS 内核仓库
 
@@ -20,7 +19,6 @@ BredOS stores it's `linux-rockchip` kernel fork at:
 https://github.com/BredOS/linux-bredos
 
 用于rkr3内核的分支是 `rk6.1-rkr3` 。
-主线变量转为“rk-mainline”。
 主线变量转为“rk-mainline”。
 
 ## 2. BredOS kernel PKGBUILD
@@ -47,7 +45,6 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ## 4. 重要目录
 
 在 `sbc-pkgbuilds` 里有一个名为`linux-rockchip-rkr3`的文件夹。
-在构建过程中，它应作为当前的工作目录。
 在构建过程中，它应作为当前的工作目录。
 
 ## 5. 编译设备树和叠加
