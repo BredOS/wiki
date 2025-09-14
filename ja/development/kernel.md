@@ -20,8 +20,6 @@ https://github.com/BredOS/linux-bredos
 
 rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
 メインラインの variant は `rk-mainline` になります。
-rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
-メインラインの variant は `rk-mainline` になります。
 
 ## 2. BredOS kernel PKGBUILD
 
@@ -52,5 +50,4 @@ make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ## 5. デバイスツリーとオーバーレイのコンパイル
 
 `dtsc`を使用するための完全なガイドが、DTBとDTBOをコンパイルするためのブレッドOSツールが利用可能になりました。
-[here]/Tools#dtsc-helper-script) をクリックして表示します。
 [here](/Tools#dtsc-helper-script) をクリックして表示します。

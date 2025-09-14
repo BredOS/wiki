@@ -130,10 +130,6 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
 
 - **ncdu** — ncurses el analizador de uso de disco.\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
-  **duc** — Un inspector de uso de disco.\
-  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
-  **duc** — Un inspector de uso de disco.\
-  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
 
 ### Herramientas gráficas 🖼️
 
@@ -142,15 +138,6 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
 
 - **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
-  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
-  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
-  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
-  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 ---
 
