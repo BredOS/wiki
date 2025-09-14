@@ -2,7 +2,7 @@
 title: Corregir Bluetooth (ITX-3588J)
 description:
 published: true
-date: 2025-09-14T12:30:20.016Z
+date: 2025-09-14T13:10:50.284Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -28,7 +28,7 @@ sudo pacman -S r58x-post-install
 
 ## 2. Establecer ruta de UART correcta
 
-El adaptador Bluetooth no está conectado a /dev/ttyS6 (como en el otro RK3588 SBCs), sino a /dev/ttyS9. Necesitas cambiar la ruta dentro del archivo `/usr/bin/bluetooth-fix`.
+El adaptador Bluetooth no está conectado a `/dev/ttyS9` (como en el otro RK3588 SBCs), sino a `/dev/ttyS6`. Necesitas cambiar la ruta dentro del archivo `/usr/bin/bluetooth-fix`.
 
 ```
 sudo nano /usr/bin/bluetooth-fix
