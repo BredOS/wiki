@@ -1,14 +1,14 @@
 ---
-title: Bluetooth Fix
+title: Bluetooth Fix (ITX-3588J)
 description: 
 published: false
-date: 2025-09-14T11:13:11.265Z
+date: 2025-09-14T11:15:00.724Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
 ---
 
-# Bluetooth Fix
+# Bluetooth Fix (ITX-3588J)
 ## 1. Install r58x-post-install
 For now you have to replace a package with another one. This will not alter any behavouir of the itx-3588j but adds a service which will fix bluetooth at boottime.
 
