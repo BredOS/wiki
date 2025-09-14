@@ -2,7 +2,7 @@
 title: 如何在 RK3588 上更新 UEFI
 description: 学习如何更新基于RK3588的运行 BredOS 设备的 UEFI 固件
 published: true
-date: 2025-09-13T10:45:27.434Z
+date: 2025-09-13T09:29:13.931Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15：28：48.131Z
