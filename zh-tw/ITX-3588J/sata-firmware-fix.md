@@ -108,8 +108,6 @@ As simple as the title suggests:
 
 ```
 # sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
-flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
-flashrom is free software, get the source code at https://flashrom.org
 
 Using clock_gettime for delay loops (clk_id: 1, resolution: 1ns).
 Found Winbond flash chip "W25X40" (512 kB, SPI) on ch341a_spi.
