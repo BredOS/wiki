@@ -1,8 +1,8 @@
 ---
 title: 首次设置 (Bakery)
-description: 这个简短的指南将引导您完成所有的 Bakery 选项
+description:
 published: true
-date: 2025-09-14T08:29:10.971Z
+date: 2025-09-14T12：23：40.368Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
