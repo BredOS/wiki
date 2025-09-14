@@ -2,7 +2,7 @@
 title: カーネル改造中
 description:
 published: true
-date: 2025-09-13T10:54:24.895Z
+date: 2025-05-07T18:34:49.447Z
 tags:
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -19,6 +19,8 @@ dateCreated: 2024-11-11T11:49:44.206Z
 BredOS は `linux-rockchip` カーネルフォークを格納します:
 https://github.com/BredOS/linux-bredos
 
+rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
+メインラインの variant は `rk-mainline` になります。
 rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
 メインラインの variant は `rk-mainline` になります。
 rkr3 カーネルで使用されるブランチは `rk6.1-rkr3` です。
