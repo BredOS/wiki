@@ -64,4 +64,5 @@ sudo dd if=/path/to/bredos_image.img of=/dev/nvme0n1 bs=4M status=progress
 
 > 从NVMe启动时不要保持SD卡或EMMC连接，因为它会使您的设备启动失败！
 > {.is-warning}
+> {.is-warning}
 
