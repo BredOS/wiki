@@ -2,7 +2,7 @@
 title: Bluetooth Fix (ITX-3588J)
 description:
 published: true
-date: 2025-09-14T11:17:52.476Z
+date: 2025-09-14T12:30:20.016Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -55,7 +55,7 @@ Change the last line to `/dev/ttyS6`.
 brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download --tosleep 200000 --baudrate 1500000 --patchram /lib/firmware/ap6275p/BCM4362A2.hcd /dev/ttyS6
 ```
 
-### 3. Enable bluetooth service
+## 3. Enable bluetooth service
 
 At last we need to enable the service `bluetooth-mekotronics`
 
