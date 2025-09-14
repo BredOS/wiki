@@ -2,7 +2,7 @@
 title: Bluetooth Fix (ITX-3588J)
 description:
 published: true
-date: 2025-09-14T12:30:20.016Z
+date: 2025-09-14T13:10:50.284Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -28,7 +28,7 @@ sudo pacman -S r58x-post-install
 
 ## 2. 正しいUARTパスを設定
 
-Bluetooth アダプターは /dev/ttyS6 (他の RK3588 SBC のように) に接続されず、/dev/ttyS9 に接続されます。 `/usr/bin/bluetooth-fix` 内のパスを変更する必要があります。
+Bluetooth アダプターは `/dev/ttyS9` に接続されていません (他の RK3588 SBC のように)、`/dev/ttyS6` に接続されています。 `/usr/bin/bluetooth-fix` 内のパスを変更する必要があります。
 
 ```
 sudo nano /usr/bin/bluetooth-fix
