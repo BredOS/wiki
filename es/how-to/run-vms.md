@@ -1,8 +1,8 @@
 ---
-title: Cómo ejecutar máquinas virtuales en BredOS
+title: Ejecutar máquinas virtuales en BredOS
 description:
 published: true
-date: 2025-09-15T09:34:15.014Z
+date: 2025-09-15T11:13:57.999Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
