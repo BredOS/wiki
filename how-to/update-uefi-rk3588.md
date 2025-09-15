@@ -2,7 +2,7 @@
 title: How to Update UEFI on RK3588
 description: Learn how to update the UEFI firmware on RK3588-based devices running BredOS
 published: true
-date: 2025-09-15T09:39:39.423Z
+date: 2025-09-15T09:40:36.422Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
@@ -24,8 +24,7 @@ This will list all available UEFI firmware packages. Identify the correct packag
 - **For Rock 5B:** `rock-5b-uefi`
 - *(And others as listed in the output.)*
 
-# 2. Installing the Firmware
-
+# 2. Downloading the Firmware
 - Once you have identified the correct package for your device, install it using:
 
 ```
