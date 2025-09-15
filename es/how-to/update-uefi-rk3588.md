@@ -1,8 +1,8 @@
 ---
-title: Cómo actualizar UEFI en RK3588
+title: Actualizar UEFI en RK3588
 description: Aprenda cómo actualizar el firmware UEFI en dispositivos basados en RK35888 ejecutando BredOS
 published: true
-date: 2025-09-15T09:40:36.422Z
+date: 2025-09-15T11:14:54.063Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
