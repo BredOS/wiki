@@ -2,27 +2,32 @@
 title: 处理失败的磁盘
 description: S. M.A.R.T 数据和更换磁盘的指南
 published: true
-date: 2025-06-01T10:33:55.798Z
+date: 2025-09-15T06:55:36.088Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
 ---
 
-# 重要标签
+# 1. 重要标签
 
 本指南是从个人经历中收集到的一系列建议。
 在执行本指南中的任何命令时确保正确的理解和风险。
 数据丢失是可能的。
 
-# 报告失败
+# 2. 报告失败
 
 BredOS 新闻服务现在将报告连接的驱动器失败或损坏，并且提供了 S.M.A.R.T 数据。
 
 如果您已经从BredOS News链接到这个部分，头部到下面的部分。
 
-失败
+~~Failures~~
 
-# 查看S.M.A.R.T 数据 (HDD)
+> This section is under construction. Please reach out to us via Discord or Telegram — we're happy to help!
+> {.is-warning}
+
+# 3. S.M.A.R.T Data
+
+## 3.1 Viewing S.M.A.R.T Data (HDD)
 
 假设硬盘 `/dev/sda`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -33,7 +38,6 @@ sudo smartctl -a /dev/sda
 这将印制一份大量报告：
 
 ```
-[bill88t@prion | ~]> sudo smartctl -a /dev/sda
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -135,7 +139,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 - “SMART overall health 自我评估”，应为“PASSED”。 如果报告了任何其他值，应将驱动器替换为急速。 如果报告了任何其他值，应将驱动器替换为急速。
 - `重新分配Sector_Ct`，重新安置区的数目，如果一个以上的区域显示级联失败的可能性很大。
 
-# 查看S.M.A.R.T Data (NVME)
+## 3.2 Viewing S.M.A.R.T Data (NVME)
 
 假设NVME `/dev/nvme0`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -146,7 +150,6 @@ sudo smartctl -a /dev/nvme0
 假设NVME 支持 S.M.A.R.T，这将打印一个小报告：
 
 ```
-[bill88t@prion | ~]> sudo smartctl -a /dev/nvme0
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -221,7 +224,7 @@ No Self-tests Logged
 - “介质和数据完整性错误”，表明有相当大的闪光度。
 - `错误信息记录条目`, 通常表明有多少闪光区域被掩盖了零件刷入。
 
-# 我应该替换驱动器吗？
+## 3.3 Should I replace the drive?
 
 如果你只有少数(<5)移位区块，很可能会在一段时间内不再使用磁盘。
 使用几个剩余的 nvme 闪屏块也是很好的。
@@ -229,4 +232,7 @@ No Self-tests Logged
 
 然而，通过剩余的闪光或迅速迁移，数十个区段被烧毁是即将失败的迹象。
 
-由于剩余闪光或扇区耗尽，系统的性能将会迅速降解，文件系统像BTRFS 这样将被锁定。 拒绝执行写字，拒绝损坏磁盘。
+As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
+
+> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+> {.is-danger}
