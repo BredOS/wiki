@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-15T06:55:36.088Z
+date: 2025-09-15T09:04:50.217Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -13,6 +13,9 @@ dateCreated: 2025-06-01T10:33:55.798Z
 This guide is a set of tips gathered from personal experiences.
 Ensure proper understanding and risk when executing any commands from this guide.
 Data loss is possible.
+
+> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+> {.is-danger}
 
 # 2. Reported Failures
 
@@ -29,13 +32,13 @@ If you've been linked to this from BredOS News, head to the following section.
 
 ## 3.1 Viewing S.M.A.R.T Data (HDD)
 
-Assuming hard disk `/dev/sda`, to view it's S.M.A.R.T data, run:
+- Assuming hard disk `/dev/sda`, to view it's S.M.A.R.T data, run:
 
 ```
 sudo smartctl -a /dev/sda
 ```
 
-This will print out a large report:
+- This will print out a large report:
 
 ```
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
@@ -141,13 +144,13 @@ Out of all of this, the following data are important to look for:
 
 ## 3.2 Viewing S.M.A.R.T Data (NVME)
 
-Assuming NVME `/dev/nvme0`, to view it's S.M.A.R.T data, run:
+- Assuming NVME `/dev/nvme0`, to view it's S.M.A.R.T data, run:
 
 ```
 sudo smartctl -a /dev/nvme0
 ```
 
-Assuming the NVME supports S.M.A.R.T, this will print out a small report:
+- Assuming the NVME supports S.M.A.R.T, this will print out a small report:
 
 ```
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
@@ -233,5 +236,4 @@ However burning through spare flash or rapidly relocating dozens of sectors is h
 
 As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
 
-> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
-> {.is-danger}
+
