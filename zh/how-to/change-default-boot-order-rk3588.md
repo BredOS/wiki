@@ -1,8 +1,8 @@
 ---
-title: 如何更改RK3588 上的默认启动顺序
+title: 更改RK3588 上的启动订单
 description: 学习如何使用 UEFI 固件设置更改基于RK3588的设备上的默认启动订单
 published: true
-date: 2025-09-15T10:09:51.246Z
+date: 2025-09-15T11：15：39.364Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
