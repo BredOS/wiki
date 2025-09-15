@@ -2,7 +2,7 @@
 title: Switch Desktop Environments on BredOS
 description: Learn how to install and switch to the GNOME desktop environment on BredOS
 published: true
-date: 2025-09-15T09:57:55.728Z
+date: 2025-09-15T09:58:40.544Z
 tags: customization
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
@@ -66,10 +66,7 @@ Inside the application:
 - Tap the ⚙️ icon to open the extension settings.
 - Increase the **Set orientation offset** value to `1`.
 
----
 
-> Done! GNOME is now properly set up on BredOS.
-{.is-success}
 
 # 2. Plasma Desktop on BredOS
 ## 2.1 Intall KDE Plasma
