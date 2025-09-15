@@ -2,21 +2,31 @@
 title: Configurando Gobernadores
 description: Usando govctl para administrar los gobernadores del sistema
 published: true
-date: 2025-05-07T12:47:49.03Z
+date: 2025-09-15T06:42:25.101Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.03Z
 ---
 
-# Usando GovCtl
+# 1. Introducción
 
 BredOS envía por defecto la herramienta `govctl` en el paquete `bredos-govctl`.
 Está habilitado por defecto y ajustará el rendimiento de acuerdo a la potencia de la batería disponible.
 
+Esto debe ser instalado por defecto. Si no, instálalo con
+
+```
+sudo pacman -S bredos-govctl
+```
+
 La herramienta establecerá continuamente el gobernador a las configuraciones especificadas, anulaciones u otras herramientas no funcionarán.
 Desinstale el paquete si esto es un problema para su flujo de trabajo.
 
-## Comportamiento por defecto
+```
+sudo pacman -R bredos-govctl
+```
+
+## 1.1 Comportamiento por defecto
 
 GovCtl asegurará por defecto el máximo rendimiento en todos los dispositivos conectados, si no hay batería interna o el sistema está conectado.
 
@@ -28,29 +38,31 @@ Esto por ejemplo hará que los tableros RK3588 sólo funcionen a 300mHz.
 
 Si no le gustan los valores predeterminados, todos pueden ser cambiados.
 
-# Viendo estado del gobernador
+## 1.2 Ver estado del gobernador
 
 Para ver el gobernador aplicado actualmente, simplemente ejecuta `govctl`, el acceso root no es necesario.
 
 ```
-[bill88t@icu | ~]> govctl
+govctl
+```
 
+```
 -------------------------------
-Gobernador actualmente aplicado: performance
+Gobernador aplicado actualmente: performance
 -------------------------------
 
-uso: govctl [-h] [-g {powersave,conservative,performance}]
+usage: govctl [-h] [-g {powersave,conservative,performance}]
               [-b {powersave,conservative,performance}] [-e] [-d]
               [-p POWERSAVE_PERCENT]
 
-herramienta de configuración del Gobernador
+Herramienta de configuración del Gobernador
 
 opciones:
   -h, --help mostrar este mensaje de ayuda y salir de
   -g, --set-gobernador {powersave,conservative,performance}
                         Establecer gobernador deseado
   -b, --set-battery-governor {powersave,conservative,performance}
-                        Establecer el gobernador deseado mientras se ejecuta la batería
+                        Establecer gobernador deseado mientras se ejecuta la batería
   -e, --enable-battery-detection
                         Activar detección de estado de batería
   -d, --disable-battery-detection
@@ -59,9 +71,9 @@ opciones:
                         Porcentaje en el que los activadores de power save
 ```
 
-# Establecer un punto de ahorro de energía diferente
+## 1.3 Establecer un punto de ahorro de energía diferente
 
-Como indica el menú de ayuda, usando la opción `-p` te permitirá reconfigurar el punto en el que se aplicará `powersave`. Esto es por defecto del 20%, y puede establecerse entre el 1% y el 80%.
+Como indica el menú de ayuda, usando la opción `-p` te permitirá reconfigurar el punto en el que se aplicará el gobernador `powersave`. Por defecto, esto es del 20%, y puede establecerse entre el 1% y el 80%.
 
 Reconfigurar como sigue:
 
@@ -71,25 +83,22 @@ sudo govctl -p 30
 
 Esto lo pondría en marcha en un 30 %.
 
-# Cambiando el gobernador aplicado
+## 1.4 Cambiando el gobernador aplicado
 
 De forma predeterminada, cuando estén disponibles o no baterías, el sistema mantendrá el máximo rendimiento.
-Si desea aplicar un perfil de potencia más conservador por ejemplo, ejecute:
+La bandera `-g` establece el gobernador usado cuando se conecta. Si quieres que sea `conservador` mientras tu sistema está corriendo de energía:
 
 ```
 sudo govctl -g conservador
 ```
 
-Si en su lugar desea mantener el máximo rendimiento incluso cuando no está conectado, en su lugar ejecutar:
+La bandera `-b` establece el gobernador usado cuando **NOT** conectado. Si quieres que sea `performance` mientras tu sistema está funcionando de ejecución de la batería:
 
 ```
 rendimiento sudo govctl -b
 ```
 
-Bandera `-g` establece el gobernador usado cuando se conecta.
-Glag `-b` establece el gobernador usado cuando **NOT** conectado.
-
-# Deshabilitando la detección de batería
+## 1.5 Deshabilitando la detección de batería
 
 Deshabilitando la detección de batería con:
 
