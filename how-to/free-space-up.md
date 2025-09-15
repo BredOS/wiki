@@ -2,7 +2,7 @@
 title: Disk Space Cleanup Guide 
 description: This guide will walk you through several methods to reclaim disk space on your BredOS system.
 published: true
-date: 2025-09-15T06:49:29.513Z
+date: 2025-09-15T09:03:37.556Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-20T20:26:57.698Z
@@ -16,13 +16,13 @@ Over time, your system may accumulate unnecessary files that take up valuable sp
 When installing or updating packages, `pacman` keeps cached copies in `/var/cache/pacman/pkg/` to make reinstallation faster. However, these cached packages can accumulate and use up disk space.
 
 ## 2.1 Check Cache Size
-To see how big the package cache is, run:
+- To see how big the package cache is, run:
 ```
 du -sh /var/cache/pacman/pkg/
 ```
 
 ## 2.2 Manual Cleanup
-You can manually remove cached packages that are no longer installed with:
+- You can manually remove cached packages that are no longer installed with:
 ```
 sudo pacman -Sc
 ```
@@ -37,7 +37,7 @@ You can also use `paccache` to keep only the most recent 3 versions of each pack
    ```
    sudo nano /usr/share/libalpm/hooks/paccache.hook
    ```
-   Add the following content to the file:
+-  Add the following content to the file:
    ```
    [Trigger]
    Operation = Upgrade
@@ -54,13 +54,13 @@ You can also use `paccache` to keep only the most recent 3 versions of each pack
 - Save the file with **Ctrl + S** and exit with **Ctrl + X**.
 
 # 3. Clean Old Log Files
-System logs can take up a considerable amount of space over time. You can check the size of your logs with:
+- System logs can take up a considerable amount of space over time. You can check the size of your logs with:
 ```bash
 journalctl --disk-usage
 ```
 
 ## 3.1 Clean Up Old Logs
-To remove logs older than 3 days:
+- To remove logs older than 3 days:
 ```bash
 sudo journalctl --vacuum-time=3d
 ```
@@ -70,13 +70,13 @@ BleachBit is a powerful tool that helps you clean up system junk, free disk spac
 
 
 # 5. Clean User Cache
-As you use your system, caches will accumulate in your home directory. You can check the size of your cache folder with:
+- As you use your system, caches will accumulate in your home directory. You can check the size of your cache folder with:
 ```bash
 sudo du -sh ~/.cache/
 ```
 
 ## 5.1 Clean the Cache
-To remove all cache files:
+- To remove all cache files:
 ```bash
 rm -rf ~/.cache/*
 ```
