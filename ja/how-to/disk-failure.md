@@ -20,14 +20,14 @@ BredOS ニュースサービスは、添付され、S.M.A.R.Tデータを提示�
 
 BredOS News からこれにリンクされている場合は、次のセクションに進みます。
 
-~~Failures~~
+~~失敗~~
 
-> This section is under construction. Please reach out to us via Discord or Telegram — we're happy to help!
+> このセクションは建設中です。 DiscordまたはTelegramからお問い合わせください。喜んでお手伝いします！
 > {.is-warning}
 
-# 3. S.M.A.R.T Data
+# 3. S.M.A.R.T データ
 
-## 3.1 Viewing S.M.A.R.T Data (HDD)
+## 3.1 S.M.A.R.T データ (HDD) の表示
 
 ハード ディスク `/dev/sda` を仮定して、S.M.A.R.T データを表示します。
 
@@ -139,7 +139,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 - `SMART overall-health self-assessment` は、「パスワード」である必要があります。 他の値が報告された場合は、ドライブは急いで交換する必要があります。
 - `Reallocated_Sector_Ct` は、移転されたセクタの数です。これは、1 つ以上のセクタがあれば、カスケード失敗の重大なリスクを示します。
 
-## 3.2 Viewing S.M.A.R.T Data (NVME)
+## 3.2 S.M.A.R.T データ (NVME) の表示
 
 NVMe `/dev/nvme0` を仮定して、S.M.A.R.T データを表示します。
 
@@ -224,7 +224,7 @@ No Self-tests Logged
 - 重要なフラッシュ度を示す`メディアとデータ整合性エラー`。
 - `Error Information Log Entries` は通常、スペアフラッシュでマスクされたフラッシュ領域の数を示します。
 
-## 3.3 Should I replace the drive?
+## 3.3 ドライブを交換する必要がありますか?
 
 わずか数(<5)のセクタが移転されている場合、ディスクをしばらく使用し続けても大丈夫でしょう。
 いくつかのスペアnvmeフラッシュブロックを使用することも問題ありません。
@@ -232,7 +232,7 @@ No Self-tests Logged
 
 しかし、スペアフラッシュを燃やしたり、数十のセクタを急速に移動させたりすることは、しかし差し迫った失敗の兆候である。
 
-As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
+スペアフラッシュやセクタが不足すると、システムのパフォーマンスは急速に低下し、BTRFSのようなファイルシステムはロックアップされます。 書き込みを拒否してディスクが壊れないようにする
 
-> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+> 失敗したディスクを回復する際にChatGPTやその他のLLMを**信頼しない**。 あなたはがっかりするでしょう！
 > {.is-danger}
