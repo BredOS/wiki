@@ -1,8 +1,8 @@
 ---
-title: DRMで保護されたコンテンツを再生する方法(widevineをインストール)
+title: DRMで保護されたコンテンツを再生します(widevineをインストール)
 description: Widevine プラグインをインストールすることで、DRMで保護されたコンテンツをブレッドOS上で再生できるようにする方法を学びます。
 published: true
-date: 2025-09-15T09:17:04.241Z
+date: 2025-09-15T11:13:42.081Z
 tags:
 editor: markdown
 dateCreated: 2024-08-28T05:58:27.563Z
