@@ -2,13 +2,13 @@
 title: Configuring Governors
 description: Using govctl to manage system governors
 published: true
-date: 2025-09-15T06:41:44.601Z
+date: 2025-09-15T06:42:25.101Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
 ---
 
-# 1. GovCtl
+# 1. Introduction
 
 BredOS ships by default the tool `govctl` in package `bredos-govctl`.
 It is enabled by default and will set the performance according to available battery power.
