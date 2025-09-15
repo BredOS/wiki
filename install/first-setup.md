@@ -1,8 +1,8 @@
 ---
-title: First setup (Bakery)
+title: First setup (Device Specific Image)
 description: 
 published: true
-date: 2025-09-14T12:23:40.368Z
+date: 2025-09-15T12:37:28.315Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
