@@ -20,14 +20,14 @@ El servicio BredOS News informará ahora sobre unidades dañadas o defectuosas q
 
 Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección.
 
-~~Failures~~
+~~Fallo~~
 
-> This section is under construction. Please reach out to us via Discord or Telegram — we're happy to help!
+> Esta sección está en construcción. Por favor, contacta con nosotros a través de Discord o Telegram — ¡estaremos encantados de ayudar!
 > {.is-warning}
 
-# 3. S.M.A.R.T Data
+# 3. Datos S.M.A.R.T
 
-## 3.1 Viewing S.M.A.R.T Data (HDD)
+## 3.1 Visualización de datos S.M.A.R.T (HDD)
 
 Asumiendo el disco duro `/dev/sda`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -139,7 +139,7 @@ De todo esto, los siguientes datos son importantes para buscar:
 - `SMART overall-health self-assessment`, que debe ser "PASSED". Si se informa de cualquier otro valor, la unidad debe ser reemplazada con prise.
 - `Reallocated_Sector_Ct`, el número de sectores reubicados, que si es más de uno solo indica un riesgo significativo de fallo en cascada.
 
-## 3.2 Viewing S.M.A.R.T Data (NVME)
+## 3.2 Ver datos de S.M.A.R.T (NVME)
 
 Asumiendo NVME `/dev/nvme0`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -224,14 +224,14 @@ Aquí, los únicos valores importantes son:
 - `Media and Data Integrity Errors`, que indican una significativa gradación del flash.
 - `Entradas de registro de información de errores`, que generalmente indican cuántas regiones de flash han sido enmascaradas con la flash.
 
-## 3.3 Should I replace the drive?
+## 3.3 ¿Debo reemplazar la unidad?
 
 Si tienes sólo unos pocos sectores (<5) reubicados, probablemente esté bien seguir usando el disco durante un tiempo.
 También es correcto usar algunos bloques de flash nvme de sobra.
 
 Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas de sectores es sin embargo una señal de un fracaso inminente.
 
-As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
+A medida que se acabe el flash libre o los sectores, el rendimiento del sistema se degradará rápidamente y los sistemas de archivos como BTRFS se bloquearán, negándose a realizar escrituras para asegurarse de que no corrompe el disco.
 
-> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+> **no** confíe en ChatGPT o en cualquier otro LLMs con la recuperación de discos fallidos. ¡Le decepcionará!
 > {.is-danger}
