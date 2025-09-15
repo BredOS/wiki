@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
 ---
 
-# 1. Introduction
+# 1. 簡介
 
 This guide walks you through the steps to enable Panthor on Mali GPUs present in boards with the RK3588 chipset.
 
