@@ -2,7 +2,7 @@
 title: Configuring Governors
 description: Using govctl to manage system governors
 published: true
-date: 2025-09-15T09:00:52.702Z
+date: 2025-09-15T09:02:10.135Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
@@ -80,11 +80,11 @@ This would set it to trigger at 30%.
 ## 1.4 Changing the applied governor
 
 By default, when plugged in or no batteries are present, the system will maintain maximum performance.
-- The flag `-g` sets the governor used when plugged in. If you want it to be `conservative` while your system is running of of power run:
+- The flag `-g` sets the governor used when plugged in. If you want it to be `conservative` while your system is running off of power run:
 ```
 sudo govctl -g conservative
 ```
-- The flag `-b` sets the governor used when **NOT** plugged in. If you want it to be `performance` while your system is running of of battery run:
+- The flag `-b` sets the governor used when **NOT** plugged in. If you want it to be `performance` while your system is running off of battery run:
 
 ```
 sudo govctl -b performance
