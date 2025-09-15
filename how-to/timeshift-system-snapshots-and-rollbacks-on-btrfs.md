@@ -2,13 +2,11 @@
 title: Btrfs Snapshots and Rollbacks with Timeshift 
 description: A comprehensive guide on setting up Btrfs snapshots and system rollbacks using Timeshift
 published: true
-date: 2025-09-15T06:34:07.624Z
+date: 2025-09-15T06:42:06.168Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T19:19:08.209Z
 ---
-
-# Btrfs Snapshots and Rollbacks with Timeshift 
 
 # 1. Introduction  
 The snapshot feature of the Btrfs filesystem can be used to perform system snapshots and rollbacks. Timeshift is a user-friendly graphical application that makes this process easy!
