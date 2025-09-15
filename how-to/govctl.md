@@ -2,21 +2,29 @@
 title: Configuring Governors
 description: Using govctl to manage system governors
 published: true
-date: 2025-05-07T12:47:49.033Z
+date: 2025-09-15T06:41:44.601Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
 ---
 
-# Using GovCtl
+# 1. GovCtl
 
 BredOS ships by default the tool `govctl` in package `bredos-govctl`.
 It is enabled by default and will set the performance according to available battery power.
 
+This should be installed by default. If not, install it with
+```
+sudo pacman -S bredos-govctl
+```
+
 The tool will continuously set the governor to the specified settings, overrides or other tools will not function.
 Uninstall the package if this is a problem for your workflow.
+```
+sudo pacman -R bredos-govctl
+```
 
-## Default behaviour
+## 1.1 Default behaviour
 
 GovCtl will by default ensure maximum performance across all attached devices, if there is no onboard battery, or the system is plugged in.
 
@@ -28,13 +36,13 @@ This for example will make RK3588 boards only run at 300mHz.
 
 If you do not like the defaults, they can all be changed.
 
-# Viewing governor state
+## 1.2 Viewing governor state
 
 To view the currently applied governor, just run `govctl`, root access is not required.
-
 ```
-[bill88t@icu | ~]> govctl
-
+govctl
+```
+```
 ---------------------------------------
 Currently applied governor: performance
 ---------------------------------------
@@ -59,9 +67,9 @@ options:
                         Percentage at which powersave triggers
 ```
 
-# Setting a different powersave point
+## 1.3 Setting a different powersave point
 
-As the help menu states, using option `-p` will allow you to reconfigure the point at which `powersave` will be applied at. This is by default 20%, and can be set to be 1% to 80%.
+As the help menu states, using option `-p` will allow you to reconfigure the point at which the governor `powersave` will be applied at. By default this is 20%, and can be set to be 1% to 80%.
 
 Reconfigure as follows:
 ```
@@ -69,23 +77,21 @@ sudo govctl -p 30
 ```
 This would set it to trigger at 30%.
 
-# Changing the applied governor
+## 1.4 Changing the applied governor
 
 By default, when plugged in or no batteries are present, the system will maintain maximum performance.
-If you want to instead apply a more conservative power profile for example, run:
+The flag `-g` sets the governor used when plugged in. If you want it to be `conservative` while your system is running of of power run:
 ```
 sudo govctl -g conservative
 ```
+The flag `-b` sets the governor used when **NOT** plugged in. If you want it to be `performance` while your system is running of of battery run:
 
-If you instead want to maintain maximum performance even when not plugged in, instead run:
 ```
 sudo govctl -b performance
 ```
 
-Flag `-g` sets the governor used when plugged in.
-Glag `-b` sets the governor used when **NOT** plugged in.
 
-# Disabling battery detection
+## 1.5 Disabling battery detection
 
 Disabling battery detection with:
 ```
