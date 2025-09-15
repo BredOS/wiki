@@ -1,5 +1,5 @@
 ---
-title: First setup (Device Specific Image)
+title: Primera configuración (Imagen Específica del Dispositivo)
 description:
 published: true
 date: 2025-09-15T12:37:28.315Z
