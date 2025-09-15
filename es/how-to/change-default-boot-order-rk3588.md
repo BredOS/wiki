@@ -1,8 +1,8 @@
 ---
-title: Cómo cambiar la orden de inicio predeterminada en RK3588
+title: Cambiar la Orden de Arranque en RK3588
 description: Aprenda cómo cambiar el orden de arranque por defecto en dispositivos basados en RK3588 usando la configuración del firmware UEFI
 published: true
-date: 2025-09-15T10:09:51.246Z
+date: 2025-09-15T11:15:39.364Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
