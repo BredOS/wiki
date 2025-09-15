@@ -1,8 +1,8 @@
 ---
-title: 如何在 BredOS 上安装 STEAM
+title: 在 BredOS 上安装 STEAM
 description: 一个在BredOS上安装Steam的简单指南，并对Panthorable和非Panthor的配置进行分步说明。
 published: true
-date: 2025-09-15T09：14：13.344Z
+date: 2025-09-15T11:13:24.812Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
