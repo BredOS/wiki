@@ -2,7 +2,7 @@
 title: Setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2025-09-15T11:14:14.628Z
+date: 2025-09-15T11:14:39.819Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
