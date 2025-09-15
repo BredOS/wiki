@@ -2,7 +2,7 @@
 title: How to install STEAM on BredOS
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2025-09-15T09:12:04.515Z
+date: 2025-09-15T09:14:13.344Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -13,7 +13,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 Welcome to the guide on how to install **Steam** on BredOS! Follow these simple steps to get Steam up and running on your system.
 
 ## 2. Prerequisites
-> This may not work on all devices (mainly non-RK3588 devices).
+> This how-to is meant for Rockchip RK35xx devices!
 {.is-info}
 
 - You need to have **BredOS** installed and running.
