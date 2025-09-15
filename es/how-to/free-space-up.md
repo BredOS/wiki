@@ -2,7 +2,7 @@
 title: Guía de limpieza del espacio en disco
 description: Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS.
 published: true
-date: 2025-09-15T06:49:29.513Z
+date: 2025-09-15T09:03:37.556Z
 tags:
 editor: markdown
 dateCreated: 2024-20T20:26:57.698Z
@@ -18,7 +18,7 @@ Al instalar o actualizar paquetes, `pacman` mantiene en caché copias en `/var/c
 
 ## 2.1 Comprobar tamaño de caché
 
-Para ver lo grande que es la caché de paquetes, ejecute:
+- Para ver lo grande que es la caché de paquetes, ejecute:
 
 ```
 du -sh /var/cache/pacman/pkg/
@@ -26,7 +26,7 @@ du -sh /var/cache/pacman/pkg/
 
 ## 2.2 Limpieza manual
 
-Puede eliminar manualmente los paquetes en caché que ya no están instalados con:
+- Puede eliminar manualmente los paquetes en caché que ya no están instalados con:
 
 ```
 sudo pacman -Sc
@@ -44,7 +44,7 @@ También puedes usar `paccache` para mantener sólo las 3 versiones más recient
   ```
   sudo nano /usr/share/libalpm/hooks/paccache.hook
   ```
-  Añadir el siguiente contenido al archivo:
+- Añadir el siguiente contenido al archivo:
   ```
   [Trigger]
   Operación = Actualizar
@@ -62,7 +62,7 @@ También puedes usar `paccache` para mantener sólo las 3 versiones más recient
 
 # 3. Limpiar archivos antiguos de registro
 
-Los registros del sistema pueden ocupar una cantidad considerable de espacio a lo largo del tiempo. Puedes comprobar el tamaño de tus registros con:
+- Los registros del sistema pueden ocupar una cantidad considerable de espacio a lo largo del tiempo. Puedes comprobar el tamaño de tus registros con:
 
 ```bash
 journalctl --uso de disco
@@ -70,7 +70,7 @@ journalctl --uso de disco
 
 ## 3.1 Limpiar registros antiguos
 
-Para eliminar registros anteriores a 3 días:
+- Para eliminar registros anteriores a 3 días:
 
 ```bash
 sudo diario --vacuum-time=3d
@@ -82,7 +82,7 @@ BleachBit es una poderosa herramienta que le ayuda a limpiar la basura del siste
 
 # 5. Limpiar caché de usuario
 
-A medida que usas tu sistema, los cachés se acumularán en tu directorio personal. Puede comprobar el tamaño de su carpeta de caché con:
+- A medida que usas tu sistema, los cachés se acumularán en tu directorio personal. Puede comprobar el tamaño de su carpeta de caché con:
 
 ```bash
 sudo du -sh ~/.cache/
@@ -90,7 +90,7 @@ sudo du -sh ~/.cache/
 
 ## 5.1 Limpiar el caché
 
-Para eliminar todos los archivos de caché:
+- Para eliminar todos los archivos de caché:
 
 ```bash
 rm -rf ~/.cache/*
