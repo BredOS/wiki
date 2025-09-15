@@ -2,16 +2,17 @@
 title: Switch Desktop Environments on BredOS
 description: Learn how to install and switch to the GNOME desktop environment on BredOS
 published: true
-date: 2025-09-13T11:03:22.861Z
+date: 2025-09-15T09:57:43.889Z
 tags: customization
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
 ---
 
-## 🎨 1.1. GNOME Desktop on BredOS
+# 1. GNOME Desktop on BredOS
+## 1.1 Install Gnome
 
 The GNOME desktop environment can be installed with the package `gnome`.  
-To install it, run:
+- To install it, run:
 
 ```
 pacman -S gnome
@@ -21,10 +22,10 @@ Additional gnome packages can be installed with `gnome-circle` which contains va
 
 ---
 
-## 🔄 1.2. Switch to GDM
+## 1.2. Switch to GDM
 
 For proper operation, you need to switch to **GDM** after installation.  
-Run the following commands:
+- Run the following commands:
 
 ```
 sudo systemctl disable lightdm
@@ -37,13 +38,13 @@ sudo systemctl enable gdm
 
 ---
 
-## 🔄 🖥️ 1.3. Screen Rotation Fix
+## 1.3. Screen Rotation Fix
 
 **If** your screen rotates incorrectly, you can install and configure the **Screen Rotate** extension.
 
-### 1️⃣ 1.3.1 Install Extension Manager
+### 1.3.1 Install Extension Manager
 
-Run:
+- Run:
 
 ```
 sudo pacman -S extension-manager
@@ -51,7 +52,7 @@ sudo pacman -S extension-manager
 
 Once installed, open the application.
 
-### 2️⃣ 1.3.2 Install Screen Rotate
+### 1.3.2 Install Screen Rotate
 
 Inside the application:
 
@@ -59,7 +60,7 @@ Inside the application:
 - Type **Screen Rotate**
 - Install `Screen Rotate` by **shyzus**.
 
-### 3️⃣ 1.3.3 Configure Screen Rotate
+### 1.3.3 Configure Screen Rotate
 
 - Go to the `Installed` tab in Extension Manager.
 - Tap the ⚙️ icon to open the extension settings.
@@ -67,13 +68,13 @@ Inside the application:
 
 ---
 
-> ✅ Done! GNOME is now properly set up on BredOS. 🚀  
+> Done! GNOME is now properly set up on BredOS.
 {.is-success}
 
-# 2. KDE Plasma
-## 🎨 2.1. Plasma Desktop on BredOS
+# 2. Plasma Desktop on BredOS
+## 2.1. Intall KDE Plasma
 The Plasma desktop environment can be installed with the package `plasma-desktop`.  
-To install it, run:
+- To install it, run:
 
 ```
 pacman -S plasma-desktop
