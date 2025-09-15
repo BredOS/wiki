@@ -2,7 +2,7 @@
 title: Discos de error de Manejo
 description: Una guía sobre los datos de S.M.A.R.T y la sustitución de discos
 published: true
-date: 2025-09-15T06:55:36.088Z
+date: 2025-09-15T09:04:50.217Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -13,6 +13,9 @@ dateCreated: 2025-06-01T10:33:55.798Z
 Esta guía es un conjunto de consejos recopilados a partir de experiencias personales.
 Asegurar la comprensión y el riesgo adecuados al ejecutar cualquier comando de esta guía.
 La pérdida de datos es posible.
+
+> **no** confíe en ChatGPT o en cualquier otro LLMs con la recuperación de discos fallidos. ¡Le decepcionará!
+> {.is-danger}
 
 # 2. Fallos reportados
 
@@ -29,13 +32,13 @@ Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección
 
 ## 3.1 Visualización de datos S.M.A.R.T (HDD)
 
-Asumiendo el disco duro `/dev/sda`, para ver sus datos S.M.A.R.T, ejecutar:
+- Asumiendo el disco duro `/dev/sda`, para ver sus datos S.M.A.R.T, ejecutar:
 
 ```
 sudo smartctl -a /dev/sda
 ```
 
-Esto imprimirá un informe grande:
+- Esto imprimirá un informe grande:
 
 ```
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
@@ -141,13 +144,13 @@ De todo esto, los siguientes datos son importantes para buscar:
 
 ## 3.2 Ver datos de S.M.A.R.T (NVME)
 
-Asumiendo NVME `/dev/nvme0`, para ver sus datos S.M.A.R.T, ejecutar:
+- Asumiendo NVME `/dev/nvme0`, para ver sus datos S.M.A.R.T, ejecutar:
 
 ```
 sudo smartctl -a /dev/nvme0
 ```
 
-Asumiendo que la NVME soporta S.M.A.R.T, esto imprimirá un pequeño informe:
+- Asumiendo que la NVME soporta S.M.A.R.T, esto imprimirá un pequeño informe:
 
 ```
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
@@ -233,5 +236,4 @@ Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas d
 
 A medida que se acabe el flash libre o los sectores, el rendimiento del sistema se degradará rápidamente y los sistemas de archivos como BTRFS se bloquearán, negándose a realizar escrituras para asegurarse de que no corrompe el disco.
 
-> **no** confíe en ChatGPT o en cualquier otro LLMs con la recuperación de discos fallidos. ¡Le decepcionará!
-> {.is-danger}
+
