@@ -2,7 +2,7 @@
 title: How to play back DRM protected content (installing widevine)
 description: Learn how to enable playback of DRM-protected content on BredOS by installing the Widevine plugin
 published: true
-date: 2025-09-15T09:16:05.375Z
+date: 2025-09-15T09:16:32.922Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-28T05:58:27.563Z
@@ -33,5 +33,7 @@ sudo pacman -S widevine-aarch64
 Mozilla/5.0 (X11; CrOS aarch64 15236.80.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.5414.125 Safari/537.36
 ```
 
-- You can easily spoof your user agent by installing this Firefox extension: [User-Agent String Switcher](https://addons.mozilla.org/en-GB/firefox/addon/user-agent-string-switcher/)
+> You can easily spoof your user agent by installing this Firefox extension: [User-Agent String Switcher](https://addons.mozilla.org/en-GB/firefox/addon/user-agent-string-switcher/)
+{.is-info}
+
 
