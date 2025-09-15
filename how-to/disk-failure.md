@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-15T06:55:36.088Z
+date: 2025-09-15T09:04:21.084Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -27,12 +27,12 @@ If you've been linked to this from BredOS News, head to the following section.
 # 3. S.M.A.R.T Data
 ## 3.1 Viewing S.M.A.R.T Data (HDD)
 
-Assuming hard disk `/dev/sda`, to view it's S.M.A.R.T data, run:
+- Assuming hard disk `/dev/sda`, to view it's S.M.A.R.T data, run:
 ```
 sudo smartctl -a /dev/sda
 ```
 
-This will print out a large report:
+- This will print out a large report:
 ```
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
@@ -137,12 +137,12 @@ Out of all of this, the following data are important to look for:
 
 ## 3.2 Viewing S.M.A.R.T Data (NVME)
 
-Assuming NVME `/dev/nvme0`, to view it's S.M.A.R.T data, run:
+- Assuming NVME `/dev/nvme0`, to view it's S.M.A.R.T data, run:
 ```
 sudo smartctl -a /dev/nvme0
 ```
 
-Assuming the NVME supports S.M.A.R.T, this will print out a small report:
+- Assuming the NVME supports S.M.A.R.T, this will print out a small report:
 ```
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
