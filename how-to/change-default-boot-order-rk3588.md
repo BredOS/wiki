@@ -1,8 +1,8 @@
 ---
-title: How to Change the Default Boot Order on RK3588
+title: Change the Default Boot Order on RK3588
 description: Learn how to change the default boot order on RK3588-based devices using the UEFI firmware settings
 published: true
-date: 2025-09-15T10:09:51.246Z
+date: 2025-09-15T11:12:46.958Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
