@@ -1,8 +1,8 @@
 ---
-title: How to setup Panthor on Mali GPUs with RK3588
+title: Setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2025-09-15T09:36:38.147Z
+date: 2025-09-15T11:14:14.628Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
