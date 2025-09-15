@@ -2,27 +2,32 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-06-01T10:33:55.798Z
+date: 2025-09-15T06:55:36.088Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
 ---
 
-# IMPORTANT DISCLAIMER
+# 1. IMPORTANT DISCLAIMER
 
 This guide is a set of tips gathered from personal experiences.
 Ensure proper understanding and risk when executing any commands from this guide.
 Data loss is possible.
 
-# Reported Failures
+# 2. Reported Failures
 
 The BredOS News service now will report failing or damaged drives that are attached and present S.M.A.R.T data.
 
 If you've been linked to this from BredOS News, head to the following section.
 
-Failures
+~~Failures~~
 
-# Viewing S.M.A.R.T Data (HDD)
+> This section is under construction. Please reach out to us via Discord or Telegram — we're happy to help!
+> {.is-warning}
+
+# 3. S.M.A.R.T Data
+
+## 3.1 Viewing S.M.A.R.T Data (HDD)
 
 Assuming hard disk `/dev/sda`, to view it's S.M.A.R.T data, run:
 
@@ -33,7 +38,6 @@ sudo smartctl -a /dev/sda
 This will print out a large report:
 
 ```
-[bill88t@prion | ~]> sudo smartctl -a /dev/sda
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -135,7 +139,7 @@ Out of all of this, the following data are important to look for:
 - `SMART overall-health self-assessment`, which should be "PASSED". If any other value is reported, the drive should be replaced with haste.
 - `Reallocated_Sector_Ct`, the number of relocated sectors, which if more than a single one indicates significant risk of cascading failure.
 
-# Viewing S.M.A.R.T Data (NVME)
+## 3.2 Viewing S.M.A.R.T Data (NVME)
 
 Assuming NVME `/dev/nvme0`, to view it's S.M.A.R.T data, run:
 
@@ -146,7 +150,6 @@ sudo smartctl -a /dev/nvme0
 Assuming the NVME supports S.M.A.R.T, this will print out a small report:
 
 ```
-[bill88t@prion | ~]> sudo smartctl -a /dev/nvme0
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -221,11 +224,14 @@ Here, the only important values are:
 - `Media and Data Integrity Errors`, which indicate significant flash degredation.
 - `Error Information Log Entries`, which usually indicate how many flash regions have been masked with spare flash.
 
-# Should I replace the drive?
+## 3.3 Should I replace the drive?
 
 If you have just a few (<5) relocated sectors, it's probably fine to keep using the disk for a little while.
 Using a few spare nvme flash blocks is also fine.
 
 However burning through spare flash or rapidly relocating dozens of sectors is however a sign of imminent failure.
 
-As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes, refusing to corrupt the disk.
+As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
+
+> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+> {.is-danger}
