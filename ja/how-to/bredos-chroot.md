@@ -20,7 +20,7 @@ sudo pacman -S bredos-tools
 
 ## 2. 使用法
 
-Run `bredos-chroot` without any parameters to display the help message.
+ヘルプメッセージを表示するには、パラメータなしで `bredos-chroot` を実行します。
 
 ```
 Usage: /usr/bin/bredos-chroot <btrfs_partition> <boot_partition>
@@ -32,16 +32,16 @@ Mounts the given Btrfs partition with subvolumes and the boot partition,
 then chroots into the system. Cleans up after exiting chroot.
 ```
 
-## 3. Example
+## 3. 例
 
-Assuming you have a SDCard of a failed system, visible from `lsblk` at **/dev/sdb**, you can just run:
+失敗したシステムのSDカードが **/dev/sdb** の `lsblk` から表示されていると仮定すると、以下を実行できます。
 
 ```
 sudo bredos-chroot /dev/sdb3 /dev/sdb2
 ```
 
-While `/dev/sdb3` is your BredOS root partition and `/dev/sdb2` is your BredOS boot partition.
+`/dev/sdb3`がブレッドOSのルートパーティションであり、`/dev/sdb2`がブレッドOSのブートパーティションです。
 
-This will get a root shell into the broken system, facilitating repair.
+これは、壊れたシステムにルートシェルを取得し、修復を容易にします。
 
-Once repair is complete, you can just close the shell by typing `exit` or Ctrl + D, and the attached filesystem would be unmounted.
+修復が完了したら、`exit` または Ctrl + D と入力するだけでシェルを閉じることができ、添付ファイルシステムがアンマウントされます。
