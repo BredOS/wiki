@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-15T09:04:21.084Z
+date: 2025-09-15T09:04:50.217Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -12,7 +12,8 @@ dateCreated: 2025-06-01T10:33:55.798Z
 This guide is a set of tips gathered from personal experiences.
 Ensure proper understanding and risk when executing any commands from this guide.
 Data loss is possible.
-
+> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+{.is-danger}
 # 2. Reported Failures
 
 The BredOS News service now will report failing or damaged drives that are attached and present S.M.A.R.T data.
@@ -226,5 +227,4 @@ However burning through spare flash or rapidly relocating dozens of sectors is h
 
 As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
 
-> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
-{.is-danger}
+
