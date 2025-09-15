@@ -1,5 +1,5 @@
 ---
-title: First setup (Device Specific Image)
+title: 最初のセットアップ（デバイス固有の画像）
 description:
 published: true
 date: 2025-09-15T12:37:28.315Z
