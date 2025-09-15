@@ -1,23 +1,36 @@
 ---
-title: 📟 DTBOs を有効にする方法
+title: DTBOを有効にする方法
 description:
 published: true
-date: 2025-05-15T13:00:37.165Z
+date: 2025-09-15T08:30:36.658Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
 ---
 
-# デバイスツリーオーバーレイを有効にする方法
+# 1. はじめに
 
-**はじめに**
-異なるデバイスツリーオーバーレイ(DTBOs)を有効にすると、Linuxカーネルを再コンパイルせずにオプションのハードウェアまたはカーネルの変更を有効にできます。
-これは、パンターグラフィックスタックを有効にするための方法でもあります。
-これは、パンターグラフィックスタックを有効にするための方法でもあります。
+異なるデバイスツリーオーバーレイ(DTBO)を有効にすると、Linuxカーネルを再コンパイルせずにオプションのハードウェアまたはカーネルの変更を有効にできます。
 
----
+> これはカーネルの動作を変更するための方法でもあります。 例えば、パンターグラフィックススタックを有効にしたり、システムのLEDを無効にしたりします。
+> {.is-success}
 
-# 💻 UEFI搭載システム用
+# 2. BredOS-Config
+
+bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する
+
+```
+sudo bredos-config
+```
+
+を選択し、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、dtb overlaysを好みに合わせて有効にします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。
+
+> 注意深く画面の指示に従うか、3.4 UEFIを設定してください!
+> {.is-warning}
+
+bredos-config は dtbs をインストールして grub 設定を変更することができますが、起動時にそれらをロードするには _uefi 設定を変更できません_ 。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos). これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。
+
+# 3. UEFI搭載システム用
 
 UEFI搭載ボードで実行している場合は、設定する必要があります。
 前にすでにこれを行っている場合は、手順5に進むことができます。
@@ -30,13 +43,13 @@ UEFI搭載ボードで実行している場合は、設定する必要があり�
 To determine where your ESP partition is located, run the command,
 `df | grep "/boot" | awk '{print $NF}'` and **replace **`<ESP>`** IN ALL OF THE FOLLOWING commands** with it's output.
 
-### 📁 1: DTBファイルを保存するために必要なディレクトリを作成します。
+## 3.1 DTB ファイルを保存するために必要なディレクトリを作成します。
 
 ```
 sudo mkdir -p <ESP>/dtb/{base,overlays}
 ```
 
-### 🗄️ 2: DTBをベースにコピーする
+## 3.2 ベース DTB 上にコピー
 
 > FydeTab Duo を使っている場合は、特定の DTB ファイルを `base` フォルダにコピーします。
 >
@@ -53,7 +66,7 @@ sudo mkdir -p <ESP>/dtb/{base,overlays}
 sudo cp /boot/dtbs/rockchip/rk3588-board.dtb <ESP>/dtb/base/
 ```
 
-### 🫘 3: GRUB の設定
+## 3.3 GRUB の設定
 
 GRUB設定ファイルを開きます:
 
@@ -75,7 +88,7 @@ sudo nano /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### 🎛️ 4: UEFI の設定
+## 3.4 UEFI の設定
 
 UEFI _（GRUBからこれを行うことができます）_ > `Device Manager` > `Rockchip Platform Configuration` > `ACPI / Device Tree`を再起動し、以下の操作を行います：
 
@@ -86,7 +99,7 @@ UEFI _（GRUBからこれを行うことができます）_ > `Device Manager` >
 
 F10を押して保存し、システムに再起動します(最初のUEFI画面に戻り、`Continue`を選択することができます)。
 
-### 🔄 5: DTBO をコピー
+## 3.5 DTBO をコピー
 
 `my-overlay`をお好みのdtboに置き換えてください。
 
@@ -94,13 +107,13 @@ F10を押して保存し、システムに再起動します(最初のUEFI画面
 sudo cp /boot/dtbs/rockchip/overlay/my-overlay.dtbo <ESP>/dtb/overlays/
 ```
 
-### <unk> 6: 再起動
+## 3.6 Reboot
 
 変更を適用するには、システムを再起動します。
 
-# ⚙️ U-Boot 搭載デバイスで
+# 4. U-Boot Powered デバイスで
 
-### 1. extlinux 設定を編集
+## 4.1 extlinux 設定を編集
 
 extlinuxの設定は以下を実行することで編集できます。
 
@@ -114,20 +127,18 @@ sudo nano /boot/extlinux/extlinux.conf
 fdtoverlays /dtbs/rockchip/overlay/my-overlay.dtbo
 ```
 
-### 重要なノート
+> **fdtoverlays**行を1つ以上追加しないでください。
+> **fdtoverlays**行を1つ以上追加しないでください。
+> 複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
+> 例:
+> 例:
+> **fdtoverlays**行を1つ以上追加しないでください。
+> 複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
+> 例:
+> 例:
+>
+> ```
+> fdtoverlays /dtbs/rockchip/overlay/overlay1.dtbo /dtbs/rockchip/overlay/overlay2.dtbo
+> ```
 
-\*\*`/boot` や `<ESP>` をこれらの行に追加しないでください。
-
-**fdtoverlays**行を1つ以上追加しないでください。
-**fdtoverlays**行を1つ以上追加しないでください。
-複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
-例:
-例:
-**fdtoverlays**行を1つ以上追加しないでください。
-複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
-例:
-例:
-
-```
-fdtoverlays /dtbs/rockchip/overlay/overlay1.dtbo /dtbs/rockchip/overlay/overlay2.dtbo
-```
+{.is-warning}
