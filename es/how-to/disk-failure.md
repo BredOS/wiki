@@ -2,27 +2,32 @@
 title: Discos de error de Manejo
 description: Una guía sobre los datos de S.M.A.R.T y la sustitución de discos
 published: true
-date: 2025-06-01T10:33:55.798Z
+date: 2025-09-15T06:55:36.088Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
 ---
 
-# DECLARACIÓN IMPORTANTE
+# 1. DECLARACIÓN IMPORTANTE
 
 Esta guía es un conjunto de consejos recopilados a partir de experiencias personales.
 Asegurar la comprensión y el riesgo adecuados al ejecutar cualquier comando de esta guía.
 La pérdida de datos es posible.
 
-# Fallos reportados
+# 2. Fallos reportados
 
 El servicio BredOS News informará ahora sobre unidades dañadas o defectuosas que estén adjuntas y que presenten los datos de S.M.A.R.T.
 
 Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección.
 
-Fallos
+~~Failures~~
 
-# Viendo los datos de S.M.A.R.T (HDD)
+> This section is under construction. Please reach out to us via Discord or Telegram — we're happy to help!
+> {.is-warning}
+
+# 3. S.M.A.R.T Data
+
+## 3.1 Viewing S.M.A.R.T Data (HDD)
 
 Asumiendo el disco duro `/dev/sda`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -33,7 +38,6 @@ sudo smartctl -a /dev/sda
 Esto imprimirá un informe grande:
 
 ```
-[bill88t@prion | ~]> sudo smartctl -a /dev/sda
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -135,7 +139,7 @@ De todo esto, los siguientes datos son importantes para buscar:
 - `SMART overall-health self-assessment`, que debe ser "PASSED". Si se informa de cualquier otro valor, la unidad debe ser reemplazada con prise.
 - `Reallocated_Sector_Ct`, el número de sectores reubicados, que si es más de uno solo indica un riesgo significativo de fallo en cascada.
 
-# Viendo datos de S.M.A.R.T (NVME)
+## 3.2 Viewing S.M.A.R.T Data (NVME)
 
 Asumiendo NVME `/dev/nvme0`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -146,7 +150,6 @@ sudo smartctl -a /dev/nvme0
 Asumiendo que la NVME soporta S.M.A.R.T, esto imprimirá un pequeño informe:
 
 ```
-[bill88t@prion | ~]> sudo smartctl -a /dev/nvme0
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -221,11 +224,14 @@ Aquí, los únicos valores importantes son:
 - `Media and Data Integrity Errors`, que indican una significativa gradación del flash.
 - `Entradas de registro de información de errores`, que generalmente indican cuántas regiones de flash han sido enmascaradas con la flash.
 
-# ¿Debo reemplazar la unidad?
+## 3.3 Should I replace the drive?
 
 Si tienes sólo unos pocos sectores (<5) reubicados, probablemente esté bien seguir usando el disco durante un tiempo.
 También es correcto usar algunos bloques de flash nvme de sobra.
 
 Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas de sectores es sin embargo una señal de un fracaso inminente.
 
-A medida que se acabe el flash libre o los sectores, el rendimiento del sistema se degradará rápidamente y los sistemas de archivos como BTRFS se bloquearán, negándose a realizar escrituras, negándose a corromper el disco.
+As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
+
+> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+> {.is-danger}
