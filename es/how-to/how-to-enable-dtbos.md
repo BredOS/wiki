@@ -1,8 +1,8 @@
 ---
-title: Cómo habilitar DTBOs
+title: Habilitar superposiciones DTB
 description:
 published: true
-date: 2025-09-15T08:55:43.156Z
+date: 2025-09-15T11:13:09.656Z
 tags:
 editor: markdown
 dateCreated: 2024-10T18:02:07.427Z
