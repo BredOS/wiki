@@ -1,62 +1,84 @@
 ---
-title: Installation with a device specific image
+title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-09-15T12:47:06.870Z
+date: 2025-09-15T13:16:06.236Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
 ---
 
-# 1. Introduction
+# 1. Introducción
 
-For the installation of BredOS we provide device specific images which are tailored to work out of the box for its specific device. This distinguishes these images from installation via an ISO image. Installation via an ISO image is much more generic, but is supported beyond the devicesupport we offer.
+Para la instalación de BredOS proporcionamos imágenes específicas del dispositivo que están diseñadas para trabajar fuera de la caja para su dispositivo específico. Esto distingue estas imágenes de la instalación a través de una imagen ISO. La instalación a través de una imagen ISO es mucho más genérica, pero está soportada más allá del dispositivo que ofrecemos.
 
-> If you can't find your device on our download site and your device supports booting via UEFI, feel free to give the ISO installation a try.
+> Si no puede encontrar su dispositivo en nuestro sitio de descarga y su dispositivo soporta arranque a través de UEFI, siéntase libre de probar la instalación de ISO.
 > {.is-info}
 
-# 2. Download
+# 2. Descargar
 
-You can find download links for images in our [website](https://bredos.org/download.html)!
+¡Puedes encontrar enlaces de descarga para imágenes en nuestra [website](https://bredos.org/download.html)!
 
-# 3. Installation
+# 3. Instalación
 
-Installation varies from device to device and the medium you want to install BredOS to. In this guide we will cover installation to
+La instalación varía de dispositivo a dispositivo y el medio en el que desea instalar BredOS. En esta guía cubriremos la instalación a
 
-- `non-removable eMMC`
-- `removable eMMC and SD Card`
-- `nVME`
+- `3.1 eMC` no extraíble
+- `3.2 removable eMMC y SD Card`
+- `3.3 nVME`
 
-> Before you begin please check which options are available with your device!
+> Antes de comenzar, por favor compruebe qué opciones están disponibles en su dispositivo!
 > {.is-info}
 
-## 3.1 non-removable eMMC
+## 3.1 eMMC no extraíble
 
-To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
+Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto, decidimos dividir la instalación en eMC no extraíble en estas dos guías:
 
-- Flashing the eMMC with Linux or macOS
-- Flashing the eMMC with Microsoft Windows
+- Flashear el eMMC con Linux o macOS
+- Flashear el eMMC con Microsoft Windows
 
-## 3.2 removable eMMC and SD Card
+## 3.2 Tarjeta SD y eMMC extraíble
 
-> If you are familiar with flashing Raspberry OS no further reading is needed. Just grab your SD-Card or eMMC, your device specific image and flash with your preferred Tool.
+> Si usted está familiarizado con flashear Raspberry OS no necesita leer más. Simplemente coja su tarjeta SD-Card o eMMC, la imagen BredOS específica de su dispositivo y parpadee con su herramienta preferida.
 > {.is-info}
 
-### 3.2.1 Get your removable eMMC ready
+### 3.2.1 Prepare su eMMC extraíble
+
+> Salta a `3.2.2 Flashing eMMC / SD Card` si no estás usando el almacenamiento eMMC.
+> {.is-info}
+
+#### 3.2.1.1 con adaptador uSD
+
+Como eMMC es básicamente una tarjeta SD que es (en su mayoría) de cable duro a la SBC hay adaptadores que puedes conectar tu eMMC para convertirlos en una tarjeta SD.
+![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
+Presiona firmemente el conector del eMMC al adaptador uSD y conéctalos al lector de tu tarjeta SD.
+![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+
+#### 3.2.1.2 con adaptador USB a eMMC
+
+Como casi todos los USB conocidos comúnmente se basan en el almacenamiento eMMC, existen adaptadores USB a eMMC que son USB-Sticks pero con almacenamiento eMMC extraíble. Estos pueden ser usados para flashear BredOS también.
+![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
+
+### 3.2.2 Flashear eMMC / Tarjeta SD
+
+Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta guía cubriremos `BalenaEtcher` y `Raspberry Pi Imager`. Ambas herramientas ofrecen soporte para Linux, macOS y Microsoft Windows. Elige una de las guías abajo para continuar.
+
+- Flashear con BalenaEtcher
+- Flashear con Raspberry Pi Imager
 
 ## 3.3 nVME
 
-### 3.3.1 Prerequisites
+### 3.3.1 Prerrequisitos
 
-As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
+Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
 
-### 3.3.2 Flashing nVME
+### 3.3.2 Flashear nVME
 
-Connect the drive to your PC, either directly or via a USB adapter. Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
+Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego siga una de las guías en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Después de flashear, conecte la unidad al puerto nVME de su SBC.
 
-### 3.3.3 Boot Order
+### 3.3.3 Orden de Arranque
 
-The UEFI should be able to pick up the drive by itself. However the order of devices it will try to boot from can slow down the bootprocess or even fail completely (e. g. if you have a PXE Server in your network). To change the bootorder follow this [guide](/en/how-to/change-default-boot-order-rk3588).
+La UEFI debería ser capaz de tomar la unidad por sí sola. Sin embargo, el orden de los dispositivos desde los que intentará arrancar puede ralentizar el proceso de arranque o incluso fallar completamente (p. ej. si tiene un servidor PXE en su red). Para cambiar el orden de arranque siga este [guide](/en/how-to/change-default-boot-order-rk3588).
 
-> After successful installation proceed with [**First Setup**](/en/install/first-setup)
+> Después de la instalación exitosa, proceda con [**Primera configuración**](/en/install/first-setup)
 > {.is-success}
