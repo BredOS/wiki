@@ -1,8 +1,8 @@
 ---
-title: RK3588のデフォルトブートオーダーを変更する方法
+title: RK3588のブートオーダーを変更する
 description: UEFIファームウェア設定を使用して、RK3588ベースのデバイスでデフォルトの起動順序を変更する方法を学びます。
 published: true
-date: 2025-09-15T10:09:51.246Z
+date: 2025-09-15T11:15:39.364Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
