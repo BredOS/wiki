@@ -20,14 +20,15 @@ BredOS 新闻服务现在将报告连接的驱动器失败或损坏，并且提�
 
 如果您已经从BredOS News链接到这个部分，头部到下面的部分。
 
-~~Failures~~
+```失败\~\~
+```
 
-> This section is under construction. Please reach out to us via Discord or Telegram — we're happy to help!
+> 这一部分正在建造中。 请通过 Discord 或 Telegram 联系我们 - 我们很乐意提供帮助 ！
 > {.is-warning}
 
-# 3. S.M.A.R.T Data
+# 3. S.M.A.R.T 数据
 
-## 3.1 Viewing S.M.A.R.T Data (HDD)
+## 3.1 查看S.M.A.R.T Data (HDD)
 
 假设硬盘 `/dev/sda`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -139,7 +140,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 - “SMART overall health 自我评估”，应为“PASSED”。 如果报告了任何其他值，应将驱动器替换为急速。 如果报告了任何其他值，应将驱动器替换为急速。
 - `重新分配Sector_Ct`，重新安置区的数目，如果一个以上的区域显示级联失败的可能性很大。
 
-## 3.2 Viewing S.M.A.R.T Data (NVME)
+## 3.2 查看S.M.A.R.T Data (NVME)
 
 假设NVME `/dev/nvme0`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -224,7 +225,7 @@ No Self-tests Logged
 - “介质和数据完整性错误”，表明有相当大的闪光度。
 - `错误信息记录条目`, 通常表明有多少闪光区域被掩盖了零件刷入。
 
-## 3.3 Should I replace the drive?
+## 3.3 我应取代驱动器吗？
 
 如果你只有少数(<5)移位区块，很可能会在一段时间内不再使用磁盘。
 使用几个剩余的 nvme 闪屏块也是很好的。
@@ -232,7 +233,7 @@ No Self-tests Logged
 
 然而，通过剩余的闪光或迅速迁移，数十个区段被烧毁是即将失败的迹象。
 
-As the spare flash or sectors run out, the system's performance will rapidly degrade and filesystems like BTRFS will lock up, refusing to perform writes to ensure it does not corrupt the disk.
+由于剩余闪光或扇区耗尽，系统的性能将会迅速降解，文件系统像BTRFS 这样将被锁定。 拒绝执行以确保不会损坏磁盘。
 
-> Do **not** trust ChatGPT or any other LLMs with recovering failed disks. You will be disappointed!
+> **不**信任聊天GPT或任何其他恢复失败的磁盘的LM。 你将会失望！
 > {.is-danger}
