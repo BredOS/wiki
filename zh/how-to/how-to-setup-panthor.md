@@ -1,8 +1,8 @@
 ---
-title: 如何在马里安装Panthor GPU with RK3588
+title: 安装在马里的Panthor GPU with RK3588
 description:
 published: true
-date: 2025-09-15T09:36:38.147Z
+date: 2025-09-15T11：14：39.819Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
