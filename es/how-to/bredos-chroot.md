@@ -20,7 +20,7 @@ sudo pacman -S bredos-tools
 
 ## 2. Uso
 
-Run `bredos-chroot` without any parameters to display the help message.
+Ejecuta `bredos-chroot` sin parámetros para mostrar el mensaje de ayuda.
 
 ```
 Uso: /usr/bin/bredos-chroot <btrfs_partition> <boot_partition>
@@ -32,16 +32,16 @@ Monta la partición Btrfs dada con subvolúmenes y la partición de arranque,
 luego arrastra en el sistema. Limpia después de salir de la raíz.
 ```
 
-## 3. Example
+## 3. Ejemplo
 
-Assuming you have a SDCard of a failed system, visible from `lsblk` at **/dev/sdb**, you can just run:
+Asumiendo que tienes una tarjeta SDCard de un sistema fallido, visible desde `lsblk` en **/dev/sdb**, puedes ejecutar:
 
 ```
 sudo bredos-chroot /dev/sdb3 /dev/sdb2
 ```
 
-While `/dev/sdb3` is your BredOS root partition and `/dev/sdb2` is your BredOS boot partition.
+Mientras que `/dev/sdb3` es su partición raíz BredOS y `/dev/sdb2` es su partición de arranque BredOS.
 
-This will get a root shell into the broken system, facilitating repair.
+Esto hará que un intérprete de comandos se convierta en un sistema roto, facilitando la reparación.
 
-Once repair is complete, you can just close the shell by typing `exit` or Ctrl + D, and the attached filesystem would be unmounted.
+Una vez que la reparación esté completa, sólo puedes cerrar el shell escribiendo `exit` o Ctrl + D, y el sistema de archivos adjunto se desmontaría.
