@@ -1,8 +1,8 @@
 ---
-title: How to run Virtual Machines on BredOS
+title: Run Virtual Machines on BredOS
 description: 
 published: true
-date: 2025-09-15T09:34:15.014Z
+date: 2025-09-15T11:13:57.999Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
