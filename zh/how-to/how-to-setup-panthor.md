@@ -1,5 +1,5 @@
 ---
-title: How to setup Panthor on Mali GPUs with RK3588
+title: 如何在马里安装Panthor GPU with RK3588
 description:
 published: true
 date: 2025-09-15T09:36:38.147Z
@@ -8,13 +8,13 @@ editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
 ---
 
-# 1. Introduction
+# 1. 简介
 
 这个指南使你走过让马里的Panthor GPU 存在于RK3588 chipset的板上。
 
 # 2. 启用Panthor DTBO
 
-## 2.1 Automatically
+## 2.1 自动使用
 
 bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为 启动工具为
 
@@ -34,13 +34,14 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 > {.is-warning}
 > {.is-warning}
 
-## 2.2 Manually
+## 2.2 手动操作
 
 按照[设备树叠加层指南](/how-to/how-to-enable-dtbos)启用
 `/boot/dtbs/rockchip/overy/rockchip-rk3588-panthor-gpu.dtbo`
 **复制DTBO后，不要重启系统！**
 
-> Do not reboot your system after the installation of the dtb overlay!
+> 不要在安装dtb 覆盖后重启系统！
+> {.is-warning}
 > {.is-warning}
 
 ## 3. 替换面板图形
