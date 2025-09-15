@@ -20,7 +20,7 @@ sudo pacman -S bredos-tools
 
 ## 2. 用法
 
-Run `bredos-chroot` without any parameters to display the help message.
+运行"bredos-chroot" 时没有任何参数来显示帮助消息。
 
 ```
 用法：/usr/bin/bredos-chroot <btrfs_partition> <boot_partition>
@@ -32,16 +32,16 @@ Run `bredos-chroot` without any parameters to display the help message.
 然后在系统中 chroot。退出 chroot 后清理。
 ```
 
-## 3. Example
+## 3. 示例
 
-Assuming you have a SDCard of a failed system, visible from `lsblk` at **/dev/sdb**, you can just run:
+假定你有一个系统失败的SDCard, 在 **/dev/sdb**上可见, 你可以运行:
 
 ```
 sudo bredos-chroot /dev/sdb3 /dev/sdb2
 ```
 
-While `/dev/sdb3` is your BredOS root partition and `/dev/sdb2` is your BredOS boot partition.
+`/dev/sdb3` 是你的 BredOS 根分区，而`/dev/sdb2` 是你的 BredOS 引导分区。
 
-This will get a root shell into the broken system, facilitating repair.
+这将获得一个根外壳进入破损的系统，便于维修。
 
-Once repair is complete, you can just close the shell by typing `exit` or Ctrl + D, and the attached filesystem would be unmounted.
+一旦修理完成，您只需输入 `exit` 或 Ctrl + D 键就可以关闭外壳，附加的文件系统将被卸载。
