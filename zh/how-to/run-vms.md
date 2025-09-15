@@ -1,8 +1,8 @@
 ---
-title: 如何在 BredOS 上运行虚拟机
+title: 在 BredOS 上运行虚拟机
 description:
 published: true
-date: 2025-09-15T09:34:15.014Z
+date: 2025-09-15T11:13:57.999Z
 tags: vm, ho-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
