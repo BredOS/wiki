@@ -2,7 +2,7 @@
 title: BredOS-Chroot utility
 description: Una simple herramienta para montar y hacer chroot en una instalación BredOS desde un sistema secundario
 published: true
-date: 2025-05-07T17:48:24.068Z
+date: 2025-09-15T06:05:42.545Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T17:48:24.068Z
@@ -10,9 +10,17 @@ dateCreated: 2025-05-07T17:48:24.068Z
 
 # BredOS-Chroot
 
-Disponible como parte del paquete `bredos-tools`.
+## 1. Instalación
 
-## Uso
+Disponible como parte del paquete `bredos-tools`. Por defecto esto debe ser instalado. Si no lo instala con
+
+```
+sudo pacman -S bredos-tools
+```
+
+## 2. Uso
+
+Run `bredos-chroot` without any parameters to display the help message.
 
 ```
 Uso: /usr/bin/bredos-chroot <btrfs_partition> <boot_partition>
@@ -24,12 +32,16 @@ Monta la partición Btrfs dada con subvolúmenes y la partición de arranque,
 luego arrastra en el sistema. Limpia después de salir de la raíz.
 ```
 
-Asumiendo que tienes una tarjeta SDCard de un sistema fallido, visible desde `lsblk` en /dev/sdb, puedes ejecutar:
+## 3. Example
+
+Assuming you have a SDCard of a failed system, visible from `lsblk` at **/dev/sdb**, you can just run:
 
 ```
 sudo bredos-chroot /dev/sdb3 /dev/sdb2
 ```
 
-Y conseguirías un caparazón de raíz en el sistema roto, facilitando la reparación.
+While `/dev/sdb3` is your BredOS root partition and `/dev/sdb2` is your BredOS boot partition.
 
-Una vez que la reparación esté completa, sólo puedes cerrar el shell escribiendo `exit` o Ctrl + D, y la tarjeta adjunta se desmontaría.
+This will get a root shell into the broken system, facilitating repair.
+
+Once repair is complete, you can just close the shell by typing `exit` or Ctrl + D, and the attached filesystem would be unmounted.
