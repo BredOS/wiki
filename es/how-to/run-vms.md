@@ -2,7 +2,7 @@
 title: Ejecutar máquinas virtuales en BredOS
 description:
 published: true
-date: 2025-09-15T11:13:57.999Z
+date: 2025-09-16T10:47:11.442Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
@@ -23,7 +23,7 @@ Antes de comenzar, asegúrese de tener lo siguiente:
 
 ## 3.1 Instalar paquetes requeridos
 
-Para empezar, necesita instalar los paquetes necesarios para `qemu` y `virt-manager`.
+- Para empezar, necesita instalar los paquetes necesarios para `qemu` y `virt-manager`.
 
 ```
 sudo pacman -Syu virt-manager virt-viewer qemu-base qemu-system-aarch64 edk2-aarch64 dnsmasq 
@@ -78,10 +78,10 @@ virt-manager
 
 - Esto abrirá el GUI `virt-manager` donde puedes crear y administrar máquinas virtuales.
 
+![virt.jpg](/vms/virt.jpg)
+
 > Si no has añadido tu usuario al grupo `libvirt` necesitas introducir tu contraseña ahora.
 > {.is-info}
-
-![virt.jpg](/vms/virt.jpg)
 
 ## 3.6 Activar edición de XML
 
@@ -105,10 +105,13 @@ virt-manager
 
 - Siga el asistente para asignar CPU, RAM y almacenamiento para su VM.
 
+![cpuram.jpg](/vms/cpuram.jpg)
+
 > En el RK3588 puede asignar máx. 4 núcleos por vm debido a la pequeña arquitectura grande.
 > {.is-warning}
 
-![cpuram.jpg](/vms/cpuram.jpg)
+- Crea un disco virtual de tu tamaño preferido.
+
 ![disk.jpg](/vms/disk.jpg)
 
 - En CPUs con lo poco. arquitectura ig como el RK3588 necesita comprobar "Personalizar configuración antes de instalar" y editar el xml responsable de asignar núcleos cpu.
