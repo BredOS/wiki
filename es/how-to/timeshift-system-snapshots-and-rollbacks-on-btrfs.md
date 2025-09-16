@@ -2,7 +2,7 @@
 title: Instantáneas y retrocesos Btrfs con Timeshift
 description: Una guía completa sobre cómo configurar instantáneas Btrfs y retrocesos del sistema usando Timeshift
 published: true
-date: 2025-09-15T06:42:06.168Z
+date: 2025-09-16T10:41:28.622Z
 tags:
 editor: markdown
 dateCreated: 2024-27-27T19:19:08.209Z
@@ -91,7 +91,9 @@ sudo pacman -S timeshift-autosnap
 
 ## 3.2: Prevenir actualizaciones GRUB Duplicadas
 
-Para evitar que GRUB se actualice dos veces cuando una instantánea es creada por timeshift-autosnap, Se recomienda modificar el archivo de configuración. Establece `updateGrub` a `false` editando el siguiente archivo:
+Para evitar que GRUB se actualice dos veces cuando una instantánea es creada por timeshift-autosnap, Se recomienda modificar el archivo de configuración.
+
+- Establece `updateGrub` a `false` editando el siguiente archivo:
 
 ```
 sudo nano, /timeshift-autosnap.conf
