@@ -2,7 +2,7 @@
 title: Installation of UEFI
 description: 
 published: false
-date: 2025-09-16T11:29:43.061Z
+date: 2025-09-16T11:32:00.202Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -16,34 +16,3 @@ Sadly, not all devices we support do support booting `UEFI`. Also, not every dev
 
 - To determine what your device is capable of check this table:
 
-| Device            | UEFI  | SPI Chip | Known Issues |
-|-------------------|-------|-----------|--------------|
-| Cool Pi 4 Model B       |  No   |         | |
-|FydeTab Duo|	|	|	|
-|Indiedroid Nova|	|	|	|
-|ITX-3588J|	Yes |	No |	|
-|Khadas Edge 2|	|	|	|
-|Khadas VIM 4|	|	|	|
-|Mekotronics R58S|	|	|	|
-|Mekotronics R58X|	|	|	|
-|Mekotronics R58X-4G|	|	|	|
-|Mekotronics R58X-Pro|	|	|	|
-|Milk V Jupiter|	|	|	|
-|Orange Pi 5|	|	|	|
-|Orange Pi 5 Max|	|	|	|
-|Orange Pi 5 Plus|	Yes |	|	|
-|Orange Pi 5 Pro|	|	|	|
-|Orange Pi 5 Ultra|	|	|	|
-|Orange Pi CM5|	|	|	|
-|Orange Pi RV2|	|	|	|
-|Radxa CM5|	|	|	|
-|Radxa CM5 DTV carrier|	|	|	|
-|Radxa NX5 Kit|	|	|	|
-|Radxa Rock 4C Plus|	|	|	|
-|Radxa Rock 5 ITX|	|	|	|
-|Radxa Rock 5A|	|	|	|
-|Radxa Rock 5B|	|	|	|
-|Radxa Rock 5B+|	|	|	|
-|Radxa Rock 5C|	|	|	|
-|Radxa Rock 5D|	|	|	|
-|Radxa Rock 5T|	|	|	|
