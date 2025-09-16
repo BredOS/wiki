@@ -2,7 +2,7 @@
 title: RK3588のブートオーダーを変更する
 description: UEFIファームウェア設定を使用して、RK3588ベースのデバイスでデフォルトの起動順序を変更する方法を学びます。
 published: true
-date: 2025-09-15T11:15:39.364Z
+date: 2025-09-16T10:42:14.944Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
@@ -23,8 +23,9 @@ BredOS を実行している RK3588 ベースのデバイスでブート順序�
 
 ## 2.2 ブート順序設定への移動
 
-- 矢印キー(`<unk> `と`) を使用して、 `Boot Maintenance Manager`を選択し、`Enter\` を押します。\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
+- 矢印キー(`<unk> `と`) を使用して、 `Boot Maintenance Manager`を選択し、`Enter\` を押します。
+
+![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 - 次の画面で、 `Boot Options` を選択し、 `Enter` を押します。
 
@@ -41,9 +42,9 @@ BredOS を実行している RK3588 ベースのデバイスでブート順序�
 ![bredos_boot5.jpg](/boot_images/bredos_boot5.jpg)
 
 - 下向きの矢印 (`<unk> `) を使用して、リストの一番下までスクロールします。
+- 上に移動したいエントリを選択し、上に到達するまで「+」キーを押します。
 
-- 上に移動したいエントリを選択し、上に到達するまで「+」キーを押します。\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
+![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 - 目的のブート順序が設定されたら、Enterキーを押して確認します。
 
