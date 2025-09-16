@@ -2,7 +2,7 @@
 title: Idioma de diseño
 description:
 published: false
-date: 2025-09-16T09:19:40.859Z
+date: 2025-09-16T10:56:14.591Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -16,6 +16,8 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 > {.is-info}
 
 # 2. Encabezados
+
+- Los artículos deben contener encabezados
 
 - Los encabezados deben estar numerados.
 
@@ -37,11 +39,13 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 
 - Las notas importantes deben colocarse dentro de una infobox. La misma regla se aplica a los errores y advertencias.
 
-# 4. Capturas de pantalla
+# 4. Capturas y fotos
+
+- La captura de pantalla y las fotos deben ser de alta calidad.
 
 - Sólo se permiten capturas de pantalla si es necesario. Demasiadas capturas de pantalla hacen difícil encontrar información.
 
-- El contenido de una captura de pantalla debe describirse en texto plano. Su descripción debe comenzar con un guión (-) para renderizarlo como un elemento en una lista no ordenada.
+- El contenido de una captura de pantalla debe ser descrito en texto plano por encima de la imagen. Su descripción debe comenzar con un guión (-) para renderizarlo como un elemento en una lista no ordenada.
 
 - Un artículo no debe consistir únicamente en capturas de pantalla.
 
@@ -51,3 +55,7 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 
 - Las tablas no deben exceder un tamaño determinado. Si necesita desplazarse a través de ella mucho considere dividirla.
 - El uso de gráficos está prohibido.
+
+# 5. Página de ejemplo
+
+Usa esto como guía -> [example](/en/internal-bred-stuff/design-language/example)
