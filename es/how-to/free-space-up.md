@@ -2,7 +2,7 @@
 title: Guía de limpieza del espacio en disco
 description: Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS.
 published: true
-date: 2025-09-15T09:03:37.556Z
+date: 2025-09-16T10:42:55.802Z
 tags:
 editor: markdown
 dateCreated: 2024-20T20:26:57.698Z
@@ -37,27 +37,33 @@ sudo pacman -Sc
 También puedes usar `paccache` para mantener sólo las 3 versiones más recientes de cada paquete:
 
 - Instalar la herramienta necesaria:
-  ```
-  sudo pacman -S pacman-contrib
-  ```
-- Configurar un gancho Pacman para limpiar automáticamente después de cada transacción:
-  ```
-  sudo nano /usr/share/libalpm/hooks/paccache.hook
-  ```
-- Añadir el siguiente contenido al archivo:
-  ```
-  [Trigger]
-  Operación = Actualizar
-  Operación = Instalar
-  Operación = Quitar
-  Tipo = Paquete
-  Objetivo = *
 
-  [Action]
-  Descripción = Limpiar caché pacman con paccache…
-  Cuando = PostTransaction
-  Exec = /usr/bin/paccache -r
-  ```
+```
+   sudo pacman -S pacman-contrib
+```
+
+- Configurar un gancho Pacman para limpiar automáticamente después de cada transacción:
+
+```
+   sudo nano /usr/share/libalpm/hooks/paccache.hook
+```
+
+- Añadir el siguiente contenido al archivo:
+
+```
+   [Trigger]
+   Operación = Actualizar
+   Operación = Instalar
+   Operación = Quitar
+   Tipo = Paquete
+   Objetivo = *
+
+   [Action]
+   Descripción = Limpiar caché pacman con paccache…
+   Cuando = PostTransaction
+   Exec = /usr/bin/paccache -r
+```
+
 - Guarda el archivo con **Ctrl + S** y sal con **Ctrl + X**.
 
 # 3. Limpiar archivos antiguos de registro
