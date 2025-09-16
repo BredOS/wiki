@@ -2,7 +2,7 @@
 title: デバイス固有の画像を使用したインストール
 description:
 published: false
-date: 2025-09-15T13:06.236Z
+date: 2025-09-16T05:35:58.567Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -42,6 +42,8 @@ BredOS をインストールするために、当社は特定のデバイスの�
 > ラズベリーOSの点滅に精通している場合は、これ以上の読み取りは必要ありません。 SDカードまたはeMMC、デバイス固有のブレッドOSイメージを取得し、お好みのツールでフラッシュします。
 > {.is-info}
 
+以下では、アダプタでeMMCをフラッシュする方法について説明します。 適切なアダプタをお持ちでない場合は、SBCに接続されているeMMCを離れ、`3.1取り外し不可能なeMMC` に従ってください。
+
 ### 3.2.1 取り外し可能なeMMCを準備してください
 
 > eMMC ストレージを使用していない場合は、 \`3.2.2 EMMC / SD カードの書き込みをスキップします。
@@ -49,14 +51,18 @@ BredOS をインストールするために、当社は特定のデバイスの�
 
 #### 3.2.1.1 と uSD アダプター
 
-eMMCは基本的にSBCに(ほとんどの場合)ハード配線されているSDカードであるため、eMMCをSDカードに変換するために接続できるアダプタがあります。
+- eMMCは基本的にSBCに(ほとんどの場合)ハード配線されているSDカードであるため、eMMCをSDカードに変換するために接続できるアダプタがあります。
+
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
-eMMCのコネクタをuSDアダプタにしっかりと押し、SDカードリーダーに接続します。
+
+- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
 #### 3.2.1.2 USB to eMMC アダプター
 
-ほとんどの一般的に知られているUSBスティックは、eMMCストレージに基づいているので、USB-スティックでありながら取り外し可能なeMMCストレージを備えたそこにUSBからeMMCアダプタがあります。 これらはブレッドOSのフラッシュにも使用できます。
+- ほとんどの一般的に知られているUSBスティックは、eMMCストレージに基づいているので、USB-スティックでありながら取り外し可能なeMMCストレージを備えたそこにUSBからeMMCアダプタがあります。 これらはブレッドOSのフラッシュにも使用できます。
+
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
 
 ### 3.2.2 eMMC / SD カードの書き込み
