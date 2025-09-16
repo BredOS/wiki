@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-09-16T05:35:58.567Z
+date: 2025-09-16T06:42:31.891Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -34,7 +34,7 @@ La instalación varía de dispositivo a dispositivo y el medio en el que desea i
 
 Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto, decidimos dividir la instalación en eMC no extraíble en estas dos guías:
 
-- Flashear el eMMC con Linux o macOS
+- [Flashear el eMMC con Linux o macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - Flashear el eMMC con Microsoft Windows
 
 ## 3.2 Tarjeta SD y eMMC extraíble
@@ -55,7 +55,7 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee u
 
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
-- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+- Presione firmemente el conector del eMMC al adaptador uSD y conéctelos al lector de tarjetas SD.
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
