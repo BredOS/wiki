@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-09-16T11:08:45.768Z
+date: 2025-09-16T11:46:02.777Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -79,7 +79,7 @@ Existen innumerables herramientas para flashear una tarjeta sd o eMMC. Recomenda
 
 ### 3.3.1 Preperación
 
-Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
+Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue [esta guía](/en/install/Installation-of-UEFI).
 
 ### 3.3.2 Flashear nVME
 
