@@ -2,7 +2,7 @@
 title: 磁盘空间清理指南
 description: 本指南将带着您几种方法来恢复您的 BredOS 系统上的磁盘空间。 🖥️✨ 🖥️✨
 published: true
-date: 2025-09-15T09:03:37.556Z
+date: 2025-09-16T10:42:55.802Z
 tags:
 editor: markdown
 dateCreated: 2024-09-20T20：26：57.698Z
@@ -37,27 +37,33 @@ sudo pacman -Sc
 您也可以使用 `paccache` 来保留每个软件包最新的3个版本：
 
 - 安装所需工具：
-  ```
-  sudo pacman -S pacman-contrib
-  ```
-- 设置一个 Pacman 钩子在每次交易后自动清理：
-  ```
-  sudo nano /usr/share/libalpm/hooks/paccache.hook
-  ```
-- 在文件中添加以下内容：
-  ```
-  [Trigger]
-  操作=升级
-  操作=安装
-  操作=删除
-  类型=包
-  目标=*
 
-  [Action]
-  描述=清理带paccache…
-  当=PostTransaction
-  Exec = /usr/bin/paccache -r
-  ```
+```
+   sudo pacman -S pacman-contrib
+```
+
+- 设置一个 Pacman 钩子在每次交易后自动清理：
+
+```
+   sudo nano /usr/share/libalpm/hooks/paccache.hook
+```
+
+- 在文件中添加以下内容：
+
+```
+   [Trigger]
+   操作=升级
+   操作=安装
+   操作=删除
+   类型=包
+   目标=*
+
+   [Action]
+   描述=清理带paccache…
+   当=PostTransaction
+   Exec = /usr/bin/paccache -r
+```
+
 - 将文件保存为 **Ctrl + S** 并以 **Ctrl + X** 退出
 
 # 3. 清理旧日志文件
@@ -111,7 +117,7 @@ rm -rf ~/.cache/*
 - **gdu** - 控制台界面的磁盘使用情况分析器。\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
-  [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** - ncurses 磁盘使用情况分析器。\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
