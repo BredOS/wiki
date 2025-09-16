@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-09-16T06:42:31.891Z
+date: 2025-09-16T11:08:45.768Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -35,7 +35,7 @@ La instalación varía de dispositivo a dispositivo y el medio en el que desea i
 Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto, decidimos dividir la instalación en eMC no extraíble en estas dos guías:
 
 - [Flashear el eMMC con Linux o macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
-- Flashear el eMMC con Microsoft Windows
+- [Flashear el eMMC con Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
 
 ## 3.2 Tarjeta SD y eMMC extraíble
 
@@ -67,20 +67,23 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee u
 
 ### 3.2.2 Flashear eMMC / Tarjeta SD
 
-Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta guía cubriremos `BalenaEtcher` y `Raspberry Pi Imager`. Ambas herramientas ofrecen soporte para Linux, macOS y Microsoft Windows. Elige una de las guías abajo para continuar.
+Existen innumerables herramientas para flashear una tarjeta sd o eMMC. Recomendamos el uso de `BalenaEtcher` o `Raspberry Pi Imager`. Ambas herramientas ofrecen soporte para Linux, macOS y Microsoft Windows.
 
-- Flashear con BalenaEtcher
-- Flashear con Raspberry Pi Imager
+- [BalenaEtcher](https://etcher.balena.io/)
+- [Imágen Raspberry Pi](https://github.com/raspberrypi/rpi-imager)
+
+> Proporcionamos imágenes comprimidas como archivos .xz. ¡Asegúrate de descomprimirlos antes de parpadear!
+> {.is-warning}
 
 ## 3.3 nVME
 
-### 3.3.1 Prerrequisitos
+### 3.3.1 Preperación
 
 Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
 
 ### 3.3.2 Flashear nVME
 
-Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego siga una de las guías en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Después de flashear, conecte la unidad al puerto nVME de su SBC.
+Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Después de flashear, conecte la unidad al puerto nVME de su SBC.
 
 ### 3.3.3 Orden de Arranque
 
