@@ -2,7 +2,7 @@
 title: 使用 Timeshift 的 Btrfs 快照和回滚功能
 description: 使用 Timeshift 设置Btrfs 快照和系统回滚的综合指南
 published: true
-date: 2025-09-15T06:42:06.168Z
+date: 2025-09-16T10:41:28.62Z
 tags:
 editor: markdown
 dateCreated: 2024-09-27T19：19：08.209Z
@@ -91,7 +91,9 @@ sudo pacman -S timeshift-autosnap
 
 ## 3.2：防止重复 GRUB 更新
 
-为了避免在 Timeshift-autosnapp 创建时两次更新 GRUB，建议修改配置文件。 通过编辑以下文件将 `updateGrub` 设置为 `false` ：
+为了避免在 Timeshift-autosnapp 创建时两次更新 GRUB，建议修改配置文件。
+
+- 通过编辑以下文件将 `updateGrub` 设置为 `false` ：
 
 ```
 sudo nano /etc/timeshift-autosnap.conf
