@@ -2,7 +2,7 @@
 title: デバイス固有の画像を使用したインストール
 description:
 published: false
-date: 2025-09-16T11:08:45.768Z
+date: 2025-09-16T11:46:02.777Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -79,7 +79,7 @@ SDカードやeMMCをフラッシュするための無数のツールがあり�
 
 ### 3.3.1 プリペレーション
 
-NVMEドライブからの直接起動はデバイスではサポートされていないため、UEFIを別のメディアにインストールする必要があります。 UEFIが起動されると、nVMEドライブから直接起動することができます。 UEFIをSPIまたはSDカードにインストールするには、こちらのガイドに従ってください。
+NVMEドライブからの直接起動はデバイスではサポートされていないため、UEFIを別のメディアにインストールする必要があります。 UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
 
 ### 3.3.2 nVMEのフラッシュ
 
