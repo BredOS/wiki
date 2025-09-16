@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-16T11:41:38.556Z
+date: 2025-09-16T11:43:18.669Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -15,7 +15,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 
 | Device            | UEFI  | SPI Chip | Known Issues | Guides |
 |-------------------|-------|-----------|--------------|--|
-| Cool Pi 4 Model B       |  No   |         | | |
+| Cool Pi 4 Model B       |  No   |         | wifi doesn't work| |
 |FydeTab Duo|	Yes |	|	| |
 |Indiedroid Nova| Yes |	|	| |
 |ITX-3588J|	Yes |	No |	| |
@@ -25,7 +25,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Mekotronics R58X|Yes|Yes|	| |
 |Mekotronics R58X-4G|?|Yes|	| |
 |Mekotronics R58X-Pro|?|Yes|	| |
-|Milk V Jupiter|No|Yes|	| |
+|Milk V Jupiter|No|Yes|	wifi doesn't work| |
 |Orange Pi 5|Yes|Yes| Sata M.2 SSDs may not work	| |
 |Orange Pi 5B|	|	| Uses OPI5 image and requires DTBO for wifi to work	| |
 |Orange Pi 5 Max|No|Yes|	| |
