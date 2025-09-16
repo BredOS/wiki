@@ -2,7 +2,7 @@
 title: Design language
 description: 
 published: false
-date: 2025-09-16T09:10:18.711Z
+date: 2025-09-16T09:11:17.137Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -41,6 +41,8 @@ This page describes the design language we follow for our articles. This set of 
 # 4. Screenshots
 
 - Screenshots are only allowed if necessary. Too many screenshots make it hard to find information.
+
+- The content of a screenshot has to be described in plain text.
 
 - An article must not consist of screenshots only.
 
