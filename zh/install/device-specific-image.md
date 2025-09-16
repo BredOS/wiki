@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-09-16T11：08：45.768Z
+date: 2025-09-16T11:46:02.777Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -79,7 +79,7 @@ dateCreated: 2025-09-15T12:36.362Z
 
 ### 3.3.1 优先级
 
-由于我们的设备不支持直接从 nVME 驱动器启动，我们需要安装 UEFI 到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 若要按照本指南安装UEFI到您的SPI或SD卡，请遵循本指南。
+由于我们的设备不支持直接从 nVME 驱动器启动，我们需要安装 UEFI 到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 要将 UEFI 安装到您的 SPI 或 SD 卡遵循[本指南](/en/install/Installation-of-UEFI)。
 
 ### 3.3.2 Flashing nVME
 
