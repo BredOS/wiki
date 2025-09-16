@@ -2,7 +2,7 @@
 title: 安装 UEFI
 description:
 published: false
-date: 2025-09-16T12:36:51.696Z
+date: 2025-09-16T12:43:39.057Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
