@@ -1,8 +1,8 @@
 ---
-title: design language example
+title: Design Language Example
 description: 
 published: false
-date: 2025-09-16T09:22:29.068Z
+date: 2025-09-16T09:22:52.312Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:22:29.068Z
