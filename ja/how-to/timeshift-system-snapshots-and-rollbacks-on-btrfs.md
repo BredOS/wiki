@@ -2,7 +2,7 @@
 title: BtrfsスナップショットとTimeshift
 description: Timeshift スナップショットとシステムロールバックのセットアップに関する包括的なガイド
 published: true
-date: 2025-09-15T06:42:06.168Z
+date: 2025-09-16T10:41:28.622Z
 tags:
 editor: markdown
 dateCreated: 2024-09-27T19:19:08.209Z
@@ -91,7 +91,9 @@ sudo pacman -S timeshift-autosnap
 
 ## 3.2: GRUBの重複アップデートを防止
 
-timeshift-autosnap によってスナップショットが作成されたときに GRUB が2回更新されないようにするには、設定ファイルを変更することをお勧めします。 Set `updateGrub` to `false` by editing the following file:
+timeshift-autosnap によってスナップショットが作成されたときに GRUB が2回更新されないようにするには、設定ファイルを変更することをお勧めします。
+
+- Set `updateGrub` to `false` by editing the following file:
 
 ```
 sudo nano /etc/timeshift-autosnap.conf
