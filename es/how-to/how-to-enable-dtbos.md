@@ -2,7 +2,7 @@
 title: Habilitar superposiciones DTB
 description:
 published: true
-date: 2025-09-15T11:13:09.656Z
+date: 2025-09-16T10:44:14.092Z
 tags:
 editor: markdown
 dateCreated: 2024-10T18:02:07.427Z
@@ -17,7 +17,7 @@ Habilitar diferentes Overlays de Árbol de Dispositivos (DTBOs) permite activar 
 
 # 2. Configuración BredOS
 
-La herramienta bredos-config ofrece una forma sencilla de activar y desactivar dtbos. Iniciar la herramienta con
+- La herramienta bredos-config ofrece una forma sencilla de activar y desactivar dtbos. Iniciar la herramienta con
 
 ```
 sudo bredos-config
@@ -43,7 +43,9 @@ Si ya lo ha hecho antes puede saltarse al paso 5.
 
 Para determinar dónde se encuentra su partición ESP, ejecute el comando, `df | grep "/boot" | awk '{print $NF}'` y reemplaza `<ESP>` en todos los siguientes comandos con su salida.
 
-## 3.1 Crear los directorios necesarios para almacenar los archivos DTB
+## 3.1 Crear los directorios necesarios
+
+- Crear los directorios necesarios para almacenar los archivos DTB
 
 ```
 sudo mkdir -p <ESP>/dtb/{base,overlays}
