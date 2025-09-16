@@ -2,7 +2,7 @@
 title: 安装在马里的Panthor GPU with RK3588
 description:
 published: true
-date: 2025-09-15T11：14：39.819Z
+date: 2025-09-16T10：49：06.107Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -16,13 +16,13 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ## 2.1 自动使用
 
-bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为 启动工具为
+- bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为 启动工具为
 
 ```
 sudo bredos-config
 ```
 
-并导航到`设备树管理器` -> `启用/禁用叠加层` 并启用 `rockchip-rk3588-panthor-gpu` 。 该工具然后安装基础设备树和所选叠加层。 该工具然后安装基础设备树和所选叠加层。
+然后导航到`设备树管理器` -> `启用/禁用叠加层` 并启用 `rockchip-rk3588-panthor-gpu` 。 该工具然后安装基础设备树和所选叠加层。
 
 > 仔细遵循屏幕上的说明！
 > {.is-warning}
@@ -32,6 +32,7 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 
 > 不要在安装dtb 覆盖后重启系统！
 > {.is-warning}
+> 继续使用 \`3。 替换Panfork 图形。
 > {.is-warning}
 
 ## 2.2 手动操作
@@ -42,11 +43,12 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 
 > 不要在安装dtb 覆盖后重启系统！
 > {.is-warning}
+> 继续使用 \`3。 替换Panfork 图形。
 > {.is-warning}
 
 ## 3. 替换面板图形
 
-用标准的`mesa`软件包替换`mesa-panfork-git`软件包：
+- 用标准的`mesa`软件包替换`mesa-panfork-git`软件包：
 
 ```
 sudo pacman -S mesa
@@ -54,7 +56,7 @@ sudo pacman -S mesa
 
 ## 4. 重启您的系统
 
-安装vulkan加载器和驱动器：
+- 安装vulkan加载器和驱动器：
 
 ```
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
@@ -62,7 +64,7 @@ sudo pacman -S vulkan-icd-loader vulkan-panfrost
 
 ## 5. 重启您的系统
 
-重启系统以应用更改。 如果您想要验证您的图形，您可以运行以下操作：
+- 重启系统以应用更改。 如果您想要验证您的图形，您可以运行以下操作：
 
 ```
 sudo pacman -S inxi mesa-utils
