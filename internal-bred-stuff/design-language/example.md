@@ -2,7 +2,7 @@
 title: Design Language Example
 description: 
 published: false
-date: 2025-09-16T09:22:52.312Z
+date: 2025-09-16T10:03:07.184Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:22:29.068Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-16T09:22:29.068Z
 
 # 1. Introduction
 
-Its always good to start with a short introduction. You are allowed to be a little funny here to get the readers attention
+Its always good to start with a short introduction. You are allowed to be a little funny here to get the readers attention.
 
 # 2. Headings
 So what i did there?
@@ -43,7 +43,7 @@ guess not ...
 
 # 5. Tables
 
-This is a fine table. Not to big, with all neccessary information at one glance:
+This is a fine table. Not to big, with all necessary information at one glance:
 
 | Device            | UEFI  | Supported | Known Issues |
 |-------------------|-------|-----------|--------------|
