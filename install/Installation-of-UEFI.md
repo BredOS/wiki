@@ -2,14 +2,14 @@
 title: Installation of UEFI
 description: 
 published: false
-date: 2025-09-16T11:44:27.241Z
+date: 2025-09-16T11:45:20.692Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
 ---
 
 # 1. Introduction
-Many RK35xx-based devices do offer support for `UEFI`, which is a modern firmware interface that initializes hardware and starts the operating system. With the help of `UEFI` your device is capable of booting .iso files (written to a USB-Stick or burned to a DVD) as well as booting your OS directly from the nVME drive.
+Many of our supported devices do offer support for `UEFI`, which is a modern firmware interface that initializes hardware and starts the operating system. With the help of `UEFI` your device is capable of booting .iso files (written to a USB-Stick or burned to a DVD) as well as booting your OS directly from the nVME drive or over the network via PXE.
 
 # 2. Examine your device
 Sadly, not all devices we support do support booting `UEFI`. Also, not every device does come with an SPI chip installed. 
