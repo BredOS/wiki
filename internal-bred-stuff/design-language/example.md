@@ -2,7 +2,7 @@
 title: Design Language Example
 description: 
 published: false
-date: 2025-09-16T10:03:07.184Z
+date: 2025-09-16T10:03:55.829Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:22:29.068Z
@@ -13,7 +13,7 @@ dateCreated: 2025-09-16T09:22:29.068Z
 Its always good to start with a short introduction. You are allowed to be a little funny here to get the readers attention.
 
 # 2. Headings
-So what i did there?
+See what i did there?
 
 ## 2.1 Headings under Headings
 I guess you got the gist?
