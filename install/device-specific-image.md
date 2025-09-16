@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-09-16T06:42:31.891Z
+date: 2025-09-16T09:56:50.159Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -31,7 +31,7 @@ Installation varies from device to device and the medium you want to install Bre
 To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
 
  - [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
- - Flashing the eMMC with Microsoft Windows
+ - [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
  
 ## 3.2 removable eMMC and SD Card
 > If you are familiar with flashing Raspberry OS no further reading is needed. Just grab your SD-Card or eMMC, your device specific BredOS image and flash with your preferred tool.
