@@ -2,7 +2,7 @@
 title: デバイス固有の画像を使用したインストール
 description:
 published: false
-date: 2025-09-16T05:35:58.567Z
+date: 2025-09-16T06:42:31.891Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -34,7 +34,7 @@ BredOS をインストールするために、当社は特定のデバイスの�
 
 このために使用できるさまざまなオペレーティングシステムをカバーするために、インストールを取り外し不可能なeMMCに分割することにしました。
 
-- Linux または macOS で eMMC の書き込み
+- [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - Microsoft Windows で eMMC の書き込み
 
 ## 3.2 取り外し可能な eMMC および SD カード
@@ -55,7 +55,7 @@ BredOS をインストールするために、当社は特定のデバイスの�
 
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
-- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+- eMMCのコネクタをuSDアダプタにしっかりと押し、SDカードリーダーに接続します。
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
