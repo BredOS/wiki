@@ -2,7 +2,7 @@
 title: ディスク領域のクリーンアップガイド
 description: このガイドでは、BredOS システムのディスク領域を取り戻す方法をいくつかご紹介します。 🖥️✨
 published: true
-date: 2025-09-15T09:03:37.556Z
+date: 2025-09-16T10:42:55.802Z
 tags:
 editor: markdown
 dateCreated: 2024-09-20T20:26:57.698Z
@@ -37,27 +37,33 @@ sudo pacman -Sc
 `pacache`を使用すると、各パッケージの最新の3つのバージョンのみを保持できます。
 
 - 必要なツールをインストールします:
-  ```
-  sudo pacman -S pacman-contrib
-  ```
-- トランザクションごとに自動的にクリーンアップするには、Pacman フックを設定します。
-  ```
-  sudo nano /usr/share/libalpm/hooks/pacche.hook
-  ```
-- ファイルに次の内容を追加します:
-  ```
-  [Trigger]
-  Operation = Upgrade
-  Operation = Install
-  Operation = Remove
-  Type = Package
-  Target = *
 
-  [Action]
-  Description = Cleaning pacman cache with paccache…
-  When = PostTransaction
-  Exec = /usr/bin/paccache -r
-  ```
+```
+   sudo pacman -S pacman-contrib
+```
+
+- トランザクションごとに自動的にクリーンアップするには、Pacman フックを設定します。
+
+```
+   sudo nano /usr/share/libalpm/hooks/pacche.hook
+```
+
+- ファイルに次の内容を追加します:
+
+```
+   [Trigger]
+   Operation = Upgrade
+   Operation = Install
+   Operation = Remove
+   Type = Package
+   Target = *
+
+   [Action]
+   Description = Cleaning pacman cache with paccache…
+   When = PostTransaction
+   Exec = /usr/bin/paccache -r
+```
+
 - **Ctrl + S**でファイルを保存し、**Ctrl + X**で終了します。
 
 # 3. 古いログファイルを消去
@@ -78,7 +84,7 @@ sudo journalctl --vacuum-time=3d
 
 # 4. BleachBit を使用
 
-BleachBitは、システムジャンク、空きディスク容量をクリーンアップし、プライバシーを保護する強力なツールです。 BleachBit [here](https://www.bleachbit.org/) の使用方法の詳細を学ぶことができます。
+BleachBitは、システムジャンク、空きディスク容量をクリーンアップし、プライバシーを保護する強力なツールです。 BleachBit [here](https://www.bleachbit.org/) の使い方の詳細を学ぶことができます。
 
 # 5. ユーザーキャッシュを削除
 
