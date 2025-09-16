@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-16T11:48:49.123Z
+date: 2025-09-16T11:59:51.671Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -39,9 +39,9 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Radxa NX5 Kit|No|No|	| |
 |Radxa Rock 4C Plus|No|No|	| |
 |Radxa Rock 5 ITX|Yes|Yes|	| |
-|Radxa Rock 5A|Yes|?|	| |
+|Radxa Rock 5A|Yes|Yes (optional)|	| |
 |Radxa Rock 5B|Yes|Yes|	| |
 |Radxa Rock 5B+|Yes|Yes|	| |
-|Radxa Rock 5C|Yes|?|	| |
+|Radxa Rock 5C|Yes|Yes (optional)|	| |
 |Radxa Rock 5D|No|No|	| |
-|Radxa Rock 5T|No|Yes (optinal)|	| |
+|Radxa Rock 5T|No|Yes |	| |
