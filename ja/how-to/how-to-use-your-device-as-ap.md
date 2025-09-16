@@ -2,7 +2,7 @@
 title: ワイヤレスホットスポットとして使用してください
 description:
 published: true
-date: 2025-09-15T11:15:10.455Z
+date: 2025-09-16T10:50:45.422Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -29,36 +29,41 @@ NetworkManager のコマンド ライン ツール `nmcli` を使用すると、
 
 - 使用するWi-Fiインターフェイスを識別するためにネットワークデバイスをリストアップします:
 
-  ```bash
-  nmcli デバイスの状態
-  ```
+```bash
+   nmcli デバイスの状態
+```
 
 - 出力例
-  ```
-  DEVICE           TYPE      STATE                   CONNECTION      
-  bridge0          bridge    connected               bridge0         
-  tailscale0       tun       connected (externally)  tailscale0      
-  lo               loopback  connected (externally)  lo              
-  br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
-  br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
-  docker0          bridge    connected (externally)  docker0         
-  virbr0           bridge    connected (externally)  virbr0          
-  enp8s0           ethernet  connected (externally)  enp8s0          
-  wlan0            wifi      disconnected            --   
-  ```
+
+```
+	DEVICE           TYPE      STATE                   CONNECTION      
+	bridge0          bridge    connected               bridge0         
+	tailscale0       tun       connected (externally)  tailscale0      
+	lo               loopback  connected (externally)  lo              
+	br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
+	br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
+	docker0          bridge    connected (externally)  docker0         
+	virbr0           bridge    connected (externally)  virbr0          
+	enp8s0           ethernet  connected (externally)  enp8s0          
+	wlan0            wifi      disconnected            --   
+```
 
 - 次のコマンドを使用してホットスポットを作成します。
 
-  ```bash
-  nmcli デバイス wifi hotspot ifname <wifi_interface> ssid <MyHotspot> パスワード <mypassword>
-  ```
+```bash
+   nmcli デバイス wifi hotspot ifname <wifi_interface> ssid <MyHotspot> パスワード <mypassword>
+```
 
-- 出力例
-  ```
+- 出力例:
+
+```
   デバイス 'wlan0' successfully activated wd090d70-fd85-45bc-bf36-a63846f3f805' 
   ヒント: "nmcli dev wifi show-password" にはWi-Fi名とパスワードが表示されます。
-  ```
-  Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wlan0`,  `<MyHotspot>` with your desired SSID and `<mypassword>` with a secure passphrase of your choice.
+```
+
+```
+Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wlan0`,  `<MyHotspot>` with your desired SSID and `<mypassword>` with a secure passphrase of your choice.
+```
 
 > If you get the following error run the command again with sudo
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
@@ -95,21 +100,21 @@ enp8s0                          184c8145-ca17-4258-b7db-7e32c298f424  ethernet  
 
 - IP転送を有効にする:
 
-  ```bash
-  sudo sysctl net.ipv4.ip_forward=1
-  ```
+```bash
+   sudo sysctl net.ipv4.ip_forward=1
+```
 
 - `/etc/sysctl.d/99-sysctl.conf`を編集することで永続化します。
 
-  ```bash
-  sudo nano /etc/sysctl.d/99-sysctl.conf
-  ```
+```bash
+   sudo nano /etc/sysctl.d/99-sysctl.conf
+```
 
 - 次の行を追加:
 
-  ```
-  net.ipv4.ip_forward=1
-  ```
+```
+   net.ipv4.ip_forward=1
+```
 
 ## 3.4 ホットスポットの停止
 
