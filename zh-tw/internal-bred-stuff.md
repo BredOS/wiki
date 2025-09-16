@@ -2,7 +2,7 @@
 title: Internal Bred Stuff
 description:
 published: false
-date: 2025-09-16T09:07:04.053Z
+date: 2025-09-16T12:21:34.231Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T08:47:51.442Z
@@ -17,5 +17,5 @@ Devs can add notes to subfolders, which can later be turned into wiki articles b
 
 In each subfolder, you will also find our wiki article [design language](/en/internal-bred-stuff/design-language). If you are a new writer, **you are required to read it carefully and follow it strictly!**
 
-> Always show respect and passion to help make BredOS the most well-known Arch-based distro for ARM and x86 devices known to mankind!
+> Always show respect and passion to help make BredOS the best Arch-based distro for ARM and x86 devices known to mankind!
 > {.is-success}
