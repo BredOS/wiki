@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: true
-date: 2025-09-16T10:53:57.018Z
+date: 2025-09-16T10:55:13.995Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -21,7 +21,7 @@ A very handy pack including the flasher, clip, and other useful accessories can 
  >If the link has expired, feel free to give us a heads-up on Discord or Telegram.
  
  # 2. Connect to SPI
-> ⚡ *Before connecting anything to power, double-check that all connectors are correctly oriented!* ⚡ 
+>  *Before connecting anything to power, double-check that all connectors are correctly oriented!* 
 {.is-warning}
 
 
@@ -120,5 +120,5 @@ Verifying flash... VERIFIED.
 If you see the text "VERIFIED," the firmware has been flashed correctly. If you used the clip, simply disconnect it and you're good to go. If you desoldered the chip, you know what to do.
 
 
-> 🍊 This Wiki article was created on an Orange Pi 5 Plus. 🍊
+> All SATA Ports should work fine now!
 {.is-success}
