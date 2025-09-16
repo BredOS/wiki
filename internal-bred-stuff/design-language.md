@@ -2,7 +2,7 @@
 title: Design language
 description: 
 published: false
-date: 2025-09-16T09:19:40.859Z
+date: 2025-09-16T10:00:21.869Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -17,6 +17,8 @@ This page describes the design language we follow for our articles. This set of 
 
 
 # 2. Headings
+
+- Articles must contain headings
 
 - Headings must be numbered.
 
@@ -42,7 +44,7 @@ This page describes the design language we follow for our articles. This set of 
 
 - Screenshots are only allowed if necessary. Too many screenshots make it hard to find information.
 
-- The content of a screenshot must be described in plain text. Its description must start with a hyphen (-) to render it as an item in an unordered list.
+- The content of a screenshot must be described in plain text above the picture. Its description must start with a hyphen (-) to render it as an item in an unordered list.
 
 - An article must not consist of screenshots only.
 
