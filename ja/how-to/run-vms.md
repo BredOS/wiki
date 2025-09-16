@@ -2,7 +2,7 @@
 title: BredOS 上で仮想マシンを実行する
 description:
 published: true
-date: 2025-09-15T11:13:57.999Z
+date: 2025-09-16T10:47:11.442Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -23,7 +23,7 @@ dateCreated: 2024-10-05T22:12:39.679Z
 
 ## 3.1 必要なパッケージのインストール
 
-開始するには、 `qemu` と `virt-manager` に必要なパッケージをインストールする必要があります。
+- 開始するには、 `qemu` と `virt-manager` に必要なパッケージをインストールする必要があります。
 
 ```
 sudo pacman -Syu virt-viewer qemu-base qemu-system-aarch64 edk2-aarch64 dnsmasq 
@@ -79,10 +79,10 @@ virt-manager
 - これにより、 `virt-manager` GUIが開き、仮想マシンの作成と管理ができます。
   ![virt.jpg](/vms/virt.jpg)
 
+![virt.jpg](/vms/virt.jpg)
+
 > ユーザーを `libvirt` グループに追加していない場合は、今すぐパスワードを入力する必要があります。
 > {.is-info}
-
-![virt.jpg](/vms/virt.jpg)
 
 ## 3.6 XML 編集を有効にする
 
@@ -112,10 +112,13 @@ virt-manager
 
 - ウィザードに従って、CPU、RAM、およびVMストレージを割り当てます。 ⚙️
 
+![cpuram.jpg](/vms/cpuram.jpg)
+
 > RK3588では、小さな大きなアーキテクチャにより、vmあたり最大4コアを割り当てることができます。
 > {.is-warning}
 
-![cpuram.jpg](/vms/cpuram.jpg)
+- お好みのサイズの仮想ディスクを作成します。
+
 ![disk.jpg](/vms/disk.jpg)
 
 - ほとんどとCPU上。 RK3588 のような ig アーキテクチャは、「インストールする前に設定をカスタマイズ」にチェックを入れ、cpuコアの割り当てを担当する xml を編集する必要があります。
