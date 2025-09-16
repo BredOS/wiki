@@ -2,44 +2,43 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-09-13T10:07:51.326Z
+date: 2025-09-16T10:19:46.986Z
 tags:
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
 ---
 
-# 📚 ¡Cómo hacerlo!
+# 1. Introducción
 
-### **Descripción**
+Esta página contiene guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS.
 
-Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS.
+# 2. Enlaces útiles
 
-## 🛠️ Enlaces útiles
+- [Cómo reproducir contenido protegido DRM (instalando widevine)](/en/how-to/widevine-watch-drm-content)
 
-- [:mo.U_camera: Cómo reproducir contenido protegido DRM (instalando widevine)](/es/how-to/widevine-watch-drm-content)
+- [Cómo configurar Panthor en Mali GPUs con RK3588](/en/how-to/how-to-setup-panthor)
 
-- [🐾 Cómo configurar Panthor en GPUs Mali con RK3588](/es/how-to/how-to-setup-panthor)
+- [Cómo instalar STEAM en BredOS](/how-to/how-to-install-steam)
 
-- [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
+- [Cómo usar tu dispositivo como un punto de acceso inalámbrico](/how-to/how-to-use-your-device-as-ap)
 
-- [📶 Cómo usar tu dispositivo como un hotspot inalámbrico](/how-to/how-to-use-your-device-as-ap)
+- [Guía de Administradores de Paquetes](/how-to/package-management)
 
-- [📦✨ Guía de Administradores de Paquetes](/how-to/package-management)
+- [Guía de limpieza del espacio en disco](/how-to/free-space-up)
 
-- [🧹💾 Guía de limpieza del espacio en disco](/how-to/free-space-up)
+- [Instantáneas Btrfs y Rollbacks con Timeshift](/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- [📸🔄 Snapshots Btrfs y Rollbacks con Timeshift](/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
+- [Cambiar entornos de escritorio en BredOS](/how-to/switch-desktop-environments)
 
-- [🖥️ 🔄 Cambiar entornos de escritorio en BredOS](/how-to/switch-desktop-environments)
+- [Cómo actualizar UEFI en RK3588](/how-to/update-uefi-rk3588)
 
-- [💾 🔄 Cómo actualizar UEFI en RK3588](/how-to/update-uefi-rk3588)
+- [Cómo ejecutar máquinas virtuales](/how-to/run-vms)
 
-- [💻 Cómo ejecutar máquinas virtuales](/how-to/run-vms)
+- [Configurando Gobernadores](/how-to/govctl)
 
-- [✫ Configurando Gobernadores](/how-to/govctl)
+- [Ejecutando aplicaciones de Windows bajo BredOS](/how-to/proton-run)
 
-- [🪟 Ejecutando aplicaciones de Windows bajo BredOS](/how-to/proton-run)
+- [Cómo manejar fallos de disco reportados](/how-to/disk-failure)
 
-- [► Cómo manejar fallos de disco reportados](/how-to/disk-failure)
-
-✨ ¡Explora estas guías para sacar el máximo provecho de BredOS!
+> ¡Explora estas guías para sacar el máximo provecho de BredOS!
+> {.is-info}
