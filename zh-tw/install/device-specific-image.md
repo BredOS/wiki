@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description:
 published: false
-date: 2025-09-16T06:42:31.891Z
+date: 2025-09-16T11:08:45.768Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -35,7 +35,7 @@ Installation varies from device to device and the medium you want to install Bre
 To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
 
 - [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
-- Flashing the eMMC with Microsoft Windows
+- [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
 
 ## 3.2 removable eMMC and SD Card
 
@@ -67,20 +67,23 @@ In the following we describe how to flash eMMC with an adapter. If you do not ow
 
 ### 3.2.2 Flashing eMMC / SD Card
 
-There are countless tools to flash an sd card or eMMC. In this guide we will cover `BalenaEtcher` and `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows. Choose one of the guides down below to continue.
+There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows.
 
-- Flashing with BalenaEtcher
-- Flashing with Raspberry Pi Imager
+- [BalenaEtcher](https://etcher.balena.io/)
+- [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
+
+> We provide images compressed as .xz files. Make sure you decompress them before flashing!
+> {.is-warning}
 
 ## 3.3 nVME
 
-### 3.3.1 Prerequisites
+### 3.3.1 Preperation
 
 As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
 
 ### 3.3.2 Flashing nVME
 
-Connect the drive to your PC, either directly or via a USB adapter. Then follow one of the guides in `3.2.2 Flashing eMMC / SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
+Connect the drive to your PC, either directly or via a USB adapter. Then use one of the recommended tools in `3.2.2 Flashing eMMC / SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
 
 ### 3.3.3 Boot Order
 
