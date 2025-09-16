@@ -2,7 +2,7 @@
 title: 使用您的设备作为无线热点
 description:
 published: true
-date: 2025-09-15T11:15:10.455Z
+date: 2025-09-16T10:50:45.422Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10：33：46.772Z
@@ -32,36 +32,41 @@ dateCreated: 2024-09-08T10：33：46.772Z
 
 - 列出您的网络设备以识别您将使用的 Wi-Fi 接口：
 
-  ```bash
-  nmcli 设备状态
-  ```
+```bash
+   nmcli 设备状态
+```
 
 - 示例输出
-  ```
-  DEVICE           TYPE      STATE                   CONNECTION      
-  bridge0          bridge    connected               bridge0         
-  tailscale0       tun       connected (externally)  tailscale0      
-  lo               loopback  connected (externally)  lo              
-  br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
-  br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
-  docker0          bridge    connected (externally)  docker0         
-  virbr0           bridge    connected (externally)  virbr0          
-  enp8s0           ethernet  connected (externally)  enp8s0          
-  wlan0            wifi      disconnected            --   
-  ```
+
+```
+	DEVICE           TYPE      STATE                   CONNECTION      
+	bridge0          bridge    connected               bridge0         
+	tailscale0       tun       connected (externally)  tailscale0      
+	lo               loopback  connected (externally)  lo              
+	br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
+	br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
+	docker0          bridge    connected (externally)  docker0         
+	virbr0           bridge    connected (externally)  virbr0          
+	enp8s0           ethernet  connected (externally)  enp8s0          
+	wlan0            wifi      disconnected            --   
+```
 
 - 使用以下命令创建热点：
 
-  ```bash
-  nmcli 设备 Wifi 热点ifname <wifi_interface> ssid <MyHotspot> 密码 <mypassword>
-  ```
+```bash
+   nmcli 设备 Wifi 热点ifname <wifi_interface> ssid <MyHotspot> 密码 <mypassword>
+```
 
-- 示例输出
-  ```
+- 示例输出：
+
+```
   Device 'wlan0' successfully activated with '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
   Hint: "nmcli dev wifi show-password" shows the Wi-Fi name and password.
-  ```
-  用您的实际接口名称替换<wifi_interface>`，比如`wlp2s0`或`wlan0`， 使用您想要的 SSID 的<MyHotspot>和 `<mypassword>的密码选择一个安全的密码。
+```
+
+```
+用您的实际接口名称替换<wifi_interface>`，比如`wlp2s0`或`wlan0`， 使用您想要的 SSID 的<MyHotspot>和 `<mypassword>的密码选择一个安全的密码。
+```
 
 > 如果出现以下错误，请使用 sudo 再次运行该命令
 > “错误：无法设置 Wi-Fi 热点：无权控制网络。”
@@ -98,21 +103,21 @@ enp8s0                          184c8145-ca17-4258-b7db-7e32c298f424  ethernet  
 
 - 启用 IP 转发：
 
-  ```bash
-  sudo sysctl net.ipv4.ip_forward=1
-  ```
+```bash
+   sudo sysctl net.ipv4.ip_forward=1
+```
 
 - 编辑 `/etc/sysctl.d/99-sysctl.conf` 使其永久性：
 
-  ```bash
-  sudo nano /etc/sysctl.d/99-sysctl.conf
-  ```
+```bash
+   sudo nano /etc/sysctl.d/99-sysctl.conf
+```
 
 - 增加以下行：
 
-  ```
-  net.ipv4.ip_forward=1
-  ```
+```
+   net.ipv4.ip_forward=1
+```
 
 ## 3.4 停止热点
 
