@@ -2,7 +2,7 @@
 title: Design language
 description: 
 published: false
-date: 2025-09-16T09:09:16.214Z
+date: 2025-09-16T09:10:18.711Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -11,6 +11,10 @@ dateCreated: 2025-09-16T09:06:31.497Z
 # 1. Introduction
 
 This page describes the design language we follow for our articles. This set of rules is meant to keep the wiki coherent and easy to use.
+
+> Always keep your articles as plain and simple as possible. Use the arch wiki as inspiration.
+{.is-info}
+
 
 # 2. Headings
 
