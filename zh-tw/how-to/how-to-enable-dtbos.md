@@ -2,7 +2,7 @@
 title: Enable DTB overlays
 description:
 published: true
-date: 2025-09-15T11:13:09.656Z
+date: 2025-09-16T10:44:14.092Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -17,7 +17,7 @@ Enabling different Device Tree Overlays (DTBOs) allows optional hardware or kern
 
 # 2. BredOS-Config
 
-The bredos-config tool offers a simple way to enable and disable dtbos. Start the tool with
+- The bredos-config tool offers a simple way to enable and disable dtbos. Start the tool with
 
 ```
 sudo bredos-config
@@ -43,7 +43,9 @@ If you have already done this before you can skip ahead to step 5.
 
 To determine where your ESP partition is located, run the command, `df | grep "/boot" | awk '{print $NF}'` and replace `<ESP>` in all the following commands with it's output.
 
-## 3.1 Create the necessary directories for storing the DTB files
+## 3.1 Create the necessary directories
+
+- Create the necessary directories for storing the DTB files
 
 ```
 sudo mkdir -p <ESP>/dtb/{base,overlays}
