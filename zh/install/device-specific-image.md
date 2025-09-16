@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-09-16T05:35.567Z
+date: 2025-09-16T06:42:31.891Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -34,7 +34,7 @@ dateCreated: 2025-09-15T12:36.362Z
 
 为了覆盖您可以使用的操作系统的多样性，我们决定将安装分成不可移除的 eMMC 到这两个指南：
 
-- 使用 Linux 或 macOS 刷入 eMMC
+- [通过 Linux 或 macOS 刷入 eMMC ](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - 使用 Microsoft Windows 刷入 eMMC
 
 ## 3.2 可移动的 eMMC 和 SD 卡
@@ -55,7 +55,7 @@ dateCreated: 2025-09-15T12:36.362Z
 
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
-- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+- 坚定按下 eMMC 连接器到 uSD 适配器并连接到 SD 卡读取器。
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
