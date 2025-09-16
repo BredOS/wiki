@@ -2,7 +2,7 @@
 title: 内置碎片箱
 description:
 published: false
-date: 2025-09-16T09：07：04.053Z
+date: 2025-09-16T12:21:34.231Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T08:47:51.442Z
@@ -17,5 +17,5 @@ Devs可以将注释添加到子文件夹中，后来可以由作者转换成wiki
 
 在每个子文件夹中，您也会找到我们的 wiki 文章 [设计语言](/en/internal-bred-stuff/design-language)。 如果你是一个新的作者，**你需要仔细阅读并严格关注它！**
 
-> 总是显示尊重和热情，帮助BredOS成为人类已知的ARM和x86设备最著名的基于档案的磁盘！
+> 总是显示尊重和热情，帮助BredOS成为人类已知的ARM和x86设备基于档案的最佳磁盘！
 > {.is-success}
