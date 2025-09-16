@@ -2,7 +2,7 @@
 title: デバイス固有の画像を使用したインストール
 description:
 published: false
-date: 2025-09-16T06:42:31.891Z
+date: 2025-09-16T11:08:45.768Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -35,7 +35,7 @@ BredOS をインストールするために、当社は特定のデバイスの�
 このために使用できるさまざまなオペレーティングシステムをカバーするために、インストールを取り外し不可能なeMMCに分割することにしました。
 
 - [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
-- Microsoft Windows で eMMC の書き込み
+- [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
 
 ## 3.2 取り外し可能な eMMC および SD カード
 
@@ -67,20 +67,23 @@ BredOS をインストールするために、当社は特定のデバイスの�
 
 ### 3.2.2 eMMC / SD カードの書き込み
 
-SDカードやeMMCをフラッシュするための無数のツールがあります。 このガイドでは、 `BalenaEtcher` と `Raspberry Pi Imager` について説明します。 両方のツールは、Linux、macOS、およびMicrosoft Windowsのサポートを提供します。 続行するには、下のガイドのいずれかを選択してください。
+SDカードやeMMCをフラッシュするための無数のツールがあります。 `BalenaEtcher` または `Raspberry Pi Imager` を使用することをお勧めします。 両方のツールは、Linux、macOS、およびMicrosoft Windowsのサポートを提供します。
 
-- BalenaEtcherでの書き込み
-- Raspberry Pi Imager での書き込み
+- [BalenaEtcher](https://etcher.balena.io/)
+- [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
+
+> .xz ファイルとして圧縮された画像を提供します。 点滅する前にそれらを解凍してください!
+> {.is-warning}
 
 ## 3.3 nVME
 
-### 3.3.1 事前要件
+### 3.3.1 プリペレーション
 
 NVMEドライブからの直接起動はデバイスではサポートされていないため、UEFIを別のメディアにインストールする必要があります。 UEFIが起動されると、nVMEドライブから直接起動することができます。 UEFIをSPIまたはSDカードにインストールするには、こちらのガイドに従ってください。
 
 ### 3.3.2 nVMEのフラッシュ
 
-ドライブを直接またはUSBアダプタ経由でPCに接続します。 次に\`3.2のガイドの一つに従ってください。 EMMC / SDカードの書き込みを行い、NVMeドライブに適切なドライブ文字またはパスを使用してください。 点滅後、ドライブをSBCのnVMEポートに接続します。
+ドライブを直接またはUSBアダプタ経由でPCに接続します。 次に、\`3.2 で推奨されるツールのいずれかを使用します。 EMMC / SDカードの書き込みを行い、NVMeドライブに適切なドライブ文字またはパスを使用してください。 点滅後、ドライブをSBCのnVMEポートに接続します。
 
 ### 3.3.3 ブートオーダー
 
