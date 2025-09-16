@@ -2,7 +2,7 @@
 title: 在 BredOS 上运行虚拟机
 description:
 published: true
-date: 2025-09-15T11:13:57.999Z
+date: 2025-09-16T10:47:11.442Z
 tags: vm, ho-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -23,7 +23,7 @@ dateCreated: 2024-10-05T22:12:39.679Z
 
 ## 3.1 安装所需的软件包
 
-要启动，您需要安装 `qemu` 和 `virt-manager` 所需的软件包。
+- 要启动，您需要安装 `qemu` 和 `virt-manager` 所需的软件包。
 
 ```
 sudo pacman -Syu virt-Manager virt-viewer qemu-base qemu-system-aarch64 edk2-aarch64 dnsmasq 
@@ -79,10 +79,10 @@ sudo virsh net-autostart
 - 这将打开`virt-manager`GUI，您可以在那里创建和管理虚拟机器。
   ![virt.jpg](/vms/virt.jpg)
 
+![virt.jpg](/vms/virt.jpg)
+
 > 如果你还没有将你的用户添加到组 `libvirt` 中，你现在需要输入你的密码。
 > {.is-info}
-
-![virt.jpg](/vms/virt.jpg)
 
 ## 3.6 启用 XML 编辑
 
@@ -108,10 +108,13 @@ sudo virsh net-autostart
 
 - 按照向导分配CPU、RAM和您的虚拟机存储。 ⚙️
 
+![cpuram.jpg](/vms/cpuram.jpg)
+
 > 在 RK3588 上，由于小的大架构，您可以分配每vm 最多4个核。
 > {.is-warning}
 
-![cpuram.jpg](/vms/cpuram.jpg)
+- 创建您预置大小的虚拟磁盘。
+
 ![disk.jpg](/vms/disk.jpg)
 
 - 在 CPU 上少量的。 ig 架构类似于RK3588，您需要检查“安装前自定义配置”并编辑负责分配cpu核心的xml。
