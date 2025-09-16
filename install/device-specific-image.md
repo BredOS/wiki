@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-09-16T11:08:45.768Z
+date: 2025-09-16T11:46:02.777Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -67,7 +67,7 @@ There are countless tools to flash an sd card or eMMC. We recommend the use of `
 
 ## 3.3 nVME
 ### 3.3.1 Preperation
-As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
+As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
 
 ### 3.3.2 Flashing nVME
 Connect the drive to your PC, either directly or via a USB adapter. Then use one of the recommended tools in `3.2.2 Flashing eMMC / SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
