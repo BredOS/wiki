@@ -2,7 +2,7 @@
 title: Usa tu dispositivo como punto de acceso inalámbrico
 description:
 published: true
-date: 2025-09-15T11:15:10.455Z
+date: 2025-09-16T10:50:45.422Z
 tags:
 editor: markdown
 dateCreated: 2024/09-08T10:33:46.772Z
@@ -29,36 +29,41 @@ Puede crear fácilmente un punto de acceso utilizando la herramienta de línea d
 
 - Lista de dispositivos de red para identificar la interfaz Wi-Fi que usará:
 
-  ```bash
-  estado del dispositivo nmcli
-  ```
+```bash
+   estado del dispositivo nmcli
+```
 
 - Ejemplo salida
-  ```
-  DEVICE           TYPE      STATE                   CONNECTION      
-  bridge0          bridge    connected               bridge0         
-  tailscale0       tun       connected (externally)  tailscale0      
-  lo               loopback  connected (externally)  lo              
-  br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
-  br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
-  docker0          bridge    connected (externally)  docker0         
-  virbr0           bridge    connected (externally)  virbr0          
-  enp8s0           ethernet  connected (externally)  enp8s0          
-  wlan0            wifi      disconnected            --   
-  ```
+
+```
+	DEVICE TYPE STATE CONNECTION      
+	puente puente0 conectó puente0         
+	tailscale0 tun conectado (externamente) tailscale0      
+	loopback loopback conectado (externamente) lo              
+	br-8a9f1336b961 puente conectado (externamente) br-8a9f1336b961 
+	puente br-aeeaf62e2336 conectado (externamente) br-aeeaf62e2336 puente br-aeeaf62e2336 
+	puente docker0 conectado (externamente) docker0         
+	virbr0 puente conectado (externamente) virbr0          
+	enp8s0 ethernet conectado (externamente) enp8s0          
+	wlan0 wifi desconectado --   
+```
 
 - Crea el punto de acceso usando el siguiente comando:
 
-  ```bash
-  nmcli dispositivo wifi hotspot ifname <wifi_interface> ssid <MyHotspot> password <mypassword>
-  ```
+```bash
+   nmcli dispositivo wifi hotspot ifname <wifi_interface> ssid <MyHotspot> password <mypassword>
+```
 
-- Ejemplo salida
-  ```
+- Ejemplo:
+
+```
   Dispositivo 'wlan0' activado con éxito con '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
   Sugerencia: "nmcli dev wifi show-password" muestra el nombre y contraseña Wi-Fi.
-  ```
-  Reemplaza `<wifi_interface>` con tu nombre real de interfaz, como `wlp2s0` o `wlan0`, `<MyHotspot>` con tu SSID deseado y `<mypassword>` con una contraseña segura de tu elección.
+```
+
+```
+Reemplaza `<wifi_interface>` con tu nombre real de interfaz, como `wlp2s0` o `wlan0`, `<MyHotspot>` con tu SSID deseado y `<mypassword>` con una contraseña segura de tu elección.
+```
 
 > Si obtiene el siguiente error, ejecute de nuevo el comando con sudo
 > \\\\\`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
@@ -94,21 +99,21 @@ Para compartir tu conexión a Internet a través del hotspot, necesitas habilita
 
 - Habilitar reenvío de IP:
 
-  ```bash
-  sudo sysctl net.ipv4.ip_forward=1
-  ```
+```bash
+   sudo sysctl net.ipv4.ip_forward=1
+```
 
 - Hazlo permanente editando `mañana/sysctl.d/99-sysctl.conf`:
 
-  ```bash
-  sudo nano, /sysctl.d/99-sysctl.conf
-  ```
+```bash
+   sudo nano, /sysctl.d/99-sysctl.conf
+```
 
 - Añadir la siguiente línea:
 
-  ```
-  net.ipv4.ip_forward=1
-  ```
+```
+   net.ipv4.ip_forward=1
+```
 
 ## 3.4 Detener el punto de acceso
 
