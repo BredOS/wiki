@@ -2,7 +2,7 @@
 title: Btrfs Snapshots and Rollbacks with Timeshift 
 description: A comprehensive guide on setting up Btrfs snapshots and system rollbacks using Timeshift
 published: true
-date: 2025-09-15T06:42:06.168Z
+date: 2025-09-16T10:41:28.622Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-27T19:19:08.209Z
@@ -80,7 +80,8 @@ sudo pacman -S timeshift-autosnap
 ```
 
 ## 3.2: Prevent Duplicate GRUB Updates
-To avoid GRUB being updated twice when a snapshot is created by timeshift-autosnap, It's recommended to modify the configuration file. Set `updateGrub` to `false` by editing the following file:
+To avoid GRUB being updated twice when a snapshot is created by timeshift-autosnap, It's recommended to modify the configuration file. 
+- Set `updateGrub` to `false` by editing the following file:
 ```
 sudo nano /etc/timeshift-autosnap.conf
 ```
