@@ -2,7 +2,7 @@
 title: Design language
 description: 
 published: false
-date: 2025-09-16T10:02:03.049Z
+date: 2025-09-16T10:56:14.591Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -40,7 +40,9 @@ This page describes the design language we follow for our articles. This set of 
 
 - Important notes must be placed inside an infobox. The same rule applies to errors and warnings.
 
-# 4. Screenshots
+# 4. Screenshots and Photos
+
+- Screenshot and photos must be of high quality.
 
 - Screenshots are only allowed if necessary. Too many screenshots make it hard to find information.
 
