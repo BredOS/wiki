@@ -2,7 +2,7 @@
 title: Design language
 description: 
 published: false
-date: 2025-09-16T09:06:31.497Z
+date: 2025-09-16T09:09:16.214Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -42,3 +42,6 @@ This page describes the design language we follow for our articles. This set of 
 
 - Screenshots shall not exceed 1000px in height or width.
 
+# 5. Graphs and tables
+- Tables shall not exceed a certain size. If you need to scroll through it a lot consider splitting it up.
+- The use of graphs is prohibited.
