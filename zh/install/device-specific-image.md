@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-09-15T13：16：06.236Z
+date: 2025-09-16T05:35.567Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -42,6 +42,8 @@ dateCreated: 2025-09-15T12:36.362Z
 > 如果你熟悉刷新树莓操作系统，不需要进一步阅读。 只需抓取您的 SD 卡或 eMMC，您的设备特定的 BredOS 图像并用您的首选工具闪烁。
 > {.is-info}
 
+下面我们描述如何用适配器刷入eMMC。 如果你没有合适的适配器，请离开连接到你的SBC的eMC，并按照`3.1不可移动eMMC`。
+
 ### 3.2.1 准备好您可移除的 eMMC
 
 > 如果您没有使用 eMC存储设备，请跳至 `3.2.2 刷入eMMC / SD Card` 。
@@ -49,14 +51,18 @@ dateCreated: 2025-09-15T12:36.362Z
 
 #### 3.2.1.1 使用 uSD 适配器
 
-因为eMMC基本上是一个 SD 卡，它(大多是) 硬线到SBC ，有适配器可以连接您的 eMMC 将它们转换成SD卡。
-！[usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
-坚定按下 eMMC 的连接器到 uSD 适配器并将它们连接到您的 SD 卡阅读器。
+- 因为eMMC基本上是一个 SD 卡，它(大多是) 硬线到SBC ，有适配器可以连接您的 eMMC 将它们转换成SD卡。
+
+![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
+
+- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
 #### 3.2.1.2 使用 USB 为 eMMC 适配器
 
-由于几乎所有已知的 USB Sticks 都是基于eMC 存储设备，在那里有 USB 到 eMMC 适配器，这些适配器是 USB-Stics ，但是可以移除eMMC 存储设备。 这些也可以用于闪烁BredOS。
+- 由于几乎所有已知的 USB Sticks 都是基于eMC 存储设备，在那里有 USB 到 eMMC 适配器，这些适配器是 USB-Stics ，但是可以移除eMMC 存储设备。 这些也可以用于闪烁BredOS。
+
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
 
 ### 3.2.2 刷入 eMMC / SD 卡
