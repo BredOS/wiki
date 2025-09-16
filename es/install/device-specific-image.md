@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-09-15T13:16:06.236Z
+date: 2025-09-16T05:35:58.567Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -42,6 +42,8 @@ Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto,
 > Si usted está familiarizado con flashear Raspberry OS no necesita leer más. Simplemente coja su tarjeta SD-Card o eMMC, la imagen BredOS específica de su dispositivo y parpadee con su herramienta preferida.
 > {.is-info}
 
+En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee un adaptador adecuado deje el eMMC conectado a su SBC y siga `3.1 eMC` no extraíble.
+
 ### 3.2.1 Prepare su eMMC extraíble
 
 > Salta a `3.2.2 Flashing eMMC / SD Card` si no estás usando el almacenamiento eMMC.
@@ -49,14 +51,18 @@ Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto,
 
 #### 3.2.1.1 con adaptador uSD
 
-Como eMMC es básicamente una tarjeta SD que es (en su mayoría) de cable duro a la SBC hay adaptadores que puedes conectar tu eMMC para convertirlos en una tarjeta SD.
+- Como eMMC es básicamente una tarjeta SD que es (en su mayoría) de cable duro a la SBC hay adaptadores que puedes conectar tu eMMC para convertirlos en una tarjeta SD.
+
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
-Presiona firmemente el conector del eMMC al adaptador uSD y conéctalos al lector de tu tarjeta SD.
+
+- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
 #### 3.2.1.2 con adaptador USB a eMMC
 
-Como casi todos los USB conocidos comúnmente se basan en el almacenamiento eMMC, existen adaptadores USB a eMMC que son USB-Sticks pero con almacenamiento eMMC extraíble. Estos pueden ser usados para flashear BredOS también.
+- Como casi todos los USB conocidos comúnmente se basan en el almacenamiento eMMC, existen adaptadores USB a eMMC que son USB-Sticks pero con almacenamiento eMMC extraíble. Estos pueden ser usados para flashear BredOS también.
+
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
 
 ### 3.2.2 Flashear eMMC / Tarjeta SD
