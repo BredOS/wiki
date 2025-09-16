@@ -2,7 +2,7 @@
 title: Installation of UEFI
 description: 
 published: false
-date: 2025-09-16T11:32:00.202Z
+date: 2025-09-16T11:42:16.630Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -14,5 +14,5 @@ Many RK35xx-based devices do offer support for `UEFI`, which is a modern firmwar
 # 2. Examine your device
 Sadly, not all devices we support do support booting `UEFI`. Also, not every device does come with an SPI chip installed. If you have a device that supports `UEFI` and has a SPI chip, follow `3.1 Installtion to SPI`. If your device does support but has no SPI chip follow `3.2 Installation to SD Card`.
 
-- To determine what your device is capable of check this table:
+- To determine what your device is capable of check [this table](/en/table-of-supported-devices).
 
