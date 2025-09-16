@@ -2,7 +2,7 @@
 title: Idioma de diseño
 description:
 published: false
-date: 2025-09-16T10:56:14.591Z
+date: 2025-09-16T11:18:38.215Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -53,7 +53,10 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 
 # 5. Gráficos y tablas
 
+- La tabla debe ser descrita en texto plano encima de la tabla. Su descripción debe comenzar con un guión (-) para renderizarlo como un elemento en una lista no ordenada.
+
 - Las tablas no deben exceder un tamaño determinado. Si necesita desplazarse a través de ella mucho considere dividirla.
+
 - El uso de gráficos está prohibido.
 
 # 5. Página de ejemplo
