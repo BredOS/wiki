@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-16T11:43:18.669Z
+date: 2025-09-16T11:48:19.909Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -18,7 +18,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 | Cool Pi 4 Model B       |  No   |         | wifi doesn't work| |
 |FydeTab Duo|	Yes |	|	| |
 |Indiedroid Nova| Yes |	|	| |
-|ITX-3588J|	Yes |	No |	| |
+|ITX-3588J|	Yes |	No | refere to device page	|[itx-3588j](/en/itx-3588j) |
 |Khadas Edge 2| No | Yes |	| |
 |Khadas VIM 4| No | Yes	|	| |
 |Mekotronics R58S| Yes |No|	| |
