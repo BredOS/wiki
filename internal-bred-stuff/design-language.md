@@ -2,7 +2,7 @@
 title: Design language
 description: 
 published: false
-date: 2025-09-16T10:00:21.869Z
+date: 2025-09-16T10:02:03.049Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -53,3 +53,6 @@ This page describes the design language we follow for our articles. This set of 
 # 5. Graphs and tables
 - Tables must not exceed a certain size. If you need to scroll through it a lot consider splitting it up.
 - The use of graphs is prohibited.
+
+# 6. Example page
+Use this as guidance -> [example](/en/internal-bred-stuff/design-language/example)
