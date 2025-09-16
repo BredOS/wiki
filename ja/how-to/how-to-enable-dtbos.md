@@ -2,7 +2,7 @@
 title: DTBオーバーレイを有効にする
 description:
 published: true
-date: 2025-09-15T11:13:09.656Z
+date: 2025-09-16T10:44:14.092Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -17,7 +17,7 @@ dateCreated: 2024-11-10T18:02:07.427Z
 
 # 2. BredOS-Config
 
-bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する
+- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する
 
 ```
 sudo bredos-config
@@ -45,7 +45,9 @@ UEFI搭載ボードで実行している場合は、設定する必要があり�
 
 ESP パーティションがどこにあるかを決定するには、コマンドを実行します。 `df | grep "/boot" | awk '{print $NF}'` と `<ESP>` を以下のすべてのコマンドの出力に置き換えます。
 
-## 3.1 DTB ファイルを保存するために必要なディレクトリを作成します。
+## 3.1 必要なディレクトリを作成します
+
+- DTBファイルを保存するために必要なディレクトリを作成します
 
 ```
 sudo mkdir -p <ESP>/dtb/{base,overlays}
