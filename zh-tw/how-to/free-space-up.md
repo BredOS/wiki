@@ -2,7 +2,7 @@
 title: Disk Space Cleanup Guide
 description: This guide will walk you through several methods to reclaim disk space on your BredOS system.
 published: true
-date: 2025-09-15T09:03:37.556Z
+date: 2025-09-16T10:42:55.802Z
 tags:
 editor: markdown
 dateCreated: 2024-09-20T20:26:57.698Z
@@ -37,27 +37,33 @@ sudo pacman -Sc
 You can also use `paccache` to keep only the most recent 3 versions of each package:
 
 - Install the required tool:
-  ```
-  sudo pacman -S pacman-contrib
-  ```
-- Set up a Pacman hook to automatically clean up after each transaction:
-  ```
-  sudo nano /usr/share/libalpm/hooks/paccache.hook
-  ```
-- Add the following content to the file:
-  ```
-  [Trigger]
-  Operation = Upgrade
-  Operation = Install
-  Operation = Remove
-  Type = Package
-  Target = *
 
-  [Action]
-  Description = Cleaning pacman cache with paccache…
-  When = PostTransaction
-  Exec = /usr/bin/paccache -r
-  ```
+```
+   sudo pacman -S pacman-contrib
+```
+
+- Set up a Pacman hook to automatically clean up after each transaction:
+
+```
+   sudo nano /usr/share/libalpm/hooks/paccache.hook
+```
+
+- Add the following content to the file:
+
+```
+   [Trigger]
+   Operation = Upgrade
+   Operation = Install
+   Operation = Remove
+   Type = Package
+   Target = *
+
+   [Action]
+   Description = Cleaning pacman cache with paccache…
+   When = PostTransaction
+   Exec = /usr/bin/paccache -r
+```
+
 - Save the file with **Ctrl + S** and exit with **Ctrl + X**.
 
 # 3. Clean Old Log Files
