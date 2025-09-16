@@ -2,7 +2,7 @@
 title: Cosas internas
 description:
 published: false
-date: 2025-09-16T09:07:04.053Z
+date: 2025-09-16T12:21:34.231Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T08:47:51.442Z
@@ -17,5 +17,5 @@ Los desarrolladores pueden añadir notas a subcarpetas, las cuales pueden ser co
 
 En cada subcarpeta, también encontrarás nuestro artículo wiki [idioma de diseño](/en/internal-bred-stuff/design-language). Si eres un nuevo escritor, **¡tienes que leerlo cuidadosamente y seguirlo estrictamente!**
 
-> Siempre mostrar respeto y pasión para ayudar a que BredOS sea la distro más conocida basada en Arcos para dispositivos ARM y x86 conocidos por la humanidad!
+> Siempre mostrar respeto y pasión para ayudar a que BredOS sea la mejor distro basada en Arco para dispositivos ARM y x86 conocidos por la humanidad!
 > {.is-success}
