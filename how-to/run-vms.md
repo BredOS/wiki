@@ -2,7 +2,7 @@
 title: Run Virtual Machines on BredOS
 description: 
 published: true
-date: 2025-09-15T11:13:57.999Z
+date: 2025-09-16T10:47:11.442Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -22,7 +22,7 @@ Before you begin, ensure that you have the following:
 # 3. Installation
 ## 3.1 Install Required Packages
 
-To start, you need to install the necessary packages for `qemu` and `virt-manager`.
+- To start, you need to install the necessary packages for `qemu` and `virt-manager`.
 
 ```
 sudo pacman -Syu virt-manager virt-viewer qemu-base qemu-system-aarch64 edk2-aarch64 dnsmasq 
@@ -74,10 +74,11 @@ virt-manager
 ```
 
 - This will open the `virt-manager` GUI where you can create and manage virtual machines.
+
+![virt.jpg](/vms/virt.jpg)
 > If you have not added your user to the group `libvirt` you need to enter your password now.
 {.is-info}
 
-![virt.jpg](/vms/virt.jpg)
 ## 3.6 Enable XML editing
 - To enable XML editing (needed later) you need to open `virt-manager`, then navigate to `Edit` then `Preferences` and `Enable XML editing`.
 
@@ -94,10 +95,12 @@ virt-manager
 
 ![newvm.jpg](/vms/newvm.jpg)
 - Follow the wizard to allocate CPU, RAM, and storage for your VM.
-> On the RK3588 you can allocate max 4 cores per vm due to the little big architecture.
-{.is-warning}
 
 ![cpuram.jpg](/vms/cpuram.jpg)
+> On the RK3588 you can allocate max 4 cores per vm due to the little big architecture.
+{.is-warning}
+- Create a virtual disk of your prefered size.
+
 ![disk.jpg](/vms/disk.jpg)
 - On CPUs with the little.big architecture like the RK3588 you need to check "Customize configuration before install" and edit the xml responsible for allocating cpu cores.
 
