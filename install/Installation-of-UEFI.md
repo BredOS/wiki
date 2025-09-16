@@ -2,7 +2,7 @@
 title: Installation of UEFI
 description: 
 published: false
-date: 2025-09-16T12:30:59.337Z
+date: 2025-09-16T12:36:51.696Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -47,7 +47,7 @@ Follow the steps down below to install `UEFI` to your SPI chip.
 - Navigate to the USB-Stick containing the firmware image by typing the file system name and press `Enter` to change directory to it. If you're unsure which file system to use, run ls fsX: to list its contents.
 - Flash `UEFI` to your SPI chip with the command:
 ```
-sf updatefile FIRMWARE.img 0x0
+sf updatefile <FIRMWARE.img> 0x0
 ```
 - Power down your SBC and remove the SD Card.
 
