@@ -2,7 +2,7 @@
 title: Change the Boot Order on RK3588
 description: Learn how to change the default boot order on RK3588-based devices using the UEFI firmware settings
 published: true
-date: 2025-09-15T11:15:39.364Z
+date: 2025-09-16T10:42:14.944Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
@@ -23,8 +23,9 @@ If you need to modify the boot order on an RK3588-based device running BredOS, f
 
 ## 2.2 Navigating to the Boot Order Settings
 
-- Use the arrow keys (`↓` and `↑`) to select `Boot Maintenance Manager` and press `Enter`.\
-  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
+- Use the arrow keys (`↓` and `↑`) to select `Boot Maintenance Manager` and press `Enter`.
+
+![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 - On the next screen, select `Boot Options` and press `Enter`.
 
@@ -41,9 +42,9 @@ If you need to modify the boot order on an RK3588-based device running BredOS, f
 ![bredos_boot5.jpg](/boot_images/bredos_boot5.jpg)
 
 - Use the down arrow (`↓`) to scroll to the bottom of the list.
+- Select the entry you want to move to the top and press the `+` key until it reaches the top.
 
-- Select the entry you want to move to the top and press the `+` key until it reaches the top.\
-  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
+![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 - Once the desired boot order is set, press `Enter` to confirm.
 
