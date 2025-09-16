@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-09-16T06:42:31.891Z
+date: 2025-09-16T11：08：45.768Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -35,7 +35,7 @@ dateCreated: 2025-09-15T12:36.362Z
 为了覆盖您可以使用的操作系统的多样性，我们决定将安装分成不可移除的 eMMC 到这两个指南：
 
 - [通过 Linux 或 macOS 刷入 eMMC ](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
-- 使用 Microsoft Windows 刷入 eMMC
+- [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
 
 ## 3.2 可移动的 eMMC 和 SD 卡
 
@@ -67,20 +67,23 @@ dateCreated: 2025-09-15T12:36.362Z
 
 ### 3.2.2 刷入 eMMC / SD 卡
 
-有无数工具刷入sd 卡或 eMMC。 在本指南中，我们将涵盖`BalenaEtcher`和`Raspberry Pi Imager`。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 从下面选择一个指南以继续。
+有无数工具刷入sd 卡或 eMMC。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。
 
-- 正在与BalenaEtcher
-- 用树莓派成像器刷入
+- [BalenaEtcher](https://etcher.balena.io/)
+- [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
+
+> 我们提供了压缩为.xz文件的图像。 请确保你在刷入之前解压他们！
+> {.is-warning}
 
 ## 3.3 nVME
 
-### 3.3.1 前提条件
+### 3.3.1 优先级
 
 由于我们的设备不支持直接从 nVME 驱动器启动，我们需要安装 UEFI 到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 若要按照本指南安装UEFI到您的SPI或SD卡，请遵循本指南。
 
 ### 3.3.2 Flashing nVME
 
-直接或通过 USB 适配器将驱动器连接到您的电脑。 然后跟随“3.2”中的一个指南。 刷入 eMMC / SD 卡\`，确保你的 NVMe 驱动器使用正确的驱动器字母或路径。 刷入后将驱动器连接到 SBC 的 nVME 端口。
+直接或通过 USB 适配器将驱动器连接到您的电脑。 然后使用“3.2”中推荐的工具之一。 刷入 eMMC / SD 卡\`，确保你的 NVMe 驱动器使用正确的驱动器字母或路径。 刷入后将驱动器连接到 SBC 的 nVME 端口。
 
 ### 3.3.3 启动顺序
 
