@@ -2,7 +2,7 @@
 title: Design language
 description:
 published: false
-date: 2025-09-16T10:56:14.591Z
+date: 2025-09-16T11:18:38.215Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -53,7 +53,10 @@ This page describes the design language we follow for our articles. This set of 
 
 # 5. Graphs and tables
 
+- The table must be described in plain text above the table. Its description must start with a hyphen (-) to render it as an item in an unordered list.
+
 - Tables must not exceed a certain size. If you need to scroll through it a lot consider splitting it up.
+
 - The use of graphs is prohibited.
 
 # 5. Example page
