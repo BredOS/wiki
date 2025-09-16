@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-09-16T09:56:50.159Z
+date: 2025-09-16T11:01:24.770Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -56,10 +56,13 @@ In the following we describe how to flash eMMC with an adapter. If you do not ow
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
 
 ### 3.2.2 Flashing eMMC / SD Card
-There are countless tools to flash an sd card or eMMC. In this guide we will cover `BalenaEtcher` and `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows. Choose one of the guides down below to continue.
+There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows. 
 
-- Flashing with BalenaEtcher
-- Flashing with Raspberry Pi Imager
+- [BalenaEtcher](https://etcher.balena.io/)
+- [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
+
+> We provide images compressed as .xz files. Make sure you decompress them before flashing!
+{.is-warning}
 
 
 ## 3.3 nVME
