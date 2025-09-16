@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-09-16T05:30:03.527Z
+date: 2025-09-16T05:35:58.567Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -67,7 +67,7 @@ There are countless tools to flash an sd card or eMMC. In this guide we will cov
 As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
 
 ### 3.3.2 Flashing nVME
-Connect the drive to your PC, either directly or via a USB adapter. Then follow one of the guides in `3.2.2 Flashing eMMC / SD Card` [device-specific-image](#3.2.2-flashing-emmc-/-sdcard), making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
+Connect the drive to your PC, either directly or via a USB adapter. Then follow one of the guides in `3.2.2 Flashing eMMC / SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
 
 ### 3.3.3 Boot Order
 The UEFI should be able to pick up the drive by itself. However the order of devices it will try to boot from can slow down the bootprocess or even fail completely (e. g. if you have a PXE Server in your network). To change the bootorder follow this [guide](/en/how-to/change-default-boot-order-rk3588).
