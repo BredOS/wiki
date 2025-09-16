@@ -2,7 +2,7 @@
 title: 内部飼育品
 description:
 published: false
-date: 2025-09-16T09:07:04.053Z
+date: 2025-09-16T12:21:34.231Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T08:47:51.442Z
@@ -17,5 +17,5 @@ dateCreated: 2025-09-16T08:47:51.442Z
 
 各サブフォルダには、wikiの記事[design language](/en/internal-bred-stuff/design-language)もあります。 もしあなたが新しい作家であれば、**注意深く読んで厳密に従ってください！**
 
-> BredOSをARMとx86デバイスで最も有名なArchベースの気晴らしにするための敬意と情熱を常に示してください!
+> BredOSをARMやx86デバイスにとって最高のアーチベースの気晴らしにするための敬意と情熱を常に示してください!
 > {.is-success}
