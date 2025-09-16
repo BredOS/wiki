@@ -2,44 +2,43 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-09-13T10:07:51.326Z
+date: 2025-09-16T10:19:46.986Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
 ---
 
-# 📚 How To!
+# 1. はじめに
 
-### **説明**
+このページには、ガイド、チュートリアル、ブレッドOSで特定のものをインストールまたは使用する方法についてのヒントが含まれています。
 
-BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、およびヒント。
+# 2. 有用なリンク
 
-## 🛠️ 有用なリンク
+- [DRM 保護されたコンテンツの再生方法(widevineをインストール)](/en/how-to/widevine-watch-drm-content)
 
-- [🎥 DRM 保護されたコンテンツ(widevineをインストール)を再生する方法](/ja/how-to/widevine-watch-drm-content)
+- [How to set Panthor on Mali GPU with RK3588](/en/how-to/how-to-setup-panthor)
 
-- [🐾 Mali GPUで RK3588をセットアップする方法](/ja/how-to/how-to-setup-panthor)
+- [How to Install STEAM on BredOS](/how-to/how-to-install-steam)
 
-- [🎮 ブレッドOSにSTEAMをインストールする方法](/how-to/how-to-install-steam)
+- [How to use your device as a wireless hotspot](/how-to/how-to-use-your-device-as-ap)
 
-- [:antera_bars: 端末を無線ホットスポットとして使用する方法](/how-to/how-to-use-your-device-as-ap)
+- [Package Managers Guide](/how-to/package-management)
 
-- [📦✨ Package Managers Guide](/how-to/package-management)
+- [Disk Space Cleanup Guide](/how-to/free-space-up)
 
-- [🧹💾 ディスク領域クリーンアップガイド](/how-to/free-space-up)
+- [BtrfsスナップショットとTimeshift付きロールバック](/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
 
-- [📸🔄 Timeshft付きのBtrfs スナップショットとロールバック](/how-to/timeshift-system-snapshots-and-rollbacks-on-btrfs)
+- [Switch Desktop Environments on BredOS](/how-to/switch-desktop-environments)
 
-- [🖥️ 🔄 BredOS上でデスクトップ環境を切り替える](/how-to/switch-desktop-environments)
+- [How to Update UEFI on RK3588](/how-to/update-uefi-rk3588)
 
-- [💾 🔄 RK3588でUEFIを更新する方法](/how-to/update-uefi-rk3588)
+- [How to run Virtual Machines](/how-to/run-vms)
 
-- [💻 仮想マシンの実行方法](/how-to/run-vms)
+- [Configuring Governors](/how-to/govctl)
 
-- [<unk> 設定知事](/how-to/govctl)
+- [Running Windows Applications under BredOS](/how-to/proton-run)
 
-- [🪟 BREDOS 下で Windows アプリケーションを実行する] (/how-to/proton-run)
+- [How to handle reported disk failures](/how-to/disk-failure)
 
-- [<unk> 報告されたディスク障害の処理方法](/how-to/disk-failure)
-
-✨ これらのガイドを探索して、BredOSを最大限に活用しよう！
+> BredOSを最大限に活用するために、これらのガイドを探索してください！
+> {.is-info}
