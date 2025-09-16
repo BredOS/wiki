@@ -2,7 +2,7 @@
 title: Use your device as a wireless hotspot
 description: 
 published: true
-date: 2025-09-15T11:15:10.455Z
+date: 2025-09-16T10:50:45.422Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -28,11 +28,11 @@ You can easily create a hotspot using the NetworkManager command-line tool `nmcl
 
 - List your network devices to identify the Wi-Fi interface you’ll use:
    
-   ```bash
+```bash
    nmcli device status
    ```
 - Example output
-	```
+```
 	DEVICE           TYPE      STATE                   CONNECTION      
 	bridge0          bridge    connected               bridge0         
 	tailscale0       tun       connected (externally)  tailscale0      
@@ -43,14 +43,14 @@ You can easily create a hotspot using the NetworkManager command-line tool `nmcl
 	virbr0           bridge    connected (externally)  virbr0          
 	enp8s0           ethernet  connected (externally)  enp8s0          
 	wlan0            wifi      disconnected            --   
-	```
+```
 - Create the hotspot by using the following command:
 
-   ```bash
+```bash
    nmcli device wifi hotspot ifname <wifi_interface> ssid <MyHotspot> password <mypassword>
    ```
-- Example output  
-  ```
+- Example output:
+```
   Device 'wlan0' successfully activated with '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
   Hint: "nmcli dev wifi show-password" shows the Wi-Fi name and password.
   ```
@@ -89,19 +89,19 @@ To share your internet connection through the hotspot, you need to enable IP for
 
 - Enable IP forwarding:
 
-   ```bash
+```bash
    sudo sysctl net.ipv4.ip_forward=1
    ```
 
 - Make it permanent by editing `/etc/sysctl.d/99-sysctl.conf`:
 
-   ```bash
+```bash
    sudo nano /etc/sysctl.d/99-sysctl.conf
    ```
 
 - Add the following line:
 
-   ```
+```
    net.ipv4.ip_forward=1
    ```
 
