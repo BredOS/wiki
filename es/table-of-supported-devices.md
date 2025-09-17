@@ -2,7 +2,7 @@
 title: Tabla de dispositivos soportados
 description:
 published: false
-date: 2025-09-16T11:59:51.671Z
+date: 2025-09-17T08:55:38.290Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -12,7 +12,7 @@ dateCreated: 2025-09-16T11:31:39.039Z
 
 Esta página contiene una tabla de nuestros dispositivos soportados con problemas conocidos, soporte de hardware y guías que se aplican a ellos.
 
-# 2. Lista de dispositivos
+# 2. Lista de dispositivos con imágenes específicas del dispositivo
 
 | Dispositivo               | UEFI | SPI Chip                         | Problemas conocidos                                       | Guías                      |
 | ------------------------- | ---- | -------------------------------- | --------------------------------------------------------- | -------------------------- |
@@ -46,3 +46,9 @@ Esta página contiene una tabla de nuestros dispositivos soportados con problema
 | Roca Radxa 5C             | Sí   | Sí (opcional) |                                                           |                            |
 | Roca Radxa 5D             | Nu   | Nu                               |                                                           |                            |
 | Roca Radxa 5T             | Nu   | Sí                               |                                                           |                            |
+
+# 3. Lista de dispositivos arm64 con instalación genérica de ISO
+
+| Dispositivo    | UEFI | SPI Chip | Problemas conocidos                                                | Guías                                |
+| -------------- | ---- | -------- | ------------------------------------------------------------------ | ------------------------------------ |
+| Radxa Orion O6 | Sí   | Sí       | Los dispositivos PCIe Gen 4 hacen que la placa se vuelva inestable | [radxa-orion-o6](/en/radxa-orion-o6) |
