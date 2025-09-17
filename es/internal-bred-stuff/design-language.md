@@ -2,7 +2,7 @@
 title: Idioma de diseño
 description:
 published: false
-date: 2025-09-16T11:18:38.215Z
+date: 2025-09-17T14:16:06.123Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -25,7 +25,7 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 
 # 3. Texto
 
-- El uso de emojis está prohibido.
+- El uso de emojis está prohibido. La única excepción es el 🔸 emoji.
 
 - Un artículo no debe exceder una cierta longitud. Si necesita desplazarse un montón, trate de dividir partes de él en una guía separada.
 
