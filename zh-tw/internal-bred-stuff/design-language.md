@@ -2,7 +2,7 @@
 title: Design language
 description:
 published: false
-date: 2025-09-16T11:18:38.215Z
+date: 2025-09-17T14:16:06.123Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -25,7 +25,7 @@ This page describes the design language we follow for our articles. This set of 
 
 # 3. Text
 
-- The use of emojis is prohibited.
+- The use of emojis is prohibited. The only exception is the 🔸 emoji.
 
 - An article must not exceed a certain length. If you need to scroll a lot, try to split parts of it into a separate guide.
 
