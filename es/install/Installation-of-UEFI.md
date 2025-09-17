@@ -2,7 +2,7 @@
 title: Instalación de UEFI (en RK3588)
 description:
 published: false
-date: 2025-09-17T00:08:03.762Z
+date: 2025-09-17T06:40:43.494Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -44,7 +44,7 @@ Descargue la última versión que coincida con su dispositivo, inserte una tarje
 Sigue los pasos abajo para instalar `UEFI` en tu chip SPI.
 
 - Copia la última versión de nuestro `UEFI` a un USB-Stick formateado FAT32 y conéctalo a tu SBC.
-- Arranca tu tablero en `UEFI` desde tu tarjeta SD. Si tienes problemas para entrar en la configuración de UEFI, comprueba [esta guía](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
+- Arranca tu tablero en `UEFI` desde tu tarjeta SD. Si tienes problemas para acceder a la configuración de UEFI, revisa [esta guía] (/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
 - Navega a `Boot Manager` -> `UEFI Shell` para entrar en la interfaz de línea de comandos.
 - Listar todas las particiones legibles con el uso del comando `map`. Este comando lista todas las particiones con el esquema de nombres de `fs0:`, `fs1:`, ...
 - Vaya al USB-Stick que contiene la imagen del firmware tecleando el nombre del sistema de archivos y presione `Enter` para cambiar el directorio a él. Si no está seguro de qué sistema de ficheros usar, ejecute ls fsX: para listar su contenido.
