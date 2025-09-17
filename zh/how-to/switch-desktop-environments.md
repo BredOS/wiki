@@ -2,7 +2,7 @@
 title: 在 BredOS 上切换桌面环境
 description: 学习如何在 BredOS 上安装并切换到 GNOME 桌面环境
 published: true
-date: 2025-09-15T10:00:53.184Z
+date: 2025-09-17T10:31:38.154Z
 tags: 自定义设置
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
@@ -68,8 +68,32 @@ sudo pacman -S extension-manager
 ### 1.3.3 配置屏幕旋转
 
 - 转到扩展管理中的`已安装`选项卡。
-- 点击 ⚙️ 图标打开扩展设置。
+- 点击装备图标打开扩展设置。
 - 将 **设置方向偏移** 值增加到 `1`。
+
+## 1.4 风景风格使用
+
+触控笔只有当屏幕默认垂直方向时才会正确工作。
+要将此设置为水平工作，请使用：
+若要将此设置为水平工作，请按照这些步骤进行操作。
+
+### 1.4.1 编辑udev规则
+
+- 要编辑文件 `fydetab.rules`，请运行：
+
+```
+sudo nano /etc/udev/rules.d/fydetab.rules
+```
+
+### 1.4.2 追加配置行
+
+- 在文件底部添加：
+
+```
+SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 1 0 0 1"
+```
+
+然后按 Ctrl + S 键保存，Ctrl + X 键退出。
 
 # 2. BledOS 上的 Plasma 桌面
 
