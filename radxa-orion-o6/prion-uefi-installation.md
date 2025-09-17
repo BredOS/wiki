@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T08:14:20.610Z
+date: 2025-09-17T08:17:12.057Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -85,7 +85,7 @@ dd if=/dev/zero bs=1 count=$((8388608 - <your file size here>)) >> ./cix_flash_a
 > Ensure that your board is disconnected from power while removing or inserting the SPI chip!
 {.is-warning}
 
-The SPI chip on the Prion is socketed for easy removal. The socket is located between the CPU fan header and the GPIO port.
+The SPI chip on the Prion is socketed for easy removal. The socket is located between the CPU fan header and the GPIO port. To easily locate the chip refer to the documentation by Radxa [found here](https://radxa.com/orion/o6/marked_orion_o6.webp).
 
 - Remove the SPI chip from the Prion.
 - Connect the ZIF board to your flasher. 
