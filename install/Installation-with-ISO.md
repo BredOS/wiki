@@ -1,80 +1,77 @@
 ---
-title: Installation with .iso image
+title: First Setup (.iso image)
 description: 
 published: false
-date: 2025-09-17T11:07:04.117Z
+date: 2025-09-17T11:09:25.015Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
 ---
 
 # 1. Introduction
-For the installation of BredOS we provide an .iso file for easy installation on generic arm64 and x86 devices. 
+Welcome to Bakery, the place to mix, knead, and bake only the finest ingredients for your BredOS. With Bakery you will be guided through the entire process from picking the right flour to the best knoting technice to the exact amount of time it needs to rise. So let's get started!
 
-> Even so we do not reccomend installation with .iso if there exists a device specific image it is possible to do it if your device has support for UEFI.
+# 2. Burning the image
+After you downloaded the .iso file from our website
+
+# 3. Bakery
+## 3.1 Warm Welcome
+- Bakery starts automatically on boot, as long as the setup hasn't been completed. There's also a desktop shortcut to launch it without rebooting. To begin the setup, choose between an online or offline installation.
+> Online Installation is under construction right now. Please use offline install.
+{.is-info}
+
+![1-scaled.png](/first-setup/1-scaled.png)
+
+## 3.2 Bred is enjoyed all over the world
+- Before we start our journey, we need to agree on how to communicate best. What language do you speak? What time format do you use? And what currency you are familiar with?
+
+![2-scaled.png](/first-setup/2-scaled.png)
+Look up your prefered language and click on it. A window will then pop up where you can choose your locale. The time and date format, as well as your currency, should be filled in automatically. Please check them before continuing and feel free to adjust them to your preferences.
+
+## 3.3 About the kneading technique
+Let's talk about kneading. Everyone is different, so there is no single 'true' kneading technique. To accommodate this, you can choose you technique based on your country.
+![6-scaled.png](/first-setup/6-scaled.png)
+After you click on your country you can choose your layout. As the name suggests "Normal" is the layout most commonly used. If you are unsure use this. If you have an unusual keyboard, like those sold by Apple, choose the layout accordingly.
+
+> Use the textbar to test your layout. This is important later when you have to type in your password!
 {.is-info}
 
 
-# 2. Download
-You can find download links for images in our [website](https://bredos.org/download.html)!
+## 3.4 The process of rising
+- Here at Bakery, we work with love. We fully admit that Bred needs time to become the beloved product we all know. For that, we need to know your time zone.
 
-# 3. Installation
-Installation varies from device to device and the medium you want to install BredOS to. In this guide we will cover installation to
-- `3.1 non-removable eMMC`
-- `3.2 removable eMMC and SD Card`
-- `3.3 nVME`
+![9-scaled.png](/first-setup/9-scaled.png)
+Select your Region and Zone using the dropdown menus. Your current time should then appear just below, so you can verify that the time is set correctly.
+## 3.5 While we wait, we get to know each other
+- Now that our dough is kneaded and we know how long it will take to rise, we have some time to get to know each other better. Tell me, what’s your name? Do you have a nickname? And what name would you give your Bred if I asked?
 
-> Before you begin please check which options are available with your device!
-{.is-info}
+![10-scaled.png](/first-setup/10-scaled.png)
+Please fill in your name, username, and hostname. The hostname will be used as a friendly name on your network. Then enter your password twice. You can use the eye icon to show or hide your password.
 
+If you want to disable password protection for sudo and polkit, toggle the switch accordingly.
+> Please be aware that disabling password-protection does allow to run a program at root-level without password! This **can** be dangerous!
+{.is-danger}
 
-## 3.1 non-removable eMMC
-To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
+Every user has an ID assigned to them. This ID is used internally by programs, the file system, and more. You can change it if you want, but usually, there’s no need to.
 
- - [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
- - [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
- 
-## 3.2 removable eMMC and SD Card
-> If you are familiar with flashing Raspberry OS no further reading is needed. Just grab your SD-Card or eMMC, your device specific BredOS image and flash with your preferred tool.
-{.is-info}
+If you want to skip the LightDM login screen and log in to your system without a password, toggle the switch accordingly.
 
-In the following we describe how to flash eMMC with an adapter. If you do not own a suitable adapter leave the eMMC connected to your SBC and follow `3.1 non-removable eMMC`.
-### 3.2.1 Get your removable eMMC ready
-> Skip to `3.2.2 Flashing eMMC / SD Card` if you are not using eMMC storage.
-{.is-info}
+## 3.6 The oven is heated up
+- Since the dough has risen and the oven is hot, we pause to check that we did not forget anything. Luckily Bakery has automatically created a checklist for us. 
 
-#### 3.2.1.1 with uSD adapter
-- As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to to convert them into an SD Card.
+![11-scaled.png](/first-setup/11-scaled.png)
+Please check that everything is included: flour, water, salt, and yeast. Was the kneading done properly? Did we let the dough rise long enough? If everything is okay, hit 'Install'.
+## 3.7 There is no better smell than fresh Bred
+- Now grab a coffee or tea and stare into the oven for a while. Reflect on what you’ve learned in the Bakery while the pleasant smell of Bred tickles your nose. Enjoy this waiting time with eager anticipation as your Bred finishes baking.
 
-![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
-- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+![13-scaled.png](/first-setup/13-scaled.png)
 
-![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+## 3.8 Enjoy your Bred
+- Serve your Bred however you like it — plain, with cheese and marmalade, a generous amount of sriracha sauce, or with a nice, fresh fried egg. We know that Bred can be enjoyed in countless ways, and we love them all.
 
-#### 3.2.1.2 with USB to eMMC adapter
-- As almost all commonly known USB Sticks are based on eMMC storage there are USB to eMMC adapters out there which are USB-Sticks but with removable eMMC storage. These can be used to flash BredOS too.
+![15-scaled.png](/first-setup/15-scaled.png)
 
-![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
+Now sit down and get comfy with your BredOS. See this as your starting point, not the destination. Feel free to customize everything to your liking, and don’t hesitate to share your questions, experiences, and cool projects on our Discord and Telegram channels.
 
-### 3.2.2 Flashing eMMC / SD Card
-There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows. 
-
-- [BalenaEtcher](https://etcher.balena.io/)
-- [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
-
-> We provide images compressed as .xz files. Make sure you decompress them before flashing!
-{.is-warning}
-
-
-## 3.3 nVME
-### 3.3.1 Preperation
-As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
-
-### 3.3.2 Flashing nVME
-Connect the drive to your PC, either directly or via a USB adapter. Then use one of the recommended tools in `3.2.2 Flashing eMMC / SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
-
-### 3.3.3 Boot Order
-The UEFI should be able to pick up the drive by itself. However the order of devices it will try to boot from can slow down the bootprocess or even fail completely (e. g. if you have a PXE Server in your network). To change the bootorder follow this [guide](/en/how-to/change-default-boot-order-rk3588).
-
-> After successful installation proceed with [**First Setup**](/en/install/first-setup)
+> You may want take a look at our [how to's](/en/how-to).
 {.is-success}
