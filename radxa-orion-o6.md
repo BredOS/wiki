@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: false
-date: 2025-09-17T09:09:38.481Z
+date: 2025-09-17T14:18:07.677Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -37,7 +37,7 @@ The mainline kernel does have missing drivers. A overview whats working on mainl
 The Prion supports installation from generic ISO images, unlike our other supported single-board computers (SBCs) which use device-specific images. Installation can be done using a USB stick or even a USB optical drive. 
 ## 3.1 Generic ISO Installation 
 
-A guide for generic .iso installation is available here. 
+A guide for generic .iso installation is available [here](/en/install/Installation-with-ISO). 
 ## 3.2 UEFI Installation 
 
 We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A full list of features and a guide for updating your UEFI is available [here](/en/radxa-orion-o6/prion-uefi-installation). 
