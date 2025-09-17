@@ -2,7 +2,7 @@
 title: Primera configuración (imagen .is)
 description:
 published: false
-date: 2025-09-17T12:24:43.737Z
+date: 2025-09-17T14:12:19.482Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -103,5 +103,5 @@ Por favor, comprueba que todo está incluido: harina, agua, sal y levadura. ¿Se
 
 Ahora siéntate y cómete con tu BredOS. Véase esto como su punto de partida, no el destino. Siéntase libre de personalizar todo a tu gusto, y no dudes en compartir tus preguntas, experiencias y proyectos interesantes en nuestros canales de Discord y Telegram.
 
-> Tal vez quieras echar un vistazo a nuestro [cómo hacer] (/en/how-to).
+> Tal vez quieras echar un vistazo a nuestro [cómo hacer] (/en/how-to). Pero ten en cuenta que los autores en [cómo hacer] (/en/how-to) tienden a usar son más de tono técnico.
 > {.is-success}
