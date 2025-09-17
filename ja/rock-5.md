@@ -2,35 +2,33 @@
 title: Rock 5 series
 description:
 published: true
-date: 2025-04-01T12:38:55.272Z
+date: 2025-09-17T09:37:33.486Z
 tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
 ---
 
-# サポートされているRock 5シリーズデバイス
+# 1. サポートされているRock 5シリーズデバイス
 
 | デバイス         | UEFI | サポート | 既知の問題                           |
 | ------------ | ---- | ---- | ------------------------------- |
-| Rock 5A      | ✔️   | ✔️   |                                 |
-| Rock 5B      | ✔️   | ✔️   |                                 |
-| Rock 5B Plus | ✔️   | ✔️   |                                 |
-| Rock 5C      | ❌    | ✔️   | Wi-Fiドライバは、アップタイムの数日後にクラッシュします。 |
-| Rock 5C Lite | ❌    | ✔️   | Wi-Fiドライバは、アップタイムの数日後にクラッシュします。 |
-| Rock 5D      | ❌    | ✔️   | Wi-Fiドライバは、アップタイムの数日後にクラッシュします。 |
-| Rock 5 ITX   | ❌    | ✔️   |                                 |
-| CM5          | ❌    | ✔️   |                                 |
-| CM5 Lite     | ❌    | ✔️   |                                 |
+| Rock 5A      | はい   | はい   |                                 |
+| Rock 5B      | はい   | はい   |                                 |
+| Rock 5B Plus | はい   | はい   |                                 |
+| Rock 5C      | いいえ  | はい   | Wi-Fiドライバは、アップタイムの数日後にクラッシュします。 |
+| Rock 5C Lite | いいえ  | はい   | Wi-Fiドライバは、アップタイムの数日後にクラッシュします。 |
+| Rock 5D      | いいえ  | はい   | Wi-Fiドライバは、アップタイムの数日後にクラッシュします。 |
+| Rock 5 ITX   | いいえ  | はい   |                                 |
+| CM5          | いいえ  | はい   |                                 |
+| CM5 Lite     | いいえ  | はい   |                                 |
 
-# すべてのデバイス用ガイド
+# 2. ダウンロード
 
-- [🐾 Mali GPUで RK3588をセットアップする方法](/how-to/how-to-setup-panthor)
-- [🎮 ブレッドOSにSTEAMをインストールする方法](/how-to/how-to-install-steam)
+画像のダウンロードリンクは、 [website](https://bredos.org/download.html)にあります!
 
-# Rock 5B用
+# 3. 有用なリンク
 
-- format@@0(/rock-5/how-to-boot-from-nvme)
-
-# Rock 5B Plus用
+## 3.1 Rock 5BとRock 5B Plus用
 
 - format@@0(/rock-5/how-to-boot-from-nvme)
+
