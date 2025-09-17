@@ -2,13 +2,13 @@
 title: デバイスツリー
 description:
 published: true
-date: 2025-05-15T12:51:43.781Z
+date: 2025-09-17T09:59:24.978Z
 tags:
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
 ---
 
-# デバイスツリー
+# 1. はじめに
 
 デバイス ツリーは、ARM および RISC-V システムで一般的に使用されるハードウェアを記述するためのメカニズムです。 カーネルドライバのコードを変更せずに、カーネルがハードウェアデバイスを検出して設定できるようにします。
 ACPIテーブルがハードウェアの自動検出と構成を可能にするx86システムとは異なります。 ほとんどのARMシステムでは、ハードウェアの変更を宣言するためにデバイスツリーを変更する必要があります。
@@ -18,32 +18,37 @@ ACPIテーブルがハードウェアの自動検出と構成を可能にするx
 ACPIテーブルがハードウェアの自動検出と構成を可能にするx86システムとは異なります。 ほとんどのARMシステムでは、ハードウェアの変更を宣言するためにデバイスツリーを変更する必要があります。
 ACPIテーブルがハードウェアの自動検出と構成を可能にするx86システムとは異なります。 ほとんどのARMシステムでは、ハードウェアの変更を宣言するためにデバイスツリーを変更する必要があります。
 
-## UEFIおよびGrab システムでのデバイスツリーの切り替え
+# 2. デバイスツリーの切り替え
+
+## 2.1 UEFIおよびGrab システムにおけるデバイスツリーの切り替え
 
 grub 設定ファイル `/etc/default/grub` を開きます。
-grub 設定ファイル `/etc/default/grub` を開きます。
-`GRUB_DTB=`で始まる行を探し、デバイスのツリーファイルへのパスを追加します。例:
+
+- grub 設定ファイル `/etc/default/grub` を開きます。
+  `GRUB_DTB=`で始まる行を探し、デバイスのツリーファイルへのパスを追加します。例:
 
 ```bash
-GRUB_DTB= dtbs/rockchip/xxx.dtb
+GRUB_DTB= dtbs/rockchip/<your device tree here>.dtb
 ```
 
-次に、grub の設定を更新します。
+- 次に、grub の設定を更新します。
 
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-**注意:** DTBを指定できるのは1つだけです。
+> DTBは1つしか指定できません。
+> {.is-info}
 
-## Updating Device Trees in U-Boot systems with extlinux
+## 2.2 extlinux を使用した U-Boot システムのデバイスツリーの更新
 
-Edit the extlinux configuration file `/boot/extlinux/extlinux.conf`, find the line with `fdt`, for example:
+- `/boot/extlinux/extlinux.conf` ファイルを編集します。 例えば、`fdt`の行を見つけます。
 
 ```bash
-fdt /dtbs/rockchip/xxx.dtb
+fdt /dtbs/rockchip/<your device tree here>.dtb
 ```
 
-Then reboot.
+次に、デバイス ツリー パスに合わせて編集します。 保存してシステムを再起動します。
 
-**注意:** DTBを指定できるのは1つだけです。
+> DTBは1つしか指定できません。
+> {.is-info}
