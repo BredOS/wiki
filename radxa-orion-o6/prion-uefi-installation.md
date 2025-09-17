@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T08:24:53.451Z
+date: 2025-09-17T08:25:26.243Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -22,9 +22,9 @@ This guide will lead you through the process of updating your Radxa Orion O6 `UE
 # 3. Installation
 ## 3.1 Prerequisites
 
- - The `UEFI` installtion .zip file
- - For `3.2 in-place update` -> FAT32 formated USB Stick
- - For `3.3 Update through flasher` -> A CH341A-based flasher
+ - The `UEFI` installtion .zip file found here.
+ - For `3.2 in-place update` -> FAT32 formated USB Stick.
+ - For `3.3 Update through flasher` -> A CH341A-based flasher.
  
  A very handy pack including the flasher, clip, and other useful accessories can be ordered here:
  https://www.aliexpress.com/item/32263275388.html
