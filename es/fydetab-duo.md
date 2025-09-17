@@ -2,7 +2,7 @@
 title: Dúo de Fíjaros
 description:
 published: true
-date: 2025-09-17T09:44:33.760Z
+date: 2025-09-17T10:16:17.074Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -36,12 +36,12 @@ sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1. 9.111.bin
 sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 ```
 
-Para instrucciones detalladas, consulte [📦 Cómo instalar eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
+Para obtener instrucciones detalladas, consulte [Cómo instalar eMMC](https://wiki.fydetabduo.com/Available-OS/BredOS/BredOS-intro#-installation).
 
 # 4. Enlaces útiles
 
-- [🐾 Cómo configurar Panthor en GPUs Mali con RK3588](/es/how-to/how-to-setup-panthor)
-- [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
-- [🦶 GNOME en el Fydetab](/fydetab-duo/gnome)
-- [📦 Cómo instalar eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
-- [🔧 Más información en fydetabduo wiki](https://wiki.fydetabduo.com/category/-bredos)
+- [Cómo configurar Panthor en Mali GPUs con RK3588](/how-to/how-to-setup-panthor)
+- [Cómo instalar STEAM en BredOS](/how-to/how-to-install-steam)
+- [Cambiar Entorno de Escritorio](/en/how-to/switch-desktop-environments)
+- [Cómo instalar eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
+- [Más información en fydetabduo wiki](https://wiki.fydetabduo.com/category/-bredos)
