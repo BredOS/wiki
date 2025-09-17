@@ -2,19 +2,20 @@
 title: Pipewire CPU workaround
 description: 
 published: true
-date: 2025-03-16T16:17:09.241Z
+date: 2025-09-17T09:24:40.286Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-16T16:17:09.241Z
 ---
 
-# Pipewire CPU Usage Workaround
+# 1. Introduction
 Is pipewire eating one of your cores for no reason again?
 
 Well, best you can do right now is to just limit it's usage with `systemd`.
 
-### Step 1:
-Create file `~/.config/systemd/user/pipewire.service` and place the following data inside it:
+# 2. Limit CPU Quota
+## 2.1 Create service file:
+- Create file `~/.config/systemd/user/pipewire.service` and place the following data inside it:
 ```
 [Unit]
 Description=PipeWire Multimedia Service
@@ -51,12 +52,17 @@ Slice=session.slice
 Also=pipewire.socket
 WantedBy=default.target
 ```
+## 2.2 Reload systemd daemon
+- Save the file and run: 
+```
+systemctl --user daemon-reload
+```
 
-### Step 2:
-Save the file and run: `systemctl --user daemon-reload`
+## 2.3 Logout or reboot:
+Logout, or ideally reboot. Pipewire will only be using 10% of a single core at most. 
+> Do not restart pipewire manually.
+{.is-warning}
 
-### Step 3:
-Logout, or ideally reboot. Pipewire will only be using 10% of a single core at most. **Do not restart pipewire manually.**
 
 This hack should not affect your audio.
 If you want to allow it some more leeway, change the percentage at line `CPUQuota`.
