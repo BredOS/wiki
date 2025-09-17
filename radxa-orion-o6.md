@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: false
-date: 2025-09-17T06:13:49.328Z
+date: 2025-09-17T08:07:28.224Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -23,7 +23,10 @@ You can find download links for the aarch64 iso in our [Github page](https://git
 The Prion supports installation from generic ISO images, unlike our other supported single-board computers (SBCs) which use device-specific images. Installation can be done using a USB stick or even a USB optical drive. 
 ## 3.1 Generic ISO Installation 
 
-A guide for installation is available here. 
+A guide for generic .iso installation is available here. 
 ## 3.2 UEFI Installation 
 
-We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A guide for updating your UEFI is available here. 
+We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A guide for updating your UEFI is available [here](/en/radxa-orion-o6/prion-uefi-installation). 
+
+# 4. PCIe
+Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider updating our UEFI firmware and setting the link speed to Gen. 3.
