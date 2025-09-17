@@ -2,7 +2,7 @@
 title: Primera configuración (Imagen Específica del Dispositivo)
 description:
 published: true
-date: 2025-09-16T10:17:07.737Z
+date: 2025-09-17T05:44:22.530Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -30,9 +30,9 @@ Bienvenido a Bakery, el lugar donde mezclar, mezclar y hornear sólo los mejores
 ![2-scaled.png](/first-setup/2-scaled.png)
 Busca tu idioma preferido y haz clic en él. Una ventana aparece donde puedes elegir tu locale. La hora y el formato de la fecha y la moneda deben ser rellenados automáticamente. Por favor, compruébalos antes de continuar y siéntete libre de modificarlos según tus preferencias.
 
-## 2.3 Acerca de la técnica del nudo
+## 2.3 Sobre la técnica de amasado
 
-Hablemos de amasar. Todos los seres humanos son diferentes así que no hay una técnica "verdadera" que tenga un aspecto técnico. Como nosotros nos encargamos de ello, usted puede elegir la técnica basada en su país.
+Hablemos de amasar. Todos los seres humanos son diferentes así que no hay una técnica "verdadera" que tenga un aspecto técnico. Para acomodar esto, usted puede elegir la técnica basada en su país.
 ![6-scaled.png](/first-setup/6-scaled.png)
 Después de hacer clic en tu país puedes elegir tu diseño. Como su nombre sugiere que "Normal" es el diseño más utilizado. Si no está seguro use esto. Si tiene un teclado inusual, como el que vende manzana, elija el diseño en consecuencia.
 
