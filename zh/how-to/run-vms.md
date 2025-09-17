@@ -2,7 +2,7 @@
 title: 在 BredOS 上运行虚拟机
 description:
 published: true
-date: 2025-09-16T10:47:11.442Z
+date: 2025-09-17T10:43:46.119Z
 tags: vm, ho-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -88,46 +88,24 @@ sudo virsh net-autostart
 
 - 要启用 XML 编辑 (需要稍后) ，您需要打开 `virt-manager` ，然后导航到 `Edit` 然后导航到 `Preferences` 和 \`启用 XML 编辑'。
 
-![xmlediting.jpg](/vms/xmlediting.jpg)
+# 4. 创建虚拟机
 
-## 3.7 创建虚拟机
+- 在 `virt-manager` 中，点击显示图标或导航到 `File` -> `Create 虚拟机器` 以创建一个新的虚拟机器。
 
-- 打开\`virt-manager'。
+- 选择安装源 (本地安装介质或网络安装)。
 
-打开\\`virt-manager'。
-![virt.jpg](/vms/virt.jpg)
-
-- 点击图标在新虚拟机下方屏幕截图上显示。
-
-![virtnewvm.jpg](/vms/virtnewvm.jpg)
-
-- 选择安装源 (ISO 镜像或网络安装)。
-  ![newvm.jpg](/vms/newvm.jpg)
-
-![newvm.jpg](/vms/newvm.jpg)
+- 如果您选择本地安装介质，请使用向导来选择您的.iso文件。
 
 - 按照向导分配CPU、RAM和您的虚拟机存储。 ⚙️
-
-![cpuram.jpg](/vms/cpuram.jpg)
 
 > 在 RK3588 上，由于小的大架构，您可以分配每vm 最多4个核。
 > {.is-warning}
 
-- 创建您预置大小的虚拟磁盘。
-
-![disk.jpg](/vms/disk.jpg)
-
-- 在 CPU 上少量的。 ig 架构类似于RK3588，您需要检查“安装前自定义配置”并编辑负责分配cpu核心的xml。
-
-![finalstep.jpg](/vms/finalstep.jpg)
+- 在点击“完成”之前，您需要检查“**在安装前自定义配置**”并编辑负责分配cpu核心的xml。
 
 - 点击 `Finish`
 
-![vcpuxml0.jpg](/vms/vcpuxml0.jpg)
-
-- 打开 CPU 配置，然后打开 XML 标签
-
-![vcpuxml1.jpg](/vms/vcpuxml1.jpg)
+一个新窗口打开，允许您在创建之前编辑虚拟机器的设置。 打开 CPU 配置，然后打开 XML 标签
 
 - Locate `<vcpu>XYZ</vcpu>` and replace it with
 
@@ -135,39 +113,15 @@ sudo virsh net-autostart
 <vcpu placement='static' cpuset='0-1'>2</vcpu>
 ```
 
-- 如果cpu 设置是你想要使用的核心，则0-3是rk3588上的E核心，4-7是性能核心和核心数量。 在上面的例子中，vm将有两个核心，它们是死亡本身的高效核核心1和2。
-  ![vcpuxml2.jpg](/vms/vcpuxml2.jpg) 在上面的例子中，vm将有两个核心，它们是死亡本身的高效核核心1和2。
-
-![vcpuxml2.jpg](/vms/vcpuxml2.jpg)
-
-- 添加附带硬件和图形支持。 🖥️
-
-- 返回虚拟机页面，按“添加硬件”。
-
-![addhw.png](/vms/addhw.png)
-
-- 然后从将显示的窗口中选择"视频"和模型选择, 选择"ramfb", 然后单击"完成"。
-
-![gpu.png](/vms/gpu.png)
-
-- 现在添加图形服务器，再次选择"添加硬件"，"图形"，然后单击"完成"。
-
-![graphics.png](/vms/graphics.png)
-
-- 现在对于键盘和鼠标，通过选择以下方法重复相同的程序：
-  `Input` -> `USB 键盘` 和 `Input` -> `EvTouch USB 图形平板`
-
-![tab.png](/vms/kb.png)
-![tab.png](/vms/tab.png)
+> 如果`cpu set`是你想要使用的核心为0-3，则rk3588和4-7上的E核心是性能核心和核心数量。 在上面的例子中，vm将有两个核心，它们是死亡本身的高效核核心1和2。
+> {.is-info}
 
 - 一旦配置完毕，启动虚拟机。 🟢
-
-![startvm.jpg](/vms/startvm.jpg)
 
 > 在那里，我们已经有了它。 现在你可以在 Bred 内部运行蓝色！
 > {.is-success}
 
-## 3.8 额外配置
+# 5. 附加配置
 
 - 要通过命令行管理虚拟机，您可以使用 `virsh`：
 
@@ -177,7 +131,7 @@ sudo virsh net-autostart
 病毒性关闭 <vm-name>
 ```
 
-## 3.9 故障处理
+# 5. 故障排除
 
 - **权限问题**：确保您的用户在 `libvirt` 组，并且`libvirtd` 服务正在运行。
 - **Networking Issues**：如果VMs没有互联网接入，请确保默认的`virsh`网络正在运行。
