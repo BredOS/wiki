@@ -2,7 +2,7 @@
 title: First Setup (.iso image)
 description:
 published: false
-date: 2025-09-17T12:24:43.737Z
+date: 2025-09-17T14:12:19.482Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -103,5 +103,5 @@ Please check that everything is included: flour, water, salt, and yeast. Was the
 
 Now sit down and get comfy with your BredOS. See this as your starting point, not the destination. Feel free to customize everything to your liking, and don’t hesitate to share your questions, experiences, and cool projects on our Discord and Telegram channels.
 
-> You may want take a look at our [how to's](/en/how-to).
+> You may want take a look at our [how to's](/en/how-to). But please be aware that authors over at [how to's](/en/how-to) tend to use are more techincal tone.
 > {.is-success}
