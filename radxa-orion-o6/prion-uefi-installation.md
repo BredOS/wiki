@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T06:58:58.753Z
+date: 2025-09-17T07:15:55.572Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -73,6 +73,8 @@ du ./cix_flash_all.bin
 ```
 6288062 ./cix_flash_all.bin
 ```
+In the example above the file size is `6288062`.
+
 > Note down the file size. Do not copy-paste it from above as size may vary due to updates!
 {.is-info}
 
@@ -81,3 +83,4 @@ du ./cix_flash_all.bin
 > Ensure that your board is disconnected from power while removing or inserting the SPI chip!
 {.is-warning}
 
+The SPI Chip on the Prion is socketed for easy removing. The socket is located in between the CPU Fan Header and the GPIO port. 
