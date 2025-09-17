@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: false
-date: 2025-09-17T06:04:34.142Z
+date: 2025-09-17T06:13:49.328Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -16,16 +16,14 @@ The Radxa Orion O6 is a Mini‑ITX motherboard powered by the Cix P1 (CD8180) So
 
 
 # 2. Download
-You can find download links for the aarch64 iso in our [github page](https://github.com/BredOS/bredos-iso/releases/latest)!
+You can find download links for the aarch64 iso in our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
 
-# 3. Installation
+# 3. Installation 
 
-The Prion supports installation from generic ISO images, in contrast to our other supported SBCs which use device-specific images. Installation can be done from a USB stick or even a USB optical drive.
+The Prion supports installation from generic ISO images, unlike our other supported single-board computers (SBCs) which use device-specific images. Installation can be done using a USB stick or even a USB optical drive. 
+## 3.1 Generic ISO Installation 
 
-## 3.1 Generic ISO Installation
+A guide for installation is available here. 
+## 3.2 UEFI Installation 
 
-A guide for installation can be found here.
-
-## 3.2 UEFI Installation
-
-We developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed the board is sold with, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A guide for updating your UEFI can be found here.
+We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A guide for updating your UEFI is available here. 
