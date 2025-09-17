@@ -2,7 +2,7 @@
 title: Orion O6でUEFIを更新中
 description:
 published: false
-date: 2025-09-17T07:50:57.353Z
+date: 2025-09-17T08:26:12.669Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -14,20 +14,21 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 # 2. 特徴
 
-- フロントパネルのUSBポートを固定しました
-- CPU速度は2.6GHzで実際に動作するように固定されています
-- ACPI の修正
-- Bluetooth/wifiカードの修正
-- M.2 ssds does dissapear random
-- `UEFI`解像度修正
+- フロントパネルのUSBポートを修正しました。
+- CPU速度は2.6GHzで実際に動作するように固定されています。
+- ACPI の修正。
+- Bluetooth/wifiカードの修正。
+- M.2 ssds はランダムに消滅しません。
+- `UEFI` 解像度を修正しました。
+- PCIeリンク速度を下げる機能。
 
 # 3. インストール
 
 ## 3.1 前提条件
 
-- `UEFI`インストール.zipファイル
-- `3.2 インプレースアップデート` -> FAT32 フォーマットされた USB スティック
-- `3.3 Update through flasher` -> A CH341A flasher
+- `UEFI` installation .zip ファイルはここにあります。
+- `3.2 インプレースアップデート` -> FAT32 フォーマットされた USB Stick の場合。
+- `3.3 Update through flasher` -> A CH341A flasher for
 
 https://www.aliexpress.com/item/32263275388.html
 ![spi-flasher.png](/wiki-itx3588j-pics/spi-flasher.png)
@@ -63,7 +64,7 @@ VariableInfo.efi
 
 \*Prions \* `UEFI` の起動に問題がある場合や、以下の手順に従ってフラッシャーを使用することをお勧めします。
 
-> フラッシャーが**1.8ボルト**に設定されていることを確認してください！
+> フラッシャーが**1.8ボルト**に設定されていることを確認してください！ これを行うには、1.8Vアダプタを使用します。
 > {.is-warning}
 
 ### 3.3.1 Prepare
@@ -94,15 +95,12 @@ du ./cix_flash_all.bin
 dd if=/dev/zero bs=1 count=$(((8388608 - <your file size here>)) >> ./cix_flash_all.bin
 ```
 
-> ファイルサイズをメモしてください。 アップデートによりサイズが異なる場合がありますので、上記からコピー&ペーストしないでください!
-> {.is-info}
-
 ### 3.3.2 SPIに接続
 
 > SPIチップを取り外す際に、ボードが電源から切断されていることを確認してください!
 > {.is-warning}
 
-プリオンのSPIチップは簡単に取り外せるようにソケットされています。 ソケットは CPU ファンヘッダーと GPIO ポートの間にあります。
+プリオンのSPIチップは簡単に取り外せるようにソケットされています。 ソケットは CPU ファンヘッダーと GPIO ポートの間にあります。 To easily locate the chip refer to the documentation by Radxa [found here](https://radxa.com/orion/o6/marked_orion_o6.webp).
 
 - プリオンからSPIチップを取り外します。
 - ZIFボードをフラッシャーに接続します。
@@ -110,10 +108,13 @@ dd if=/dev/zero bs=1 count=$(((8388608 - <your file size here>)) >> ./cix_flash_
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
+### 3.3.3 新しいファームウェアのフラッシュ
+
 - フラッシャーをPCに接続し、次のように書き込みを開始します。
 
 ```
 sudo flash -p ch341a_spi -w ./cix_flash_all.bin 
 ```
 
-- "VERIFIED"という文字が表示された場合は、ファームウェアが正しく書き込まれています。
+> "VERIFIED"という文字が表示された場合は、ファームウェアが正しく書き込まれています。
+> {.is-success}
