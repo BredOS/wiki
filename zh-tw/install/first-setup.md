@@ -2,7 +2,7 @@
 title: First setup (Device Specific Image)
 description:
 published: true
-date: 2025-09-16T10:17:07.737Z
+date: 2025-09-17T05:44:22.530Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -30,9 +30,9 @@ Welcome to Bakery, the place to mix, knot, and bake only the finest ingredients 
 ![2-scaled.png](/first-setup/2-scaled.png)
 Look up your prefered language and click on it. A window then pops up where you can choose your locale. Time and dateformat and your currency should be filled in automatically. Please check them before continuing and feel free to alter them to your preferences.
 
-## 2.3 About the knotting technice
+## 2.3 About the kneading technique
 
-Let's talk about knotting. All humans are different so there is no "true" knotting technice. As we account for that you can choose you technice based on your country.
+Let's talk about knotting. All humans are different so there is no "true" knotting technice. To accommodate this, you can choose you technique based on your country.
 ![6-scaled.png](/first-setup/6-scaled.png)
 After you clicked on your country you can choose your layout. As its name suggests "Normal" is the layout mostly used. If you are unsure use this. If you have a unusual keyboard, like the ones apple sells, choose the layout accordingly.
 
