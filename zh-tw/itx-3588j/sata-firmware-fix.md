@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description:
 published: true
-date: 2025-09-16T10:55:13.995Z
+date: 2025-09-17T06:45:12.828Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -68,6 +68,9 @@ There should be an unpopulated board and a ZIF Socket as part of the pack. Choos
 ```
 # sudo pacman -S flashrom
 ```
+
+> Ensure that your flasher is set to 3.3 volts!
+> {.is-warning}
 
 Check all cables and make sure your ITX-3588J board is disconnected from power if you're using the clip.
 Then, connect the flasher to your Linux device and run the following command.
