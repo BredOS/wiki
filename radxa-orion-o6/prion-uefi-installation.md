@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T07:50:57.353Z
+date: 2025-09-17T07:56:24.010Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -97,8 +97,11 @@ The SPI chip on the Prion is socketed for easy removal. The socket is located be
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
+### 3.3.3 Flash new Firmware
+
 - Connect the flasher to your PC and start flashing with:
 ```
 sudo flashrom -p ch341a_spi -w ./cix_flash_all.bin 
 ```
-- If you see the text "VERIFIED," the firmware has been flashed correctly. 
+> If you see the text "VERIFIED," the firmware has been flashed correctly. 
+{.is-success}
