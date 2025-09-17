@@ -2,7 +2,7 @@
 title: First Setup (.iso image)
 description: 
 published: false
-date: 2025-09-17T11:09:25.015Z
+date: 2025-09-17T12:24:43.737Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -12,7 +12,7 @@ dateCreated: 2025-09-17T11:07:04.117Z
 Welcome to Bakery, the place to mix, knead, and bake only the finest ingredients for your BredOS. With Bakery you will be guided through the entire process from picking the right flour to the best knoting technice to the exact amount of time it needs to rise. So let's get started!
 
 # 2. Burning the image
-After you downloaded the .iso file from our website
+After you downloaded the .iso file from our [Github page](https://github.com/BredOS/bredos-iso/releases/latest) burn it to a USB Stick, for example with Rufus, or burn a DVD. Insert your installation media into your PC and start your computer.
 
 # 3. Bakery
 ## 3.1 Warm Welcome
@@ -56,17 +56,32 @@ Every user has an ID assigned to them. This ID is used internally by programs, t
 
 If you want to skip the LightDM login screen and log in to your system without a password, toggle the switch accordingly.
 
-## 3.6 The oven is heated up
+## 3.6 Sharing is caring
+- As you may want to share your storage with other things, we now prepare spliting it in parts. Or do you want to fill it all up with Bred? Thats how we would choose but we respect your choice either way.
+
+![partition.png](/first-setup/partition.png)
+
+Select the storage device where you wish to install BredOS. If you prefer BredOS to be installed on the entire disk, choose "Erase Disk" and then click "Next."
+
+> This will delete any data on the Disk!
+{.is-danger}
+
+If you have data on the disk that you want to preserve, click "Open GParted" to resize the existing partitions as needed. Then create two new partitions: one FAT32-formatted boot partition and another formatted with either Btrfs or ext4.
+> For the installation of BredOS you need a 512MB boot partition and at least 8GB root partition.
+{.is-info}
+
+
+## 3.7 The oven is heated up
 - Since the dough has risen and the oven is hot, we pause to check that we did not forget anything. Luckily Bakery has automatically created a checklist for us. 
 
 ![11-scaled.png](/first-setup/11-scaled.png)
 Please check that everything is included: flour, water, salt, and yeast. Was the kneading done properly? Did we let the dough rise long enough? If everything is okay, hit 'Install'.
-## 3.7 There is no better smell than fresh Bred
+## 3.8 There is no better smell than fresh Bred
 - Now grab a coffee or tea and stare into the oven for a while. Reflect on what you’ve learned in the Bakery while the pleasant smell of Bred tickles your nose. Enjoy this waiting time with eager anticipation as your Bred finishes baking.
 
 ![13-scaled.png](/first-setup/13-scaled.png)
 
-## 3.8 Enjoy your Bred
+## 3.9 Enjoy your Bred
 - Serve your Bred however you like it — plain, with cheese and marmalade, a generous amount of sriracha sauce, or with a nice, fresh fried egg. We know that Bred can be enjoyed in countless ways, and we love them all.
 
 ![15-scaled.png](/first-setup/15-scaled.png)
