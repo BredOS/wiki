@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description:
 published: false
-date: 2025-09-17T06:13:49.328Z
+date: 2025-09-17T08:50:00.224Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -19,14 +19,20 @@ Radxa Orion O6是一个小型ITX母板，由Cix P1(CD8180)SOC驱动，它拥有�
 
 您可以在我们的 [Github 页面] (https://github.com/BredOS/bredos-iso/releases/latest )中找到无主文件的下载链接！
 
+我们有两个版本：一个基于Radxa的6.6内核，另一个基于主线。 基于6.6内核的版本包含"ORION"的名称，支持该棋盘的完整功能。 主行内核确实缺少驱动程序。 在主线和whats上运行的很好的概述无法找到 [here](/en/table-of-supported-devices)。
+
 # 3. 安装
 
 Prion支持使用通用的 ISO 图像进行安装，不像我们其他支持的单板计算机（SBCs），后者使用设备特定图像。 安装可以使用 USB 棍棒，甚至使用 USB 光学驱动器。
 
 ## 3.1 通用ISO 安装
 
-这里有可用的安装指南。
+通用.iso安装指南在此可用。
 
 ## 3.2 UEFI 安装
 
-我们已经根据Radxa's source 代码开发了一个自定义 UEFI。 它支持出售棋盘的实际CPU速度， 允许控制 PCIe 链接速度，并且——最好的 - 启动时显示 Bred 徽标。 更新您的 UEFI 指南在此可用。
+我们已经根据Radxa's source 代码开发了一个自定义 UEFI。 它支持出售棋盘的实际CPU速度， 允许控制 PCIe 链接速度，并且——最好的 - 启动时显示 Bred 徽标。 更新您的 UEFI 指南是可用的 [here](/en/radxa-orion-o6/prion-uefi-installation)。
+
+# 4. PCIe
+
+一些测试者发现，当使用PCIe Gen4速度运行的设备连接时，该系统变得不稳定。 如果你的棋盘不稳定，请考虑更新到我们的 UEFI 固件并设置链接速度到 3 基因。
