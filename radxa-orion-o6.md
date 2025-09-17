@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: false
-date: 2025-09-17T09:00:01.121Z
+date: 2025-09-17T09:04:54.921Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -39,7 +39,7 @@ The Prion supports installation from generic ISO images, unlike our other suppor
 A guide for generic .iso installation is available here. 
 ## 3.2 UEFI Installation 
 
-We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A guide for updating your UEFI is available [here](/en/radxa-orion-o6/prion-uefi-installation). 
+We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A full list of features and a guide for updating your UEFI is available [here](/en/radxa-orion-o6/prion-uefi-installation). 
 
 # 4. Mainline support
 |   `linux`    | Status      |  Notes |
