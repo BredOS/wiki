@@ -2,7 +2,7 @@
 title: Sata固件修复
 description:
 published: true
-date: 2025-09-16T10:55:13.995Z
+date: 2025-09-17T06:45:12.828Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09：18：06.486Z
@@ -70,6 +70,9 @@ https://www.aliexpress.com/item/3226327388.html
 ```
 # sudo pacman -S flashrom
 ```
+
+> 确保你的火焰被设置为3.3伏！
+> {.is-warning}
 
 检查所有电缆并确保您的 ITX-3588J 板在使用片段时断电。
 然后连接到您的Linux设备并运行以下命令。
