@@ -2,7 +2,7 @@
 title: Run Virtual Machines on BredOS
 description: 
 published: true
-date: 2025-09-16T10:47:11.442Z
+date: 2025-09-17T10:43:46.119Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -82,70 +82,38 @@ virt-manager
 ## 3.6 Enable XML editing
 - To enable XML editing (needed later) you need to open `virt-manager`, then navigate to `Edit` then `Preferences` and `Enable XML editing`.
 
-![xmlediting.jpg](/vms/xmlediting.jpg)
-## 3.7 Create a Virtual Machine
+# 4. Create a Virtual Machine
+- Inside `virt-manager` click on the display icon or navigate to `File` -> `Create virtual machine` to create a new virtual machine.
 
-- Open `virt-manager`.
+- Select the installation source (Local install media or Network Install).
 
-![virt.jpg](/vms/virt.jpg)
-- Click on the icon to create shown on the screenshot below a new virtual machine.
+- If you choose local installation media, use the wizard to select your .iso file.
 
-![virtnewvm.jpg](/vms/virtnewvm.jpg)
-- Select the installation source (ISO image or network install).
-
-![newvm.jpg](/vms/newvm.jpg)
 - Follow the wizard to allocate CPU, RAM, and storage for your VM.
 
-![cpuram.jpg](/vms/cpuram.jpg)
 > On the RK3588 you can allocate max 4 cores per vm due to the little big architecture.
 {.is-warning}
-- Create a virtual disk of your prefered size.
 
-![disk.jpg](/vms/disk.jpg)
-- On CPUs with the little.big architecture like the RK3588 you need to check "Customize configuration before install" and edit the xml responsible for allocating cpu cores.
+- Before you click `Finish` you need to check "**Customize configuration before install**" and edit the xml responsible for allocating cpu cores.
 
-![finalstep.jpg](/vms/finalstep.jpg)
 - Click `Finish`
 
-![vcpuxml0.jpg](/vms/vcpuxml0.jpg)
-- Open the CPUs configuration and then the XML tab
+A new window opens, allowing you to edit the settings of your virtual machine before creating it.- Open the CPUs configuration and then the XML tab
 
-![vcpuxml1.jpg](/vms/vcpuxml1.jpg)
 - Locate `<vcpu>XYZ</vcpu>` and replace it with 
 ```xml
 <vcpu placement='static' cpuset='0-1'>2</vcpu>
 ```
-- Where cpu set is the cores you want to use 0-3 are the E cores on the rk3588 and 4-7 are the performance cores and the number of cores. In the example above the vm will have 2 cores with them being efficiency cores aka cores 1 and 2 on the die itself.
-
-![vcpuxml2.jpg](/vms/vcpuxml2.jpg)
-
-- Add peripheral hardware and graphics support.
-
-- Head back to the VM page, press "Add Hardware".
-
-![addhw.png](/vms/addhw.png)
-
-- Then from the window that will appear select "Video" and from the model selection, select "ramfb" and click "Finish".
-
-![gpu.png](/vms/gpu.png)
-- Now to add the graphics server, select "Add hardware" again, "Graphics" and click "Finish".
-
-![graphics.png](/vms/graphics.png)
-- Now for keyboard and mouse, repeat the same procedure by selecting:
-`Input` -> `USB Keyboard` and `Input` -> `EvTouch USB Graphics Tablet`
-
-![tab.png](/vms/kb.png)
-![tab.png](/vms/tab.png)
+> Where `cpu set` is the cores you want to use 0-3 are the E cores on the rk3588 and 4-7 are the performance cores and the number of cores. In the example above the vm will have 2 cores with them being efficiency cores aka cores 1 and 2 on the die itself.
+{.is-info}
 
 - Once configured, start the VM.
-
-![startvm.jpg](/vms/startvm.jpg)
 
 > There we have it. Now you can run Bred inside Bred! 
 {.is-success}
 
 
-## 3.8 Additional Configuration
+# 5. Additional Configuration
 
 - To manage VMs via command line, you can use `virsh`:
 
@@ -155,7 +123,7 @@ virsh start <vm-name>
 virsh shutdown <vm-name>
 ```
 
-## 3.9 Troubleshooting
+# 6. Troubleshooting
 
 - **Permission Issues**: Ensure your user is in the `libvirt` group and that the `libvirtd` service is running.
 - **Networking Issues**: If VMs don't have internet access, ensure the default `virsh` network is running.
