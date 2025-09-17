@@ -2,7 +2,7 @@
 title: 首次设置 (设备特定图像)
 description:
 published: true
-date: 2025-09-16T10：17：07.737Z
+date: 2025-09-17T05:44:22.530Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -31,9 +31,9 @@ dateCreated: 2025-04-09T20:05:01.867Z
 ![2-scaled.png](/first-setup/2-scaled.png)
 Look up your prefered language and click on it. 然后一个窗口将弹出您可以选择您的区域的位置。 时间和日期格式以及您的货币应自动填写。 请在继续之前检查它们，并随时根据您的偏好调整它们。
 
-## 2.3 关于敲击性技术公司
+## 2.3 关于膝盖技术
 
-让我们谈谈膝盖。 每个人都是不同的，因此没有单一的“true”膝盖技术。 为了适应这个问题，你可以根据你的国家选择你的技术技术。
+让我们谈谈膝盖。 每个人都是不同的，因此没有单一的“true”膝盖技术。 为了适应这个问题，你可以根据你的国家选择你的技术。
 让我们谈论敲打。 所有人都是不同的，因此没有“true”撞击技术器。 在我们的说明中，您可以根据您的国家选择您的技术。
 ![6-scaled.png](/first-setup/6-scaled.png)
 After you clicked on your country you can choose your layout. 名称表示“正常”是最常用的布局。 如果您不确定，请使用它。 如果您有一个不寻常的键盘，就像那些由 Apple 出售的键盘一样，选择相应的布局。 如果您不确定，请使用它。 如果您有一个不寻常的键盘，就像那些由 Apple 出售的键盘一样，选择相应的布局。
