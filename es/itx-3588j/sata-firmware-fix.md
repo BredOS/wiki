@@ -2,7 +2,7 @@
 title: Arreglo de firmware de Sata
 description:
 published: true
-date: 2025-09-16T10:55:13.995Z
+date: 2025-09-17T06:45:12.828Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -68,6 +68,9 @@ Debe haber una placa no poblada y un conector ZIF como parte del paquete. Elija 
 ```
 # sudo pacman -S flashrom
 ```
+
+> ¡Asegúrate de que tu flasher esté ajustado a 3.3 voltios!
+> {.is-warning}
 
 Comprueba todos los cables y asegúrate de que tu tablero ITX-3588J esté desconectado de la corriente si estás usando el clip.
 Después, conecte el flasher a su dispositivo Linux y ejecute el siguiente comando.
