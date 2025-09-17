@@ -2,7 +2,7 @@
 title: Actualizando UEFI en Orion O6
 description:
 published: false
-date: 2025-09-17T07:50:57.353Z
+date: 2025-09-17T08:26:12.669Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -14,20 +14,21 @@ Esta guía te guiará a través del proceso de actualización de tu firmware `UE
 
 # 2. Características
 
-- Puerto USB frontal de panel fijo
-- La velocidad de la CPU se ha corregido para ejecutarse con 2.6GHz
-- Correcciones ACPI
-- Corregir para tarjetas bluetooth/wifi
-- Ssds de M.2 no desaparece al azar
-- Corrección de resolución de `UEFI`
+- Puerto USB del panel frontal fijado.
+- La velocidad de la CPU está arreglada para funcionar realmente con 2.6GHz.
+- Correcciones ACPI.
+- Arreglo para tarjetas bluetooth/wifi.
+- M.2 ssds no desaparece al azar.
+- Corrección de resolución de `UEFI`.
+- Capacidad para reducir la velocidad de enlace de PCIe.
 
 # 3. Instalación
 
 ## 3.1 Prerrequisitos
 
-- El archivo .zip de instalación `UEFI`
-- Para una `3.2 actualización en su lugar` -> USB con formato FAT32
-- Para `3.3 Update through flasher` -> A CH341A based flasher
+- El archivo `UEFI` installtion .zip encontrado aquí.
+- Para `3.2 in-place update` -> FAT32 formated USB Stick.
+- Para `3.3 Update through flasher` -> A CH341A based flasher.
 
 Un paquete muy práctico que incluye el flasher, el clip y otros accesorios útiles puede ser pedido aquí:
 https://www.aliexpress.com/item/32263275388.html
@@ -64,7 +65,7 @@ VariableInfo.efi
 
 Si tienes problemas para arrancar la `UEFI` _Prions_ o prefieres usar un flasher sigue los siguientes pasos.
 
-> ¡Asegúrate de que tu flasher esté ajustado a **1.8 voltios**!
+> ¡Asegúrate de que tu flasher esté ajustado a **1.8 voltios**! Utilice el adaptador 1.8V para hacer esto.
 > {.is-warning}
 
 ### 3.3.1 Prepare
@@ -95,15 +96,12 @@ En el ejemplo anterior el tamaño del archivo es `6288062`.
 dd if=/dev/zero bs=1 count=$((8388608 - <your file size here>)) >> ./cix_flash_all.bin
 ```
 
-> Tenga en cuenta el tamaño del archivo. ¡No lo copie desde arriba, ya que el tamaño puede variar debido a las actualizaciones!
-> {.is-info}
-
 ### 3.3.2 Conectar a SPI
 
 > ¡Asegúrate de que tu tablero esté desconectado de la energía mientras se elimina o inserta el chip SPI!
 > {.is-warning}
 
-El chip SPI en el Prion está empapado para una fácil eliminación. El socket se encuentra entre la cabecera del ventilador de CPU y el puerto GPIO.
+El chip SPI en el Prion está empapado para una fácil eliminación. El socket se encuentra entre la cabecera del ventilador de CPU y el puerto GPIO. Para localizar fácilmente el chip, consulte la documentación de Radxa [encontrada aquí](https://radxa.com/orion/o6/marked_orion_o6.webp).
 
 - Retire la ficha SPI de la Prión.
 - Conecte la placa ZIF a su parpadeo.
@@ -111,10 +109,13 @@ El chip SPI en el Prion está empapado para una fácil eliminación. El socket s
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
+### 3.3.3 Flash nuevo Firmware
+
 - Conecta el flasheador a tu PC y empieza a parpadear con:
 
 ```
 sudo flashrom -p ch341a_spi -w ./cix_flash_all.bin 
 ```
 
-- Si ve el texto "VERIFICADO", el firmware ha sido instalado correctamente.
+> Si ve el texto "VERIFICADO", el firmware ha sido instalado correctamente.
+> {.is-success}
