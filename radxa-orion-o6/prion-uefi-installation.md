@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T07:56:24.010Z
+date: 2025-09-17T08:14:20.610Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -57,7 +57,7 @@ VariableInfo.efi
 ## 3.3 Update through flasher
 If you have trouble booting the *Prions* `UEFI` or prefer using a flasher follow the steps below.
 
-> Ensure that your flasher is set to **1.8 volts**!
+> Ensure that your flasher is set to **1.8 volts**! Use the 1.8V-Adapter to do this.
 {.is-warning}
 
 ### 3.3.1 Prepare
@@ -79,9 +79,6 @@ In the example above the file size is `6288062`.
 ```
 dd if=/dev/zero bs=1 count=$((8388608 - <your file size here>)) >> ./cix_flash_all.bin
 ```
-
-> Note down the file size. Do not copy-paste it from above as size may vary due to updates!
-{.is-info}
 
 ### 3.3.2 Connect to SPI
 
