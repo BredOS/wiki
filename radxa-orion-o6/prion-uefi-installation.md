@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T06:45:47.183Z
+date: 2025-09-17T06:58:58.753Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -23,8 +23,8 @@ This guide will lead you through the process of updating your Radxa Orion O6 `UE
 ## 3.1 Prerequisites
 
  - The `UEFI` installtion .zip file
- - For an in-place update -> FAT32 formated USB Stick
- - For updating through a flasher -> A CH341A-based flasher
+ - For an `3.2 in-place update` -> FAT32 formated USB Stick
+ - For `3.3 Update through flasher` -> A CH341A-based flasher
  
  A very handy pack including the flasher, clip, and other useful accessories can be ordered here:
  https://www.aliexpress.com/item/32263275388.html
@@ -55,3 +55,29 @@ VariableInfo.efi
 
 
 ## 3.3 Update through flasher
+If you have trouble booting the *Prions* `UEFI` or prefer using a flasher follow the steps below.
+
+> Ensure that your flasher is set to 1.8 volts!
+{.is-warning}
+
+### 3.3.1 Prepare
+ - Install the tool `flashrom`
+ ```
+sudo pacman -S flashrom
+```
+- Unpack the UEFI .zip file and identify the size of the UEFI binary file
+```
+du ./cix_flash_all.bin
+```
+- The output will show you its size in bytes
+```
+6288062 ./cix_flash_all.bin
+```
+> Note down the file size. Do not copy-paste it from above as size may vary due to updates!
+{.is-info}
+
+### 3.3.2 Connect to SPI
+
+> Ensure that your board is disconnected from power while removing or inserting the SPI chip!
+{.is-warning}
+
