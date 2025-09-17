@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: false
-date: 2025-09-17T08:07:28.224Z
+date: 2025-09-17T08:34:57.517Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -29,4 +29,4 @@ A guide for generic .iso installation is available here.
 We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A guide for updating your UEFI is available [here](/en/radxa-orion-o6/prion-uefi-installation). 
 
 # 4. PCIe
-Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider updating our UEFI firmware and setting the link speed to Gen. 3.
+Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider updating to our UEFI firmware and setting the link speed to Gen. 3.
