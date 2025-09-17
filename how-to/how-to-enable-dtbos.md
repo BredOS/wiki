@@ -2,7 +2,7 @@
 title: Enable DTB overlays
 description: 
 published: true
-date: 2025-09-16T10:44:14.092Z
+date: 2025-09-17T05:43:38.077Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -18,10 +18,10 @@ Enabling different Device Tree Overlays (DTBOs) allows optional hardware or kern
 ```
 sudo bredos-config
 ```
-and navigate to `Device Tree Manager` -> `Enable / Disable Overlays` and enable dtb overlays to your liking. The tool then installs the base device tree and the selected overlays. Reboot your system to aplly the changes.
+Then navigate to `Device Tree Manager` -> `Enable / Disable Overlays` and enable dtb overlays to your liking. The tool then installs the base device tree and the selected overlays. Reboot your system to apply the changes.
 
 
-While bredos-config is able to install dtbs and alter the grub config to load them on boot it *cannot* alter UEFI settings. This has to be done by the user. The changes the user has to made are shown by bredos-config on first installation of base/overlay dtbs or under the step with `3.4 Configure UEFI`. If your device is `u-boot-based` no further changes are needed.
+While bredos-config is able to install dtbs and alter the grub config to load them on boot it *cannot* alter UEFI settings. This has to be done by the user. The changes the user has to made are shown by bredos-config on first installation of base/overlay dtbs or with `3.4 Configure UEFI`. If your device is `u-boot-based` no further changes are needed.
 > If during board power-on you see a BredOS logo, you are using UEFI.
 {.is-warning}
 
