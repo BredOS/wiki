@@ -23,9 +23,9 @@ dateCreated: 2024-11-10T18:02:07.427Z
 sudo bredos-config
 ```
 
-Then navigate to `Device Tree Manager` -> `Enable / Disable Overlays` and enable dtb overlays to your liking. 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes.
+次に、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、dtb overlaysをあなたの好みに合わせて有効にします。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 変更を適用するためにシステムを再起動します。
 
-bredos-config は dtbs をインストールし、grub 設定を変更して起動時にロードすることができますが、UEFI 設定は変更できません。 これはユーザーが行う必要があります。 The changes the user has to made are shown by bredos-config on first installation of base/overlay dtbs or with `3.4 Configure UEFI`. デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。
+bredos-config は dtbs をインストールし、grub 設定を変更して起動時にロードすることができますが、UEFI 設定は変更できません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または`3.4 Configure UEFI`でbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。
 
 > ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
 > {.is-warning}
