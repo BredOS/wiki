@@ -2,7 +2,7 @@
 title: Switch Desktop Environments on BredOS
 description: Learn how to install and switch to the GNOME desktop environment on BredOS
 published: true
-date: 2025-09-17T10:14:20.331Z
+date: 2025-09-17T10:31:38.154Z
 tags: customization
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
@@ -68,7 +68,7 @@ Inside the application:
 
 ## 1.4 Landscape stylus usage
 The stylus will only point correctly when the screen is rotated vertically by default.
-To set this to instead work horizontally:
+To set this to instead work horizontally follow these steps.
 
 ### 1.4.1 Edit udev rule
 - To edit the file `fydetab.rules`, run:
