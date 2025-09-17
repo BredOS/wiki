@@ -2,7 +2,7 @@
 title: Ejecutar máquinas virtuales en BredOS
 description:
 published: true
-date: 2025-09-16T10:47:11.442Z
+date: 2025-09-17T10:43:46.119Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
@@ -87,44 +87,24 @@ virt-manager
 
 - Para habilitar la edición XML (necesario posteriormente) necesitas abrir `virt-manager`, luego ve a `Edit` y luego a `Preferences` y `Activa la edición XML`.
 
-![xmlediting.jpg](/vms/xmlediting.jpg)
+# 4. Crear una máquina virtual
 
-## 3.7 Crear una máquina virtual
+- Dentro de `virt-manager` haga clic en el icono de visualización o vaya a `File` -> `Crear máquina virtual` para crear una nueva máquina virtual.
 
-- Abrir `virt-manager`.
+- Seleccione el origen de la instalación (Local install media o Network Install).
 
-![virt.jpg](/vms/virt.jpg)
-
-- Haga clic en el icono para crear una nueva máquina virtual en la captura de pantalla.
-
-![virtnewvm.jpg](/vms/virtnewvm.jpg)
-
-- Seleccione el origen de la instalación (imagen ISO o instalación de red).
-
-![newvm.jpg](/vms/newvm.jpg)
+- Si elige un medio de instalación local, utilice el asistente para seleccionar su archivo .is.
 
 - Siga el asistente para asignar CPU, RAM y almacenamiento para su VM.
-
-![cpuram.jpg](/vms/cpuram.jpg)
 
 > En el RK3588 puede asignar máx. 4 núcleos por vm debido a la pequeña arquitectura grande.
 > {.is-warning}
 
-- Crea un disco virtual de tu tamaño preferido.
-
-![disk.jpg](/vms/disk.jpg)
-
-- En CPUs con lo poco. arquitectura ig como el RK3588 necesita comprobar "Personalizar configuración antes de instalar" y editar el xml responsable de asignar núcleos cpu.
-
-![finalstep.jpg](/vms/finalstep.jpg)
+- Antes de hacer clic en `Finalizar` debes comprobar "**Personalizar configuración antes de instalar**" y editar el xml responsable de asignar núcleos de la CPU.
 
 - Haz clic en `Finalizar`
 
-![vcpuxml0.jpg](/vms/vcpuxml0.jpg)
-
-- Abre la configuración de las CPUs y luego la pestaña XML
-
-![vcpuxml1.jpg](/vms/vcpuxml1.jpg)
+Se abre una nueva ventana, que le permite editar la configuración de su máquina virtual antes de crearla. Abre la configuración de las CPUs y luego la pestaña XML
 
 - Localiza `<vcpu>XYZ</vcpu>` y reemplazalo con
 
@@ -132,38 +112,15 @@ virt-manager
 <vcpu placement='static' cpuset='0-1'>2</vcpu>
 ```
 
-- Donde el set de cpu son los núcleos que quieres usar 0-3 son los núcleos E en el rk3588 y 4-7 son los núcleos de rendimiento y el número de núcleos. En el ejemplo de arriba la vm tendrá 2 núms. con ellos es la eficiencia núm. 1 y 2 núm.
-
-¡[vcpuxml2.jpg](/vms/vcpuxml2.jpg)
-
-- Añadir soporte para hardware periférico y gráficos.
-
-- Diríjase a la página de la MV, presione "Añadir Hardware".
-
-![addhw.png](/vms/addhw.png)
-
-- Luego, en la ventana que aparecerá seleccione "Video" y en la selección del modelo, seleccione "ramfb" y haga clic en "Finalizar".
-
-![gpu.png](/vms/gpu.png)
-
-- Ahora para añadir el servidor de gráficos, selecciona "Añadir hardware" de nuevo, "Gráficos" y haz clic en "Finalizar".
-
-![graphics.png](/vms/graphics.png)
-
-- Ahora para el teclado y el ratón, repite el mismo procedimiento seleccionando:
-  `Input` -> `USB Keyboard` y `Input` -> `EvTouch USB Graphics Tablet`
-
-![tab.png](/vms/kb.png)
-![tab.png](/vms/tab.png)
+> Donde `cpu set` son los núcleos que quieres usar 0-3 son los núcleos E en el rk3588 y 4-7 son los núcleos de rendimiento y el número de núcleos. En el ejemplo de arriba la vm tendrá 2 núms. con ellos es la eficiencia núm. 1 y 2 núm.
+> {.is-info}
 
 - Una vez configurado, inicie la máquina virtual.
-
-![startvm.jpg](/vms/startvm.jpg)
 
 > Eso es lo que tenemos. ¡Ahora puedes correr Bred dentro de Bred!
 > {.is-success}
 
-## 3.8 Configuración adicional
+# 5. Configuración adicional
 
 - Para administrar máquinas virtuales a través de línea de comandos, puede utilizar `virsh`:
 
@@ -173,7 +130,7 @@ virsh start <vm-name>
 virsh shutdown <vm-name>
 ```
 
-## 3.9 Resolución de problemas
+# 5. Solución de problemas
 
 - **Problemas de permiso**: Asegúrate de que tu usuario está en el grupo `libvirt` y que el servicio `libvirtd` se está ejecutando.
 - **Problemas de red**: Si las máquinas virtuales no tienen acceso a Internet, asegúrese de que la red `virsh` por defecto está en ejecución.
