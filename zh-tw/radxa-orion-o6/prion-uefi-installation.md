@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description:
 published: false
-date: 2025-09-17T07:50:57.353Z
+date: 2025-09-17T08:26:12.669Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -14,20 +14,21 @@ This guide will lead you through the process of updating your Radxa Orion O6 `UE
 
 # 2. 功能
 
-- Front Panel USB Port fixed
-- CPU speed is fixed to actually running with 2.6GHz
-- ACPI fixes
-- Fix for bluetooth/wifi cards
-- M.2 ssds doesnt dissapear randomly
-- `UEFI` resolution fix
+- Front Panel USB Port fixed.
+- CPU speed is fixed to actually running with 2.6GHz.
+- ACPI fixes.
+- Fix for bluetooth/wifi cards.
+- M.2 ssds doesnt dissapear randomly.
+- `UEFI` resolution fix.
+- Ability to lower PCIe link speed.
 
 # 3. 安裝
 
 ## 3.1 Prerequisites
 
-- The `UEFI` installtion .zip file
-- For an `3.2 in-place update` -> FAT32 formated USB Stick
-- For `3.3 Update through flasher` -> A CH341A-based flasher
+- The `UEFI` installtion .zip file found here.
+- For `3.2 in-place update` -> FAT32 formated USB Stick.
+- For `3.3 Update through flasher` -> A CH341A-based flasher.
 
 A very handy pack including the flasher, clip, and other useful accessories can be ordered here:
 https://www.aliexpress.com/item/32263275388.html
@@ -64,7 +65,7 @@ VariableInfo.efi
 
 If you have trouble booting the _Prions_ `UEFI` or prefer using a flasher follow the steps below.
 
-> Ensure that your flasher is set to **1.8 volts**!
+> Ensure that your flasher is set to **1.8 volts**! Use the 1.8V-Adapter to do this.
 > {.is-warning}
 
 ### 3.3.1 Prepare
@@ -95,15 +96,12 @@ In the example above the file size is `6288062`.
 dd if=/dev/zero bs=1 count=$((8388608 - <your file size here>)) >> ./cix_flash_all.bin
 ```
 
-> Note down the file size. Do not copy-paste it from above as size may vary due to updates!
-> {.is-info}
-
 ### 3.3.2 Connect to SPI
 
 > Ensure that your board is disconnected from power while removing or inserting the SPI chip!
 > {.is-warning}
 
-The SPI chip on the Prion is socketed for easy removal. The socket is located between the CPU fan header and the GPIO port.
+The SPI chip on the Prion is socketed for easy removal. The socket is located between the CPU fan header and the GPIO port. To easily locate the chip refer to the documentation by Radxa [found here](https://radxa.com/orion/o6/marked_orion_o6.webp).
 
 - Remove the SPI chip from the Prion.
 - Connect the ZIF board to your flasher.
@@ -111,10 +109,13 @@ The SPI chip on the Prion is socketed for easy removal. The socket is located be
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
+### 3.3.3 Flash new Firmware
+
 - Connect the flasher to your PC and start flashing with:
 
 ```
 sudo flashrom -p ch341a_spi -w ./cix_flash_all.bin 
 ```
 
-- If you see the text "VERIFIED," the firmware has been flashed correctly.
+> If you see the text "VERIFIED," the firmware has been flashed correctly.
+> {.is-success}
