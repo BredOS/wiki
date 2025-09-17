@@ -23,9 +23,9 @@ Habilitar diferentes Overlays de Árbol de Dispositivos (DTBOs) permite activar 
 sudo bredos-config
 ```
 
-Then navigate to `Device Tree Manager` -> `Enable / Disable Overlays` and enable dtb overlays to your liking. La herramienta instala el árbol de dispositivos base y las capas seleccionadas. Reboot your system to apply the changes.
+Luego navega a `Device Tree Manager` -> `Enable / disable overlays` y habilita las capas de dtb a tu gusto. La herramienta instala el árbol de dispositivos base y las capas seleccionadas. Reiniciar su sistema para aplicar los cambios.
 
-Mientras que bredos-config es capaz de instalar dtbs y alterar la configuración de grub para cargarlos en el arranque, _no_ puede alterar la configuración de UEFI. Esto tiene que hacerlo el usuario. The changes the user has to made are shown by bredos-config on first installation of base/overlay dtbs or with `3.4 Configure UEFI`. Si tu consola está basada en `u-boot-based` no se necesitan más cambios.
+Mientras que bredos-config es capaz de instalar dtbs y alterar la configuración de grub para cargarlos en el arranque, _no_ puede alterar la configuración de UEFI. Esto tiene que hacerlo el usuario. Los cambios que el usuario tiene que hacer son mostrados por bredos-config en la primera instalación de base/overlay dtbs o con `3.4 Configure UEFI`. Si tu consola está basada en `u-boot-based` no se necesitan más cambios.
 
 > Si durante el encendido del tablero ves un logotipo de BredOS, estás usando UEFI.
 > {.is-warning}
