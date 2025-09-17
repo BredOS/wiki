@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T08:25:26.243Z
+date: 2025-09-17T08:26:12.669Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -12,12 +12,13 @@ dateCreated: 2025-09-17T06:45:47.183Z
 This guide will lead you through the process of updating your Radxa Orion O6 `UEFI` firmware to the BredOS one. 
 
 # 2. Features
-- Front Panel USB Port fixed
-- CPU speed is fixed to actually running with 2.6GHz
-- ACPI fixes
-- Fix for bluetooth/wifi cards
-- M.2 ssds doesnt dissapear randomly
-- `UEFI` resolution fix
+- Front Panel USB Port fixed.
+- CPU speed is fixed to actually running with 2.6GHz.
+- ACPI fixes.
+- Fix for bluetooth/wifi cards.
+- M.2 ssds doesnt dissapear randomly.
+- `UEFI` resolution fix.
+- Ability to lower PCIe link speed.
 
 # 3. Installation
 ## 3.1 Prerequisites
