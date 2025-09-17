@@ -2,7 +2,7 @@
 title: Bluetooth Fix (ITX-3588J)
 description: 
 published: true
-date: 2025-09-16T10:51:52.361Z
+date: 2025-09-17T08:29:52.250Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -10,22 +10,24 @@ dateCreated: 2025-09-14T11:10:38.109Z
 
 # Bluetooth Fix (ITX-3588J)
 ## 1. Install r58x-post-install
-For now you have to replace a package with another one. This will not alter any behavouir of the itx-3588j but adds a service which will fix bluetooth at boottime.
+For now you have to replace a package with another one. This will not alter any behavior of the itx-3588j but adds a service which will fix bluetooth at boottime.
 
 - First remove `itx-3588j-post-install`. This packages sets a needed parameter to work around a standby issue. Fear not we will fix this again.
 ```
 sudo pacman -R itx-3588j-post-install
 ```
 
-- After that install `r58x-post-install`. This packages does the same fix for standby as the above but has the service `bluetooth-mekotronics` included.
+- After that, install `r58x-post-install`. This package provides the same fix for standby as mentioned above and includes the service bluetooth-mekotronics.
 
 ```
 sudo pacman -S r58x-post-install
 ```
 
 ## 2. Set correct UART path
-The Bluetooth adapter is not attached to `/dev/ttyS9` (like on the other RK3588 SBCs), but to `/dev/ttyS6`. 
-- You need to change the path inside the file `/usr/bin/bluetooth-fix`.
+The Bluetooth adapter is not connected to `/dev/ttyS9` (as it is with other RK3588 single-board computers), but to `/dev/ttyS6`. 
+
+- You need to modify the path in the file /usr/bin/bluetooth-fix.
+     
 ```
 sudo nano /usr/bin/bluetooth-fix
 ```
