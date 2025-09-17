@@ -2,15 +2,16 @@
 title: Hacks
 description: 
 published: true
-date: 2025-07-22T00:11:51.375Z
+date: 2025-09-17T09:20:14.650Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-16T16:08:26.697Z
 ---
 
-# BredOS Hacks
+# 1. Introduction
 
 In this page, you'll find all the resources you need to work around issues and better use your hardware.
 
-## 📚 Table of Contents
-* [Pipewire cpu limit](/hacks/pipewire-cpu)
+# 2. Table of contents
+## 2.1 Pipewire CPU limit
+Is pipewire eating one of your cores for no reason again? Then follow [this](/hacks/pipewire-cpu) guide.
