@@ -2,7 +2,7 @@
 title: FydetabDuo
 description:
 published: true
-date: 2025-09-17T09:44:33.760Z
+date: 2025-09-17T10：16：17.074Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -36,12 +36,12 @@ sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
 sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 ```
 
-详细说明请参阅 [📦 如何安装到 eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
+详细说明请参阅[如何安装到 eMC](https://wiki.fydetabduo.com/Available-OS/BredOS/BredOS-intro#-installation)。
 
 # 4. 有用的链接
 
-- [🐾 如何在 Mali GPU 上设置 Panthor (RK3588)](/how-to/how-to-setup-panthor)
-- [🎮 如何安装 Steam](/how-to/how-to-install-steam)
-- [🦶 在 Fydetab 上使用 GNOME](/fydetab-duo/gnome)
-- [📦 如何安装到 eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
-- [🔧 fydetabduo wiki 中的更多信息](https://wiki.fydetabduo.com/category/-bredos)
+- [如何在马里安装带有RK3588的Panthor GPU](/how-to/how-to-setup-panthor)
+- [How to Install STEAM on BredOS](/how-to/how-to-install-steam)
+- [切换桌面环境](/en/how-to/switch-desktop-environments)
+- [如何安装到 eMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
+- [fydetabduo wiki中的更多信息](https://wiki.fydetabduo.com/category/-bredos)
