@@ -2,13 +2,13 @@
 title: Orange Pi 5 Series
 description: This page contains links to useful guides/tweaks for the OPI 5 Series devices
 published: true
-date: 2025-09-17T09:34:15.055Z
+date: 2025-09-17T09:34:56.350Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
 ---
 
-# 1. Support for the Orange Pi 5 Series
+# 1.  Supported Orange Pi 5 Series devices
 | Device            | UEFI  | Supported | Known Issues |
 |-------------------|-------|-----------|--------------|
 | Orange Pi 5       |  Yes    | Yes        | Sata M.2 SSDs may not work|
