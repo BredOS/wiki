@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description:
 published: false
-date: 2025-09-17T09：09：38.481Z
+date: 2025-09-17T14：18：07.677Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -41,7 +41,7 @@ Prion支持使用通用的 ISO 图像进行安装，不像我们其他支持的�
 
 ## 3.1 通用ISO 安装
 
-通用.iso安装指南在此可用。
+通用.iso安装指南可用 [here](/en/install/Installation-with-ISO)。
 
 ## 3.2 UEFI 安装
 
