@@ -2,7 +2,7 @@
 title: Fydetab Duo
 description:
 published: true
-date: 2025-09-17T09:44:33.760Z
+date: 2025-09-17T10:16:17.074Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -36,12 +36,12 @@ sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
 sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 ```
 
-詳細な手順については、[📦 eMMCにインストールする方法](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro) を参照してください。
+For detailed instructions, refer to [How to install to eMMC](https://wiki.fydetabduo.com/Available-OS/BredOS/BredOS-intro#-installation).
 
 # 4. 有用なリンク
 
-- [🐾 Mali GPUで RK3588をセットアップする方法](/how-to/how-to-setup-panthor)
-- [🎮 ブレッドOSにSTEAMをインストールする方法](/how-to/how-to-install-steam)
-- [🦶 FydetabのGNOME (/fydetab-duo/gnome)
-- [📦 eMMCにインストールする方法](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
-- [🔧 fydetabduo wikiの詳細情報](https://wiki.fydetabduo.com/category/-bredos)
+- [How to set Panthor on Mali GPU with RK3588](/how-to/how-to-setup-panthor)
+- [How to Install STEAM on BredOS](/how-to/how-to-install-steam)
+- [Switch Desktop Environment](/en/how-to/switch-desktop-environments)
+- [How to install to eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
+- [More Info in fydetabduo wiki](https://wiki.fydetabduo.com/category/-bredos)
