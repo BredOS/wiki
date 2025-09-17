@@ -1,14 +1,24 @@
 ---
 title: Radxa Orion Series
 description: 
-published: true
-date: 2025-09-17T00:24:22.788Z
+published: false
+date: 2025-09-17T00:28:55.869Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T00:08:50.283Z
 ---
 
 # Introduction
+SoC: CIX CD8180
+CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
+GPU: Immortals G720 MC10
+NPU: 30 TOPs
+Network: 2x 5Gbit Ethernet (PCIe 4.0 1x lane each)
+PCIe:
+- M.2 M key (PCIe 4.0 4x lanes)
+- M.2 E key (PCIe 4.0 2x lanes)
+- Full sized PCIe x16 slot (PCIe 4.0 8x lanes)
+
 
 
 # Mainline support
