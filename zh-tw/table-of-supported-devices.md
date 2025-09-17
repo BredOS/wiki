@@ -2,7 +2,7 @@
 title: Table of supported devices
 description:
 published: false
-date: 2025-09-16T11:59:51.671Z
+date: 2025-09-17T08:55:38.290Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -12,7 +12,7 @@ dateCreated: 2025-09-16T11:31:39.039Z
 
 This page holds a table of our supported devices with known issues, hardware support and guides that apply to them.
 
-# 2. List of devices
+# 2. List of devices with device spcific images
 
 | Device                | UEFI | SPI Chip                          | Known Issues                                       | Guides                     |
 | --------------------- | ---- | --------------------------------- | -------------------------------------------------- | -------------------------- |
@@ -46,3 +46,9 @@ This page holds a table of our supported devices with known issues, hardware sup
 | Radxa Rock 5C         | Yes  | Yes (optional) |                                                    |                            |
 | Radxa Rock 5D         | No   | No                                |                                                    |                            |
 | Radxa Rock 5T         | No   | Yes                               |                                                    |                            |
+
+# 3. List of arm64 devices with generic iso installation
+
+| Device         | UEFI | SPI Chip | Known Issues                                          | Guides                               |
+| -------------- | ---- | -------- | ----------------------------------------------------- | ------------------------------------ |
+| Radxa Orion O6 | Yes  | Yes      | PCIe Gen 4 devices cause the board to become unstable | [radxa-orion-o6](/en/radxa-orion-o6) |
