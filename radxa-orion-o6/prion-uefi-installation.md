@@ -2,14 +2,14 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T07:46:42.309Z
+date: 2025-09-17T07:50:57.353Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
 ---
 
 # 1. Introduction
-This guide will lead you through the process of updating your Radxa Orion O6 `UEFI` firmware to BredOS. 
+This guide will lead you through the process of updating your Radxa Orion O6 `UEFI` firmware to the BredOS one. 
 
 # 2. Features
 - Front Panel USB Port fixed
