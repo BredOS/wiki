@@ -2,7 +2,7 @@
 title: Cambiar entornos de escritorio en BredOS
 description: Aprende cómo instalar y cambiar al entorno de escritorio GNOME en BredOS
 published: true
-date: 2025-09-15T10:00:53.184Z
+date: 2025-09-17T10:31:38.154Z
 tags: personalización
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
@@ -68,8 +68,31 @@ Dentro de la aplicación:
 ### 1.3.3 Configurar rotación de pantalla
 
 - Ve a la pestaña `Installed` en el Administrador de extensiones.
-- Toca el icono ⚙️ para abrir la configuración de la extensión.
+- Pulsa el icono de engranajes para abrir la configuración de la extensión.
 - Incremente el valor **Establecer desplazamiento de orientación** a `1`.
+
+## 1.4 Uso de Landscape
+
+El estilo sólo apuntará correctamente cuando la pantalla se rote verticalmente de forma predeterminada.
+Para establecer esto en su lugar trabajar horizontalmente siga estos pasos.
+
+### 1.4.1 Editar regla udev
+
+- Para editar el archivo `fydetab.rules`, ejecutar:
+
+```
+sudo nano ► /udev/rules.d/fydetab.rules
+```
+
+### 1.4.2 Añadir la línea de configuración
+
+- En la parte inferior del archivo, agregar:
+
+```
+SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}="0 1 0 -1 0 0 0 0 0 1"
+```
+
+Luego presione Ctrl + S para guardar y Ctrl + X para salir.
 
 # 2. Escritorio de plasma en BredOS
 
