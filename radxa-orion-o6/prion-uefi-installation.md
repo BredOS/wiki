@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-17T07:15:55.572Z
+date: 2025-09-17T07:46:42.309Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -57,23 +57,28 @@ VariableInfo.efi
 ## 3.3 Update through flasher
 If you have trouble booting the *Prions* `UEFI` or prefer using a flasher follow the steps below.
 
-> Ensure that your flasher is set to 1.8 volts!
+> Ensure that your flasher is set to **1.8 volts**!
 {.is-warning}
 
 ### 3.3.1 Prepare
- - Install the tool `flashrom`
+ - Install the tool `flashrom`.
  ```
 sudo pacman -S flashrom
 ```
-- Unpack the UEFI .zip file and identify the size of the UEFI binary file
+- Unpack the UEFI .zip file and identify the size of the UEFI binary file.
 ```
 du ./cix_flash_all.bin
 ```
-- The output will show you its size in bytes
+- The output will show you its size in bytes.
 ```
 6288062 ./cix_flash_all.bin
 ```
 In the example above the file size is `6288062`.
+
+- To match the chip's specifications, we need to add "zeros" to the end of the file until it matches the chip's size. Replace `<your file size here>` with the file size from the command above.
+```
+dd if=/dev/zero bs=1 count=$((8388608 - <your file size here>)) >> ./cix_flash_all.bin
+```
 
 > Note down the file size. Do not copy-paste it from above as size may vary due to updates!
 {.is-info}
@@ -83,4 +88,17 @@ In the example above the file size is `6288062`.
 > Ensure that your board is disconnected from power while removing or inserting the SPI chip!
 {.is-warning}
 
-The SPI Chip on the Prion is socketed for easy removing. The socket is located in between the CPU Fan Header and the GPIO port. 
+The SPI chip on the Prion is socketed for easy removal. The socket is located between the CPU fan header and the GPIO port.
+
+- Remove the SPI chip from the Prion.
+- Connect the ZIF board to your flasher. 
+- Pin 1 is marked with a dot on the chip. While the USB port of the flasher faces toward you, pin 1 is on the upper left side. Refer to the screenshot below to get the orientation right:
+     
+
+![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
+
+- Connect the flasher to your PC and start flashing with:
+```
+sudo flashrom -p ch341a_spi -w ./cix_flash_all.bin 
+```
+- If you see the text "VERIFIED," the firmware has been flashed correctly. 
