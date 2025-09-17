@@ -2,7 +2,7 @@
 title: UEFI のインストール(RK3588)
 description:
 published: false
-date: 2025-09-17T00:08:03.762Z
+date: 2025-09-17T06:40:43.494Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -44,7 +44,7 @@ dateCreated: 2025-09-16T11:29:43.061Z
 以下の手順に従って、SPIチップに`UEFI`をインストールしてください。
 
 - 最新リリースの「UEFI」をFAT32フォーマットのUSB-スティックにコピーし、SBCに接続します。
-- SDカードから `UEFI` でボードを起動します。 If you have trouble to get into UEFI Settings check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
+- SDカードから `UEFI` でボードを起動します。 If you have trouble accessing the UEFI Settings, check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
 - コマンドラインインターフェースを入力するには、`Boot Manager` -> `UEFI Shell` に移動します。
 - `map` コマンドを使用して、読み取り可能なパーティションをすべてリストします。 このコマンドは、すべてのパーティションを `fs0:`、`fs1:`の名前スキームでリストします。
 - ファームウェア画像を含むUSB-スティックに移動し、ファイルシステム名を入力し、Enterキーを押してディレクトリを変更します。 どのファイルシステムを使用すべきかわからない場合は、ls fsX: を実行して内容を一覧表示します。
