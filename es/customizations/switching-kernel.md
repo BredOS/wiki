@@ -39,7 +39,7 @@ local/util-linux-libs 2.40.2-1
     librerías util-linux runtime
 ```
 
-In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
+En la lista podemos ver `linux-rockchip-rkr3` y las cabeceras que lo acompañan están instaladas.
 Para instalar un núcleo diferente, primero retire el núcleo instalado, junto con sus cabezas.
 
 # 2. Manejo de núcleos
