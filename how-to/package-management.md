@@ -2,7 +2,7 @@
 title: Package Managers Guide 
 description: Welcome to the BredOS Package Managers guide! Here, you'll learn how to install and manage applications
 published: true
-date: 2025-09-15T09:53:59.847Z
+date: 2025-09-18T07:23:26.529Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-20T20:08:39.778Z
@@ -75,8 +75,8 @@ sudo pacman -S flatpak
 ## 3.2 Install from Flathub
 ### 3.2.1 Install an App via the Webbrowser
 - Navigate to [Flathub](https://flathub.org), find the app you want, and click install.
-- Copy the command in the terminal to complete the installation.
 
+![flathub-install-button.png](/how-tos/flathub-install-button.png)
 ### 3.2.2 Install an App via Terminal
 - You can also install apps directly from the terminal:
 ```bash
