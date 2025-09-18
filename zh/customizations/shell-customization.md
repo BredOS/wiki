@@ -1,8 +1,8 @@
 ---
 title: BredOS Shell 自定义指南
-description: 本指南将通过改变和提升你的 shell 体验来帮助你定制你的 BredOS 体验！🚀 无论你喜欢 Bash、Zsh、Fish 还是 Nushell，你都会在这里找到你需要的一切。让我们开始吧！🌊  无论你喜欢Bash、Zsh、Fish还是Nushell，你都会在这里找到你需要的一切。 让我们进去！ 🌊
+description: 本指南将通过改变和提升你的 shell 体验来帮助你定制你的 BredOS 体验！🚀 无论你喜欢 Bash、Zsh、Fish 还是 Nushell，你都会在这里找到你需要的一切。让我们开始吧！🌊
 published: true
-date: 2025-09-16T10:37:25.923Z
+date: 2025-09-18T09：28：01.801Z
 tags: 自定义, shell
 editor: markdown
 dateCreated: 2024-09-20T19:39:08.509Z
@@ -16,8 +16,6 @@ dateCreated: 2024-09-20T19:39:08.509Z
 
 > Bash 是 BredOS 中的默认 shell。让我们开始设置它，或者使它成为你的默认 shell！
 > {.is-info}
-
-让我们开始设置它或制作你的默认炮弹！
 
 ## 2.1 安装 Bash
 
