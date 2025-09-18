@@ -16,7 +16,7 @@ Esta guía le guiará a través de los pasos para permitir a Panthor on Mali GPU
 
 ## 2.1 Automáticamente
 
-- La herramienta bredos-config ofrece una forma sencilla de activar y desactivar dtbos. Start the tool with:
+- La herramienta bredos-config ofrece una forma sencilla de activar y desactivar dtbos. Iniciar la herramienta con:
 
 ```
 sudo bredos-config
