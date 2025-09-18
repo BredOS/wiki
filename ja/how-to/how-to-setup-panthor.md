@@ -16,7 +16,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ## 自動的に2.1
 
-- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する Start the tool with:
+- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを以下から起動します。
 
 ```
 sudo bredos-config
