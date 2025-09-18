@@ -2,7 +2,7 @@
 title: Flashear el eMMC con Linux o macOS
 description:
 published: false
-date: 2025-09-16T06:29:26.865Z
+date: 2025-09-18T08:57:18.967Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -79,13 +79,13 @@ make -j $(nproc)
 ls | grep rkdeveloptool
 ```
 
-- debe salir
+- Eso debería producir:
 
 ```
 rkdeveloptool
 ```
 
-### 2.2.4 Ejecutar
+### 2.2.4 Hazlo Ejecutable
 
 - Y finalmente cópialo en la carpeta `opt` para ejecutarlo desde todas partes:
 
