@@ -2,7 +2,7 @@
 title: 使用您的设备作为无线热点
 description:
 published: true
-date: 2025-09-16T10:50:45.422Z
+date: 2025-09-18T07：15：46.054Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10：33：46.772Z
@@ -36,7 +36,7 @@ dateCreated: 2024-09-08T10：33：46.772Z
    nmcli 设备状态
 ```
 
-- 示例输出
+- 示例输出：
 
 ```
 	DEVICE           TYPE      STATE                   CONNECTION      
@@ -68,8 +68,8 @@ dateCreated: 2024-09-08T10：33：46.772Z
 用您的实际接口名称替换<wifi_interface>`，比如`wlp2s0`或`wlan0`， 使用您想要的 SSID 的<MyHotspot>和 `<mypassword>的密码选择一个安全的密码。
 ```
 
-> 如果出现以下错误，请使用 sudo 再次运行该命令
-> “错误：无法设置 Wi-Fi 热点：无权控制网络。”
+> 如果你得到以下错误，请用sudo再次运行命令。
+> `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
 > {.is-info}
 
 ## 3.2 查看热点状态
@@ -80,7 +80,7 @@ dateCreated: 2024-09-08T10：33：46.772Z
 nmcli 连接显示
 ```
 
-- 示例输出
+- 示例输出：
 
 ```
 NAME                            UUID                                  TYPE       DEVICE          
