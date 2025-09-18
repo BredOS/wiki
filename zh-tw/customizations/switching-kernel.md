@@ -2,7 +2,7 @@
 title: Switching Kernel
 description:
 published: true
-date: 2025-09-16T10:40:30.464Z
+date: 2025-09-18T09:33:26.800Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -39,7 +39,7 @@ local/util-linux-libs 2.40.2-1
     util-linux runtime libraries
 ```
 
-In the list we can see linux-rockchip-rkr3 and the accompanying headers are installed.
+In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
 To install a different kernel, first remove the installed kernel, along with it's headers.
 
 # 2. Managing kernels
@@ -132,8 +132,6 @@ The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-r
 
 ### 2.3.1 U-Boot
 
-**This only applies to devices that don't boot with a UEFI, if you have UEFI on your board, skip to that section.**
-
 - Edit `/boot/extlinux/extlinux.conf`:
 
 ```
@@ -167,8 +165,6 @@ vmlinuz-linux-rockchip-rkr3
 ```
 
 ### 2.3.2 UEFI
-
-**This section only applies to devices that boot with UEFI. If you use U-Boot instead, skip to the above section.**
 
 - Run the following to regenerate the grub.cfg:
 
