@@ -2,7 +2,7 @@
 title: Configuring Governors
 description: Using govctl to manage system governors
 published: true
-date: 2025-09-15T09:02:10.135Z
+date: 2025-09-18T08:06:33.318Z
 tags: 
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
@@ -10,10 +10,10 @@ dateCreated: 2025-05-07T12:47:49.033Z
 
 # 1. Introduction
 
-BredOS ships by default the tool `govctl` in package `bredos-govctl`.
+BredOS ships by default the tool `govctl` with the package `bredos-govctl`.
 It is enabled by default and will set the performance according to available battery power.
 
-- This should be installed by default. If not, install it with
+- If its not installed, install it with:
 ```
 sudo pacman -S bredos-govctl
 ```
@@ -30,9 +30,10 @@ GovCtl will by default ensure maximum performance across all attached devices, i
 
 If the system holds sufficient charge, but it's not plugged in, it'll maintain most of the performance, limiting GPU speed and cpu boost.
 
-If the system does not hold a sufficient charge (20% is the default point at which this is determined),
-the system will minimize power draw, at the detriment of performance and response time.
-This for example will make RK3588 boards only run at 300mHz.
+If the system does not have a sufficient charge (20% is the default threshold for this determination), it will minimize power consumption, at the expense of performance and response time.
+> This for example will make RK3588 boards only run at 300mHz.
+{.is-info}
+
 
 If you do not like the defaults, they can all be changed.
 
@@ -97,7 +98,7 @@ sudo govctl -b performance
 ```
 sudo govctl -d
 ```
-Will ensure that at all times the "plugged in" governor is applied at all times.
+This will ensure that the "plugged in" governor is applied at all times.
 
 - To undo this, run:
 ```
