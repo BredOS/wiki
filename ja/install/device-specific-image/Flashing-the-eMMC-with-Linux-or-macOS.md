@@ -2,7 +2,7 @@
 title: Linux または macOS で eMMC の書き込み
 description:
 published: false
-date: 2025-09-16T06:29:26.865Z
+date: 2025-09-18T08:57:18.967Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -79,13 +79,13 @@ make -j $(nproc)
 ls | grep rkdeveloptool
 ```
 
-- 出力すべきです
+- 以下のように出力する必要があります:
 
 ```
 rkdeveloptool
 ```
 
-### 2.2.4 実行させる
+### 2.2.4 実行可能にする
 
 - 最後に、`opt`フォルダにコピーして、どこからでも実行できます。
 
