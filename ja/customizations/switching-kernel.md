@@ -2,7 +2,7 @@
 title: カーネルの切り替え
 description:
 published: true
-date: 2025-09-16T10:40:30.464Z
+date: 2025-09-18T09:33:26.800Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
@@ -41,8 +41,7 @@ local/util-linux-libs 2.40.2-1
     util-linux runtime libraries
 ```
 
-リストにはlinux-rockchip-rkr3とそれに付随するヘッダーがインストールされています。
-別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
+In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
 別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
 
 # 2. カーネルの管理
@@ -135,8 +134,6 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 
 ### 2.3.1 U-Boot
 
-**これは、UEFIがボードにある場合は、UEFIで起動しないデバイスにのみ適用されます。そのセクションにスキップしてください。**
-
 - `/boot/extlinux/extlinux.conf`を編集:
 
 ```
@@ -172,8 +169,6 @@ vmlinuz-linux-rockchip-rkr3
 ```
 
 ### 2.3.2 UEFI
-
-**このセクションはUEFIで起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。** 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。\*\*
 
 - grub.cfg を再生成するには、以下を実行します。
 
