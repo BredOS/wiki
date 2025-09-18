@@ -2,7 +2,7 @@
 title: Instalar STEAM en BredOS
 description: Una guía simple para instalar Steam en BredOS, con instrucciones paso a paso para configuraciones Panthor-enabled y no Panthor.
 published: true
-date: 2025-09-15T11:13:24.812Z
+date: 2025-09-18T07:12:38.577Z
 tags:
 editor: markdown
 dateCreated: 2024-08T09:55:58.661Z
@@ -12,7 +12,7 @@ dateCreated: 2024-08T09:55:58.661Z
 
 Bienvenido a la guía sobre cómo instalar **Steam** en BredOS! Siga estos sencillos pasos para que Steam funcione en su sistema.
 
-## 2. Prerrequisitos
+# 2. Prerrequisitos
 
 > ¡Este cómo está pensado para los dispositivos RK35xx de Rockchip!
 > {.is-info}
@@ -20,9 +20,9 @@ Bienvenido a la guía sobre cómo instalar **Steam** en BredOS! Siga estos senci
 - Necesitas tener **BredOS** instalado y funcionando.
 - Opcionalmente, puedes tener [Panthor activado](/how-to/how-to-setup-panthor), pero no es necesario.
 
-## 3. Pasos de instalación
+# 3. Pasos de instalación
 
-### 3.1 Automáticamente
+## 3.1 Automáticamente
 
 - La herramienta `bredos-config` ofrece una forma simple de instalar Steam y las librerías de vapor apropiadas. Iniciar la herramienta con
 
@@ -32,9 +32,9 @@ sudo bredos-config
 
 - Luego navega a `Packages` -> `Install Steam`. Entonces se instalará Steam. Fácil, ¿verdad?
 
-### 3.2 Manualmente
+## 3.2 Manualmente
 
-#### 3.2.1 En caso de usar una imagen BredOS antigua:
+### 3.2.1 En caso de usar una imagen BredOS antigua:
 
 Puede que tengas que añadir el repositorio **BredOS Multíb** para instalar Steam y las capas de traducción necesarias. Para hacer esto, siga estos pasos:
 
@@ -50,7 +50,7 @@ Puede que tengas que añadir el repositorio **BredOS Multíb** para instalar Ste
    sudo pacman -Sy
 ```
 
-#### 3.2.2 Instalación de Steam:
+### 3.2.2 Instalación de Steam:
 
 - Ejecutar el siguiente comando para instalar Steam:
 
@@ -70,7 +70,7 @@ Puede que tengas que añadir el repositorio **BredOS Multíb** para instalar Ste
 
 - Espere a que se complete la instalación y ya está todo listo.
 
-## 4. Desinstalando Steam
+# 4. Desinstalando Steam
 
 - Si necesitas desinstalar Steam y restablecer la configuración para elegir una opción diferente:
 
@@ -78,7 +78,7 @@ Puede que tengas que añadir el repositorio **BredOS Multíb** para instalar Ste
 sudo pacman -Rnscu Steam-libs-any #o steam-libs-rk3588 dependiendo de su selección
 ```
 
-## 5. Lanzar Steam
+# 5. Lanzar Steam
 
 - Una vez finalizada la instalación, puede iniciar Steam buscando en el menú de su aplicación o ejecutando:
 
