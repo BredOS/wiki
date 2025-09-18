@@ -2,7 +2,7 @@
 title: ワイヤレスホットスポットとして使用してください
 description:
 published: true
-date: 2025-09-16T10:50:45.422Z
+date: 2025-09-18T07:15:054Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -33,7 +33,7 @@ NetworkManager のコマンド ライン ツール `nmcli` を使用すると、
    nmcli デバイスの状態
 ```
 
-- 出力例
+- 出力例:
 
 ```
 	DEVICE           TYPE      STATE                   CONNECTION      
@@ -65,8 +65,8 @@ NetworkManager のコマンド ライン ツール `nmcli` を使用すると、
 Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wlan0`,  `<MyHotspot>` with your desired SSID and `<mypassword>` with a secure passphrase of your choice.
 ```
 
-> If you get the following error run the command again with sudo
-> `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
+> 次のエラーが発生した場合は、sudo を使用して再度コマンドを実行します。
+> `エラー: Wi-Fiホットスポットのセットアップに失敗しました: ネットワークを制御する権限がありません。`
 > {.is-info}
 
 ## 3.2 ホットスポットの状態を表示
@@ -77,7 +77,7 @@ Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wl
 nmcli 接続ショー
 ```
 
-- 出力例
+- 出力例:
 
 ```
 NAME                            UUID                                  TYPE       DEVICE          
