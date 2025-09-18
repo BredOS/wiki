@@ -16,7 +16,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ## 2.1 自动使用
 
-- bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为 Start the tool with:
+- bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为 启动工具：
 
 ```
 sudo bredos-config
