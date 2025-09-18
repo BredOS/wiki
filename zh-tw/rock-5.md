@@ -2,35 +2,33 @@
 title: Rock 5 Series
 description:
 published: true
-date: 2025-04-01T12:38:55.272Z
+date: 2025-09-17T09:37:33.486Z
 tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
 ---
 
-# Supported Rock 5 Series devices
+# 1. Supported Rock 5 Series devices
 
 | Device       | UEFI | Supported | Known Issues                                                     |
 | ------------ | ---- | --------- | ---------------------------------------------------------------- |
-| Rock 5A      | ✔️   | ✔️        |                                                                  |
-| Rock 5B      | ✔️   | ✔️        |                                                                  |
-| Rock 5B Plus | ✔️   | ✔️        |                                                                  |
-| Rock 5C      | ❌    | ✔️        | Wi-Fi driver crashes after a few days of uptime. |
-| Rock 5C Lite | ❌    | ✔️        | Wi-Fi driver crashes after a few days of uptime. |
-| Rock 5D      | ❌    | ✔️        | Wi-Fi driver crashes after a few days of uptime. |
-| Rock 5 ITX   | ❌    | ✔️        |                                                                  |
-| CM5          | ❌    | ✔️        |                                                                  |
-| CM5 Lite     | ❌    | ✔️        |                                                                  |
+| Rock 5A      | Yes  | Yes       |                                                                  |
+| Rock 5B      | Yes  | Yes       |                                                                  |
+| Rock 5B Plus | Yes  | Yes       |                                                                  |
+| Rock 5C      | No   | Yes       | Wi-Fi driver crashes after a few days of uptime. |
+| Rock 5C Lite | No   | Yes       | Wi-Fi driver crashes after a few days of uptime. |
+| Rock 5D      | No   | Yes       | Wi-Fi driver crashes after a few days of uptime. |
+| Rock 5 ITX   | No   | Yes       |                                                                  |
+| CM5          | No   | Yes       |                                                                  |
+| CM5 Lite     | No   | Yes       |                                                                  |
 
-# Guides for all devices
+# 2. Download
 
-- [🐾 How to setup Panthor on Mali GPUs with RK3588]/how-to/how-to-setup-panthor)
-- [🎮  How to Install STEAM on BredOS]/how-to/how-to-install-steam)
+You can find download links for images in our [website](https://bredos.org/download.html)!
 
-# For Rock 5B
+# 3. Useful links
 
-- [How to boot BredOS from NVMe]/rock-5/how-to-boot-from-nvme)
-
-# For Rock 5B Plus
+## 3.1 For Rock 5B and Rock 5B Plus
 
 - [How to boot BredOS from NVMe]/rock-5/how-to-boot-from-nvme)
+

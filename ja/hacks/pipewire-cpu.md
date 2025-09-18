@@ -2,21 +2,23 @@
 title: Pipewire CPU 回避策
 description:
 published: true
-date: 2025-03-16T16:17:09.241Z
+date: 2025-09-17T09:24:40.286Z
 tags:
 editor: markdown
 dateCreated: 2025-03-16T16:17:09.241Z
 ---
 
-# Pipewire CPU使用率を回避する
+# 1. はじめに
 
 パイプワイヤーは再び理由なしであなたのコアの一つを食べていますか?
 
 今できることは、 `systemd` での使用を制限することです。
 
-### ステップ 1:
+# 2. CPU使用率を制限する
 
-`~/.config/systemd/user/pipewire.service` ファイルを作成し、以下のデータを保存します。
+## 2.1 サービスファイルの作成:
+
+- `~/.config/systemd/user/pipewire.service` ファイルを作成し、以下のデータを保存します。
 
 ```
 [Unit]
@@ -55,13 +57,20 @@ Also=pipewire.socket
 WantedBy=default.target
 ```
 
-### ステップ 2:
+## 2.2 systemdデーモンの再読み込み
 
-ファイルを保存して実行: `systemctl --user daemon-reload`
+- ファイルを保存して実行:
 
-### ステップ 3:
+```
+systemctl --user daemon-reload
+```
 
-ログアウトまたは理想的に再起動します。 パイプワイヤーは、最大で単一コアの10%のみを使用します。 **手動でパイプワイヤーを再起動しないでください。**
+## 2.3 ログアウトまたは再起動:
+
+ログアウトまたは理想的に再起動します。 パイプワイヤーは、最大で単一コアの10%のみを使用します。
+
+> 手動でパイプワイヤーを再起動しないでください。
+> {.is-warning}
 
 このハックはあなたのオーディオには影響しません。
 もう少し余裕を持たせたい場合は、`CPUQuota`の行でパーセンテージを変更します。

@@ -1,16 +1,16 @@
 ---
-title: Cómo actualizar UEFI en RK3588
+title: Actualizar UEFI en RK3588
 description: Aprenda cómo actualizar el firmware UEFI en dispositivos basados en RK35888 ejecutando BredOS
 published: true
-date: 2025-09-13T10:45:27.434Z
+date: 2025-09-15T11:14:54.063Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
 ---
 
-# 🔄 Actualizando UEFI en dispositivos RK3588
+# 1. Introducción
 
-El firmware UEFI para dispositivos basados en RK3588 se puede instalar a través del gestor de paquetes. Para encontrar el paquete correcto para su dispositivo específico, ejecute:
+- El firmware UEFI para dispositivos basados en RK3588 se puede instalar a través del gestor de paquetes. Para encontrar el paquete correcto para su dispositivo específico, ejecute:
 
 ```
 sudo pacman -Ss uefi
@@ -24,34 +24,30 @@ Esto listará todos los paquetes de firmware de UEFI disponibles. Identifique el
 - **Para Roca 5B:** `rock-5b-uefi`
 - _(Y otros tal como se enumeran en la salida.)_
 
----
+# 2. Descargando el firmware
 
-## 1. 📥 Instalar el Firmware
-
-Una vez que haya identificado el paquete correcto para su dispositivo, instálelo utilizando:
+- Una vez que haya identificado el paquete correcto para su dispositivo, instálelo utilizando:
 
 ```
 sudo pacman -S <device-uefi-package>
 ```
 
-Por ejemplo, si estás usando un **Fy.Ub Duo**, ejecuta:
+- Por ejemplo, si estás usando un **Fy.Ub Duo**, ejecuta:
 
 ```
 sudo pacman -S fydetab-duo-uefi
 ```
 
----
-
-## 2. 🛠️ Flashear el Firmware UEFI
+# 3. Flashear el Firmware UEFI
 
 Después de la instalación, la imagen del firmware se ubicará en `/usr/share/edk2/<device-name>/`.
 
 > El sistema proporcionará el comando específico para flashear el firmware.\
 > El formato general del comando es:\
-> El formato general del comando es: ¡Usa eso en lugar del formato **general** abajo!
+> El formato general del comando es: ¡Usa eso en lugar del formato **general** abajo! ¡Usa eso en lugar del formato **general** abajo!
 > {.is-warning}
 
-El formato **general** del comando es:
+- Un formato **general** del comando es:
 
 ```
 sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.X.X.img of=/dev/<TARGET_DEVICE> bs=512 skip=64 seek=64 conv=notrunc
@@ -59,9 +55,10 @@ sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.X.X.img o
 
 Reemplazar `<TARGET_DEVICE>` por el dispositivo de almacenamiento apropiado:
 
-- `/dev/mmcblk0` para **eMMC**
-- `/dev/mmcblk1` para **tarjeta SD**
-- `/dev/mtdblock0` para **SPI flash**
+> - `/dev/mmcblk0` para **eMMC**
+> - `/dev/mmcblk1` para **tarjeta SD**
+> - `/dev/mtdblock0` para **SPI flash**
+>   {.is-info}
 
 Por ejemplo, si estás usando **eMMC storage** en un **Fy.Ub Duo**, el comando sería:
 

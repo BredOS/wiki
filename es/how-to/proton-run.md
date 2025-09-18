@@ -2,38 +2,41 @@
 title: Proton-run
 description: Explorador rápido al usar el script `proton-run` de BredOS
 published: true
-date: 2025-09-13T09:47:37.755Z
+date: 2025-09-15T09:55:16.279Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T14:44:47.710Z
 ---
 
-# Usar proton-run para ejecutar aplicaciones de Windows
+# 1. Introducción
 
 La herramienta `proton-run` es un paquete publicado recientemente que le permite usar el Proton Experimental de Steam para ejecutar aplicaciones x86_64 Windows bajo BredOS ARM64.
 
-## 1. Requisitos
+# 2. Requisitos
 
 - An RK3588 system running BredOS.
 - Vapor. ([Guía aquí](/how-to/how-to-install-steam))
 
-## 2. Instalación
+# 3. Instalación
 
-### 2.1 Instalar Steam Proton Experimental
+## 3.1 Instalar Steam Proton Experimental
 
-Abre Steam y navega a tu `Biblioteca`. Haga clic en la barra de búsqueda y escriba `proton`. Elige `Proton Experimental` e instálalo. Otras versiones del protón no funcionarán.
+Abre Steam y navega a tu `Biblioteca`. Haga clic en la barra de búsqueda y escriba `proton`. Elige `Proton Experimental` e instálalo.
 
-### 2.2 Instalar proton-run
+> Otras versiones del protón no funcionarán.
+> {.is-info}
 
-Instala `proton-run` con el comando
+## 3.2 Instalar proton-run
+
+- Instala `proton-run` con el comando
 
 ```
 yay -S proton-run
 ```
 
-## 3. Uso
+# 4. Uso
 
-Simplemente abra un terminal y ejecute:
+- Simplemente abra un terminal y ejecute:
 
 ```
 proton-run /ruta/a/tu/windows/program.exe

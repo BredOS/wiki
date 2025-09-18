@@ -2,21 +2,23 @@
 title: Pipewire CPU puede solucionar
 description:
 published: true
-date: 2025-03-16T16:17:09.241Z
+date: 2025-09-17T09:24:40.286Z
 tags:
 editor: markdown
 dateCreated: 2025-03-16T16:17:09.241Z
 ---
 
-# Uso de Pipewire CPU
+# 1. Introducción
 
 ¿Se está comiendo una de tus úlceras sin motivo de nuevo?
 
 Bueno, lo mejor que puedes hacer ahora es limitar su uso con `systemd`.
 
-### Paso 1:
+# 2. Limitar cuota de CPU
 
-Crea el archivo `~/.config/systemd/user/pipewire.service` y coloca los siguientes datos dentro de él:
+## 2.1 Crear archivo de servicio:
+
+- Crea el archivo `~/.config/systemd/user/pipewire.service` y coloca los siguientes datos dentro de él:
 
 ```
 [Unit]
@@ -55,13 +57,20 @@ Also=pipewire.socket
 WantedBy=default.target
 ```
 
-### Paso 2:
+## 2.2 Recargar daemon del sistema
 
-Guardar el archivo y ejecutar: `systemctl --user daemon-reload`
+- Guardar el archivo y ejecutar:
 
-### Paso 3:
+```
+systemctl --daemon-recargar usuario
+```
 
-Cerrar sesión o reiniciar idealmente. Pipewire sólo utilizará el 10% de un solo núcleo como máximo. **No reinicie pipewire manualmente.**
+## 2.3 Cerrar sesión o reiniciar:
+
+Cerrar sesión o reiniciar idealmente. Pipewire sólo utilizará el 10% de un solo núcleo como máximo.
+
+> No reinicie pipewire manualmente.
+> {.is-warning}
 
 Este hack no debe afectar a tu audio.
 Si desea permitirle más margen de maniobra, cambie el porcentaje en la línea `CPUQuota`.

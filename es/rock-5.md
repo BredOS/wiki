@@ -2,35 +2,33 @@
 title: Serie Roca 5
 description:
 published: true
-date: 2025-04-01T12:38:55.272Z
+date: 2025-09-17T09:37:33.486Z
 tags:
 editor: markdown
 dateCreated: 2024-21T09:12:56.606Z
 ---
 
-# Dispositivos de la Serie Rock 5 soportados
+# 1. Dispositivos de la Serie Rock 5 soportados
 
 | Dispositivo  | UEFI | Soportado | Problemas conocidos                                                                |
 | ------------ | ---- | --------- | ---------------------------------------------------------------------------------- |
-| Roca 5A      | ✔️   | ✔️        |                                                                                    |
-| Roca 5B      | ✔️   | ✔️        |                                                                                    |
-| Roca 5B Plus | ✔️   | ✔️        |                                                                                    |
-| Roca 5C      | ❌    | ✔️        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
-| Roca 5C Lite | ❌    | ✔️        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
-| Roca 5D      | ❌    | ✔️        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
-| Roca 5 ITX   | ❌    | ✔️        |                                                                                    |
-| CM5          | ❌    | ✔️        |                                                                                    |
-| CM5 Lite     | ❌    | ✔️        |                                                                                    |
+| Roca 5A      | Sí   | Sí        |                                                                                    |
+| Roca 5B      | Sí   | Sí        |                                                                                    |
+| Roca 5B Plus | Sí   | Sí        |                                                                                    |
+| Roca 5C      | Nu   | Sí        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
+| Roca 5C Lite | Nu   | Sí        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
+| Roca 5D      | Nu   | Sí        | El controlador Wi-Fi se bloquea después de unos días de actividad. |
+| Roca 5 ITX   | Nu   | Sí        |                                                                                    |
+| CM5          | Nu   | Sí        |                                                                                    |
+| CM5 Lite     | Nu   | Sí        |                                                                                    |
 
-# Guías para todos los dispositivos
+# 2. Descargar
 
-- [🐾 Cómo configurar Panthor en GPUs Mali con RK3588](/es/how-to/how-to-setup-panthor)
-- [🎮 Cómo instalar STEAM en BredOS](/es/how-to/how-to-install-steam)
+¡Puedes encontrar enlaces de descarga para imágenes en nuestra [website](https://bredos.org/download.html)!
 
-# Para la roca 5B
+# 3. Enlaces útiles
 
-- [Cómo arrancar BredOS desde NVMe](/es/rock-5/how-to-boot-from-nvme)
-
-# Para la roca 5B Plus
+## 3.1 Para la roca 5B y la roca 5B Plus
 
 - [Cómo arrancar BredOS desde NVMe](/es/rock-5/how-to-boot-from-nvme)
+

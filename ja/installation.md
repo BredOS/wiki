@@ -49,7 +49,7 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
 
 - SPI loader file for example, for the RK3588: [`rk3588_spl_loader_v1.15.11.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.11.bin)
 
-- #downloading-bredos.
+- format@@0(#downloading-bredos).
 
 **📂 デフォルトでBredOSイメージを含むすべてのファイルを解凍します。 mg.xzファイルを解凍して.imgファイルに変換する必要があります。**
 
@@ -57,7 +57,7 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
 
 - `🟢 Driverをインストール`をクリックします:
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png)
 
 - 書き込みツールが含まれるフォルダを開きます: `RKDevTool_Release_v2.96` フォルダ(ダウンロードした名前のバージョンを確認してください) そしてツール`RKDevTool.exe`を実行します。
 
@@ -67,7 +67,7 @@ microSD カードの代わりに BredOS を eMMC ストレージにインスト�
   - 「アドレスで書く」をチェックします。
   - `RUN`をクリックして、プロセスが終了するまで待ちます。
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
 Linuxユーザーの場合、`rkdeveloptool` を使用してイメージをeMMCにフラッシュすることができます。 コマンドは次のとおりです: コマンドは次のとおりです:
 
@@ -83,7 +83,7 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 3. ユーザーアカウントとパスワードを設定します。
 4. インストールを完了し、デバイスを再起動します。
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/breDOS_installer.jpg))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/breDOS_installer.jpg)
 
 ## 🛠️ 初期設定
 
@@ -93,4 +93,4 @@ BredOS インストーラを実行した後、初期設定タスクを完了す�
 - 🔄 パッケージマネージャを使用してシステムを更新する
 - 🛠️ 必要に応じて追加のソフトウェアパッケージをインストールする
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg

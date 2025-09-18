@@ -1,63 +1,56 @@
 ---
-title: 🧹💾 ディスク領域のクリーンアップガイド
-description: 時間が経つにつれて、あなたのシステムは貴重なスペースを占める不要なファイルを蓄積するかもしれません。 このガイドでは、BredOS システムのディスク領域を取り戻す方法をいくつかご紹介します。 🖥️✨ 🖥️✨
+title: ディスク領域のクリーンアップガイド
+description: このガイドでは、BredOS システムのディスク領域を取り戻す方法をいくつかご紹介します。 🖥️✨
 published: true
-date: 2024-09-21T09:03:53.416Z
+date: 2025-09-16T10:42:55.802Z
 tags:
 editor: markdown
 dateCreated: 2024-09-20T20:26:57.698Z
 ---
 
-# BredOS ディスク領域クリーンアップガイド 🧹💾
+# 1. はじめに
 
-時間が経つにつれて、あなたのシステムは貴重なスペースを占める不要なファイルを蓄積するかもしれません。 このガイドでは、BredOS システムのディスク領域を取り戻す方法をいくつかご紹介します。 🖥️✨ 🖥️✨
+時間が経つにつれて、あなたのシステムは貴重なスペースを占める不要なファイルを蓄積するかもしれません。 このガイドでは、BredOS システムのディスク領域を取り戻す方法をいくつかご紹介します。 🖥️✨
 
----
+# 2. パッケージキャッシュを削除
 
-## 📚 目次
+パッケージをインストールまたは更新する場合、`pacman` は `/var/cache/pkg/` にキャッシュされたコピーを保持し、再インストールを高速化します。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。
 
-- クリーンパッケージキャッシュ📦
-- 古いログファイルを消去する 📝
-- BleachBit :spongeを使用
-- ユーザーキャッシュをクリア 🏠
-- 大きなファイルとディレクトリを検索 📂
+## 2.1 キャッシュサイズの確認
 
----
+- パッケージキャッシュの大きさを確認するには、以下を実行します。
 
-## クリーンパッケージキャッシュ📦
-
-パッケージをインストールまたは更新する際、**Pacman** は `/var/cache/pkg/` にキャッシュされたコピーを保持し、再インストールを高速化します。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。
-
-### キャッシュサイズを確認する 📏
-
-パッケージキャッシュの大きさを確認するには、以下を実行します。
-
-```bash
+```
 du -sh /var/cache/pacman/pkg/
 ```
 
-### 手動クリーンアップ :wasteバスケット:
+## 2.2 手動クリーンアップ
 
-インストールされていないキャッシュされたパッケージを手動で削除することができます:
+- インストールされていないキャッシュされたパッケージを手動で削除することができます:
 
-```bash
+```
 sudo pacman -Sc
 ```
 
-### Paccache で自動クリーンアップ 🔄
+## 2.3 パッカッシュによる自動クリーンアップ
 
-**paccache** を使用すると、各パッケージの最新の 3 つのバージョンのみを保持できます。
+`pacache`を使用すると、各パッケージの最新の3つのバージョンのみを保持できます。
 
-1. 必要なツールをインストールします:
-   ```bash
+- 必要なツールをインストールします:
+
+```
    sudo pacman -S pacman-contrib
-   ```
-2. トランザクションごとに自動的にクリーンアップするには、Pacman フックを設定します。
-   ```bash
+```
+
+- トランザクションごとに自動的にクリーンアップするには、Pacman フックを設定します。
+
+```
    sudo nano /usr/share/libalpm/hooks/pacche.hook
-   ```
-   ファイルに次の内容を追加します:
-   ```bash
+```
+
+- ファイルに次の内容を追加します:
+
+```
    [Trigger]
    Operation = Upgrade
    Operation = Install
@@ -69,46 +62,41 @@ sudo pacman -Sc
    Description = Cleaning pacman cache with paccache…
    When = PostTransaction
    Exec = /usr/bin/paccache -r
-   ```
-   **Ctrl + S**でファイルを保存し、**Ctrl + X**で終了します。
+```
 
----
+- **Ctrl + S**でファイルを保存し、**Ctrl + X**で終了します。
 
-## 古いログファイルを消去する 📝
+# 3. 古いログファイルを消去
 
-システムログは時間の経過とともにかなりのスペースを占める可能性があります。 ログのサイズは次のとおりです。 ログのサイズは次のとおりです。
+- システムログは時間の経過とともにかなりのスペースを占める可能性があります。 ログのサイズは次のとおりです。 ログのサイズは次のとおりです。
 
 ```bash
 journalctl --disk-usage
 ```
 
-### 以前のログをクリーンアップ 🧼
+## 3.1 古いログのクリーンアップ
 
-3日前のログを削除するには:
+- 3日前のログを削除するには:
 
 ```bash
 sudo journalctl --vacuum-time=3d
 ```
 
----
+# 4. BleachBit を使用
 
-## BleachBit :spongeを使用
+BleachBitは、システムジャンク、空きディスク容量をクリーンアップし、プライバシーを保護する強力なツールです。 BleachBit [here](https://www.bleachbit.org/) の使い方の詳細を学ぶことができます。
 
-**BleachBit** は強力なツールで、システムのジャンク、空きディスクスペースをクリーンアップし、プライバシーを保護します。 BleachBit [here](https://www.bleachbit.org/) の使用方法の詳細を学ぶことができます。 BleachBit [here](https://www.bleachbit.org/) の使用方法の詳細を学ぶことができます。
+# 5. ユーザーキャッシュを削除
 
----
-
-## ユーザーキャッシュをクリア 🏠
-
-システムを使用すると、キャッシュはホームディレクトリに蓄積されます。 キャッシュフォルダのサイズは次のとおりです。 場合によっては、大きなファイルが不必要にスペースを占有することがあります。 それらを識別するために使用できるツールは次のとおりです。 それらを識別するために使用できるツールは次のとおりです。
+- システムを使用すると、キャッシュはホームディレクトリに蓄積されます。 キャッシュフォルダのサイズは次のとおりです。 場合によっては、大きなファイルが不必要にスペースを占有することがあります。 それらを識別するために使用できるツールは次のとおりです。 それらを識別するために使用できるツールは次のとおりです。
 
 ```bash
 sudo du -sh ~/.cache/
 ```
 
-### キャッシュをクリア 🧹
+## 5.1 キャッシュをクリア
 
-すべてのキャッシュファイルを削除するには:
+- すべてのキャッシュファイルを削除するには:
 
 ```bash
 rm -rf ~/.cache/*
@@ -116,11 +104,11 @@ rm -rf ~/.cache/*
 
 ---
 
-## 大きなファイルとディレクトリを検索 📂
+# 5. 大きなファイルとディレクトリを検索
 
 場合によっては、大きなファイルが不必要にスペースを占有することがあります。 それらを識別するために使用できるツールは次のとおりです。 それらを識別するために使用できるツールは次のとおりです。
 
-### コンソールツール ⌨️
+## 6.1 コンソールツール
 
 - **du** — ディスク使用状況の検査官。\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
@@ -134,7 +122,7 @@ rm -rf ~/.cache/*
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
-### グラフィカルツール 🖼️
+## 6.2 グラフィカルツール
 
 - **Filelight** — 同心円リングによるインタラクティブなディスク使用量マップ。\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
@@ -144,9 +132,13 @@ rm -rf ~/.cache/*
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
@@ -154,4 +146,6 @@ rm -rf ~/.cache/*
 
 ---
 
-空き容量を増やし、BredOS システムをスムーズに稼働させてください。 💪✨ 📚 目次
+> 空き容量を増やし、BredOS システムをスムーズに稼働させてください。 💪✨
+> {.is-success}
+

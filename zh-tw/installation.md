@@ -57,7 +57,7 @@ If you'd like to install BredOS to eMMC storage instead of using a microSD card,
 
 - Click on `🟢 Install Driver`:
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png)
 
 - Open the folder that contains the flashing tool:  `RKDevTool_Release_v2.96` folder (check the version you have downloaded for the name) and execute the tool `RKDevTool.exe`.
 
@@ -67,7 +67,7 @@ If you'd like to install BredOS to eMMC storage instead of using a microSD card,
   - Check `Write by Address`
   - Click on `RUN` and wait until the process finishes
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
 for Linux users, you can use the `rkdeveloptool` to flash the image to the eMMC. Commands are as follows:
 
@@ -83,7 +83,7 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 3. 設定使用者帳戶及密碼
 4. 完成安裝並重新啟動電腦
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/bredOS_installer.jpg))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/bredOS_installer.jpg)
 
 ## 🛠️ Initial Configuration
 
@@ -93,4 +93,4 @@ After running BredOS installer you may need to complete some initial setup tasks
 - 🔄 Update the system using the package manager
 - 🛠️ Install additional software packages as needed
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)

@@ -1,18 +1,23 @@
 ---
 title: BredOS のカスタマイズ
-description: このページでは、あなたの好みに合わせてブレッドOSシステムをカスタマイズするために必要なリソースをすべて見つけることができます! BredOS 体験を素晴らしいものにしましょう！ 🚀 🚀
+description: このページでは、あなたの好みに合わせてブレッドOSシステムをカスタマイズするために必要なリソースをすべて見つけることができます! BredOS 体験を素晴らしいものにしましょう！ 🚀
 published: true
-date: 2024-12-04T15:50:15.244Z
+date: 2025-09-17T09:31:49.079Z
 tags: カスタマイズ
 editor: markdown
 dateCreated: 2024-09-20T19:27:46.217Z
 ---
 
-# BredOS カスタマイズガイドへようこそ！ 🎉🖥️ 🎉🖥️
+# 1. はじめに
 
-このページでは、あなたの好みに合わせてブレッドOSシステムをカスタマイズするために必要なリソースをすべて見つけることができます! BredOS 体験を素晴らしいものにしましょう！ 🚀 🚀
+このページでは、あなたの好みに合わせてブレッドOSシステムをカスタマイズするために必要なリソースをすべて見つけることができます! BredOS 体験を素晴らしいものにしましょう！ 🚀
 
-## 📚 目次
+# 2. 目次
 
-- [Shell 🐚](/customizations/shell-customization) をカスタマイズする
-- https://wiki.bredos.org/en/customizations/switching-kernel
+## 2.1 シェルをカスタマイズ
+
+シェルを変更したり、設定や動作を調整したい場合は、この [guide](/customizations/shell-customization) に従ってください。
+
+## 2.2 カーネルの切り替え
+
+カーネルを切り替えたい場合は、 [this](/customizations/switching-kernel) に従ってください。

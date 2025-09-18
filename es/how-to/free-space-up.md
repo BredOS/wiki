@@ -1,63 +1,56 @@
 ---
-title: 🧹💾 Guía de limpieza de espacio en disco
-description: Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS. 🖥️✨
+title: Guía de limpieza del espacio en disco
+description: Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS.
 published: true
-date: 2024-09-21T09:03:53.416Z
+date: 2025-09-16T10:42:55.802Z
 tags:
 editor: markdown
 dateCreated: 2024-20T20:26:57.698Z
 ---
 
-# Guía de limpieza del espacio en disco BredOS 🧹💾
+# 1. Introducción
 
-Con el tiempo, su sistema puede acumular archivos innecesarios que ocupan un espacio valioso. Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS. 🖥️✨
+Con el tiempo, su sistema puede acumular archivos innecesarios que ocupan un espacio valioso. Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS.
 
----
+# 2. Limpiar caché de paquetes
 
-## 📚 Índice de contenidos
+Al instalar o actualizar paquetes, `pacman` mantiene en caché copias en `/var/cache/pacman/pkg/` para hacer que la reinstalación sea más rápida. Sin embargo, estos paquetes almacenados en caché pueden acumularse y consumir espacio en disco.
 
-- Limpiar Caché de Paquetes 📦
-- Limpiar archivos antiguos de registro 📝
-- Usar BleachBit 🧽
-- Limpiar Caché de Usuario 🏠
-- Buscar archivos grandes y directorios 📂
+## 2.1 Comprobar tamaño de caché
 
----
+- Para ver lo grande que es la caché de paquetes, ejecute:
 
-## Limpiar Caché de Paquetes 📦
-
-Al instalar o actualizar paquetes, **Pacman** mantiene copias en caché en `/var/cache/pacman/pkg/` para hacer que la reinstalación sea más rápida. Sin embargo, estos paquetes almacenados en caché pueden acumularse y consumir espacio en disco.
-
-### Comprobar tamaño de caché 📏
-
-Para ver lo grande que es la caché de paquetes, ejecute:
-
-```bash
+```
 du -sh /var/cache/pacman/pkg/
 ```
 
-### Limpieza manual 🗑️
+## 2.2 Limpieza manual
 
-Puede eliminar manualmente los paquetes en caché que ya no están instalados con:
+- Puede eliminar manualmente los paquetes en caché que ya no están instalados con:
 
-```bash
+```
 sudo pacman -Sc
 ```
 
-### Limpieza automática con Paccache 🔄
+## 2.3 Limpieza automática con dolor de Pacc
 
-También puedes usar **paccache** para mantener sólo las 3 versiones más recientes de cada paquete:
+También puedes usar `paccache` para mantener sólo las 3 versiones más recientes de cada paquete:
 
-1. Instalar la herramienta necesaria:
-   ```bash
+- Instalar la herramienta necesaria:
+
+```
    sudo pacman -S pacman-contrib
-   ```
-2. Configurar un gancho Pacman para limpiar automáticamente después de cada transacción:
-   ```bash
+```
+
+- Configurar un gancho Pacman para limpiar automáticamente después de cada transacción:
+
+```
    sudo nano /usr/share/libalpm/hooks/paccache.hook
-   ```
-   Añadir el siguiente contenido al archivo:
-   ```bash
+```
+
+- Añadir el siguiente contenido al archivo:
+
+```
    [Trigger]
    Operación = Actualizar
    Operación = Instalar
@@ -69,46 +62,41 @@ También puedes usar **paccache** para mantener sólo las 3 versiones más recie
    Descripción = Limpiar caché pacman con paccache…
    Cuando = PostTransaction
    Exec = /usr/bin/paccache -r
-   ```
-   Guarda el archivo con **Ctrl + S** y sal con **Ctrl + X**.
+```
 
----
+- Guarda el archivo con **Ctrl + S** y sal con **Ctrl + X**.
 
-## Limpiar archivos antiguos de registro 📝
+# 3. Limpiar archivos antiguos de registro
 
-Los registros del sistema pueden ocupar una cantidad considerable de espacio a lo largo del tiempo. Puedes comprobar el tamaño de tus registros con:
+- Los registros del sistema pueden ocupar una cantidad considerable de espacio a lo largo del tiempo. Puedes comprobar el tamaño de tus registros con:
 
 ```bash
 journalctl --uso de disco
 ```
 
-### Limpiar Registros Antiguos :jabón:
+## 3.1 Limpiar registros antiguos
 
-Para eliminar registros anteriores a 3 días:
+- Para eliminar registros anteriores a 3 días:
 
 ```bash
 sudo diario --vacuum-time=3d
 ```
 
----
+# 4. Usar BleachBit
 
-## Usar BleachBit 🧽
+BleachBit es una poderosa herramienta que le ayuda a limpiar la basura del sistema, a liberar espacio en disco y a proteger su privacidad. Puedes aprender más sobre cómo usar BleachBit [here](https://www.bleachbit.org/).
 
-**BleachBit** es una poderosa herramienta que te ayuda a limpiar la basura del sistema, a liberar espacio en disco y a proteger tu privacidad. Puedes aprender más sobre cómo usar BleachBit [here](https://www.bleachbit.org/).
+# 5. Limpiar caché de usuario
 
----
-
-## Limpiar Caché de Usuario 🏠
-
-A medida que usas tu sistema, los cachés se acumularán en tu directorio personal. Puede comprobar el tamaño de su carpeta de caché con:
+- A medida que usas tu sistema, los cachés se acumularán en tu directorio personal. Puede comprobar el tamaño de su carpeta de caché con:
 
 ```bash
 sudo du -sh ~/.cache/
 ```
 
-### Limpiar el caché 🧹
+## 5.1 Limpiar el caché
 
-Para eliminar todos los archivos de caché:
+- Para eliminar todos los archivos de caché:
 
 ```bash
 rm -rf ~/.cache/*
@@ -116,29 +104,66 @@ rm -rf ~/.cache/*
 
 ---
 
-## Buscar archivos grandes y directorios 📂
+# 5. Buscar archivos y directorios grandes
 
 A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están las herramientas que puede utilizar para identificarlas:
 
-### Herramientas de consola ⌨️
+## 6.1 Herramientas de Consola
 
 - **duc** — Un inspector de uso de disco.\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\\
+  **duc** — Un inspector de uso de disco.\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — Analizador de uso de disco con interfaz de consola.\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses el analizador de uso de disco.\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
+  **duc** — Un inspector de uso de disco.\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  **duc** — Un inspector de uso de disco.\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
-### Herramientas gráficas 🖼️
+## 6.2 Herramientas Gráficas
+
+- **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\\
+  **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`
+
+- **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\\
+  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-
-- **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  **qdirstat** — Herramienta de estadísticas de directorio basadas en Qt.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  **qdirstat** — Herramienta de estadísticas de directorio basadas en Qt.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`
 
 ---
 
-¡Libera espacio y mantén tu sistema BredOS funcionando sin problemas! 💪✨
+> ¡Libera espacio y mantén tu sistema BredOS funcionando sin problemas!
+> {.is-success}
+

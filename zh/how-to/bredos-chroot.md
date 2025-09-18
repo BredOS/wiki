@@ -2,7 +2,7 @@
 title: BredOS-Chroot 实用程序
 description: 一个从二级系统挂载到 BredOS 安装的简单工具
 published: true
-date: 2025-05-07T17:48:24.068Z
+date: 2025-09-15T08:59:26.820Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T17:48:24.068Z
@@ -10,9 +10,17 @@ dateCreated: 2025-05-07T17:48:24.068Z
 
 # BredOS-Chroot
 
-可用作 `bredos-tools` 软件包的一部分。
+## 1. 安装
 
-## 用法
+- `bredos-chroot` 可以作为`bredos-tools`软件包的一部分使用。 默认情况下应该安装。 如果不安装它
+
+```
+sudo pacman -S bredos-tools
+```
+
+## 2. 用法
+
+- 运行"bredos-chroot" 时没有任何参数来显示帮助消息。
 
 ```
 用法：/usr/bin/bredos-chroot <btrfs_partition> <boot_partition>
@@ -24,12 +32,15 @@ dateCreated: 2025-05-07T17:48:24.068Z
 然后在系统中 chroot。退出 chroot 后清理。
 ```
 
-假定你有一个系统故障的 SD 卡，在 /dev/sdb 上可在 `lsblk` 中看见，你可以运行：
+## 3. 示例
+
+- 假定你有一个系统失败的SDCard, 在 **/dev/sdb**上可见, 你可以运行:
 
 ```
 sudo bredos-chroot /dev/sdb3 /dev/sdb2
 ```
 
-你会进入根 shell 进入损坏的系统，方便维修。
+> `/dev/sdb3` 是你的 BredOS 根分区，而`/dev/sdb2` 是你的 BredOS 引导分区。
+> {.is-info}
 
-一旦修理完成，您只需输入 `exit` 或 Ctrl + D 就可以关闭 shell，挂载的设备将被卸载。
+- 这将获得一个根外壳进入破损的系统，便于维修。 一旦修理完成，您只需输入 `exit` 或 Ctrl + D 键就可以关闭外壳，附加的文件系统将被卸载。

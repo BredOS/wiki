@@ -1,116 +1,108 @@
 ---
-title: 📸🔄 Btrfs Instantáneas y Rollbacks con Timeshift
+title: Instantáneas y retrocesos Btrfs con Timeshift
 description: Una guía completa sobre cómo configurar instantáneas Btrfs y retrocesos del sistema usando Timeshift
 published: true
-date: 2024 09-28T07:58:11.350Z
+date: 2025-09-16T10:41:28.622Z
 tags:
 editor: markdown
 dateCreated: 2024-27-27T19:19:08.209Z
 ---
 
-# 📸🔄 Btrfs Instantáneas y Rollbacks con Timeshift
+# 1. Introducción
 
-**Introducción**\
-La **función de instantánea** del **sistema de archivos Btrfs** puede utilizarse para realizar instantáneas y rollbacks del sistema. **Timeshift** es una aplicación gráfica fácil de usar que hace este proceso fácil!
+La función de instantánea del sistema de archivos Btrfs se puede utilizar para realizar instantáneas y retrocesos del sistema. Timeshift es una aplicación gráfica fácil de usar que hace este proceso fácil!
 
----
+# 2. Arrancar en instantáneas Timeshift desde GRUB con grub-btrfs
 
-# Arrancar en Snapshots Timeshift desde GRUB con grub-btrfs 🚀
+Cuando está correctamente configurado, `grub-btrfs` le permite arrancar en instantáneas de Timeshift Btrfs directamente desde el menú GRUB, haciendo que los rollbacks del sistema sean fáciles y rápidos.
 
-Cuando está bien configurado, **grub-btrfs** te permite iniciar en **Timeshift** Btrfs instantáneas directamente desde el menú GRUB, haciendo que los rollbacks del sistema sean fáciles y rápidos.
+## 2.1: Instalar grub-btrfs
 
-## Paso 1: Instalar grub-btrfs 📦
+- Para instalar `grub-btrfs` ejecutar:
 
-Para instalar **grub-btrfs**, ejecute:
-
-```bash
+```
 sudo pacman -S grub-btrfs
 ```
 
-Una vez instalado, cada vez que se actualiza el archivo de configuración **GRUB**, se crearán automáticamente entradas de arranque GRUB para las instantáneas de Timeshift Btrfs. Puede actualizar la configuración de GRUB con:
+- Una vez instalado, cada vez que se actualiza el archivo de configuración GRUB, se crearán automáticamente las entradas de arranque GRUB para los snapshots de Timeshift Btrfs. Puede actualizar la configuración de GRUB con:
 
-```bash
+```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## Paso 2: Automatizar actualizaciones de configuración de GRUB ⚙️
+## 2.2: Automatizar actualizaciones de configuración GRUB
 
-Grub-btrfs puede automatizar el proceso de actualización de GRUB cada vez que se crea un nuevo **Snapshot** de Btrfs de Timeshift.
+`grub-btrfs` puede automatizar el proceso de actualización de GRUB cada vez que se crea una nueva instantánea de timeshift Btrfs.
 
-1. Ejecuta el siguiente comando para editar la unidad de ruta grub-btrfs:
-   ```bash
-   sudo systemctl edit --full grub-btrfs.path
-   ```
+- Ejecuta el siguiente comando para editar la unidad de ruta grub-btrfs:
 
-2. Reemplazar el contenido con lo siguiente:
-   ```bash
-   [Unit]
-   Description=Monumentos para nuevas instantáneas
-   DefaultDependencies=no
-   Requires=run-timeshift-backup.mount
-   After=run-timeshift-backup.mount
-   BindsTo=run-timeshift-backup.mount
+  ```
+  sudo systemctl edit --full grub-btrfs.path
+  ```
 
-   [Path]
-   PathModified=/run/timeshift/backup/timeshift-btrfs/snapshots
+- Reemplazar el contenido con lo siguiente:
+  ```
+  [Unit]
+  Description=Monumentos para nuevas instantáneas
+  DefaultDependencies=no
+  Requires=run-timeshift-backup.mount
+  After=run-timeshift-backup.mount
+  BindsTo=run-timeshift-backup.mount
 
-   [Install][Install]
-   WantedBy=run-timeshift-backup.mount
-   ```
+  [Path]
+  PathModified=/run/timeshift/backup/timeshift-btrfs/snapshots
 
-3. Este paso es **reversible** si es necesario, usando:
-   ```bash
-   systemctl revertir grub-btrfs.path
-   ```
+  [Install][Install]
+  WantedBy=run-timeshift-backup.mount
+  ```
 
-## Paso 3: Habilitar actualizaciones GRUB automáticas 🟢
+- Este paso es revertible si es necesario, utilizando:
+  ```
+  sudo systemctl revertir grub-btrfs.path
+  ```
 
-Activar la actualización automática del archivo de configuración GRUB ejecutando:
+## 2.3: Activar Actualizaciones Automáticas GRUB
 
-```bash
+- Activar la actualización automática del archivo de configuración GRUB ejecutando:
+
+```
 sudo systemctl habilita --now grub-btrfs.path
 ```
 
-Puede configurar aún más grub-btrfs editando el archivo ubicado en:
+- Puede configurar más grub-btrfs editando el archivo de configuración:
 
-```bash
-/default/grub-btrfs/config
+```
+sudo nano /default/grub-btrfs/config
 ```
 
 ---
 
-# Instantánea automática del sistema antes de actualizar el paquete con Timeshift-autosnap ⏳
+# 3. Instantánea automática del sistema antes de actualizar el paquete con Timeshift-autosnap
 
-Tal vez quieras instalar **timeshift-autosnap**, que automáticamente crea Snapshots Timeshift antes de realizar cualquier actualización de paquete a través de Pacman. Esto asegura que siempre tenga un **punto de restauración** antes de que se realicen cambios en su sistema. 🛡️
+Es posible que desee instalar `timeshift-autosnap`, que automáticamente crea Snapshots Timeshift antes de realizar cualquier actualización de paquete a través de Pacman. Esto asegura que siempre tenga un punto de restauración antes de que se realicen cambios en su sistema.
 
-## Paso 1: Instalar timeshift-autosnap 📦
+## 3.1: Instalar timeshift-autosnap
 
-Para instalar **timeshift-autosnap**, ejecute:
+- Para instalar `timeshift-autosnap` ejecutar:
 
-```bash
+```
 sudo pacman -S timeshift-autosnap
 ```
 
-## Paso 2: Evitar Duplicar Actualizaciones GRUB ❌🔄
+## 3.2: Prevenir actualizaciones GRUB Duplicadas
 
-Para evitar que GRUB se actualice dos veces cuando una instantánea es creada por timeshift-autosnap, recomiendo modificar el archivo de configuración. Establece `updateGrub` a `false` editando el siguiente archivo:
+Para evitar que GRUB se actualice dos veces cuando una instantánea es creada por timeshift-autosnap, Se recomienda modificar el archivo de configuración.
 
-```bash
+- Establece `updateGrub` a `false` editando el siguiente archivo:
+
+```
 sudo nano, /timeshift-autosnap.conf
 ```
 
-Cambiar la línea:
-
-```bash
-updateGrub=true
-```
-
-Para:
-
-```bash
-updateGrub=false
-```
+Cambia la línea `updateGrub=true` a `updateGrub=false`.
 
 ---
 
-Espero que esta guía te haya ayudado a configurar con éxito **instantáneas del sistema Btrfs** y **rollbacks** con Timeshift! 😊🔧 Tener un sistema de instantáneas robusto puede salvar tu día en caso de que algo vaya mal durante una actualización o cambio del sistema. ¡Feliz información! 🖥️✨
+> Tener un sistema de instantánea robusto puede salvar su día en caso de que algo vaya mal durante una actualización o cambio del sistema.
+> {.is-success}
+
