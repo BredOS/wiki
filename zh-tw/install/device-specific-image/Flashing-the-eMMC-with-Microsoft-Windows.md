@@ -2,7 +2,7 @@
 title: Flashing the eMMC with Microsoft Windows
 description:
 published: false
-date: 2025-09-16T09:55:34.272Z
+date: 2025-09-18T08:59:46.182Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -37,10 +37,10 @@ With the drivers in place we can continue with the use of [RKDevTool](https://do
 
 In `RKDevTool` set the following configuration and click on `RUN`:
 
-- Select the SPI loader file corresponding to your SoC
-- Select the BredOS image (.img) for your SBC
-- Check `Write by Address`
-- Click on `RUN` and wait until the process finishes
+- Select the SPI loader file corresponding to your SoC.
+- Select the BredOS image (.img) for your SBC.
+- Check `Write by Address`.
+- Click on `RUN` and wait until the process finishes.
 
 > We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
 > {.is-warning}
