@@ -2,7 +2,7 @@
 title: Ejecutar máquinas virtuales en BredOS
 description:
 published: true
-date: 2025-09-17T10:43:46.119Z
+date: 2025-09-18T07:58:22.536Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
@@ -104,15 +104,16 @@ virt-manager
 
 - Haz clic en `Finalizar`
 
-Se abre una nueva ventana, que le permite editar la configuración de su máquina virtual antes de crearla. Abre la configuración de las CPUs y luego la pestaña XML
+Se abre una nueva ventana, que le permite editar la configuración de su máquina virtual antes de crearla. Abra la configuración de las CPUs y luego la pestaña XML.
 
-- Localiza `<vcpu>XYZ</vcpu>` y reemplazalo con
+- Localiza `<vcpu>XYZ</vcpu>` y reemplazalo con:
 
 ```xml
 <vcpu placement='static' cpuset='0-1'>2</vcpu>
 ```
 
-> Donde `cpu set` son los núcleos que quieres usar 0-3 son los núcleos E en el rk3588 y 4-7 son los núcleos de rendimiento y el número de núcleos. En el ejemplo de arriba la vm tendrá 2 núms. con ellos es la eficiencia núm. 1 y 2 núm.
+> Donde está `cpu set`, los núcleos que quieras usar son 0-3 (los núcleos E) en el RK3588, o 4-7 para los núcleos de rendimiento.
+> En el ejemplo anterior, la MV tendrá 2 núcleos, que son núcleos de eficiencia (núcleos 1 y 2 sobre el propio muelle).
 > {.is-info}
 
 - Una vez configurado, inicie la máquina virtual.
@@ -130,8 +131,4 @@ virsh start <vm-name>
 virsh shutdown <vm-name>
 ```
 
-# 5. Solución de problemas
-
-- **Problemas de permiso**: Asegúrate de que tu usuario está en el grupo `libvirt` y que el servicio `libvirtd` se está ejecutando.
-- **Problemas de red**: Si las máquinas virtuales no tienen acceso a Internet, asegúrese de que la red `virsh` por defecto está en ejecución.
 
