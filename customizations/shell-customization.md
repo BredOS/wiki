@@ -2,7 +2,7 @@
 title: BredOS Shell Customization Guide
 description: This guide will help you customize your BredOS experience by changing and enhancing your shell!  Whether you prefer Bash, Zsh, Fish, or Nushell, you'll find everything you need right here. Let’s dive in! 🌊
 published: true
-date: 2025-09-16T10:37:25.923Z
+date: 2025-09-18T09:12:59.261Z
 tags: customization, shell
 editor: markdown
 dateCreated: 2024-09-20T19:39:08.509Z
@@ -16,8 +16,6 @@ This guide will help you customize your BredOS experience by changing and enhanc
 # 2. Bash
 > Bash is the default shell in BredOS. 
 {.is-info}
-
-Let’s start with setting it up or making Bash your default shell!
 
 ## 2.1 Install Bash
 - To install Bash, run:
