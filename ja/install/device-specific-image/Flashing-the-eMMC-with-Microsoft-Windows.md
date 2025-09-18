@@ -2,7 +2,7 @@
 title: Microsoft Windows で eMMC の書き込み
 description:
 published: false
-date: 2025-09-16T09:55:34.272Z
+date: 2025-09-18T08:59:46.182Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -37,10 +37,10 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 
 `RKDevTool` で次の設定を行い、`RUN`をクリックします。
 
-- SoCに対応するSPIローダーファイルを選択してください
+- SoCに対応するSPIローダーファイルを選択します。
 - SBCのブレッドOSイメージ (.img) を選択します。
-- 「アドレスで書く」をチェックします。
-- `RUN`をクリックして、プロセスが終了するまで待ちます。
+- `アドレスで書く` にチェックを入れます。
+- `RUN`をクリックして、プロセスが終わるまで待ちます。
 
 > 画像は .xz 圧縮ファイルとして提供します。 書き込みの前に含まれている .img ファイルを抽出する必要があります。
 > {.is-warning}
