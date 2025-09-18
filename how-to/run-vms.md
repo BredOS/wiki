@@ -2,7 +2,7 @@
 title: Run Virtual Machines on BredOS
 description: 
 published: true
-date: 2025-09-17T10:43:46.119Z
+date: 2025-09-18T07:58:22.536Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -98,13 +98,14 @@ virt-manager
 
 - Click `Finish`
 
-A new window opens, allowing you to edit the settings of your virtual machine before creating it.- Open the CPUs configuration and then the XML tab
+A new window opens, allowing you to edit the settings of your virtual machine before creating it. Open the CPUs configuration and then the XML tab.
 
-- Locate `<vcpu>XYZ</vcpu>` and replace it with 
+- Locate `<vcpu>XYZ</vcpu>` and replace it with:
 ```xml
 <vcpu placement='static' cpuset='0-1'>2</vcpu>
 ```
-> Where `cpu set` is the cores you want to use 0-3 are the E cores on the rk3588 and 4-7 are the performance cores and the number of cores. In the example above the vm will have 2 cores with them being efficiency cores aka cores 1 and 2 on the die itself.
+> Where `cpu set` is, the cores you may want to use are 0-3 (the E cores) on the RK3588, or 4-7 for the performance cores. 
+> In the example above, the VM will have 2 cores, which are efficiency cores (cores 1 and 2 on the die itself).
 {.is-info}
 
 - Once configured, start the VM.
@@ -123,8 +124,4 @@ virsh start <vm-name>
 virsh shutdown <vm-name>
 ```
 
-# 6. Troubleshooting
-
-- **Permission Issues**: Ensure your user is in the `libvirt` group and that the `libvirtd` service is running.
-- **Networking Issues**: If VMs don't have internet access, ensure the default `virsh` network is running.
 
