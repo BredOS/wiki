@@ -2,7 +2,7 @@
 title: Use your device as a wireless hotspot
 description: 
 published: true
-date: 2025-09-16T10:50:45.422Z
+date: 2025-09-18T07:15:46.054Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
@@ -31,7 +31,7 @@ You can easily create a hotspot using the NetworkManager command-line tool `nmcl
 ```bash
    nmcli device status
    ```
-- Example output
+- Example output:
 ```
 	DEVICE           TYPE      STATE                   CONNECTION      
 	bridge0          bridge    connected               bridge0         
@@ -57,7 +57,7 @@ You can easily create a hotspot using the NetworkManager command-line tool `nmcl
 	Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wlan0`,  `<MyHotspot>` with your desired SSID and `<mypassword>` with a secure passphrase of your choice.
 
    
-> If you get the following error run the command again with sudo
+> If you get the following error run the command again with sudo.
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
 {.is-info}
 
@@ -69,7 +69,7 @@ You can easily create a hotspot using the NetworkManager command-line tool `nmcl
 ```bash
 nmcli connection show
 ```
-- Example output  
+- Example output:
  ```
  NAME                            UUID                                  TYPE       DEVICE          
  Hotspot                         4d090d70-fd85-45bc-bf36-a63846f3f805  wifi       wlan0           
