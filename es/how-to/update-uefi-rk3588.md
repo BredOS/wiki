@@ -2,7 +2,7 @@
 title: Actualizar UEFI en RK3588
 description: Aprenda cómo actualizar el firmware UEFI en dispositivos basados en RK35888 ejecutando BredOS
 published: true
-date: 2025-09-15T11:14:54.063Z
+date: 2025-09-18T07:50:28.639Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
@@ -66,6 +66,6 @@ Por ejemplo, si estás usando **eMMC storage** en un **Fy.Ub Duo**, el comando s
 sudo dd if=/usr/share/edk2/fydetab-duo/fydetab-duo_UEFI_Release_v0.12.3.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-> ✅ **¡Hecho!** El firmware UEFI de tu dispositivo ha sido actualizado. 🚀\
+> ✅ **¡Hecho!** El firmware UEFI de tu dispositivo ha sido actualizado.
 > {.is-success}
 
