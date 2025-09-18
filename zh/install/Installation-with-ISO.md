@@ -2,7 +2,7 @@
 title: 首次设置 (.iso 图像)
 description:
 published: false
-date: 2025-09-17T14:12:19.482Z
+date: 2025-09-18T08:41:53.939Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -20,7 +20,7 @@ dateCreated: 2025-09-17T11:07:04.117Z
 
 ## 3.1 Welcome
 
-- 只要安装程序尚未完成，面包就会在启动时自动启动。 还有一个桌面快捷键来启动它而不重启。 要开始安装，请选择在线安装或离线安装。 还有一个桌面快捷键来启动它而不重启。 要开始安装，请选择在线安装或离线安装。
+- 面包在启动时自动启动，但也有一个桌面快捷键来启动它而不需要重启。 要开始安装，请选择在线安装或离线安装。
 
 > 正在构建在线安装。 请使用离线安装。
 > {.is-info} 请使用离线安装。
@@ -74,7 +74,7 @@ Select your Region and Zone using the dropdown menus. 您当前的时间应该�
 
 - 由于你可能想要与其他东西分享你的存储，我们现在准备将它分成几个部分。 还是你想用蓝色填满它？ 描述我们将如何选择，但我们尊重你的选择。
 
-![partition.png](/first-setup/partition.png)
+![partition-scaled.png](/first-setup/partition-scaled.png)
 
 选择您想要安装 BredOS 的存储设备。 如果你喜欢将BredOS 安装在整个磁盘上，选择"擦除盘"，然后点击"下一步"。
 
