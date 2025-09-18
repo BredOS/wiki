@@ -41,7 +41,7 @@ local/util-linux-libs 240.2-1
     util-Linux runtime 库
 ```
 
-In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
+在列表中，我们可以看到`linux-rockchip-rkr3`，同时安装了相应的头部。
 要安装另一个内核，请先移除已安装的内核及其头部。
 
 # 2. 管理内核
