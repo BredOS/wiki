@@ -41,7 +41,7 @@ local/util-linux-libs 2.40.2-1
     util-linux runtime libraries
 ```
 
-In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
+リストには `linux-rockchip-rkr3` があり、それに付随するヘッダーがインストールされています。
 別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
 
 # 2. カーネルの管理
