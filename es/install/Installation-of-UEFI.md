@@ -2,7 +2,7 @@
 title: Instalación de UEFI (en RK3588)
 description:
 published: false
-date: 2025-09-17T06:40:43.494Z
+date: 2025-09-18T08:51:38.398Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -11,6 +11,9 @@ dateCreated: 2025-09-16T11:29:43.061Z
 # 1. Introducción
 
 Muchos de nuestros dispositivos soportados ofrecen soporte para `UEFI`, que es una interfaz de firmware moderna que inicializa el hardware e inicia el sistema operativo. Con la ayuda de `UEFI` tu dispositivo es capaz de arrancar. para ficheros (escritos en un USB-Stick o grabados en un DVD) así como para arrancar su sistema operativo directamente desde la unidad nVME o a través de la red vía PXE.
+
+> Múltiples instalaciones de UEFI pueden causar problemas al guardar la configuración de UEFI.
+> {.is-warning}
 
 # 2. Examine su dispositivo
 
@@ -35,7 +38,7 @@ Descargue la última versión que coincida con su dispositivo, inserte una tarje
 ## 3.2 Instalación en SPI
 
 > Si te has saltado 3.1, vuelve hacia atrás. ¡Este paso es necesario para flashear al chip SPI!
-> Puedes quitar la tarjeta SD después de
+> Puedes retirar la tarjeta SD después.
 > {.is-info}
 
 > Este procedimiento no está probado. Si lo has hecho con éxito, por favor informa sobre nuestro canal Discord o Telegram.
@@ -47,7 +50,12 @@ Sigue los pasos abajo para instalar `UEFI` en tu chip SPI.
 - Arranca tu tablero en `UEFI` desde tu tarjeta SD. Si tienes problemas para acceder a la configuración de UEFI, revisa [esta guía] (/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
 - Navega a `Boot Manager` -> `UEFI Shell` para entrar en la interfaz de línea de comandos.
 - Listar todas las particiones legibles con el uso del comando `map`. Este comando lista todas las particiones con el esquema de nombres de `fs0:`, `fs1:`, ...
-- Vaya al USB-Stick que contiene la imagen del firmware tecleando el nombre del sistema de archivos y presione `Enter` para cambiar el directorio a él. Si no está seguro de qué sistema de ficheros usar, ejecute ls fsX: para listar su contenido.
+- Vaya al USB-Stick que contiene la imagen del firmware tecleando el nombre del sistema de archivos y presione `Enter` para cambiar el directorio a él. Si no está seguro de qué sistema de archivos utilizar, ejecute lo siguiente para listar su contenido:
+
+```
+ls fs<your drive number here>: 
+```
+
 - Flash `UEFI` a tu chip SPI con el comando:
 
 ```
