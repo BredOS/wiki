@@ -2,7 +2,7 @@
 title: Setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2025-09-18T07:06:26.359Z
+date: 2025-09-18T07:07:37.654Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -14,7 +14,7 @@ This guide walks you through the steps to enable Panthor and Vulkan on Mali GPUs
 
 # 2. Enable the Panthor DTBO
 ## 2.1 Automatically
-- The bredos-config tool offers a simple way to enable and disable dtbos. Start the tool with
+- The bredos-config tool offers a simple way to enable and disable dtbos. Start the tool with:
 ```
 sudo bredos-config
 ```
