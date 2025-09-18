@@ -2,7 +2,7 @@
 title: 使用 Linux 或 macOS 刷入 eMMC
 description:
 published: false
-date: 2025-09-16T06:29:26.865Z
+date: 2025-09-18T08:57:18.967Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -79,13 +79,13 @@ make -j $(nproc)
 ls | grep rkdeveloping 工具
 ```
 
-- 应该输出
+- 这项工作应产生：
 
 ```
 rkdeveloped 工具
 ```
 
-### 2.2.4 使其运行
+### 2.2.4 使其可执行
 
 - 最后复制它到`opt`文件夹，然后从任何地方运行它：
 
