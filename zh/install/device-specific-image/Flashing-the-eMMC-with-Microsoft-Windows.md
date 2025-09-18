@@ -2,7 +2,7 @@
 title: 使用 Microsoft Windows 刷入 eMMC
 description:
 published: false
-date: 2025-09-16T09:55:34.272Z
+date: 2025-09-18T08:59:46.182Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -37,10 +37,10 @@ dateCreated: 2025-09-16T09:55:34.272Z
 
 在 `RKDevTool` 中，设置了以下配置并点击`RUN`：
 
-- 选择与您的 SoC 对应的 SPI 加载文件
-- 为您的 SBC 选择 BredOS 图像 (.img)
-- 勾选 "Write by Address"
-- 点击 `RUN`，等待进程完成
+- 选择与您的 SoC 对应的 SPI 加载器文件。
+- 为您的 SBC 选择 BredOS 图像 (.img)。
+- 检查“由地址写入”。
+- 点击`RUN`，等待进程完成。
 
 > 我们以压缩文件提供我们的图像。 您需要在刷入之前提取包含.img的文件！
 > {.is-warning}
