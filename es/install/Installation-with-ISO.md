@@ -2,7 +2,7 @@
 title: Primera configuración (imagen .is)
 description:
 published: false
-date: 2025-09-17T14:12:19.482Z
+date: 2025-09-18T08:41:53.939Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -20,7 +20,7 @@ Después de descargar el . así que el archivo de nuestra [página de Github](ht
 
 ## 3.1 Bienvenida al calor
 
-- La panadería se inicia automáticamente al arrancar mientras no se haya completado. Además, hay un enlace de escritorio para iniciarlo sin reiniciarlo. Para iniciar la elección de configuración entre instalación online o offline.
+- La panadería se inicia automáticamente al arrancar, pero también hay un acceso directo de escritorio para lanzarlo sin reiniciarlo. Para iniciar la elección de configuración entre instalación online o offline.
 
 > La instalación en línea está en construcción en este momento. Por favor, utilice la instalación sin conexión.
 > {.is-info}
@@ -70,7 +70,7 @@ Si desea saltar la pantalla de inicio de sesión de LightDM e iniciar sesión en
 
 - Como tal vez quieras compartir tu almacenamiento con otras cosas, ahora preparamos dividirlo en partes. ¿O quieres llenarlo todo con Bred? Así es como elegimos, pero respetamos su elección de cualquier manera.
 
-![partition.png](/first-setup/partition.png)
+![partition-scaled.png](/first-setup/partition-scaled.png)
 
 Seleccione el dispositivo de almacenamiento donde desea instalar BredOS. Si prefiere que BredOS se instale en todo el disco, seleccione "Borrar disco" y haga clic en "Siguiente".
 
