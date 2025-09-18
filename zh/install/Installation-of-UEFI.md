@@ -2,7 +2,7 @@
 title: 安装UEFI(RK3588)
 description:
 published: false
-date: 2025-09-17T06:40:43.494Z
+date: 2025-09-18T08:51:38.398Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -11,6 +11,9 @@ dateCreated: 2025-09-16T11:29:43.061Z
 # 1. 简介
 
 我们支持的许多设备确实为“UEFI”提供支持，这是一个启动硬件并启动操作系统的现代固件接口。 在`UEFI`的帮助下，您的设备能够启动 。 这样文件 (写入 USB-Stick 或烧毁到 DVD) 以及直接从 nVME 驱动器或通过 PXE 在网络上启动您的操作系统。
+
+> UEFI 的多个安装在保存您的 UEFI 设置时可能造成问题。
+> {.is-warning}
 
 # 2. 检查您的设备
 
@@ -35,7 +38,7 @@ dateCreated: 2025-09-16T11:29:43.061Z
 ## 3.2 安装SPI设备
 
 > 如果您跳过了3.1，请回来。 需要这个步骤来刷入SPI芯片！
-> You can remove the SD Card afterwards
+> 您可以在此后移除SD卡。
 > {.is-info}
 
 > 这一程序尚未经过测试。 如果您成功完成了这项工作，请在我们的 Discord 或 Telegram 频道上汇报。
@@ -47,7 +50,12 @@ dateCreated: 2025-09-16T11:29:43.061Z
 - 从你的SD卡上启动你的棋盘到`UEFI`。 如果您在访问 UEFI 设置时遇到问题，请检查 [本指南] (/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu)。
 - 浏览至`Boot Manager` -> `UEFI Shell` 以进入命令行接口。
 - 列出使用`map`命令的所有可读分区。 此命令列出所有分区与 fs0:`, fs1:`...
-- 输入文件系统名称并按 `Enter` 键将目录更改为包含固件图像的 USB-Stick 。 如果您不确定要使用哪个文件系统，请运行 fsX：列出其内容。
+- 输入文件系统名称并按 `Enter` 键将目录更改为包含固件图像的 USB-Stick 。 如果您不确定要使用哪个文件系统，请运行以下列出其内容：
+
+```
+ls fs<your drive number here>: 
+```
+
 - 用命令刷入 `UEFI` 到 SPI 芯片：
 
 ```
