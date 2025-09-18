@@ -2,7 +2,7 @@
 title: First Setup (.iso image)
 description:
 published: false
-date: 2025-09-17T14:12:19.482Z
+date: 2025-09-18T08:41:53.939Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -20,7 +20,7 @@ After you downloaded the .iso file from our [Github page](https://github.com/Bre
 
 ## 3.1 Warm Welcome
 
-- Bakery does start automatically on boot as long it hasnt been completed. Also, there is an Desktop Link to start it without rebooting. To start the setup choice between online or offline installation.
+- Bakery starts automatically on boot, but there's also a desktop shortcut to launch it without rebooting. To start the setup choice between online or offline installation.
 
 > Online Installation is under construction right now. Please use offline install.
 > {.is-info}
@@ -68,9 +68,9 @@ If you want to skip the LightDM login screen and log in to your system without a
 
 ## 3.6 Sharing is caring
 
-- As you may want to share your storage with other things, we now prepare spliting it in parts. Or do you want to fill it all up with Bred? Thats how we would choose but we respect your choice either way.
+- As you may want to share your storage with other things, we now prepare spliting it in parts. Or do you want to fill it all up with Bred? Thats how we would choose, but we respect your choice either way.
 
-![partition.png](/first-setup/partition.png)
+![partition-scaled.png](/first-setup/partition-scaled.png)
 
 Select the storage device where you wish to install BredOS. If you prefer BredOS to be installed on the entire disk, choose "Erase Disk" and then click "Next."
 
