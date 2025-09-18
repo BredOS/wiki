@@ -2,7 +2,7 @@
 title: UEFIをRK3588で更新
 description: BredOSを実行しているRK3588ベースのデバイスでUEFIファームウェアをアップデートする方法を学ぶ
 published: true
-date: 2025-09-15T11:14:54.063Z
+date: 2025-09-18T07:50:28.639Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
@@ -65,6 +65,6 @@ sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img 
 sudo dd if=/usr/share/edk2/fydetab-duo/fydetab-duo_UEFI_Release_v0.12.3.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-> ✅ **完了！** デバイスの UEFI ファームウェアが更新されました。 🚀 🚀\
+> ✅ **完了！** デバイスの UEFI ファームウェアが更新されました。 🚀
 > {.is-success}
 
