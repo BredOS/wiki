@@ -2,7 +2,7 @@
 title: Setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2025-09-16T10:49:06.107Z
+date: 2025-09-18T07:06:26.359Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -38,7 +38,7 @@ Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable
 {.is-warning}
 
 
-## 3. Replace Panfork graphics
+# 3. Replace Panfork graphics
 
 - Replace the `mesa-panfork-git` package with the standard `mesa` package:
 
@@ -46,14 +46,14 @@ Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable
 sudo pacman -S mesa
 ```
 
-## 4. Enable Vulkan
+# 4. Enable Vulkan
 
 - Install the vulkan loader and driver:
 ```
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-## 5. Reboot Your System 
+# 5. Reboot Your System 
 - Reboot your System to apply the changes. If you want to validate if your graphics, you can do run the following:
 ```
 sudo pacman -S inxi mesa-utils
