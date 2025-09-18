@@ -2,7 +2,7 @@
 title: パッケージマネージャーガイド
 description: BredOS パッケージマネージャーガイドへようこそ! ここでは、アプリケーションのインストールと管理方法を学びます。
 published: true
-date: 2025-09-15T09:53:59.847Z
+date: 2025-09-18T07:23:26.529Z
 tags:
 editor: markdown
 dateCreated: 2024-09-20T20:08:39.778Z
@@ -95,7 +95,8 @@ sudo pacman -S flatpak
 ### 3.2.1 Webブラウザ経由でアプリをインストールする
 
 - [Flathub](https://flathub.org) に移動し、必要なアプリを見つけて、インストールをクリックします。
-- ターミナル内のコマンドをコピーしてインストールを完了します。
+
+![flathub-install-button.png](/how-tos/flathub-install-button.png)
 
 ### 3.2.2 ターミナル経由でアプリをインストールする
 
