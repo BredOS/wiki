@@ -2,7 +2,7 @@
 title: Guía de gestores de paquetes
 description: Bienvenido a la guía de Administradores de Paquetes BredOS! Aquí aprenderá cómo instalar y administrar aplicaciones
 published: true
-date: 2025-09-15T09:53:59.847Z
+date: 2025-09-18T07:23:26.529Z
 tags:
 editor: markdown
 dateCreated: 20/09-20T20:08:39.778Z
@@ -95,7 +95,8 @@ sudo pacman -S flatpak
 ### 3.2.1 Instalar una aplicación mediante el navegador web
 
 - Vaya a [Flathub](https://flathub.org), encuentre la aplicación que desee y haga clic en instalar.
-- Copie el comando en el terminal para completar la instalación.
+
+![flathub-install-button.png](/how-tos/flathub-install-button.png)
 
 ### 3.2.2 Instalar una aplicación mediante Terminal
 
