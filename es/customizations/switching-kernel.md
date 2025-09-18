@@ -2,7 +2,7 @@
 title: Kernel cambiante
 description:
 published: true
-date: 2025-09-16T10:40:30.464Z
+date: 2025-09-18T09:33:26.800Z
 tags:
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
@@ -39,7 +39,7 @@ local/util-linux-libs 2.40.2-1
     librerías util-linux runtime
 ```
 
-En la lista podemos ver linux-rockchip-rkr3 y las cabeceras que lo acompañan están instaladas.
+In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
 Para instalar un núcleo diferente, primero retire el núcleo instalado, junto con sus cabezas.
 
 # 2. Manejo de núcleos
@@ -132,8 +132,6 @@ El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3
 
 ### 2.3.1 Arranque U
 
-**Esto sólo se aplica a dispositivos que no arranquen con una UEFI, si tienes UEFI en tu placa, salta a esa sección.**
-
 - Editar `/boot/extlinux/extlinux.conf`:
 
 ```
@@ -167,8 +165,6 @@ vmlinuz-linux-rockchip-rkr3
 ```
 
 ### 2.3.2 UEFI
-
-**Esta sección sólo se aplica a los dispositivos que arranquen con UEFI. Si en su lugar usas Arranque U, salta a la sección anterior.**
 
 - Ejecuta lo siguiente para regenerar el grub.cfg:
 
