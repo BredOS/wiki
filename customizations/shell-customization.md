@@ -1,8 +1,8 @@
 ---
 title: BredOS Shell Customization Guide
-description: This guide will help you customize your BredOS experience by changing and enhancing your shell!  Whether you prefer Bash, Zsh, Fish, or Nushell, you'll find everything you need right here. Let’s dive in! 🌊
+description: This guide will help you customize your BredOS experience by changing and enhancing your shell!  
 published: true
-date: 2025-09-18T09:12:59.261Z
+date: 2025-09-18T09:28:01.801Z
 tags: customization, shell
 editor: markdown
 dateCreated: 2024-09-20T19:39:08.509Z
