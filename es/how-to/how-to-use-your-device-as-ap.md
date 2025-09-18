@@ -2,7 +2,7 @@
 title: Usa tu dispositivo como punto de acceso inalámbrico
 description:
 published: true
-date: 2025-09-16T10:50:45.422Z
+date: 2025-09-18T07:15:46.054Z
 tags:
 editor: markdown
 dateCreated: 2024/09-08T10:33:46.772Z
@@ -33,7 +33,7 @@ Puede crear fácilmente un punto de acceso utilizando la herramienta de línea d
    estado del dispositivo nmcli
 ```
 
-- Ejemplo salida
+- Ejemplo:
 
 ```
 	DEVICE TYPE STATE CONNECTION      
@@ -65,8 +65,9 @@ Puede crear fácilmente un punto de acceso utilizando la herramienta de línea d
 Reemplaza `<wifi_interface>` con tu nombre real de interfaz, como `wlp2s0` o `wlan0`, `<MyHotspot>` con tu SSID deseado y `<mypassword>` con una contraseña segura de tu elección.
 ```
 
-> Si obtiene el siguiente error, ejecute de nuevo el comando con sudo
-> \\\\\`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
+> Si obtiene el siguiente error, ejecute el comando de nuevo con sudo.
+> `Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.`
+> {.is-info}
 
 ## 3.2 Ver el estado del punto de acceso rápido
 
@@ -76,7 +77,7 @@ Reemplaza `<wifi_interface>` con tu nombre real de interfaz, como `wlp2s0` o `wl
 serie de conexión nmcli
 ```
 
-- Ejemplo salida
+- Ejemplo:
 
 ```
 NAME                            UUID                                  TYPE       DEVICE          
