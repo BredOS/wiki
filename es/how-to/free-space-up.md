@@ -2,7 +2,7 @@
 title: Guía de limpieza del espacio en disco
 description: Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS.
 published: true
-date: 2025-09-16T10:42:55.802Z
+date: 2025-09-18T07:38:26.515Z
 tags:
 editor: markdown
 dateCreated: 2024-20T20:26:57.698Z
@@ -34,7 +34,7 @@ sudo pacman -Sc
 
 ## 2.3 Limpieza automática con dolor de Pacc
 
-También puedes usar `paccache` para mantener sólo las 3 versiones más recientes de cada paquete:
+También puedes usar `paccache` para mantener sólo las 3 versiones más recientes de cada paquete.
 
 - Instalar la herramienta necesaria:
 
