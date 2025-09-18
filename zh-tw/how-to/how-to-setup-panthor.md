@@ -2,7 +2,7 @@
 title: Setup Panthor on Mali GPUs with RK3588
 description:
 published: true
-date: 2025-09-16T10:49:06.107Z
+date: 2025-09-18T07:07:37.654Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -16,7 +16,7 @@ This guide walks you through the steps to enable Panthor on Mali GPUs present in
 
 ## 2.1 Automatically
 
-- The bredos-config tool offers a simple way to enable and disable dtbos. Start the tool with
+- The bredos-config tool offers a simple way to enable and disable dtbos. Start the tool with:
 
 ```
 sudo bredos-config
@@ -43,7 +43,7 @@ Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable
 > Continue with `3. Replace Panfork graphics`.
 > {.is-warning}
 
-## 3. Replace Panfork graphics
+# 3. Replace Panfork graphics
 
 - Replace the `mesa-panfork-git` package with the standard `mesa` package:
 
@@ -51,7 +51,7 @@ Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable
 sudo pacman -S mesa
 ```
 
-## 4. Reboot Your System
+# 4. Reboot Your System
 
 - Install the vulkan loader and driver:
 
@@ -59,7 +59,7 @@ sudo pacman -S mesa
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-## 5. Reboot Your System
+# 5. Reboot Your System
 
 - Reboot your System to apply the changes. If you want to validate if your graphics, you can do run the following:
 
