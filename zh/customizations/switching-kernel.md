@@ -2,7 +2,7 @@
 title: 切换内核中
 description:
 published: true
-date: 2025-09-16T10：40.464Z
+date: 2025-09-18T09:33:26.800Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15：50：46.861Z
@@ -41,8 +41,7 @@ local/util-linux-libs 240.2-1
     util-Linux runtime 库
 ```
 
-在列表中，我们可以看到linux-rockchip-rkr3和配对的头已安装。
-要安装另一个内核，请先移除已安装的内核及其头部。
+In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
 要安装另一个内核，请先移除已安装的内核及其头部。
 
 # 2. 管理内核
@@ -135,8 +134,6 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 
 ### 2.3.1 U-启动
 
-**这只适用于不使用 UEFI 启动的设备，如果您的棋盘上有UEFI，请跳至该节。**
-
 - 编辑 `/boot/extlinux/extlinux.conf`:
 
 ```
@@ -172,8 +169,6 @@ vmlinuz-linux-rockchip-rkr3
 ```
 
 ### 2.3.2 UEFI
-
-**本节仅适用于使用 UEFI 启动的设备。 如果您使用 U-Boot，请跳转到以上部分。** 如果您使用 U-Boot，请跳转到以上部分。\*\*
 
 - 运行以下以重新生成 grub.cfg：
 
