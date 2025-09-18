@@ -2,7 +2,7 @@
 title: Mri GPUでRK3588をセットアップする
 description:
 published: true
-date: 2025-09-16T10:49:06.107Z
+date: 2025-09-18T07:07:37.654Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -16,7 +16,7 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ## 自動的に2.1
 
-- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する
+- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する Start the tool with:
 
 ```
 sudo bredos-config
@@ -43,7 +43,7 @@ bredos-config は dtbs をインストールして grub 設定を変更するこ
 > \`3で続行します。 Panfork グラフィックスを置き換えます。
 > {.is-warning}
 
-## 3. Panfork グラフィックスを置き換え
+# 3. Panfork グラフィックスを置き換え
 
 - `mesa-panfork-git` パッケージを標準の `mesa` パッケージに置き換えます。
 
@@ -51,7 +51,7 @@ bredos-config は dtbs をインストールして grub 設定を変更するこ
 sudo pacman -S mesa
 ```
 
-## 4. システムを再起動
+# 4. システムを再起動
 
 - vulkanローダーとドライバーをインストールします:
 
@@ -59,7 +59,7 @@ sudo pacman -S mesa
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-## 5. システムを再起動
+# 5. システムを再起動
 
 - システムを再起動して変更を適用します。 グラフィックを検証したい場合は、以下を実行できます。
 
