@@ -2,7 +2,7 @@
 title: Bluetooth Fix (ITX-3588J)
 description:
 published: true
-date: 2025-09-17T08:30:12.200Z
+date: 2025-09-18T09:42:49.964Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -18,7 +18,7 @@ dateCreated: 2025-09-14T11:10:38.109Z
 sudo pacman -R itx-3588j-post-install
 ```
 
-- その後、 `r58x-post-install` をインストールします。 このパッケージは、上記のスタンバイのために同じ修正を提供し、サービスbluetooth-mekotronicsを含みます。
+- その後、 `r58x-post-install` をインストールします。 このパッケージは前述のスタンバイに対して同じ修正を提供し、`bluetooth-mekotronics` サービスを含んでいます。
 
 ```
 sudo pacman -S r58x-post-install
@@ -28,7 +28,7 @@ sudo pacman -S r58x-post-install
 
 Bluetooth アダプターは `/dev/ttyS9` に接続されていません (他の RK3588 シングルボードコンピュータと同じです)、`/dev/ttyS6` に接続されています。
 
-- /usr/bin/bluetooth-fixのパスを変更する必要があります。
+- `/usr/bin/bluetooth-fix` のパスを変更する必要があります。
 
 ```
 sudo nano /usr/bin/bluetooth-fix
@@ -57,7 +57,7 @@ brcm_patchram_plus --enable_hci -no2bytes --use_baudrate_for_download --tosleep 
 
 # 3. Bluetooth サービスを有効にする
 
-- 最後に `bluetooth-mekotronics` サービスを有効にする必要があります
+- 最後に `bluetooth-mekotronics` サービスを有効にする必要があります。
 
 ```
 sudo systemctl --now enable bluetooth-mekotronics
