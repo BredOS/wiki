@@ -2,7 +2,7 @@
 title: Configurar Panthor en Mali GPUs con RK3588
 description:
 published: true
-date: 2025-09-16T10:49:06.107Z
+date: 2025-09-18T07:07:37.654Z
 tags:
 editor: markdown
 dateCreated: 2024-31T15:03:26.994Z
@@ -16,7 +16,7 @@ Esta guía le guiará a través de los pasos para permitir a Panthor on Mali GPU
 
 ## 2.1 Automáticamente
 
-- La herramienta bredos-config ofrece una forma sencilla de activar y desactivar dtbos. Iniciar la herramienta con
+- La herramienta bredos-config ofrece una forma sencilla de activar y desactivar dtbos. Start the tool with:
 
 ```
 sudo bredos-config
@@ -43,7 +43,7 @@ Sigue la [Guía de la capa del árbol del dispositivo](/how-to/how-to-enable-dtb
 > Continuar con \`3. Reemplace los gráficos de Panfork.
 > {.is-warning}
 
-## 3. Reemplazar gráficos de Panfork
+# 3. Reemplazar gráficos de Panfork
 
 - Reemplaza el paquete `mesa-panfork-git` con el paquete estándar `mesa`:
 
@@ -51,7 +51,7 @@ Sigue la [Guía de la capa del árbol del dispositivo](/how-to/how-to-enable-dtb
 sudo pacman -S mesa
 ```
 
-## 4. Reiniciar su sistema
+# 4. Reiniciar su sistema
 
 - Instalar el cargador y controlador vulkan:
 
@@ -59,7 +59,7 @@ sudo pacman -S mesa
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-## 5. Reiniciar su sistema
+# 5. Reiniciar su sistema
 
 - Reiniciar el sistema para aplicar los cambios. Si quieres validar si tus gráficos, puedes ejecutar lo siguiente:
 
