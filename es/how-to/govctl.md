@@ -2,7 +2,7 @@
 title: Configurando Gobernadores
 description: Usando govctl para administrar los gobernadores del sistema
 published: true
-date: 2025-09-15T09:02:10.135Z
+date: 2025-09-18T08:06:33.318Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.03Z
@@ -10,10 +10,10 @@ dateCreated: 2025-05-07T12:47:49.03Z
 
 # 1. Introducción
 
-BredOS envía por defecto la herramienta `govctl` en el paquete `bredos-govctl`.
+BredOS envía por defecto la herramienta `govctl` con el paquete `bredos-govctl`.
 Está habilitado por defecto y ajustará el rendimiento de acuerdo a la potencia de la batería disponible.
 
-- Esto debe ser instalado por defecto. Si no, instálalo con
+- Si no está instalado, instálalo con:
 
 ```
 sudo pacman -S bredos-govctl
@@ -33,9 +33,10 @@ GovCtl asegurará por defecto el máximo rendimiento en todos los dispositivos c
 
 Si el sistema mantiene la carga suficiente, pero no está conectado, mantendrá la mayor parte del rendimiento, limitando la velocidad de la GPU y el impulso de la CPU.
 
-Si el sistema no tiene un cargo suficiente (20% es el punto por defecto en el que se determina esto),
-el sistema minimizará el consumo de corriente, en detrimento del rendimiento y del tiempo de respuesta.
-Esto por ejemplo hará que los tableros RK3588 sólo funcionen a 300mHz.
+Si el sistema no tiene un cargo suficiente (20% es el umbral por defecto para esta determinación), minimizará el consumo de energía, a expensas del rendimiento y del tiempo de respuesta.
+
+> Esto por ejemplo hará que los tableros RK3588 sólo funcionen a 300mHz.
+> {.is-info}
 
 Si no le gustan los valores predeterminados, todos pueden ser cambiados.
 
@@ -108,7 +109,7 @@ rendimiento sudo govctl -b
 sudo govctl -d
 ```
 
-Se asegurará de que en todo momento el gobernador "conectado" se aplique en todo momento.
+Esto asegurará que el gobernador "conectado" se aplique en todo momento.
 
 - Para deshacer esto, ejecutar:
 
