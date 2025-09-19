@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description:
 published: true
-date: 2025-09-17T06:45:12.828Z
+date: 2025-09-19T05:01:28.982Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -66,7 +66,7 @@ There should be an unpopulated board and a ZIF Socket as part of the pack. Choos
 - First you need to install flashrom.
 
 ```
-# sudo pacman -S flashrom
+sudo pacman -S flashrom
 ```
 
 > Ensure that your flasher is set to 3.3 volts!
@@ -78,7 +78,10 @@ Then, connect the flasher to your Linux device and run the following command.
 - If it reports the SPI chip name mentioned above, you're good to go.
 
 ```
-# sudo flashrom -p ch341a_spi --flash-name
+sudo flashrom -p ch341a_spi --flash-name
+```
+
+```
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
 flashrom is free software, get the source code at https://flashrom.org
 
@@ -98,14 +101,14 @@ If anything goes wrong, you'll be able to restore it using this backup.
 - Dump the flash with the following command:
 
 ```
-# sudo flashrom -p ch341a_spi -r firmware_dump.bin
+sudo flashrom -p ch341a_spi -r firmware_dump.bin
 ```
 
 - Then, dump it again and compare the two files to ensure the data was transferred correctly.
 
 ```
-# sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
-# diff firmware_dump.bin firmware_dump-1.bin
+sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
+diff firmware_dump.bin firmware_dump-1.bin
 ```
 
 If "diff" produces no output, you're good to go.
@@ -116,7 +119,10 @@ If it does, check the connection of your clip or inspect your soldering work, an
 - As simple as the title suggests:
 
 ```
-# sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
+sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
+```
+
+```
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
 flashrom is free software, get the source code at https://flashrom.org
 
