@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description: 
 published: false
-date: 2025-09-19T05:32:00.185Z
+date: 2025-09-19T05:32:10.029Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -89,6 +89,7 @@ dd if=/dev/zero bs=1 count=$((8388608 - <your file size here>)) >> ./cix_flash_a
 The SPI chip on the Prion is socketed for easy removal. The socket is located between the CPU fan header and the GPIO port. To easily locate the chip refer to the documentation by Radxa [found here](https://radxa.com/orion/o6/marked_orion_o6.webp).
 
 - The socket features two latches that must be opened before removing the chip. 
+
 ![prion-spi-loaction-cut.png](/orion/prion-spi-loaction-cut.png)
 
 
