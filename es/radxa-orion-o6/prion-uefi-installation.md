@@ -2,7 +2,7 @@
 title: Actualizando UEFI en Orion O6
 description:
 published: false
-date: 2025-09-17T08:26:12.669Z
+date: 2025-09-19T05:32:10.029Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -103,11 +103,18 @@ dd if=/dev/zero bs=1 count=$((8388608 - <your file size here>)) >> ./cix_flash_a
 
 El chip SPI en el Prion está empapado para una fácil eliminación. El socket se encuentra entre la cabecera del ventilador de CPU y el puerto GPIO. Para localizar fácilmente el chip, consulte la documentación de Radxa [encontrada aquí](https://radxa.com/orion/o6/marked_orion_o6.webp).
 
+- El socket tiene dos lazas que deben ser abiertas antes de quitar el chip.
+
+![prion-spi-loaction-cut.png](/orion/prion-spi-loaction-cut.png)
+
 - Retire la ficha SPI de la Prión.
-- Conecte la placa ZIF a su parpadeo.
+- Conecte el adaptador de 1.8 voltios a su flash.
+- Conecte la placa ZIF al adaptador de voltios 1.8.
 - Pin 1 está marcado con un punto en la ficha. Mientras que el puerto USB del flasheador se dirige hacia usted, el pin 1 está en el lado superior izquierdo. Refiérase a la captura de pantalla de abajo para obtener la orientación correcta:
 
-![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
+![1-8v-zif-socket-cut.jpg](/orion/1-8v-zif-socket-cut.jpg)
+
+- Inserte el chip en el conector ZIF.
 
 ### 3.3.3 Flash nuevo Firmware
 
