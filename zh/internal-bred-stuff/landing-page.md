@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description:
 published: false
-date: 2025-09-19T15：05：44.345Z
+date: 2025-09-19T16:01:196Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15：05：44.344Z
@@ -14,31 +14,44 @@ dateCreated: 2025-09-19T15：05：44.344Z
 
 # 2. BredOS
 
-At BredOS, we cherish the concept of using basic ingredients—selected with love and passion—to craft a simple yet versatile product that you can customize to your taste. Served plain, it has the potential to transform into whatever you desire. Whether sweet or salty, light or dark, big enough to enjoy it with your family or small enough to carry it around your adventures.
+在BredOS, 我们珍视使用基本成分——用爱情和热情选择——来制作一种你可以根据你的品味定制的简单但多用途的产品。 它服务于平原，有可能变成你们所希望的一切。 无论是甜美还是美丽，光明还是黑暗，大到足以与你的家人一起享受它，或小到足以带着你的冒险感冒险。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
 # 3. 功能
 
-- Made with passion - just for your enjoyment!
-- User support with great respect! No matter if you are a crumb or a flatbread!
-- Simple and plain by design! No bloat, ensuring a lightweight and responsive system!
-- Arch-based - with customization tailored for your enjoyment.
-- User-friendly interfaces where they are needed!
+- 充满热情地制作-仅仅是为了你的愉快！
+- 尊敬的用户支持！ 无论你是粉碎或面包！
+- 设计简单明了！ 没有博客，确保一个轻量和响应系统！
+- 基于Archy - 根据您的喜好自定义.
+- 用户友好接口需要它们！
 
 # 4. 系统要求
 
-We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/en/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/en/table-of-supported-devices).
+我们支持一系列广泛的设备——从振奋人心的ARM系统和实验性RISC-V安装到普通的lame x86整数/amd 板上。 我们已经覆盖了您，您是否使用了我们的 [主线。 如此安装](/en/install/Installation-with-ISO) 或指向我们[支持的设备表](/en/table-of-supported-devices) 上我们热切支持的设备列表。
 
-## 4.1 Minimal System Requirements
+## 4.1 最低限度的系统要求
 
-- Minimum RAM: 2 GB
-- Storage: 8 GB microSD card or larger
+- 最小内存: 2 GB
+- 存储︰ 8 GB microSD card/eMMC/nVME 或大于
 
-# 5. Installation
+# 5. 安装
 
-To make installation easy for you, we laid out a line of bred crumbs to follow. 🍞 🔸🔸🔸
+为了便于您安装，我们为您铺设了一条线路，让您跟随。 🍞 🔸🔸🔸
 
-## 5.1 Device specific image installation
+> 如果你发现面包裹破损：small_orange_diamond：在我们的社区频道上让我们头部跳过。
+> {.is-info}
 
-These are the boards we love the most. To install BredOS on them, either start with our [device specific image](/en/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which found in the navigation bar left of this.
+## 5.1 设备特定图像安装
+
+这是我们最喜欢的看板。 要在它们上安装 BredOS ，要么从我们的 [设备特定图像](/en/install/device-specific-image) 安装指南开始， 或者在我们wiki的设备页面上看一下这个页面的导航栏。
+
+## 5.2 通用安装
+
+## 5.3 码头集装箱安装
+
+- 简易作为一行命令：
+
+```
+停靠拉入面包/bredos
+```
