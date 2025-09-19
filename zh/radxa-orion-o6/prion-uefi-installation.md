@@ -2,7 +2,7 @@
 title: 更新Orion O6上的 UEFI
 description:
 published: false
-date: 2025-09-17T08:26:12.669Z
+date: 2025-09-19T05:32:10.029Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -103,11 +103,18 @@ dd if=/dev/n0 bs=1 count=$(8388608- <your file size here>)) >> ./cix_flash_all.b
 
 Prion上的 SPI 芯片被套接以便轻松移除。 套接字位于CPU粉丝头和 GPIO 端口。 要轻松定位芯片，请参阅Radxa [在这里找到](https://radxa.com/orion/o6/marked_orion_o6.webp)的文档。
 
+- 套接字具有两层，必须先打开，然后才能移除芯片。
+
+![prion-spi-loaction-cut.png](/orion/prion-spi-loaction-cut.png)
+
 - 从 Prion 中移除SPI 芯片。
-- 将 ZIF 面板连接到您的手电筒。
+- 将 1.8 Volt 适配器连接到您的烧录器。
+- 将 ZIF 板连接到 1.8 Volt 适配器。
 - Pin 1用芯片上的一个点标记。 当面对你的 USB 端口时，引脚的 1 在左上侧。 请参阅下面的屏幕截图以使方向正确：
 
-![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
+![1-8v-zif-socket-cut.jpg](/orion/1-8v-zif-socket-cut.jpg)
+
+- 将芯片插入ZIF连接器。
 
 ### 3.3.3 Flash new 固件
 
