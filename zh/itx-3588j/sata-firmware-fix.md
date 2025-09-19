@@ -2,7 +2,7 @@
 title: Sata固件修复
 description:
 published: true
-date: 2025-09-17T06:45:12.828Z
+date: 2025-09-19T05:01:28.982Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09：18：06.486Z
@@ -68,7 +68,7 @@ https://www.aliexpress.com/item/3226327388.html
 - 首先你需要安装 flashrom。
 
 ```
-# sudo pacman -S flashrom
+sudo pacman -S flashrom
 ```
 
 > 确保你的火焰被设置为3.3伏！
@@ -82,12 +82,15 @@ https://www.aliexpress.com/item/3226327388.html
 - 如果它报告了上述SPI芯片的名字，你很乐意去做。
 
 ```
-# sudo flashrom -p ch341a_spi --flash-name
-flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) 在 Linux 6.15.7-1-BredOS (x86_64)
-flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
+sudo flashrom -p ch341a_spi --flash-name
+```
 
-使用 clock_gettime 来处理延迟循环 (clk_id: 1, resolution 1ns).
-在 ch341a_spi 上发现Winbonds flash chip "W25X40" (512 kB, SPI)
+```
+flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) 在 Linux 6.15.7-1-BredOS (x86_64)
+flashrom 是免费软件，获得源代码在 https://flashrom。 rg
+
+在延迟循环中使用时钟时间(clk_id：1，分辨率：1ns).
+在ch341a_spi上找到Winblel flash chip "W25X40" (512 kB，SPI)。
 ```
 
 如果没有，请检查素材的连接或检查您的嵌入工作，并验证所有连接器的方向。
@@ -103,14 +106,14 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 - 用以下命令转储闪存：
 
 ```
-# sudo flashrom -p ch341a_spi -r firmware_dump.bin
+sudo flashrom -p ch341a_spi -r firmware_dump.bin
 ```
 
 - 然后再次转储它并比较两个文件，以确保正确传输数据。
 
 ```
-# sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
-# diff firmware_dump.bin firmware_dump-1.bin
+sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
+diff firmware_dump.bin firmware_dump-1.bin
 ```
 
 如果“diff”不产生输出, 你就好了。
@@ -122,7 +125,10 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 - 正如标题所表明的那样简单：
 
 ```
-# sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
+sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
+```
+
+```
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
 flashrom is free software, get the source code at https://flashrom.org
 
