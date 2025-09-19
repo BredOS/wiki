@@ -2,7 +2,7 @@
 title: Sata ファームウェアの修正
 description:
 published: true
-date: 2025-09-17T06:45:12.828Z
+date: 2025-09-19T05:01:28.982Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -70,7 +70,7 @@ SPIチップに接続する最も簡単な方法は、クリップを使用す�
 - まず、flashromをインストールする必要があります。
 
 ```
-# sudo pacman -S flashrom
+sudo pacman -S flashrom
 ```
 
 > フラッシャーが3.3ボルトに設定されていることを確認してください！
@@ -84,7 +84,10 @@ SPIチップに接続する最も簡単な方法は、クリップを使用す�
 - 上記のSPIチップ名が報告されている場合は、準備が整います。
 
 ```
-# sudo flashrom -p ch341a_spi --flash-name
+sudo flash -p ch341a_spi --flash-name
+```
+
+```
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
 flashrom is free software, get the source code at https://flashrom.org
 
@@ -105,14 +108,14 @@ Found Winbond flash chip "W25X40" (512 kB, SPI) on ch341a_spi.
 - 次のコマンドでフラッシュをダンプします。
 
 ```
-# sudo flash -p ch341a_spi -r firmware_dump.bin
+sudo flash -p ch341a_spi -r firmware_dump.bin
 ```
 
 - 次に、それをダンプし、データが正しく転送されたことを確認するために、2つのファイルを比較します。
 
 ```
-# sudo flash -p ch341a_spi -r firmware_dump-1.bin
-# diff firmware_dump.bin firmware_dump-1.bin
+sudo flash -p ch341a_spi -r firmware_dump-1.bin
+diff firmware_dump.bin firmware_dump-1.bin
 ```
 
 "diff" が出力を生成しない場合は、出力します。
@@ -124,7 +127,10 @@ Found Winbond flash chip "W25X40" (512 kB, SPI) on ch341a_spi.
 - タイトルが示すように簡単です:
 
 ```
-# sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
+sudo flash -p ch341a_spi -w sata_adapter_EN25F40.bin 
+```
+
+```
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
 flashrom is free software, get the source code at https://flashrom.org
 
