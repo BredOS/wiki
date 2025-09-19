@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-19T15:05:44.345Z
+date: 2025-09-19T16:01:01.196Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -28,10 +28,21 @@ We support a wide range of devices—from exciting ARM-based systems and experim
  
 ## 4.1 Minimal System Requirements
  - Minimum RAM: 2 GB
- - Storage: 8 GB microSD card or larger
+ - Storage: 8 GB microSD card/eMMC/nVME or larger
  
 # 5. Installation
-To make installation easy for you, we laid out a line of bred crumbs to follow. 🍞 🔸🔸🔸
+To make installation easy for you, we laid out a line of bred crumbs for you to follow. 🍞 🔸🔸🔸
+> If you found a bread crumb 🔸 give us a heads-up over at our community channels.
+{.is-info}
 
 ## 5.1 Device specific image installation
 These are the boards we love the most. To install BredOS on them, either start with our [device specific image](/en/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which found in the navigation bar left of this.
+
+## 5.2 Generic installation
+
+
+## 5.3 Docker container installation
+- Easy as one line of command:
+```
+docker pull bredos/bredos
+```
