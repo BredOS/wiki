@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: true
-date: 2025-09-19T05:01:28.982Z
+date: 2025-09-19T05:04:35.739Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -73,6 +73,7 @@ Then, connect the flasher to your Linux device and run the following command.
 ```
 sudo flashrom -p ch341a_spi --flash-name
 ```
+
 ```
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
 flashrom is free software, get the source code at https://flashrom.org
@@ -105,6 +106,7 @@ If it does, check the connection of your clip or inspect your soldering work, an
 ```
 sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
 ```
+
 ```
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) on Linux 6.15.7-1-BredOS (x86_64)
 flashrom is free software, get the source code at https://flashrom.org
@@ -124,6 +126,7 @@ Reading old flash chip contents... done.
 Erase/write done from 0 to 7ffff
 Verifying flash... VERIFIED.
 ```
+
 
 If you see the text "VERIFIED," the firmware has been flashed correctly. If you used the clip, simply disconnect it and you're good to go. If you desoldered the chip, you know what to do.
 
