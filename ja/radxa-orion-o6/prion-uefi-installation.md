@@ -2,7 +2,7 @@
 title: Orion O6でUEFIを更新中
 description:
 published: false
-date: 2025-09-17T08:26:12.669Z
+date: 2025-09-19T05:32:10.029Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -102,11 +102,18 @@ dd if=/dev/zero bs=1 count=$(((8388608 - <your file size here>)) >> ./cix_flash_
 
 プリオンのSPIチップは簡単に取り外せるようにソケットされています。 ソケットは CPU ファンヘッダーと GPIO ポートの間にあります。 To easily locate the chip refer to the documentation by Radxa [found here](https://radxa.com/orion/o6/marked_orion_o6.webp).
 
+- ソケットはチップを取り外す前に開かなければならない2つのラッチを備えています。
+
+![prion-spi-loaction-cut.png](/orion/prion-spi-loaction-cut.png)
+
 - プリオンからSPIチップを取り外します。
-- ZIFボードをフラッシャーに接続します。
+- 1.8ボルトアダプタをフラッシャーに接続します。
+- ZIFボードを1.8ボルトアダプタに接続します。
 - ピン1にはチップ上にドットが付いています。 フラッシャーのUSBポートが向いている間、ピン1は左上側にあります。 向きを右に取得するには、以下のスクリーンショットを参照してください:
 
-![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
+![1-8v-zif-socket-cut.jpg](/orion/1-8v-zif-socket-cut.jpg)
+
+- チップを ZIF コネクタに挿入します。
 
 ### 3.3.3 新しいファームウェアのフラッシュ
 
