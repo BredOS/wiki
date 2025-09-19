@@ -2,7 +2,7 @@
 title: Wiki de BredOS
 description:
 published: false
-date: 2025-09-19T15:05:44.345Z
+date: 2025-09-19T16:01:01.196Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -14,31 +14,44 @@ El pan es uno de los alimentos preparados más antiguos de la historia de la hum
 
 # 2. BredOS
 
-At BredOS, we cherish the concept of using basic ingredients—selected with love and passion—to craft a simple yet versatile product that you can customize to your taste. Served plain, it has the potential to transform into whatever you desire. Whether sweet or salty, light or dark, big enough to enjoy it with your family or small enough to carry it around your adventures.
+En BredOS, Elaboramos el concepto de utilizar ingredientes básicos —seleccionados con amor y pasión— para fabricar un producto simple pero versátil que puedas personalizar a tu gusto. Varias llanuras, tiene el potencial de transformarse en lo que usted desee. Ya sea dulce o salado, ligero o oscuro, lo suficientemente grande como para disfrutarlo con su familia o lo suficientemente pequeño como para llevarlo alrededor de sus aventuras.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
-# 3. Features
+# 3. Características
 
-- Made with passion - just for your enjoyment!
-- User support with great respect! No matter if you are a crumb or a flatbread!
-- Simple and plain by design! No bloat, ensuring a lightweight and responsive system!
-- Arch-based - with customization tailored for your enjoyment.
-- User-friendly interfaces where they are needed!
+- Hecho con pasión - sólo para su disfrute!
+- ¡Soporte al usuario con gran respeto! No importa si usted es una migaja o un plano!
+- ¡Simple y simple por diseño! ¡Sin problemas, garantizando un sistema ligero y receptivo!
+- Arquero - con personalización a medida para su disfrute.
+- Interfaces fáciles de usar donde se necesitan!
 
-# 4. System Requirements
+# 4. Requisitos del sistema
 
-We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/en/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/en/table-of-supported-devices).
+Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos paneles de intel/amd x86. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/en/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/en/table-of-supported-devices).
 
-## 4.1 Minimal System Requirements
+## 4.1 Requisitos mínimos del sistema
 
-- Minimum RAM: 2 GB
-- Storage: 8 GB microSD card or larger
+- RAM mínimo: 2 GB
+- Almacenamiento: 8 GB de tarjeta microSD, eMMC/nVME o más grande
 
-# 5. Installation
+# 5. Instalación
 
-To make installation easy for you, we laid out a line of bred crumbs to follow. 🍞 🔸🔸🔸
+Para facilitarle la instalación, hemos preparado una línea de migajas criadas para que usted lo siguiera. 🍞 🔸🔸🔸
 
-## 5.1 Device specific image installation
+> Si encontraste un trozo de pan 🔸 danos una cabecera en nuestros canales comunitarios.
+> {.is-info}
 
-These are the boards we love the most. To install BredOS on them, either start with our [device specific image](/en/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which found in the navigation bar left of this.
+## 5.1 Instalación de imagen específica del dispositivo
+
+Estos son los tableros que más nos gustan. Para instalar BredOS en ellos, inicie con nuestra guía de instalación [imagen específica del dispositivo](/en/install/device-specific-image). o dar un vistazo a la página del dispositivo en nuestra wiki, que se encuentra en la barra de navegación a la izquierda de esto.
+
+## 12.2 Instalación genérica
+
+## 5.3 Instalación del contenedor Docker
+
+- Fácil como una línea de comando:
+
+```
+trituradores/bredos/bredos
+```
