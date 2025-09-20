@@ -2,7 +2,7 @@
 title: 無題のページ
 description:
 published: false
-date: 2025-09-20T11:13:18.439Z
+date: 2025-09-20T12:23:36.790Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -32,6 +32,17 @@ Beri クールなモデル
 
 Toptier
 
+# ドロップダウン
+
+<details><summary><b>タイトル</b></summary>
+
+テキスト
+
+- 弾
+- 制御点
+
+</details>
+
 \*[MIMO]: 複数の入力
 
 # アブラリバイバル:
@@ -60,14 +71,14 @@ MIMOの上にカーソルを合わせてください
 # Kroki
 
 ```kroki
-mermaid
-
-graph TD
-  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )
-  B --> C{ How to contribute? }
-  C --> D[ Reporting bugs ]
-  C --> E[ Sharing ideas ]
-  C --> F[ Advocating ]
+wavedrom
+{ signal: [
+  { name: "clk",         wave: "p.....|..." },
+  { name: "Data",        wave: "x.345x|=.x", data: ["head", "body", "tail", "data"] },
+  { name: "Request",     wave: "0.1..0|1.0" },
+  {},
+  { name: "Acknowledge", wave: "1.....|01." }
+]}
 ```
 
 # 脚注:
