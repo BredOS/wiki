@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T15:16:19.214Z
+date: 2025-09-20T15:18:59.412Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -76,6 +76,20 @@ Smaller: (add `{.dense}` to the end)
 | -------| -------|--------|
 | JMB582 based | Works   |  [Source](https://github.com/System64fumo/linux/issues/14)
 {.dense}
+
+# lists
+Some stuff:
+
+- Grid Item 1
+- Grid Item 2
+- Grid Item 3
+{.grid-list}
+
+Very Cool
+- [Lorem ipsum dolor sit amet *Subtitle description here*](https://www.google.com)
+- [Consectetur adipiscing elit *Another subtitle description here*](https://www.google.com)
+- [Morbi vehicula aliquam *Third subtitle description here*](https://www.google.com)
+{.links-list}
 
 # Math/Chemistry (Katex)
 
