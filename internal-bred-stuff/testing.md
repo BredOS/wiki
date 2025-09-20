@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T10:54:11.796Z
+date: 2025-09-20T11:13:18.439Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -42,6 +42,19 @@ Please hover over MIMO
 ```
 *[MIMO]: Multiple Input Multiple Output
 ```
+
+# Tables
+
+Normal
+| Device | Status | Notes |
+| -------| -------|--------|
+| JMB582 based | Works   |  [Source](https://github.com/System64fumo/linux/issues/14)
+
+Smaller: (add `{.dense}` to the end)
+| Device | Status | Notes |
+| -------| -------|--------|
+| JMB582 based | Works   |  [Source](https://github.com/System64fumo/linux/issues/14)
+{.dense}
 
 
 
