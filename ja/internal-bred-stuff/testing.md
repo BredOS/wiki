@@ -2,15 +2,15 @@
 title: 無題のページ
 description:
 published: false
-date: 2025-09-20T14:07:35.377Z
+date: 2025-09-20T15:21:38.301Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-![graphics.png](/vms/graphics.png){.align-abstopright}
+![graphics.png](/vms/graphics.png =25%x){.align-right}
 
-Text i can write some specs here <br> <br> <br> <br> <br> <br> <br>
+Text i can write some specs here <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
 ---
 
@@ -45,6 +45,10 @@ Toptier
 
 \*[MIMO]: 複数の入力
 
+# 脚注:
+
+ここでは、脚注のリファレンス、[^1]などを紹介します[^longnote]
+
 # アブラリバイバル:
 
 MIMOの上にカーソルを合わせてください
@@ -68,6 +72,26 @@ MIMOの上にカーソルを合わせてください
 | JMB582ベース                | 作品    | [Source](https://github.com/System64fumo/linux/issues/14) |
 | {.dense} |       |                                                           |
 
+# リスト
+
+いくつかのもの:
+
+- グリッドアイテム1
+- グリッドアイテム2
+- グリッドアイテム 3
+  {.grid-list}
+
+とてもクール
+
+- [Lorem ipsum dolor sit amet _Subtitle description here_](https://www.google.com)
+- [Consectetur adipiscing elit _Another subtitle description here_](https://www.google.com)
+- [Morbi vehicula aliquam _Third subtitle description here_](https://www.google.com)
+  {.links-list}
+
+# キーボードキー
+
+<kbd>F</kbd> を押して敬意を表します
+
 # 数学/化学 (Katex)
 
 ピタゴラスの定理:
@@ -77,7 +101,10 @@ $a^2 + b^2 = c^2$
 $A=πr2$
 
 好気性細胞呼吸:
-$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
+
+$$
+C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}
+$$
 
 # グラフ (Kroki)
 
@@ -92,6 +119,8 @@ graph TD
   C --> F[ Advocating ]
 ```
 
+<br>
+
 ```kroki
 wavedrom
 { signal: [
@@ -102,10 +131,6 @@ wavedrom
   { name: "Acknowledge", wave: "1.....|01." }
 ]}
 ```
-
-# 脚注:
-
-ここでは、脚注のリファレンス、[^1]などを紹介します[^longnote]
 
 [^1]: これが脚注です
 
