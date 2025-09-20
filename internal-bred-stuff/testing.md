@@ -2,13 +2,13 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T15:12:29.837Z
+date: 2025-09-20T15:13:43.491Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-![graphics.png](/vms/graphics.png =50%x){.align-right}
+![graphics.png](/vms/graphics.png =25%x){.align-right}
 
 Text i can write some specs here
 <br>
