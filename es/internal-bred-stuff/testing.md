@@ -2,7 +2,7 @@
 title: Página sin título
 description:
 published: false
-date: 2025-09-20T11:13:18.439Z
+date: 2025-09-20T12:23:36.790Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -32,6 +32,17 @@ Nivel medio
 
 Toptier
 
+# Soltar
+
+<details><summary><b>Título</b></summary>
+
+Texto
+
+- Bala
+- Puntos
+
+</details>
+
 \*[MIMO]: Múltiples entradas de salida
 
 # Abrreviaciones:
@@ -60,14 +71,14 @@ Más pequeño: (añade `{.dense}` al final)
 # Kroki
 
 ```kroki
-mermaid
-
-gráfica TD
-  A[ Cualquiera ] -->|Puede ayudar | B( Ir a github. om/yuzutech/kroki )
-  B --> C{ ¿Cómo contribuir? }
-  C --> D[ Reportando errores ]
-  C --> E [ Compartir ideas ]
-  C --> F[ Provocar ]
+wavedrom
+{ signal: [
+  { name: "clk", onda: "p. ...|..." },
+  { name: "Data", onda: "x.345x|=. ", data: ["head", "body", "tail", "data"] },
+  { name: "Request", onda: "0.1..0|1. " },
+  {},
+  { name: "Reconocimiento", onda: "1.....|01." }
+]}
 ```
 
 # Notas al pie
