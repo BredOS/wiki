@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T15:18:59.412Z
+date: 2025-09-20T15:21:38.301Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -90,6 +90,10 @@ Very Cool
 - [Consectetur adipiscing elit *Another subtitle description here*](https://www.google.com)
 - [Morbi vehicula aliquam *Third subtitle description here*](https://www.google.com)
 {.links-list}
+
+# Keyboard keys 
+
+Press <kbd>F</kbd> to pay respects
 
 # Math/Chemistry (Katex)
 
