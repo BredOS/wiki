@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-20T18:07:45.971Z
+date: 2025-09-20T18:10:07.765Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -13,12 +13,12 @@ This page holds a table of our supported devices with known issues, hardware sup
 
 # 2. List of supported devices
 
-| Device            | UEFI  | SPI Chip | Known Issues | Installation type |Guides |
+| Device            | UEFI  | SPI | Known Issues | Installation type |Guides |
 |-------------------|-------|-----------|--------------|--|--|
 | Cool Pi 4 Model B       |  No   |   No   | Wifi doesn't work.| [Device specific image](/install/device-specific-image)| |
 |FydeTab Duo|	Yes | No	|	|[Device specific image](/install/device-specific-image)| |
 |Indiedroid Nova| Yes |	No |	|[Device specific image](/install/device-specific-image)| |
-|ITX-3588J|	Yes |	No | Many, take a look at the device page	|[Device specific image](/install/device-specific-image)|[itx-3588j](/itx-3588j) |
+|ITX-3588J|	Yes |	No | Many, take a look at the device page	|[Device specific image](/install/device-specific-image)|[ITX-3588J](/itx-3588j) |
 |Khadas Edge 2| No | Yes |	|[Device specific image](/install/device-specific-image)| |
 |Khadas VIM 4| No | Yes	|	|[Device specific image](/install/device-specific-image)| |
 |Mekotronics R58S| Yes |No|	|[Device specific image](/install/device-specific-image)| |
@@ -39,11 +39,13 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Radxa NX5 Kit|No|No|	|[Device specific image](/install/device-specific-image)| |
 |Radxa Rock 4C Plus|No|No|	|[Device specific image](/install/device-specific-image)| |
 |Radxa Rock 5 ITX|Yes|Yes|	|[Device specific image](/install/device-specific-image)| |
-|Radxa Rock 5A|Yes|Yes (optional)|	|[Device specific image](/install/device-specific-image)| |
+|Radxa Rock 5A|Yes|Yes[^1]|	|[Device specific image](/install/device-specific-image)| |
 |Radxa Rock 5B|Yes|Yes|	|[Device specific image](/install/device-specific-image)| |
 |Radxa Rock 5B+|Yes|Yes|	|[Device specific image](/install/device-specific-image)| |
-|Radxa Rock 5C|Yes|Yes (optional)|	|[Device specific image](/install/device-specific-image)| |
+|Radxa Rock 5C|Yes|Yes[^1]|	|[Device specific image](/install/device-specific-image)| |
 |Radxa Rock 5D|No|No|	|[Device specific image](/install/device-specific-image)| |
 |Radxa Rock 5T|No|Yes |	|[Device specific image](/install/device-specific-image)| |
-| Radxa Orion O6 |  Yes   |Yes| PCIe Gen 4 devices cause the board to become unstable|[Installation-with-ISO](/install/Installation-with-ISO)| [radxa-orion-o6](/radxa-orion-o6)|
+| Radxa Orion O6 |  Yes   |Yes| PCIe Gen 4 devices cause the board to become unstable|[Installation with ISO](/install/Installation-with-ISO)| [radxa-orion-o6](/radxa-orion-o6)|
 {.dense}
+
+[^1]: Requires [this module](https://radxa.com/products/accessories/spi-flash-module/).
