@@ -2,13 +2,13 @@
 title: Página sin título
 description:
 published: false
-date: 2025-09-20T12:23:36.790Z
+date: 2025-09-20T14:07:377Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-<img align="right" src="https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg" width="512" height="320"/>
+![graphics.png](/vms/graphics.png){.align-abstopright}
 
 Text i can write some specs here <br> <br> <br> <br> <br> <br> <br>
 
@@ -68,7 +68,29 @@ Más pequeño: (añade `{.dense}` al final)
 | Basado en JMB582         | Obras  | [Source](https://github.com/System64fumo/linux/issues/14) |
 | {.dense} |        |                                                           |
 
-# Kroki
+# Matemática/Química (Katex)
+
+Teorema pitágoro:
+$a^2 + b^2 = c^2$
+
+Área de la fórmula del círculo:
+$A=πr2$
+
+Respiración celular aeróbica:
+$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
+
+# Gráficas (Kroki)
+
+```kroki
+sirena
+
+gráfica TD
+  A[ Cualquiera ] -->|Puede ayudar | B( Ir a bredos. rg )
+  B --> C{ ¿Cómo contribuir? }
+  C --> D[ Reportando errores ]
+  C --> E [ Compartir ideas ]
+  C --> F[ Provocar ]
+```
 
 ```kroki
 wavedrom
