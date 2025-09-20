@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T15:11:24.126Z
+date: 2025-09-20T15:12:02.591Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -47,6 +47,11 @@ Text
 </details>
 
 *[MIMO]: Multiple Input Multiple Output
+
+
+# Footnotes
+
+Here is a footnote reference,[^1] and another.[^longnote]
 
 # Abrreviations:
 Please hover over MIMO
@@ -108,9 +113,7 @@ wavedrom
 ]}
 ```
 
-# Footnotes
 
-Here is a footnote reference,[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
 
