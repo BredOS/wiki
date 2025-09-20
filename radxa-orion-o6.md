@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: false
-date: 2025-09-17T14:18:07.677Z
+date: 2025-09-20T10:27:02.181Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -21,7 +21,7 @@ PCIe ports:
 - M.2 E key (PCIe 4.0 2x lanes)
 - Full sized PCIe x16 slot (PCIe 4.0 8x lanes)
 
-> We nicknamed it "*Prion*" thanks to Pandas typing skills.
+> We nicknamed it "*Prion*" thanks to Panda's typing skills.
 {.is-info}
 
 
@@ -30,17 +30,17 @@ You can find download links for the aarch64 iso in our [Github page](https://git
 
 We have two versions available: one is based on Radxa's 6.6 kernel, and the other is based on mainline. 
 The version based on the 6.6 kernel has the name "ORION" attached and has support for the full feature set of that board. 
-The mainline kernel does have missing drivers. A overview whats working on mainline and whats not can be found under section `4. Mainline support`.
+The mainline kernel does have missing drivers. A overview whats working on mainline and whats not can be found under [4. Mainline Support](#h-4-mainline-support).
 
 # 3. Installation 
 
 The Prion supports installation from generic ISO images, unlike our other supported single-board computers (SBCs) which use device-specific images. Installation can be done using a USB stick or even a USB optical drive. 
 ## 3.1 Generic ISO Installation 
 
-A guide for generic .iso installation is available [here](/en/install/Installation-with-ISO). 
+A guide for generic .iso installation is available [here](/install/Installation-with-ISO). 
 ## 3.2 UEFI Installation 
 
-We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A full list of features and a guide for updating your UEFI is available [here](/en/radxa-orion-o6/prion-uefi-installation). 
+We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A full list of features and a guide for updating your UEFI is available [here](/radxa-orion-o6/prion-uefi-installation). 
 
 # 4. Mainline support
 |   `linux`    | Status      |  Notes |
@@ -57,12 +57,12 @@ We have developed a custom UEFI based on Radxa’s source code. It supports the 
 | USB-C DP     | Partial  | Same as above |
 | Storage      | Works    | M.2 SSDs work as expected |
 | Ethernet     | Works    | |
-| Front USB    | Works    | Randomly dies, needs custom BredOS fork of Radxa bios|
-| Rear USB     | Works    | Randomly dies, needs custom BredOS fork of Radxa bios|
+| Front USB    | Works    | Randomly dies, needs custom BredOS fork of Radxa bios to work|
+| Rear USB     | Works    | Randomly dies|
 | Front audio  | Broken   | No driver|
 | Rear audio   | Broken   | No driver|
 | RTC          | Works    | No driver|
-| UART         | Works    | `ttyS2` at boot|
+| UART         | Works    | `/dev/ttyS2` at boot|
 | PCIe         | Partial  | Works fine for most devices but some GPUs don't work as expected. <br> Freezes the entire system sometimes. Consider using our bios.|
 | M.2 E Key    | Works    | |
 | M.2 M Key    | Works    | |
