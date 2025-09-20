@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T12:18:57.925Z
+date: 2025-09-20T12:23:36.790Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -34,6 +34,17 @@ Mid tier
 #### Model C
 Toptier
 
+# Dropdown
+
+<details>
+<summary><b>Title</b></summary>
+
+Text
+
+- Bullet
+- Points
+
+</details>
 
 *[MIMO]: Multiple Input Multiple Output
 
