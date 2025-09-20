@@ -2,7 +2,7 @@
 title: 无标题页面
 description:
 published: false
-date: 2025-09-20T11：13：18.439Z
+date: 2025-09-20T12:23:36.790Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10：44：50.776Z
@@ -32,6 +32,17 @@ Text i can write some specs here <br> <br> <br> <br> <br> <br> <br>
 
 Toptier
 
+# 下拉列表
+
+<details><summary><b>标题</b></summary>
+
+文本
+
+- 子项
+- 得分
+
+</details>
+
 \*[MIMO]: 多输入多个输出
 
 # 重生：
@@ -60,14 +71,14 @@ Smaller: (add `{.dense}` to the end)
 # Kroki
 
 ```kroki
-mermaid
-
-图形TD
-  A[ 任何] -->|可以帮助 | B( 转到github. om/yuzutech/kroki ()
-  B --> Cower How to contribute？ }
-  C --> D[ Reporting bug ]
-  C --> E[ 分享想法]
-  C --> F[ 倡导]
+wavedrom
+(2002). signal： [
+  Pop name: "clk", wave: "p. ...|..." },
+  Powername: "Data", wave: "x.345x|=. ", data: ["head", "body", "tail", "data"] },
+  }, 名称: "Request", wave: "0.1...0|1. "},
+  {},
+  申辩名称: "确认", wave: "1....|01." }
+]}
 ```
 
 # 注释
