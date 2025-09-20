@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T14:05:34.306Z
+date: 2025-09-20T14:06:24.794Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -90,7 +90,7 @@ $C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
 mermaid
 
 graph TD
-  A[ Anyone ] -->|Can help | B( Go to https://bredos.org/ )
+  A[ Anyone ] -->|Can help | B( Go to bredos.org )
   B --> C{ How to contribute? }
   C --> D[ Reporting bugs ]
   C --> E[ Sharing ideas ]
