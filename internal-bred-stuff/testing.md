@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T15:13:43.491Z
+date: 2025-09-20T15:14:49.975Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -88,11 +88,6 @@ $A=πr2$
 
 Aerobic cellular respiration:
 $C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
-
-
-
-
-
 
 # Graphs (Kroki)
 
