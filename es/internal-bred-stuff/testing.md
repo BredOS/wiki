@@ -2,15 +2,15 @@
 title: Página sin título
 description:
 published: false
-date: 2025-09-20T14:07:377Z
+date: 2025-09-20T15:21:38.301Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-![graphics.png](/vms/graphics.png){.align-abstopright}
+![graphics.png](/vms/graphics.png =25%x){.align-right}
 
-Text i can write some specs here <br> <br> <br> <br> <br> <br> <br>
+El texto puede escribir algunas especificaciones aquí <br>format@@2<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
 ---
 
@@ -45,6 +45,10 @@ Texto
 
 \*[MIMO]: Múltiples entradas de salida
 
+# Notas al pie
+
+Aquí hay una referencia a pie de página,[^1] y otra.[^longnote]
+
 # Abrreviaciones:
 
 Por favor pase el cursor sobre MIMO
@@ -68,6 +72,26 @@ Más pequeño: (añade `{.dense}` al final)
 | Basado en JMB582         | Obras  | [Source](https://github.com/System64fumo/linux/issues/14) |
 | {.dense} |        |                                                           |
 
+# listas
+
+Algunas cosas:
+
+- Elemento de cuadrcula 1
+- Elemento de cuadrícula 2
+- Artículo cuadrícula 3
+  {.grid-list}
+
+Herramienta muy
+
+- [Lorem ipsum dolor sit amet _Subtitle description here_](https://www.google.com)
+- [Elit adipiscina consecetur _Otra descripción de subtítulos aquí_](https://www.google.com)
+- [Morbi vehicula aliquam _Third subtitle description here_](https://www.google.com)
+  {.links-list}
+
+# Teclas del teclado
+
+Pulsa <kbd>F</kbd> para respetar
+
 # Matemática/Química (Katex)
 
 Teorema pitágoro:
@@ -77,7 +101,10 @@ $a^2 + b^2 = c^2$
 $A=πr2$
 
 Respiración celular aeróbica:
-$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
+
+$$
+C_6H_{12}O_6 + 6 O_2 \;\rflecha de flujo\; 6 CO_2 + 6 H_2O + \text{energy}
+$$
 
 # Gráficas (Kroki)
 
@@ -92,6 +119,8 @@ gráfica TD
   C --> F[ Provocar ]
 ```
 
+<br>
+
 ```kroki
 wavedrom
 { signal: [
@@ -102,10 +131,6 @@ wavedrom
   { name: "Reconocimiento", onda: "1.....|01." }
 ]}
 ```
-
-# Notas al pie
-
-Aquí hay una referencia a pie de página,[^1] y otra.[^longnote]
 
 [^1]: Esta es la nota al pie.
 
