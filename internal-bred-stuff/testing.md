@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: true
-date: 2025-09-20T10:44:50.776Z
+date: 2025-09-20T10:48:08.934Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -20,3 +20,11 @@ Text i can write some specs here
 <br>
 
 ---
+
+*[MIMO]: Multiple Input Multiple Output
+
+# Abrreviations:
+Please hover over MIMO
+```
+*[MIMO]: Multiple Input Multiple Output
+```
