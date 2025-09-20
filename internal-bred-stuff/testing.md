@@ -2,13 +2,13 @@
 title: Untitled Page
 description: 
 published: false
-date: 2025-09-20T14:06:24.794Z
+date: 2025-09-20T14:07:35.377Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-<img align="right" src="https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg" width="512" height="320"/>
+![graphics.png](/vms/graphics.png){.align-abstopright}
 
 Text i can write some specs here
 <br>
