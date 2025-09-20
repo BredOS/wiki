@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: true
-date: 2025-09-20T10:49:12.467Z
+date: 2025-09-20T10:49:48.038Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -39,3 +39,16 @@ Here is a footnote reference,[^1] and another.[^longnote]
 
     Subsequent paragraphs are indented to show that they
 belong to the previous footnote.
+
+# Kroki
+
+```kroki
+mermaid
+
+graph TD
+  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )
+  B --> C{ How to contribute? }
+  C --> D[ Reporting bugs ]
+  C --> E[ Sharing ideas ]
+  C --> F[ Advocating ]
+```
