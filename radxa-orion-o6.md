@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: false
-date: 2025-09-20T10:27:02.181Z
+date: 2025-09-20T10:28:27.806Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -45,7 +45,6 @@ We have developed a custom UEFI based on Radxa’s source code. It supports the 
 # 4. Mainline support
 |   `linux`    | Status      |  Notes |
 |--------------|-------------|--------|
-| Mainline     | Works    | |
 | CPU          | Works    | |
 | RAM          | Works    | |
 | GPU          | Broken   | No driver|
