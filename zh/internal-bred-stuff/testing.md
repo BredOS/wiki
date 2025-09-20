@@ -2,13 +2,13 @@
 title: 无标题页面
 description:
 published: false
-date: 2025-09-20T12:23:36.790Z
+date: 2025-09-20T14：07：35.377Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10：44：50.776Z
 ---
 
-<img align="right" src="https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg" width="512" height="320"/>
+![graphics.png](/vms/graphics.png){.align-abstopright}
 
 Text i can write some specs here <br> <br> <br> <br> <br> <br> <br>
 
@@ -68,7 +68,29 @@ Smaller: (add `{.dense}` to the end)
 | 基于 JMB582                | 工作 | [Source](https://github.com/System64fumo/linux/issues/14) |
 | {.dense} |    |                                                           |
 
-# Kroki
+# 数学/化学(Katex)
+
+Pythagorean theorem:
+$a^2 + b^2 = c^2$
+
+Area of circle formula:
+$A=πr2$
+
+Aerobic cellular respiration:
+$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
+
+# 图表(Kroki)
+
+```kroki
+mermaid
+
+图形TD
+  A[ 任何] -->|可以帮助 | B( 转到bredos. rg)
+  B --> C认真研究如何贡献？ }
+  C --> D[ Reporting bug ]
+  C --> E[ 分享想法]
+  C --> F[ 倡导]
+```
 
 ```kroki
 wavedrom
