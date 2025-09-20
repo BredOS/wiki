@@ -2,7 +2,7 @@
 title: Untitled Page
 description: 
 published: true
-date: 2025-09-20T10:50:20.155Z
+date: 2025-09-20T10:50:50.319Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
@@ -29,16 +29,7 @@ Please hover over MIMO
 *[MIMO]: Multiple Input Multiple Output
 ```
 
-# footnotes
 
-Here is a footnote reference,[^1] and another.[^longnote]
-
-[^1]: Here is the footnote.
-
-[^longnote]: Here's one with multiple blocks.
-
-    Subsequent paragraphs are indented to show that they
-belong to the previous footnote.
 
 # Kroki
 
@@ -52,3 +43,14 @@ graph TD
   C --> E[ Sharing ideas ]
   C --> F[ Advocating ]
 ```
+
+# Footnotes
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
