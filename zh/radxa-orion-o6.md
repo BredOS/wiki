@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description:
 published: false
-date: 2025-09-17T14：18：07.677Z
+date: 2025-09-20T10：28：27.806Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -24,7 +24,7 @@ PCIe 端口：
 - M.2 E key (PCIe 4.0 2.x 通道)
 - 全尺寸的 PCIe x16 槽(PCIe 4.0 8x 长道)
 
-> 我们因为Pandas打字技能而把它命名为“_普里昂_”。
+> 由于潘达的打字技巧，我们将它命名为“_普里昂_”。
 > {.is-info}
 
 # 2. 下载
@@ -33,7 +33,7 @@ PCIe 端口：
 
 我们有两个版本：一个基于Radxa的6.6内核，另一个基于主线。
 基于6.6内核的版本包含"ORION"的名称，支持该棋盘的完整功能。
-主行内核确实缺少驱动程序。 在主线上工作的概述和whats无法在第4节下找到。 Mainline support\`.
+主行内核确实缺少驱动程序。 在主线上工作的概述和whats 找不到[4]。 主线支持](#h-4-mainline-support)。
 
 # 3. 安装
 
@@ -41,17 +41,16 @@ Prion支持使用通用的 ISO 图像进行安装，不像我们其他支持的�
 
 ## 3.1 通用ISO 安装
 
-通用.iso安装指南可用 [here](/en/install/Installation-with-ISO)。
+通用.iso安装指南可用 [here](/install/Installation-with-ISO)。
 
 ## 3.2 UEFI 安装
 
-我们已经根据Radxa's source 代码开发了一个自定义 UEFI。 它支持出售棋盘的实际CPU速度， 允许控制 PCIe 链接速度，并且——最好的 - 启动时显示 Bred 徽标。 更新您的 UEFI 的完整功能列表和指南是可用的 [here](/en/radxa-orion-o6/prion-uefi-installation)。
+我们已经根据Radxa's source 代码开发了一个自定义 UEFI。 它支持出售棋盘的实际CPU速度， 允许控制 PCIe 链接速度，并且——最好的 - 启动时显示 Bred 徽标。 更新您的 UEFI 的完整功能列表和指南是可用的 [here](/radxa-orion-o6/prion-uefi-installation)。
 
 # 4. 主线支持
 
 | `linux`                 | 状态  | 注意                                                              |
 | ----------------------- | --- | --------------------------------------------------------------- |
-| 主线                      | 工作  |                                                                 |
 | CPU                     | 工作  |                                                                 |
 | RAM                     | 工作  |                                                                 |
 | GPU                     | 断开  | 没有驱动程序                                                          |
@@ -63,12 +62,12 @@ Prion支持使用通用的 ISO 图像进行安装，不像我们其他支持的�
 | USB-C DP                | 部分的 | 与上面相同                                                           |
 | 存储                      | 工作  | M.2 SSD按预期工作                                    |
 | 以太网                     | 工作  |                                                                 |
-| 前方USB                   | 工作  | 随机死亡, 需要自定义的 BredOS 派生Radxa bios                                |
-| 后方USB                   | 工作  | 随机死亡, 需要自定义的 BredOS 派生Radxa bios                                |
+| 前方USB                   | 工作  | 随机死亡需要自定义雷达卡生物体的 BredOS 叉才能工作                                   |
+| 后方USB                   | 工作  | 随机死亡数                                                           |
 | 前置音频                    | 断开  | 没有驱动程序                                                          |
 | 后端音频                    | 断开  | 没有驱动程序                                                          |
 | RTC                     | 工作  | 没有驱动程序                                                          |
-| UART                    | 工作  | 开机时`ttyS2`                                                      |
+| UART                    | 工作  | 开机时`/dev/ttyS2`                                                 |
 | PCIe                    | 部分的 | 适合大多数设备，但某些GPU无法正常工作。 <br> 有时冻结整个系统。 考虑使用我们的偏差。                 |
 | M.2 E 键 | 工作  |                                                                 |
 | M.2M 键  | 工作  |                                                                 |
