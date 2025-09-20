@@ -2,13 +2,13 @@
 title: 無題のページ
 description:
 published: false
-date: 2025-09-20T12:23:36.790Z
+date: 2025-09-20T14:07:35.377Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-<img align="right" src="https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg" width="512" height="320"/>
+![graphics.png](/vms/graphics.png){.align-abstopright}
 
 Text i can write some specs here <br> <br> <br> <br> <br> <br> <br>
 
@@ -68,7 +68,29 @@ MIMOの上にカーソルを合わせてください
 | JMB582ベース                | 作品    | [Source](https://github.com/System64fumo/linux/issues/14) |
 | {.dense} |       |                                                           |
 
-# Kroki
+# 数学/化学 (Katex)
+
+ピタゴラスの定理:
+$a^2 + b^2 = c^2$
+
+円数式の面積:
+$A=πr2$
+
+好気性細胞呼吸:
+$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
+
+# グラフ (Kroki)
+
+```kroki
+mermaid
+
+graph TD
+  A[ Anyone ] -->|Can help | B( Go to bredos.org )
+  B --> C{ How to contribute? }
+  C --> D[ Reporting bugs ]
+  C --> E[ Sharing ideas ]
+  C --> F[ Advocating ]
+```
 
 ```kroki
 wavedrom
