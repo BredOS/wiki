@@ -2,15 +2,15 @@
 title: Untitled Page
 description:
 published: false
-date: 2025-09-20T14:07:35.377Z
+date: 2025-09-20T15:21:38.301Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-![graphics.png](/vms/graphics.png){.align-abstopright}
+![graphics.png](/vms/graphics.png =25%x){.align-right}
 
-Text i can write some specs here <br> <br> <br> <br> <br> <br> <br>
+Text i can write some specs here <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
 ---
 
@@ -45,6 +45,10 @@ Text
 
 \*[MIMO]: Multiple Input Multiple Output
 
+# Footnotes
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
 # Abrreviations:
 
 Please hover over MIMO
@@ -68,6 +72,26 @@ Smaller: (add `{.dense}` to the end)
 | JMB582 based             | Works  | [Source](https://github.com/System64fumo/linux/issues/14) |
 | {.dense} |        |                                                           |
 
+# lists
+
+Some stuff:
+
+- Grid Item 1
+- Grid Item 2
+- Grid Item 3
+  {.grid-list}
+
+Very Cool
+
+- [Lorem ipsum dolor sit amet _Subtitle description here_](https://www.google.com)
+- [Consectetur adipiscing elit _Another subtitle description here_](https://www.google.com)
+- [Morbi vehicula aliquam _Third subtitle description here_](https://www.google.com)
+  {.links-list}
+
+# Keyboard keys
+
+Press <kbd>F</kbd> to pay respects
+
 # Math/Chemistry (Katex)
 
 Pythagorean theorem:
@@ -77,7 +101,10 @@ Area of circle formula:
 $A=πr2$
 
 Aerobic cellular respiration:
-$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
+
+$$
+C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}
+$$
 
 # Graphs (Kroki)
 
@@ -92,6 +119,8 @@ graph TD
   C --> F[ Advocating ]
 ```
 
+<br>
+
 ```kroki
 wavedrom
 { signal: [
@@ -102,10 +131,6 @@ wavedrom
   { name: "Acknowledge", wave: "1.....|01." }
 ]}
 ```
-
-# Footnotes
-
-Here is a footnote reference,[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
 
