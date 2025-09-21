@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: true
-date: 2025-09-21T10:44:09.419Z
+date: 2025-09-21T10:44:36.693Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -26,7 +26,7 @@ PCIe ports:
 
 
 # 2. Download
-You can find download links for the aarch64 iso in our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
+You can find download links for the aarch64 iso on our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
 
 We have two versions available: one is based on Radxa's 6.6 kernel, and the other is based on mainline. 
 The version based on the 6.6 kernel has the name "ORION" attached and has support for the full feature set of that board. 
