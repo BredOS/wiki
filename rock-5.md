@@ -2,7 +2,7 @@
 title: Rock 5 Series
 description: 
 published: true
-date: 2025-09-21T10:00:31.334Z
+date: 2025-09-21T10:01:36.937Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -27,7 +27,7 @@ dateCreated: 2024-09-21T09:12:56.606Z
 {.is-info}
 
 #### Rock 5C
-> We nicknamed it "*ICU*" because, its an Ice Cream Upsurper.
+> We nicknamed it "*ICU*" because, its an Ice Cream Usurper.
 {.is-info}
 
 # 2. Download
