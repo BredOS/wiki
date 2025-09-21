@@ -1,8 +1,8 @@
 ---
 title: Orion O6でUEFIを更新中
 description:
-published: false
-date: 2025-09-19T05:32:10.029Z
+published: true
+date: 2025-09-21T10:45:11.948Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
