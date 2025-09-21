@@ -2,7 +2,7 @@
 title: Design Language Example
 description: 
 published: false
-date: 2025-09-16T10:03:55.829Z
+date: 2025-09-21T08:49:42.620Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:22:29.068Z
@@ -32,6 +32,8 @@ sudo rm -fr / # to remove french language
 Thats a warning block. A reader reads this even its after the codeblock. See what i did here?
 
 Some words are important. Mark them as `inline code`.
+
+We will talk about tables under section [5. Tables](#h-5.-tables).
 
 # 4. Screenshots
 
