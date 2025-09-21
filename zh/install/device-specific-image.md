@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-21T11:42:40.378Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -23,9 +23,9 @@ dateCreated: 2025-09-15T12:36.362Z
 
 安装方式因设备而异，您想要安装 BredOS 的介质。 在本指南中，我们将涵盖安装到
 
-- `3.1 不可移动eMMC`
-- `3.2 可移动eMMC 和 SD Card`
-- `3.3 nVME`
+- [3.1 不可移动eMC](#h-31-non-removable-emmc)
+- [3.2 removable eMMC and SD Card](#h-32-removable-emmc-and-sd-card)
+- [3.3 nVME](#h-33-nvme)
 
 > 在您开始之前，请检查您的设备上有哪些选项可用！
 > {.is-info}
@@ -42,11 +42,11 @@ dateCreated: 2025-09-15T12:36.362Z
 > 如果你熟悉刷新树莓操作系统，不需要进一步阅读。 只需抓取您的 SD 卡或 eMMC，您的设备特定的 BredOS 图像并用您的首选工具闪烁。
 > {.is-info}
 
-下面我们描述如何用适配器刷入eMMC。 如果你没有合适的适配器，请离开连接到你的SBC的eMC，并按照`3.1不可移动eMMC`。
+下面我们描述如何用适配器刷入eMMC。 If you do not own a suitable adapter leave the eMMC connected to your SBC and follow [3.1 non-removable eMMC](#h-31-non-removable-emmc).
 
 ### 3.2.1 准备好您可移除的 eMMC
 
-> 如果您没有使用 eMC存储设备，请跳至 `3.2.2 刷入eMMC / SD Card` 。
+> 如果您没有使用 eMC存储设备，请跳至 [3.2.2 刷入 eMMC / SD 卡](#h-322-flashing-emmc-sd-card)。
 > {.is-info}
 
 #### 3.2.1.1 使用 uSD 适配器
@@ -83,7 +83,7 @@ dateCreated: 2025-09-15T12:36.362Z
 
 ### 3.3.2 Flashing nVME
 
-直接或通过 USB 适配器将驱动器连接到您的电脑。 然后使用“3.2”中推荐的工具之一。 刷入 eMMC / SD 卡\`，确保你的 NVMe 驱动器使用正确的驱动器字母或路径。 刷入后将驱动器连接到 SBC 的 nVME 端口。
+直接或通过 USB 适配器将驱动器连接到您的电脑。 然后在[3.2中使用推荐的工具之一。 刷入 eMMC / SD 卡](#h-322-flashing-emmc-sd-card)，确保您的 NVMe 驱动器使用正确的驱动器字母或路径。 刷入后将驱动器连接到 SBC 的 nVME 端口。
 
 ### 3.3.3 启动顺序
 
