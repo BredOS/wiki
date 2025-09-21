@@ -2,7 +2,7 @@
 title: Orange Pi 5 Series
 description: This page contains links to useful guides/tweaks for the OPI 5 Series devices
 published: true
-date: 2025-09-21T11:33:58.061Z
+date: 2025-09-21T11:49:47.836Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
@@ -29,7 +29,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 
 Specifications:
 - SoC: Rockchip RK3588S, 8‑core (4×Cortex‑A76 @ ~2.4GHz + 4×Cortex‑A55 @ ~1.8GHz) 
-- RAM: LPDDR4/4x, options: 4/8/16/32 GB 
+- RAM: LPDDR4/x, 4/8/16/32 GB 
 - Storage: microSD slot; M.2 NVMe via PCIe; no eMMC socket by default (just SPI‑flash) 
 - Video / Display: HDMI2.1 up to 8K@60Hz; USB‑C DisplayPort; dual MIPI D‑PHY outputs; multiple 
 - Connectivity: Gigabit Ethernet, optional WiFi/BT via M.2 or modules depending on version; other ports etc.
@@ -55,7 +55,7 @@ Specifications:
 
 Specifications:
 - SoC: Rockchip RK3588 (non‑S), 8‑core (4×Cortex‑A76 @ ~2.4GHz + 4×Cortex‑A55 @ ~1.8GHz)
-- RAM up to 32 GB etc.
+- RAM: LPDDR4/x, 4/8/16/32 GB 
 - Storage: includes modules, NVMe etc.
 - Video / Display: high resolutions, multiple HDMI / MIPI etc.
 - Connectivity: 2.5 Gbps Ethernet (RTL8125BG), WiFi6E + BT5.3/BLE; USB 3.0/2.0. 
@@ -66,7 +66,7 @@ Specifications:
 
 Specifications:
 - SoC: RK3588S (8nm), 8‑core (4×Cortex‑A76 @ ~2.4GHz + 4×Cortex‑A55 @ ~1.8GHz)
-- RAM: LPDDR5, options 4/8/16 GB (some sources mention up to 32GB) 
+- RAM: LPDDR5, options 4/8/16 GB
 - Storage: MicroSD, eMMC socket or SPI flash; M.2 M‑key for NVMe/SATA, etc. 
 - Video: Dual HDMI (HDMI2.1 and HDMI2.0); support up to 8K@60Hz; MIPI DSI etc. 
 - Connectivity: Gigabit Ethernet; WiFi5 + BT5.0; smaller board (89×56 mm) than regular 5/5B. 
@@ -78,7 +78,7 @@ Specifications:
 
 Specifications:
 - SoC: Rockchip RK3588 (non‑S), 8‑core (4×Cortex‑A76 @ ~2.4GHz + 4×Cortex‑A55 @ ~1.8GHz)
-- RAM: LPDDR5 options (4/8/16 GB) 
+- RAM: LPDDR5, options 4/8/16 GB
 - Storage: eMMC sockets (32‑256 GB optional), microSD, M.2 NVMe slot. 
 - Video: 2× HDMI2.1 up to 8K@60Hz; MIPI DSI; etc. 
 - Connectivity: 2.5 Gbps Ethernet (RTL8125BG), WiFi6E + BT5.3/BLE; USB 3.0/2.0. 
@@ -90,7 +90,7 @@ Specifications:
 
 Specifications:
 - SoC: Rockchip RK3588 (non‑S), 8‑core (4×Cortex‑A76 @ ~2.4GHz + 4×Cortex‑A55 @ ~1.8GHz) 
-- RAM: LPDDR5 options (4/8/16 GB) 
+- RAM: LPDDR5, options 4/8/16 GB
 - Storage: eMMC sockets (32‑256 GB optional), microSD, M.2 NVMe slot. 
 - Video: 2× HDMI2.1 up to 8K@60Hz; MIPI DSI; etc. 
 - Connectivity: 2.5 Gbps Ethernet (RTL8125BG), WiFi6E + BT5.3/BLE; USB 3.0/2.0. 
