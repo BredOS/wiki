@@ -1,8 +1,8 @@
 ---
 title: Radxa Orion O6
 description:
-published: false
-date: 2025-09-20T10：28：27.806Z
+published: true
+date: 2025-09-21T10:44:36.693Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -13,7 +13,7 @@ dateCreated: 2025-09-17T06:04:34.142Z
 Orion O6是一个 ITX-formed ARM64 型号的面板，具有很强的特性：
 
 - SoC：CIX CD8180
-- CPU： 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
+- CPU： 4x A72 @ 2.6GHz + 4x A72 @ 2.6GHz + 4x A52 @ 1.8GHz
 - GPU： 不稳定的 G720 MC10
 - NPU： 30 TOPs
 - 网络：2x 5Gbit 以太网 (PCIe 4.0 每个路由)
@@ -29,7 +29,7 @@ PCIe 端口：
 
 # 2. 下载
 
-您可以在我们的 [Github 页面] (https://github.com/BredOS/bredos-iso/releases/latest )中找到无主文件的下载链接！
+您可以在我们的 [Github 页面] (https://github.com/BredOS/bredos-iso/releases/latest )上找到无主文件的下载链接！
 
 我们有两个版本：一个基于Radxa的6.6内核，另一个基于主线。
 基于6.6内核的版本包含"ORION"的名称，支持该棋盘的完整功能。
