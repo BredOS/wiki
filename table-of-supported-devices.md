@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-21T11:14:52.541Z
+date: 2025-09-21T11:15:59.465Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -16,7 +16,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 | Device            | UEFI  | SPI | Known Issues | Installation type |Guides |
 |-------------------|-------|-----------|--------------|--|--|
 | Cool Pi 4 Model B       |  No   |   No   | Wifi doesn't work.| [Device specific image](/install/device-specific-image)| |
-|FydeTab Duo|	Yes | No	|	|[Device specific image](/install/device-specific-image)| |
+|FydeTab Duo|	Yes | No	|	|[Device specific image](/install/device-specific-image)|[fydetab-duo](/en/fydetab-duo) |
 |Indiedroid Nova| Yes |	No |	|[Device specific image](/install/device-specific-image)| |
 |ITX-3588J|	Yes |	No | Many, take a look at the device page	|[Device specific image](/install/device-specific-image)|[ITX-3588J](/itx-3588j) |
 |Khadas Edge 2| No | Yes |	|[Device specific image](/install/device-specific-image)| |
@@ -33,7 +33,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Orange Pi 5 Pro|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi 5 Ultra|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
-|Orange Pi RV2|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
+|Orange Pi RV2|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi RV Series](/orangepi-rv) |
 |Radxa CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
 |Radxa CM5 DTV carrier|No|No|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
 |Radxa NX5 Kit|No|No|	|[Device specific image](/install/device-specific-image)| |
