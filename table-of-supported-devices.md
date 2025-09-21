@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-21T11:12:06.183Z
+date: 2025-09-21T11:12:35.083Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -27,7 +27,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Mekotronics R58X-Pro|?|Yes|	|[Device specific image](/install/device-specific-image)| |
 |Milk V Jupiter|No|Yes|	wifi doesn't work|[Device specific image](/install/device-specific-image)| |
 |Orange Pi 5|Yes|Yes| Sata M.2 SSDs may not work	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5/table-of-supported-devices) |
-|Orange Pi 5B|Yes|Yes| Uses OPI5 image and requires DTBO for wifi to work	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5/table-of-supported-devices) |
+|Orange Pi 5B|Yes|Yes| Uses OPI5 image and requires DTBO for wifi to work	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/en/orangepi-5/table-of-supported-devices) |
 |Orange Pi 5 Max|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5/table-of-supported-devices) |
 |Orange Pi 5 Plus|	Yes |Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5/table-of-supported-devices) |
 |Orange Pi 5 Pro|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5/table-of-supported-devices) |
