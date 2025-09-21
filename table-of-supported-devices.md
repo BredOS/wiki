@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-21T11:14:15.173Z
+date: 2025-09-21T11:14:52.541Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -30,11 +30,11 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Orange Pi 5B|Yes|Yes| Uses OPI5 image and requires DTBO for wifi to work	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi 5 Max|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi 5 Plus|	Yes |Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
-|Orange Pi 5 Pro|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5s) |
+|Orange Pi 5 Pro|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi 5 Ultra|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
-|Orange Pi RV2|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5/table-of-supported-devices) |
-|Radxa CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5/table-of-supported-devices) |
+|Orange Pi RV2|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
+|Radxa CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
 |Radxa CM5 DTV carrier|No|No|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
 |Radxa NX5 Kit|No|No|	|[Device specific image](/install/device-specific-image)| |
 |Radxa Rock 4C Plus|No|No|	|[Device specific image](/install/device-specific-image)| |
