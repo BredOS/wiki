@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些功能的指南、教程和提示
 published: true
-date: 2025-09-16T10：19：46.986Z
+date: 2025-09-21T09:36:55.019Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -39,6 +39,8 @@ dateCreated: 2024-08-27T06:01:06.954Z
 - [在 BredOS 下运行Windows应用程序](/how-to/proton-run)
 
 - [如何处理报告的磁盘故障](/how-to/disk-failure)
+
+- [How to install Android Apps to BredOS](/en/how-to/waydroid)
 
 > 探索这些指南以从BredOS中获得最大效果！
 > {.is-info}
