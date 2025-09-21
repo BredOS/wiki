@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-09-16T10:19:46.986Z
+date: 2025-09-21T09:36:55.019Z
 tags:
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -39,6 +39,8 @@ Esta página contiene guías, tutoriales y consejos sobre cómo instalar o usar 
 - [Ejecutando aplicaciones de Windows bajo BredOS](/how-to/proton-run)
 
 - [Cómo manejar fallos de disco reportados](/how-to/disk-failure)
+
+- [Cómo instalar aplicaciones Android a BredOS](/en/how-to/waydroid)
 
 > ¡Explora estas guías para sacar el máximo provecho de BredOS!
 > {.is-info}
