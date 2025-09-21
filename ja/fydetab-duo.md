@@ -2,7 +2,7 @@
 title: Fydetab Duo
 description:
 published: true
-date: 2025-09-17T10:16:17.074Z
+date: 2025-09-21T09:57:45.810Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -19,6 +19,9 @@ Fydetab DuoはFyde Innovationsによって開発された2イン1錠です。 Fy
 - メモリとストレージ:8 GB LPDDR4X RAM。 ストレージは128 GB eMMCです。 microSD を介して拡張できます。
 - バッテリー:<unk> 42Wh、推定バッテリ寿命まで〜10時間。
 - その他の機能:Wi-Fi 6、Bluetooth 4.2、指紋センサー、ステレオスピーカー、5 MPフロントカメラ、スタイラス対応。
+
+> 私たちはそれを「_FydeTube_」、「_FDT_」、または「_Duo_」とあだ名し、あなたの選択を取ります。
+> {.is-info}
 
 # 2. ダウンロード
 
