@@ -1,8 +1,8 @@
 ---
 title: Radxa Orion O6
 description:
-published: false
-date: 2025-09-20T10:28:27.806Z
+published: true
+date: 2025-09-21T10:44:36.693Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -13,7 +13,7 @@ dateCreated: 2025-09-17T06:04:34.142Z
 The Orion O6 is an ITX-formatted ARM64 board with great specifications:
 
 - SoC: CIX CD8180
-- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
+- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.6GHz + 4x A52 @ 1.8GHz
 - GPU: Immortals G720 MC10
 - NPU: 30 TOPs
 - Network: 2x 5Gbit Ethernet (PCIe 4.0 1x lane each)
@@ -29,7 +29,7 @@ PCIe ports:
 
 # 2. Download
 
-You can find download links for the aarch64 iso in our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
+You can find download links for the aarch64 iso on our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
 
 We have two versions available: one is based on Radxa's 6.6 kernel, and the other is based on mainline.
 The version based on the 6.6 kernel has the name "ORION" attached and has support for the full feature set of that board.
