@@ -2,7 +2,7 @@
 title: Wiki de BredOS
 description:
 published: false
-date: 2025-09-19T16:01:01.196Z
+date: 2025-09-21T09:33:41.426Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -14,7 +14,7 @@ El pan es uno de los alimentos preparados más antiguos de la historia de la hum
 
 # 2. BredOS
 
-En BredOS, Elaboramos el concepto de utilizar ingredientes básicos —seleccionados con amor y pasión— para fabricar un producto simple pero versátil que puedas personalizar a tu gusto. Varias llanuras, tiene el potencial de transformarse en lo que usted desee. Ya sea dulce o salado, ligero o oscuro, lo suficientemente grande como para disfrutarlo con su familia o lo suficientemente pequeño como para llevarlo alrededor de sus aventuras.
+En BredOS, Elaboramos el concepto de utilizar ingredientes básicos —seleccionados con amor y pasión— para fabricar un producto simple pero versátil que puedas personalizar a tu gusto. Varias llanuras, tiene el potencial de transformarse en lo que usted desee. Dulce o salado, ligero o oscuro, lo suficientemente grande como para disfrutarlo con tu familia o lo suficientemente pequeño como para llevarlo alrededor de tus aventuras, BredOS está hecho para ti.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
@@ -24,11 +24,17 @@ En BredOS, Elaboramos el concepto de utilizar ingredientes básicos —seleccion
 - ¡Soporte al usuario con gran respeto! No importa si usted es una migaja o un plano!
 - ¡Simple y simple por diseño! ¡Sin problemas, garantizando un sistema ligero y receptivo!
 - Arquero - con personalización a medida para su disfrute.
-- Interfaces fáciles de usar donde se necesitan!
+
+## 3.1 Herramientas destacadas
+
+- Pastelería - [tu guía para tu propio Bred](/install/first-setup)!
+- Bred-Tools - [el cuchillo suizo a tu mano](/Tools)!
+- Govctl - [toma el control de tu CPU](/how-to/govctl)!
+- Bred-Config - [como raspi-config, ¡pero con mejor gusto!](/bredos-config)
 
 # 4. Requisitos del sistema
 
-Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos paneles de intel/amd x86. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/en/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/en/table-of-supported-devices).
+Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos paneles de intel/amd x86. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/table-of-supported-devices).
 
 ## 4.1 Requisitos mínimos del sistema
 
@@ -44,9 +50,13 @@ Para facilitarle la instalación, hemos preparado una línea de migajas criadas 
 
 ## 5.1 Instalación de imagen específica del dispositivo
 
-Estos son los tableros que más nos gustan. Para instalar BredOS en ellos, inicie con nuestra guía de instalación [imagen específica del dispositivo](/en/install/device-specific-image). o dar un vistazo a la página del dispositivo en nuestra wiki, que se encuentra en la barra de navegación a la izquierda de esto.
+Estas son imágenes para los tableros que más nos gustan. Para instalar estas imágenes BredOS en ellas, inicie con nuestra [imagen específica del dispositivo](/install/device-specific-image) guía de instalación, o dar un vistazo a la página del dispositivo en nuestra wiki, que se puede encontrar en la barra de navegación a la izquierda de esto.
+
+Visita nuestro [sitio de descargas](https://bredos.org/download.html) para averiguar si tu dispositivo es uno de ellos.
 
 ## 12.2 Instalación genérica
+
+Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/download.html) pero soporta el arranque de UEFI y se basa en la arquitectura x86 o ARM64, simplemente sigue nuestra guía para una instalación genérica disponible [here](/install/Installation-with-ISO).
 
 ## 5.3 Instalación del contenedor Docker
 
@@ -55,3 +65,24 @@ Estos son los tableros que más nos gustan. Para instalar BredOS en ellos, inici
 ```
 trituradores/bredos/bredos
 ```
+
+# 5. Solución de problemas
+
+Eche un vistazo a las páginas del dispositivo en la barra de navegación de esta página para encontrar problemas conocidos específicos de su dispositivo. Si tu problema no está listado, no dudes en contactar con nosotros directamente a través de [nuestros canales de soporte](#h-7-community-and-support).
+
+# 4. Comunidad y soporte
+
+Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:
+
+- [Telegram](https://t.me/bredoslinux)
+- [Discord](https://discord.gg/jwhxuyKXaa)
+- [GitHub](http://github.com/BredOS)
+
+# 8. Contribuyendo
+
+BredOS es un proyecto de código abierto, y las contribuciones son bienvenidas! Puedes contribuir de las siguientes maneras:
+
+- Reportar errores y problemas
+- Enviar parches y mejoras
+- Escriba y mejore la documentación
+- Ayuda a otros usuarios en los foros de la comunidad y chatea
