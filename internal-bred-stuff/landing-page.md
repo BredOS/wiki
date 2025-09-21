@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-21T08:45:24.702Z
+date: 2025-09-21T08:51:39.730Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -56,7 +56,7 @@ docker pull bredos/bredos
 ```
 
 # 6. Troubleshooting
-Take a look at the device pages in the navigation bar on this page to find known issues specific to your device. If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7.-community-and-support).
+Take a look at the device pages in the navigation bar on this page to find known issues specific to your device. If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
 
 # 7. Community and Support
 Join the BredOS community to get support, share ideas, and contribute to the project:
