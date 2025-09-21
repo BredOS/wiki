@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: false
-date: 2025-09-21T11:15:59.465Z
+date: 2025-09-21T11:23:38.213Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -16,7 +16,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 | Device            | UEFI  | SPI | Known Issues | Installation type |Guides |
 |-------------------|-------|-----------|--------------|--|--|
 | Cool Pi 4 Model B       |  No   |   No   | Wifi doesn't work.| [Device specific image](/install/device-specific-image)| |
-|FydeTab Duo|	Yes | No	|	|[Device specific image](/install/device-specific-image)|[fydetab-duo](/en/fydetab-duo) |
+|FydeTab Duo|	Yes | No	|	|[Device specific image](/install/device-specific-image)|[Fydetab Duo](/en/fydetab-duo) |
 |Indiedroid Nova| Yes |	No |	|[Device specific image](/install/device-specific-image)| |
 |ITX-3588J|	Yes |	No | Many, take a look at the device page	|[Device specific image](/install/device-specific-image)|[ITX-3588J](/itx-3588j) |
 |Khadas Edge 2| No | Yes |	|[Device specific image](/install/device-specific-image)| |
@@ -45,7 +45,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Radxa Rock 5C|Yes|Yes[^1]|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
 |Radxa Rock 5D|No|No|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
 |Radxa Rock 5T|No|Yes |	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
-| Radxa Orion O6 |  Yes   |Yes| PCIe Gen 4 devices cause the board to become unstable|[Installation with ISO](/install/Installation-with-ISO)| [radxa-orion-o6](/radxa-orion-o6)|
+| Radxa Orion O6 |  Yes   |Yes| PCIe Gen 4 devices cause the board to become unstable|[Installation with ISO](/install/Installation-with-ISO)| [Radxa Orion O6](/radxa-orion-o6)|
 {.dense}
 
 [^1]: Requires [this module](https://radxa.com/products/accessories/spi-flash-module/).
