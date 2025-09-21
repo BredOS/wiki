@@ -2,7 +2,7 @@
 title: First setup (Device Specific Image)
 description:
 published: true
-date: 2025-09-17T05:44:22.530Z
+date: 2025-09-21T09:36:01.964Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -83,5 +83,5 @@ Please check that everything is included: flour, water, salt, and yeast. Was the
 
 Now sit down and get comfy with your BredOS. See this as your starting point, not the destination. Feel free to customize everything to your liking, and don’t hesitate to share your questions, experiences, and cool projects on our Discord and Telegram channels.
 
-> You may want take a look at our [how to's](/en/how-to).
+> You may want take a look at our [how to's](/en/how-to). But please be aware that authors over at [how to's](/en/how-to) tend to use are more techincal tone.
 > {.is-success}
