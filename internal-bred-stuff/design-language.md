@@ -2,7 +2,7 @@
 title: Design language
 description: 
 published: false
-date: 2025-09-17T14:16:06.123Z
+date: 2025-09-21T08:48:38.458Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -39,6 +39,8 @@ This page describes the design language we follow for our articles. This set of 
 - Important words must be formatted as inline code. Don't overuse or underuse this feature.
 
 - Important notes must be placed inside an infobox. The same rule applies to errors and warnings.
+
+- If your refer to a section of an article you must link to that section.
 
 # 4. Screenshots and Photos
 
