@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-09-16T10:19:46.986Z
+date: 2025-09-21T09:36:55.019Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -39,6 +39,8 @@ dateCreated: 2024-08-27T06:01:06.954Z
 - [Running Windows Applications under BredOS](/how-to/proton-run)
 
 - [How to handle reported disk failures](/how-to/disk-failure)
+
+- [How to install Android Apps to BredOS](/en/how-to/waydroid)
 
 > BredOSを最大限に活用するために、これらのガイドを探索してください！
 > {.is-info}
