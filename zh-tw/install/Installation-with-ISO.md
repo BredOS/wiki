@@ -1,8 +1,8 @@
 ---
 title: First Setup (.iso image)
 description:
-published: false
-date: 2025-09-18T08:41:53.939Z
+published: true
+date: 2025-09-21T10:53:14.618Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -27,14 +27,14 @@ After you downloaded the .iso file from our [Github page](https://github.com/Bre
 
 ![1-scaled.png](/first-setup/1-scaled.png)
 
-## 3.2 Bred is enjoyed all over the world
+## 3.2 Bred is enjoyed all over the world (Language)
 
 - Before we start our journey we need to know how we should comunicate the best. What language do you speak? What language do you speak, what timeformat you use and what currency you are familar with? And what currency you are familiar with?
 
 ![2-scaled.png](/first-setup/2-scaled.png)
 Look up your prefered language and click on it. A window then pops up where you can choose your locale. Time and dateformat and your currency should be filled in automatically. Please check them before continuing and feel free to alter them to your preferences.
 
-## 3.3 About the kneading technique
+## 3.3 About the kneading technique (Keyboard)
 
 Let's talk about knotting. All humans are different so there is no "true" knotting technice. To accommodate this, you can choose you technique based on your country.
 ![6-scaled.png](/first-setup/6-scaled.png)
@@ -43,14 +43,14 @@ After you clicked on your country you can choose your layout. As its name sugges
 > Use the textbar to test your layout. This is important later when you have to type in your password!
 > {.is-info}
 
-## 3.4 The process of rising
+## 3.4 The process of rising (Timezone)
 
 - Here at Bakery we work with love. So we fully admit that Bred needs time to become the beloved product we all know. For that we need to know the timezone you are in.
 
 ![9-scaled.png](/first-setup/9-scaled.png)
 Select your Region and Zone with the dropdown menus. Your current time then should show up just below them for you to make sure the time is set correctly.
 
-## 3.5 While we wait, we get to know each other
+## 3.5 While we wait, we get to know each other (Account)
 
 - Now that our dought is knotted and we know how long it will take it to rise, we have some time to know each better. Tell me, what’s your name? Do you have a nickname? Tell me, whats your name, do you have a nickname and what name would you give your Bred to if i would ask?
 
@@ -66,7 +66,7 @@ Every user has an ID assigned to them. This ID is used internally by programs, t
 
 If you want to skip the LightDM login screen and log in to your system without a password, toggle the switch accordingly.
 
-## 3.6 Sharing is caring
+## 3.6 Sharing is caring (Partitioning)
 
 - As you may want to share your storage with other things, we now prepare spliting it in parts. Or do you want to fill it all up with Bred? Thats how we would choose, but we respect your choice either way.
 
@@ -82,14 +82,14 @@ If you have data on the disk that you want to preserve, click "Open GParted" to 
 > For the installation of BredOS you need a 512MB boot partition and at least 8GB root partition.
 > {.is-info}
 
-## 3.7 The oven is heated up
+## 3.7 The oven is heated up (Summary)
 
 - Since the dough has risen and the oven is hot, we pause to check that we did not forget anything. Luckily Bakery has automatically created a checklist for us.
 
 ![11-scaled.png](/first-setup/11-scaled.png)
 Please check that everything is included: flour, water, salt, and yeast. Was the kneading done properly? Did we let the dough rise long enough? If everything is okay, hit 'Install'.
 
-## 3.8 There is no better smell than fresh Bred
+## 3.8 There is no better smell than fresh Bred (Installation)
 
 - Now grab a coffee or tea and stare into the oven for a while. Reflect on what you’ve learned in the Bakery while the pleasant smell of Bred tickles your nose. Enjoy this waiting time with eager anticipation as your Bred finishes baking.
 
