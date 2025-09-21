@@ -2,7 +2,7 @@
 title: Fydetab Duo
 description: 
 published: true
-date: 2025-09-17T10:16:17.074Z
+date: 2025-09-21T09:57:45.810Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -18,6 +18,9 @@ Key specifications:
 - Memory & storage: 8 GB LPDDR4X RAM; storage is 128 GB eMMC. Expandable via microSD. 
 - Battery: ≈ 42 Wh, estimated battery life up to ~10 hours. 
 - Other features: Wi‑Fi 6, Bluetooth 4.2, fingerprint sensor, stereo speakers, 5 MP front camera, stylus support. 
+
+> We nicknamed it "*FydeTube*", "*FDT*", or "*Duo*", take your pick.
+{.is-info}
 
 # 2. Download
 You can find download links for images in our [website](https://bredos.org/download.html)!
