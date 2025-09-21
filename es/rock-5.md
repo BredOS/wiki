@@ -2,7 +2,7 @@
 title: Serie Roca 5
 description:
 published: true
-date: 2025-09-17T09:37:33.486Z
+date: 2025-09-21T10:01:36.937Z
 tags:
 editor: markdown
 dateCreated: 2024-21T09:12:56.606Z
@@ -21,6 +21,18 @@ dateCreated: 2024-21T09:12:56.606Z
 | Roca 5 ITX   | Nu   | Sí        |                                                                                    |
 | CM5          | Nu   | Sí        |                                                                                    |
 | CM5 Lite     | Nu   | Sí        |                                                                                    |
+
+### Tabset {.tabset}
+
+#### Roca 5B Plus
+
+> Lo apodamos "_BP_" porque la compañía petrolera.
+> {.is-info}
+
+#### Roca 5C
+
+> Lo apodamos "_ICU_" porque es un helado Usurper.
+> {.is-info}
 
 # 2. Descargar
 
