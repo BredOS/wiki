@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description:
 published: false
-date: 2025-09-19T16:01:196Z
+date: 2025-09-21T09:33:41.426Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15：05：44.344Z
@@ -14,7 +14,7 @@ dateCreated: 2025-09-19T15：05：44.344Z
 
 # 2. BredOS
 
-在BredOS, 我们珍视使用基本成分——用爱情和热情选择——来制作一种你可以根据你的品味定制的简单但多用途的产品。 它服务于平原，有可能变成你们所希望的一切。 无论是甜美还是美丽，光明还是黑暗，大到足以与你的家人一起享受它，或小到足以带着你的冒险感冒险。
+在BredOS, 我们珍视使用基本成分——用爱情和热情选择——来制作一种你可以根据你的品味定制的简单但多用途的产品。 它服务于平原，有可能变成你们所希望的一切。 无论是甜蜜还是盐、浅或黑色， 大到足以与你的家人一起享受它，或者小到足以带着你的冒险，BredOS是为你制作的。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
@@ -24,11 +24,17 @@ dateCreated: 2025-09-19T15：05：44.344Z
 - 尊敬的用户支持！ 无论你是粉碎或面包！
 - 设计简单明了！ 没有博客，确保一个轻量和响应系统！
 - 基于Archy - 根据您的喜好自定义.
-- 用户友好接口需要它们！
+
+## 3.1 特色工具
+
+- Bakery - [your guide to your own Bred](/install/first-setup)!
+- Bred-Tools - [你手上的swiss knife](/Tools)！
+- Govctl - [控制您的 CPU](/how-to/govctl) ！
+- Bed-配置 - [就像皮-config，但是有更好的味道！](/bredos-config)
 
 # 4. 系统要求
 
-我们支持一系列广泛的设备——从振奋人心的ARM系统和实验性RISC-V安装到普通的lame x86整数/amd 板上。 我们已经覆盖了您，您是否使用了我们的 [主线。 如此安装](/en/install/Installation-with-ISO) 或指向我们[支持的设备表](/en/table-of-supported-devices) 上我们热切支持的设备列表。
+我们支持一系列广泛的设备——从振奋人心的ARM系统和实验性RISC-V安装到普通的lame x86整数/amd 板上。 我们已经覆盖了您，您是否使用了我们的 [主线。 如此安装](/install/Installation-with-ISO) 或指向我们[支持的设备表](/table-of-supported-devices) 上我们热切支持的设备列表。
 
 ## 4.1 最低限度的系统要求
 
@@ -44,9 +50,13 @@ dateCreated: 2025-09-19T15：05：44.344Z
 
 ## 5.1 设备特定图像安装
 
-这是我们最喜欢的看板。 要在它们上安装 BredOS ，要么从我们的 [设备特定图像](/en/install/device-specific-image) 安装指南开始， 或者在我们wiki的设备页面上看一下这个页面的导航栏。
+这些是我们最喜欢的看板的图像。 要在它们上安装这个BredOS 图像，要么从我们的 [设备特定图像](/install/device-specific-image) 安装指南开始， 或者在我们wiki的设备页面上看一眼，这可以在这个页面的左侧导航栏找到。
+
+访问我们的 [下载站点] (https://bredos.org/download.html) 来查找您的设备是否是其中之一。
 
 ## 5.2 通用安装
+
+If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
 
 ## 5.3 码头集装箱安装
 
@@ -55,3 +65,24 @@ dateCreated: 2025-09-19T15：05：44.344Z
 ```
 停靠拉入面包/bredos
 ```
+
+# 5. 故障排除
+
+查看此页面导航栏中的设备页面来查找您设备特有的问题。 如果您的问题没有列出在这里，请随时通过[我们的支持频道](#h-7-community-and-support)直接联系我们。
+
+# 4. 社区与支持
+
+加入 BredOS 社区，获取支持、分享想法并为项目做出贡献：
+
+- [Telegram](https://t.me/bredoslinux)
+- [Discord](https://discord.gg/jwhuyKXaa)
+- [GitHub](http://github.com/BredOS)
+
+# 8. 贡献
+
+BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献：
+
+- 报告错误和问题
+- 提交补丁和改进
+- 编写和改进文档
+- 在社区论坛和聊天中帮助其他用户
