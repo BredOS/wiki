@@ -2,7 +2,7 @@
 title: Rock 5 Series
 description:
 published: true
-date: 2025-09-17T09:37:33.486Z
+date: 2025-09-21T10:01:36.937Z
 tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -21,6 +21,18 @@ dateCreated: 2024-09-21T09:12:56.606Z
 | Rock 5 ITX   | No   | Yes       |                                                                  |
 | CM5          | No   | Yes       |                                                                  |
 | CM5 Lite     | No   | Yes       |                                                                  |
+
+### Tabset {.tabset}
+
+#### Rock 5B Plus
+
+> We nicknamed it "_BP_" because, the oil company.
+> {.is-info}
+
+#### Rock 5C
+
+> We nicknamed it "_ICU_" because, its an Ice Cream Usurper.
+> {.is-info}
 
 # 2. Download
 
