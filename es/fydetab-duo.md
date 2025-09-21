@@ -2,7 +2,7 @@
 title: Dúo de Fíjaros
 description:
 published: true
-date: 2025-09-17T10:16:17.074Z
+date: 2025-09-21T09:57:45.810Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -19,6 +19,9 @@ Especificaciones clave:
 - Memoria y almacenamiento: 8 GB LPDDR4X RAM; almacenamiento es de 128 GB eMMC. Expandible a través de microSD.
 - Batería de 42 Wh, duración estimada de la batería hasta ~10 horas.
 - Otras características: Wi-Fi 6, Bluetooth 4.2, sensor de huella dactilar, altavoces estéreo, cámara frontal 5 MP, soporte para nosotros.
+
+> Lo llamamos "_FydeTube_", "_FDT_", o "_Dúo_", toma tu decisión.
+> {.is-info}
 
 # 2. Descargar
 
