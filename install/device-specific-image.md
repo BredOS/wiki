@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-21T11:40:14.449Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -19,9 +19,9 @@ You can find download links for images in our [website](https://bredos.org/downl
 
 # 3. Installation
 Installation varies from device to device and the medium you want to install BredOS to. In this guide we will cover installation to
-- `3.1 non-removable eMMC`
-- `3.2 removable eMMC and SD Card`
-- `3.3 nVME`
+- [3.1 non-removable eMMC](#h-31-non-removable-emmc)
+- [3.2 removable eMMC and SD Card](#h-32-removable-emmc-an-sd-card)
+- [3.3 nVME](#h-33-nvme)
 
 > Before you begin please check which options are available with your device!
 {.is-info}
@@ -43,7 +43,7 @@ In the following we describe how to flash eMMC with an adapter. If you do not ow
 {.is-info}
 
 #### 3.2.1.1 with uSD adapter
-- As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to to convert them into an SD Card.
+- As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to convert them into an SD Card.
 
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 - Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
