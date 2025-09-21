@@ -2,7 +2,7 @@
 title: BredOS Config
 description: 
 published: false
-date: 2025-09-21T09:27:04.136Z
+date: 2025-09-21T09:27:32.905Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
@@ -23,7 +23,7 @@ sudo pacman -S bredos-config
 
 # 2. Features
 ## 2.1 Device Tree Manager
-- This option helps you manage device trees and device tree overlays, which are used to alter how the kernel interacts with your device. A simple example would be using them to disable the LED on an Orange Pi 5 Plus, but there is much more to explore. Follow [this article](/en/how-to/how-to-enable-dtbos) to learn more about it.
+- This option helps you manage device trees and device tree overlays, which are used to alter how the kernel interacts with your device. A simple example would be using them to disable the LED on an Orange Pi 5 Plus, but there is much more to explore. Follow [this article](/how-to/how-to-enable-dtbos) to learn more about it.
 
 ![dtb-manager.png](/bredos-config/dtb-manager.png)
 
