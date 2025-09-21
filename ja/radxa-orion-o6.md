@@ -1,8 +1,8 @@
 ---
 title: Radxa Orion O6
 description:
-published: false
-date: 2025-09-20T10:28:27.806Z
+published: true
+date: 2025-09-21T10:44:36.693Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -13,7 +13,7 @@ dateCreated: 2025-09-17T06:04:34.142Z
 オリオンO6は、優れた仕様を備えたITX形式のARM64ボードです。
 
 - SoC: CIX CD8180
-- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
+- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.6GHz + 4x A52 @ 1.8GHz
 - GPU: Immortals G720 MC10
 - NPU: 30 TOPs
 - ネットワーク: 2x 5Gbit イーサネット (各PCIe 4.0 1x レーン)
