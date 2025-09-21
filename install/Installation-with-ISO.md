@@ -2,7 +2,7 @@
 title: First Setup (.iso image)
 description: 
 published: true
-date: 2025-09-21T10:49:39.063Z
+date: 2025-09-21T10:53:14.618Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -76,7 +76,7 @@ If you have data on the disk that you want to preserve, click "Open GParted" to 
 
 ![11-scaled.png](/first-setup/11-scaled.png)
 Please check that everything is included: flour, water, salt, and yeast. Was the kneading done properly? Did we let the dough rise long enough? If everything is okay, hit 'Install'.
-## 3.8 There is no better smell than fresh Bred
+## 3.8 There is no better smell than fresh Bred (Installation)
 - Now grab a coffee or tea and stare into the oven for a while. Reflect on what you’ve learned in the Bakery while the pleasant smell of Bred tickles your nose. Enjoy this waiting time with eager anticipation as your Bred finishes baking.
 
 ![13-scaled.png](/first-setup/13-scaled.png)
