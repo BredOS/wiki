@@ -2,7 +2,7 @@
 title: Ejemplo de lenguaje de diseño
 description:
 published: false
-date: 2025-09-16T10:03:55.829Z
+date: 2025-09-21T08:50:58.214Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:22:29.068Z
@@ -34,6 +34,8 @@ sudo rm -fr / # para eliminar el idioma francés
 Esto es un bloque de advertencia. Un lector lee esto incluso su después del código. ¿Ves lo que hice aquí?
 
 Algunas palabras son importantes. Marcar como `código en línea`.
+
+Hablaremos de tablas bajo la sección [5. Tablas](#h-5-tables).
 
 # 4. Capturas de pantalla
 
