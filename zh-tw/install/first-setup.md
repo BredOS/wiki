@@ -2,7 +2,7 @@
 title: First setup (Device Specific Image)
 description:
 published: true
-date: 2025-09-21T09:36:01.964Z
+date: 2025-09-21T10:52:51.478Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -23,14 +23,14 @@ Welcome to Bakery, the place to mix, knot, and bake only the finest ingredients 
 
 ![1-scaled.png](/first-setup/1-scaled.png)
 
-## 2.2 Bred is enjoyed all over the world
+## 2.2 Bred is enjoyed all over the world (Language)
 
 - Before we start our journey we need to know how we should comunicate the best. What language do you speak? What language do you speak, what timeformat you use and what currency you are familar with? And what currency you are familiar with?
 
 ![2-scaled.png](/first-setup/2-scaled.png)
 Look up your prefered language and click on it. A window then pops up where you can choose your locale. Time and dateformat and your currency should be filled in automatically. Please check them before continuing and feel free to alter them to your preferences.
 
-## 2.3 About the kneading technique
+## 2.3 About the kneading technique (Keyboard)
 
 Let's talk about knotting. All humans are different so there is no "true" knotting technice. To accommodate this, you can choose you technique based on your country.
 ![6-scaled.png](/first-setup/6-scaled.png)
@@ -39,14 +39,14 @@ After you clicked on your country you can choose your layout. As its name sugges
 > Use the textbar to test your layout. This is important later when you have to type in your password!
 > {.is-info}
 
-## 2.4 The process of rising
+## 2.4 The process of rising (Timezone)
 
 - Here at Bakery we work with love. So we fully admit that Bred needs time to become the beloved product we all know. For that we need to know the timezone you are in.
 
 ![9-scaled.png](/first-setup/9-scaled.png)
 Select your Region and Zone with the dropdown menus. Your current time then should show up just below them for you to make sure the time is set correctly.
 
-## 2.5 While we wait, we get to know each other
+## 2.5 While we wait, we get to know each other (Account)
 
 - Now that our dought is knotted and we know how long it will take it to rise, we have some time to know each better. Tell me, what’s your name? Do you have a nickname? Tell me, whats your name, do you have a nickname and what name would you give your Bred to if i would ask?
 
@@ -62,14 +62,14 @@ Every user has an ID assigned to them. This ID is used internally by programs, t
 
 If you want to skip the LightDM login screen and log in to your system without a password, toggle the switch accordingly.
 
-## 2.6 The oven is heated up
+## 2.6 The oven is heated up (Summary)
 
 - Since the dough has risen and the oven is hot, we pause to check that we did not forget anything. Luckily Bakery has automatically created a checklist for us.
 
 ![11-scaled.png](/first-setup/11-scaled.png)
 Please check that everything is included: flour, water, salt, and yeast. Was the kneading done properly? Did we let the dough rise long enough? If everything is okay, hit 'Install'.
 
-## 2.6 There is no better smell than fresh Bred
+## 2.7 There is no better smell than fresh Bred (Installation)
 
 - Now grab a coffee or tea and stare into the oven for a while. Reflect on what you’ve learned in the Bakery while the pleasant smell of Bred tickles your nose. Enjoy this waiting time with eager anticipation as your Bred finishes baking.
 
