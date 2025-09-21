@@ -2,7 +2,7 @@
 title: 设计语言示例
 description:
 published: false
-date: 2025-09-16T10:03:55.829Z
+date: 2025-09-21T08:50:58.214Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:22:29.068Z
@@ -34,6 +34,8 @@ sudo rm -fr / # 去除法语语言
 缩小一个警告块。 阅读器在代码块后即可读取它。 看看我在这里做了什么？
 
 有些词是重要的。 标记它们为“内联代码”。
+
+我们将讨论第[5]节下的表格。 表格](#h-5-tables)。
 
 # 4. 屏幕截图
 
