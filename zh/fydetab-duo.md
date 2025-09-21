@@ -2,7 +2,7 @@
 title: FydetabDuo
 description:
 published: true
-date: 2025-09-17T10：16：17.074Z
+date: 2025-09-21T09:57:45.810Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -19,6 +19,9 @@ FydetabDuo是由Fyde Innovations开发的一张2hinncrow1平板电脑。 FydeOS 
 - 内存和存储︰ 8 GB LPDDR4X RAM；存储率为128 GB eMC。 可通过微型SD扩展。
 - 电池：约42小时电池寿命估计高达~10小时。
 - 其他功能：Wifi 6，蓝牙 4.2，指纹传感器，立体声器，5MP 前置摄像头，样式表支持。
+
+> 我们把它命名为“_FydeTube_”、“_FDT_”或“_Duo_”，选择您的选择。
+> {.is-info}
 
 # 2. 下载
 
