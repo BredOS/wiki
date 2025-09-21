@@ -2,7 +2,7 @@
 title: Primera configuración (Imagen Específica del Dispositivo)
 description:
 published: true
-date: 2025-09-17T05:44:22.530Z
+date: 2025-09-21T09:36:01.964Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -83,5 +83,5 @@ Por favor, comprueba que todo está incluido: harina, agua, sal y levadura. ¿Se
 
 Ahora siéntate y cómete con tu BredOS. Véase esto como su punto de partida, no el destino. Siéntase libre de personalizar todo a tu gusto, y no dudes en compartir tus preguntas, experiencias y proyectos interesantes en nuestros canales de Discord y Telegram.
 
-> Tal vez quieras echar un vistazo a nuestro [cómo hacer] (/en/how-to).
+> Tal vez quieras echar un vistazo a nuestro [cómo hacer] (/en/how-to). Pero ten en cuenta que los autores en [cómo hacer] (/en/how-to) tienden a usar son más de tono técnico.
 > {.is-success}
