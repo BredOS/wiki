@@ -1,8 +1,8 @@
 ---
 title: Primera configuración (imagen .is)
 description:
-published: false
-date: 2025-09-18T08:41:53.939Z
+published: true
+date: 2025-09-21T10:53:14.618Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -27,14 +27,14 @@ Después de descargar el . así que el archivo de nuestra [página de Github](ht
 
 ![1-scaled.png](/first-setup/1-scaled.png)
 
-## 3.2 El criado se disfruta en todo el mundo
+## 3.2 El criado se disfruta en todo el mundo (idioma)
 
 - Antes de comenzar nuestro viaje tenemos que saber cómo debemos comunicar lo mejor. ¿En qué idioma habla? ¿Qué formato de hora usas? ¿Con qué idioma habla, qué formato de tiempo utiliza y con qué moneda es familiar?
 
 ![2-scaled.png](/first-setup/2-scaled.png)
 Busca tu idioma preferido y haz clic en él. Una ventana aparece donde puedes elegir tu locale. La hora y el formato de la fecha y la moneda deben ser rellenados automáticamente. Por favor, compruébalos antes de continuar y siéntete libre de modificarlos según tus preferencias.
 
-## 3.3 Sobre la técnica de amasado
+## 3.3 Sobre la técnica de amasado (teclado)
 
 Hablemos de amasar. Todos los seres humanos son diferentes así que no hay una técnica "verdadera" que tenga un aspecto técnico. Para acomodar esto, usted puede elegir la técnica basada en su país.
 ![6-scaled.png](/first-setup/6-scaled.png)
@@ -43,14 +43,14 @@ Después de hacer clic en tu país puedes elegir tu diseño. Como su nombre sugi
 > Utilice la barra de texto para probar su diseño. ¡Esto es importante más tarde cuando tienes que escribir tu contraseña!
 > {.is-info}
 
-## 3.4 El proceso de ascenso
+## 3.4 El proceso de ascenso (zona horaria)
 
 - Aquí en Bakery trabajamos con amor. Así que reconocemos plenamente que el criado necesita tiempo para convertirse en el producto amado que todos conocemos. Para ello necesitamos conocer la zona horaria en la que se encuentra.
 
 ![9-scaled.png](/first-setup/9-scaled.png)
 Selecciona tu región y zona con los menús desplegables. Su hora actual debería aparecer justo debajo de ellos para asegurarse de que el tiempo está configurado correctamente.
 
-## 3.5 Mientras esperamos, llegamos a conocernos mutuamente
+## 3.5 Mientras esperamos, nos conocemos (Cuenta)
 
 - Ahora que se nutre y sabemos cuánto tiempo tardará en subirse, tenemos algo de tiempo para conocerlos mejor. Díganme, ¿cuál es tu nombre? ¿Tienes un apodo? Díganme, ¿cuál es su nombre, tiene un apodo y a qué nombre le darías a tu Bred si me lo pregunta?
 
@@ -66,7 +66,7 @@ Cada usuario tiene un ID asignado a él. Este ID es utilizado internamente por l
 
 Si desea saltar la pantalla de inicio de sesión de LightDM e iniciar sesión en su sistema sin contraseña, cambie el interruptor en consecuencia.
 
-## 3.6 Compartir está cuidando
+## 3.6 Compartir es cuidadoso (Particionar)
 
 - Como tal vez quieras compartir tu almacenamiento con otras cosas, ahora preparamos dividirlo en partes. ¿O quieres llenarlo todo con Bred? Así es como elegimos, pero respetamos su elección de cualquier manera.
 
@@ -82,14 +82,14 @@ Si tiene datos en el disco que desea conservar, haga clic en "Abrir GParted" par
 > Para la instalación de BredOS necesita una partición de arranque de 512MB y al menos una partición raíz de 8GB.
 > {.is-info}
 
-## 3.7 El horno está calentado
+## 3.7 El horno se calienta (Summary)
 
 - Puesto que la masa ha subido y el horno está caliente, nos pausamos para comprobar que no olvidamos nada. Luckily Bakery ha creado automáticamente una lista de verificación para nosotros.
 
 [11-scaled.png](/first-setup/11-scaled.png)
 Por favor, comprueba que todo está incluido: harina, agua, sal y levadura. ¿Se hizo la amasada correctamente? ¿Dejamos que la masa aumentara lo suficiente? Si todo está bien, pulse 'Install'.
 
-## 3.8 No hay mejor olor que Bred fresco
+## 3.8 No hay mejor olor que Bred fresco (Instalación)
 
 - Ahora toma un café o un té y mira el horno durante un tiempo. Reflexionate sobre lo que has aprendido en la Pastelería mientras el agradable olor de Bred te da la nariz. Disfruta de este tiempo de espera con ansias de anticipación mientras tu Bred termina de hornear.
 
