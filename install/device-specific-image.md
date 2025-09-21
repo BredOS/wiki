@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-09-21T11:40:14.449Z
+date: 2025-09-21T11:40:41.987Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -20,7 +20,7 @@ You can find download links for images in our [website](https://bredos.org/downl
 # 3. Installation
 Installation varies from device to device and the medium you want to install BredOS to. In this guide we will cover installation to
 - [3.1 non-removable eMMC](#h-31-non-removable-emmc)
-- [3.2 removable eMMC and SD Card](#h-32-removable-emmc-an-sd-card)
+- [3.2 removable eMMC and SD Card](#h-32-removable-emmc-and-sd-card)
 - [3.3 nVME](#h-33-nvme)
 
 > Before you begin please check which options are available with your device!
