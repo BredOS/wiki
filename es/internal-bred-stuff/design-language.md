@@ -2,7 +2,7 @@
 title: Idioma de diseño
 description:
 published: false
-date: 2025-09-17T14:16:06.123Z
+date: 2025-09-21T08:48:38.458Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -38,6 +38,8 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 - Las palabras importantes deben ser formateadas como código en línea. No abuses ni infrautilices esta función.
 
 - Las notas importantes deben colocarse dentro de una infobox. La misma regla se aplica a los errores y advertencias.
+
+- Si usted se refiere a una sección de un artículo usted debe enlazar a esa sección.
 
 # 4. Capturas y fotos
 
