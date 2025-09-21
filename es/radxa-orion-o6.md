@@ -1,8 +1,8 @@
 ---
 title: Radxa Orion O6
 description:
-published: false
-date: 2025-09-20T10:28:27.806Z
+published: true
+date: 2025-09-21T10:44:36.693Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -13,7 +13,7 @@ dateCreated: 2025-09-17T06:04:34.142Z
 Orion O6 es una placa ARM64 con formato ITX con grandes especificaciones:
 
 - SoC: CIX CD8180
-- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
+- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.6GHz + 4x A52 @ 1.8GHz
 - GPU: Inmortales G720 MC10
 - NPU: 30 MES
 - Red: Ethernet 2x 5Gbit (PCIe 4.0 1x carril cada uno)
