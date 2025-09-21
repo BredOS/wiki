@@ -1,5 +1,5 @@
 ---
-title: Rosetta Stone
+title: Piedra de Rosetta
 description:
 published: false
 date: 2025-09-21T08:17:46.114Z
