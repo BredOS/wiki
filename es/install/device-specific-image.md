@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-21T11:42:40.378Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -23,9 +23,9 @@ Para la instalación de BredOS proporcionamos imágenes específicas del disposi
 
 La instalación varía de dispositivo a dispositivo y el medio en el que desea instalar BredOS. En esta guía cubriremos la instalación a
 
-- `3.1 eMC` no extraíble
-- `3.2 removable eMMC y SD Card`
-- `3.3 nVME`
+- [3.1 eMC no extraíble](#h-31-non-removable-emmc)
+- [3.2 Tarjeta SD y eMC extraíbles](#h-32-removable-emmc-and-sd-card)
+- [3.3 nVME](#h-33-nvme)
 
 > Antes de comenzar, por favor compruebe qué opciones están disponibles en su dispositivo!
 > {.is-info}
@@ -42,11 +42,11 @@ Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto,
 > Si usted está familiarizado con flashear Raspberry OS no necesita leer más. Simplemente coja su tarjeta SD-Card o eMMC, la imagen BredOS específica de su dispositivo y parpadee con su herramienta preferida.
 > {.is-info}
 
-En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee un adaptador adecuado deje el eMMC conectado a su SBC y siga `3.1 eMC` no extraíble.
+En los siguientes describimos cómo flashear eMC con un adaptador. Si no posees un adaptador adecuado, deja el eMMC conectado a tu SBC y sigue [3.1 eMC no extraíble](#h-31-non-removable-emmc).
 
 ### 3.2.1 Prepare su eMMC extraíble
 
-> Salta a `3.2.2 Flashing eMMC / SD Card` si no estás usando el almacenamiento eMMC.
+> Saltar a [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card) si no estás usando almacenamiento eMMC.
 > {.is-info}
 
 #### 3.2.1.1 con adaptador uSD
@@ -83,7 +83,7 @@ Como el arranque directo desde la unidad nVME no está soportado por nuestros di
 
 ### 3.3.2 Flashear nVME
 
-Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Después de flashear, conecte la unidad al puerto nVME de su SBC.
+Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en [3.2. Flashear eMMC / Tarjeta SD](#h-322-flashing-emmc-sd-card), asegurándose de usar la letra de unidad o ruta correcta para tu unidad NVMe. Después de flashear, conecte la unidad al puerto nVME de su SBC.
 
 ### 3.3.3 Orden de Arranque
 
