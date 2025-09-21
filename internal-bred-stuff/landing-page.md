@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-21T08:51:39.730Z
+date: 2025-09-21T09:33:41.426Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -27,7 +27,7 @@ At BredOS, we cherish the concept of using basic ingredients—selected with lov
  - Bakery - [your guide to your own Bred](/install/first-setup)!
  - Bred-Tools - [the swiss knife at your hand](/Tools)!
  - Govctl - [take control of your CPU](/how-to/govctl)!
- - Bred-Config - like raspi-config, but with better taste!
+ - Bred-Config - [like raspi-config, but with better taste!](/bredos-config)
  
  # 4. System Requirements
 We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/table-of-supported-devices).
@@ -47,7 +47,7 @@ These are images for the boards we love the most. To install this BredOS images 
 Visit our [download site](https://bredos.org/download.html) to find out if your device is one of them.
 
 ## 5.2 Generic installation
-If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/en/install/Installation-with-ISO).
+If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
 
 ## 5.3 Docker container installation
 - Easy as one line of command:
