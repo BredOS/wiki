@@ -2,7 +2,7 @@
 title: 最初のセットアップ（デバイス固有の画像）
 description:
 published: true
-date: 2025-09-17T05:44:22.530Z
+date: 2025-09-21T09:36:01.964Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -86,5 +86,5 @@ LightDM のログイン画面をスキップし、パスワードなしでシス
 
 今座って、あなたのBredOSで快適に取得します。 目的地ではなく、あなたの出発点としてこれを見なさい。 自由にカスタマイズできます。DiscordやTelegramのチャネルであなたの質問や経験、素晴らしいプロジェクトを共有することを躊躇しないでください。
 
-> [How to's](/en/how-to) をご覧ください。
+> [How to's](/en/how-to) をご覧ください。 しかし、[How to's](/en/how-to)で使用する傾向のある著者は、より技術的なトーンであることに注意してください。
 > {.is-success}
