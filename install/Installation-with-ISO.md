@@ -2,7 +2,7 @@
 title: First Setup (.iso image)
 description: 
 published: true
-date: 2025-09-21T10:47:26.234Z
+date: 2025-09-21T10:49:39.063Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
@@ -22,13 +22,13 @@ After you downloaded the .iso file from our [Github page](https://github.com/Bre
 
 ![1-scaled.png](/first-setup/1-scaled.png)
 
-## 3.2 Bred is enjoyed all over the world
+## 3.2 Bred is enjoyed all over the world (Language)
 - Before we start our journey, we need to agree on how to communicate best. What language do you speak? What time format do you use? And what currency you are familiar with?
 
-![2-scaled.png](/first-setup/2-scaled.png)
+![2-scaled.png](/first-setup/2-scaled.png) 
 Look up your prefered language and click on it. A window will then pop up where you can choose your locale. The time and date format, as well as your currency, should be filled in automatically. Please check them before continuing and feel free to adjust them to your preferences.
 
-## 3.3 About the kneading technique
+## 3.3 About the kneading technique (Keyboard)
 Let's talk about kneading. Everyone is different, so there is no single 'true' kneading technique. To accommodate this, you can choose you technique based on your country.
 ![6-scaled.png](/first-setup/6-scaled.png)
 After you click on your country you can choose your layout. As the name suggests "Normal" is the layout most commonly used. If you are unsure use this. If you have an unusual keyboard, like those sold by Apple, choose the layout accordingly.
@@ -37,12 +37,12 @@ After you click on your country you can choose your layout. As the name suggests
 {.is-info}
 
 
-## 3.4 The process of rising
+## 3.4 The process of rising (Timezone)
 - Here at Bakery, we work with love. We fully admit that Bred needs time to become the beloved product we all know. For that, we need to know your time zone.
 
 ![9-scaled.png](/first-setup/9-scaled.png)
 Select your Region and Zone using the dropdown menus. Your current time should then appear just below, so you can verify that the time is set correctly.
-## 3.5 While we wait, we get to know each other
+## 3.5 While we wait, we get to know each other (Account)
 - Now that our dough is kneaded and we know how long it will take to rise, we have some time to get to know each other better. Tell me, what’s your name? Do you have a nickname? And what name would you give your Bred if I asked?
 
 ![10-scaled.png](/first-setup/10-scaled.png)
@@ -56,7 +56,7 @@ Every user has an ID assigned to them. This ID is used internally by programs, t
 
 If you want to skip the LightDM login screen and log in to your system without a password, toggle the switch accordingly.
 
-## 3.6 Sharing is caring
+## 3.6 Sharing is caring (Partitioning)
 - As you may want to share your storage with other things, we now prepare spliting it in parts. Or do you want to fill it all up with Bred? Thats how we would choose, but we respect your choice either way.
 
 ![partition-scaled.png](/first-setup/partition-scaled.png)
@@ -71,7 +71,7 @@ If you have data on the disk that you want to preserve, click "Open GParted" to 
 {.is-info}
 
 
-## 3.7 The oven is heated up
+## 3.7 The oven is heated up (Summary)
 - Since the dough has risen and the oven is hot, we pause to check that we did not forget anything. Luckily Bakery has automatically created a checklist for us. 
 
 ![11-scaled.png](/first-setup/11-scaled.png)
