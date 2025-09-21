@@ -1,8 +1,8 @@
 ---
 title: First Setup (.iso image)
 description: 
-published: false
-date: 2025-09-18T08:41:53.939Z
+published: true
+date: 2025-09-21T10:47:26.234Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-17T11:07:04.117Z
