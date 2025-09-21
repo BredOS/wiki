@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description:
 published: false
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-21T11:42:40.378Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -23,9 +23,9 @@ You can find download links for images in our [website](https://bredos.org/downl
 
 Installation varies from device to device and the medium you want to install BredOS to. In this guide we will cover installation to
 
-- `3.1 non-removable eMMC`
-- `3.2 removable eMMC and SD Card`
-- `3.3 nVME`
+- [3.1 non-removable eMMC](#h-31-non-removable-emmc)
+- [3.2 removable eMMC and SD Card](#h-32-removable-emmc-and-sd-card)
+- [3.3 nVME](#h-33-nvme)
 
 > Before you begin please check which options are available with your device!
 > {.is-info}
@@ -42,16 +42,16 @@ To cover the variety of operating systems you can use for this, we decided to sp
 > If you are familiar with flashing Raspberry OS no further reading is needed. Just grab your SD-Card or eMMC, your device specific BredOS image and flash with your preferred tool.
 > {.is-info}
 
-In the following we describe how to flash eMMC with an adapter. If you do not own a suitable adapter leave the eMMC connected to your SBC and follow `3.1 non-removable eMMC`.
+In the following we describe how to flash eMMC with an adapter. If you do not own a suitable adapter leave the eMMC connected to your SBC and follow [3.1 non-removable eMMC](#h-31-non-removable-emmc).
 
 ### 3.2.1 Get your removable eMMC ready
 
-> Skip to `3.2.2 Flashing eMMC / SD Card` if you are not using eMMC storage.
+> Skip to [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card) if you are not using eMMC storage.
 > {.is-info}
 
 #### 3.2.1.1 with uSD adapter
 
-- As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to to convert them into an SD Card.
+- As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to convert them into an SD Card.
 
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
@@ -83,7 +83,7 @@ As direct booting from the nVME drive is not supported by our devices we need to
 
 ### 3.3.2 Flashing nVME
 
-Connect the drive to your PC, either directly or via a USB adapter. Then use one of the recommended tools in `3.2.2 Flashing eMMC / SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
+Connect the drive to your PC, either directly or via a USB adapter. Then use one of the recommended tools in [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card), making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the nVME port of your SBC.
 
 ### 3.3.3 Boot Order
 
