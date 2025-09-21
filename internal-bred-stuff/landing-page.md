@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-21T08:45:04.451Z
+date: 2025-09-21T08:45:24.702Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -12,7 +12,7 @@ dateCreated: 2025-09-19T15:05:44.344Z
 Bread is one of the oldest prepared foods in human history, with its origins tracing back over 10,000 years to the dawn of agriculture. It signifies humanity's transition from a hunter-gatherer lifestyle to farming, laying the foundation for the type of society we know and live in today. Just like humanity its has evolved from early flatbreads into countless varieties, all while using the same basic ingredients: flour, water, salt, and yeast.
 
 # 2. BredOS
-At BredOS, we cherish the concept of using basic ingredients—selected with love and passion—to craft a simple yet versatile product that you can customize to your taste. Served plain, it has the potential to transform into whatever you desire. Whether sweet or salty, light or dark, big enough to enjoy it with your family or small enough to carry it around your adventures, BreadOS is made for you.
+At BredOS, we cherish the concept of using basic ingredients—selected with love and passion—to craft a simple yet versatile product that you can customize to your taste. Served plain, it has the potential to transform into whatever you desire. Whether sweet or salty, light or dark, big enough to enjoy it with your family or small enough to carry it around your adventures, BredOS is made for you.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
