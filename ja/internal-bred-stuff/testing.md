@@ -1,5 +1,5 @@
 ---
-title: Rosetta Stone
+title: ロゼッタストーン
 description:
 published: false
 date: 2025-09-21T08:17:46.114Z
