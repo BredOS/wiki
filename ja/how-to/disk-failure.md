@@ -2,7 +2,7 @@
 title: ディスクの処理に失敗しました
 description: S.M.A.R.T データとディスクの交換に関するガイド
 published: true
-date: 2025-09-15T09:04:50.217Z
+date: 2025-09-15T06:55:36.088Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -15,6 +15,7 @@ dateCreated: 2025-06-01T10:33:55.798Z
 データ損失が可能です。
 
 > 失敗したディスクを回復する際にChatGPTやその他のLLMを**信頼しない**。 あなたはがっかりするでしょう！
+> {.is-danger} あなたはがっかりするでしょう！
 > {.is-danger}
 
 # 2. 報告された失敗
@@ -23,14 +24,14 @@ BredOS ニュースサービスは、添付され、S.M.A.R.Tデータを提示�
 
 BredOS News からこれにリンクされている場合は、次のセクションに進みます。
 
-~~失敗~~
+失敗
 
 > このセクションは建設中です。 DiscordまたはTelegramからお問い合わせください。喜んでお手伝いします！
 > {.is-warning}
 
 # 3. S.M.A.R.T データ
 
-## 3.1 S.M.A.R.T データ (HDD) の表示
+## S.M.A.R.T データ (HDD) の表示
 
 - ハード ディスク `/dev/sda` を仮定して、S.M.A.R.T データを表示します。
 
@@ -41,6 +42,7 @@ sudo smartctl -a /dev/sda
 - 大きなレポートを印刷します：
 
 ```
+[bill88t@prion | ~]> sudo smartctl -a /dev/sda
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -142,7 +144,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 - `SMART overall-health self-assessment` は、「パスワード」である必要があります。 他の値が報告された場合は、ドライブは急いで交換する必要があります。
 - `Reallocated_Sector_Ct` は、移転されたセクタの数です。これは、1 つ以上のセクタがあれば、カスケード失敗の重大なリスクを示します。
 
-## 3.2 S.M.A.R.T データ (NVME) の表示
+## S.M.A.R.T データを表示する (NVME)
 
 - NVMe `/dev/nvme0` を仮定して、S.M.A.R.T データを表示します。
 
@@ -153,6 +155,7 @@ sudo smartctl -a /dev/nvme0
 - NVMEがS.M.A.R.Tをサポートしていると仮定すると、次のような小さなレポートが出力されます。
 
 ```
+[bill88t@prion | ~]> sudo smartctl -a /dev/nvme0
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -227,7 +230,7 @@ No Self-tests Logged
 - 重要なフラッシュ度を示す`メディアとデータ整合性エラー`。
 - `Error Information Log Entries` は通常、スペアフラッシュでマスクされたフラッシュ領域の数を示します。
 
-## 3.3 ドライブを交換する必要がありますか?
+## ドライブを交換する必要がありますか?
 
 わずか数(<5)のセクタが移転されている場合、ディスクをしばらく使用し続けても大丈夫でしょう。
 いくつかのスペアnvmeフラッシュブロックを使用することも問題ありません。
@@ -235,6 +238,6 @@ No Self-tests Logged
 
 しかし、スペアフラッシュを燃やしたり、数十のセクタを急速に移動させたりすることは、しかし差し迫った失敗の兆候である。
 
-スペアフラッシュやセクタが不足すると、システムのパフォーマンスは急速に低下し、BTRFSのようなファイルシステムはロックアップされます。 書き込みを拒否してディスクが壊れないようにする
+スペアフラッシュやセクタが不足すると、システムのパフォーマンスは急速に低下し、BTRFSのようなファイルシステムはロックアップされます。 書き込みの拒否ディスクの破損を拒否する
 
 
