@@ -2,7 +2,7 @@
 title: Android アプリを実行（ウェイドロイド）
 description:
 published: true
-date: 2025-09-21T12:54:43.353Z
+date: 2025-09-21T08:56:025Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T08:40:19.752Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-21T08:40:19.752Z
 
 # 1. はじめに
 
-Waydroidは、Linux/GNU 上で Wayland を使って Android を実行するためのコンテナベースのソリューションです。 このガイドでは、インストールに必要な手順を説明します。
+Waydroidは、Linux/GNU 上で Wayland を使って Android を実行するためのコンテナベースのソリューションです。 このガイドでは、インストールに必要な手順を説明します。 このガイドでは、インストールに必要な手順を説明します。
 
 # 2. インストール
 
