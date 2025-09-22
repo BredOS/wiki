@@ -2,7 +2,7 @@
 title: Página web
 description:
 published: true
-date: 2025-09-22T12:01:41.563Z
+date: 2025-09-11T18:42:23.213Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -22,7 +22,7 @@ La documentación le guiará a través de la instalación, configuración y uso 
 1. [🔍 Introducción](#introduction)
 2. [🚀 Características](#features)
 3. [🛠️ Requisitos del sistema](#system-requirements)
-4. [💽 Instalación](/en/installation)
+4. [💽 Instalación](/installation)
 5. [📦 Administración de Paquetes](#package-management)
 6. [🐞 Resolución de problemas](#troubleshooting)
 7. [❓FAQ](#faq)
@@ -43,14 +43,14 @@ BredOS tiene como objetivo proporcionar una experiencia fácil y amigable para l
 ## 🛠️ Requisitos del sistema
 
 - **🖥️ Dispositivos soportados**:
-  - Por favor, consulta nuestra lista en [https://bredos.org/download.html](https://bredos.org/download.html)
+  - Por favor consulte nuestra lista en https://bredos.org/download.html
 - **🧠 RAM mínimo**: 2 GB
 - **💾 Almacenamiento**: tarjeta microSD de 16 GB o mayor
 - **🌐 Red**: Opcional
 
 ## 💽 Instalación
 
-Lee más en nuestra [Guía de instalación] (/en/installation) página.
+Lee más en nuestra [Guía de instalación](/installation).
 
 ## 📦 Gestión de paquetes
 
