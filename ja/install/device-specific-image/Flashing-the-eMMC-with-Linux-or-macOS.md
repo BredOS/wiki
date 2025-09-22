@@ -10,7 +10,7 @@ dateCreated: 2025-09-16T06:29:26.865Z
 
 # 1. はじめに
 
-このガイドでは、ツール `rkdeveloptool` を使用して eMMC をフラッシュする方法について説明します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。
+このガイドでは、ツール `rkdeveloptool` を使用して eMMC をフラッシュする方法について説明します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。
 
 BredOS のインストールには、以下の3つのことが必要です。
 
@@ -18,7 +18,7 @@ BredOS のインストールには、以下の3つのことが必要です。
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
-# 2) インストール
+# 3) フラッシュ中
 
 `rkdeveloptool` のインストールは以下の手順で行うことができます。
 
@@ -46,7 +46,7 @@ sudo dnf install rkdeveloptool
 
 ### 2.2.1 前提条件
 
-macOS用の`rkdeveloptool`のバイナリパッケージがないので、自分でコンパイルする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。
+macOS用の`rkdeveloptool`のバイナリパッケージがないので、自分でコンパイルする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。
 
 - 次のコマンドで`automake`、`autoconf`、`libusb`、`pkg-config`、`git`、`wget`をインストールします。
 
@@ -79,13 +79,13 @@ make -j $(nproc)
 ls | grep rkdeveloptool
 ```
 
-- 以下のように出力する必要があります:
+- 出力すべきです
 
 ```
 rkdeveloptool
 ```
 
-### 2.2.4 実行可能にする
+### 2.2.4 実行させる
 
 - 最後に、`opt`フォルダにコピーして、どこからでも実行できます。
 
@@ -97,7 +97,7 @@ cp rkdeveloptool /opt/homebrew/bin/
 
 ## 3.1 マスクロームを入力
 
-USB経由でフラッシュ可能なデバイスとしてSBCを表示するには、`maskromモード`に設定する必要があります。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。
+USB経由でフラッシュ可能なデバイスとしてSBCを表示するには、`maskromモード`に設定する必要があります。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。
 
 - この情報は Google 検索で簡単に見つけることができます:
 
@@ -140,4 +140,5 @@ sudo rkdeveloptool rd
 ```
 
 > フラッシュに成功したら[**最初のセットアップ**](/en/install/first-setup)で続行します。
+> {.is-success}
 > {.is-success}
