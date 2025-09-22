@@ -2,7 +2,7 @@
 title: ホームページ
 description:
 published: true
-date: 2025-09-11T18:42:23.213Z
+date: 2025-09-22T12:01:41.563Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -13,7 +13,7 @@ dateCreated: 2022-08-24T12:37:36.410Z
 ## 🌟 概要
 
 BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
-このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
+このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。\
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg
@@ -23,7 +23,7 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 1. [🔍 はじめに](#はじめに)
 2. [🚀 機能](#機能)
 3. [🛠️ システム要件](#system-requirements)
-4. [💽 インストール](/installation)
+4. [💽 インストール](/en/installation)
 5. [📦 パッケージ管理](#パッケージ管理)
 6. [🐞 トラブルシューティング](#トラブルシューティング)
 7. [❓FAQ](#faq)
@@ -44,14 +44,14 @@ BredOSは、ARMベースのシングルボードコンピュータのユーザ�
 ## 🛠️ システム要件
 
 - **🖥️ サポートされているデバイス**:
-  - https://bredos.org/download.html のリストを参照してください。
+  - [https://bredos.org/download.html](https://bredos.org/download.html) を参照してください。
 - **🧠 最小RAM**: 2 GB
 - **💾 ストレージ**: 16 GB microSD カード以上
 - **🌐 Network**: Optional
 
 ## 💽 インストール
 
-詳細は/installation のページをご覧ください。
+Read more on our [Installation guide](/en/installation) page.
 
 ## 📦パッケージ管理
 
