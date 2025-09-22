@@ -2,7 +2,7 @@
 title: BredOS 主頁
 description:
 published: true
-date: 2025-09-22T12:01:41.563Z
+date: 2025-09-11T18:42:23.213Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
@@ -12,7 +12,8 @@ dateCreated: 2024-07-19T14:36:23.702Z
 
 ## 🌟 Overview
 
-歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).\
+歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).\
+The documentation will guide you through the installation, configuration, and usage of BredOS.\
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
@@ -22,7 +23,7 @@ The documentation will guide you through the installation, configuration, and us
 1. [🔍 Introduction](#introduction)
 2. [🚀 Features](#features)
 3. [🛠️ System Requirements](#system-requirements)
-4. [💽 Installation](/en/installation)
+4. [💽 Installation](/installation)
 5. [📦 Package Management](#package-management)
 6. [🐞 Troubleshooting](#troubleshooting)
 7. [❓FAQ](#faq)
@@ -43,14 +44,14 @@ BredOS 旨在為基於 ARM 的單板計算機用戶提供無縫且用戶友好�
 ## 🛠️ System Requirements
 
 - **🖥️ Supported Devices**:
-  - Please refer to our list at [https://bredos.org/download.html](https://bredos.org/download.html)
+  - Please refer to our list at https://bredos.org/download.html
 - **🧠 Minimum RAM**: 2 GB
 - **💾 Storage**: 16 GB microSD card or larger
 - **🌐 Network**: Optional
 
 ## 💽 Installation
 
-Read more on our [Installation guide](/en/installation) page.
+請參閱我們的 [安裝指南](/installation) 頁面以獲取更多信息。
 
 ## 📦 Package Management
 
@@ -87,7 +88,7 @@ A: You can reduce the power consumption by changing the CPU governor to `ondeman
 
 A: Please make sure that:
 
-- Don't suspend before 10s after just resuming, this is a known issue with the eMMC driver.
+- Don't suspend before 10s after just  resuming, this is a known issue with the eMMC driver.
 - Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)
 
 ## 🌐 Community and Support
