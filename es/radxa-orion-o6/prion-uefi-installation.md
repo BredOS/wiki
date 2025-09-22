@@ -2,7 +2,7 @@
 title: Actualizando UEFI en Orion O6
 description:
 published: true
-date: 2025-09-21T10:45:11.948Z
+date: 2025-09-22T06:26:53.479Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -10,7 +10,9 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 # 1. Introducción
 
-Esta guía te guiará a través del proceso de actualización de tu firmware `UEFI` de Radxa Orion O6 al BredOS.
+- Esta guía te guiará a través del proceso de actualización de tu firmware `UEFI` de Radxa Orion O6 al BredOS.
+
+![radxa-bios.png](/orion/radxa-bios.png)
 
 # 2. Características
 
