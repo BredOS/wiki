@@ -2,7 +2,7 @@
 title: BledOS Wiki
 description:
 published: false
-date: 2025-09-22T12:04:33.957Z
+date: 2025-09-22T06:53:15.596Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -10,11 +10,11 @@ dateCreated: 2025-09-19T15:05:44.344Z
 
 # 1. はじめに
 
-パンは人類史上最も古い調理食品の一つであり、その起源は農業の黎明期までに1万年以上遡ります。 狩猟採集生活から農業生活への人類の移行を意味し、今日私たちが知っている社会の基盤を築いている。 人類と同じように、小麦粉、水、塩、酵母など、同じ基本的な食材を使用しながら、初期のフラットブレッドから無数の品種に進化してきました。
+パンは人類史上最も古い調理食品の一つであり、その起源は農業の黎明期までに1万年以上遡ります。 狩猟採集生活から農業生活への人類の移行を意味し、今日私たちが知っている社会の基盤を築いている。 人類と同じように、小麦粉、水、塩、酵母など、同じ基本的な食材を使用しながら、初期のフラットブレッドから無数の品種に進化してきました。 狩猟採集生活から農業生活への人類の移行を意味し、今日私たちが知っている社会の基盤を築いている。 人類と同じように、小麦粉、水、塩、酵母など、同じ基本的な食材を使用しながら、初期のフラットブレッドから無数の品種に進化してきました。
 
 # 2. BredOS
 
-BredOSで 愛情と情熱で選ばれた基本的な食材を使用し、お好みに合わせてカスタマイズできるシンプルでありながら汎用性の高い製品を作るというコンセプトを大切にしています。 平野を提供し、それはあなたが望む何でもに変身する可能性があります。 甘いか塩辛いかどうか、軽いか暗く あなたの家族と一緒に楽しむのに十分な大きさ、またはあなたの冒険を運ぶのに十分な小ささ、ブレッドOSはあなたのために作られています。
+BredOSで 愛情と情熱で選ばれた基本的な食材を使用し、お好みに合わせてカスタマイズできるシンプルでありながら汎用性の高い製品を作るというコンセプトを大切にしています。 平野を提供し、それはあなたが望む何でもに変身する可能性があります。 BredOSで 愛情と情熱で選ばれた基本的な食材を使用し、お好みに合わせてカスタマイズできるシンプルでありながら汎用性の高い製品を作るというコンセプトを大切にしています。 平野を提供し、それはあなたが望む何でもに変身する可能性があります。 甘いか塩辛いかどうか、軽いか暗く あなたの家族と一緒に楽しむのに十分な大きさ、またはあなたの冒険を運ぶのに十分な小ささ、ブレッドOSはあなたのために作られています。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg
 
@@ -34,37 +34,38 @@ BredOSで 愛情と情熱で選ばれた基本的な食材を使用し、お好�
 
 # 4. システム要件
 
-エキサイティングなARMベースのシステムや実験的なRISC-Vセットアップから、プレーンな古いx86intel/amdボードまで、幅広いデバイスをサポートしています。 We've got you covered, whether you use our [mainline .iso installation](/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/table-of-supported-devices).
+エキサイティングなARMベースのシステムや実験的なRISC-Vセットアップから、プレーンな古いx86intel/amdボードまで、幅広いデバイスをサポートしています。 We've got you covered, whether you use our [mainline .iso installation](/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/table-of-supported-devices). We've got you covered, whether you use our [mainline .iso installation](/en/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/en/table-of-supported-devices).
 
 ## 4.1 最小システム要件
 
 - 最小RAM: 2 GB
-- ストレージ: 8 GB microSD カード/eMMC/nVME 以上
+- Storage: 8 GB microSD card or larger
 
-# 5. プレビュー
+# 5. インストール
 
-私たちの友人 [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) は、BredOS についての YouTube 動画を作成しました。 こちらをご覧ください:
+私たちの友人 [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) は、BredOS についての YouTube 動画を作成しました。 こちらをご覧ください: こちらをご覧ください:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # 5. インストール
 
-あなたのためにインストールを容易にするために、私たちはあなたが従うように交配されたパン粉のラインをレイアウトしました。 🍞 🔸🔸🔸
+あなたのためにインストールを容易にするために、私たちはあなたが従うように交配されたパン粉のラインをレイアウトしました。 🍞 🔸🔸🔸 🍞 🔸🔸🔸
 
 > パンくずリスト🔸を見つけた場合は、コミュニティチャネルで頭を上げてください。
 > {.is-info}
+> {.is-info}
 
-## 6.1 デバイス固有の画像のインストール
+## 5.1 デバイス固有の画像のインストール
 
-これらは、私たちが最も好きなボードのための画像です。 To install this BredOS images on them, either start with our [device specific image](/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which can be found in the navigation bar left of this.
+These are the boards we love the most. これらは、私たちが最も好きなボードのための画像です。 To install this BredOS images on them, either start with our [device specific image](/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which can be found in the navigation bar left of this.
 
 私たちの[ダウンロードサイト](https://bredos.org/download.html)にアクセスして、お使いのデバイスがそのうちの1つであるかどうかを確認してください。
 
-## 6.2 一般的なインストール
+## 5.2 一般的なインストール
 
 If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
 
-## 6.3 Docker コンテナーのインストール
+## 5.3 Docker コンテナーのインストール
 
 - コマンドの一行として簡単:
 
@@ -74,7 +75,7 @@ docker pull bredos/bredos
 
 # 4. トラブルシューティング
 
-このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
+このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
 
 # 8. コミュニティとサポート
 
