@@ -2,7 +2,7 @@
 title: Guía de gestores de paquetes
 description: Bienvenido a la guía de Administradores de Paquetes BredOS! Aquí aprenderá cómo instalar y administrar aplicaciones
 published: true
-date: 2025-09-18T07:23:26.529Z
+date: 2025-09-15T09:53:59.847Z
 tags:
 editor: markdown
 dateCreated: 20/09-20T20:08:39.778Z
@@ -10,7 +10,7 @@ dateCreated: 20/09-20T20:08:39.778Z
 
 # 1. Introducción
 
-Bienvenido a la guía de Administradores de Paquetes BredOS! Aquí aprenderá cómo instalar y administrar aplicaciones. ¡Prepárate para tomar el control de las aplicaciones de tu sistema!
+Bienvenido a la guía de Administradores de Paquetes BredOS! ¡Prepárate para tomar el control de las aplicaciones de tu sistema! ¡Prepárate para tomar el control de las aplicaciones de tu sistema!
 
 # 2. Pacman
 
