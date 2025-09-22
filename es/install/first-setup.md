@@ -2,7 +2,7 @@
 title: Primera configuración (Imagen Específica del Dispositivo)
 description:
 published: true
-date: 2025-09-21T10:52:51.478Z
+date: 2025-09-21T09:36:01.964Z
 tags: install, sbc
 editor: markdown
 dateCreated: 2025-04-09T20:05:01.867Z
@@ -23,30 +23,30 @@ Bienvenido a Bakery, el lugar donde mezclar, mezclar y hornear sólo los mejores
 
 ![1-scaled.png](/first-setup/1-scaled.png)
 
-## 2.2 El criado se disfruta en todo el mundo (idioma)
+## 2.2 El criado se disfruta en todo el mundo
 
 - Antes de comenzar nuestro viaje tenemos que saber cómo debemos comunicar lo mejor. ¿En qué idioma habla? ¿Qué formato de hora usas? ¿Con qué idioma habla, qué formato de tiempo utiliza y con qué moneda es familiar?
 
 ![2-scaled.png](/first-setup/2-scaled.png)
 Busca tu idioma preferido y haz clic en él. Una ventana aparece donde puedes elegir tu locale. La hora y el formato de la fecha y la moneda deben ser rellenados automáticamente. Por favor, compruébalos antes de continuar y siéntete libre de modificarlos según tus preferencias.
 
-## 2.3 Sobre la técnica de amasado (teclado)
+## 2.3 Sobre la técnica de amasado
 
-Hablemos de amasar. Todos los seres humanos son diferentes así que no hay una técnica "verdadera" que tenga un aspecto técnico. Para acomodar esto, usted puede elegir la técnica basada en su país.
+Hablemos de amasar. Todos los seres humanos son diferentes así que no hay una técnica "verdadera" que tenga un aspecto técnico. Como nosotros nos encargamos de ello, usted puede elegir la técnica basada en su país.
 ![6-scaled.png](/first-setup/6-scaled.png)
 Después de hacer clic en tu país puedes elegir tu diseño. Como su nombre sugiere que "Normal" es el diseño más utilizado. Si no está seguro use esto. Si tiene un teclado inusual, como el que vende manzana, elija el diseño en consecuencia.
 
 > Utilice la barra de texto para probar su diseño. ¡Esto es importante más tarde cuando tienes que escribir tu contraseña!
 > {.is-info}
 
-## 2.4 El proceso de ascenso (zona horaria)
+## 2.4 El proceso de ascenso
 
 - Aquí en Bakery trabajamos con amor. Así que reconocemos plenamente que el criado necesita tiempo para convertirse en el producto amado que todos conocemos. Para ello necesitamos conocer la zona horaria en la que se encuentra.
 
 ![9-scaled.png](/first-setup/9-scaled.png)
 Selecciona tu región y zona con los menús desplegables. Su hora actual debería aparecer justo debajo de ellos para asegurarse de que el tiempo está configurado correctamente.
 
-## 2.5 Mientras esperamos, llegamos a conocernos (Cuenta)
+## 2.5 Mientras esperamos, llegamos a conocernos mutuamente
 
 - Ahora que se nutre y sabemos cuánto tiempo tardará en subirse, tenemos algo de tiempo para conocerlos mejor. Díganme, ¿cuál es tu nombre? ¿Tienes un apodo? Díganme, ¿cuál es su nombre, tiene un apodo y a qué nombre le darías a tu Bred si me lo pregunta?
 
@@ -62,14 +62,14 @@ Cada usuario tiene un ID asignado a él. Este ID es utilizado internamente por l
 
 Si desea saltar la pantalla de inicio de sesión de LightDM e iniciar sesión en su sistema sin contraseña, cambie el interruptor en consecuencia.
 
-## 2.6 El horno se calienta (Summary)
+## 2.6 El horno se calienta
 
-- Puesto que la masa ha subido y el horno está caliente, nos pausamos para comprobar que no olvidamos nada. Luckily Bakery ha creado automáticamente una lista de verificación para nosotros.
+- Ahora que la masa se ha levantado y el horno está caliente, nos hacemos una pausa para comprobar que no olvidamos nada. Luckily Bakery ha creado automáticamente una lista de verificación para nosotros.
 
 [11-scaled.png](/first-setup/11-scaled.png)
 Por favor, comprueba que todo está incluido: harina, agua, sal y levadura. ¿Se hizo la amasada correctamente? ¿Dejamos que la masa aumentara lo suficiente? Si todo está bien, pulse 'Install'.
 
-## 2.7 No hay mejor olor que Bred fresco (instalación)
+## 2.6 No hay mejor olor que Bred fresco
 
 - Ahora toma un café o un té y mira el horno durante un tiempo. Reflexionate sobre lo que has aprendido en la Pastelería mientras el agradable olor de Bred te da la nariz. Disfruta de este tiempo de espera con ansias de anticipación mientras tu Bred termina de hornear.
 
