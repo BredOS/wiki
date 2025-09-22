@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description:
 published: false
-date: 2025-09-21T09:33:41.426Z
+date: 2025-09-22T06:43:07.736Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15：05：44.344Z
@@ -40,6 +40,12 @@ dateCreated: 2025-09-19T15：05：44.344Z
 
 - 最小内存: 2 GB
 - 存储︰ 8 GB microSD card/eMMC/nVME 或大于
+
+# 5. 预览
+
+我们的朋友 **DroidMaster** 制作了一个关于BredOS的YouTube视频。 在这里查看：
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # 5. 安装
 
