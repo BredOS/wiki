@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description:
 published: false
-date: 2025-09-22T06:53:15.596Z
+date: 2025-09-22T12:04:33.957Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15：05：44.344Z
@@ -54,17 +54,17 @@ dateCreated: 2025-09-19T15：05：44.344Z
 > 如果你发现面包裹破损：small_orange_diamond：在我们的社区频道上让我们头部跳过。
 > {.is-info}
 
-## 5.1 设备特定图像安装
+## 6.1 设备特定的图像安装
 
 这些是我们最喜欢的看板的图像。 要在它们上安装这个BredOS 图像，要么从我们的 [设备特定图像](/install/device-specific-image) 安装指南开始， 或者在我们wiki的设备页面上看一眼，这可以在这个页面的左侧导航栏找到。
 
 访问我们的 [下载站点] (https://bredos.org/download.html) 来查找您的设备是否是其中之一。
 
-## 5.2 通用安装
+## 6.2 通用安装
 
 If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
 
-## 5.3 码头集装箱安装
+## 6.3 Docker集装箱安装
 
 - 简易作为一行命令：
 
@@ -72,11 +72,11 @@ If your device isn’t listed on our [download site](https://bredos.org/download
 停靠拉入面包/bredos
 ```
 
-# 5. 故障排除
+# 4. 故障排除
 
 查看此页面导航栏中的设备页面来查找您设备特有的问题。 如果您的问题没有列出在这里，请随时通过[我们的支持频道](#h-7-community-and-support)直接联系我们。
 
-# 4. 社区与支持
+# 8. 社区与支持
 
 加入 BredOS 社区，获取支持、分享想法并为项目做出贡献：
 
@@ -84,7 +84,7 @@ If your device isn’t listed on our [download site](https://bredos.org/download
 - [Discord](https://discord.gg/jwhuyKXaa)
 - [GitHub](http://github.com/BredOS)
 
-# 8. 贡献
+# 9. 贡献
 
 BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献：
 
