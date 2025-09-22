@@ -2,25 +2,26 @@
 title: カーネルの切り替え
 description:
 published: true
-date: 2025-09-14T10:26:11.108Z
+date: 2025-09-18T09:33:26.800Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
 ---
 
-# 別のカーネルをインストールする
+# 1. はじめに
 
 デフォルトでは、ほとんどのデバイスは `linux-rockchip-rkr3` カーネルを搭載しています。
 しかし、別のカーネルから切り替えたり、別のカーネルに切り替えたりしたいかもしれません。
 これを行うには、最初にインストールしたカーネルを確認してください:
 ただし、別のカーネルやカーネルに切り替えたい場合があります。
-これを行うには、最初にインストールしたカーネルを確認してください:
+
+- これを行うには、最初にインストールしたカーネルを確認してください:
 
 ```
 pacman -Qs linux | grep "linux"
 ```
 
-次のようにリストを出力します。
+- 次のようにリストを出力します。
 
 ```
 [bill88t@duo | ~]> yay -Qs linux | grep "linux"
@@ -40,12 +41,14 @@ local/util-linux-libs 2.40.2-1
     util-linux runtime libraries
 ```
 
-リストにはlinux-rockchip-rkr3とそれに付随するヘッダーがインストールされています。
+リストには `linux-rockchip-rkr3` があり、それに付随するヘッダーがインストールされています。
 別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
 
-## 1. インストールされたカーネルを削除
+# 2. カーネルの管理
 
-上記の場合、コマンドは次のようになります:
+## 2.1 インストールされたカーネルを削除
+
+- 上記の場合、コマンドは次のようになります:
 
 ```
 sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
@@ -54,15 +57,15 @@ sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 > この時点から、リブートすることはできません。
 > {.is-danger}
 
-## 2. 新しいカーネルをインストールします。
+## 2.2 新しいカーネルをインストールします。
 
-選択したカーネルパッケージに`<your-new-kernel>`と`<your-new-kernel-headers>`を置き換えます。
+- 選択したカーネルパッケージに`<your-new-kernel>`と`<your-new-kernel-headers>`を置き換えます。
 
 ```
 sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-カーネルパッケージはドラクト画像を生成します。 インストールログからファイル名を確認できます:
+- カーネルパッケージはドラクト画像を生成します。 インストールログからファイル名を確認できます: インストールログからファイル名を確認できます:
 
 ```
 (14/30) Updating linux initcpios...
@@ -122,24 +125,22 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。
+`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。
 
-## 3. ブートローダーの設定を更新する
+## 2.3 ブートローダーの設定を更新
 
 > ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
 > {.is-warning}
 
-### 3.1 U-Boot
+### 2.3.1 U-Boot
 
-**これは、UEFIがボードにある場合は、UEFIで起動しないデバイスにのみ適用されます。そのセクションにスキップしてください。**
-
-`/boot/extlinux/extlinux.conf`を編集:
+- `/boot/extlinux/extlinux.conf`を編集:
 
 ```
 sudo nano /boot/extlinux/extlinux.conf
 ```
 
-その中には以下のようなものがあります:
+- その中には以下のようなものがあります:
 
 ```
 label BredOS ARM
@@ -154,7 +155,8 @@ label BredOS ARM
 それに合わせてカーネル行を編集する必要があります。
 ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
 それに合わせてカーネル行を編集する必要があります。
-ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
+
+- ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
 
 ```
 ls /boot/
@@ -166,17 +168,13 @@ initramfs-linux-rockchip-rkr3.img
 vmlinuz-linux-rockchip-rkr3
 ```
 
-### 3.2 UEFI
+### 2.3.2 UEFI
 
-**このセクションはUEFIで起動するデバイスにのみ適用されます。 代わりに U-Boot を使用する場合は、上記のセクションにスキップしてください。**
-
-grub.cfg を再生成するには、以下を実行します。
+- grub.cfg を再生成するには、以下を実行します。
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
-## 4. Reboot
 
 > 完了したら、安全に新しいカーネルに再起動できます。
 > {.is-success}

@@ -1,16 +1,16 @@
 ---
-title: RK3588でUEFIをアップデートする方法
+title: UEFIをRK3588で更新
 description: BredOSを実行しているRK3588ベースのデバイスでUEFIファームウェアをアップデートする方法を学ぶ
 published: true
-date: 2025-09-13T10:45:27.434Z
+date: 2025-09-18T07:50:28.639Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
 ---
 
-# 🔄 RK3588 デバイスで UEFI を更新します
+# 1. はじめに
 
-RK3588ベースのデバイス用UEFIファームウェアは、パッケージマネージャを介してインストールできます。 特定のデバイスの正しいパッケージを見つけるには、以下を実行してください: 特定のデバイスの正しいパッケージを見つけるには、以下を実行してください:
+- RK3588ベースのデバイス用UEFIファームウェアは、パッケージマネージャを介してインストールできます。 特定のデバイスの正しいパッケージを見つけるには、以下を実行してください: 特定のデバイスの正しいパッケージを見つけるには、以下を実行してください:
 
 ```
 sudo pacman -Ss uefi
@@ -24,25 +24,21 @@ sudo pacman -Ss uefi
 - **Rock 5Bの場合:** `rock-5b-uefi`
 - \*(出力に記載されているその他) \*
 
----
+# 2. ファームウェアのダウンロード中
 
-## 1. 📥 ファームウェアのインストール
-
-デバイスの正しいパッケージを特定したら、以下を使用してインストールしてください:
+- デバイスの正しいパッケージを特定したら、以下を使用してインストールしてください:
 
 ```
 sudo pacman -S <device-uefi-package>
 ```
 
-例えば、**Fydetab Duo**を使用している場合は、以下を実行します。
+- 例えば、**Fydetab Duo**を使用している場合は、以下を実行します。
 
 ```
 sudo pacman -S fydetab-duo-uefi
 ```
 
----
-
-## 2. 🛠️ UEFI ファームウェアのフラッシュ
+# 3. UEFIファームウェアの書き込み
 
 インストール後、ファームウェア画像は `/usr/share/edk2/<device-name> /` に保存されます。 システムはファームウェアをフラッシュするための特定のコマンドを提供します。\
 コマンドの一般的な形式は次のとおりです。
@@ -50,7 +46,7 @@ sudo pacman -S fydetab-duo-uefi
 > システムはファームウェアをフラッシュするための特定のコマンドを提供します。 下記の**一般**フォーマットの代わりに使用してください！
 > {.is-warning}
 
-コマンドの **general** 形式は次のとおりです。
+- **一般的な** コマンドの形式は次のとおりです。
 
 ```
 sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/<TARGET_DEVICE> bs=512 skip=64 seek=64 conv=notrunc
@@ -58,9 +54,10 @@ sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img 
 
 `<TARGET_DEVICE>` を適切なストレージデバイスに置き換えます:
 
-- **eMMC** 用 `/dev/mmcblk0`
-- `/dev/mmcblk1` for **SD card**
-- `/dev/mtdblock0` for \*\*SPIフラッシュ
+> - **eMMC** 用 `/dev/mmcblk0`
+> - `/dev/mmcblk1` for **SD card**
+> - `/dev/mtdblock0` for **SPIフラッシュ**
+>   {.is-info}
 
 たとえば、**Fydetab Duo**で **eMMCストレージ**を使用している場合、コマンドは次のようになります。
 
@@ -68,6 +65,6 @@ sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img 
 sudo dd if=/usr/share/edk2/fydetab-duo/fydetab-duo_UEFI_Release_v0.12.3.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-> ✅ **完了！** デバイスの UEFI ファームウェアが更新されました。 🚀 🚀\
+> ✅ **完了！** デバイスの UEFI ファームウェアが更新されました。 🚀
 > {.is-success}
 

@@ -57,7 +57,7 @@ Si quieres instalar BredOS en el almacenamiento eMMC en lugar de usar una tarjet
 
 - Haga clic en `🟢 Instalar Driver`:
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png)
 
 - Abre la carpeta que contiene la herramienta de flasheo: carpeta `RKDevTool_Release_v2.96` (comprueba la versión que has descargado para el nombre) y ejecuta la herramienta `RKDevTool.exe`.
 
@@ -67,7 +67,7 @@ Si quieres instalar BredOS en el almacenamiento eMMC en lugar de usar una tarjet
   - Comprueba `Escribir por Dirección`
   - Haga clic en `RUN` y espere hasta que el proceso termine
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
 
 para los usuarios de Linux, puede usar el `rkdeveloptool` para flashear la imagen al eMMC. Los comandos son los siguientes:
 
@@ -83,7 +83,7 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 3. Configurar una cuenta de usuario y contraseña.
 4. Completa la instalación y reinicia el dispositivo.
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/bredOS_installer.jpg))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/bredOS_installer.jpg)
 
 ## 🛠️ Configuración inicial
 
@@ -93,4 +93,4 @@ Después de ejecutar el instalador BredOS puede que necesite completar algunas t
 - 🔄 Actualizar el sistema usando el gestor de paquetes
 - 🛠️ Instalar paquetes de software adicionales según sea necesario
 
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg))
+![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)

@@ -2,23 +2,24 @@
 title: Kernel cambiante
 description:
 published: true
-date: 2025-09-14T10:26:11.108Z
+date: 2025-09-18T09:33:26.800Z
 tags:
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
 ---
 
-# Instalando un núcleo diferente
+# 1. Introducción
 
 Por defecto, la mayoría de los dispositivos vienen con el núcleo `linux-rockchip-rkr3`.
 Sin embargo, puede que desee cambiar de otro o a otro núcleo.
-Para hacer esto primero valida qué núcleo tiene instalado:
+
+- Para hacer esto primero valida qué núcleo tiene instalado:
 
 ```
 pacman -Qs linux | grep "linux"
 ```
 
-Esto mostrará una lista, como:
+- Esto mostrará una lista, como:
 
 ```
 [bill88t@duo | ~]> yay -Qs linux | grep "linux"
@@ -38,12 +39,14 @@ local/util-linux-libs 2.40.2-1
     librerías util-linux runtime
 ```
 
-En la lista podemos ver linux-rockchip-rkr3 y las cabeceras que lo acompañan están instaladas.
+En la lista podemos ver `linux-rockchip-rkr3` y las cabeceras que lo acompañan están instaladas.
 Para instalar un núcleo diferente, primero retire el núcleo instalado, junto con sus cabezas.
 
-## 1. Eliminar el núcleo instalado
+# 2. Manejo de núcleos
 
-Con el caso anterior el comando sería:
+## 2.1 Eliminar el núcleo instalado
+
+- Con el caso anterior el comando sería:
 
 ```
 sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
@@ -52,15 +55,15 @@ sudo pacman -R linux-rockchip-rkr3 linux-rockchip-rkr3-headers
 > A partir de este punto NO ES SAFE REBOOT.
 > {.is-danger}
 
-## 2. Proceda a instalar el nuevo núcleo
+## 2.2 Proceda a instalar el nuevo núcleo
 
-Reemplaza `<your-new-kernel>` y `<your-new-kernel-headers>` por el paquete del núcleo de tu elección.
+- Reemplaza `<your-new-kernel>` y `<your-new-kernel-headers>` por el paquete del núcleo de tu elección.
 
 ```
 sudo pacman -S <your-new-kernel> <your-new-kernel-headers>
 ```
 
-El paquete del núcleo generará una imagen de dracut. Puede encontrar su nombre de archivo desde el registro de instalación:
+- El paquete del núcleo generará una imagen de initramfs. Puede encontrar su nombre de archivo desde el registro de instalación:
 
 ```
 (14/30) Updating linux initcpios...
@@ -120,24 +123,22 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-El núcleo `linux-rockchip-rkr3` generó la imagen dracut `/boot/initramfs-linux-rockchip-rkr3.img`. Otros núcleos producirán diferentes nombres de archivo.
+El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\\\\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
 
-## 3. Actualizar configuración del cargador de arranque
+## 2.3 Actualizar configuración del cargador de arranque
 
 > Si durante el encendido del tablero ves un logotipo de BredOS, estás usando UEFI.
 > {.is-warning}
 
-### 3.1 Arranque U
+### 2.3.1 Arranque U
 
-**Esto sólo se aplica a dispositivos que no arranquen con una UEFI, si tienes UEFI en tu placa, salta a esa sección.**
-
-Editar `/boot/extlinux/extlinux.conf`:
+- Editar `/boot/extlinux/extlinux.conf`:
 
 ```
 sudo nano /boot/extlinux/extlinux.conf
 ```
 
-Dentro debería ser algo así:
+- Dentro debería ser algo así:
 
 ```
 etiqueta BredOS ARM
@@ -150,7 +151,8 @@ etiqueta BredOS ARM
 
 Necesita editar la línea `initrd` del núcleo para apuntar al mismo nombre de archivo (sin la ruta).
 También necesita editar la línea del núcleo para que coincida con eso.
-Para verificar que el nombre del archivo es correcto, puedes listar el contenido de `/boot/`:
+
+- Para verificar que el nombre del archivo es correcto, puedes listar el contenido de `/boot/`:
 
 ```
 ls /boot/
@@ -162,17 +164,13 @@ initramfs-linux-rockchip-rkr3.img
 vmlinuz-linux-rockchip-rkr3
 ```
 
-### 3.2 UEFI
+### 2.3.2 UEFI
 
-**Esta sección sólo se aplica a los dispositivos que arranquen con UEFI. Si en su lugar usas Arranque U, salta a la sección anterior.**
-
-Ejecuta lo siguiente para regenerar el grub.cfg:
+- Ejecuta lo siguiente para regenerar el grub.cfg:
 
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
-## 4. Reboot
 
 > Una vez hecho, puede reiniciar con seguridad en el nuevo núcleo.
 > {.is-success}

@@ -1,0 +1,140 @@
+---
+title: Rosetta Stone
+description:
+published: false
+date: 2025-09-21T08:17:46.114Z
+tags:
+editor: markdown
+dateCreated: 2025-09-20T10:44:50.776Z
+---
+
+![graphics.png](/vms/graphics.png =25%x){.align-right}
+
+Text i can write some specs here <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+---
+
+# Tabs
+
+## Board
+
+### Tabset {.tabset}
+
+#### Model A
+
+Beri cool model
+
+#### Model B
+
+Mid tier
+
+#### Model C
+
+Toptier
+
+# Dropdown
+
+<details><summary><b>Title</b></summary>
+
+Text
+
+- Bullet
+- Points
+
+</details>
+
+\*[MIMO]: Multiple Input Multiple Output
+
+# Footnotes
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+# Abrreviations:
+
+Please hover over MIMO
+
+```
+*[MIMO]: Multiple Input Multiple Output
+```
+
+# Tables
+
+Normal
+
+| Device       | Status | Notes                                                     |
+| ------------ | ------ | --------------------------------------------------------- |
+| JMB582 based | Works  | [Source](https://github.com/System64fumo/linux/issues/14) |
+
+Smaller: (add `{.dense}` to the end)
+
+| Device                   | Status | Notes                                                     |
+| ------------------------ | ------ | --------------------------------------------------------- |
+| JMB582 based             | Works  | [Source](https://github.com/System64fumo/linux/issues/14) |
+| {.dense} |        |                                                           |
+
+# lists
+
+Some stuff:
+
+- Grid Item 1
+- Grid Item 2
+- Grid Item 3
+  {.grid-list}
+
+Very Cool
+
+- [Lorem ipsum dolor sit amet _Subtitle description here_](https://www.google.com)
+- [Consectetur adipiscing elit _Another subtitle description here_](https://www.google.com)
+- [Morbi vehicula aliquam _Third subtitle description here_](https://www.google.com)
+  {.links-list}
+
+# Keyboard keys
+
+Press <kbd>F</kbd> to pay respects
+
+# Math/Chemistry (Katex)
+
+Pythagorean theorem:
+$a^2 + b^2 = c^2$
+
+Area of circle formula:
+$A=πr2$
+
+Aerobic cellular respiration:
+
+$$
+C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}
+$$
+
+# Graphs (Kroki)
+
+```kroki
+mermaid
+
+graph TD
+  A[ Anyone ] -->|Can help | B( Go to bredos.org )
+  B --> C{ How to contribute? }
+  C --> D[ Reporting bugs ]
+  C --> E[ Sharing ideas ]
+  C --> F[ Advocating ]
+```
+
+<br>
+
+```kroki
+wavedrom
+{ signal: [
+  { name: "clk",         wave: "p.....|..." },
+  { name: "Data",        wave: "x.345x|=.x", data: ["head", "body", "tail", "data"] },
+  { name: "Request",     wave: "0.1..0|1.0" },
+  {},
+  { name: "Acknowledge", wave: "1.....|01." }
+]}
+```
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+    belong to the previous footnote.

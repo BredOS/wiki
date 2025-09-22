@@ -14,4 +14,4 @@ This is the wiki repository for [BredOS]/home), a user-friendly Arch-based Linux
 
 You can contribute to the documentation by creating a pull request with your changes.
 
-[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg))](https://bredos.crowdin.com/wiki)
+[![Crowdin](https://badges.crowdin.net/e/79de63f39f14962a569beb112d22861c/localized.svg)](https://bredos.crowdin.com/wiki)

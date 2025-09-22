@@ -2,33 +2,33 @@
 title: Corregir Bluetooth (ITX-3588J)
 description:
 published: true
-date: 2025-09-14T13:10:50.284Z
+date: 2025-09-18T09:42:49.964Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
 ---
 
-# Corregir Bluetooth (ITX-3588J)
-
-## 1. Instalar r58x-post-install
+# 1. Instalar r58x-post-install
 
 Por ahora tiene que reemplazar un paquete por otro. Esto no alterará ningún comportamiento del itx-3588j pero añade un servicio que arreglará bluetooth al arrancar.
 
-Primero elimina `itx-3588j-post-install`. Este paquete establece un parámetro necesario para solucionar un problema de standby. No temamos que lo arreglaremos de nuevo.
+- Primero elimina `itx-3588j-post-install`. Este paquete establece un parámetro necesario para solucionar un problema de standby. No temamos que lo arreglaremos de nuevo.
 
 ```
 sudo pacman -R itx-3588j-post-install
 ```
 
-Después de eso instale `r58x-post-install`. Este paquete hace la misma corrección para standby que la anterior pero incluye el servicio `bluetooth-mekotronics`.
+- Después de eso, instale `r58x-post-install`. Este paquete proporciona la misma solución para el standby que se ha mencionado anteriormente e incluye el servicio `bluetooth-mekotronics`.
 
 ```
 sudo pacman -S r58x-post-install
 ```
 
-## 2. Establecer ruta de UART correcta
+# 2. Establecer ruta de UART correcta
 
-El adaptador Bluetooth no está conectado a `/dev/ttyS9` (como en el otro RK3588 SBCs), sino a `/dev/ttyS6`. Necesitas cambiar la ruta dentro del archivo `/usr/bin/bluetooth-fix`.
+El adaptador Bluetooth no está conectado a `/dev/ttyS9` (como es con otras computadoras de una sola placa RK3588), sino a `/dev/ttyS6`.
+
+- Necesitas modificar la ruta en el archivo `/usr/bin/bluetooth-fix`.
 
 ```
 sudo nano /usr/bin/bluetooth-fix
@@ -49,15 +49,15 @@ sudo nano /usr/bin/bluetooth-fix
 brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download --tosleep 200000 --baudrate 1500000 --patchram /lib/firmware/ap6275p/BCM4362A2. cd /dev/ttyS9
 ```
 
-Cambia la última línea a `/dev/ttyS6`.
+- Cambia la última línea a `/dev/ttyS6`.
 
 ```
 brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download --tosleep 200000 --baudrate 1500000 --patchram /lib/firmware/ap6275p/BCM4362A2.hcd /dev/ttyS6
 ```
 
-## 3. Habilitar servicio bluetooth
+# 3. Habilitar servicio bluetooth
 
-Por fin necesitamos habilitar el servicio `bluetooth-mekotronics`
+- Por fin necesitamos habilitar el servicio `bluetooth-mekotronics`.
 
 ```
 sudo systemctl --ahora habilita bluetooth-mekotronics

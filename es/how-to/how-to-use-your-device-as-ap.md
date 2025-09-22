@@ -1,82 +1,124 @@
 ---
-title: Cómo usar tu dispositivo como punto de acceso inalámbrico
+title: Usa tu dispositivo como punto de acceso inalámbrico
 description:
 published: true
-date: 2025-09-13T10:44:39.156Z
+date: 2025-09-18T07:15:46.054Z
 tags:
 editor: markdown
 dateCreated: 2024/09-08T10:33:46.772Z
 ---
 
-# 📶 Cómo configurar un punto de acceso usando NetworkManager
+# 1. Introducción
 
 Esta guía le mostrará cómo configurar un punto de acceso Wi-Fi usando NetworkManager.
 
-## 1. 🛠️ Prerrequisitos
+# 2. Prerrequisitos
 
 Antes de comenzar, asegúrese de tener:
 
-- 📡 Un adaptador Wi-Fi que soporta el modo AP (punto de acceso)
+- Un adaptador Wi-Fi que soporta el modo AP (punto de acceso)
 
 > Los dispositivos apropiados que soportan el modo AP (punto de acceso) incluyen Rock 5C, Rock 5B+, Khadas Edge 2, Khadas Vim 4, todos los dispositivos Mekotronics R58 y el Orange Pi 5B.
 > {.is-info}
 
-## 2. Crear un punto de acceso
+# 3. Instalación
+
+## 3.1 Crear un punto de acceso
 
 Puede crear fácilmente un punto de acceso utilizando la herramienta de línea de comandos de NetworkManager `nmcli`.
 
-1. **Lista tus dispositivos de red** para identificar la interfaz Wi-Fi que usará:
+- Lista de dispositivos de red para identificar la interfaz Wi-Fi que usará:
 
-   ```bash
+```bash
    estado del dispositivo nmcli
-   ```
+```
 
-2. **Crea el hotspot** usando el siguiente comando:
+- Ejemplo:
 
-   ```bash
+```
+	DEVICE TYPE STATE CONNECTION      
+	puente puente0 conectó puente0         
+	tailscale0 tun conectado (externamente) tailscale0      
+	loopback loopback conectado (externamente) lo              
+	br-8a9f1336b961 puente conectado (externamente) br-8a9f1336b961 
+	puente br-aeeaf62e2336 conectado (externamente) br-aeeaf62e2336 puente br-aeeaf62e2336 
+	puente docker0 conectado (externamente) docker0         
+	virbr0 puente conectado (externamente) virbr0          
+	enp8s0 ethernet conectado (externamente) enp8s0          
+	wlan0 wifi desconectado --   
+```
+
+- Crea el punto de acceso usando el siguiente comando:
+
+```bash
    nmcli dispositivo wifi hotspot ifname <wifi_interface> ssid <MyHotspot> password <mypassword>
-   ```
+```
 
-   Reemplaza `<wifi_interface>` con tu nombre real de interfaz, como `wlp2s0` o `wlan0`, `<MyHotspot>` con tu SSID deseado y `<mypassword>` con una contraseña segura de tu elección.
+- Ejemplo:
 
-> Si obtiene el siguiente error, ejecute de nuevo el comando con sudo
-> \\\\\`Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.
+```
+  Dispositivo 'wlan0' activado con éxito con '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
+  Sugerencia: "nmcli dev wifi show-password" muestra el nombre y contraseña Wi-Fi.
+```
 
-## 3. Ver estado del punto de acceso
+```
+Reemplaza `<wifi_interface>` con tu nombre real de interfaz, como `wlp2s0` o `wlan0`, `<MyHotspot>` con tu SSID deseado y `<mypassword>` con una contraseña segura de tu elección.
+```
 
-Una vez creado el punto de acceso, puede verificar su estado ejecutando:
+> Si obtiene el siguiente error, ejecute el comando de nuevo con sudo.
+> `Error: Error al configurar un hotspot Wi-Fi: No autorizado para controlar la red.`
+> {.is-info}
+
+## 3.2 Ver el estado del punto de acceso rápido
+
+- Una vez creado el punto de acceso, puede verificar su estado ejecutando:
 
 ```bash
 serie de conexión nmcli
 ```
 
-Deberías ver el punto de acceso en la lista de conexiones activas.
+- Ejemplo:
 
-## 4. Configurar reenvío IP
+```
+NAME                            UUID                                  TYPE       DEVICE          
+Hotspot                         4d090d70-fd85-45bc-bf36-a63846f3f805  wifi       wlan0           
+bridge0                         210b2bd8-1a6b-43e6-9ed1-4abc50324505  bridge     bridge0         
+tailscale0                      27e86e0c-a8c7-4374-9083-51454c4b8b3e  tun        tailscale0      
+lo                              f6ba586b-a4c4-49c1-a0f3-3154f8eae92b  loopback   lo              
+br-8a9f1336b961                 9a3d08b3-6516-4071-9369-30311a48b55a  bridge     br-8a9f1336b961 
+br-aeeaf62e2336                 ee78e282-1516-45df-a6ec-cdcb9d989030  bridge     br-aeeaf62e2336 
+docker0                         c5f70ee8-5407-4510-8b61-6fc0f15c2e81  bridge     docker0         
+virbr0                          12d1109a-64a4-4d07-b0a2-887f10145109  bridge     virbr0          
+enp8s0                          184c8145-ca17-4258-b7db-7e32c298f424  ethernet   enp8s0
+```
+
+Deberías ver el punto de acceso que aparece debajo de las conexiones activas (segunda línea en el ejemplo anterior).
+
+## 3.3 Configurar reenvío IP
 
 Para compartir tu conexión a Internet a través del hotspot, necesitas habilitar el reenvío de IP:
 
-1. **Habilitar reenvío de IP**:
+- Habilitar reenvío de IP:
 
-   ```bash
+```bash
    sudo sysctl net.ipv4.ip_forward=1
-   ```
+```
 
-2. **Hazlo permanente** editando `mañana/sysctl.d/99-sysctl.conf`:
+- Hazlo permanente editando `mañana/sysctl.d/99-sysctl.conf`:
 
-   ```bash
+```bash
    sudo nano, /sysctl.d/99-sysctl.conf
-   ```
+```
 
-   Añadir la siguiente línea:
+- Añadir la siguiente línea:
 
-   ```
+```
    net.ipv4.ip_forward=1
-   ```
+```
 
-## 5) 🛑 Detener el punto de acceso
+## 3.4 Detener el punto de acceso
 
-Para detener el hotspot, simplemente ejecute:
+- Para detener el hotspot, simplemente ejecute:
 
 ```bash
 conexión nmcli a punto de acceso
