@@ -2,7 +2,7 @@
 title: BledOS Wiki
 description:
 published: false
-date: 2025-09-22T06:43:07.736Z
+date: 2025-09-22T06:53:15.596Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -43,7 +43,7 @@ BredOSで 愛情と情熱で選ばれた基本的な食材を使用し、お好�
 
 # 5. プレビュー
 
-私たちの友人**DroidMaster**は、BredOSについてYouTubeの動画を作りました。 こちらをご覧ください:
+私たちの友人 [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) は、BredOS についての YouTube 動画を作成しました。 こちらをご覧ください:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
