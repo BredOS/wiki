@@ -2,7 +2,7 @@
 title: Serie Naranja Pi 5
 description: Esta página contiene enlaces a guías/ajustes útiles para los dispositivos de la Serie OPI 5
 published: true
-date: 2025-09-21T11:49:47.836Z
+date: 2025-09-21T09:45:58.585Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-20T15:17:37.567Z
@@ -40,7 +40,7 @@ Especificaciones:
 - Poder: 5V/4A
 - Tamaño del tablero ~100 × 62 mm.
 
-#### Pi naranja 5B
+#### Pi Naranja 5 Plus
 
 > Lo apodamos "_opi5b_" porque, sinceramente, nadie tiene el tiempo, la paciencia, o incluso el deseo de prueba desenfrenado de decir o escribir constantemente lo ridículamente largo, innecesariamente formal, y ligeramente molesto nombre "Orange Pi 5B" — especialmente cuando todo el mundo sabe exactamente lo que quiere decir de todos modos.
 > {.is-info}
@@ -55,7 +55,7 @@ Especificaciones:
 - Poder: 5V/4A
 - Tamaño del tablero ~100 × 62 mm.
 
-#### Pi Naranja 5 Plus
+#### Pi Naranja 5
 
 > Lo apodamos "_opi5plus_" porque, sinceramente, nadie tiene el tiempo, la paciencia, o incluso el deseo de prueba desenfrenado de decir o escribir constantemente lo ridículamente largo, innecesariamente formal, y ligeramente molesto nombre "Orange Pi 5 Plus" — especialmente cuando todo el mundo sabe exactamente lo que quiere decir de todos modos.
 > {.is-info}
@@ -68,7 +68,7 @@ Especificaciones:
 - Video / Display: altas resoluciones, múltiples HDM/MIPI etc.
 - Conectividad: 2.5 Gbps Ethernet (RTL8125BG), WiFi6E + BT5.3/BLE; USB 3.0/2.0.
 
-#### Naranja Pi 5 Pro
+#### CM5 de Pi Naranja
 
 > Lo apodamos "_opi5pro_" porque, sinceramente, nadie tiene el tiempo, la paciencia, o incluso el deseo de prueba desenfrenado de decir o escribir constantemente lo ridículamente largo, innecesariamente formal, y ligeramente molesto nombre "Orange Pi 5 Pro" — especialmente cuando todo el mundo sabe exactamente lo que quiere decir de todos modos.
 > {.is-info}
@@ -82,7 +82,7 @@ Especificaciones:
 - Conectividad: Gigabit Ethernet; WiFi5 + BT5.0; tarjeta más pequeña (89×56 mm) que la normal 5/5B.
 - Poder y otras interfaces también se desplazaron.
 
-#### Pi Naranja 5
+#### Naranja Pi 5 Pro
 
 > Lo apodamos "_opi5max_" porque, sinceramente, nadie tiene el tiempo, la paciencia, o incluso el deseo de prueba desenfrenado de decir o escribir constantemente lo ridículamente largo, innecesariamente formal, y ligeramente molesto nombre "Orange Pi 5 Max" — especialmente cuando todo el mundo sabe exactamente lo que quiere decir de todos modos.
 > {.is-info}
@@ -110,7 +110,7 @@ Especificaciones:
 - Conectividad: 2.5 Gbps Ethernet (RTL8125BG), WiFi6E + BT5.3/BLE; USB 3.0/2.0.
 - Tamaño del tablero ~89×57 mm.
 
-#### CM5 de Pi Naranja
+#### Pi naranja 5B
 
 > Lo apodamos "_opicm5_" porque es más corto.
 > {.is-info}
