@@ -2,7 +2,7 @@
 title: Instantáneas y retrocesos Btrfs con Timeshift
 description: Una guía completa sobre cómo configurar instantáneas Btrfs y retrocesos del sistema usando Timeshift
 published: true
-date: 2025-09-18T07:42:00.324Z
+date: 2025-09-16T10:41:28.622Z
 tags:
 editor: markdown
 dateCreated: 2024-27-27T19:19:08.209Z
@@ -12,11 +12,11 @@ dateCreated: 2024-27-27T19:19:08.209Z
 
 La función de instantánea del sistema de archivos Btrfs se puede utilizar para realizar instantáneas y retrocesos del sistema. Timeshift es una aplicación gráfica fácil de usar que hace este proceso fácil!
 
-# 2. Arrancar en instantáneas Timeshift desde GRUB
+# 2. Arrancar en instantáneas Timeshift desde GRUB con grub-btrfs
 
 Cuando está correctamente configurado, `grub-btrfs` le permite arrancar en instantáneas de Timeshift Btrfs directamente desde el menú GRUB, haciendo que los rollbacks del sistema sean fáciles y rápidos.
 
-## 2.1 Instalar grub-btrfs
+## 2.1: Instalar grub-btrfs
 
 - Para instalar `grub-btrfs` ejecutar:
 
@@ -32,7 +32,7 @@ Una vez instalado, cada vez que se actualiza el archivo de configuración GRUB, 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-## 2.2 Automatizar actualizaciones de configuración de GRUB
+## 2.2: Automatizar actualizaciones de configuración GRUB
 
 `grub-btrfs` puede automatizar el proceso de actualización de GRUB cada vez que se crea una nueva instantánea de timeshift Btrfs.
 
@@ -63,7 +63,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
   sudo systemctl revertir grub-btrfs.path
   ```
 
-## 2.3 Activar actualizaciones automáticas de GRUB
+## 2.3: Activar Actualizaciones Automáticas GRUB
 
 - Activar la actualización automática del archivo de configuración GRUB ejecutando:
 
@@ -79,11 +79,11 @@ sudo nano /default/grub-btrfs/config
 
 ---
 
-# 3. Instantánea automática del sistema con Timeshift-autosnap
+# 3. Instantánea automática del sistema antes de actualizar el paquete con Timeshift-autosnap
 
 Es posible que desee instalar `timeshift-autosnap`, que automáticamente crea Snapshots Timeshift antes de realizar cualquier actualización de paquete a través de Pacman. Esto asegura que siempre tenga un punto de restauración antes de que se realicen cambios en su sistema.
 
-## 3.1 Instalar timeshift-autosnap
+## 3.1: Instalar timeshift-autosnap
 
 - Para instalar `timeshift-autosnap` ejecutar:
 
@@ -91,7 +91,7 @@ Es posible que desee instalar `timeshift-autosnap`, que automáticamente crea Sn
 sudo pacman -S timeshift-autosnap
 ```
 
-## 3.2 Prevenir actualizaciones GRUB Duplicadas
+## 3.2: Prevenir actualizaciones GRUB Duplicadas
 
 Para evitar que GRUB se actualice dos veces cuando una instantánea es creada por timeshift-autosnap, Se recomienda modificar el archivo de configuración.
 
