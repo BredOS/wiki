@@ -2,7 +2,7 @@
 title: 更新Orion O6上的 UEFI
 description:
 published: true
-date: 2025-09-21T10:45:11.948Z
+date: 2025-09-22T06:26:53.479Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -10,7 +10,9 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 # 1. 简介
 
-本指南将引导您更新您的Radxa Orion O6 `UEFI`固件到 BredOS 上。
+- 本指南将引导您更新您的Radxa Orion O6 `UEFI`固件到 BredOS 上。
+
+![radxa-bios.png](/orion/radxa-bios.png)
 
 # 2. 功能
 
