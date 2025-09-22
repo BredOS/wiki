@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-22T06:53:15.596Z
+date: 2025-09-22T12:02:12.709Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -74,3 +74,5 @@ BredOS is an open-source project, and contributions are welcome! You can contrib
 - Submit patches and improvements
 - Write and improve documentation
 - Help other users in the community forums and chat
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=Edl9CVcVWJtBZzl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
