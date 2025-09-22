@@ -1,8 +1,8 @@
 ---
-title: Installation of UEFI (on RK3588)
+title: Installation of UEFI
 description:
 published: false
-date: 2025-09-18T08:51:38.398Z
+date: 2025-09-17T06:40:43.494Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -38,7 +38,8 @@ Download the latest release matching your device, insert a SD Card of (almost) a
 ## 3.2 Installation to SPI
 
 > If you have skipped 3.1, go back. This step is needed for flashing to the SPI chip!
-> You can remove the SD Card afterwards.
+> You can remove the SD Card afterwards
+> {.is-info}
 > {.is-info}
 
 > This procedure is untested. If you have done it successfuly please report back on our Discord or Telegram channel.
@@ -47,10 +48,10 @@ Download the latest release matching your device, insert a SD Card of (almost) a
 Follow the steps down below to install `UEFI` to your SPI chip.
 
 - Copy the latest release of our `UEFI` to a FAT32 formated USB-Stick and connect it to your SBC.
-- Boot up your board into `UEFI` from your SD Card. If you have trouble accessing the UEFI Settings, check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
+- Boot up your board into `UEFI` from your SD Card. If you have trouble to get into UEFI Settings check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
 - Navigate to `Boot Manager` -> `UEFI Shell` to enter the command line interface.
 - List all readable partitions with the use of the `map` command. This command lists all partitions with the namingscheme of `fs0:`, `fs1:`, ...
-- Navigate to the USB-Stick containing the firmware image by typing the file system name and press `Enter` to change directory to it. If you're unsure which file system to use, run the following to list its contents:
+- Navigate to the USB-Stick containing the firmware image by typing the file system name and press `Enter` to change directory to it. If you're unsure which file system to use, run ls fsX: to list its contents.
 
 ```
 ls fs<your drive number here>: 
