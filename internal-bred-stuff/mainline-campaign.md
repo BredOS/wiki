@@ -2,7 +2,7 @@
 title: Mainline campaign
 description: 
 published: false
-date: 2025-09-22T18:08:33.240Z
+date: 2025-09-22T18:18:13.422Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -27,6 +27,32 @@ By mainlining RK3588 support, BredOS will bring:
 - A solid foundation for ARM64 desktop and server use
 
 This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
+
+## Why Are We Doing This?
+A fair question we often hear is: *“Isn’t RK3588 already mainlined?”*  
+The truth is: **only part of it is**.  
+
+While much of the low-level backend work (like basic kernel support) has landed upstream, **day-to-day essentials are still broken or missing**:  
+- Many Wi-Fi drivers don’t work out of the box  
+- Device-specific optimizations aren’t covered by generic mainline patches  
+
+In BredOS, we want RK3588 devices to be **practical and polished for real users**. That means:  
+- Reliable Wi-Fi and networking  
+- Optimized fan profiles (quiet when idle, cooling under load)  
+- Stable GPU and multimedia support  
+- Proper installer and images ready to flash  
+
+This campaign isn’t just about “making it boot.” It’s about making RK3588 devices **actually usable**.
+
+## ✨ Benefits of Mainline
+Thanks to our early mainline experiments, we’ve already seen some exciting advantages:  
+- **2× Vulkan performance** over BSP builds and more GPU goodies
+- 🎥 **Proper VPU implementation** that doesn’t require the custom Rockchip Media Processing Platform (MPP)
+- 🌐 Ability to run **Chromium or any video-accelerated apps** out-of-the-box  
+- 🛠 No more custom hacks or recompiles for common video workloads  
+
+Mainline unlocks these **real, tangible improvements** for both developers and end-users, making RK3588 devices far more capable in daily use.
+
 
 
 ## How You Can Help
@@ -56,20 +82,6 @@ This is about making BredOS — and the wider Linux ecosystem — better for eve
 - Developer time (kernel, bootloader, userspace integration)
 - CI infrastructure for ongoing builds and testing  
 
-## Why Are We Doing This?
-A fair question we often hear is: *“Isn’t RK3588 already mainlined?”*  
-The truth is: **only part of it is**.  
 
-While much of the low-level backend work (like basic kernel support) has landed upstream, **day-to-day essentials are still broken or missing**:  
-- Many Wi-Fi drivers don’t work out of the box  
-- Device-specific optimizations aren’t covered by generic mainline patches  
-
-In BredOS, we want RK3588 devices to be **practical and polished for real users**. That means:  
-- Reliable Wi-Fi and networking  
-- Optimized fan profiles (quiet when idle, cooling under load)  
-- Stable GPU and multimedia support  
-- Proper installer and images ready to flash  
-
-This campaign isn’t just about “making it boot.” It’s about making RK3588 devices **actually usable**.
 
 **[Support the RK3588 Mainline Milestone Now](https://ko-fi.com/Z8Z3I4J0P)**
