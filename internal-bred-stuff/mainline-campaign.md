@@ -2,13 +2,13 @@
 title: Mainline campaign
 description: 
 published: false
-date: 2025-09-22T19:32:35.842Z
+date: 2025-09-22T19:32:45.737Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
 ---
 
-## Fund this feature Campaign: Mainline RK3588 Support in BredOS
+## Fund this feature campaign: Mainline RK3588 Support in BredOS
 
 Right now, BredOS images for RK3588 devices rely on the crusty Rockchip BSP kernel — a huge, duct-taped codebase that’s hard to maintain, insecure, and always lags behind upstream Linux.
 
