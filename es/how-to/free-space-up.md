@@ -1,8 +1,8 @@
 ---
-title: Guía de limpieza del espacio en disco
-description: Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS.
+title: 🧹💾 Guía de limpieza de espacio en disco
+description: Guía de limpieza del espacio en disco BredOS 🧹💾
 published: true
-date: 2025-09-18T07:38:26.515Z
+date: 2025-09-16T10:42:55.802Z
 tags:
 editor: markdown
 dateCreated: 2024-20T20:26:57.698Z
@@ -12,9 +12,9 @@ dateCreated: 2024-20T20:26:57.698Z
 
 Con el tiempo, su sistema puede acumular archivos innecesarios que ocupan un espacio valioso. Esta guía le guiará a través de varios métodos para recuperar espacio en disco en su sistema BredOS.
 
-# 2. Limpiar caché de paquetes
+# 2. Limpiar Caché de Paquetes 📦
 
-Al instalar o actualizar paquetes, `pacman` mantiene en caché copias en `/var/cache/pacman/pkg/` para hacer que la reinstalación sea más rápida. Sin embargo, estos paquetes almacenados en caché pueden acumularse y consumir espacio en disco.
+Al instalar o actualizar paquetes, **Pacman** mantiene copias en caché en `/var/cache/pacman/pkg/` para hacer que la reinstalación sea más rápida. Sin embargo, estos paquetes almacenados en caché pueden acumularse y consumir espacio en disco.
 
 ## 2.1 Comprobar tamaño de caché
 
@@ -24,7 +24,7 @@ Al instalar o actualizar paquetes, `pacman` mantiene en caché copias en `/var/c
 du -sh /var/cache/pacman/pkg/
 ```
 
-## 2.2 Limpieza manual
+## Limpieza manual 🗑️
 
 - Puede eliminar manualmente los paquetes en caché que ya no están instalados con:
 
@@ -32,41 +32,41 @@ du -sh /var/cache/pacman/pkg/
 sudo pacman -Sc
 ```
 
-## 2.3 Limpieza automática con dolor de Pacc
+## Limpieza automática con Paccache 🔄
 
-También puedes usar `paccache` para mantener sólo las 3 versiones más recientes de cada paquete.
+También puedes usar `paccache` para mantener sólo las 3 versiones más recientes de cada paquete:
 
 - Instalar la herramienta necesaria:
 
 ```
-   sudo pacman -S pacman-contrib
+sudo pacman -S pacman-contrib
 ```
 
 - Configurar un gancho Pacman para limpiar automáticamente después de cada transacción:
 
 ```
-   sudo nano /usr/share/libalpm/hooks/paccache.hook
+sudo nano /usr/share/libalpm/hooks/paccache.hook
 ```
 
 - Añadir el siguiente contenido al archivo:
 
 ```
-   [Trigger]
-   Operación = Actualizar
-   Operación = Instalar
-   Operación = Quitar
-   Tipo = Paquete
-   Objetivo = *
+[Trigger]
+Operación = Actualizar
+Operación = Instalar
+Operación = Quitar
+Tipo = Paquete
+Objetivo = *
 
-   [Action]
-   Descripción = Limpiar caché pacman con paccache…
-   Cuando = PostTransaction
-   Exec = /usr/bin/paccache -r
+[Action]
+Descripción = Limpiar caché pacman con paccache…
+Cuando = PostTransaction
+Exec = /usr/bin/paccache -r
 ```
 
 - Guarda el archivo con **Ctrl + S** y sal con **Ctrl + X**.
 
-# 3. Limpiar archivos antiguos de registro
+# 3. Limpiar archivos antiguos de registro 📝
 
 - Los registros del sistema pueden ocupar una cantidad considerable de espacio a lo largo del tiempo. Puedes comprobar el tamaño de tus registros con:
 
@@ -82,11 +82,11 @@ journalctl --uso de disco
 sudo diario --vacuum-time=3d
 ```
 
-# 4. Usar BleachBit
+# 4. Usar BleachBit 🧽
 
-BleachBit es una poderosa herramienta que le ayuda a limpiar la basura del sistema, a liberar espacio en disco y a proteger su privacidad. Puedes aprender más sobre cómo usar BleachBit [here](https://www.bleachbit.org/).
+**BleachBit** es una poderosa herramienta que te ayuda a limpiar la basura del sistema, a liberar espacio en disco y a proteger tu privacidad. Puedes aprender más sobre cómo usar BleachBit [here](https://www.bleachbit.org/).
 
-# 5. Limpiar caché de usuario
+# 5. Limpiar Caché de Usuario 🏠
 
 - A medida que usas tu sistema, los cachés se acumularán en tu directorio personal. Puede comprobar el tamaño de su carpeta de caché con:
 
@@ -104,11 +104,11 @@ rm -rf ~/.cache/*
 
 ---
 
-# 5. Buscar archivos y directorios grandes
+# 5. Buscar archivos grandes y directorios 📂
 
 A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están las herramientas que puede utilizar para identificarlas:
 
-## 6.1 Herramientas de Consola
+## Herramientas de consola ⌨️
 
 - **duc** — Un inspector de uso de disco.\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\\
@@ -117,6 +117,7 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — Analizador de uso de disco con interfaz de consola.\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
@@ -130,9 +131,14 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   **duc** — Un inspector de uso de disco.\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  **duc** — Un inspector de uso de disco.\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  **duc** — Un inspector de uso de disco.\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
-## 6.2 Herramientas Gráficas
+## Herramientas gráficas 🖼️
 
 - **Filelight** — Mapa de uso de disco interactivo con anillos concentrados.\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\\
@@ -142,6 +148,8 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\\
+  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\\
   **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
@@ -165,5 +173,5 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
 ---
 
 > ¡Libera espacio y mantén tu sistema BredOS funcionando sin problemas!
-> {.is-success}
+> 💪✨
 
