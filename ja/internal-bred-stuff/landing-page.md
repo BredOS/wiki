@@ -2,7 +2,7 @@
 title: BledOS Wiki
 description:
 published: false
-date: 2025-09-22T06:53:15.596Z
+date: 2025-09-22T12:04:33.957Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -54,17 +54,17 @@ BredOSで 愛情と情熱で選ばれた基本的な食材を使用し、お好�
 > パンくずリスト🔸を見つけた場合は、コミュニティチャネルで頭を上げてください。
 > {.is-info}
 
-## 5.1 デバイス固有の画像のインストール
+## 6.1 デバイス固有の画像のインストール
 
 これらは、私たちが最も好きなボードのための画像です。 To install this BredOS images on them, either start with our [device specific image](/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which can be found in the navigation bar left of this.
 
 私たちの[ダウンロードサイト](https://bredos.org/download.html)にアクセスして、お使いのデバイスがそのうちの1つであるかどうかを確認してください。
 
-## 5.2 一般的なインストール
+## 6.2 一般的なインストール
 
 If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
 
-## 5.3 Docker コンテナーのインストール
+## 6.3 Docker コンテナーのインストール
 
 - コマンドの一行として簡単:
 
@@ -72,11 +72,11 @@ If your device isn’t listed on our [download site](https://bredos.org/download
 docker pull bredos/bredos
 ```
 
-# 5. トラブルシューティング
+# 4. トラブルシューティング
 
 このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
 
-# 4. コミュニティとサポート
+# 8. コミュニティとサポート
 
 BredOS コミュニティに参加して、サポートを受けたり、アイデアを共有したり、プロジェクトに貢献したりしましょう。
 
@@ -84,7 +84,7 @@ BredOS コミュニティに参加して、サポートを受けたり、アイ�
 - [Discord](https://discord.gg/jwhxuyKXaa)
 - [GitHub](http://github.com/BredOS)
 
-# 8. コントリビューション
+# 9. コントリビューション
 
 BredOSはオープンソースのプロジェクトであり、貢献は歓迎です! 以下の方法で貢献できます：
 
