@@ -2,13 +2,13 @@
 title: Rosetta Stone
 description:
 published: false
-date: 2025-09-21T08：17：46.114Z
+date: 2025-09-20T15:21:38.301Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10：44：50.776Z
 ---
 
-![graphics.png](/vms/graphics.png =25%x){.align-right}
+![graphics.png](/vms/graphics.png){.align-abstopright}
 
 Text i can write some specs here <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
@@ -47,7 +47,7 @@ Toptier
 
 # 注释
 
-这里是一个脚注，[^1] 和另一个。\[^长期注]
+这里是一个脚注，[^1] 和另一个。\\[^长期注]
 
 # 重生：
 
@@ -67,12 +67,12 @@ Toptier
 
 Smaller: (add `{.dense}` to the end)
 
-| 设备                       | 状态 | 注意                                                        |
+| 设备                       | 状态 | 注释                                                        |
 | ------------------------ | -- | --------------------------------------------------------- |
 | 基于 JMB582                | 工作 | [Source](https://github.com/System64fumo/linux/issues/14) |
 | {.dense} |    |                                                           |
 
-# 邮件列表
+# 下拉列表
 
 一些东西：
 
@@ -103,7 +103,8 @@ $A=πr2$
 气动细胞呼吸：
 
 $$
-C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}
+Aerobic cellular respiration:
+$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
 $$
 
 # 图表(Kroki)
@@ -112,8 +113,8 @@ $$
 mermaid
 
 图形TD
-  A[ 任何] -->|可以帮助 | B( 转到bredos. rg)
-  B --> C认真研究如何贡献？ }
+  A[ 任何] -->|可以帮助 | B( 转到github. om/yuzutech/kroki ()
+  B --> Cower How to contribute？ }
   C --> D[ Reporting bug ]
   C --> E[ 分享想法]
   C --> F[ 倡导]
