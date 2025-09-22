@@ -16,4 +16,4 @@ dateCreated: 2025-03-16T16：08：26.697Z
 
 ## 2.1 Pipewire CPU 限制
 
-管道不再吃你的核心之一吗？ 然后跟随 [this](/hacks/pipewire-cpu) 指南。
+管道不再吃你的核心之一吗？ 然后跟随 [this](/hacks/pipewire-cpu) 指南。 然后跟随 [this](/hacks/pipewire-cpu) 指南。
