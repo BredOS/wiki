@@ -2,13 +2,13 @@
 title: Campaña principal
 description:
 published: false
-date: 2025-09-22T18:31:53.209Z
+date: 2025-09-22T19:32:45.737Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
 ---
 
-## Campaña de hito: Soporte principal RK3588 en BredOS
+## Financiar esta campaña de características: Soporte principal RK3588 en BredOS
 
 Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado con ductos que es difícil de mantener, inseguro y siempre señala detrás de Linux.
 
