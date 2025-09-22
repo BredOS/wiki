@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-15T09:04:50.217Z
+date: 2025-09-15T06:55:36.088Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
