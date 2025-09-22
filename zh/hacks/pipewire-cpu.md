@@ -67,9 +67,10 @@ systemctl --user 守护进程重新加载
 
 ## 2.3 注销或重启：
 
-登出或重新启动。 Pipewire 最多只能使用单个核心的10%。
+登出或重新启动。 登出或重新启动。 Pipewire 最多只能使用单个核心的10%。
 
 > 不要手动重启 pipewire 。
+> {.is-warning}
 > {.is-warning}
 
 这个哈克不应影响您的音频。
