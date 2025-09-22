@@ -2,7 +2,7 @@
 title: Orion O6でUEFIを更新中
 description:
 published: true
-date: 2025-09-21T10:45:11.948Z
+date: 2025-09-22T06:26:53.479Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -10,7 +10,9 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 # 1. はじめに
 
-このガイドでは、Radxa Orion O6 `UEFI` ファームウェアを BredOS 1 にアップデートする方法について説明します。
+- このガイドでは、Radxa Orion O6 `UEFI` ファームウェアを BredOS 1 にアップデートする方法について説明します。
+
+![radxa-bios.png](/orion/radxa-bios.png)
 
 # 2. 特徴
 
