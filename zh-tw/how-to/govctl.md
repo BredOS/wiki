@@ -2,7 +2,7 @@
 title: Configuring Governors
 description: Using govctl to manage system governors
 published: true
-date: 2025-09-18T08:06:33.318Z
+date: 2025-09-15T09:02:10.135Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T12:47:49.033Z
@@ -10,10 +10,10 @@ dateCreated: 2025-05-07T12:47:49.033Z
 
 # 1. 簡介
 
-BredOS ships by default the tool `govctl` with the package `bredos-govctl`.
+BredOS ships by default the tool `govctl` in package `bredos-govctl`.
 It is enabled by default and will set the performance according to available battery power.
 
-- If its not installed, install it with:
+- If not, install it with
 
 ```
 sudo pacman -S bredos-govctl
@@ -33,7 +33,8 @@ GovCtl will by default ensure maximum performance across all attached devices, i
 
 If the system holds sufficient charge, but it's not plugged in, it'll maintain most of the performance, limiting GPU speed and cpu boost.
 
-If the system does not have a sufficient charge (20% is the default threshold for this determination), it will minimize power consumption, at the expense of performance and response time.
+If the system does not hold a sufficient charge (20% is the default point at which this is determined),
+the system will minimize power draw, at the detriment of performance and response time.
 
 > This for example will make RK3588 boards only run at 300mHz.
 > {.is-info}
@@ -89,13 +90,13 @@ This would set it to trigger at 30%.
 
 By default, when plugged in or no batteries are present, the system will maintain maximum performance.
 
-- The flag `-g` sets the governor used when plugged in. If you want it to be `conservative` while your system is running off of power run:
+- The flag `-b` sets the governor used when **NOT** plugged in. If you want it to be `performance` while your system is running of of battery run:
 
 ```
 sudo govctl -g conservative
 ```
 
-- The flag `-b` sets the governor used when **NOT** plugged in. If you want it to be `performance` while your system is running off of battery run:
+- The flag `-g` sets the governor used when plugged in. If you want it to be `conservative` while your system is running of of power run:
 
 ```
 sudo govctl -b performance
@@ -109,7 +110,7 @@ sudo govctl -b performance
 sudo govctl -d
 ```
 
-This will ensure that the "plugged in" governor is applied at all times.
+Will ensure that at all times the "plugged in" governor is applied at all times.
 
 - To undo this, run:
 
