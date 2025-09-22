@@ -2,13 +2,13 @@
 title: Piedra de Rosetta
 description:
 published: false
-date: 2025-09-21T08:17:46.114Z
+date: 2025-09-20T15:21:38.301Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-![graphics.png](/vms/graphics.png =25%x){.align-right}
+![graphics.png](/vms/graphics.png){.align-abstopright}
 
 El texto puede escribir algunas especificaciones aquí <br>format@@2<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
@@ -100,19 +100,20 @@ $a^2 + b^2 = c^2$
 Área de la fórmula del círculo:
 $A=πr2$
 
-Respiración celular aeróbica:
+Abrreviaciones:
 
 $$
-C_6H_{12}O_6 + 6 O_2 \;\rflecha de flujo\; 6 CO_2 + 6 H_2O + \text{energy}
+Respiración celular aeróbica:
+$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
 $$
 
 # Gráficas (Kroki)
 
 ```kroki
-sirena
+mermaid
 
 gráfica TD
-  A[ Cualquiera ] -->|Puede ayudar | B( Ir a bredos. rg )
+  A[ Cualquiera ] -->|Puede ayudar | B( Ir a github. om/yuzutech/kroki )
   B --> C{ ¿Cómo contribuir? }
   C --> D[ Reportando errores ]
   C --> E [ Compartir ideas ]
