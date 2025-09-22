@@ -2,7 +2,7 @@
 title: 运行 Android 应用程序(waydroid)
 description:
 published: true
-date: 2025-09-21T12:54:43.353Z
+date: 2025-09-21T08:56:04.025Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T08：40：19.752Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-21T08：40：19.752Z
 
 # 1. 简介
 
-Waydroid 是基于 Wayland 在 Linux / GNU 上运行 Android 的一个基于容器的解决方案。 本指南将带你走上安装它的必要步骤。
+Waydroid 是基于 Wayland 在 Linux / GNU 上运行 Android 的一个基于容器的解决方案。 本指南将带你走上安装它的必要步骤。 本指南将带你走上安装它的必要步骤。
 
 # 2. 安装
 
