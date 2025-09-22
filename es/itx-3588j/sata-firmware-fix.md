@@ -2,7 +2,7 @@
 title: Arreglo de firmware de Sata
 description:
 published: true
-date: 2025-09-19T05:04:35.739Z
+date: 2025-09-19T05:01:28.982Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -66,7 +66,7 @@ Debe haber una placa no poblada y un conector ZIF como parte del paquete. Elija 
 - Primero necesita instalar flashrom.
 
 ```
-sudo pacman -S flashrom
+# sudo pacman -S flashrom
 ```
 
 > ¡Asegúrate de que tu flasher esté ajustado a 3.3 voltios!
@@ -78,12 +78,18 @@ Después, conecte el flasher a su dispositivo Linux y ejecute el siguiente coman
 - Si reporta el nombre del chip SPI mencionado anteriormente, es bueno que vayas.
 
 ```
-sudo flashrom -p ch341a_spi --flash-name
+# sudo flashrom -p ch341a_spi --flash-name
+flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) en Linux 6.15.7-1-BredOS (x86_64)
+flashrom es software libre, obtenga el código fuente en https://flashrom. rg
+
+Utilizando clock_gettime para bucles de retraso (clk_id: 1, resolution: 1ns).
+Se encontró el chip de flash Winbond "W25X40" (512 kB, SPI) en ch341a_spi.
 ```
 
 ```
+# sudo flashrom -p ch341a_spi --flash-name
 flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) en Linux 6.15.7-1-BredOS (x86_64)
-flashrom es software libre, obtener el código fuente en https://flashrom. rg
+flashrom es software libre, obtenga el código fuente en https://flashrom. rg
 
 Utilizando clock_gettime para bucles de retraso (clk_id: 1, resolution: 1ns).
 Se encontró el chip de flash Winbond "W25X40" (512 kB, SPI) en ch341a_spi.
@@ -101,14 +107,14 @@ Si algo sale mal, podrás restaurarlo usando esta copia de seguridad.
 - Volcar el flash con el siguiente comando:
 
 ```
-sudo flashrom -p ch341a_spi -r firmware_dump.bin
+# sudo flashrom -p ch341a_spi -r firmware_dump.bin
 ```
 
 - Luego, volcarlo de nuevo y compare los dos archivos para asegurar que los datos se transfirieron correctamente.
 
 ```
-sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
-diff firmware_dump.bin firmware_dump-1.bin
+# sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
+# diff firmware_dump.bin firmware_dump-1.bin
 ```
 
 Si "Difier" no produce salida, es bueno que vayas.
@@ -119,7 +125,24 @@ Si lo hace, compruebe la conexión de su clip o inspeccione su trabajo de soldad
 - Tan simple como el título sugiere:
 
 ```
-sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
+# sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
+flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) en Linux 6.15. -1-BredOS (x86_64)
+flashrom es software libre, obtenga el código fuente en https://flashrom.org
+
+Usando clock_gettime para bucles de retraso (clk_id: 1, resolución: 1ns).
+Se encontró el chip de flash Winbond "W25X40" (512 kB, SPI) en ch341a_spi.
+===
+Esta parte de flash tiene estado UNTESTADO para las operaciones: WP
+El estado de prueba de este chip puede haber sido actualizado en la última versión de desarrollo
+de flashrom. Si está ejecutando la última versión de desarrollo,
+por favor envíe un informe a flashrom@flashrom. rg si alguna de las operaciones anteriores
+funciona correctamente para usted con este chip flash. Por favor incluya el archivo de registro de flashrom
+para todas las operaciones que ha probado (ver la página de manual para más detalles), y mencionar
+que placa principal o programador ha probado en la línea de sujetos.
+¡Gracias por tu ayuda!
+Leyendo el viejo contenido de chip flash... hecho.
+Borrar/escribir hecho de 0 a 7ffff
+Verificando flash... VERIFIED.
 ```
 
 ```
