@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-22T06:43:07.736Z
+date: 2025-09-22T06:53:15.596Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -37,7 +37,7 @@ We support a wide range of devices—from exciting ARM-based systems and experim
  - Storage: 8 GB microSD card/eMMC/nVME or larger
  
 # 5. Preview
-Our friend **DroidMaster** made a YouTube video about BredOS. Check it out here:
+Our friend [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) made a YouTube video about BredOS. Check it out here:
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
  
 # 5. Installation
