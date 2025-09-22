@@ -1,8 +1,8 @@
 ---
-title: Cambiar la Orden de Arranque en RK3588
+title: Cómo cambiar la orden de inicio predeterminada en RK3588
 description: Aprenda cómo cambiar el orden de arranque por defecto en dispositivos basados en RK3588 usando la configuración del firmware UEFI
 published: true
-date: 2025-09-16T10:42:14.944Z
+date: 2025-09-15T11:15:39.364Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
@@ -23,7 +23,8 @@ Si necesita modificar el orden de arranque en un dispositivo basado en RK3588 ej
 
 ## 2.2 Navegando a la configuración del pedido de inicio
 
-- Usa las teclas de las flechas (`n` y `n`) para seleccionar `Arranque Administrador de Mantenimiento` y presiona `Entrar`.
+- Usa las teclas de las flechas (`n` y `n`) para seleccionar `Arranque Administrador de Mantenimiento` y presiona `Entrar`.\
+  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
@@ -42,7 +43,8 @@ Si necesita modificar el orden de arranque en un dispositivo basado en RK3588 ej
 ![bredos_boot5.jpg](/boot_images/bredos_boot5.jpg)
 
 - Usa la flecha hacia abajo (`. `) para desplazarte al final de la lista.
-- Seleccione la entrada que desea mover a la parte superior y pulse la tecla `+` hasta que llegue a la parte superior.
+- Seleccione la entrada que desea mover a la parte superior y pulse la tecla `+` hasta que llegue a la parte superior.\
+  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
