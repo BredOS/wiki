@@ -21,7 +21,7 @@ For the installation of BredOS, four things are required:
 3. [RockChip Maskrom drivers](https://dl.radxa.com/tools/windows/)
 4. [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool),     [Alternative Link 1](https://dl.radxa.com/tools/windows/)
 
-# 2) Drivers
+# 2) 2) Drivers
 
 We start with the installation of the [Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip). After you downloaded that .zip file, extract it to your prefered location.
 Inside you will find the tool `DriverInstall.exe`. Execute it with elevated rights.
@@ -37,10 +37,10 @@ With the drivers in place we can continue with the use of [RKDevTool](https://do
 
 In `RKDevTool` set the following configuration and click on `RUN`:
 
-- Select the SPI loader file corresponding to your SoC.
-- Select the BredOS image (.img) for your SBC.
-- Check `Write by Address`.
-- Click on `RUN` and wait until the process finishes.
+- Select the SPI loader file corresponding to your SoC
+- Select the BredOS image (.img) for your SBC
+- Check `Write by Address`
+- Click on `RUN` and wait until the process finishes
 
 > We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
 > {.is-warning}
