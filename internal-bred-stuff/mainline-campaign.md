@@ -2,7 +2,7 @@
 title: Mainline campaign
 description: 
 published: false
-date: 2025-09-22T18:18:25.828Z
+date: 2025-09-22T18:19:42.854Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -44,7 +44,7 @@ In BredOS, we want RK3588 devices to be **practical and polished for real users*
 
 This campaign isn’t just about “making it boot.” It’s about making RK3588 devices **actually usable**.
 
-## ✨ Benefits of Mainline
+## Benefits of Mainline
 Thanks to our early mainline experiments, we’ve already seen some exciting advantages:  
 - **2× Vulkan performance** over BSP builds and more GPU goodies
 - **Proper VPU implementation** that doesn’t require the custom Rockchip Media Processing Platform (MPP)
