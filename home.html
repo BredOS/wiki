@@ -1,0 +1,90 @@
+<!--
+title: Homepage
+description: 
+published: true
+date: 2025-09-22T11:57:26.043Z
+tags: 
+editor: code
+dateCreated: 2022-08-24T12:37:36.410Z
+-->
+
+<h1 class="toc-header" id="the-bredos-wiki"> 🍞 The BredOS Wiki</h1>
+<h2 class="toc-header" id="overview"> 🌟 Overview</h2>
+<p>Welcome to the BredOS documentation! BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).<br>
+The documentation will guide you through the installation, configuration, and usage of BredOS.</p>
+<p><img alt="" src="https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg"></p>
+<h2 class="toc-header" id="table-of-contents"> 📚 Table of Contents</h2>
+<ol>
+<li><a href="#introduction">🔍 Introduction</a></li>
+<li><a href="#features">🚀 Features</a></li>
+<li><a href="#system-requirements">🛠️ System Requirements</a></li>
+<li><a class="is-internal-link is-valid-page" href="/en/installation">💽 Installation</a></li>
+<li><a href="#package-management">📦 Package Management</a></li>
+<li><a href="#troubleshooting">🐞 Troubleshooting</a></li>
+<li><a href="#faq">❓FAQ</a></li>
+<li><a href="#community-and-support">🌐 Community and Support</a></li>
+<li><a href="#contributing">🤝 Contributing</a></li>
+</ol>
+<h2 class="toc-header" id="introduction"> 🔍 Introduction</h2>
+<p>BredOS aims to provide a seamless and user-friendly experience for users of ARM-based single board computers. By leveraging the power and flexibility of Arch Linux, BredOS offers a robust platform that can be customized to fit a wide range of use cases.</p>
+<h2 class="toc-header" id="features"> 🚀 Features</h2>
+<ul>
+<li><strong>🖥️ User-Friendly Interface</strong>: A simplified and intuitive user interface for easy navigation and use.</li>
+<li><strong>🎯 Arch-Based</strong>: Built on top of Arch Linux, ensuring access to a vast repository of packages and a rolling release model.</li>
+<li><strong>🔧 ARM Support</strong>: Optimized for ARM-based single board computers, making it ideal for devices like the Rock 5B, and more.</li>
+<li><strong>⚡ Lightweight</strong>: Minimal bloat, ensuring a lightweight and responsive system.</li>
+</ul>
+<h2 class="toc-header" id="️-system-requirements"> 🛠️ System Requirements</h2>
+<ul>
+<li><strong>🖥️ Supported Devices</strong>:
+<ul>
+<li>Please refer to our list at <a class="is-external-link" href="https://bredos.org/download.html">https://bredos.org/download.html</a></li>
+</ul>
+</li>
+<li><strong>🧠 Minimum RAM</strong>: 2 GB</li>
+<li><strong>💾 Storage</strong>: 16 GB microSD card or larger</li>
+<li><strong>🌐 Network</strong>: Optional</li>
+</ul>
+<h2 class="toc-header" id="installation"> 💽 Installation</h2>
+<p>Read more on our <a class="is-internal-link is-valid-page" href="/en/installation">Installation guide</a> page.</p>
+<h2 class="toc-header" id="package-management"> 📦 Package Management</h2>
+<p>BredOS uses <code>pacman</code>, the package manager from Arch Linux. Here are some common commands:</p>
+<ul>
+<li>🔄 Update package list: <code>sudo pacman -Syu</code></li>
+<li>➕ Install a package: <code>sudo pacman -S [package_name]</code></li>
+<li>➖ Remove a package: <code>sudo pacman -R [package_name]</code></li>
+<li>🔍 Search for a package: <code>pacman -Ss [package_name]</code></li>
+</ul>
+<h2 class="toc-header" id="troubleshooting"> 🐞 Troubleshooting</h2>
+<p>If you encounter issues with BredOS, you are welcome to join our <a class="is-external-link" href="https://discord.gg/jwhxuyKXaa">discord</a>.</p>
+<h2 class="toc-header" id="faq"> ❓ FAQ</h2>
+<h3 class="toc-header" id="q-what-devices-are-supported-by-bredos"> ❓ Q: What devices are supported by BredOS?</h3>
+<p>A: BredOS supports a variety of ARM-based single board computers, the complete list is available at <a href="#system-requirements">supported devices</a>.</p>
+<h3 class="toc-header" id="q-how-do-i-update-bredos"> 🔄 Q: How do I update BredOS?</h3>
+<p>A: You can update BredOS using the <code>pacman</code> package manager with the command <code>sudo pacman -Syu</code>.</p>
+<h3 class="toc-header" id="q-where-can-i-find-additional-software-packages"> 📦 Q: Where can I find additional software packages?</h3>
+<p>A: You can find additional software packages in the Arch User Repository (AUR) and install them using <code>yay</code> or <code>paru</code>.</p>
+<h3 class="toc-header" id="q-the-power-consumption-of-my-device-is-high-how-can-i-reduce-it"> Q: The power consumption of my device is high, how can I reduce it?</h3>
+<p>A: You can reduce the power consumption by changing the CPU governor to <code>ondemand</code> or <code>conservative</code> by editing the <code>/etc/default/cpupower</code> file.</p>
+<h3 class="toc-header" id="q-the-suspend-is-not-working"> Q: The suspend is not working.</h3>
+<p>A: Please make sure that:</p>
+<ul>
+<li>Don't suspend before 10s after just  resuming, this is a known issue with the eMMC driver.</li>
+<li>Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)</li>
+</ul>
+<h2 class="toc-header" id="community-and-support"> 🌐 Community and Support</h2>
+<p>Join the BredOS community to get support, share ideas, and contribute to the project:</p>
+<ul>
+<li><a class="is-external-link" href="https://t.me/bredoslinux">📱 Telegram</a></li>
+<li><a class="is-external-link" href="https://discord.gg/jwhxuyKXaa">💬 Discord</a></li>
+<li><a class="is-external-link" href="http://github.com/BredOS">💻 GitHub</a></li>
+</ul>
+<h2 class="toc-header" id="contributing"> 🤝 Contributing</h2>
+<p>BredOS is an open-source project, and contributions are welcome! You can contribute in the following ways:</p>
+<ul>
+<li>🐛 Report bugs and issues</li>
+<li>💻 Submit patches and improvements</li>
+<li>📄 Write and improve documentation</li>
+<li>🧑‍🤝‍🧑 Help other users in the community forums and chat</li>
+</ul>
+<p>For more information on contributing, visit our <a class="is-external-link" href="http://github.com/BredOS">💻 GitHub</a> or you can message us on <a class="is-external-link" href="https://discord.gg/jwhxuyKXaa">💬 Discord</a> or join our <a class="is-external-link" href="https://t.me/bredoslinux">📱 Telegram</a>.</p>
