@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-09-21T11:42:40.378Z
+date: 2025-09-16T11:46:02.777Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -23,9 +23,9 @@ Para la instalación de BredOS proporcionamos imágenes específicas del disposi
 
 La instalación varía de dispositivo a dispositivo y el medio en el que desea instalar BredOS. En esta guía cubriremos la instalación a
 
-- [3.1 eMC no extraíble](#h-31-non-removable-emmc)
-- [3.2 Tarjeta SD y eMC extraíbles](#h-32-removable-emmc-and-sd-card)
-- [3.3 nVME](#h-33-nvme)
+- `3.1 eMC` no extraíble
+- `3.2 removable eMMC y SD Card`
+- `3.3 nVME`
 
 > Antes de comenzar, por favor compruebe qué opciones están disponibles en su dispositivo!
 > {.is-info}
@@ -34,19 +34,19 @@ La instalación varía de dispositivo a dispositivo y el medio en el que desea i
 
 Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto, decidimos dividir la instalación en eMC no extraíble en estas dos guías:
 
-- [Flashear el eMMC con Linux o macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
-- [Flashear el eMMC con Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
+- Flashear el eMMC con Linux o macOS
+- Flashear el eMMC con Microsoft Windows
 
 ## 3.2 Tarjeta SD y eMMC extraíble
 
-> Si usted está familiarizado con flashear Raspberry OS no necesita leer más. Simplemente coja su tarjeta SD-Card o eMMC, la imagen BredOS específica de su dispositivo y parpadee con su herramienta preferida.
+> Si usted está familiarizado con flashear Raspberry OS no necesita leer más. Just grab your SD-Card or eMMC, your device specific image and flash with your preferred Tool.
 > {.is-info}
 
-En los siguientes describimos cómo flashear eMC con un adaptador. Si no posees un adaptador adecuado, deja el eMMC conectado a tu SBC y sigue [3.1 eMC no extraíble](#h-31-non-removable-emmc).
+En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee un adaptador adecuado deje el eMMC conectado a su SBC y siga `3.1 eMC` no extraíble.
 
 ### 3.2.1 Prepare su eMMC extraíble
 
-> Saltar a [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card) si no estás usando almacenamiento eMMC.
+> Salta a `3.2.2 Flashing eMMC / SD Card` si no estás usando el almacenamiento eMMC.
 > {.is-info}
 
 #### 3.2.1.1 con adaptador uSD
@@ -55,7 +55,8 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posees 
 
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
-- Presione firmemente el conector del eMMC al adaptador uSD y conéctelos al lector de tarjetas SD.
+- ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
+  Presiona firmemente el conector del eMMC al adaptador uSD y conéctalos al lector de tu tarjeta SD.
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
@@ -67,27 +68,27 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posees 
 
 ### 3.2.2 Flashear eMMC / Tarjeta SD
 
-Existen innumerables herramientas para flashear una tarjeta sd o eMMC. Recomendamos el uso de `BalenaEtcher` o `Raspberry Pi Imager`. Ambas herramientas ofrecen soporte para Linux, macOS y Microsoft Windows.
+Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta guía cubriremos `BalenaEtcher` y `Raspberry Pi Imager`. Ambas herramientas ofrecen soporte para Linux, macOS y Microsoft Windows.
 
 - [BalenaEtcher](https://etcher.balena.io/)
-- [Imágen Raspberry Pi](https://github.com/raspberrypi/rpi-imager)
+- Flashear con Raspberry Pi Imager
 
 > Proporcionamos imágenes comprimidas como archivos .xz. ¡Asegúrate de descomprimirlos antes de parpadear!
 > {.is-warning}
 
 ## 3.3 nVME
 
-### 3.3.1 Preperación
+### 3.3.1 Prerrequisitos
 
-Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue [esta guía](/en/install/Installation-of-UEFI).
+Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
 
 ### 3.3.2 Flashear nVME
 
-Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en [3.2. Flashear eMMC / Tarjeta SD](#h-322-flashing-emmc-sd-card), asegurándose de usar la letra de unidad o ruta correcta para tu unidad NVMe. Después de flashear, conecte la unidad al puerto nVME de su SBC.
+Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive.
 
 ### 3.3.3 Orden de Arranque
 
-La UEFI debería ser capaz de tomar la unidad por sí sola. Sin embargo, el orden de los dispositivos desde los que intentará arrancar puede ralentizar el proceso de arranque o incluso fallar completamente (p. ej. si tiene un servidor PXE en su red). Para cambiar el orden de arranque siga este [guide](/en/how-to/change-default-boot-order-rk3588).
+La UEFI debería ser capaz de tomar la unidad por sí sola. Sin embargo, el orden de los dispositivos desde los que intentará arrancar puede ralentizar el proceso de arranque o incluso fallar completamente (p. ej. si tiene un servidor PXE en su red). si tiene un servidor PXE en su red). Para cambiar el orden de arranque siga este [guide](/en/how-to/change-default-boot-order-rk3588).
 
 > Después de la instalación exitosa, proceda con [**Primera configuración**](/en/install/first-setup)
 > {.is-success}
