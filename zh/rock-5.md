@@ -2,7 +2,7 @@
 title: Rock 5 系列
 description:
 published: true
-date: 2025-09-21T10:01:36.937Z
+date: 2025-09-17T09:37:33.486Z
 tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -28,10 +28,12 @@ dateCreated: 2024-09-21T09:12:56.606Z
 
 > 我们把它命名为“_BP_”是因为石油公司。
 > {.is-info}
+> {.is-info}
 
 #### Rock 5C
 
 > 我们把它命名为“_ICU_”，因为它是冰激素铀。
+> {.is-info}
 > {.is-info}
 
 # 2. 下载
