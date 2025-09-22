@@ -1,11 +1,11 @@
 ---
 title: 主线活动
-description:
-published: false
-date: 2025-09-22T18:31:53.209Z
-tags:
+description: 
+published: true
+date: 2025-09-22T19:17:32.829Z
+tags: 
 editor: markdown
-dateCreated: 2025-09-22T17：56：04.573Z
+dateCreated: 2025-09-22T19:14:24.174Z
 ---
 
 ## 里程碑营销活动: BredOS 中的Mainline RK3588 支持
@@ -60,7 +60,8 @@ dateCreated: 2025-09-22T17：56：04.573Z
 
 ## 您如何帮助
 
-- **捐赠**: 每个贡献都会使我们更接近一个主航的 RK3588 体验。 您可以贡献 [here](https://ko-fi.com/Z8Z3I4J0P或 PM@rippanda12
+- **捐赠**：每一份贡献都会让我们更接近体验主航 RK3588 的目标。您可以在 [这里](https://ko-fi.com/Z8Z3I4J0P) 进行捐赠，或者通过 PM 联系 @rippanda12。
+
 - **分享**：在RK3588社区、SBC论坛和社会媒体中传播信息。
 - **赞助者**：依赖RK3588硬件的公司可以在更高的层级上回溯这个里程碑(我们会在我们的仓库和网站上给出信贷赞助者)。
 
