@@ -2,7 +2,7 @@
 title: Wiki de BredOS
 description:
 published: false
-date: 2025-09-21T09:33:41.426Z
+date: 2025-09-22T06:43:07.736Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -40,6 +40,12 @@ Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados 
 
 - RAM mínimo: 2 GB
 - Almacenamiento: 8 GB de tarjeta microSD, eMMC/nVME o más grande
+
+# 5. Vista previa
+
+Nuestro amigo **DroidMaster** hizo un video de YouTube sobre BredOS. Échale un vistazo aquí:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # 5. Instalación
 
