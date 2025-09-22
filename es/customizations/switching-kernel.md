@@ -2,13 +2,13 @@
 title: Kernel cambiante
 description:
 published: true
-date: 2025-09-18T09:33:26.800Z
+date: 2025-09-16T10:40:30.464Z
 tags:
 editor: markdown
 dateCreated: 2024-04T15:50:46.861Z
 ---
 
-# 1. Introducción
+# 1. Eliminar el núcleo instalado
 
 Por defecto, la mayoría de los dispositivos vienen con el núcleo `linux-rockchip-rkr3`.
 Sin embargo, puede que desee cambiar de otro o a otro núcleo.
@@ -39,10 +39,10 @@ local/util-linux-libs 2.40.2-1
     librerías util-linux runtime
 ```
 
-En la lista podemos ver `linux-rockchip-rkr3` y las cabeceras que lo acompañan están instaladas.
+En la lista podemos ver linux-rockchip-rkr3 y las cabeceras que lo acompañan están instaladas.
 Para instalar un núcleo diferente, primero retire el núcleo instalado, junto con sus cabezas.
 
-# 2. Manejo de núcleos
+# 2. Proceda a instalar el nuevo núcleo
 
 ## 2.1 Eliminar el núcleo instalado
 
@@ -123,14 +123,14 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\\\\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
+El núcleo `linux-rockchip-rkr3` generó la imagen initramfs-linux-rockchip-rkr3.img\\\\\` initramfs. Otros núcleos producirán diferentes nombres de archivo.
 
-## 2.3 Actualizar configuración del cargador de arranque
+## 3. Actualizar configuración del cargador de arranque
 
 > Si durante el encendido del tablero ves un logotipo de BredOS, estás usando UEFI.
 > {.is-warning}
 
-### 2.3.1 Arranque U
+### 3.1 Arranque U
 
 - Editar `/boot/extlinux/extlinux.conf`:
 
@@ -164,7 +164,7 @@ initramfs-linux-rockchip-rkr3.img
 vmlinuz-linux-rockchip-rkr3
 ```
 
-### 2.3.2 UEFI
+### 3.2 UEFI
 
 - Ejecuta lo siguiente para regenerar el grub.cfg:
 
