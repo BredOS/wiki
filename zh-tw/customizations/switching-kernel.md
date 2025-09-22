@@ -2,15 +2,16 @@
 title: Switching Kernel
 description:
 published: true
-date: 2025-09-18T09:33:26.800Z
+date: 2025-09-16T10:40:30.464Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
 ---
 
-# 1. 簡介
+# 1. Remove the installed kernel
 
 By default, most devices ship with the `linux-rockchip-rkr3` kernel.
+To do this first please validate which kernel you have installed:
 To do this first please validate which kernel you have installed:
 
 - To do this first please validate which kernel you have installed:
@@ -39,10 +40,10 @@ local/util-linux-libs 2.40.2-1
     util-linux runtime libraries
 ```
 
-In the list we can see `linux-rockchip-rkr3` and the accompanying headers are installed.
+In the list we can see linux-rockchip-rkr3 and the accompanying headers are installed.
 To install a different kernel, first remove the installed kernel, along with it's headers.
 
-# 2. Managing kernels
+# 2. Proceed to install the new kernel
 
 ## 2.1 Remove the installed kernel
 
@@ -125,12 +126,12 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 
 The `linux-rockchip-rkr3` kernel generated the `/boot/initramfs-linux-rockchip-rkr3.img` initramfs image. Other kernels will produce different filenames.
 
-## 2.3 Update bootloader config
+## Update bootloader config
 
 > If during board power-on you see a BredOS logo, you are using UEFI.
 > {.is-warning}
 
-### 2.3.1 U-Boot
+### 3.1 U-Boot
 
 - Edit `/boot/extlinux/extlinux.conf`:
 
@@ -164,7 +165,7 @@ initramfs-linux-rockchip-rkr3.img
 vmlinuz-linux-rockchip-rkr3
 ```
 
-### 2.3.2 UEFI
+### 3.2 UEFI
 
 - Run the following to regenerate the grub.cfg:
 
