@@ -2,7 +2,7 @@
 title: 主页
 description:
 published: true
-date: 2025-09-11T18:42:23.213Z
+date: 2025-09-22T12:01:41.563Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -13,7 +13,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 ## 🌟 概览
 
 欢迎来到 BredOS 文档！BredOS 是一个基于 Arch 的用户友好型 Linux 发行版，专门为基于 ARM 的单板计算机（SBC）设计。
-本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。
+本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。\
 文档将引导您安装、配置和使用 BredOS 。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
@@ -23,7 +23,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 1. [🔍 简介](#简介)
 2. [🚀 功能](#功能)
 3. [🛠️ 系统要求](#系统要求)
-4. [💽 安装](/installation)
+4. [:coly_disk: 安装](/en/installation)
 5. [📦 包管理](#包管理)
 6. [🐞 疑难解答](#troubleshooting)
 7. [❓ 常见问题](#常见问题)
@@ -44,14 +44,14 @@ BredOS 旨在为基于 ARM 的单板计算机用户提供无缝且用户友好�
 ## 🛠️ 系统要求
 
 - **🖥️ 支持的设备**：
-  - 请参阅我们的列表：https://bredos.org/download.html
+  - 请参阅我们的 [https://bredos.org/download.html](https://bredos.org/download.html)
 - **🧠 最小内存**：2 GB
 - **💾 存储**：16 GB 或更大的 microSD 卡
 - **🌐 网络**：可选
 
 ## 💽 安装
 
-请参阅我们的 [安装指南](/installation) 页面以获取更多信息。
+在我们的 [安装指南] (/en/installation) 页面阅读更多信息。
 
 ## 📦 包管理
 
@@ -88,7 +88,7 @@ A：您可以通过编辑 `/etc/default/cpupower` 文件将 CPU 调节器更改�
 
 A：请确保：
 
-- 刚刚恢复 10 秒前不要暂停，这是一个已知的 eMMC 驱动问题。
+- 刚刚恢复10秒前不要暂停，这是一个已知的 eMC 驱动问题。
 - 不要设置"暂停"作为电源按钮的动作，因为它会在恢复后立即暂停设备！（这将会导致设备进入恢复暂停循环！） (这将会导致设备进入恢复挂起循环！)
 
 ## 🌐 社区和支持
