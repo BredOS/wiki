@@ -2,13 +2,13 @@
 title: カーネルの切り替え
 description:
 published: true
-date: 2025-09-18T09:33:26.800Z
+date: 2025-09-16T10:40:30.464Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15:50:46.861Z
 ---
 
-# 1. はじめに
+# 1. インストールされたカーネルを削除
 
 デフォルトでは、ほとんどのデバイスは `linux-rockchip-rkr3` カーネルを搭載しています。
 しかし、別のカーネルから切り替えたり、別のカーネルに切り替えたりしたいかもしれません。
@@ -43,8 +43,9 @@ local/util-linux-libs 2.40.2-1
 
 リストには `linux-rockchip-rkr3` があり、それに付随するヘッダーがインストールされています。
 別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
+別のカーネルをインストールする
 
-# 2. カーネルの管理
+# 2. 新しいカーネルをインストールします。
 
 ## 2.1 インストールされたカーネルを削除
 
@@ -125,14 +126,15 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。
+`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。
 
-## 2.3 ブートローダーの設定を更新
+## 3. ブートローダーの設定を更新する
 
 > ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
 > {.is-warning}
+> {.is-warning}
 
-### 2.3.1 U-Boot
+### 3.1 U-Boot
 
 - `/boot/extlinux/extlinux.conf`を編集:
 
@@ -155,8 +157,13 @@ label BredOS ARM
 それに合わせてカーネル行を編集する必要があります。
 ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
 それに合わせてカーネル行を編集する必要があります。
+それに合わせてカーネル行を編集する必要があります。
 
-- ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
+- カーネル`initrd`行を編集して同じファイル名を指すようにする必要があります (パスなし)。
+  それに合わせてカーネル行を編集する必要があります。
+  ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
+  それに合わせてカーネル行を編集する必要があります。
+  ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
 
 ```
 ls /boot/
@@ -168,7 +175,7 @@ initramfs-linux-rockchip-rkr3.img
 vmlinuz-linux-rockchip-rkr3
 ```
 
-### 2.3.2 UEFI
+### 3.2 UEFI
 
 - grub.cfg を再生成するには、以下を実行します。
 
