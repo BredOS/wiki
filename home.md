@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2025-09-11T18:42:23.213Z
+date: 2025-09-22T12:01:41.563Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -11,81 +11,100 @@ dateCreated: 2022-08-24T12:37:36.410Z
 # 🍞 The BredOS Wiki
 
 ## 🌟 Overview
-Welcome to the BredOS documentation! BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).
+
+Welcome to the BredOS documentation! BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).  
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
 ## 📚 Table of Contents
-1. [🔍 Introduction](#introduction)
-2. [🚀 Features](#features)
-3. [🛠️ System Requirements](#system-requirements)
-4. [💽 Installation](/installation)
-6. [📦 Package Management](#package-management)
-7. [🐞 Troubleshooting](#troubleshooting)
-8. [❓FAQ](#faq)
-9. [🌐 Community and Support](#community-and-support)
-10. [🤝 Contributing](#contributing)
+
+1.  [🔍 Introduction](#introduction)
+2.  [🚀 Features](#features)
+3.  [🛠️ System Requirements](#system-requirements)
+4.  [💽 Installation](/en/installation)
+5.  [📦 Package Management](#package-management)
+6.  [🐞 Troubleshooting](#troubleshooting)
+7.  [❓FAQ](#faq)
+8.  [🌐 Community and Support](#community-and-support)
+9.  [🤝 Contributing](#contributing)
 
 ## 🔍 Introduction
+
 BredOS aims to provide a seamless and user-friendly experience for users of ARM-based single board computers. By leveraging the power and flexibility of Arch Linux, BredOS offers a robust platform that can be customized to fit a wide range of use cases.
 
 ## 🚀 Features
-- **🖥️ User-Friendly Interface**: A simplified and intuitive user interface for easy navigation and use.
-- **🎯 Arch-Based**: Built on top of Arch Linux, ensuring access to a vast repository of packages and a rolling release model.
-- **🔧 ARM Support**: Optimized for ARM-based single board computers, making it ideal for devices like the Rock 5B, and more.
-- **⚡ Lightweight**: Minimal bloat, ensuring a lightweight and responsive system.
+
+-   **🖥️ User-Friendly Interface**: A simplified and intuitive user interface for easy navigation and use.
+-   **🎯 Arch-Based**: Built on top of Arch Linux, ensuring access to a vast repository of packages and a rolling release model.
+-   **🔧 ARM Support**: Optimized for ARM-based single board computers, making it ideal for devices like the Rock 5B, and more.
+-   **⚡ Lightweight**: Minimal bloat, ensuring a lightweight and responsive system.
 
 ## 🛠️ System Requirements
-- **🖥️ Supported Devices**: 
-	- Please refer to our list at https://bredos.org/download.html
-- **🧠 Minimum RAM**: 2 GB
-- **💾 Storage**: 16 GB microSD card or larger
-- **🌐 Network**: Optional
+
+-   **🖥️ Supported Devices**:
+    -   Please refer to our list at [https://bredos.org/download.html](https://bredos.org/download.html)
+-   **🧠 Minimum RAM**: 2 GB
+-   **💾 Storage**: 16 GB microSD card or larger
+-   **🌐 Network**: Optional
 
 ## 💽 Installation
-Read more on our [Installation guide](/installation) page.
 
+Read more on our [Installation guide](/en/installation) page.
 
 ## 📦 Package Management
+
 BredOS uses `pacman`, the package manager from Arch Linux. Here are some common commands:
-- 🔄 Update package list: `sudo pacman -Syu`
-- ➕ Install a package: `sudo pacman -S [package_name]`
-- ➖ Remove a package: `sudo pacman -R [package_name]`
-- 🔍 Search for a package: `pacman -Ss [package_name]`
+
+-   🔄 Update package list: `sudo pacman -Syu`
+-   ➕ Install a package: `sudo pacman -S [package_name]`
+-   ➖ Remove a package: `sudo pacman -R [package_name]`
+-   🔍 Search for a package: `pacman -Ss [package_name]`
 
 ## 🐞 Troubleshooting
+
 If you encounter issues with BredOS, you are welcome to join our [discord](https://discord.gg/jwhxuyKXaa).
 
 ## ❓ FAQ
+
 ### ❓ Q: What devices are supported by BredOS?
+
 A: BredOS supports a variety of ARM-based single board computers, the complete list is available at [supported devices](#system-requirements).
 
 ### 🔄 Q: How do I update BredOS?
+
 A: You can update BredOS using the `pacman` package manager with the command `sudo pacman -Syu`.
 
 ### 📦 Q: Where can I find additional software packages?
+
 A: You can find additional software packages in the Arch User Repository (AUR) and install them using `yay` or `paru`.
 
 ### Q: The power consumption of my device is high, how can I reduce it?
+
 A: You can reduce the power consumption by changing the CPU governor to `ondemand` or `conservative` by editing the `/etc/default/cpupower` file.
 
 ### Q: The suspend is not working.
-A: Please make sure that: 
-- Don't suspend before 10s after just  resuming, this is a known issue with the eMMC driver.
-- Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)
+
+A: Please make sure that:
+
+-   Don't suspend before 10s after just resuming, this is a known issue with the eMMC driver.
+-   Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)
 
 ## 🌐 Community and Support
+
 Join the BredOS community to get support, share ideas, and contribute to the project:
-- [📱 Telegram](https://t.me/bredoslinux)
-- [💬 Discord](https://discord.gg/jwhxuyKXaa)
-- [💻 GitHub](http://github.com/BredOS)
+
+-   [📱 Telegram](https://t.me/bredoslinux)
+-   [💬 Discord](https://discord.gg/jwhxuyKXaa)
+-   [💻 GitHub](http://github.com/BredOS)
 
 ## 🤝 Contributing
-BredOS is an open-source project, and contributions are welcome! You can contribute in the following ways:
-- 🐛 Report bugs and issues
-- 💻 Submit patches and improvements
-- 📄 Write and improve documentation
-- 🧑‍🤝‍🧑 Help other users in the community forums and chat
 
-For more information on contributing, visit our [💻 GitHub](http://github.com/BredOS) or you can message us on [💬 Discord](https://discord.gg/jwhxuyKXaa) or join our [📱 Telegram](https://t.me/bredoslinux). 
+BredOS is an open-source project, and contributions are welcome! You can contribute in the following ways:
+
+-   🐛 Report bugs and issues
+-   💻 Submit patches and improvements
+-   📄 Write and improve documentation
+-   🧑‍🤝‍🧑 Help other users in the community forums and chat
+
+For more information on contributing, visit our [💻 GitHub](http://github.com/BredOS) or you can message us on [💬 Discord](https://discord.gg/jwhxuyKXaa) or join our [📱 Telegram](https://t.me/bredoslinux).
