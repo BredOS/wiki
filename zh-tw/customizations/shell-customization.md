@@ -2,7 +2,7 @@
 title: BredOS Shell Customization Guide
 description: This guide will help you customize your BredOS experience by changing and enhancing your shell!
 published: true
-date: 2025-09-18T09:28:01.801Z
+date: 2025-09-16T10:37:25.923Z
 tags: customization, shell
 editor: markdown
 dateCreated: 2024-09-20T19:39:08.509Z
