@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description:
 published: true
-date: 2025-09-21T10:44:36.693Z
+date: 2025-09-20T10:28:27.806Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -10,10 +10,10 @@ dateCreated: 2025-09-17T06:04:34.142Z
 
 # 1. 簡介
 
-The Orion O6 is an ITX-formatted ARM64 board with great specifications:
+The Radxa Orion O6 is a Mini‑ITX motherboard powered by the Cix P1 (CD8180) SoC, featuring a 12‑core ARM v9.2 CPU with 4 big Cortex‑A720 cores (~2.8 GHz), 4 medium A720s (~2.4 GHz), and 4 little Cortex‑A520s (~1.8 GHz). It includes an Arm Immortalis‑G720 GPU and a 30 TOPS NPU for AI inference.
 
 - SoC: CIX CD8180
-- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.6GHz + 4x A52 @ 1.8GHz
+- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
 - GPU: Immortals G720 MC10
 - NPU: 30 TOPs
 - Network: 2x 5Gbit Ethernet (PCIe 4.0 1x lane each)
@@ -29,11 +29,11 @@ PCIe ports:
 
 # 2. Download
 
-You can find download links for the aarch64 iso on our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
+You can find download links for the aarch64 iso in our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
 
 We have two versions available: one is based on Radxa's 6.6 kernel, and the other is based on mainline.
 The version based on the 6.6 kernel has the name "ORION" attached and has support for the full feature set of that board.
-The mainline kernel does have missing drivers. A overview whats working on mainline and whats not can be found under [4. Mainline Support](#h-4-mainline-support).
+The mainline kernel does have missing drivers. A overview whats working on mainline and whats not can be found under section `4. Mainline support`.
 
 # 3. 安裝
 
@@ -41,13 +41,13 @@ The Prion supports installation from generic ISO images, unlike our other suppor
 
 ## 3.1 Generic ISO Installation
 
-A guide for generic .iso installation is available [here](/install/Installation-with-ISO).
+A guide for generic .iso installation is available [here](/en/install/Installation-with-ISO).
 
 ## 3.2 UEFI Installation
 
-We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A full list of features and a guide for updating your UEFI is available [here](/radxa-orion-o6/prion-uefi-installation).
+We have developed a custom UEFI based on Radxa’s source code. It supports the actual CPU speed at which the board is sold, allows control of PCIe link speed, and – best of all – displays the Bred logo on startup. A full list of features and a guide for updating your UEFI is available [here](/en/radxa-orion-o6/prion-uefi-installation).
 
-# 4. Mainline support
+# 4. PCIe
 
 | `linux`                   | Status  | Notes                                                                                                                                                                                |
 | ------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -62,12 +62,12 @@ We have developed a custom UEFI based on Radxa’s source code. It supports the 
 | USB-C DP                  | Partial | Same as above                                                                                                                                                                        |
 | Storage                   | Works   | M.2 SSDs work as expected                                                                                                                                            |
 | Ethernet                  | Works   |                                                                                                                                                                                      |
-| Front USB                 | Works   | Randomly dies, needs custom BredOS fork of Radxa bios to work                                                                                                                        |
+| Front USB                 | Works   | Randomly dies, needs custom BredOS fork of Radxa bios                                                                                                                                |
 | Rear USB                  | Works   | Randomly dies                                                                                                                                                                        |
 | Front audio               | Broken  | No driver                                                                                                                                                                            |
 | Rear audio                | Broken  | No driver                                                                                                                                                                            |
 | RTC                       | Works   | No driver                                                                                                                                                                            |
-| UART                      | Works   | `/dev/ttyS2` at boot                                                                                                                                                                 |
+| UART                      | Works   | `ttyS2` at boot                                                                                                                                                                      |
 | PCIe                      | Partial | Works fine for most devices but some GPUs don't work as expected. <br> Freezes the entire system sometimes. Consider using our bios. |
 | M.2 E Key | Works   |                                                                                                                                                                                      |
 | M.2 M Key | Works   |                                                                                                                                                                                      |
