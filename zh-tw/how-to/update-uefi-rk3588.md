@@ -1,14 +1,14 @@
 ---
-title: Update UEFI on RK3588
+title: How to Update UEFI on RK3588
 description: Learn how to update the UEFI firmware on RK3588-based devices running BredOS
 published: true
-date: 2025-09-18T07:50:28.639Z
+date: 2025-09-15T11:14:54.063Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
 ---
 
-# 1. 簡介
+# 1. 📥 Installing the Firmware
 
 - The UEFI firmware for RK3588-based devices can be installed via the package manager. To find the correct package for your specific device, run:
 
@@ -24,7 +24,7 @@ This will list all available UEFI firmware packages. Identify the correct packag
 - **For Rock 5B:** `rock-5b-uefi`
 - _(And others as listed in the output.)_
 
-# 2. Downloading the Firmware
+# 2. 🛠️ Flashing the UEFI Firmware
 
 - Once you have identified the correct package for your device, install it using:
 
@@ -46,7 +46,7 @@ After installation, the firmware image will be located in `/usr/share/edk2/<devi
 > The general format of the command is: Use that instead of the **general** format down below!
 > {.is-warning}
 
-- A **general** format of the command is:
+- The **general** format of the command is:
 
 ```
 sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/<TARGET_DEVICE> bs=512 skip=64 seek=64 conv=notrunc
@@ -56,8 +56,7 @@ Replace `<TARGET_DEVICE>` with the appropriate storage device:
 
 > - `/dev/mmcblk0` for **eMMC**
 > - `/dev/mmcblk1` for **SD card**
-> - `/dev/mtdblock0` for **SPI flash**
->   {.is-info}
+> - `/dev/mtdblock0` for **SPI flash**> {.is-info}
 
 For example, if you are using **eMMC storage** on a **Fydetab Duo**, the command would be:
 
@@ -66,5 +65,6 @@ sudo dd if=/usr/share/edk2/fydetab-duo/fydetab-duo_UEFI_Release_v0.12.3.img of=/
 ```
 
 > ✅ **Done!** Your device's UEFI firmware is now updated.
+> 🚀\
 > {.is-success}
 
