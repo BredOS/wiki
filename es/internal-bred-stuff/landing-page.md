@@ -2,7 +2,7 @@
 title: Wiki de BredOS
 description:
 published: false
-date: 2025-09-22T06:53:15.596Z
+date: 2025-09-22T12:04:33.957Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -54,17 +54,17 @@ Para facilitarle la instalación, hemos preparado una línea de migajas criadas 
 > Si encontraste un trozo de pan 🔸 danos una cabecera en nuestros canales comunitarios.
 > {.is-info}
 
-## 5.1 Instalación de imagen específica del dispositivo
+## 6.1 Instalación de imagen específica del dispositivo
 
 Estas son imágenes para los tableros que más nos gustan. Para instalar estas imágenes BredOS en ellas, inicie con nuestra [imagen específica del dispositivo](/install/device-specific-image) guía de instalación, o dar un vistazo a la página del dispositivo en nuestra wiki, que se puede encontrar en la barra de navegación a la izquierda de esto.
 
 Visita nuestro [sitio de descargas](https://bredos.org/download.html) para averiguar si tu dispositivo es uno de ellos.
 
-## 12.2 Instalación genérica
+## 6.2 Instalación genérica
 
 Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/download.html) pero soporta el arranque de UEFI y se basa en la arquitectura x86 o ARM64, simplemente sigue nuestra guía para una instalación genérica disponible [here](/install/Installation-with-ISO).
 
-## 5.3 Instalación del contenedor Docker
+## 6.3 Instalación del contenedor Docker
 
 - Fácil como una línea de comando:
 
@@ -72,11 +72,11 @@ Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/
 trituradores/bredos/bredos
 ```
 
-# 5. Solución de problemas
+# 4. Solución de problemas
 
 Eche un vistazo a las páginas del dispositivo en la barra de navegación de esta página para encontrar problemas conocidos específicos de su dispositivo. Si tu problema no está listado, no dudes en contactar con nosotros directamente a través de [nuestros canales de soporte](#h-7-community-and-support).
 
-# 4. Comunidad y soporte
+# 8. Comunidad y soporte
 
 Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:
 
@@ -84,7 +84,7 @@ Eche un vistazo a las páginas del dispositivo en la barra de navegación de est
 - [Discord](https://discord.gg/jwhxuyKXaa)
 - [GitHub](http://github.com/BredOS)
 
-# 8. Contribuyendo
+# 9. Contribuyendo
 
 BredOS es un proyecto de código abierto, y las contribuciones son bienvenidas! Puedes contribuir de las siguientes maneras:
 
