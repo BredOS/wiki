@@ -2,7 +2,7 @@
 title: Mainline campaign
 description: 
 published: false
-date: 2025-09-22T18:18:13.422Z
+date: 2025-09-22T18:18:25.828Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -47,9 +47,9 @@ This campaign isn’t just about “making it boot.” It’s about making RK358
 ## ✨ Benefits of Mainline
 Thanks to our early mainline experiments, we’ve already seen some exciting advantages:  
 - **2× Vulkan performance** over BSP builds and more GPU goodies
-- 🎥 **Proper VPU implementation** that doesn’t require the custom Rockchip Media Processing Platform (MPP)
-- 🌐 Ability to run **Chromium or any video-accelerated apps** out-of-the-box  
-- 🛠 No more custom hacks or recompiles for common video workloads  
+- **Proper VPU implementation** that doesn’t require the custom Rockchip Media Processing Platform (MPP)
+- Ability to run **Chromium or any video-accelerated apps** out-of-the-box  
+- No more custom hacks or recompiles for common video workloads  
 
 Mainline unlocks these **real, tangible improvements** for both developers and end-users, making RK3588 devices far more capable in daily use.
 
