@@ -2,13 +2,13 @@
 title: ロゼッタストーン
 description:
 published: false
-date: 2025-09-21T08:17:46.114Z
+date: 2025-09-20T15:21:38.301Z
 tags:
 editor: markdown
 dateCreated: 2025-09-20T10:44:50.776Z
 ---
 
-![graphics.png](/vms/graphics.png =25%x){.align-right}
+![graphics.png](/vms/graphics.png){.align-abstopright}
 
 Text i can write some specs here <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
@@ -103,7 +103,8 @@ $A=πr2$
 好気性細胞呼吸:
 
 $$
-C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}
+好気性細胞呼吸:
+$C_6H_{12}O_6 + 6 O_2 \;\rightarrow\; 6 CO_2 + 6 H_2O + \text{energy}$
 $$
 
 # グラフ (Kroki)
@@ -112,7 +113,7 @@ $$
 mermaid
 
 graph TD
-  A[ Anyone ] -->|Can help | B( Go to bredos.org )
+  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )
   B --> C{ How to contribute? }
   C --> D[ Reporting bugs ]
   C --> E[ Sharing ideas ]
