@@ -2,7 +2,7 @@
 title: Bluetooth Fix (ITX-3588J)
 description:
 published: true
-date: 2025-09-18T09:42:49.964Z
+date: 2025-09-17T08:30:12.200Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-14T11:10:38.109Z
 
 # 1. r58x-post-installをインストール
 
-今のところ、パッケージを別のものに置き換える必要があります。 これは、itx-3588j の動作を変更することはありませんが、ブート時に bluetoothを修正するサービスを追加します。
+今のところ、パッケージを別のものに置き換える必要があります。 今のところ、パッケージを別のものに置き換える必要があります。 これは、itx-3588j の動作を変更することはありませんが、ブート時に bluetoothを修正するサービスを追加します。
 
 - 最初に `itx-3588j-post-install` を削除します。 このパッケージはスタンバイ問題を回避するために必要なパラメータを設定します。 私たちは再びこれを修正しないでください。 このパッケージはスタンバイ問題を回避するために必要なパラメータを設定します。 私たちは再びこれを修正しないでください。
 
@@ -18,7 +18,7 @@ dateCreated: 2025-09-14T11:10:38.109Z
 sudo pacman -R itx-3588j-post-install
 ```
 
-- その後、 `r58x-post-install` をインストールします。 このパッケージは前述のスタンバイに対して同じ修正を提供し、`bluetooth-mekotronics` サービスを含んでいます。
+- その後、 `r58x-post-install` をインストールします。 このパッケージは前述のスタンバイに対して同じ修正を提供し、`bluetooth-mekotronics` サービスを含んでいます。 このパッケージは前述のスタンバイに対して同じ修正を提供し、`bluetooth-mekotronics` サービスを含んでいます。
 
 ```
 sudo pacman -S r58x-post-install
@@ -26,9 +26,9 @@ sudo pacman -S r58x-post-install
 
 # 2. 正しいUARTパスを設定
 
-Bluetooth アダプターは `/dev/ttyS9` に接続されていません (他の RK3588 シングルボードコンピュータと同じです)、`/dev/ttyS6` に接続されています。
+Bluetooth アダプターは `/dev/ttyS9` に接続されていません (他の RK3588 SBC のように)、`/dev/ttyS6` に接続されています。 `/usr/bin/bluetooth-fix` 内のパスを変更する必要があります。
 
-- `/usr/bin/bluetooth-fix` のパスを変更する必要があります。
+- /usr/bin/bluetooth-fixのパスを変更する必要があります。
 
 ```
 sudo nano /usr/bin/bluetooth-fix
@@ -57,12 +57,13 @@ brcm_patchram_plus --enable_hci -no2bytes --use_baudrate_for_download --tosleep 
 
 # 3. Bluetooth サービスを有効にする
 
-- 最後に `bluetooth-mekotronics` サービスを有効にする必要があります。
+- 最後に `bluetooth-mekotronics` サービスを有効にする必要があります
 
 ```
 sudo systemctl --now enable bluetooth-mekotronics
 ```
 
-> 以上です！ 以上です！ Bluetoothは今正常に動作するはずです。
+> 以上です！ 以上です！ 以上です！ Bluetoothは今正常に動作するはずです。
+> {.is-success}
 > {.is-success}
 > {.is-success}
