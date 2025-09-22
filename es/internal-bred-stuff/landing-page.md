@@ -2,7 +2,7 @@
 title: Wiki de BredOS
 description:
 published: false
-date: 2025-09-22T12:04:33.957Z
+date: 2025-09-22T06:53:15.596Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -14,7 +14,7 @@ El pan es uno de los alimentos preparados más antiguos de la historia de la hum
 
 # 2. BredOS
 
-En BredOS, Elaboramos el concepto de utilizar ingredientes básicos —seleccionados con amor y pasión— para fabricar un producto simple pero versátil que puedas personalizar a tu gusto. Varias llanuras, tiene el potencial de transformarse en lo que usted desee. Dulce o salado, ligero o oscuro, lo suficientemente grande como para disfrutarlo con tu familia o lo suficientemente pequeño como para llevarlo alrededor de tus aventuras, BredOS está hecho para ti.
+En BredOS, Elaboramos el concepto de utilizar ingredientes básicos —seleccionados con amor y pasión— para fabricar un producto simple pero versátil que puedas personalizar a tu gusto. Varias llanuras, tiene el potencial de transformarse en lo que usted desee. Ya sea dulce o salado, ligero o oscuro, lo suficientemente grande como para disfrutarlo con su familia o lo suficientemente pequeño como para llevarlo alrededor de sus aventuras.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
@@ -34,37 +34,37 @@ En BredOS, Elaboramos el concepto de utilizar ingredientes básicos —seleccion
 
 # 4. Requisitos del sistema
 
-Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos paneles de intel/amd x86. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/table-of-supported-devices).
+Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos paneles de intel/amd x86. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/en/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/en/table-of-supported-devices).
 
 ## 4.1 Requisitos mínimos del sistema
 
 - RAM mínimo: 2 GB
-- Almacenamiento: 8 GB de tarjeta microSD, eMMC/nVME o más grande
+- Storage: 8 GB microSD card or larger
 
-# 5. Vista previa
+# 5. Instalación
 
-Nuestro amigo [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) hizo un video de YouTube sobre BredOS. Échale un vistazo aquí:
+Nuestro amigo **DroidMaster** hizo un video de YouTube sobre BredOS. Échale un vistazo aquí:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # 5. Instalación
 
-Para facilitarle la instalación, hemos preparado una línea de migajas criadas para que usted lo siguiera. 🍞 🔸🔸🔸
+To make installation easy for you, we laid out a line of bred crumbs to follow. 🍞 🔸🔸🔸
 
 > Si encontraste un trozo de pan 🔸 danos una cabecera en nuestros canales comunitarios.
 > {.is-info}
 
-## 6.1 Instalación de imagen específica del dispositivo
+## 5.1 Instalación de imagen específica del dispositivo
 
-Estas son imágenes para los tableros que más nos gustan. Para instalar estas imágenes BredOS en ellas, inicie con nuestra [imagen específica del dispositivo](/install/device-specific-image) guía de instalación, o dar un vistazo a la página del dispositivo en nuestra wiki, que se puede encontrar en la barra de navegación a la izquierda de esto.
+Estos son los tableros que más nos gustan. Para instalar BredOS en ellos, inicie con nuestra guía de instalación [imagen específica del dispositivo](/en/install/device-specific-image). o dar un vistazo a la página del dispositivo en nuestra wiki, que se encuentra en la barra de navegación a la izquierda de esto.
 
 Visita nuestro [sitio de descargas](https://bredos.org/download.html) para averiguar si tu dispositivo es uno de ellos.
 
-## 6.2 Instalación genérica
+## 12.2 Instalación genérica
 
 Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/download.html) pero soporta el arranque de UEFI y se basa en la arquitectura x86 o ARM64, simplemente sigue nuestra guía para una instalación genérica disponible [here](/install/Installation-with-ISO).
 
-## 6.3 Instalación del contenedor Docker
+## 5.3 Instalación del contenedor Docker
 
 - Fácil como una línea de comando:
 
