@@ -2,15 +2,17 @@
 title: Campaña principal
 description:
 published: true
-date: 2025-09-23T15:45:54.131Z
+date: 2025-09-23T18:06:18.145Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
 ---
 
-## Financiar esta campaña de características: Soporte principal RK3588 en BredOS
+# Financiar esta campaña
 
-Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado con ductos que es difícil de mantener, inseguro y siempre señala detrás de Linux.
+## Soporte principal RK3588 en BredOS
+
+Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado que es difícil de mantener, inseguro y siempre marca significativamente detrás de Linux.
 
 Queremos cambiar esto.
 
@@ -18,7 +20,7 @@ Manteniendo soporte RK3588, BredOS traerá:
 
 - Mantenimiento prolongado (no más hacks de BSP)
 
-- Correcciones de seguridad del núcleo arriba
+- Latest upstream kernel security fixes
 
 - Mejor rendimiento y estabilidad
 
@@ -27,7 +29,9 @@ Manteniendo soporte RK3588, BredOS traerá:
 - Una base sólida para el uso de escritorio y servidor ARM64
 
 Se trata de hacer que BredOS — y el ecosistema Linux más amplio — sea mejor para todos que usen hardware RK3588.
-Nuestro objetivo con esta campaña es aumentar al menos 2500€ para que podamos puerto ~28 tableros.
+
+> Our goal with this campaign is to raise atleast **2500€**, so that we can port approximately 28 boards.
+> {.is-info}
 
 ## ¿Por qué lo hacemos?
 
@@ -36,17 +40,19 @@ La verdad es: **solo una parte de ella es**.
 
 Mientras que gran parte del trabajo de bajo nivel (como el soporte básico del núcleo) ha llegado a la parte superior, **los elementos esenciales del día a día todavía están rotos o perdidos**:
 
-- Muchos controladores Wi-Fi no funcionan
+- Many Wi-Fi/Bluetooth drivers don’t work out of the box
 - Las optimizaciones específicas del dispositivo no están cubiertas por parches genéricos de línea principal
 
 En BredOS, queremos que los dispositivos RK3588 sean **prácticos y pulidos para usuarios reales**. Eso significa:
 
 - Wi-Fi fiable y redes
-- Perfiles optimizados de ventiladores (silenciosos cuando está inactivo, enfriando bajo carga)
+- Tuned fan profiles (quiet when idle, cooling under load)
 - Soporte estable GPU y multimedia
-- Instalador adecuado e imágenes listas para flashear
+- Proper installer and images
+- Frequently updated images
 
-Esta campaña no consiste únicamente en “hacer que arranque”. Se trata de hacer que los dispositivos RK3588 sean **realmente utilizables**.
+Esta campaña no consiste únicamente en “hacer que arranque”.
+It’s about making RK3588 devices **actually usable** as fully featured desktop computers.
 
 ## Beneficios de línea principal
 
@@ -64,6 +70,7 @@ La línea principal desbloquea estas **mejoras reales y tangibles** tanto para d
 - **Donación**: Cada contribución nos acerca más a una experiencia de RK3588. Puedes contribuir [here](https://ko-fi.com/Z8Z3I4J0P) o PM @rippanda12
 - **Compartir**: Difunde la palabra en comunidades RK3588, foros de SBC y redes sociales.
 - **Patrocinador**: Las empresas dependiendo del hardware RK3588 pueden respaldar este hito en niveles más altos (acreditaremos a los patrocinadores en nuestro repositorio y sitio web).
+- **Testing and reporting**: We need a lot of testing, especially on weird apps and desktop workloads.
 
 ## Lo que intentaremos hacer
 
@@ -82,9 +89,18 @@ La línea principal desbloquea estas **mejoras reales y tangibles** tanto para d
    - Asegúrate de que el GPU, la red, el almacenamiento y la E/S sean estables
    - Proporcionar imágenes preconstruidas y listas para flashear para usuarios finales
 
+5. **Security**
+   - Keeping track of upstream security fixes, providing a stable secure kernel
+   - Encrypted password protected root filesystem during setup
+   - Password protected GRUB
+
 ## Donde va el dinero
 
 - Tiempo del desarrollador (núcleo, cargador de arranque, integración de espacio de usuario)
 - Infraestructura de CI para construcciones y pruebas en curso
 
-**[Soporte al Hito Principal RK3588 ahora](https://ko-fi.com/Z8Z3I4J0P)**
+The bigger the budget at our disposal, the more time we can dedicate to BredOS.
+
+### **[Soporte al Hito Principal RK3588 ahora](https://ko-fi.com/Z8Z3I4J0P)**
+
+---
