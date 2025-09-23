@@ -2,7 +2,7 @@
 title: 主线活动
 description:
 published: true
-date: 2025-09-23T09:39:42.539Z
+date: 2025-09-23T12:34:31.320Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T19:14:24.174Z
@@ -26,7 +26,8 @@ dateCreated: 2025-09-22T19:14:24.174Z
 
 - ARM64桌面和服务器使用的坚实基础
 
-这是为了让使用RK3588硬件的每个人都能更好地使用BredOS和更广泛的Linux生态系统。
+This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
+Our goal with this campaign is to raise atleast 2000€ so that we can port ~28 boards.
 
 ## 我们为什么要这样做？
 
