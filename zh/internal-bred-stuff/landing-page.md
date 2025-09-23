@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description:
 published: false
-date: 2025-09-23T09:15:42.581Z
+date: 2025-09-23T09:33:05.783Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15：05：44.344Z
@@ -81,6 +81,7 @@ BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出�
 - [Telegram](https://t.me/bredoslinux)
 - [Discord](https://discord.gg/jwhuyKXaa)
 - [GitHub](http://github.com/BredOS)
+  {.grid-list}
 
 # 8. 贡献
 
