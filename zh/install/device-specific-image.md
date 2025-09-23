@@ -1,8 +1,8 @@
 ---
 title: 安装设备特定图像
 description:
-published: false
-date: 2025-09-16T11:46:02.777Z
+published: true
+date: 2025-09-23T09:38:43.252Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
