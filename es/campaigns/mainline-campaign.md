@@ -20,7 +20,7 @@ Manteniendo soporte RK3588, BredOS traerá:
 
 - Mantenimiento prolongado (no más hacks de BSP)
 
-- Latest upstream kernel security fixes
+- Últimas correcciones de seguridad del núcleo
 
 - Mejor rendimiento y estabilidad
 
@@ -30,7 +30,7 @@ Manteniendo soporte RK3588, BredOS traerá:
 
 Se trata de hacer que BredOS — y el ecosistema Linux más amplio — sea mejor para todos que usen hardware RK3588.
 
-> Our goal with this campaign is to raise atleast **2500€**, so that we can port approximately 28 boards.
+> Nuestro objetivo con esta campaña es aumentar al menos **2500€**, para que podamos portar aproximadamente 28 tableros.
 > {.is-info}
 
 ## ¿Por qué lo hacemos?
@@ -40,19 +40,19 @@ La verdad es: **solo una parte de ella es**.
 
 Mientras que gran parte del trabajo de bajo nivel (como el soporte básico del núcleo) ha llegado a la parte superior, **los elementos esenciales del día a día todavía están rotos o perdidos**:
 
-- Many Wi-Fi/Bluetooth drivers don’t work out of the box
+- Muchos controladores Wi-Fi/Bluetooth no funcionan
 - Las optimizaciones específicas del dispositivo no están cubiertas por parches genéricos de línea principal
 
 En BredOS, queremos que los dispositivos RK3588 sean **prácticos y pulidos para usuarios reales**. Eso significa:
 
 - Wi-Fi fiable y redes
-- Tuned fan profiles (quiet when idle, cooling under load)
+- Perfiles de ventiladores sintonizados (silenciosos cuando está inactivo, enfriando bajo carga)
 - Soporte estable GPU y multimedia
-- Proper installer and images
-- Frequently updated images
+- Instalador adecuado e imágenes
+- Imágenes actualizadas con frecuencia
 
 Esta campaña no consiste únicamente en “hacer que arranque”.
-It’s about making RK3588 devices **actually usable** as fully featured desktop computers.
+Se trata de hacer que los dispositivos RK3588 sean **realmente utilizables** como ordenadores de sobremesa con todas las características.
 
 ## Beneficios de línea principal
 
@@ -70,7 +70,7 @@ La línea principal desbloquea estas **mejoras reales y tangibles** tanto para d
 - **Donación**: Cada contribución nos acerca más a una experiencia de RK3588. Puedes contribuir [here](https://ko-fi.com/Z8Z3I4J0P) o PM @rippanda12
 - **Compartir**: Difunde la palabra en comunidades RK3588, foros de SBC y redes sociales.
 - **Patrocinador**: Las empresas dependiendo del hardware RK3588 pueden respaldar este hito en niveles más altos (acreditaremos a los patrocinadores en nuestro repositorio y sitio web).
-- **Testing and reporting**: We need a lot of testing, especially on weird apps and desktop workloads.
+- **Pruebas y informes**: Necesitamos muchas pruebas, especialmente en aplicaciones raras y cargas de trabajo de escritorio.
 
 ## Lo que intentaremos hacer
 
@@ -89,17 +89,17 @@ La línea principal desbloquea estas **mejoras reales y tangibles** tanto para d
    - Asegúrate de que el GPU, la red, el almacenamiento y la E/S sean estables
    - Proporcionar imágenes preconstruidas y listas para flashear para usuarios finales
 
-5. **Security**
-   - Keeping track of upstream security fixes, providing a stable secure kernel
-   - Encrypted password protected root filesystem during setup
-   - Password protected GRUB
+5. **Seguridad**
+   - Mantener un seguimiento de las correcciones de seguridad de las fuentes originales, proporcionando un núcleo seguro y estable
+   - Sistema de archivos raíz protegido con contraseña cifrada durante la instalación
+   - GRUB protegido por contraseña
 
 ## Donde va el dinero
 
 - Tiempo del desarrollador (núcleo, cargador de arranque, integración de espacio de usuario)
 - Infraestructura de CI para construcciones y pruebas en curso
 
-The bigger the budget at our disposal, the more time we can dedicate to BredOS.
+Cuanto mayor sea el presupuesto a nuestra disposición, más tiempo podemos dedicar a BredOS.
 
 ### **[Soporte al Hito Principal RK3588 ahora](https://ko-fi.com/Z8Z3I4J0P)**
 
