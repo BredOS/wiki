@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-23T09:15:42.581Z
+date: 2025-09-23T09:33:05.783Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -65,7 +65,7 @@ Join the BredOS community to get support, share ideas, and contribute to the pro
 - [Telegram](https://t.me/bredoslinux)
 - [Discord](https://discord.gg/jwhxuyKXaa)
 - [GitHub](http://github.com/BredOS)
-
+{.grid-list}
 # 8. Contributing
 BredOS is an open-source project, and contributions are welcome! You can contribute in the following ways:
 - Report bugs and issues
