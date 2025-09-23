@@ -2,7 +2,7 @@
 title: ディスクの処理に失敗しました
 description: S.M.A.R.T データとディスクの交換に関するガイド
 published: true
-date: 2025-09-23T15:33:58.026Z
+date: 2025-09-23T15:57:38.497Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -18,22 +18,25 @@ dateCreated: 2025-06-01T10:33:55.798Z
 > あなたはがっかりするでしょう！ それを悪化させることは常に可能です。
 > {.is-danger}
 
+> 代わりに、Discord、Telegram、またはメールでお問い合わせください。
+> Discord: https://discord.gg/beSUnWGVH2
+> Telegram: https://t.me/+MUeb_iKsgGY5YzY0
+> Email: support@bredos.org
+> {.is-success}
+
 # 2. 報告された失敗
 
 BredOS News サービスは、添付されている劣化したドライブを報告します。
-(これは、S.M.A.R.T を報告するドライブでのみ動作します。 data)
+(これは、S.M.A.R.T を報告するドライブでのみ動作します。 データ)
 
-BredOS News からこれにリンクされている場合は、次のセクションに進みます。
-
-> このセクションは建設中です。 DiscordまたはTelegramからお問い合わせください。喜んでお手伝いします！
-> {.is-warning}
+BredOS Newsからこれにリンクされている場合は、ストレージタイプの関連する以下のセクションを参照してください。
 
 # 3. S.M.A.R.T データ
 
 ## S.M.A.R.T データ (HDD) の表示
 
-If you have a different storage medium, head below to it's relevant section.
-Each has it's own section.
+別の記憶媒体がある場合は、以下のセクションを参照してください。
+それぞれに独自のセクションがあります。
 
 - ハード ディスク `/dev/sda` を仮定して、S.M.A.R.T データを表示します。
 
@@ -141,8 +144,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
-Most of this data is irrelevant to drive health.
-Out of all of this, you should look for to look for:
+このデータのほとんどは、健康を促進するためには関係ありません。
+これらのすべての中で、あなたは次のように探す必要があります:
 
 - `SMART overall-health self-assessment` は、「パスワード」である必要があります。 他の値が報告された場合は、ドライブは急いで交換する必要があります。
 - `Reallocated_Sector_Ct` は、移転されたセクタの数です。これは、1 つ以上のセクタがあれば、カスケード失敗の重大なリスクを示します。
@@ -233,18 +236,18 @@ No Self-tests Logged
 - 重要なフラッシュ度を示す`メディアとデータ整合性エラー`。
 - `Error Information Log Entries` は通常、スペアフラッシュでマスクされたフラッシュ領域の数を示します。
 
-## 3.3 Viewing EMMC health
+## 3.3 EMMCの健康状態を表示
 
-Do not run this on SD cards, it will crash them.
-It won't damage them, but it doesn't do anything productive.
+SDカードでこれを実行しないでください、それらはクラッシュします。
+それは彼らに損害を与えることはありませんが、それは生産的なことを行いません。
 
-- Assuming  `/dev/mmcblk0`, to view it's controller data, run:
+- `/dev/mmcblk0` を想定して、コントローラのデータを表示します。
 
 ```
 sudo mmc extcsd read /dev/mmcblk0
 ```
 
-This will return a lot of data:
+これは多くのデータを返します:
 
 ```
 =============================================
@@ -399,47 +402,47 @@ Note: CMDQ_MODE_EN may not indicate the runtime CMDQ ON or OFF.
 Please check sysfs node '/sys/devices/.../mmc_host/mmcX/mmcX:XXXX/cmdq_en'
 ```
 
-Out of all this, the only health-related info is:
+この中で唯一の健康関連情報は以下の通りです:
 
 ```
-eMMC Life Time Estimation A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
-eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
+eMMC寿命推定A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
+eMMC寿命推定B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 ```
 
-This value indicates a percentage-range of health.
+この値は、健康のパーセンテージ範囲を示しています。
 
-Value `0x01` indicates 0-10% health used.
-Value `0x02` indicates 11-20% health used.
-Value `0x03` indicates 21-30% health used.
-And so on and so fourth..
+値 `0x01` は、0-10% の健康状態を示します。
+値 `0x02` は11-20% の健康状態を示します。
+値 `0x03` は、健康状態が21-30%であることを示します。
+そして、そしてその第四に
 
-## 3.4 BTRFS reported data
+## 3.4 BTRFS 報告されたデータ
 
-If you are instead using a USB, an SD card ~~or floppy drives~~, it is unfortunately impossible to get proper reporting data.
+USB、SDカード、~~~またはフロッピードライブ~を使用している場合は、残念ながら適切なレポートデータを取得することは不可能です。
 
-Assuming it is a BredOS system drive, it is formatted with the BTRFS filesystem. BTRFS gathers all errors and can present a complete report.
+それがブレッドOSシステムドライブであると仮定すると、BTRFSファイルシステムでフォーマットされます。 BTRFSはすべてのエラーを収集し、完全なレポートを提示することができます。
 
-- Assuming `/dev/mmcblk0p3`, which is MOUNTED, run:
-
-```
-sudo btrfs device stats /dev/mmcblk0p3
-```
-
-This will return:
+- MOUNTEDである `/dev/mmcblk0p3` を仮定すると、次を実行します。
 
 ```
-[/dev/mmcblk0p3].write_io_errs    0
-[/dev/mmcblk0p3].read_io_errs     0
-[/dev/mmcblk0p3].flush_io_errs    0
-[/dev/mmcblk0p3].corruption_errs  0
-[/dev/mmcblk0p3].generation_errs  0
+sudo btrfs デバイスの統計情報 /dev/mmcblk0p3
 ```
 
-If any of these values is non-zero, the medium is probably **SIGNIFICANTLY** degraded.
+返却されます:
 
-## 3.5 Should I replace the drive?
+```
+[/dev/mmcblk0p3].write_io_errs 0
+[/dev/mmcblk0p3].read_io_errs 0
+[/dev/mmcblk0p3].flush_io_errs 0
+[/dev/mmcblk0p3].corruption_errs 0
+[/dev/mmcblk0p3].generation_errs 0
+```
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, it's probably fine to keep using the disk for a little while.
+これらの値のいずれかが非ゼロの場合、メディアは **SIGNIFICANTLY** 劣化します。
+
+## 3.5 ドライブを交換する必要がありますか?
+
+わずか数(<5)のセクタが移転されている場合、または半分以下のスペアフラッシュが利用可能である場合。 しばらくディスクを使い続けても大丈夫だろう。
 
 しかし、スペアフラッシュを燃やしたり、数十のセクタを急速に移動させたりすることは、しかし差し迫った失敗の兆候である。
 
