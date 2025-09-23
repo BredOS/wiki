@@ -1,8 +1,8 @@
 ---
 title: Mainline campaign
 description: 
-published: false
-date: 2025-09-22T19:32:45.737Z
+published: true
+date: 2025-09-23T09:39:42.539Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
