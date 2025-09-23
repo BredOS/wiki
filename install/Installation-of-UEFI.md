@@ -1,8 +1,8 @@
 ---
 title: Installation of UEFI (on RK3588)
 description: 
-published: false
-date: 2025-09-18T08:51:38.398Z
+published: true
+date: 2025-09-23T09:39:06.625Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
