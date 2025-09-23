@@ -26,8 +26,8 @@ Manteniendo soporte RK3588, BredOS traerá:
 
 - Una base sólida para el uso de escritorio y servidor ARM64
 
-This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
-Our goal with this campaign is to raise atleast 2000€ so that we can port ~28 boards.
+Se trata de hacer que BredOS — y el ecosistema Linux más amplio — sea mejor para todos que usen hardware RK3588.
+Nuestro objetivo con esta campaña es aumentar al menos 2000€ para que podamos puerto ~28 tableros.
 
 ## ¿Por qué lo hacemos?
 
