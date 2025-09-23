@@ -2,14 +2,14 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-23T07:42:08.257Z
+date: 2025-09-23T08:01:12.523Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
 ---
 
 # 1. Introduction
-Bread is one of the oldest prepared foods in human history, with its origins tracing back over 10,000 years to the dawn of agriculture. It signifies humanity's transition from a hunter-gatherer lifestyle to farming, laying the foundation for the type of society we know and live in today. Just like humanity its has evolved from early flatbreads into countless varieties, all while using the same basic ingredients: flour, water, salt, and yeast.
+Bread is one of the oldest prepared foods in human history, with its origins tracing back over 10,000 years to the dawn of agriculture. It signifies humanity's transition from a hunter-gatherer lifestyle to farming, laying the foundation for the type of society we know and live in today. Just like humanity, bread has evolved from early flatbreads into countless varieties, all while using the same basic ingredients: flour, water, salt, and yeast.
 
 # 2. BredOS
 At BredOS, we cherish the concept of using basic ingredients—selected with love and passion—to craft a simple yet versatile product that you can customize to your taste. Served plain, it has the potential to transform into whatever you desire. Whether sweet or salty, light or dark, big enough to enjoy it with your family or small enough to carry it around your adventures, BredOS is made for you.
@@ -18,16 +18,16 @@ At BredOS, we cherish the concept of using basic ingredients—selected with lov
 
 # 3. Features
  - Made with passion - just for your enjoyment!
- - User support with great respect! No matter if you are a crumb or a flatbread!
+ - User support with great respect! No matter if you are a little crumb or an entire flatbread!
  - Simple and plain by design! No bloat, ensuring a lightweight and responsive system!
- - Arch-based - with customization tailored for your enjoyment.
+ - Arch-based - with customization tailored to be polished and easy to use.
 
 ## 3.1 Featured tools
 
  - Bakery - [your guide to your own Bred](/install/first-setup)!
  - Bred-Tools - [the swiss knife at your hand](/Tools)!
- - Govctl - [take control of your CPU](/how-to/govctl)!
  - Bred-Config - [like raspi-config, but with better taste!](/bredos-config)
+ - Govctl - [take control of your CPU](/how-to/govctl)!
  
  # 4. System Requirements
 We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/table-of-supported-devices).
@@ -46,7 +46,7 @@ To make installation easy for you, we laid out a line of bred crumbs for you to 
 {.is-info}
 
 ## 6.1 Device specific image installation
-These are images for the boards we love the most. To install this BredOS images on them, either start with our [device specific image](/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which can be found in the navigation bar left of this.
+These are images for the boards we love the most. To install these BredOS images on them, either start with our [device specific image](/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which can be found in the navigation bar left of this.
 
 Visit our [download site](https://bredos.org/download.html) to find out if your device is one of them.
 
@@ -74,3 +74,8 @@ BredOS is an open-source project, and contributions are welcome! You can contrib
 - Submit patches and improvements
 - Write and improve documentation
 - Help other users in the community forums and chat
+
+# 10. Mainline Campaign
+Right now, BredOS images for RK3588 devices rely on the crusty Rockchip BSP kernel — a huge, duct-taped codebase that’s hard to maintain, insecure, and always lags behind upstream Linux.
+
+[We want to change that](/en/internal-bred-stuff/mainline-campaign).
