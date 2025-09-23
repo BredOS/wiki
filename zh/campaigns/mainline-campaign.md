@@ -20,7 +20,7 @@ dateCreated: 2025-09-22T19:14:24.174Z
 
 - 长期可维护性(不再追赶BSP黑客)
 
-- Latest upstream kernel security fixes
+- 最新的上游内核安全修复
 
 - 改善业绩和稳定
 
@@ -30,7 +30,7 @@ dateCreated: 2025-09-22T19:14:24.174Z
 
 这是为了让使用RK3588硬件的每个人都能更好地使用BredOS和更广泛的Linux生态系统。
 
-> Our goal with this campaign is to raise atleast **2500€**, so that we can port approximately 28 boards.
+> 我们的目标是至少增加**2500欧元**，以便我们能够端口大约28个板块。
 > {.is-info}
 
 ## 我们为什么要这样做？
@@ -40,19 +40,19 @@ dateCreated: 2025-09-22T19:14:24.174Z
 
 虽然许多低级后端工作(例如基本内核支持)已经上游降落，但是**日常的基本需要仍然被破坏或丢失**：
 
-- Many Wi-Fi/Bluetooth drivers don’t work out of the box
+- 许多Wi-Fi/Bluetooth 驱动程序无法正常工作
 - 偏差特定优化不适用于通用主线补丁
 
 在 BredOS 中，我们希望RK3588 设备为 **实用并为真正的用户抛光**。 这意味着： 这意味着：
 
 - 可靠的 Wi-Fi 和网络
-- Tuned fan profiles (quiet when idle, cooling under load)
+- 调整风扇配置文件 (空闲时静音，加载时冷却)
 - 稳定的 GPU 和多媒体支持
-- Proper installer and images
-- Frequently updated images
+- 合适的安装程序和图像
+- 经常更新的图像
 
 这场运动不仅仅是关于“启动”。
-It’s about making RK3588 devices **actually usable** as fully featured desktop computers.
+这是为了 RK3588 设备**实际上可以使用** 作为全功能的桌面计算机。
 
 ## 主线的福利
 
@@ -70,7 +70,7 @@ It’s about making RK3588 devices **actually usable** as fully featured desktop
 - **捐赠**: 每个贡献都会使我们更接近一个主航的 RK3588 体验。 您可以贡献 [here](https://ko-fi.com/Z8Z3I4J0P或 PM@rippanda12
 - **分享**：在RK3588社区、SBC论坛和社会媒体中传播信息。
 - **赞助者**：依赖RK3588硬件的公司可以在更高的层级上回溯这个里程碑(我们会在我们的仓库和网站上给出信贷赞助者)。
-- **Testing and reporting**: We need a lot of testing, especially on weird apps and desktop workloads.
+- **测试和报告**：我们需要大量的测试，尤其是关于杂乱应用和桌面工作量的测试。
 
 ## 我们打算做什么
 
@@ -89,17 +89,17 @@ It’s about making RK3588 devices **actually usable** as fully featured desktop
    - 确认 GPU 、 网络、 存储和 I/O 是稳定的
    - 为终端用户提供预生成、即时刷入图像
 
-5. **Security**
-   - Keeping track of upstream security fixes, providing a stable secure kernel
-   - Encrypted password protected root filesystem during setup
-   - Password protected GRUB
+5. **安全性**
+   - 保持上游安全修复跟踪，提供稳定的安全内核
+   - 设置时加密密码保护根文件系统
+   - 密码保护 GRUB
 
 ## 钱去的位置
 
 - 开发者时间 (内核，bootloader，用户空间整合)
 - CI 正在建造和测试的基础设施
 
-The bigger the budget at our disposal, the more time we can dedicate to BredOS.
+我们可以支配的预算越多，我们可以用更多的时间专用于布雷得奥斯。
 
 ### **[现在支持 RK3588 主行里程碑](https://ko-fi.com/Z8Z3I4J0P)**
 
