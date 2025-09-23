@@ -2,110 +2,98 @@
 title: BredOS 主頁
 description:
 published: true
-date: 2025-09-11T18:42:23.213Z
+date: 2025-09-23T10:13:07.518Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
 ---
 
-# 🍞 The BredOS Wiki
-
-## 🌟 Overview
+# 🎛️ 1. 概述
 
 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).\
-The documentation will guide you through the installation, configuration, and usage of BredOS.\
+The documentation will guide you through the installation, configuration, and usage of BredOS.
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
-## 📚 Table of Contents
+# 3. 功能
 
-1. [🔍 Introduction](#introduction)
-2. [🚀 Features](#features)
-3. [🛠️ System Requirements](#system-requirements)
-4. [💽 Installation](/installation)
-5. [📦 Package Management](#package-management)
-6. [🐞 Troubleshooting](#troubleshooting)
-7. [❓FAQ](#faq)
-8. [🌐 Community and Support](#community-and-support)
-9. [🤝 Contributing](#contributing)
+- Made with passion - just for your enjoyment!
+- User support with great respect! No matter if you are a little crumb or an entire flatbread!
+- Simple and plain by design! No bloat, ensuring a lightweight and responsive system!
+- Arch-based - with customization tailored to be polished and easy to use.
 
-## 🔍 Introduction
+## 2.1 Featured tools
 
-BredOS 旨在為基於 ARM 的單板計算機用戶提供無縫且用戶友好的體驗。 通過利用 Arch Linux 的強大功能和靈活性，BredOS 提供了一個可以根據廣泛用例進行自定義的強大平台。
+- Bakery - [your guide to your own Bred](/install/first-setup)!
+- Bred-Tools - [the swiss knife at your hand](/Tools)!
+- Bred-Config - [like raspi-config, but with better taste!](/bredos-config)
+- Govctl - [take control of your CPU](/how-to/govctl)!
 
-## 🚀 Features
+# 4. 系統要求
 
-- **🖥️ User-Friendly Interface**: A simplified and intuitive user interface for easy navigation and use.
-- **🎯 Arch-Based**: Built on top of Arch Linux, ensuring access to a vast repository of packages and a rolling release model.
-- **🔧 ARM Support**: Optimized for ARM-based single board computers, making it ideal for devices like the Rock 5B, and more.
-- **⚡ Lightweight**: Minimal bloat, ensuring a lightweight and responsive system.
+We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/en/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/en/table-of-supported-devices).
 
-## 🛠️ System Requirements
+## 3.1 Minimal System Requirements
 
-- **🖥️ Supported Devices**:
-  - Please refer to our list at https://bredos.org/download.html
-- **🧠 Minimum RAM**: 2 GB
-- **💾 Storage**: 16 GB microSD card or larger
-- **🌐 Network**: Optional
+- Minimum RAM: 2 GB
+- Storage: 8 GB microSD card or larger
 
-## 💽 Installation
+# 🔁 4. 安裝
 
-請參閱我們的 [安裝指南](/installation) 頁面以獲取更多信息。
+Our friend **DroidMaster** made a YouTube video about BredOS. Check it out here:
 
-## 📦 Package Management
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-BredOS 使用 `pacman`，這是來自 Arch Linux 的軟件包管理器。 以下是一些常用命令： 以下是一些常用命令：
+# 5. Flashing
 
-- 🔄 更新軟件包列表：`sudo pacman -Syu`
-- ➕ 安裝軟件包：`sudo pacman -S [package_name]`
-- ➖ 移除軟件包：`sudo pacman -R [package_name]`
-- 🔍 搜索軟件包：`pacman -Ss [package_name]`
+To make installation easy for you, we laid out a line of bred crumbs to follow. 🍞 🔸🔸🔸
 
-## 🐞 Troubleshooting
+> If you found a bread crumb 🔸 give us a heads-up over at our community channels.
+> {.is-info}
 
-如果您遇到 BredOS 的問題，歡迎加入我們的 [Discord](https://discord.gg/jwhxuyKXaa) 進行咨詢。
+## 5.1 Device specific image installation
 
-## ❓ FAQ
+These are the boards we love the most. To install these BredOS images on them, either start with our [device specific image](/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which can be found in the navigation bar left of this.
 
-### ❓ Q: What devices are supported by BredOS?
+Visit our [download site](https://bredos.org/download.html) to find out if your device is one of them.
 
-A: BredOS supports a variety of ARM-based single board computers, the complete list is available at [supported devices](#system-requirements).
+## 5.2 Generic installation
 
-### 🔄 Q: How do I update BredOS?
+If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
 
-答：您可以使用 `pacman` 軟件包管理器通過命令 `sudo pacman -Syu` 更新 BredOS。
+## 5.3 Docker container installation
 
-### 📦 Q: Where can I find additional software packages?
+- Easy as one line of command:
 
-答：您可以在 Arch 用戶倉庫（AUR）中找到額外的軟件包，並使用 `yay` 或 `paru` 安裝它們。
+```
+docker pull bredos/bredos
+```
 
-### Q: The power consumption of my device is high, how can I reduce it?
+# 5. 故障排除
 
-A: You can reduce the power consumption by changing the CPU governor to `ondemand` or `conservative` by editing the `/etc/default/cpupower` file.
+Take a look at the device pages in the navigation bar on this page to find known issues specific to your device. If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
 
-### Q: The suspend is not working.
-
-A: Please make sure that:
-
-- Don't suspend before 10s after just  resuming, this is a known issue with the eMMC driver.
-- Don't setup "suspend" as the action for the power button, because it will suspend the device immediately after resuming! (This will cause the device to enter a resume-suspend loop!)
-
-## 🌐 Community and Support
+# 4. 社區與支持
 
 加入 BredOS 社區，獲取支持、分享想法並為項目做出貢獻：
 
-- [📱 Telegram](https://t.me/bredoslinux)
-- [💬 Discord](https://discord.gg/jwhxuyKXaa)
-- [💻 GitHub](http://github.com/BredOS)
+- [Telegram](https://t.me/bredoslinux)
+- [Discord](https://discord.gg/jwhxuyKXaa)
+- [GitHub](http://github.com/BredOS)
+  {.links-list}
 
-## 🤝 Contributing
+# 8. 貢獻
 
 BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻：
 
-- 🐛 Report bugs and issues
-- 💻 Submit patches and improvements
-- 📄 Write and improve documentation
-- 🧑‍🤝‍🧑 Help other users in the community forums and chat
+- 報告錯誤和問題
+- 提交補丁和改進
+- 編寫和改進文檔
+- 在社區論壇和聊天中幫助其他用戶
 
-For more information on contributing, visit our [💻 GitHub](http://github.com/BredOS) or you can message us on [💬 Discord](https://discord.gg/jwhxuyKXaa) or join our [📱 Telegram](https://t.me/bredoslinux).
+# 9. Mainline Campaign
+
+Right now, BredOS images for RK3588 devices rely on the crusty Rockchip BSP kernel — a huge, duct-taped codebase that’s hard to maintain, insecure, and always lags behind upstream Linux.
+
+[We want to change that](/en/internal-bred-stuff/mainline-campaign).
