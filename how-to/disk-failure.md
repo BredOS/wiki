@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-23T15:33:37.953Z
+date: 2025-09-23T15:33:58.026Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -395,9 +395,10 @@ eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 
 This value indicates a percentage-range of health.
 
-Value 0x01 indicates 0-10% health used.
-Value 0x02 indicates 11-20% health used.
-Value 0x03 indicates 21-30% health used.
+Value `0x01` indicates 0-10% health used.
+Value `0x02` indicates 11-20% health used.
+Value `0x03` indicates 21-30% health used.
+And so on and so fourth..
 
 ## 3.4 BTRFS reported data
 
