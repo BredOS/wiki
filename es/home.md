@@ -2,7 +2,7 @@
 title: Página web
 description:
 published: true
-date: 2025-09-23T10:13:07.518Z
+date: 2025-09-23T10:46:23.458Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -95,4 +95,4 @@ BredOS es un proyecto de código abierto, y las contribuciones son bienvenidas! 
 
 Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado con ductos que es difícil de mantener, inseguro y siempre señala detrás de Linux.
 
-[Queremos cambiar eso](/en/internal-bred-stuff/mainline-campaign).
+[Queremos cambiar eso](/campaigns/mainline-campaign).
