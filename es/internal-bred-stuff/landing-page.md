@@ -2,7 +2,7 @@
 title: Wiki de BredOS
 description:
 published: false
-date: 2025-09-22T06:53:15.596Z
+date: 2025-09-23T07:42:08.257Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
