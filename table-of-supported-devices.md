@@ -1,8 +1,8 @@
 ---
 title: Table of supported devices
 description: 
-published: false
-date: 2025-09-21T11:23:38.213Z
+published: true
+date: 2025-09-23T09:38:18.182Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
