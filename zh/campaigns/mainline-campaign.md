@@ -26,8 +26,8 @@ dateCreated: 2025-09-22T19:14:24.174Z
 
 - ARM64桌面和服务器使用的坚实基础
 
-This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
-Our goal with this campaign is to raise atleast 2000€ so that we can port ~28 boards.
+这是为了让使用RK3588硬件的每个人都能更好地使用BredOS和更广泛的Linux生态系统。
+我们的目标是至少提高2000欧元，以便我们能够端口~28个板板。
 
 ## 我们为什么要这样做？
 
