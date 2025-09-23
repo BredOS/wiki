@@ -26,8 +26,8 @@ RK3588をサポートすることで、ブレッドOSは以下のようになり
 
 - ARM64デスクトップとサーバー使用のための強固な基礎
 
-This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
-Our goal with this campaign is to raise atleast 2000€ so that we can port ~28 boards.
+これは、BredOS とより広範な Linux エコシステムを、RK3588 ハードウェアを使用するすべての人にとってより良いものにすることについてです。
+このキャンペーンの目標は、~28枚のボードをポートできるように、少なくとも2000€を上げることです。
 
 ## なぜ私たちはこれを行っているのですか?
 
