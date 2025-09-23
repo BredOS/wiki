@@ -1,8 +1,8 @@
 ---
 title: Installation with a device specific image
 description: 
-published: false
-date: 2025-09-21T11:42:40.378Z
+published: true
+date: 2025-09-23T09:38:43.252Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
