@@ -2,109 +2,97 @@
 title: Página web
 description:
 published: true
-date: 2025-09-11T18:42:23.213Z
+date: 2025-09-23T10:13:07.518Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
 ---
 
-# 🍞 La Wiki de BredOS
+# 🎛️ 1. Resumen
 
-## 🌟 Resumen
-
-¡Bienvenido a la documentación de BredOS! La documentación le guiará a través de la instalación, configuración y uso de BredOS.\
+¡Bienvenido a la documentación de BredOS! La documentación le guiará a través de la instalación, configuración y uso de BredOS.
 La documentación le guiará a través de la instalación, configuración y uso de BredOS.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
-## 📚 Índice de contenidos
+# 3. Características
 
-1. [🔍 Introducción](#introduction)
-2. [🚀 Características](#features)
-3. [🛠️ Requisitos del sistema](#system-requirements)
-4. [💽 Instalación](/installation)
-5. [📦 Administración de Paquetes](#package-management)
-6. [🐞 Resolución de problemas](#troubleshooting)
-7. [❓FAQ](#faq)
-8. [🌐 Comunidad y soporte](#community-and-support)
-9. [🤝 Contributando](#contributing)
+- Hecho con pasión - sólo para su disfrute!
+- ¡Soporte al usuario con gran respeto! No importa si usted es un poco de migajas o todo un plano!
+- ¡Simple y simple por diseño! ¡Sin problemas, garantizando un sistema ligero y receptivo!
+- Arquero - con personalización hecha a medida para ser pulida y fácil de usar.
 
-## 🔍 Introducción
+## 2.1 Herramientas destacadas
 
-BredOS tiene como objetivo proporcionar una experiencia fácil y amigable para los usuarios de computadoras de una sola tarjeta basada en ARM. Aprovechando el poder y la flexibilidad de Arch Linux, BredOS ofrece una plataforma robusta que puede adaptarse a una amplia gama de casos de uso.
+- Pastelería - [tu guía para tu propio Bred](/install/first-setup)!
+- Bred-Tools - [el cuchillo suizo a tu mano](/Tools)!
+- Bred-Config - [como raspi-config, ¡pero con mejor gusto!](/bredos-config)
+- Govctl - [toma el control de tu CPU](/how-to/govctl)!
 
-## 🚀 Características
+# 4. Requisitos del sistema
 
-- **🖥️ Interfaz amigable con el usuario**: Una interfaz de usuario simplificada e intuitiva para una fácil navegación y uso.
-- **🎯 Arch-Based**: Construido sobre Arch Linux, asegurando el acceso a un vasto repositorio de paquetes y a un modelo de lanzamiento rodante.
-- **🔧 Soporte ARM**: Optimizado para computadoras de una sola placa basadas en ARM, haciéndolo ideal para dispositivos como la Rock 5B, y más.
-- **⚡ Lightweight**: Mínima inflación, asegurando un sistema ligero y receptivo.
+Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos paneles de intel/amd x86. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/en/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/en/table-of-supported-devices).
 
-## 🛠️ Requisitos del sistema
+## 3.1 Requisitos mínimos del sistema
 
-- **🖥️ Dispositivos soportados**:
-  - Por favor consulte nuestra lista en https://bredos.org/download.html
-- **🧠 RAM mínimo**: 2 GB
-- **💾 Almacenamiento**: tarjeta microSD de 16 GB o mayor
-- **🌐 Red**: Opcional
+- RAM mínimo: 2 GB
+- Storage: 8 GB microSD card or larger
 
-## 💽 Instalación
+# 4. Instalación
 
-Lee más en nuestra [Guía de instalación](/installation).
+Nuestro amigo **DroidMaster** hizo un video de YouTube sobre BredOS. Échale un vistazo aquí:
 
-## 📦 Gestión de paquetes
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-BredOS usa `pacman`, el gestor de paquetes de Arch Linux. Aquí hay algunos comandos comunes:
+# 🔁 4. Parpadeando
 
-- 🔄 Actualizar lista de paquetes: `sudo pacman -Syu`
-- ➕ Instalar un paquete: `sudo pacman -S [package_name]`
-- ➖ Eliminar un paquete: `sudo pacman -R [package_name]`
-- 🔍 Busca un paquete: `pacman -Ss [package_name]`
+To make installation easy for you, we laid out a line of bred crumbs to follow. 🍞 🔸🔸🔸
 
-## 🐞 Solución de problemas
+> Si encontraste un trozo de pan 🔸 danos una cabecera en nuestros canales comunitarios.
+> {.is-info}
 
-Si encuentras problemas con BredOS, serás bienvenido a unirte a nuestra [discord](https://discord.gg/jwhxuyKXaa).
+## 5.1 Instalación de imagen específica del dispositivo
 
-## ❓ FAQ
+Estos son los tableros que más nos gustan. Para instalar estas imágenes BredOS en ellas, inicia con nuestra [imagen específica del dispositivo](/install/device-specific-image) guía de instalación, o dar un vistazo a la página del dispositivo en nuestra wiki, que se puede encontrar en la barra de navegación a la izquierda de esto.
 
-### ❓ Q: ¿Qué dispositivos soportan BredOS?
+Visita nuestro [sitio de descargas](https://bredos.org/download.html) para averiguar si tu dispositivo es uno de ellos.
 
-R: BredOS soporta una variedad de computadoras de una sola placa basadas en ARM, la lista completa está disponible en [dispositivos compatibles](#system-requirements).
+## 12.2 Instalación genérica
 
-### 🔄 Q: ¿Cómo actualizo BredOS?
+Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/download.html) pero soporta el arranque de UEFI y se basa en la arquitectura x86 o ARM64, simplemente sigue nuestra guía para una instalación genérica disponible [here](/install/Installation-with-ISO).
 
-R: Puedes actualizar BredOS usando el gestor de paquetes `pacman` con el comando `sudo pacman -Syu`.
+## 5.3 Instalación del contenedor Docker
 
-### 📦 Q: ¿Dónde puedo encontrar paquetes de software adicionales?
+- Fácil como una línea de comando:
 
-R: Puede encontrar paquetes de software adicionales en el repositorio de usuarios de Arch (AUR) e instalarlos usando `yay` o `paru`.
+```
+trituradores/bredos/bredos
+```
 
-### P: El consumo de energía de mi dispositivo es alto, ¿cómo puedo reducirlo?
+# 5. Solución de problemas
 
-R: Usted puede reducir el consumo de energía cambiando el gobernador de CPU a 'ondemand' o 'conservador' editando el archivo de 'is/default/cpupower'.
+Eche un vistazo a las páginas del dispositivo en la barra de navegación de esta página para encontrar problemas conocidos específicos de su dispositivo. Si tu problema no está listado, no dudes en contactar con nosotros directamente a través de [nuestros canales de soporte](#h-7-community-and-support).
 
-### P: La suspensión no funciona.
-
-R: Por favor, asegúrese de que:
-
-- No suspenda antes de las 10 después de reanudarse, este es un problema conocido con el controlador eMMC.
-- ¡No configure "suspender" como la acción del botón de encendido, porque suspenderá el dispositivo inmediatamente después de reanudar! (¡Esto hará que el dispositivo introduzca un bucle de suspensión de reanudación!)
-
-## 🌐 Comunidad y soporte
+# 4. Comunidad y soporte
 
 Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:
 
-- [📱 Telegram](https://t.me/bredoslinux)
-- [💬 Discord](https://discord.gg/jwhxuyKXaa)
-- [💻 GitHub](http://github.com/BredOS)
+- [Telegram](https://t.me/bredoslinux)
+- [Discord](https://discord.gg/jwhxuyKXaa)
+- [GitHub](http://github.com/BredOS)
+  {.links-list}
 
-## 🤝 Contribuyendo
+# 8. Contribuyendo
 
 BredOS es un proyecto de código abierto, y las contribuciones son bienvenidas! Puedes contribuir de las siguientes maneras:
 
-- 🐛 Reportar errores y problemas
-- 💻 Enviar parches y mejoras
-- 📄 Escribe y mejora la documentación
-- 🧑‍🤝‍🧑 Ayuda a otros usuarios en los foros de la comunidad y chatea
+- Reportar errores y problemas
+- Enviar parches y mejoras
+- Escriba y mejore la documentación
+- Ayuda a otros usuarios en los foros de la comunidad y chatea
 
-Para más información sobre contribuir, visita [💻 GitHub](http://github.com/BredOS) o puedes enviarnos un mensaje en [💬 Discord](https://discord.gg/jwhxuyKXaa) o unirte a nuestro [📱 Telegram](https://t.me/bredoslinux).
+# 9. Campaña principal
+
+Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado con ductos que es difícil de mantener, inseguro y siempre señala detrás de Linux.
+
+[Queremos cambiar eso](/en/internal-bred-stuff/mainline-campaign).
