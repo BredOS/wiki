@@ -1,8 +1,8 @@
 ---
 title: BredOS Config
 description:
-published: false
-date: 2025-09-21T09:27:32.905Z
+published: true
+date: 2025-09-23T10:12:11.659Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
@@ -36,6 +36,8 @@ sudo pacman -S bredos-config
 > This option is currently under construction!
 > {.is-warning}
 
+![update.png](/bredos-config/update.png)
+
 ## 2.3 System Upkeep
 
 - In this section, you'll find some useful tasks to keep your system clean and running smoothly like Performing Filesystem Maintenance tasks or checking you system integrity.
@@ -50,8 +52,10 @@ sudo pacman -S bredos-config
 
 ## 2.5 Migrations
 
-> Why isnt this merged into system tweaks?
-> {.is-danger}
+> This option is currently under construction!
+> {.is-warning}
+
+![migrations.png](/bredos-config/migrations.png)
 
 ## 2.6 Packages
 
