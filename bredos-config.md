@@ -1,8 +1,8 @@
 ---
 title: BredOS Config
 description: 
-published: false
-date: 2025-09-23T10:06:34.468Z
+published: true
+date: 2025-09-23T10:06:44.157Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
