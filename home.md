@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2025-09-23T10:13:07.518Z
+date: 2025-09-23T10:46:23.458Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -76,4 +76,4 @@ BredOS is an open-source project, and contributions are welcome! You can contrib
 # 9. Mainline Campaign
 Right now, BredOS images for RK3588 devices rely on the crusty Rockchip BSP kernel — a huge, duct-taped codebase that’s hard to maintain, insecure, and always lags behind upstream Linux.
 
-[We want to change that](/en/internal-bred-stuff/mainline-campaign).
+[We want to change that](/campaigns/mainline-campaign).
