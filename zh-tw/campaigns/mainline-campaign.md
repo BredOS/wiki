@@ -2,7 +2,7 @@
 title: Mainline campaign
 description:
 published: true
-date: 2025-09-23T09:39:42.539Z
+date: 2025-09-23T12:34:31.320Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -27,6 +27,7 @@ By mainlining RK3588 support, BredOS will bring:
 - A solid foundation for ARM64 desktop and server use
 
 This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
+Our goal with this campaign is to raise atleast 2000€ so that we can port ~28 boards.
 
 ## Why Are We Doing This?
 
