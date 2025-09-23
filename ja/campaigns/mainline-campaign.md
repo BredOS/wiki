@@ -2,7 +2,7 @@
 title: メインライン キャンペーン
 description:
 published: true
-date: 2025-09-23T09:39:42.539Z
+date: 2025-09-23T12:34:31.320Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -26,7 +26,8 @@ RK3588をサポートすることで、ブレッドOSは以下のようになり
 
 - ARM64デスクトップとサーバー使用のための強固な基礎
 
-これは、BredOS とより広範な Linux エコシステムを、RK3588 ハードウェアを使用するすべての人にとってより良いものにすることについてです。
+This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
+Our goal with this campaign is to raise atleast 2000€ so that we can port ~28 boards.
 
 ## なぜ私たちはこれを行っているのですか?
 
