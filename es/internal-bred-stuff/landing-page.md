@@ -2,7 +2,7 @@
 title: Wiki de BredOS
 description:
 published: false
-date: 2025-09-23T09:15:42.581Z
+date: 2025-09-23T09:33:05.783Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -80,6 +80,7 @@ Eche un vistazo a las páginas del dispositivo en la barra de navegación de est
 - [Telegram](https://t.me/bredoslinux)
 - [Discord](https://discord.gg/jwhxuyKXaa)
 - [GitHub](http://github.com/BredOS)
+  {.grid-list}
 
 # 8. Contribuyendo
 
