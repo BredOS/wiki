@@ -20,7 +20,7 @@ RK3588をサポートすることで、ブレッドOSは以下のようになり
 
 - 長期的なメンテナンス性(これ以上BSPハックを追跡しない)
 
-- Latest upstream kernel security fixes
+- 最新のアップストリームカーネルセキュリティ修正
 
 - パフォーマンスと安定性の向上
 
@@ -30,7 +30,7 @@ RK3588をサポートすることで、ブレッドOSは以下のようになり
 
 これは、BredOS とより広範な Linux エコシステムを、RK3588 ハードウェアを使用するすべての人にとってより良いものにすることについてです。
 
-> Our goal with this campaign is to raise atleast **2500€**, so that we can port approximately 28 boards.
+> このキャンペーンの目標は、少なくとも\*\*2500€\*\*を上げて、約28枚のボードを移植できるようにすることです。
 > {.is-warning}
 
 ## なぜ私たちはこれを行っているのですか?
@@ -40,19 +40,19 @@ RK3588をサポートすることで、ブレッドOSは以下のようになり
 
 低レベルのバックエンドの仕事 (基本的なカーネルサポートのような) の多くが上流に上陸していますが、**日々の必需品はまだ壊れているか行方不明**。
 
-- Many Wi-Fi/Bluetooth drivers don’t work out of the box
+- 多くのWi-Fi/Bluetoothドライバは箱の外で動作しません
 - デバイス固有の最適化は、一般的なメインラインパッチではカバーされません
 
 BredOS では、RK3588 デバイスを \*\*実際のユーザー向けに実用的で洗練されたものにしたいと考えています。 それは次のことを意味します: それは次のことを意味します:
 
 - 信頼性の高いWi-Fiとネットワーク
-- Tuned fan profiles (quiet when idle, cooling under load)
+- 調整されたファンプロファイル (アイドル時は静か、負荷時は冷却)
 - 安定した GPU とマルチメディアのサポート
-- Proper installer and images
-- Frequently updated images
+- 適切なインストーラーと画像
+- よく更新される画像
 
 このキャンペーンは「起動」についてだけではありません。
-It’s about making RK3588 devices **actually usable** as fully featured desktop computers.
+RK3588デバイスを完全に搭載したデスクトップコンピュータとして**実際に使用可能**にすることです。
 
 ## メインラインの利点
 
@@ -70,7 +70,7 @@ It’s about making RK3588 devices **actually usable** as fully featured desktop
 - **寄付**: 寄付するたびに、メインのRK3588体験に近づきます。 [here](https://ko-fi.com/Z8Z3I4J0P) または PM @rippanda12 を寄付できます [here](https://ko-fi.com/Z8Z3I4J0P) または PM @rippanda12 を寄付できます
 - **Share**: RK3588コミュニティ、SBCフォーラム、ソーシャルメディアに広めましょう。
 - **スポンサー**: RK3588ハードウェアに依存する企業は、より高い階層でこのマイルストーンを取り戻すことができます(私たちは私たちのリポジトリとウェブサイトでスポンサーをクレジットします)。
-- **Testing and reporting**: We need a lot of testing, especially on weird apps and desktop workloads.
+- **テストとレポート**: 多くのテストが必要です。特に奇妙なアプリやデスクトップのワークロードについて。
 
 ## 私たちが目指すこと
 
@@ -89,17 +89,17 @@ It’s about making RK3588 devices **actually usable** as fully featured desktop
    - GPU、ネットワーク、ストレージ、およびI/Oが安定していることを確認してください
    - エンドユーザーに事前構築済みのフラッシュ画像を提供する
 
-5. **Security**
-   - Keeping track of upstream security fixes, providing a stable secure kernel
-   - Encrypted password protected root filesystem during setup
-   - Password protected GRUB
+5. **セキュリティ**
+   - 上流のセキュリティ修正を追跡し、安定したセキュアなカーネルを提供します
+   - セットアップ中に暗号化されたパスワードで保護されたルートファイルシステムです
+   - パスワードで保護された GRUB
 
 ## お金がどこに行くか
 
 - 開発者時間 (カーネル、ブートローダー、ユーザースペースの統合)
 - 継続的なビルドとテストのためのCIインフラストラクチャ
 
-The bigger the budget at our disposal, the more time we can dedicate to BredOS.
+当社の予算が大きいほど、BredOSに専念できる時間が増えます。
 
 ### **[Support the RK3588 Mainline Milestone Now](https://ko-fi.com/Z8Z3I4J0P)**
 
