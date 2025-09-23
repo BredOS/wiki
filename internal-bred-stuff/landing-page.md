@@ -2,7 +2,7 @@
 title: BredOS Wiki
 description: 
 published: false
-date: 2025-09-22T12:04:33.957Z
+date: 2025-09-23T07:38:12.970Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
@@ -38,7 +38,7 @@ We support a wide range of devices—from exciting ARM-based systems and experim
  
 # 5. Preview
 Our friend [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) made a YouTube video about BredOS. Check it out here:
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="1280" height="800" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
  
 # 6. Installation
 To make installation easy for you, we laid out a line of bred crumbs for you to follow. 🍞 🔸🔸🔸
