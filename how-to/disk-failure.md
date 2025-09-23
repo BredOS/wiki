@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-23T15:41:40.284Z
+date: 2025-09-23T15:57:38.497Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -17,12 +17,19 @@ Data loss is possible, and likely.
 You will be disappointed! Making it worse is always possible.
 {.is-danger}
 
+> Instead, you can hop on Discord, Telegram, or Email us.
+Discord: https://discord.gg/beSUnWGVH2
+Telegram: https://t.me/+MUeb_iKsggY5YzY0
+Email: support@bredos.org
+{.is-success}
+
+
 # 2. Reported Failures
 
 The BredOS News service now will report degraded drives that are attached.
 (This only works on drives that report S.M.A.R.T. data)
 
-If you've been linked to this from BredOS News, head to the following section.
+If you've been linked to this from BredOS News, head to the relevant following section for your storage type.
 
 # 3. S.M.A.R.T Data
 ## 3.1 Viewing S.M.A.R.T Data (HDD)
