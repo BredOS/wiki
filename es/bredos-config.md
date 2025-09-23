@@ -1,8 +1,8 @@
 ---
 title: Configuración de BredOS
 description:
-published: false
-date: 2025-09-21T09:27:32.905Z
+published: true
+date: 2025-09-23T10:12:11.659Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
@@ -36,6 +36,8 @@ sudo pacman -S bredos-config
 > ¡Esta opción está actualmente en construcción!
 > {.is-warning}
 
+![update.png](/bredos-config/update.png)
+
 ## 2.3 Mantenimiento del Sistema
 
 - En esta sección, encontrará algunas tareas útiles para mantener su sistema limpio y funcionando sin problemas como Realizar tareas de mantenimiento del sistema de archivos o comprobar la integridad del sistema.
@@ -50,8 +52,10 @@ sudo pacman -S bredos-config
 
 ## 2.5 Migraciones
 
-> ¿Por qué no se ha fusionado esto en ajustes del sistema?
-> {.is-danger}
+> ¡Esta opción está actualmente en construcción!
+> {.is-warning}
+
+![migrations.png](/bredos-config/migrations.png)
 
 ## 2.6 Paquetes
 
