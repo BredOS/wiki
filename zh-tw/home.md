@@ -2,7 +2,7 @@
 title: BredOS 主頁
 description:
 published: true
-date: 2025-09-23T10:13:07.518Z
+date: 2025-09-23T10:46:23.458Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
@@ -96,4 +96,4 @@ BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢
 
 Right now, BredOS images for RK3588 devices rely on the crusty Rockchip BSP kernel — a huge, duct-taped codebase that’s hard to maintain, insecure, and always lags behind upstream Linux.
 
-[We want to change that](/en/internal-bred-stuff/mainline-campaign).
+[We want to change that](/campaigns/mainline-campaign).
