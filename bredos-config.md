@@ -2,7 +2,7 @@
 title: BredOS Config
 description: 
 published: false
-date: 2025-09-21T09:27:32.905Z
+date: 2025-09-23T10:06:34.468Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
@@ -43,8 +43,9 @@ sudo pacman -S bredos-config
 ![tweaks.png](/bredos-config/tweaks.png)
 
 ## 2.5 Migrations
-> Why isnt this merged into system tweaks?
-{.is-danger}
+
+> This option is currently under construction!
+{.is-warning}
 
 ## 2.6 Packages
 - Here, you'll find various hooks to help you install cool things, like steam or docker, properly:
