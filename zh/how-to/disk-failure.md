@@ -2,7 +2,7 @@
 title: 处理失败的磁盘
 description: S. M.A.R.T 数据和更换磁盘的指南
 published: true
-date: 2025-09-23T15：33：58.026Z
+date: 2025-09-23T15:57:38.497Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -18,23 +18,25 @@ dateCreated: 2025-06-01T10:33:55.798Z
 > 你将会失望！ 使情况更糟始终是可能的。
 > {.is-danger}
 
+> 相反，您可以在Discord、Telegram或给我们发送电子邮件。
+> Discord: https://discord.gg/beSUnWGVH2
+> Telegram: https://t.me/+MUeb_iKsggY5YzY0
+> Email: support@bredos.org
+> {.is-success}
+
 # 2. 报告失败
 
 BredOS 新闻服务现在将报告附加的已退化驱动程序。
-(这只适用于那些报告 S.M.A.R.T. 的驱动程序。) data)
+(这只适用于那些报告 S.M.A.R.T. 的驱动程序。) 经常预算： 预算外：
 
-如果您已经从BredOS News链接到这个部分，头部到下面的部分。
-
-> 这一部分正在建造中。 这一部分正在建造中。 请通过 Discord 或 Telegram 联系我们 - 我们很乐意提供帮助 ！
-> {.is-warning}
-> {.is-warning}
+如果您已经从 BredOS 新闻链接到这个链接，请头部到您的存储类型的相关部分。
 
 # 3. S.M.A.R.T 数据
 
 ## 查看S.M.A.R.T 数据 (HDD)
 
-If you have a different storage medium, head below to it's relevant section.
-Each has it's own section.
+如果您有一个不同的存储介质，请在下面的头部到它的相关部分。
+每一个都有自己的部分。
 
 - 假设硬盘 `/dev/sda`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -142,8 +144,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
-Most of this data is irrelevant to drive health.
-Out of all of this, you should look for to look for:
+这些数据大多与推动健康无关。
+基于所有这些，你应该寻找：
 
 - “SMART overall health 自我评估”，应为“PASSED”。 如果报告了任何其他值，应将驱动器替换为急速。 如果报告了任何其他值，应将驱动器替换为急速。
 - `重新分配Sector_Ct`，重新安置区的数目，如果一个以上的区域显示级联失败的可能性很大。
@@ -234,18 +236,18 @@ No Self-tests Logged
 - “介质和数据完整性错误”，表明有相当大的闪光度。
 - `错误信息记录条目`, 通常表明有多少闪光区域被掩盖了零件刷入。
 
-## 3.3 Viewing EMMC health
+## 3.3 查看EMMC的健康
 
-Do not run this on SD cards, it will crash them.
-It won't damage them, but it doesn't do anything productive.
+不要在SD卡上运行此操作，它会崩溃它们。
+它不会损害他们，但它不会做任何有益的事情。
 
-- Assuming  `/dev/mmcblk0`, to view it's controller data, run:
+- 假定`/dev/mmcblk0`，要查看它的控制器数据，请运行：
 
 ```
-sudo mmc extcsd read /dev/mmcblk0
+sudo mc extcsd read /dev/mmcblk0
 ```
 
-This will return a lot of data:
+这将返回许多数据：
 
 ```
 =============================================
@@ -400,47 +402,47 @@ Note: CMDQ_MODE_EN may not indicate the runtime CMDQ ON or OFF.
 Please check sysfs node '/sys/devices/.../mmc_host/mmcX/mmcX:XXXX/cmdq_en'
 ```
 
-Out of all this, the only health-related info is:
+在所有这一切中，唯一与健康有关的信息是：
 
 ```
 eMMC Life Time Estimation A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
 eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 ```
 
-This value indicates a percentage-range of health.
+这一数值表明了一定比例的健康状况。
 
-Value `0x01` indicates 0-10% health used.
-Value `0x02` indicates 11-20% health used.
-Value `0x03` indicates 21-30% health used.
-And so on and so fourth..
+`0x01`值表示使用了0-10%生命值。
+`0x02`值表示使用了11-20%的生命值。
+值`0x03`表示所使用的 21%-30%。
+如此是第四个...
 
-## 3.4 BTRFS reported data
+## 3.4 BTRFS 报告的数据
 
-If you are instead using a USB, an SD card ~~or floppy drives~~, it is unfortunately impossible to get proper reporting data.
+如果你使用的 USB，SD卡 ~~或软盘驱动器 ~，很遗憾无法获得正确的报告数据。
 
-Assuming it is a BredOS system drive, it is formatted with the BTRFS filesystem. BTRFS gathers all errors and can present a complete report.
+假定它是一个 BredOS 系统驱动器，它是使用 BTRFS 文件系统格式化的。 BTRFS 收集所有错误，可以提交完整的报告。
 
-- Assuming `/dev/mmcblk0p3`, which is MOUNTED, run:
-
-```
-sudo btrfs device stats /dev/mmcblk0p3
-```
-
-This will return:
+- 假设`/dev/mmcblk0p3`, 为MOUNTED, 运行：
 
 ```
-[/dev/mmcblk0p3].write_io_errs    0
-[/dev/mmcblk0p3].read_io_errs     0
-[/dev/mmcblk0p3].flush_io_errs    0
-[/dev/mmcblk0p3].corruption_errs  0
-[/dev/mmcblk0p3].generation_errs  0
+sudo btrfs 设备状态 /dev/mmcblk0p3
 ```
 
-If any of these values is non-zero, the medium is probably **SIGNIFICANTLY** degraded.
+这将返回：
 
-## 3.5 Should I replace the drive?
+```
+[/dev/mmcblk0p3].write_io_errs 0
+[/dev/mmcblk0p3].read_io_errs 0
+[/dev/mmcblk0p3].flush_io_errs 0
+[/dev/mmcblk0p3].corruption_errs 0
+[/dev/mmmcblk0p3].generation_errs 0
+```
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, it's probably fine to keep using the disk for a little while.
+如果其中任何一个值是非零值，介质可能为 **SIGNIFICANTLY** 降解。
+
+## 3.5 我是否应该替换驱动器？
+
+如果你只有少数(<5)搬迁区块，或不到一半可用的剩余燃油， 稍微不要继续使用磁盘可能是好的。
 
 然而，通过剩余的闪光或迅速迁移，数十个区段被烧毁是即将失败的迹象。
 
