@@ -2,7 +2,7 @@
 title: Discos de error de Manejo
 description: Una guía sobre los datos de S.M.A.R.T y la sustitución de discos
 published: true
-date: 2025-09-23T15:33:58.026Z
+date: 2025-09-23T15:57:38.497Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -18,22 +18,25 @@ La pérdida de datos es posible y probable.
 > ¡Le decepcionará! Siempre es posible hacerlo peor.
 > {.is-danger}
 
+> En su lugar, usted puede saltar con Discord, Telegram, o por correo electrónico.
+> Discord: https://discord.gg/beSUnWGVH2
+> Telegram: https://t.me/+MUeb_iKsgY0
+> Email: support@bredos.org
+> {.is-success}
+
 # 2. Fallos reportados
 
 El servicio BredOS News ahora reportará unidades degradadas que están adjuntas.
-(Esto sólo funciona en unidades que informan S.M.A.R.T. data)
+(Esto sólo funciona en unidades que informan S.M.A.R.T. datos)
 
-Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección.
-
-> Esta sección está en construcción. Por favor, contacta con nosotros a través de Discord o Telegram — ¡estaremos encantados de ayudar!
-> {.is-warning}
+Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección correspondiente para su tipo de almacenamiento.
 
 # 3. Datos S.M.A.R.T
 
 ## 3.1 Visualización de datos S.M.A.R.T (HDD)
 
-If you have a different storage medium, head below to it's relevant section.
-Each has it's own section.
+Si tiene un medio de almacenamiento diferente, diríjase a continuación a su sección relevante.
+Cada una tiene su propia sección.
 
 - Asumiendo el disco duro `/dev/sda`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -140,8 +143,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
-Most of this data is irrelevant to drive health.
-Out of all of this, you should look for to look for:
+La mayoría de estos datos son irrelevantes para impulsar la salud.
+De todo esto, debería buscar para buscar:
 
 - `SMART overall-health self-assessment`, que debe ser "PASSED". Si se informa de cualquier otro valor, la unidad debe ser reemplazada con prise.
 - `Reallocated_Sector_Ct`, el número de sectores reubicados, que si es más de uno solo indica un riesgo significativo de fallo en cascada.
@@ -231,18 +234,18 @@ Aquí, los únicos valores importantes son:
 - `Media and Data Integrity Errors`, que indican una significativa gradación del flash.
 - `Entradas de registro de información de errores`, que generalmente indican cuántas regiones de flash han sido enmascaradas con la flash.
 
-## 3.3 Viewing EMMC health
+## 3.3 Viendo salud EMMC
 
-Do not run this on SD cards, it will crash them.
-It won't damage them, but it doesn't do anything productive.
+No ejecute esto en las tarjetas SD, las bloqueará.
+No los dañará, pero no hace nada productivo.
 
-- Assuming  `/dev/mmcblk0`, to view it's controller data, run:
+- Asumiendo `/dev/mmcblk0`, para ver los datos de su controlador, ejecutar:
 
 ```
-sudo mmc extcsd read /dev/mmcblk0
+sudo mmc extcsd leer /dev/mmcblk0
 ```
 
-This will return a lot of data:
+Esto devolverá muchos datos:
 
 ```
 =============================================
@@ -397,47 +400,47 @@ Note: CMDQ_MODE_EN may not indicate the runtime CMDQ ON or OFF.
 Please check sysfs node '/sys/devices/.../mmc_host/mmcX/mmcX:XXXX/cmdq_en'
 ```
 
-Out of all this, the only health-related info is:
+De todo esto, la única información relacionada con la salud es:
 
 ```
-eMMC Life Time Estimation A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
-eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
+Estimación de tiempo de vida de eMMC A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
+Estimación de tiempo de vida de eMMC B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 ```
 
-This value indicates a percentage-range of health.
+Este valor indica un rango porcentual de la salud.
 
-Value `0x01` indicates 0-10% health used.
-Value `0x02` indicates 11-20% health used.
-Value `0x03` indicates 21-30% health used.
-And so on and so fourth..
+El valor `0x01` indica de 0-10% de salud usada.
+El valor `0x02` indica 11-20% de salud usada.
+El valor `0x03` indica 21-30% de salud usada.
+Y así sucesivamente..
 
-## 3.4 BTRFS reported data
+## 3.4 BTRFS reportó datos
 
-If you are instead using a USB, an SD card ~~or floppy drives~~, it is unfortunately impossible to get proper reporting data.
+Si en su lugar estás usando un USB, una tarjeta SD ~~~o unidades disquetes~~, por desgracia es imposible obtener los datos de reportes adecuados.
 
-Assuming it is a BredOS system drive, it is formatted with the BTRFS filesystem. BTRFS gathers all errors and can present a complete report.
+Suponiendo que es una unidad de sistema BredOS, está formateada con el sistema de archivos BTRFS. BTRFS recoge todos los errores y puede presentar un informe completo.
 
-- Assuming `/dev/mmcblk0p3`, which is MOUNTED, run:
-
-```
-sudo btrfs device stats /dev/mmcblk0p3
-```
-
-This will return:
+- Asumiendo `/dev/mmcblk0p3`, que es MOUNTED, ejecuta:
 
 ```
-[/dev/mmcblk0p3].write_io_errs    0
-[/dev/mmcblk0p3].read_io_errs     0
-[/dev/mmcblk0p3].flush_io_errs    0
-[/dev/mmcblk0p3].corruption_errs  0
-[/dev/mmcblk0p3].generation_errs  0
+estadísticas del dispositivo sudo btrfs /dev/mmcblk0p3
 ```
 
-If any of these values is non-zero, the medium is probably **SIGNIFICANTLY** degraded.
+Esto regresará:
 
-## 3.5 Should I replace the drive?
+```
+[/dev/mmcblk0p3].write_io_errs 0
+[/dev/mmcblk0p3].read_io_errs 0
+[/dev/mmcblk0p3].flush_io_errs 0
+[/dev/mmcblk0p3].corruption_errs 0
+[/dev/mmcblk0p3].generation_errs 0
+```
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, it's probably fine to keep using the disk for a little while.
+Si alguno de estos valores no es cero, el medio probablemente esté **SIGNIFICANTY** degradado.
+
+## 3.5 ¿Debo reemplazar la unidad?
+
+Si tienes solo unos pocos (<5) sectores reubicados, o menos de la mitad de la repuesta disponible, es probablemente bueno seguir usando el disco durante un rato.
 
 Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas de sectores es sin embargo una señal de un fracaso inminente.
 
