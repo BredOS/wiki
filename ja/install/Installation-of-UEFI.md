@@ -1,8 +1,8 @@
 ---
 title: UEFIのインストール
 description:
-published: false
-date: 2025-09-17T06:40:43.494Z
+published: true
+date: 2025-09-23T09:39:06.625Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
