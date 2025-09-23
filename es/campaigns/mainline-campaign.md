@@ -2,7 +2,7 @@
 title: Campaña principal
 description:
 published: true
-date: 2025-09-23T09:39:42.539Z
+date: 2025-09-23T12:34:31.320Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -26,7 +26,8 @@ Manteniendo soporte RK3588, BredOS traerá:
 
 - Una base sólida para el uso de escritorio y servidor ARM64
 
-Se trata de hacer que BredOS — y el ecosistema Linux más amplio — sea mejor para todos que usen hardware RK3588.
+This is about making BredOS — and the wider Linux ecosystem — better for everyone using RK3588 hardware.
+Our goal with this campaign is to raise atleast 2000€ so that we can port ~28 boards.
 
 ## ¿Por qué lo hacemos?
 
