@@ -1,8 +1,8 @@
 ---
 title: BredOS の設定
 description:
-published: false
-date: 2025-09-21T09:27:32.905Z
+published: true
+date: 2025-09-23T10:12:11.659Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
@@ -38,6 +38,8 @@ sudo pacman -S bredos-config
 > {.is-warning}
 > {.is-warning}
 
+![update.png](/bredos-config/update.png)
+
 ## 2.3 システムの維持
 
 - この項では、 ファイルシステムメンテナンスのタスクを実行したり、システムの完全性を確認したりするように、システムをきれいに保ちスムーズに実行するための便利なタスクがいくつかあります。
@@ -52,8 +54,11 @@ sudo pacman -S bredos-config
 
 ## 2.5 移行
 
-> なぜシステム調整に統合されなかったのですか?
-> {.is-danger}
+> このオプションは現在構築中です！
+> {.is-warning}
+> {.is-warning}
+
+![migrations.png](/bredos-config/migrations.png)
 
 ## 2.6 パッケージ
 
