@@ -1,8 +1,8 @@
 ---
 title: Tabla de dispositivos soportados
 description:
-published: false
-date: 2025-09-20T18:10:07.765Z
+published: true
+date: 2025-09-23T09:38:182Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
