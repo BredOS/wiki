@@ -2,95 +2,35 @@
 title: Guía de instalación para BredOS
 description:
 published: true
-date: 2024-16T10:06:04.691Z
+date: 2025-09-24T05:13:56.359Z
 tags:
 editor: markdown
 dateCreated: 2024-19T00:42:37.505Z
 ---
 
-# 🍞 Guía de instalación de BredOS
+# Guía de instalación de BredOS
 
-## 📚 Tabla de contenidos
+To make installation easy for you, we laid out a line of bred crumbs to follow. 🍞 🔸🔸🔸
 
-- [🔽 Descargando BredOS](#downloading-bredos)
-- [💽 Creando el medio de instalación (microSD)](#creating-the-installation-media-microsd)
-- [🚀 Arranque desde el medio de instalación (microSD)](#booting-from-the-installation-media-microsd)
-- [💾 Instalar BredOS a eMMC (RockChip)](#installing-bredos-to-emmc-rockchip)
-- [💻 Sigue al instalador BredOS](#follow-bredos-installer)
-- [🛠️ Configuración inicial](#initial-configuration)
+> Si encuentras un trozo de pan 🔸 danos una cabeza arriba en nuestros canales comunitarios.
+> {.is-info}
 
-## 🔽 Descargando BredOS
+## Instalación de imagen específica del dispositivo
 
-Descarga la última imagen de BredOS para tu consola desde el [🌐 sitio web oficial](https://bredos.org/download.html).
+Estos son los tableros que más nos gustan. Para instalar BredOS en ellos, inicie con nuestra guía de instalación [imagen específica del dispositivo](/en/install/device-specific-image). o dar un vistazo a la página del dispositivo en nuestra wiki, que se encuentra en la barra de navegación a la izquierda de esto.
 
-## 💽 Creando el medio de instalación (microSD)
+Visita nuestro [sitio de descargas](https://bredos.org/download.html) para averiguar si tu dispositivo es uno de ellos.
 
-1. Inserta tu tarjeta microSD en tu ordenador.
-2. Usa una herramienta como [`balenaEtcher`](https://etcher.balena.io/), `dd`, o [`Raspberry Pi Imager`](https://www.raspberrypi.com/software/) para escribir la imagen BredOS en la tarjeta microSD.
+## Instalación genérica
 
-## 🚀 Arranque desde el medio de instalación (microSD)
+Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/download.html) pero soporta el arranque de UEFI y se basa en la arquitectura x86 o ARM64, simplemente sigue nuestra guía para una instalación genérica disponible [here](/install/Installation-with-ISO).
 
-1. Inserte la tarjeta microSD en el ordenador de una sola placa ARM.
-2. Conecte los periféricos necesarios (teclado, ratón, monitor) y encendido en el dispositivo.
-3. El dispositivo debería arrancar desde la tarjeta microSD y cargar el instalador BredOS.
+## Instalación del contenedor Docker
 
-## 💾 Instalar BredOS a eMMC (RockChip)
+- Fácil como una línea de comando:
 
-Si quieres instalar BredOS en el almacenamiento eMMC en lugar de usar una tarjeta microSD, sigue estos pasos:
-
-**📝 Antes de comenzar, asegúrate de tener los siguientes archivos descargados:**
-
-- [📥 Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip)
-
-- Herramienta de flasheo **(RKDevTool vX.XX)**: Puede descargar las herramientas para Windows en los siguientes enlaces:
-  - [🔗 Enlace 1](https://docs.radxa.com/es/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)
-  - [🔗 Alternativo en caso de que `Link 1` no funcione](https://dl.radxa.com/tools/windows/)
-  - [🔗 Enlace a la versión v2.96](https://dl.radxa.com/tools/windows/RKDevTool_Release_v2.96_zh.zip)
-
-- Archivo de cargador SPI, por ejemplo para el RK3588: [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
-
-- [Imagen BredOS](#downloading-bredos).
-
-\*\*📂 Descomprima todos los archivos incluyendo la imagen BredOS, que por defecto viene en un .
-
-- Lo primero que hay que hacer es instalar el controlador Rockchip que hemos descargado. Para esto, abre la carpeta `DriverAssitant_v5.0` y ejecuta el archivo `DriverInstall.exe`.
-
-- Haga clic en `🟢 Instalar Driver`:
-
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Android/AOSP/install_drivers.png)
-
-- Abre la carpeta que contiene la herramienta de flasheo: carpeta `RKDevTool_Release_v2.96` (comprueba la versión que has descargado para el nombre) y ejecuta la herramienta `RKDevTool.exe`.
-
-- En la herramienta de flasheo establezca la siguiente configuración y haga clic en `RUN`:
-  - Seleccione el archivo de cargador SPI
-  - Seleccione la imagen BredOS
-  - Comprueba `Escribir por Dirección`
-  - Haga clic en `RUN` y espere hasta que el proceso termine
-
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/flashing_tool_config.png)
-
-para los usuarios de Linux, puede usar el `rkdeveloptool` para flashear la imagen al eMMC. Los comandos son los siguientes:
-
-```bash
-sudo rkdeveloptool db ~/Downloads/rk3588_spl_loader_v1.09.111.bin
-sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 ```
 
-## 💻 Sigue el instalador de BredOS
+arrugador arrodillador/bredos
 
-1. Siga las instrucciones en pantalla para completar el proceso de instalación.
-2. Seleccione su idioma preferido, disposición del teclado y zona horaria.
-3. Configurar una cuenta de usuario y contraseña.
-4. Completa la instalación y reinicia el dispositivo.
-
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/bredOS_installer.jpg)
-
-## 🛠️ Configuración inicial
-
-Después de ejecutar el instalador BredOS puede que necesite completar algunas tareas iniciales de configuración:
-
-- 🌐 Configurar ajustes de red
-- 🔄 Actualizar el sistema usando el gestor de paquetes
-- 🛠️ Instalar paquetes de software adicionales según sea necesario
-
-![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
+```
