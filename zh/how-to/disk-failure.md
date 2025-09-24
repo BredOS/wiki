@@ -2,7 +2,7 @@
 title: 处理失败的磁盘
 description: S. M.A.R.T 数据和更换磁盘的指南
 published: true
-date: 2025-09-23T15：33：58.026Z
+date: 2025-09-24T09：25：24.826Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -10,9 +10,7 @@ dateCreated: 2025-06-01T10:33:55.798Z
 
 # 1. 重要标签
 
-本指南是从个人经历中收集到的一系列建议。
-在执行本指南中的任何命令时确保正确的理解和风险。
-数据损失是可能的，也有可能发生。
+本指南是从个人经历中收集到的一系列建议。 在执行本指南中的任何命令时，您需要确保正确的理解和风险。 **数据丢失是可能的并可能的。**
 
 > **不**信任聊天室或恢复失败的磁盘的任何其他LM。
 > 你将会失望！ 使情况更糟始终是可能的。
@@ -20,14 +18,16 @@ dateCreated: 2025-06-01T10:33:55.798Z
 > 你将会失望！ 使情况更糟始终是可能的。
 > {.is-danger}
 
-> 相反，您可以在Discord、Telegram或给我们发送电子邮件。
-> 相反，您可以在Discord、Telegram或给我们发送电子邮件。
-> Discord: https://discord.gg/beSUnWGVH2
-> Telegram: https://t.me/+MUeb_iKsggY5YzY0
-> Email: support@bredos.org
-> {.is-success}
+# 2. 帮助我
 
-# 2. 报告失败
+在BredOS, 我们拒绝让任何用户遭受数据丢失。 仔细阅读这篇文章；如果您需要进一步的帮助，请随时在我们的支持频道或通过邮件联系我们。
+
+- [📱 Telegram](https://t.me/bredoslinux)
+- [💬 Discord](https://discord.gg/jwhuyKXaa)
+- [Email](mailto:support@bredos.org)
+  {.links-list}
+
+# 3. 报告失败
 
 BredOS 新闻服务现在将报告附加的已退化驱动程序。
 (这只适用于那些报告 S.M.A.R.T.
@@ -35,13 +35,13 @@ BredOS 新闻服务现在将报告附加的已退化驱动程序。
 
 如果您已经从BredOS News链接到这个部分，头部到下面的部分。
 
-# 3. S.M.A.R.T 数据
+# 🚀 4. S.M.A.R.T 数据
 
-## 查看S.M.A.R.T 数据 (HDD)
+## 4.1 Viewing S.M.A.R.T Data (HDD)
 
-如果您有一个不同的存储介质，请在下面的头部到它的相关部分。
-每一个都有自己的部分。
-每一个都有自己的部分。
+> 如果您有一个不同的存储介质，请在下面的头部到它的相关部分。
+> 每一个都有自己的部分。
+> {.is-info}
 
 - 假设硬盘 `/dev/sda`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -149,13 +149,12 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
-这些数据大多与推动健康无关。
-基于所有这些，你应该寻找：
+这些数据大多与推动健康无关。 基于所有这些，你应该寻找：
 
 - “SMART overall health 自我评估”，应为“PASSED”。 如果报告了任何其他值，应将驱动器替换为急速。 如果报告了任何其他值，应将驱动器替换为急速。
 - `重新分配Sector_Ct`，重新安置区的数目，如果一个以上的区域显示级联失败的可能性很大。
 
-## 查看S.M.A.R.T Data (NVME)
+## 4.2 Viewing S.M.A.R.T Data (NVME)
 
 - 假设NVME `/dev/nvme0`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -241,11 +240,11 @@ No Self-tests Logged
 - “介质和数据完整性错误”，表明有相当大的闪光度。
 - `错误信息记录条目`, 通常表明有多少闪光区域被掩盖了零件刷入。
 
-## 3.3 查看EMMC的健康
+## 4.3 Viewing EMMC health
 
-不要在SD卡上运行此操作，它会崩溃它们。
-它不会损害他们，但它不会做任何有益的事情。
-它不会损害他们，但它不会做任何有益的事情。
+> 不要在SD卡上运行此操作，它会崩溃它们。
+> 它不会损害他们，但它不会做任何有益的事情。 它不会损害他们，但它不会做任何有益的事情。
+> {.is-info}
 
 - 假定`/dev/mmcblk0`，要查看它的控制器数据，请运行：
 
@@ -253,7 +252,7 @@ No Self-tests Logged
 sudo mc extcsd read /dev/mmcblk0
 ```
 
-这将返回许多数据：
+- 这将返回许多数据：
 
 ```
 =============================================
@@ -408,7 +407,7 @@ Note: CMDQ_MODE_EN may not indicate the runtime CMDQ ON or OFF.
 Please check sysfs node '/sys/devices/.../mmc_host/mmcX/mmcX:XXXX/cmdq_en'
 ```
 
-在所有这一切中，唯一与健康有关的信息是：
+- 在所有这一切中，唯一与健康有关的信息是：
 
 ```
 eMMC Life Time Estimation A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
@@ -417,15 +416,15 @@ eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 
 这一数值表明了一定比例的健康状况。
 
-`0x01`值表示使用了0-10%生命值。
-`0x01`值表示使用了0-10%生命值。
-`0x02`值表示使用了11-20%的生命值。
-值`0x03`表示所使用的 21%-30%。
-如此是第四个...
-值`0x03`表示所使用的 21%-30%。
-如此是第四个...
+- `0x01`值表示使用了0-10%生命值。
+- `0x01`值表示使用了0-10%生命值。
+  `0x02`值表示使用了11-20%的生命值。
+  值`0x03`表示所使用的 21%-30%。
+  如此是第四个...
+- 值`0x03`表示所使用的 21%-30%。
+- 如此是第四个...
 
-## 3.4 BTRFS 报告的数据
+## 4.4 BTRFS reported data
 
 如果你使用的 USB，SD卡 ~~或软盘驱动器 ~，很遗憾无法获得正确的报告数据。
 
@@ -437,7 +436,7 @@ eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 sudo btrfs 设备状态 /dev/mmcblk0p3
 ```
 
-这将返回：
+- 这将返回：
 
 ```
 [/dev/mmcblk0p3].write_io_errs 0
@@ -449,11 +448,9 @@ sudo btrfs 设备状态 /dev/mmcblk0p3
 
 如果其中任何一个值是非零值，介质可能为 **SIGNIFICANTLY** 降解。
 
-## 我应该替换驱动器吗？
+## 4.5 Should I replace the drive?
 
-如果你只有少数(<5)移位区块，很可能会在一段时间内不再使用磁盘。
-使用几个剩余的 nvme 闪屏块也是很好的。
-使用几个剩余的 nvme 闪屏块也是很好的。
+If you have just a few (<5) relocated sectors, or less than half available spare flash, reported from `smartctl` it's probably fine to keep using the disk for a little while.
 
 然而，通过剩余的闪光或迅速迁移，数十个区段被烧毁是即将失败的迹象。
 
