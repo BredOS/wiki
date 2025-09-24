@@ -63,6 +63,7 @@ VariableInfo.efi
 > 更新成功后，关闭棋盘并断开电源至少10秒！
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 ## 3.3 通过粉丝更新
 
@@ -93,7 +94,7 @@ du ./cix_flash_all.bin
 
 在上面的例子中，文件大小是 `6288062` 。
 
-- 为了匹配chip的规格，我们需要在文件末尾加上“零”，直到它匹配chip的大小。 用上面命令中的文件大小替换<your file size here> 用上面命令中的文件大小替换<your file size here>
+- 为了匹配chip的规格，我们需要在文件末尾加上“零”，直到它匹配chip的大小。 用上面命令中的文件大小替换<your file size here> 用上面命令中的文件大小替换<your file size here> 用上面命令中的文件大小替换<your file size here>
 
 ```
 dd if=/dev/n0 bs=1 count=$(8388608- <your file size here>)) >> ./cix_flash_all.bin
@@ -102,6 +103,7 @@ dd if=/dev/n0 bs=1 count=$(8388608- <your file size here>)) >> ./cix_flash_all.b
 ### 3.3.2 连接到SPI
 
 > 确保你的棋盘在移除或插入SPI芯片时断电！
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 
