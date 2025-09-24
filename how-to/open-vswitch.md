@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description: 
 published: false
-date: 2025-09-24T11:36:04.492Z
+date: 2025-09-24T11:40:02.738Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -68,7 +68,7 @@ In this example, we use `ve-databaselCjq`, which is a virtual network device tha
 sudo ovs-vsctl add-port <your switch name here> ve-databaselCjq
 ```
 
-- If you want to tag the packages of that adapter to a specific vlan, use the `tag` parameter:
+- If you want to tag the packets of that adapter to a specific vlan, use the `tag` parameter:
 ```
 sudo ovs-vsctl add-port <your switch name here> ve-databaselCjq tag=<your vlan id tag here>
 ```
@@ -119,10 +119,10 @@ If you have two devices connected via VPN over the Internet, it is possible to c
 
 - Run the following on both hosts:
 ```
-sudo ovs-vsctl add-port <your switch name here> vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=<IP adress of other host>
+sudo ovs-vsctl add-port <your switch name here> vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=<IP address of other host>
 ```
 
-As always, replace `<your switch name here>` with the name of your switch, and `<IP adress of other host>` with the IP address of the host with the other vSwitch. Thats it; your connected devices can now communicate safely over the Internet.
+As always, replace `<your switch name here>` with the name of your switch, and `<IP address of other host>` with the IP address of the host with the other vSwitch. Thats it; your connected devices can now communicate safely over the Internet.
 
 > If your clients can ping each other, but further communication does not work, it's probably an MTU issue. 
 {.is-danger}
