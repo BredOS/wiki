@@ -14,6 +14,8 @@ dateCreated: 2025-09-16T09:55:34.272Z
 しかし、恐れはありません - とにかくあなたをカバーしています。
 何よりもまず、Windowsを使用する必要があると聞いて申し訳ありません。
 しかし、恐れはありません - とにかくあなたをカバーしています。
+何よりもまず、Windowsを使用する必要があると聞いて申し訳ありません。
+しかし、恐れはありません - とにかくあなたをカバーしています。
 この記事では、 `RKDevTool` と必要な `RockChip Maskromドライバ` をインストールするプロセスを説明します。
 
 BredOS のインストールには、以下の4つのものが必要です:
@@ -31,12 +33,13 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 > 「このアプリでデバイスに変更を許可しますか？」と聞かれた場合は、「はい」をクリックします。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ウィンドウがポップアップします。 ウィンドウがポップアップします。 `Install Driver`をクリックします。 ドライバはシステムにインストールされます。 ドライバはシステムにインストールされます。
 
 # 3. RKDevToolを使ってブレッドOSをフラッシュする
 
-所定の場所にあるドライバでは、 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool) の使用を続けることができます。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。
+所定の場所にあるドライバでは、 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool) の使用を続けることができます。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。
 
 `RKDevTool` で次の設定を行い、`RUN`をクリックします。
 
@@ -52,5 +55,6 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 それが点滅プロセスを終えるのを待ち、あなたは行くのが良いです。
 
 > フラッシュに成功したら[**最初のセットアップ**](/en/install/first-setup)で続行します。
+> {.is-success}
 > {.is-success}
 > {.is-success}
