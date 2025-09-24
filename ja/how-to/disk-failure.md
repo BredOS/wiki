@@ -37,7 +37,7 @@ BredOS Newsからこれにリンクされている場合は、ストレージタ
 
 # 🚀 4. S.M.A.R.T データ
 
-## 4.1 Viewing S.M.A.R.T Data (HDD)
+## 4.1 S.M.A.R.T データ (HDD) の表示
 
 > 別の記憶媒体がある場合は、以下のセクションを参照してください。
 > それぞれに独自のセクションがあります。
@@ -154,7 +154,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 - `SMART overall-health self-assessment` は、「パスワード」である必要があります。 他の値が報告された場合は、ドライブは急いで交換する必要があります。
 - `Reallocated_Sector_Ct` は、移転されたセクタの数です。これは、1 つ以上のセクタがあれば、カスケード失敗の重大なリスクを示します。
 
-## 4.2 Viewing S.M.A.R.T Data (NVME)
+## 4.2 S.M.A.R.T データ (NVME) の表示
 
 - NVMe `/dev/nvme0` を仮定して、S.M.A.R.T データを表示します。
 
@@ -240,7 +240,7 @@ No Self-tests Logged
 - 重要なフラッシュ度を示す`メディアとデータ整合性エラー`。
 - `Error Information Log Entries` は通常、スペアフラッシュでマスクされたフラッシュ領域の数を示します。
 
-## 4.3 Viewing EMMC health
+## 4.3 EMMCの健康状態を表示
 
 > SDカードでこれを実行しないでください、それらはクラッシュします。
 > それは彼らに損害を与えることはありませんが、それは生産的なことを行いません。 それは彼らに損害を与えることはありませんが、それは生産的なことを行いません。
@@ -424,7 +424,7 @@ eMMC寿命推定B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 - 値 `0x03` は、健康状態が21-30%であることを示します。
 - そして、そしてその第四に
 
-## 4.4 BTRFS reported data
+## 4.4 BTRFS 報告されたデータ
 
 USB、SDカード、~~~またはフロッピードライブ~を使用している場合は、残念ながら適切なレポートデータを取得することは不可能です。
 
@@ -448,9 +448,9 @@ sudo btrfs デバイスの統計情報 /dev/mmcblk0p3
 
 これらの値のいずれかが非ゼロの場合、メディアは **SIGNIFICANTLY** 劣化します。
 
-## 4.5 Should I replace the drive?
+## 4.5 ドライブを交換する必要がありますか?
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, reported from `smartctl` it's probably fine to keep using the disk for a little while.
+わずか数(<5)のセクタが移転されている場合、または半分以下のスペアフラッシュが利用可能である場合。 `smartctl`から報告されています。しばらくディスクを使い続けても大丈夫でしょう。
 
 しかし、スペアフラッシュを燃やしたり、数十のセクタを急速に移動させたりすることは、しかし差し迫った失敗の兆候である。
 
