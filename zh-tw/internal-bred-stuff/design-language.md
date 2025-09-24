@@ -2,7 +2,7 @@
 title: Design language
 description:
 published: false
-date: 2025-09-21T08:48:38.458Z
+date: 2025-09-17T14:16:06.123Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -41,7 +41,7 @@ This page describes the design language we follow for our articles. This set of 
 
 - If your refer to a section of an article you must link to that section.
 
-# 4. Screenshots and Photos
+# 4. Screenshots
 
 - Screenshot and photos must be of high quality.
 
@@ -55,7 +55,7 @@ This page describes the design language we follow for our articles. This set of 
 
 # 5. Graphs and tables
 
-- The table must be described in plain text above the table. Its description must start with a hyphen (-) to render it as an item in an unordered list.
+- The content of a screenshot must be described in plain text above the picture. Its description must start with a hyphen (-) to render it as an item in an unordered list.
 
 - Tables must not exceed a certain size. If you need to scroll through it a lot consider splitting it up.
 

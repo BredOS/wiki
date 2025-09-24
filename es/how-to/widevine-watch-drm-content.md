@@ -1,8 +1,8 @@
 ---
-title: Reproducir contenido protegido DRM (instalando widevine)
+title: Cómo reproducir contenido protegido DRM (instalando widevine)
 description: Aprende cómo habilitar la reproducción de contenido protegido por DRM en BredOS instalando el plugin Widevine
 published: true
-date: 2025-09-15T11:13:42.081Z
+date: 2025-09-15T09:17:04.241Z
 tags:
 editor: markdown
 dateCreated: 2024-28T05:58:27.563Z

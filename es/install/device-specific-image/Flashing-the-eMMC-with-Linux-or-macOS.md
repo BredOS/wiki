@@ -18,7 +18,7 @@ Para la instalación de BredOS, se requieren tres cosas:
 2. Imagen específica del dispositivo de nuestro [sitio web oficial](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
-# 2) Instalación
+# 3) Parpadeando
 
 La instalación de `rkdeveloptool` se puede realizar con los siguientes pasos.
 
@@ -79,13 +79,13 @@ make -j $(nproc)
 ls | grep rkdeveloptool
 ```
 
-- Eso debería producir:
+- debe salir
 
 ```
 rkdeveloptool
 ```
 
-### 2.2.4 Hazlo Ejecutable
+### 2.2.4 Ejecutar
 
 - Y finalmente cópialo en la carpeta `opt` para ejecutarlo desde todas partes:
 

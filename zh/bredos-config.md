@@ -1,8 +1,8 @@
 ---
 title: BredOS 配置
 description:
-published: false
-date: 2025-09-21T09:27:32.905Z
+published: true
+date: 2025-09-23T10:12:11.659Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
@@ -16,6 +16,7 @@ dateCreated: 2025-09-21T09:27:04.136Z
 
 > 默认情况下，工具“bredos-config”已安装。
 > {.is-info}
+> {.is-info}
 
 - 如果您删除了它或想要重新安装它，请运行：
 
@@ -27,7 +28,7 @@ sudo pacman -S bredos-config
 
 ## 2.1 设备树管理器
 
-- 此选项可帮助您管理设备树和设备树叠加层，用于更改内核与设备的相互作用。 一个简单的例子是使用 Orange Pi 5 Plus 禁用LED，但还有更多的东西要探索。 Follow [this article](/how-to/how-to-enable-dtbos) to learn more about it.
+- 此选项可帮助您管理设备树和设备树叠加层，用于更改内核与设备的相互作用。 一个简单的例子是使用 Orange Pi 5 Plus 禁用LED，但还有更多的东西要探索。 Follow [this article](/how-to/how-to-enable-dtbos) to learn more about it. 一个简单的例子是使用 Orange Pi 5 Plus 禁用LED，但还有更多的东西要探索。 Follow [this article](/how-to/how-to-enable-dtbos) to learn more about it.
 
 ![dtb-manager.png](/bredos-config/dtb-manager.png)
 
@@ -35,6 +36,9 @@ sudo pacman -S bredos-config
 
 > 此选项正在构建中！
 > {.is-warning}
+> {.is-warning}
+
+![update.png](/bredos-config/update.png)
 
 ## 2.3 系统升级
 
@@ -50,8 +54,11 @@ sudo pacman -S bredos-config
 
 ## 2.5 迁移
 
-> 为什么这合并到系统调整？
-> {.is-danger}
+> 此选项正在构建中！
+> {.is-warning}
+> {.is-warning}
+
+![migrations.png](/bredos-config/migrations.png)
 
 ## 2.6 包
 

@@ -2,13 +2,13 @@
 title: 切换内核中
 description:
 published: true
-date: 2025-09-18T09:33:26.800Z
+date: 2025-09-16T10：40.464Z
 tags:
 editor: markdown
 dateCreated: 2024-12-04T15：50：46.861Z
 ---
 
-# 1. 简介
+# 1. Reboot
 
 默认情况下，大多数设备都使用 `linux-rockchip-rkr3` 内核。
 然而，您可以从另一个开关，或者到另一个内核。
@@ -43,8 +43,9 @@ local/util-linux-libs 240.2-1
 
 在列表中，我们可以看到`linux-rockchip-rkr3`，同时安装了相应的头部。
 要安装另一个内核，请先移除已安装的内核及其头部。
+要安装另一个内核，请先移除已安装的内核及其头部。
 
-# 2. 管理内核
+# 2. 继续安装新内核。
 
 ## 2.1 移除已安装的内核
 
@@ -125,14 +126,15 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` drachut 图像。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。
+`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` drachut 图像。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。
 
-## 2.3 更新引导器配置
+## 3. 更新引导程序配置
 
 > 如果你在棋盘上看到一个 BredOS 标志，你正在使用 UEFI 。
 > {.is-warning}
+> {.is-warning}
 
-### 2.3.1 U-启动
+### 3.1 U-启动
 
 - 编辑 `/boot/extlinux/extlinux.conf`:
 
@@ -155,6 +157,7 @@ label BredOS ARM
 您还需要编辑内核行才能匹配。
 要验证文件名正确，您可以列出`/boot/`的内容：
 您还需要编辑内核行才能匹配。
+您还需要编辑内核行才能匹配。
 
 - 要验证文件名正确，您可以列出`/boot/`的内容：
 
@@ -168,7 +171,7 @@ initramfs-linux-rockchip-rkr3.img
 vmlinuz-linux-rockchip-rkr3
 ```
 
-### 2.3.2 UEFI
+### 3.2 UEFI
 
 - 运行以下以重新生成 grub.cfg：
 

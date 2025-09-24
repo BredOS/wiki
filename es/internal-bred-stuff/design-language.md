@@ -2,7 +2,7 @@
 title: Idioma de diseño
 description:
 published: false
-date: 2025-09-21T08:48:38.458Z
+date: 2025-09-17T14:16:06.123Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:06:31.497Z
@@ -41,7 +41,7 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 
 - Si usted se refiere a una sección de un artículo usted debe enlazar a esa sección.
 
-# 4. Capturas y fotos
+# 4. Capturas de pantalla
 
 - La captura de pantalla y las fotos deben ser de alta calidad.
 
@@ -55,7 +55,7 @@ Esta página describe el lenguaje de diseño que seguimos para nuestros artícul
 
 # 5. Gráficos y tablas
 
-- La tabla debe ser descrita en texto plano encima de la tabla. Su descripción debe comenzar con un guión (-) para renderizarlo como un elemento en una lista no ordenada.
+- El contenido de una captura de pantalla debe ser descrito en texto plano por encima de la imagen. Su descripción debe comenzar con un guión (-) para renderizarlo como un elemento en una lista no ordenada.
 
 - Las tablas no deben exceder un tamaño determinado. Si necesita desplazarse a través de ella mucho considere dividirla.
 

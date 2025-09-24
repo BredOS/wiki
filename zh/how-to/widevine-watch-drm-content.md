@@ -1,8 +1,8 @@
 ---
-title: 回放 DRM 保护的内容(安装宽带)
+title: 如何播放 DRM 受保护的内容(安装宽带)
 description: 通过安装 Widevine 插件学习如何在 BredOS 上启用 DRM保护内容的回放
 published: true
-date: 2025-09-15T11:13:42.081Z
+date: 2025-09-15T09：17：04.241Z
 tags:
 editor: markdown
 dateCreated: 2024-08-28T05:58:27.563Z
@@ -28,7 +28,7 @@ sudo pacman -S widevine-aarch64
 
 ## 2.3 为Netflix 设置
 
-- 要观看Netflix，您需要弄乱您的用户代理。 使用以下用户代理字符串：
+- 要观看Netflix，您需要弄乱您的用户代理。 使用以下用户代理字符串： 使用以下用户代理字符串：
 
 ```
 Mozilla/5.0 (X11; CrOS aarch64 15236.80.0.0) AppleWebKit/537.36 (KHTML, such Gecko) Chrome/109.0.5414.125 Safari/537.36

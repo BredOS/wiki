@@ -1,22 +1,22 @@
 ---
-title: 使用您的设备作为无线热点
+title: 如何使用您的设备作为无线热点
 description:
 published: true
-date: 2025-09-18T07：15：46.054Z
+date: 2025-09-16T10:50:45.422Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10：33：46.772Z
 ---
 
-# 1. 简介
+# 1. 🛠️ 前提条件
 
 本指南将向您展示如何使用 NetworkManager 设置 Wi-Fi 热点。
 
-# 2. 必备条件
+# 2. 创建热点
 
 在您开始之前，请确保您：
 
-- 支持 AP (访问点) 模式的 Wi-Fi 适配器
+- 📡 一个 Wi-Fi 适配器支持AP(接入点) 模式
 
 > 支持 AP (Access Point) 模式的适当设备包括Rock 5C，Rock 5B+， Khadas Edge 2, Khadas Vim 4, all Mekotronics R58 设备，以及Orange Pi 5B。
 > {.is-info}
@@ -24,50 +24,51 @@ dateCreated: 2024-09-08T10：33：46.772Z
 > {.is-info}
 > {.is-info}
 
-# 3. 安装
+# 3. 查看热点状态
 
 ## 3.1 创建热点
 
 您可以轻松使用 NetworkManager 命令行工具`nmcli` 创建热点。
 
-- 列出您的网络设备以识别您将使用的 Wi-Fi 接口：
+- **列出您的网络设备** 以识别您将使用的 Wi-Fi 接口：
 
 ```bash
-   nmcli 设备状态
+nmcli 设备状态
 ```
 
-- 示例输出：
+- 示例输出
 
 ```
-	DEVICE           TYPE      STATE                   CONNECTION      
-	bridge0          bridge    connected               bridge0         
-	tailscale0       tun       connected (externally)  tailscale0      
-	lo               loopback  connected (externally)  lo              
-	br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
-	br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
-	docker0          bridge    connected (externally)  docker0         
-	virbr0           bridge    connected (externally)  virbr0          
-	enp8s0           ethernet  connected (externally)  enp8s0          
-	wlan0            wifi      disconnected            --   
+DEVICE           TYPE      STATE                   CONNECTION      
+bridge0          bridge    connected               bridge0         
+tailscale0       tun       connected (externally)  tailscale0      
+lo               loopback  connected (externally)  lo              
+br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
+br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
+docker0          bridge    connected (externally)  docker0         
+virbr0           bridge    connected (externally)  virbr0          
+enp8s0           ethernet  connected (externally)  enp8s0          
+wlan0            wifi      disconnected            --   
 ```
 
-- 使用以下命令创建热点：
+- **使用以下命令创建热点**
 
 ```bash
-   nmcli 设备 Wifi 热点ifname <wifi_interface> ssid <MyHotspot> 密码 <mypassword>
+nmcli 设备 Wifi 热点ifname <wifi_interface> ssid <MyHotspot> 密码 <mypassword>
 ```
 
-- 示例输出：
+- 示例输出
 
 ```
-  Device 'wlan0' successfully activated with '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
-  Hint: "nmcli dev wifi show-password" shows the Wi-Fi name and password.
+Device 'wlan0' successfully activated with '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
+Hint: "nmcli dev wifi show-password" shows the Wi-Fi name and password.
 ```
 
 ```
 用您的实际接口名称替换<wifi_interface>`，比如`wlp2s0`或`wlan0`， 使用您想要的 SSID 的<MyHotspot>和 `<mypassword>的密码选择一个安全的密码。
 ```
 
+> 如果你得到以下错误，请用sudo再次运行命令。
 > 如果你得到以下错误，请用sudo再次运行命令。
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
 > {.is-info}
@@ -80,7 +81,7 @@ dateCreated: 2024-09-08T10：33：46.772Z
 nmcli 连接显示
 ```
 
-- 示例输出：
+- 示例输出
 
 ```
 NAME                            UUID                                  TYPE       DEVICE          
@@ -95,28 +96,28 @@ virbr0                          12d1109a-64a4-4d07-b0a2-887f10145109  bridge    
 enp8s0                          184c8145-ca17-4258-b7db-7e32c298f424  ethernet   enp8s0
 ```
 
-您应该看到在活动连接下列出的热点(在上面的例子中第二行)。
+您应该看到活跃连接下的热点列表。
 
-## 3.3 配置 IP 转发中
+## 配置 IP 转发中
 
 要通过热点共享您的互联网连接，您需要启用 IP 转发：
 
-- 启用 IP 转发：
+- **启用 IP 转发**：
 
 ```bash
-   sudo sysctl net.ipv4.ip_forward=1
+sudo sysctl net.ipv4.ip_forward=1
 ```
 
-- 编辑 `/etc/sysctl.d/99-sysctl.conf` 使其永久性：
+- **通过编辑 `/etc/sysctl.d/99-sysctl.conf` 使其成为永久**
 
 ```bash
-   sudo nano /etc/sysctl.d/99-sysctl.conf
+sudo nano /etc/sysctl.d/99-sysctl.conf
 ```
 
 - 增加以下行：
 
 ```
-   net.ipv4.ip_forward=1
+net.ipv4.ip_forward=1
 ```
 
 ## 3.4 停止热点

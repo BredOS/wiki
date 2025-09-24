@@ -2,7 +2,7 @@
 title: ディスクの処理に失敗しました
 description: S.M.A.R.T データとディスクの交換に関するガイド
 published: true
-date: 2025-09-15T09:04:50.217Z
+date: 2025-09-23T15:57:38.497Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -12,25 +12,31 @@ dateCreated: 2025-06-01T10:33:55.798Z
 
 このガイドは個人的な経験から集められたヒントのセットです。
 このガイドからコマンドを実行する際に、適切な理解とリスクを確保します。
-データ損失が可能です。
+データ損失は可能であり、可能性があります。
 
-> 失敗したディスクを回復する際にChatGPTやその他のLLMを**信頼しない**。 あなたはがっかりするでしょう！
+> **失敗したディスクを回復する際にChatGPTやその他のLLMを信頼しない** こと。
+> あなたはがっかりするでしょう！ それを悪化させることは常に可能です。
 > {.is-danger}
+
+> 代わりに、Discord、Telegram、またはメールでお問い合わせください。
+> Discord: https://discord.gg/beSUnWGVH2
+> Telegram: https://t.me/+MUeb_iKsgGY5YzY0
+> Email: support@bredos.org
+> {.is-success}
 
 # 2. 報告された失敗
 
-BredOS ニュースサービスは、添付され、S.M.A.R.Tデータを提示しているドライブの故障または破損を報告します。
+BredOS News サービスは、添付されている劣化したドライブを報告します。
+(これは、S.M.A.R.T を報告するドライブでのみ動作します。 データ)
 
-BredOS News からこれにリンクされている場合は、次のセクションに進みます。
-
-~~失敗~~
-
-> このセクションは建設中です。 DiscordまたはTelegramからお問い合わせください。喜んでお手伝いします！
-> {.is-warning}
+BredOS Newsからこれにリンクされている場合は、ストレージタイプの関連する以下のセクションを参照してください。
 
 # 3. S.M.A.R.T データ
 
-## 3.1 S.M.A.R.T データ (HDD) の表示
+## S.M.A.R.T データ (HDD) の表示
+
+別の記憶媒体がある場合は、以下のセクションを参照してください。
+それぞれに独自のセクションがあります。
 
 - ハード ディスク `/dev/sda` を仮定して、S.M.A.R.T データを表示します。
 
@@ -41,6 +47,7 @@ sudo smartctl -a /dev/sda
 - 大きなレポートを印刷します：
 
 ```
+[bill88t@prion | ~]> sudo smartctl -a /dev/sda
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -137,12 +144,13 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
-これらのすべてのうち、以下のデータを調べることが重要です:
+このデータのほとんどは、健康を促進するためには関係ありません。
+これらのすべての中で、あなたは次のように探す必要があります:
 
 - `SMART overall-health self-assessment` は、「パスワード」である必要があります。 他の値が報告された場合は、ドライブは急いで交換する必要があります。
 - `Reallocated_Sector_Ct` は、移転されたセクタの数です。これは、1 つ以上のセクタがあれば、カスケード失敗の重大なリスクを示します。
 
-## 3.2 S.M.A.R.T データ (NVME) の表示
+## S.M.A.R.T データを表示する (NVME)
 
 - NVMe `/dev/nvme0` を仮定して、S.M.A.R.T データを表示します。
 
@@ -153,6 +161,7 @@ sudo smartctl -a /dev/nvme0
 - NVMEがS.M.A.R.Tをサポートしていると仮定すると、次のような小さなレポートが出力されます。
 
 ```
+[bill88t@prion | ~]> sudo smartctl -a /dev/nvme0
 smartctl 7.5 2025-04-30 r5714 [aarch64-linux-6.1.44-1-sky1] (local build)
 Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
 
@@ -227,14 +236,216 @@ No Self-tests Logged
 - 重要なフラッシュ度を示す`メディアとデータ整合性エラー`。
 - `Error Information Log Entries` は通常、スペアフラッシュでマスクされたフラッシュ領域の数を示します。
 
-## 3.3 ドライブを交換する必要がありますか?
+## 3.3 EMMCの健康状態を表示
 
-わずか数(<5)のセクタが移転されている場合、ディスクをしばらく使用し続けても大丈夫でしょう。
-いくつかのスペアnvmeフラッシュブロックを使用することも問題ありません。
-いくつかのスペアnvmeフラッシュブロックを使用することも問題ありません。
+SDカードでこれを実行しないでください、それらはクラッシュします。
+それは彼らに損害を与えることはありませんが、それは生産的なことを行いません。
+
+- `/dev/mmcblk0` を想定して、コントローラのデータを表示します。
+
+```
+sudo mmc extcsd read /dev/mmcblk0
+```
+
+これは多くのデータを返します:
+
+```
+=============================================
+  Extended CSD rev 1.8 (MMC 5.1)
+=============================================
+
+Card Supported Command sets [S_CMD_SET: 0x01]
+HPI Features [HPI_FEATURE: 0x01]: implementation based on CMD13
+Background operations support [BKOPS_SUPPORT: 0x01]
+Max Packet Read Cmd [MAX_PACKED_READS: 0x20]
+Max Packet Write Cmd [MAX_PACKED_WRITES: 0x20]
+Data TAG support [DATA_TAG_SUPPORT: 0x01]
+Data TAG Unit Size [TAG_UNIT_SIZE: 0x00]
+Tag Resources Size [TAG_RES_SIZE: 0x00]
+Context Management Capabilities [CONTEXT_CAPABILITIES: 0x78]
+Large Unit Size [LARGE_UNIT_SIZE_M1: 0x01]
+Extended partition attribute support [EXT_SUPPORT: 0x03]
+Generic CMD6 Timer [GENERIC_CMD6_TIME: 0x05]
+Power off notification [POWER_OFF_LONG_TIME: 0x64]
+Cache Size [CACHE_SIZE] is 128 KiB
+Background operations status [BKOPS_STATUS: 0x00]
+1st Initialisation Time after programmed sector [INI_TIMEOUT_AP: 0x0a]
+Power class for 52MHz, DDR at 3.6V [PWR_CL_DDR_52_360: 0x00]
+Power class for 52MHz, DDR at 1.95V [PWR_CL_DDR_52_195: 0x00]
+Power class for 200MHz at 3.6V [PWR_CL_200_360: 0x00]
+Power class for 200MHz, at 1.95V [PWR_CL_200_195: 0x00]
+Minimum Performance for 8bit at 52MHz in DDR mode:
+ [MIN_PERF_DDR_W_8_52: 0x00]
+ [MIN_PERF_DDR_R_8_52: 0x00]
+TRIM Multiplier [TRIM_MULT: 0x02]
+Secure Feature support [SEC_FEATURE_SUPPORT: 0x55]
+Boot Information [BOOT_INFO: 0x07]
+ Device supports alternative boot method
+ Device supports dual data rate during boot
+ Device supports high speed timing during boot
+Boot partition size [BOOT_SIZE_MULTI: 0x20]
+Access size [ACC_SIZE: 0x06]
+High-capacity erase unit size [HC_ERASE_GRP_SIZE: 0x01]
+ i.e. 512 KiB
+High-capacity erase timeout [ERASE_TIMEOUT_MULT: 0x02]
+Reliable write sector count [REL_WR_SEC_C: 0x01]
+High-capacity W protect group size [HC_WP_GRP_SIZE: 0x20]
+ i.e. 16384 KiB
+Sleep current (VCC) [S_C_VCC: 0x07]
+Sleep current (VCCQ) [S_C_VCCQ: 0x07]
+Sleep/awake timeout [S_A_TIMEOUT: 0x12]
+Sector Count [SEC_COUNT: 0x1d200000]
+ Device is block-addressed
+Minimum Write Performance for 8bit:
+ [MIN_PERF_W_8_52: 0x00]
+ [MIN_PERF_R_8_52: 0x00]
+ [MIN_PERF_W_8_26_4_52: 0x00]
+ [MIN_PERF_R_8_26_4_52: 0x00]
+Minimum Write Performance for 4bit:
+ [MIN_PERF_W_4_26: 0x00]
+ [MIN_PERF_R_4_26: 0x00]
+Power classes registers:
+ [PWR_CL_26_360: 0x00]
+ [PWR_CL_52_360: 0x00]
+ [PWR_CL_26_195: 0x00]
+ [PWR_CL_52_195: 0x00]
+Partition switching timing [PARTITION_SWITCH_TIME: 0x04]
+Out-of-interrupt busy timing [OUT_OF_INTERRUPT_TIME: 0x0a]
+I/O Driver Strength [DRIVER_STRENGTH: 0x1f]
+Card Type [CARD_TYPE: 0x57]
+ HS400 Dual Data Rate eMMC @200MHz 1.8VI/O
+ HS200 Single Data Rate eMMC @200MHz 1.8VI/O
+ HS Dual Data Rate eMMC @52MHz 1.8V or 3VI/O
+ HS eMMC @52MHz - at rated device voltage(s)
+ HS eMMC @26MHz - at rated device voltage(s)
+CSD structure version [CSD_STRUCTURE: 0x02]
+Command set [CMD_SET: 0x00]
+Command set revision [CMD_SET_REV: 0x00]
+Power class [POWER_CLASS: 0x00]
+High-speed interface timing [HS_TIMING: 0x03]
+Enhanced Strobe mode [STROBE_SUPPORT: 0x01]
+Erased memory content [ERASED_MEM_CONT: 0x00]
+Boot configuration bytes [PARTITION_CONFIG: 0x00]
+ Not boot enable
+ No access to boot partition
+Boot config protection [BOOT_CONFIG_PROT: 0x00]
+Boot bus Conditions [BOOT_BUS_CONDITIONS: 0x00]
+High-density erase group definition [ERASE_GROUP_DEF: 0x01]
+Boot write protection status registers [BOOT_WP_STATUS]: 0x00
+Boot Area Write protection [BOOT_WP]: 0x00
+ Power ro locking: possible
+ Permanent ro locking: possible
+ partition 0 ro lock status: not locked
+ partition 1 ro lock status: not locked
+User area write protection register [USER_WP]: 0x00
+FW configuration [FW_CONFIG]: 0x00
+RPMB Size [RPMB_SIZE_MULT]: 0x20
+Write reliability setting register [WR_REL_SET]: 0x1f
+ user area: the device protects existing data if a power failure occurs during a write operation
+ partition 1: the device protects existing data if a power failure occurs during a write operation
+ partition 2: the device protects existing data if a power failure occurs during a write operation
+ partition 3: the device protects existing data if a power failure occurs during a write operation
+ partition 4: the device protects existing data if a power failure occurs during a write operation
+Write reliability parameter register [WR_REL_PARAM]: 0x15
+ Device supports writing EXT_CSD_WR_REL_SET
+ Device supports the enhanced def. of reliable write
+Enable background operations handshake [BKOPS_EN]: 0x02
+H/W reset function [RST_N_FUNCTION]: 0x00
+HPI management [HPI_MGMT]: 0x01
+Partitioning Support [PARTITIONING_SUPPORT]: 0x07
+ Device support partitioning feature
+ Device can have enhanced tech.
+Max Enhanced Area Size [MAX_ENH_SIZE_MULT]: 0x00136a
+ i.e. 81428480 KiB
+Partitions attribute [PARTITIONS_ATTRIBUTE]: 0x00
+Partitioning Setting [PARTITION_SETTING_COMPLETED]: 0x00
+ Device partition setting NOT complete
+General Purpose Partition Size
+ [GP_SIZE_MULT_4]: 0x000000
+ [GP_SIZE_MULT_3]: 0x000000
+ [GP_SIZE_MULT_2]: 0x000000
+ [GP_SIZE_MULT_1]: 0x000000
+Enhanced User Data Area Size [ENH_SIZE_MULT]: 0x000000
+ i.e. 0 KiB
+Enhanced User Data Start Address [ENH_START_ADDR]: 0x00000000
+ i.e. 0 bytes offset
+Bad Block Management mode [SEC_BAD_BLK_MGMNT]: 0x00
+Periodic Wake-up [PERIODIC_WAKEUP]: 0x00
+Program CID/CSD in DDR mode support [PROGRAM_CID_CSD_DDR_SUPPORT]: 0x01
+...
+Native sector size [NATIVE_SECTOR_SIZE]: 0x00
+Sector size emulation [USE_NATIVE_SECTOR]: 0x00
+Sector size [DATA_SECTOR_SIZE]: 0x00
+1st initialization after disabling sector size emulation [INI_TIMEOUT_EMU]: 0x0a
+Class 6 commands control [CLASS_6_CTRL]: 0x00
+Number of addressed group to be Released[DYNCAP_NEEDED]: 0x00
+Exception events control [EXCEPTION_EVENTS_CTRL]: 0x0000
+Exception events status[EXCEPTION_EVENTS_STATUS]: 0x0000
+Extended Partitions Attribute [EXT_PARTITIONS_ATTRIBUTE]: 0x0000
+..
+eMMC Firmware Version:
+eMMC SECURE_WP_SUPPORT: 1
+eMMC SECURE_WP_EN_STATUS: 0
+eMMC Life Time Estimation A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
+eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
+eMMC Pre EOL information [EXT_CSD_PRE_EOL_INFO]: 0x01
+Secure Removal Type [SECURE_REMOVAL_TYPE]: 0x3b
+ information is configured to be removed using a vendor defined
+ Supported Secure Removal Type:
+  information removed by an erase of the physical memory
+  information removed by an overwriting the addressed locations with a character followed by an erase
+  information removed using a vendor defined
+Command Queue Support [CMDQ_SUPPORT]: 0x01
+Command Queue Depth [CMDQ_DEPTH]: 32
+Command Enabled [CMDQ_MODE_EN]: 0x00
+Note: CMDQ_MODE_EN may not indicate the runtime CMDQ ON or OFF.
+Please check sysfs node '/sys/devices/.../mmc_host/mmcX/mmcX:XXXX/cmdq_en'
+```
+
+この中で唯一の健康関連情報は以下の通りです:
+
+```
+eMMC寿命推定A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
+eMMC寿命推定B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
+```
+
+この値は、健康のパーセンテージ範囲を示しています。
+
+値 `0x01` は、0-10% の健康状態を示します。
+値 `0x02` は11-20% の健康状態を示します。
+値 `0x03` は、健康状態が21-30%であることを示します。
+そして、そしてその第四に
+
+## 3.4 BTRFS 報告されたデータ
+
+USB、SDカード、~~~またはフロッピードライブ~を使用している場合は、残念ながら適切なレポートデータを取得することは不可能です。
+
+それがブレッドOSシステムドライブであると仮定すると、BTRFSファイルシステムでフォーマットされます。 BTRFSはすべてのエラーを収集し、完全なレポートを提示することができます。
+
+- MOUNTEDである `/dev/mmcblk0p3` を仮定すると、次を実行します。
+
+```
+sudo btrfs デバイスの統計情報 /dev/mmcblk0p3
+```
+
+返却されます:
+
+```
+[/dev/mmcblk0p3].write_io_errs 0
+[/dev/mmcblk0p3].read_io_errs 0
+[/dev/mmcblk0p3].flush_io_errs 0
+[/dev/mmcblk0p3].corruption_errs 0
+[/dev/mmcblk0p3].generation_errs 0
+```
+
+これらの値のいずれかが非ゼロの場合、メディアは **SIGNIFICANTLY** 劣化します。
+
+## 3.5 ドライブを交換する必要がありますか?
+
+わずか数(<5)のセクタが移転されている場合、または半分以下のスペアフラッシュが利用可能である場合。 しばらくディスクを使い続けても大丈夫だろう。
 
 しかし、スペアフラッシュを燃やしたり、数十のセクタを急速に移動させたりすることは、しかし差し迫った失敗の兆候である。
 
-スペアフラッシュやセクタが不足すると、システムのパフォーマンスは急速に低下し、BTRFSのようなファイルシステムはロックアップされます。 書き込みを拒否してディスクが壊れないようにする
+スペアフラッシュやセクタが不足すると、システムのパフォーマンスは急速に低下し、BTRFSのようなファイルシステムはロックアップされます。 書き込みの拒否ディスクの破損を拒否する
 
 

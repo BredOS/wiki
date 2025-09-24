@@ -2,7 +2,7 @@
 title: Bluetooth Fix (ITX-3588J)
 description:
 published: true
-date: 2025-09-18T09:42:49.964Z
+date: 2025-09-17T08:30:12.200Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-14T11:10:38.109Z
 
 # 1. Install r58x-post-install
 
-For now you have to replace a package with another one. This will not alter any behavior of the itx-3588j but adds a service which will fix bluetooth at boottime.
+For now you have to replace a package with another one. This will not alter any behavouir of the itx-3588j but adds a service which will fix bluetooth at boottime.
 
 - First remove `itx-3588j-post-install`. This packages sets a needed parameter to work around a standby issue. Fear not we will fix this again.
 
@@ -18,7 +18,7 @@ For now you have to replace a package with another one. This will not alter any 
 sudo pacman -R itx-3588j-post-install
 ```
 
-- After that, install `r58x-post-install`. This package provides the same fix for standby as mentioned above and includes the service `bluetooth-mekotronics`.
+- After that install `r58x-post-install`. This package provides the same fix for standby as mentioned above and includes the service bluetooth-mekotronics.
 
 ```
 sudo pacman -S r58x-post-install
@@ -26,9 +26,9 @@ sudo pacman -S r58x-post-install
 
 # 2. Set correct UART path
 
-The Bluetooth adapter is not connected to `/dev/ttyS9` (as it is with other RK3588 single-board computers), but to `/dev/ttyS6`.
+The Bluetooth adapter is not attached to /dev/ttyS6 (like on the other RK3588 SBCs), but to /dev/ttyS9.
 
-- You need to modify the path in the file `/usr/bin/bluetooth-fix`.
+- You need to modify the path in the file /usr/bin/bluetooth-fix.
 
 ```
 sudo nano /usr/bin/bluetooth-fix
@@ -57,7 +57,7 @@ brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download --tosleep
 
 # 3. Enable bluetooth service
 
-- At last we need to enable the service `bluetooth-mekotronics`.
+- At last we need to enable the service `bluetooth-mekotronics`
 
 ```
 sudo systemctl --now enable bluetooth-mekotronics

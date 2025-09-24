@@ -2,7 +2,7 @@
 title: Radxa Orion系列
 description:
 published: false
-date: 2025-09-17T00：28：55.869Z
+date: 2025-09-17T00：08：50.283Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T00：08：50.283Z
@@ -43,7 +43,7 @@ PCI:
 | 后端音频                    | 断开  | 没有驱动程序                                                          |
 | RTC                     | 工作  | 没有驱动程序                                                          |
 | UART                    | 工作  | 开机时`ttyS2`                                                      |
-| PCIe                    | 部分的 | 适合大多数设备，但某些GPU无法正常工作。 <br> 有时冻结整个系统                             |
+| PCIe                    | 部分的 | 适合大多数设备，但某些GPU无法正常工作。 <br> 有时冻结整个系统 <br> 有时冻结整个系统               |
 | M.2 E 键 | 工作  |                                                                 |
 | M.2M 键  | 工作  |                                                                 |
 | 风扇控制                    | 工作  | 自动粉丝控制，不能控制操作系统                                                 |

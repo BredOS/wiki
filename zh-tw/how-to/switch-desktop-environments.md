@@ -2,7 +2,7 @@
 title: Switch Desktop Environments on BredOS
 description: Learn how to install and switch to the GNOME desktop environment on BredOS
 published: true
-date: 2025-09-18T07:46:58.501Z
+date: 2025-09-17T10:31:38.154Z
 tags: customization
 editor: markdown
 dateCreated: 2025-02-23T15:13:50.035Z
@@ -13,6 +13,7 @@ dateCreated: 2025-02-23T15:13:50.035Z
 ## 1.1 Install Gnome
 
 The GNOME desktop environment can be installed with the package `gnome`.\
+To install it, run:\
 To install it, run:
 
 - To install it, run:
@@ -23,9 +24,10 @@ pacman -S gnome
 
 Additional gnome packages can be installed with `gnome-circle` which contains various extra applications extending the GNOME ecosystem and `gnome-extra` which contains development tools as well as some further applications and games that fits well into GNOME.
 
-## 1.2 Switch to GDM
+## 🔄 1.2. Switch to GDM
 
 For proper operation, you need to switch to **GDM** after installation.\
+Run the following commands:\
 Run the following commands:
 
 - Run the following commands:
@@ -38,11 +40,11 @@ sudo systemctl enable gdm
 > 📝 **Note:** Only GNOME on Wayland is supported.
 > {.is-warning}
 
-## 1.3 Screen Rotation Fix
+## 🔄 🖥️ 1.3. Screen Rotation Fix
 
 **If** your screen rotates incorrectly, you can install and configure the **Screen Rotate** extension.
 
-### 1.3.1 Install Extension Manager
+### 1️⃣ 1.3.1 Install Extension Manager
 
 - Run:
 
@@ -52,23 +54,23 @@ sudo pacman -S extension-manager
 
 Once installed, open the application.
 
-### 1.3.2 Install Screen Rotate
+### 2️⃣ 1.3.2 Install Screen Rotate
 
 Inside the application:
 
 - Tap `Browse` > `Search`
-- Type "Screen Rotate"
+- Type **Screen Rotate**
 - Install `Screen Rotate` by **shyzus**.
 
-### 1.3.3 Configure Screen Rotate
+### 3️⃣ 1.3.3 Configure Screen Rotate
 
 - Go to the `Installed` tab in Extension Manager.
-- Tap the gears icon to open the extension settings.
-- Increase the "Set orientation offset" value to `1`.
+- Tap the ⚙️ icon to open the extension settings.
+- Increase the **Set orientation offset** value to `1`.
 
 ## 1.4 Landscape stylus usage
 
-If your device supports a stylus, it will only point correctly when the screen is rotated vertically by default.
+The stylus will only point correctly when the screen is rotated vertically by default.
 To set this to instead work horizontally follow these steps.
 
 ### 1.4.1 Edit udev rule
@@ -89,11 +91,12 @@ SUBSYSTEM=="input", ENV{ID_INPUT_TABLET}=="1", ENV{LIBINPUT_CALIBRATION_MATRIX}=
 
 Then press Ctrl + S to save and Ctrl + X to quit.
 
-# 2. Plasma Desktop on BredOS
+# 2. KDE Plasma
 
-## 2.1 Install KDE Plasma
+## 🎨 2.1. Plasma Desktop on BredOS
 
 The Plasma desktop environment can be installed with the package `plasma-desktop`.\
+To install it, run:\
 To install it, run:
 
 - To install it, run:

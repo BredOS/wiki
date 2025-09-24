@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description:
 published: true
-date: 2025-09-21T10:44:36.693Z
+date: 2025-09-20T10:28:27.806Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:04:34.142Z
@@ -10,10 +10,10 @@ dateCreated: 2025-09-17T06:04:34.142Z
 
 # 1. Introducción
 
-Orion O6 es una placa ARM64 con formato ITX con grandes especificaciones:
+El Radxa Orion O6 es una placa madre de Minialising ITX alimentada por el Cix P1 (CD8180) SoC, con un núcleo de 12 ARM v9.
 
 - SoC: CIX CD8180
-- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.6GHz + 4x A52 @ 1.8GHz
+- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
 - GPU: Inmortales G720 MC10
 - NPU: 30 MES
 - Red: Ethernet 2x 5Gbit (PCIe 4.0 1x carril cada uno)
@@ -33,7 +33,7 @@ Puedes encontrar enlaces de descarga para aarch64 ISO en nuestra [página de Git
 
 Tenemos dos versiones disponibles: una basada en el núcleo 6.6 de Radxa, y la otra en la línea principal.
 La versión basada en el núcleo 6.6 tiene el nombre de "ORION" adjunto y tiene soporte para el conjunto completo de características de ese tablero.
-El núcleo principal tiene controladores faltantes. Un resumen de lo que trabaja en la línea principal y lo que no se puede encontrar en [4. Soporte en línea principal](#h-4-mainline-support).
+El núcleo principal tiene controladores faltantes. Un resumen de lo que trabaja en la línea principal y lo que no se puede encontrar en la sección `4. Soporte de línea principal`.
 
 # 3. Instalación
 
@@ -41,13 +41,13 @@ El Prion soporta la instalación de imágenes ISO genéricas, a diferencia de nu
 
 ## 3.1 Instalación ISO genérica
 
-Una guía para la instalación genérica .ISO está disponible [here](/install/Installation-with-ISO).
+Una guía para la instalación genérica .ISO está disponible [here](/en/install/Installation-with-ISO).
 
 ## 3.2 Instalación UEFI
 
-Hemos desarrollado una UEFI personalizada basada en el código fuente de Radxa. Soporta la velocidad real de la CPU a la que se vende la placa, permite controlar la velocidad de enlace de PCIe, y - lo mejor de todo - muestra el logotipo de Bred al inicio. Una lista completa de características y una guía para actualizar tu UEFI está disponible [here](/radxa-orion-o6/prion-uefi-installation).
+Hemos desarrollado una UEFI personalizada basada en el código fuente de Radxa. Soporta la velocidad real de la CPU a la que se vende la placa, permite controlar la velocidad de enlace de PCIe, y - lo mejor de todo - muestra el logotipo de Bred al inicio. Una lista completa de características y una guía para actualizar tu UEFI está disponible [here](/en/radxa-orion-o6/prion-uefi-installation).
 
-# 4. Soporte en línea principal
+# 4. PCI
 
 | `linux`                     | Estado  | Notas                                                                                                                                                                                                                        |
 | --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,22 +55,22 @@ Hemos desarrollado una UEFI personalizada basada en el código fuente de Radxa. 
 | RAM                         | Obras   |                                                                                                                                                                                                                              |
 | GPU                         | Rota    | Sin conductor                                                                                                                                                                                                                |
 | NPU                         | Rota    | Sin conductor                                                                                                                                                                                                                |
-| Codificar HW                | Rota    | Sin conductor                                                                                                                                                                                                                |
 | Decodificar HW              | Rota    | Sin conductor                                                                                                                                                                                                                |
+| Codificar HW                | Rota    | Sin conductor                                                                                                                                                                                                                |
 | HDMI                        | Parcial | EFI FB funciona parcialmente (1080P@60Hz en la mayoría de los monitores)                                                                                                                     |
 | DP                          | Parcial | Igual que arriba                                                                                                                                                                                                             |
 | DP USB-C                    | Parcial | Igual que arriba                                                                                                                                                                                                             |
 | Almacenamiento              | Obras   | SSDs M.2 como se esperaba                                                                                                                                                                                    |
 | Ethernet                    | Obras   |                                                                                                                                                                                                                              |
-| USB frontal                 | Obras   | Muerte aleatoriamente, necesita un bifurcador BredOS personalizado para funcionar                                                                                                                                            |
-| Ejecutar USB                | Obras   | Muere al azar                                                                                                                                                                                                                |
-| Audio frontal               | Rota    | Sin conductor                                                                                                                                                                                                                |
+| Ejecutar USB                | Obras   | Al azar muere, necesita bifurcación BredOS personalizada de Radxa bios                                                                                                                                                       |
+| USB frontal                 | Obras   | Muere al azar                                                                                                                                                                                                                |
 | Audio de Rear               | Rota    | Sin conductor                                                                                                                                                                                                                |
+| Audio frontal               | Rota    | Sin conductor                                                                                                                                                                                                                |
 | RTC                         | Obras   | Sin conductor                                                                                                                                                                                                                |
-| UART                        | Obras   | `/dev/ttyS2` al arrancar                                                                                                                                                                                                     |
+| UART                        | Obras   | `ttyS2` al arrancar                                                                                                                                                                                                          |
 | PCI                         | Parcial | Funciona bien en la mayoría de los dispositivos pero algunos GPU no funcionan como se esperaba. <br> congela todo el sistema a veces. Considere el uso de nuestra biografía. |
-| Llave M.2 E | Obras   |                                                                                                                                                                                                                              |
 | Llave M.2 M | Obras   |                                                                                                                                                                                                                              |
+| Llave M.2 E | Obras   |                                                                                                                                                                                                                              |
 | Control de ventilador       | Obras   | Control de ventilador automático, no hay forma de controlar desde el sistema operativo                                                                                                                                       |
 
 # 5. PCI

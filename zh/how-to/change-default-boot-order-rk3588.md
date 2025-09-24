@@ -1,8 +1,8 @@
 ---
-title: 更改RK3588 上的启动订单
+title: 如何更改RK3588 上的默认启动顺序
 description: 学习如何使用 UEFI 固件设置更改基于RK3588的设备上的默认启动订单
 published: true
-date: 2025-09-16T10:42:14.944Z
+date: 2025-09-15T11：15：39.364Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:45:23.760Z
@@ -23,7 +23,8 @@ dateCreated: 2025-02-23T15:45:23.760Z
 
 ## 2.2 导航到启动订单设置
 
-- 使用箭头键(`ODS` 和 `did `) 选择`启动维护管理器` 并按 `Enter`。
+- 使用箭头键(`ODS` 和 `did `) 选择`启动维护管理器` 并按 `Enter`。\
+  ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
 ![bredos_boot2.jpg](/boot_images/bredos_boot2.jpg)
 
@@ -42,7 +43,8 @@ dateCreated: 2025-02-23T15:45:23.760Z
 ![bredos_boot5.jpg](/boot_images/bredos_boot5.jpg)
 
 - 使用下箭头(“ODS”) 滚动到列表底部。
-- 选择您想要移动到顶部的条目，然后按下 "+" 键到达顶部。
+- 选择您想要移动到顶部的条目，然后按下 "+" 键到达顶部。\
+  ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
 ![bredos_boot6.jpg](/boot_images/bredos_boot6.jpg)
 
@@ -56,6 +58,7 @@ dateCreated: 2025-02-23T15:45:23.760Z
 
 - 退出菜单并重启设备以应用新的引导顺序。
 
-> 完成！ 您的设备现在将使用新的订单启动。
+> 完成！ 完成！ 您的设备现在将使用新的订单启动。
+> {.is-success}
 > {.is-success}
 

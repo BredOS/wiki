@@ -2,7 +2,7 @@
 title: Serie Roca 5
 description:
 published: true
-date: 2025-09-21T10:01:36.937Z
+date: 2025-09-17T09:37:33.486Z
 tags:
 editor: markdown
 dateCreated: 2024-21T09:12:56.606Z
@@ -24,7 +24,7 @@ dateCreated: 2024-21T09:12:56.606Z
 
 ### Tabset {.tabset}
 
-#### Roca 5B Plus
+#### Soportado
 
 > Lo apodamos "_BP_" porque la compañía petrolera.
 > {.is-info}

@@ -2,7 +2,7 @@
 title: BredOS-Chroot utility
 description: Una simple herramienta para montar y hacer chroot en una instalación BredOS desde un sistema secundario
 published: true
-date: 2025-09-15T08:59:26.820Z
+date: 2025-09-15T06:05:42.545Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T17:48:24.068Z
@@ -12,7 +12,7 @@ dateCreated: 2025-05-07T17:48:24.068Z
 
 ## 1. Instalación
 
-- `bredos-chroot` está disponible como parte del paquete `bredos-tools`. Por defecto esto debe ser instalado. Si no lo instala con
+- Disponible como parte del paquete `bredos-tools`. Por defecto esto debe ser instalado. Si no lo instala con
 
 ```
 sudo pacman -S bredos-tools

@@ -2,7 +2,7 @@
 title: デバイスツリー
 description:
 published: true
-date: 2025-09-17T09:59:24.978Z
+date: 2025-05-15T12:51:43.781Z
 tags:
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
@@ -18,17 +18,17 @@ ACPIテーブルがハードウェアの自動検出と構成を可能にするx
 ACPIテーブルがハードウェアの自動検出と構成を可能にするx86システムとは異なります。 ほとんどのARMシステムでは、ハードウェアの変更を宣言するためにデバイスツリーを変更する必要があります。
 ACPIテーブルがハードウェアの自動検出と構成を可能にするx86システムとは異なります。 ほとんどのARMシステムでは、ハードウェアの変更を宣言するためにデバイスツリーを変更する必要があります。
 
-# 2. デバイスツリーの切り替え
+# 2. デバイスツリー
 
-## 2.1 UEFIおよびGrab システムにおけるデバイスツリーの切り替え
+## UEFIおよびGrab システムでのデバイスツリーの切り替え
 
-grub 設定ファイル `/etc/default/grub` を開きます。
+Edit the extlinux configuration file `/boot/extlinux/extlinux.conf`, find the line with `fdt`, for example:
 
 - grub 設定ファイル `/etc/default/grub` を開きます。
   `GRUB_DTB=`で始まる行を探し、デバイスのツリーファイルへのパスを追加します。例:
 
 ```bash
-GRUB_DTB= dtbs/rockchip/<your device tree here>.dtb
+GRUB_DTB= dtbs/rockchip/xxx.dtb
 ```
 
 - 次に、grub の設定を更新します。
@@ -39,16 +39,18 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 > DTBは1つしか指定できません。
 > {.is-info}
+> {.is-info}
 
-## 2.2 extlinux を使用した U-Boot システムのデバイスツリーの更新
+## Updating Device Trees in U-Boot systems with extlinux
 
-- `/boot/extlinux/extlinux.conf` ファイルを編集します。 例えば、`fdt`の行を見つけます。
+- `/boot/extlinux/extlinux.conf` ファイルを編集します。 例えば、`fdt`の行を見つけます。 例えば、`fdt`の行を見つけます。
 
 ```bash
-fdt /dtbs/rockchip/<your device tree here>.dtb
+fdt /dtbs/rockchip/xxx.dtb
 ```
 
-次に、デバイス ツリー パスに合わせて編集します。 保存してシステムを再起動します。
+次に、デバイス ツリー パスに合わせて編集します。 保存してシステムを再起動します。 保存してシステムを再起動します。
 
 > DTBは1つしか指定できません。
+> {.is-info}
 > {.is-info}

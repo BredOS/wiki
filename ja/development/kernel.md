@@ -2,19 +2,19 @@
 title: カーネル改造中
 description:
 published: true
-date: 2025-09-17T09:55:53.063Z
+date: 2025-05-07T18:34:49.447Z
 tags:
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
 ---
 
-# 1. はじめに
+# 1. BredOS カーネルリポジトリ
 
 このガイドでは、主に RK3588 と `linux-rockchip-rkr3` カーネルに焦点を当てます。
 しかし、このガイドはほとんどが他のカーネルに引き継ぐべきです。
 しかし、このガイドはほとんどが他のカーネルに引き継ぐべきです。
 
-# 2. カーネルまたはソースコードを取得する
+# 2. BredOS kernel PKGBUILD
 
 ## 2.1 BredOS カーネルリポジトリ
 
@@ -36,19 +36,19 @@ https://github.com/BredOS/sbc-pkgbuilds
 
 ## 2.3 カーネルのビルド
 
-- ARMシステムでは、以下を使用してください。
+- ARMシステムの下で, just :
 
 ```bash
 make -j$(nproc)
 ```
 
-- x86システムでは、以下のカーネルをクロスコンパイルする必要があります。
+- x86システムでは、カーネルをクロスコンパイルする必要があります。
 
 ```bash
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ```
 
-カーネルイメージは `arch/arm64/boot/` ディレクトリにあります。
+`arch/arm64/boot/`ディレクトリに画像が表示されます。
 
 > `sbc-pkgbuilds` リポジトリ内には、 `linux-rockchip-rkr3` という名前のフォルダがあります。
 > ビルド中はカレント作業ディレクトリとして使用する必要があります。

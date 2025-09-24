@@ -2,7 +2,7 @@
 title: Orange Pi 5 Series
 description: This page contains links to useful guides/tweaks for the OPI 5 Series devices
 published: true
-date: 2025-09-21T11:49:47.836Z
+date: 2025-09-21T09:45:58.585Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z

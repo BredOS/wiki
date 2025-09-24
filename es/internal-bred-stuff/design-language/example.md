@@ -2,7 +2,7 @@
 title: Ejemplo de lenguaje de diseño
 description:
 published: false
-date: 2025-09-21T08:50:58.214Z
+date: 2025-09-16T10:03:55.829Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:22:29.068Z
@@ -10,11 +10,11 @@ dateCreated: 2025-09-16T09:22:29.068Z
 
 # 1. Introducción
 
-Siempre es bueno comenzar con una breve introducción. Se te permite ser un poco divertido aquí para obtener la atención de los lectores.
+Siempre es bueno comenzar con una breve introducción. Se te permite ser un poco divertido aquí para obtener la atención de los lectores
 
 # 2. Encabezados
 
-¿Ves lo que hice allí?
+¿Qué hice ahí?
 
 ## 2.1 Encabezados bajo encabezados
 

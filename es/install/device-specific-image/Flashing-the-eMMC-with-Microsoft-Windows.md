@@ -37,10 +37,10 @@ Con los conductores en su lugar podemos continuar con el uso de [RKDevTool](http
 
 En `RKDevTool` establece la siguiente configuración y haz clic en `RUN`:
 
-- Seleccione el archivo de cargador SPI correspondiente a su SoC.
-- Seleccione la imagen BredOS (.img) para su SBC.
-- Comprueba `Escribir por Dirección`.
-- Haga clic en `RUN` y espere hasta que el proceso termine.
+- Seleccione el archivo de cargador SPI correspondiente a su SoC
+- Seleccione la imagen BredOS (.img) para su SBC
+- Comprueba `Escribir por Dirección`
+- Haga clic en `RUN` y espere hasta que el proceso termine
 
 > Proporcionamos nuestras imágenes como archivos comprimidos .xz. ¡Necesita extraer el archivo .img que contiene antes de flashear!
 > {.is-warning}

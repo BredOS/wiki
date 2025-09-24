@@ -2,21 +2,21 @@
 title: 内核moding
 description:
 published: true
-date: 2025-09-17T09:55:53.063Z
+date: 2025-09-13T10:54:24.895Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:49:44.206Z
 ---
 
-# 1. 简介
+# 4. 重要目录
 
 本指南主要侧重于RK3588和`linux-rockchip-rkr3`内核。
 但本指南大多应传送到其他内核。
 但本指南大多应传送到其他内核。
 
-# 2. 获取内核或其源代码
+# 2. BredOS kernel PKGBUILD
 
-## 2.1 BredOS 内核仓库
+## BredOS 内核仓库
 
 BredOS stores it's `linux-rockchip` kernel fork at:
 https://github.com/BredOS/linux-bredos
@@ -32,7 +32,7 @@ https://github.com/BredOS/sbc-pkgbuild来构建和软件包
 
 ## 2.3 建造内核
 
-- 在ARM系统下，只需使用：
+- 在 ARM 系统下，仅：
 
 ```bash
 make -j$(nproc)
@@ -44,7 +44,7 @@ make -j$(nproc)
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
 ```
 
-你应该在 `arch/arm64/boot/` 目录中找到内核图像。
+您应该在 `arch/arm64/boot/` 目录中看到图像。
 
 > 在 `sbc-pkgbuilds` 里有一个名为`linux-rockchip-rkr3`的文件夹。
 > 在构建过程中，它应作为当前的工作目录。

@@ -2,7 +2,7 @@
 title: Package Managers Guide
 description: Welcome to the BredOS Package Managers guide! Here, you'll learn how to install and manage applications
 published: true
-date: 2025-09-18T07:23:26.529Z
+date: 2025-09-15T09:53:59.847Z
 tags:
 editor: markdown
 dateCreated: 2024-09-20T20:08:39.778Z
@@ -10,7 +10,7 @@ dateCreated: 2024-09-20T20:08:39.778Z
 
 # 1. 簡介
 
-Welcome to the BredOS Package Managers guide! Here, you'll learn how to install and manage applications. Get ready to take control of your system's apps!
+Welcome to the BredOS Package Managers guide! Get ready to take control of your system's apps! Get ready to take control of your system's apps!
 
 # 2. Pacman
 

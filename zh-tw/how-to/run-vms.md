@@ -1,8 +1,8 @@
 ---
-title: Run Virtual Machines on BredOS
+title: How to run Virtual Machines on BredOS
 description:
 published: true
-date: 2025-09-18T07:58:22.536Z
+date: 2025-09-17T10:43:46.119Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -87,11 +87,11 @@ virt-manager
 
 - To enable XML editing (needed later) you need to open `virt-manager`, then navigate to `Edit` then `Preferences` and `Enable XML editing`.
 
-# 4. Create a Virtual Machine
+# 4. 3.7 Create a Virtual Machine
 
-- Inside `virt-manager` click on the display icon or navigate to `File` -> `Create virtual machine` to create a new virtual machine.
+- Click on the icon to create shown on the screenshot below a new virtual machine.
 
-- Select the installation source (Local install media or Network Install).
+- Select the installation source (ISO image or network install).
 
 - If you choose local installation media, use the wizard to select your .iso file.
 
@@ -100,20 +100,20 @@ virt-manager
 > On the RK3588 you can allocate max 4 cores per vm due to the little big architecture.
 > {.is-warning}
 
-- Before you click `Finish` you need to check "**Customize configuration before install**" and edit the xml responsible for allocating cpu cores.
+- On CPUs with the little.big architecture like the RK3588 you need to check "Customize configuration before install" and edit the xml responsible for allocating cpu cores.
 
 - Click `Finish`
 
-A new window opens, allowing you to edit the settings of your virtual machine before creating it. Open the CPUs configuration and then the XML tab.
+A new window opens, allowing you to edit the settings of your virtual machine before creating it.- Open the CPUs configuration and then the XML tab Open the CPUs configuration and then the XML tab
 
-- Locate `<vcpu>XYZ</vcpu>` and replace it with:
+- Locate `<vcpu>XYZ</vcpu>` and replace it with
 
 ```xml
 <vcpu placement='static' cpuset='0-1'>2</vcpu>
 ```
 
-> Where `cpu set` is, the cores you may want to use are 0-3 (the E cores) on the RK3588, or 4-7 for the performance cores.
-> In the example above, the VM will have 2 cores, which are efficiency cores (cores 1 and 2 on the die itself).
+> Where `cpu set` is the cores you want to use 0-3 are the E cores on the rk3588 and 4-7 are the performance cores and the number of cores.
+> In the example above the vm will have 2 cores with them being efficiency cores aka cores 1 and 2 on the die itself.
 > {.is-info}
 
 - Once configured, start the VM.
@@ -121,7 +121,7 @@ A new window opens, allowing you to edit the settings of your virtual machine be
 > There we have it. Now you can run Bred inside Bred!
 > {.is-success}
 
-# 5. Additional Configuration
+# 5. 3.8 Additional Configuration
 
 - To manage VMs via command line, you can use `virsh`:
 

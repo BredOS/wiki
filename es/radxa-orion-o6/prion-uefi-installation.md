@@ -2,7 +2,7 @@
 title: Actualizando UEFI en Orion O6
 description:
 published: true
-date: 2025-09-22T06:26:53.479Z
+date: 2025-09-21T10:45:11.948Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -10,27 +10,27 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 # 1. Introducción
 
-- Esta guía te guiará a través del proceso de actualización de tu firmware `UEFI` de Radxa Orion O6 al BredOS.
+- Esta guía te guiará a través del proceso de actualización de tu firmware `UEFI` de Radxa Orion O6 a BredOS.
 
 ![radxa-bios.png](/orion/radxa-bios.png)
 
 # 2. Características
 
-- Puerto USB del panel frontal fijado.
-- La velocidad de la CPU está arreglada para funcionar realmente con 2.6GHz.
-- Correcciones ACPI.
-- Arreglo para tarjetas bluetooth/wifi.
-- M.2 ssds no desaparece al azar.
-- Corrección de resolución de `UEFI`.
+- Puerto USB frontal de panel fijo
+- La velocidad de la CPU se ha corregido para ejecutarse con 2.6GHz
+- Correcciones ACPI
+- Corregir para tarjetas bluetooth/wifi
+- Ssds de M.2 no desaparece al azar
+- Corrección de resolución de `UEFI`
 - Capacidad para reducir la velocidad de enlace de PCIe.
 
 # 3. Instalación
 
 ## 3.1 Prerrequisitos
 
-- El archivo `UEFI` installtion .zip encontrado aquí.
-- Para `3.2 in-place update` -> FAT32 formated USB Stick.
-- Para `3.3 Update through flasher` -> A CH341A based flasher.
+- El archivo .zip de instalación `UEFI`
+- Para una `3.2 actualización en su lugar` -> USB con formato FAT32
+- Para `3.3 Update through flasher` -> A CH341A based flasher
 
 Un paquete muy práctico que incluye el flasher, el clip y otros accesorios útiles puede ser pedido aquí:
 https://www.aliexpress.com/item/32263275388.html
@@ -114,11 +114,11 @@ El chip SPI en el Prion está empapado para una fácil eliminación. El socket s
 - Conecte la placa ZIF al adaptador de voltios 1.8.
 - Pin 1 está marcado con un punto en la ficha. Mientras que el puerto USB del flasheador se dirige hacia usted, el pin 1 está en el lado superior izquierdo. Refiérase a la captura de pantalla de abajo para obtener la orientación correcta:
 
-![1-8v-zif-socket-cut.jpg](/orion/1-8v-zif-socket-cut.jpg)
+![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
-- Inserte el chip en el conector ZIF.
+- Conecte la placa ZIF a su parpadeo.
 
-### 3.3.3 Flash nuevo Firmware
+### Si ve el texto "VERIFICADO", el firmware ha sido instalado correctamente.
 
 - Conecta el flasheador a tu PC y empieza a parpadear con:
 

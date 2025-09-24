@@ -1,64 +1,64 @@
 ---
-title: Use your device as a wireless hotspot
+title: How to use your device as a wireless hotspot
 description:
 published: true
-date: 2025-09-18T07:15:46.054Z
+date: 2025-09-16T10:50:45.422Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T10:33:46.772Z
 ---
 
-# 1. 簡介
+# 1. 🛠️ Prerequisites
 
 This guide will show you how to set up a Wi-Fi hotspot using NetworkManager.
 
-# 2. Prerequisites
+# 3. View Hotspot Status
 
 Before you begin, make sure you have:
 
-- A Wi-Fi adapter that supports AP (Access Point) mode
+- 📡 A Wi-Fi adapter that supports AP (Access Point) mode
 
 > Suitable devices that support AP (Access Point) mode include Rock 5C, Rock 5B+, Khadas Edge 2, Khadas Vim 4, all Mekotronics R58 devices, and the Orange Pi 5B.
 > {.is-info}
 
-# 3. 安裝
+# 4. Configure IP Forwarding
 
-## 3.1 Create a Hotspot
+## 2. Create a Hotspot
 
 You can easily create a hotspot using the NetworkManager command-line tool `nmcli`.
 
-- List your network devices to identify the Wi-Fi interface you’ll use:
+- **List your network devices** to identify the Wi-Fi interface you’ll use:
 
 ```bash
-   nmcli device status
+nmcli device status
 ```
 
-- Example output:
+- Example output
 
 ```
-	DEVICE           TYPE      STATE                   CONNECTION      
-	bridge0          bridge    connected               bridge0         
-	tailscale0       tun       connected (externally)  tailscale0      
-	lo               loopback  connected (externally)  lo              
-	br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
-	br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
-	docker0          bridge    connected (externally)  docker0         
-	virbr0           bridge    connected (externally)  virbr0          
-	enp8s0           ethernet  connected (externally)  enp8s0          
-	wlan0            wifi      disconnected            --   
+DEVICE           TYPE      STATE                   CONNECTION      
+bridge0          bridge    connected               bridge0         
+tailscale0       tun       connected (externally)  tailscale0      
+lo               loopback  connected (externally)  lo              
+br-8a9f1336b961  bridge    connected (externally)  br-8a9f1336b961 
+br-aeeaf62e2336  bridge    connected (externally)  br-aeeaf62e2336 
+docker0          bridge    connected (externally)  docker0         
+virbr0           bridge    connected (externally)  virbr0          
+enp8s0           ethernet  connected (externally)  enp8s0          
+wlan0            wifi      disconnected            --   
 ```
 
-- Create the hotspot by using the following command:
+- **Create the hotspot** by using the following command:
 
 ```bash
-   nmcli device wifi hotspot ifname <wifi_interface> ssid <MyHotspot> password <mypassword>
+nmcli device wifi hotspot ifname <wifi_interface> ssid <MyHotspot> password <mypassword>
 ```
 
-- Example output:
+- Example output
 
 ```
-  Device 'wlan0' successfully activated with '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
-  Hint: "nmcli dev wifi show-password" shows the Wi-Fi name and password.
+Device 'wlan0' successfully activated with '4d090d70-fd85-45bc-bf36-a63846f3f805'. 
+Hint: "nmcli dev wifi show-password" shows the Wi-Fi name and password.
 ```
 
 ```
@@ -66,6 +66,7 @@ Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wl
 ```
 
 > If you get the following error run the command again with sudo.
+> If you get the following error run the command again with sudo
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
 > {.is-info}
 
@@ -77,7 +78,7 @@ Replace `<wifi_interface>` with your actual interface name, like `wlp2s0` or `wl
 nmcli connection show
 ```
 
-- Example output:
+- Example output
 
 ```
 NAME                            UUID                                  TYPE       DEVICE          
@@ -92,28 +93,28 @@ virbr0                          12d1109a-64a4-4d07-b0a2-887f10145109  bridge    
 enp8s0                          184c8145-ca17-4258-b7db-7e32c298f424  ethernet   enp8s0
 ```
 
-You should see the hotspot listed under the active connections (second line in the above example).
+You should see the hotspot listed under the active connections.
 
 ## 3.3 Configure IP Forwarding
 
 To share your internet connection through the hotspot, you need to enable IP forwarding:
 
-- Enable IP forwarding:
+- **Enable IP forwarding**:
 
 ```bash
-   sudo sysctl net.ipv4.ip_forward=1
+sudo sysctl net.ipv4.ip_forward=1
 ```
 
-- Make it permanent by editing `/etc/sysctl.d/99-sysctl.conf`:
+- **Make it permanent** by editing `/etc/sysctl.d/99-sysctl.conf`:
 
 ```bash
-   sudo nano /etc/sysctl.d/99-sysctl.conf
+sudo nano /etc/sysctl.d/99-sysctl.conf
 ```
 
 - Add the following line:
 
 ```
-   net.ipv4.ip_forward=1
+net.ipv4.ip_forward=1
 ```
 
 ## 3.4 Stopping the Hotspot

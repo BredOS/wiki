@@ -1,8 +1,8 @@
 ---
 title: BredOS の設定
 description:
-published: false
-date: 2025-09-21T09:27:32.905Z
+published: true
+date: 2025-09-23T10:12:11.659Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T09:27:04.136Z
@@ -16,6 +16,7 @@ dateCreated: 2025-09-21T09:27:04.136Z
 
 > `bredos-config`ツールはデフォルトでインストールされています。
 > {.is-info}
+> {.is-info}
 
 - 削除した場合および/または再インストールしたい場合は、以下を実行してください:
 
@@ -27,7 +28,7 @@ sudo pacman -S bredos-config
 
 ## 2.1 デバイス ツリー マネージャー
 
-- このオプションは、カーネルとデバイスの相互作用を変更するために使用されるデバイス ツリーとデバイス ツリー オーバーレイを管理するのに役立ちます。 簡単な例は、Orange Pi 5 PlusのLEDを無効にするためにそれらを使用することですが、さらに詳しく調べることができます。 Follow [this article](/how-to/how-to-enable-dtbos) to learn more about it.
+- このオプションは、カーネルとデバイスの相互作用を変更するために使用されるデバイス ツリーとデバイス ツリー オーバーレイを管理するのに役立ちます。 簡単な例は、Orange Pi 5 PlusのLEDを無効にするためにそれらを使用することですが、さらに詳しく調べることができます。 Follow [this article](/how-to/how-to-enable-dtbos) to learn more about it. 簡単な例は、Orange Pi 5 PlusのLEDを無効にするためにそれらを使用することですが、さらに詳しく調べることができます。 Follow [this article](/how-to/how-to-enable-dtbos) to learn more about it.
 
 ![dtb-manager.png](/bredos-config/dtb-manager.png)
 
@@ -35,6 +36,9 @@ sudo pacman -S bredos-config
 
 > このオプションは現在構築中です！
 > {.is-warning}
+> {.is-warning}
+
+![update.png](/bredos-config/update.png)
 
 ## 2.3 システムの維持
 
@@ -50,8 +54,11 @@ sudo pacman -S bredos-config
 
 ## 2.5 移行
 
-> なぜシステム調整に統合されなかったのですか?
-> {.is-danger}
+> このオプションは現在構築中です！
+> {.is-warning}
+> {.is-warning}
+
+![migrations.png](/bredos-config/migrations.png)
 
 ## 2.6 パッケージ
 

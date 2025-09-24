@@ -1,8 +1,8 @@
 ---
-title: Ejecutar máquinas virtuales en BredOS
+title: Cómo ejecutar máquinas virtuales en BredOS
 description:
 published: true
-date: 2025-09-18T07:58:22.536Z
+date: 2025-09-17T10:43:46.119Z
 tags: vm, cómo hacer
 editor: markdown
 dateCreated: 2024-05T22:12:39.679Z
@@ -87,11 +87,11 @@ virt-manager
 
 - Para habilitar la edición XML (necesario posteriormente) necesitas abrir `virt-manager`, luego ve a `Edit` y luego a `Preferences` y `Activa la edición XML`.
 
-# 4. Crear una máquina virtual
+# 4. 3.7 Crear una máquina virtual
 
-- Dentro de `virt-manager` haga clic en el icono de visualización o vaya a `File` -> `Crear máquina virtual` para crear una nueva máquina virtual.
+- Haga clic en el icono para crear una nueva máquina virtual en la captura de pantalla.
 
-- Seleccione el origen de la instalación (Local install media o Network Install).
+- Seleccione el origen de la instalación (imagen ISO o instalación de red).
 
 - Si elige un medio de instalación local, utilice el asistente para seleccionar su archivo .is.
 
@@ -100,20 +100,20 @@ virt-manager
 > En el RK3588 puede asignar máx. 4 núcleos por vm debido a la pequeña arquitectura grande.
 > {.is-warning}
 
-- Antes de hacer clic en `Finalizar` debes comprobar "**Personalizar configuración antes de instalar**" y editar el xml responsable de asignar núcleos de la CPU.
+- arquitectura ig como el RK3588 necesita comprobar "Personalizar configuración antes de instalar" y editar el xml responsable de asignar núcleos cpu.
 
 - Haz clic en `Finalizar`
 
-Se abre una nueva ventana, que le permite editar la configuración de su máquina virtual antes de crearla. Abra la configuración de las CPUs y luego la pestaña XML.
+Se abre una nueva ventana, que le permite editar la configuración de su máquina virtual antes de crearla. Abre la configuración de las CPUs y luego la pestaña XML
 
-- Localiza `<vcpu>XYZ</vcpu>` y reemplazalo con:
+- Localiza `<vcpu>XYZ</vcpu>` y reemplazalo con
 
 ```xml
 <vcpu placement='static' cpuset='0-1'>2</vcpu>
 ```
 
-> Donde está `cpu set`, los núcleos que quieras usar son 0-3 (los núcleos E) en el RK3588, o 4-7 para los núcleos de rendimiento.
-> En el ejemplo anterior, la MV tendrá 2 núcleos, que son núcleos de eficiencia (núcleos 1 y 2 sobre el propio muelle).
+> Donde `cpu set` son los núcleos que quieres usar 0-3 son los núcleos E en el rk3588 y 4-7 son los núcleos de rendimiento y el número de núcleos.
+> En el ejemplo de arriba la vm tendrá 2 núms. con ellos es la eficiencia núm. 1 y 2 núm.
 > {.is-info}
 
 - Una vez configurado, inicie la máquina virtual.
@@ -121,7 +121,7 @@ Se abre una nueva ventana, que le permite editar la configuración de su máquin
 > Eso es lo que tenemos. ¡Ahora puedes correr Bred dentro de Bred!
 > {.is-success}
 
-# 5. Configuración adicional
+# 5. 3.8 Configuración adicional
 
 - Para administrar máquinas virtuales a través de línea de comandos, puede utilizar `virsh`:
 

@@ -2,7 +2,7 @@
 title: Rock 5 series
 description:
 published: true
-date: 2025-09-21T10:01:36.937Z
+date: 2025-09-17T09:37:33.486Z
 tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -28,6 +28,7 @@ dateCreated: 2024-09-21T09:12:56.606Z
 
 > 「_BP_」とあだ名したのは石油会社だからです
 > {.is-info}
+> {.is-info}
 
 #### Rock 5C
 
@@ -40,7 +41,7 @@ dateCreated: 2024-09-21T09:12:56.606Z
 
 # 3. 有用なリンク
 
-## 3.1 Rock 5BとRock 5B Plus用
+## Rock 5B Plus用
 
 - format@@0(/rock-5/how-to-boot-from-nvme)
 

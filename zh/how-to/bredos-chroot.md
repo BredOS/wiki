@@ -2,7 +2,7 @@
 title: BredOS-Chroot 实用程序
 description: 一个从二级系统挂载到 BredOS 安装的简单工具
 published: true
-date: 2025-09-15T08:59:26.820Z
+date: 2025-09-15T06:05:42.545Z
 tags:
 editor: markdown
 dateCreated: 2025-05-07T17:48:24.068Z
@@ -42,5 +42,6 @@ sudo bredos-chroot /dev/sdb3 /dev/sdb2
 
 > `/dev/sdb3` 是你的 BredOS 根分区，而`/dev/sdb2` 是你的 BredOS 引导分区。
 > {.is-info}
+> {.is-info}
 
-- 这将获得一个根外壳进入破损的系统，便于维修。 一旦修理完成，您只需输入 `exit` 或 Ctrl + D 键就可以关闭外壳，附加的文件系统将被卸载。
+- 这将获得一个根外壳进入破损的系统，便于维修。 这将获得一个根外壳进入破损的系统，便于维修。 一旦修理完成，您只需输入 `exit` 或 Ctrl + D 键就可以关闭外壳，附加的文件系统将被卸载。

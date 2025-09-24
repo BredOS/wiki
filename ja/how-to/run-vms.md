@@ -1,8 +1,8 @@
 ---
-title: BredOS 上で仮想マシンを実行する
+title: BredOS 上で仮想マシンを実行する方法
 description:
 published: true
-date: 2025-09-18T07:58:22.536Z
+date: 2025-09-17T10:43:46.119Z
 tags: vm, how-to
 editor: markdown
 dateCreated: 2024-10-05T22:12:39.679Z
@@ -12,27 +12,28 @@ dateCreated: 2024-10-05T22:12:39.679Z
 
 このガイドでは、BredOS の `virt-manager` を使用して仮想マシンのセットアップと管理をお手伝いします。
 
-# 2. 前提条件
+# 2. 📋 前提条件
 
 始める前に、以下のことを確認してください。
 
-- 動作中のインターネット接続
+- 動作中のインターネット接続 🌐
 - `sudo` 特権
 
 # 3. インストール
 
 ## 3.1 必要なパッケージのインストール
 
-- 開始するには、 `qemu` と `virt-manager` に必要なパッケージをインストールする必要があります。
+- まず、KVM と `virt-manager` に必要なパッケージをインストールする必要があります。
 
 ```
-sudo pacman -Syu virt-viewer qemu-base qemu-system-aarch64 edk2-aarch64 dnsmasq 
+sudo pacman -Syu
+sudo pacman -S virt-manager qemu-base qemu-system-aarch64 edk2-aarch64 dnsmasq 
 ```
 
-> `qemu`はハイパーバイザーですが、`virt-manager`はGUIベースの管理ツールです。
-> {.is-info}
+> これにより、ユーザーレベルからVMを管理できます。 これは危険なことができます!
+> {.is-warning}
 
-## 3.2 Libvirt サービスの有効化と開始
+## ステップ2：Libvirtサービスの有効化と開始 <unk>
 
 - パッケージがインストールされたら、`libvirtd` サービスを有効にして起動します。
 
@@ -46,7 +47,7 @@ sudo systemctl enable --now libvirtd
 sudo systemctl status libvirtd
 ```
 
-## 3.3 ユーザーを `libvirt` グループに追加します
+## ステップ 3: ユーザーを `libvirt` グループ 👥 に追加します。
 
 - VMを管理するためのルート権限を必要としないようにするには、ユーザーを`libvirt`グループに追加してください。
 
@@ -59,7 +60,7 @@ sudo usermod -aG libvirt $(whoami)
 
 - 自分自身をグループに追加した後、ログアウトして変更を反映させるためにログインし直します。
 
-## 3.4 ネットワークの設定
+## ステップ 4: ネットワーク設定 🌐
 
 - `virt-manager` はネットワーク管理に `dnsmasq` を使用します。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。 `virt-manager` はネットワーク管理に `dnsmasq` を使用します。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。 デフォルトのネットワーク設定で `libvirt` が設定されていることを確認してください。
 
@@ -79,18 +80,20 @@ virt-manager
 - これにより、 `virt-manager` GUIが開き、仮想マシンの作成と管理ができます。
   ![virt.jpg](/vms/virt.jpg)
 
-![virt.jpg](/vms/virt.jpg)
+![startvm.jpg](/vms/startvm.jpg)
 
 > ユーザーを `libvirt` グループに追加していない場合は、今すぐパスワードを入力する必要があります。
 > {.is-info}
+> {.is-info}
 
-## 3.6 XML 編集を有効にする
+## ステップ 6: XML 編集を有効にする
 
-- XML 編集を有効にするには、`virt-manager` を開き、 `Edit` そして `Preferences` と `Enable XML editing` に移動する必要があります。
+- XML編集を有効にするには（後で必要）`virt-manager`を開く必要があります。**Edit**から**Preferences**に行き、XML編集
+  を有効にします。[xmlediting.jpg](/vms/xmlediting.jpg)
 
-# 4. 仮想マシンを作成
+# 4. 3.7 仮想マシンを作成
 
-- `virt-manager` 内でディスプレイアイコンをクリックするか、`File` -> `Create virtual machine` に移動して新しい仮想マシンを作成します。
+- アイコンをクリックすると、新しい仮想マシンの下のスクリーンショットに表示されるようになります。
 
 - インストール元を選択します(ローカルメディアまたはネットワークインストール)。
 
@@ -100,12 +103,13 @@ virt-manager
 
 > RK3588では、小さな大きなアーキテクチャにより、vmあたり最大4コアを割り当てることができます。
 > {.is-warning}
+> {.is-warning}
 
-- `Finish`をクリックする前に、「**インストール前に設定をカスタマイズ**」にチェックを入れ、cpuコアの割り当てを担当するxmlを編集してください。
+- ほとんどとCPU上。 RK3588 のような ig アーキテクチャは、「インストールする前に設定をカスタマイズ」にチェックを入れ、cpuコアの割り当てを担当する xml を編集する必要があります。
 
 - 「終了」をクリックします
 
-新しいウィンドウが開き、仮想マシンを作成する前に設定を編集できます。 CPU構成を開き、次にXMLタブを開きます。
+新しいウィンドウが開き、仮想マシンを作成する前に設定を編集できます。 CPU構成を開き、次にXMLタブを開きます。 CPU構成を開き、XMLタブを開きます。
 
 - `<vcpu>XYZ</vcpu>`を見つけて、次の場所に置き換えます:
 
@@ -116,13 +120,15 @@ virt-manager
 > `cpuセット`がある場合、使用するコアはRK3588の0-3(Eコア)、パフォーマンスコアの場合は4-7です。
 > 上記の例では、VMは効率コア(ダイ自体のコア1と2)である2つのコアを持っています。
 > {.is-info}
+> 上記の例では、VMは効率コア(ダイ自体のコア1と2)である2つのコアを持っています。
+> {.is-info}
 
 - 設定が完了したら、VM を起動します。 🟢
 
 > これがあります Bred内でBredを実行できるようになりました！
 > {.is-success}
 
-# 5. 追加設定
+# 5. 3.8 追加設定
 
 - コマンドラインでVMを管理するには、`virsh`を使用します。
 

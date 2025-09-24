@@ -2,7 +2,7 @@
 title: Corregir Bluetooth (ITX-3588J)
 description:
 published: true
-date: 2025-09-18T09:42:49.964Z
+date: 2025-09-17T08:30:12.200Z
 tags:
 editor: markdown
 dateCreated: 2025-09-14T11:10:38.109Z
@@ -18,7 +18,7 @@ Por ahora tiene que reemplazar un paquete por otro. Esto no alterará ningún co
 sudo pacman -R itx-3588j-post-install
 ```
 
-- Después de eso, instale `r58x-post-install`. Este paquete proporciona la misma solución para el standby que se ha mencionado anteriormente e incluye el servicio `bluetooth-mekotronics`.
+- Después de eso instale `r58x-post-install`. Este paquete proporciona la misma solución para standby que la mencionada anteriormente e incluye el servicio bluetooth-mekotronics.
 
 ```
 sudo pacman -S r58x-post-install
@@ -26,9 +26,9 @@ sudo pacman -S r58x-post-install
 
 # 2. Establecer ruta de UART correcta
 
-El adaptador Bluetooth no está conectado a `/dev/ttyS9` (como es con otras computadoras de una sola placa RK3588), sino a `/dev/ttyS6`.
+El adaptador Bluetooth no está conectado a /dev/ttyS6 (como en el otro RK3588 SBCs), sino a /dev/ttyS9.
 
-- Necesitas modificar la ruta en el archivo `/usr/bin/bluetooth-fix`.
+- Necesitas modificar la ruta en el archivo /usr/bin/bluetooth-fix.
 
 ```
 sudo nano /usr/bin/bluetooth-fix
@@ -57,7 +57,7 @@ brcm_patchram_plus --enable_hci --no2bytes --use_baudrate_for_download --tosleep
 
 # 3. Habilitar servicio bluetooth
 
-- Por fin necesitamos habilitar el servicio `bluetooth-mekotronics`.
+- Por fin necesitamos habilitar el servicio `bluetooth-mekotronics`
 
 ```
 sudo systemctl --ahora habilita bluetooth-mekotronics
