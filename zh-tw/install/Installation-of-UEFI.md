@@ -2,7 +2,7 @@
 title: Installation of UEFI
 description:
 published: true
-date: 2025-09-23T09:39:06.625Z
+date: 2025-09-17T06:40:43.494Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -39,6 +39,7 @@ Download the latest release matching your device, insert a SD Card of (almost) a
 
 > If you have skipped 3.1, go back. This step is needed for flashing to the SPI chip!
 > You can remove the SD Card afterwards
+> {.is-info}
 > {.is-info}
 > {.is-info}
 
