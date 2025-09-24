@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-09-16T10:19:46.986Z
+date: 2025-09-24T12:11:51.925Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -41,6 +41,8 @@ This page contains Guides, tutorials, and tips on how to install or use certain 
 - [How to handle reported disk failures](/how-to/disk-failure)
 
 - [How to install Android Apps to BredOS](/en/how-to/waydroid)
+
+- [How to manage virtual switches](/en/how-to/open-vswitch)
 
 > Explore these guides to get the most out of BredOS!
 > {.is-info}
