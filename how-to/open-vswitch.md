@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description: 
 published: false
-date: 2025-09-24T11:30:44.331Z
+date: 2025-09-24T11:31:22.677Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -112,7 +112,7 @@ If you want to connect your vSwitch to a physical network, you must use a physic
 ```
 sudo ovs-vsctl add-port <your switch name here> enp49s0
 ```
-If you have only one physical network device or want to use it for the networking of your host device, you must assign an IP address to the vSwitch instead of the physical network device. This can be done using any tool; for example, with Network Manager's GUI or through systemd.
+If you have only one physical network device and/or want to use it for the networking of your host device, you must assign an IP address to the vSwitch instead of the physical network device. This can be done using any tool; for example, with Network Manager's GUI or through systemd.
 
 # 6. Connect two vSwitches over the Internet
 If you have two devices connected via VPN over the Internet, it is possible to connect their vSwitches. This allows devices on these vSwitches to communicate with each other without further configuration. If your vSwitch is connected to a physical switch, it is even possible to connect physical devices through that tunnel over the Internet. This can be useful for many purposes.
