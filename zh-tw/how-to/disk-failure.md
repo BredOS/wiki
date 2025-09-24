@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-23T15:57:38.497Z
+date: 2025-09-23T15:33:58.026Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -12,13 +12,13 @@ dateCreated: 2025-06-01T10:33:55.798Z
 
 This guide is a set of tips gathered from personal experiences.
 Ensure proper understanding and risk when executing any commands from this guide.
-Data loss is possible, and likely.
+Data loss is possible.
 
-> Do **NOT** trust ChatGPT or any other LLMs with recovering failed disks.
+> Do **not** trust ChatGPT or any other LLMs with recovering failed disks.
 > You will be disappointed! Making it worse is always possible.
 > {.is-danger}
 
-> Instead, you can hop on Discord, Telegram, or Email us.
+> Please reach out to us via Discord or Telegram — we're happy to help!
 > Discord: https://discord.gg/beSUnWGVH2
 > Telegram: https://t.me/+MUeb_iKsggY5YzY0
 > Email: support@bredos.org
@@ -26,10 +26,10 @@ Data loss is possible, and likely.
 
 # 2. Reported Failures
 
-The BredOS News service now will report degraded drives that are attached.
+The BredOS News service now will report failing or damaged drives that are attached and present S.M.A.R.T data.
 (This only works on drives that report S.M.A.R.T. data)
 
-If you've been linked to this from BredOS News, head to the relevant following section for your storage type.
+If you've been linked to this from BredOS News, head to the following section.
 
 # 3. S.M.A.R.T Data
 
@@ -144,7 +144,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
 Most of this data is irrelevant to drive health.
-Out of all of this, you should look for to look for:
+Out of all of this, the following data are important to look for:
 
 - `SMART overall-health self-assessment`, which should be "PASSED". If any other value is reported, the drive should be replaced with haste.
 - `Reallocated_Sector_Ct`, the number of relocated sectors, which if more than a single one indicates significant risk of cascading failure.
@@ -438,9 +438,9 @@ This will return:
 
 If any of these values is non-zero, the medium is probably **SIGNIFICANTLY** degraded.
 
-## 3.5 Should I replace the drive?
+## 3.3 Should I replace the drive?
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, it's probably fine to keep using the disk for a little while.
+If you have just a few (<5) relocated sectors, it's probably fine to keep using the disk for a little while.
 
 However burning through spare flash or rapidly relocating dozens of sectors is however a sign of imminent failure.
 
