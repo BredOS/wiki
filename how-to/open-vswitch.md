@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description: 
 published: false
-date: 2025-09-24T11:35:26.463Z
+date: 2025-09-24T11:36:04.492Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -22,7 +22,7 @@ sudo pacman -S openvswitch
 sudo systemctl enable --now ovs-vswitchd
 ```
 
-# 3. Create vSwitch
+# 3. Create a vSwitch
 OVS and its switch(es) can be managed with the tool `ovs-vsctl`.
 - To create a new switch run:
 ```
