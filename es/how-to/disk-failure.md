@@ -2,7 +2,7 @@
 title: Discos de error de Manejo
 description: Una guía sobre los datos de S.M.A.R.T y la sustitución de discos
 published: true
-date: 2025-09-23T15:33:58.026Z
+date: 2025-09-24T09:25:24.826Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -10,33 +10,34 @@ dateCreated: 2025-06-01T10:33:55.798Z
 
 # 1. DECLARACIÓN IMPORTANTE
 
-Esta guía es un conjunto de consejos recopilados a partir de experiencias personales.
-Asegurar la comprensión y el riesgo adecuados al ejecutar cualquier comando de esta guía.
-La pérdida de datos es posible.
+Esta guía es un conjunto de consejos recopilados a partir de experiencias personales. Necesitas asegurar la comprensión y el riesgo adecuados al ejecutar cualquier comando de esta guía. **La pérdida de datos es posible y probable.**
 
 > **no** confíe en ChatGPT o en cualquier otro LLMs con la recuperación de discos fallidos.
 > ¡Le decepcionará! Siempre es posible hacerlo peor.
 > {.is-danger}
 
-> En su lugar, usted puede saltar con Discord, Telegram, o por correo electrónico.
-> Discord: https://discord.gg/beSUnWGVH2
-> Telegram: https://t.me/+MUeb_iKsgY0
-> Email: support@bredos.org
-> {.is-success}
+# 2. Ayúdame
 
-# 2. Fallos reportados
+En BredOS, nos negamos a permitir la pérdida de datos de cualquier usuario. Lea este artículo cuidadosamente; si necesita más ayuda, no dude en ponerse en contacto con nosotros por nuestros canales de soporte o por correo electrónico.
+
+- [📱 Telegram](https://t.me/bredoslinux)
+- [💬 Discord](https://discord.gg/jwhxuyKXaa)
+- [Email](mailto:support@bredos.org)
+  {.links-list}
+
+# 3. Fallos reportados
 
 El servicio BredOS News informará ahora sobre unidades dañadas o defectuosas que estén adjuntas y que presenten los datos de S.M.A.R.T.
 (Esto sólo funciona en unidades que informan S.M.A.R.T. datos)
 
 Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección.
 
-# 3. Datos S.M.A.R.T
+# 4. Datos S.M.A.R.T
 
-## 3.1 Visualización de datos S.M.A.R.T (HDD)
+## 4.1 Viewing S.M.A.R.T Data (HDD)
 
-Si tiene un medio de almacenamiento diferente, diríjase a continuación a su sección relevante.
-Cada una tiene su propia sección.
+> Si tiene un medio de almacenamiento diferente, diríjase a continuación a su sección relevante.
+> {.is-info}
 
 - Asumiendo el disco duro `/dev/sda`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -143,13 +144,12 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
-La mayoría de estos datos son irrelevantes para impulsar la salud.
-De todo esto, los siguientes datos son importantes para buscar:
+La mayoría de estos datos son irrelevantes para impulsar la salud. De todo esto, los siguientes datos son importantes para buscar:
 
 - `SMART overall-health self-assessment`, que debe ser "PASSED". Si se informa de cualquier otro valor, la unidad debe ser reemplazada con prise.
 - `Reallocated_Sector_Ct`, el número de sectores reubicados, que si es más de uno solo indica un riesgo significativo de fallo en cascada.
 
-## 3.2 Ver datos de S.M.A.R.T (NVME)
+## 4.2 Viewing S.M.A.R.T Data (NVME)
 
 - Asumiendo NVME `/dev/nvme0`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -234,10 +234,10 @@ Aquí, los únicos valores importantes son:
 - `Media and Data Integrity Errors`, que indican una significativa gradación del flash.
 - `Entradas de registro de información de errores`, que generalmente indican cuántas regiones de flash han sido enmascaradas con la flash.
 
-## 3.3 Viendo salud EMMC
+## 4.3 Viewing EMMC health
 
-No ejecute esto en las tarjetas SD, las bloqueará.
-No los dañará, pero no hace nada productivo.
+> No ejecute esto en las tarjetas SD, las bloqueará. No los dañará, pero no hace nada productivo.
+> {.is-info}
 
 - Asumiendo `/dev/mmcblk0`, para ver los datos de su controlador, ejecutar:
 
@@ -245,7 +245,7 @@ No los dañará, pero no hace nada productivo.
 sudo mmc extcsd leer /dev/mmcblk0
 ```
 
-Esto devolverá muchos datos:
+- Esto devolverá muchos datos:
 
 ```
 =============================================
@@ -400,7 +400,7 @@ Note: CMDQ_MODE_EN may not indicate the runtime CMDQ ON or OFF.
 Please check sysfs node '/sys/devices/.../mmc_host/mmcX/mmcX:XXXX/cmdq_en'
 ```
 
-De todo esto, la única información relacionada con la salud es:
+- De todo esto, la única información relacionada con la salud es:
 
 ```
 Estimación de tiempo de vida de eMMC A [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_A]: 0x01
@@ -409,12 +409,12 @@ Estimación de tiempo de vida de eMMC B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x
 
 Este valor indica un rango porcentual de la salud.
 
-El valor `0x01` indica de 0-10% de salud usada.
-El valor `0x02` indica 11-20% de salud usada.
-El valor `0x03` indica 21-30% de salud usada.
-Y así sucesivamente..
+- El valor `0x01` indica de 0-10% de salud usada.
+- El valor `0x02` indica 11-20% de salud usada.
+- El valor `0x03` indica 21-30% de salud usada.
+- Y así sucesivamente..
 
-## 3.4 BTRFS reportó datos
+## 4.4 BTRFS reported data
 
 Si en su lugar estás usando un USB, una tarjeta SD ~~~o unidades disquetes~~, por desgracia es imposible obtener los datos de reportes adecuados.
 
@@ -426,7 +426,7 @@ Suponiendo que es una unidad de sistema BredOS, está formateada con el sistema 
 estadísticas del dispositivo sudo btrfs /dev/mmcblk0p3
 ```
 
-Esto regresará:
+- Esto regresará:
 
 ```
 [/dev/mmcblk0p3].write_io_errs 0
@@ -438,9 +438,9 @@ Esto regresará:
 
 Si alguno de estos valores no es cero, el medio probablemente esté **SIGNIFICANTY** degradado.
 
-## 3.3 ¿Debo reemplazar la unidad?
+## 4.5 Should I replace the drive?
 
-Si tienes sólo unos pocos sectores (<5) reubicados, probablemente esté bien seguir usando el disco durante un tiempo. También es correcto usar algunos bloques de flash nvme de sobra.
+If you have just a few (<5) relocated sectors, or less than half available spare flash, reported from `smartctl` it's probably fine to keep using the disk for a little while.
 
 Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas de sectores es sin embargo una señal de un fracaso inminente.
 
