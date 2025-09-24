@@ -32,9 +32,9 @@ El servicio BredOS News informará ahora sobre unidades dañadas o defectuosas q
 
 Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección.
 
-# 4. Datos S.M.A.R.T
+# 5. Datos S.M.A.R.T
 
-## 4.1 Viewing S.M.A.R.T Data (HDD)
+## 4.1 Visualización de datos S.M.A.R.T (HDD)
 
 > Si tiene un medio de almacenamiento diferente, diríjase a continuación a su sección relevante.
 > {.is-info}
@@ -149,7 +149,7 @@ La mayoría de estos datos son irrelevantes para impulsar la salud. De todo esto
 - `SMART overall-health self-assessment`, que debe ser "PASSED". Si se informa de cualquier otro valor, la unidad debe ser reemplazada con prise.
 - `Reallocated_Sector_Ct`, el número de sectores reubicados, que si es más de uno solo indica un riesgo significativo de fallo en cascada.
 
-## 4.2 Viewing S.M.A.R.T Data (NVME)
+## 4.2 Ver datos de S.M.A.R.T (NVME)
 
 - Asumiendo NVME `/dev/nvme0`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -234,7 +234,7 @@ Aquí, los únicos valores importantes son:
 - `Media and Data Integrity Errors`, que indican una significativa gradación del flash.
 - `Entradas de registro de información de errores`, que generalmente indican cuántas regiones de flash han sido enmascaradas con la flash.
 
-## 4.3 Viewing EMMC health
+## 4.3 Vistas de salud EMMC
 
 > No ejecute esto en las tarjetas SD, las bloqueará. No los dañará, pero no hace nada productivo.
 > {.is-info}
@@ -414,7 +414,7 @@ Este valor indica un rango porcentual de la salud.
 - El valor `0x03` indica 21-30% de salud usada.
 - Y así sucesivamente..
 
-## 4.4 BTRFS reported data
+## 4.4 BTRFS reportó datos
 
 Si en su lugar estás usando un USB, una tarjeta SD ~~~o unidades disquetes~~, por desgracia es imposible obtener los datos de reportes adecuados.
 
@@ -438,9 +438,9 @@ estadísticas del dispositivo sudo btrfs /dev/mmcblk0p3
 
 Si alguno de estos valores no es cero, el medio probablemente esté **SIGNIFICANTY** degradado.
 
-## 4.5 Should I replace the drive?
+## 4.5 ¿Debo reemplazar la unidad?
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, reported from `smartctl` it's probably fine to keep using the disk for a little while.
+Si tienes solo unos pocos (<5) sectores reubicados, o menos de la mitad de la repuesta disponible, reportado desde `smartctl` probablemente esté bien seguir usando el disco durante un rato.
 
 Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas de sectores es sin embargo una señal de un fracaso inminente.
 
