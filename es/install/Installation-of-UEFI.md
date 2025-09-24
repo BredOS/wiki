@@ -2,7 +2,7 @@
 title: Instalación de UEFI
 description:
 published: true
-date: 2025-09-23T09:39:06.625Z
+date: 2025-09-17T06:40:43.494Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -39,6 +39,7 @@ Descargue la última versión que coincida con su dispositivo, inserte una tarje
 
 > Si te has saltado 3.1, vuelve hacia atrás. ¡Este paso es necesario para flashear al chip SPI!
 > Puedes quitar la tarjeta SD después de
+> {.is-info}
 > {.is-info}
 > {.is-info}
 
