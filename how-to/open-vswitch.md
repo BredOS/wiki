@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description: 
 published: false
-date: 2025-09-24T11:34:02.952Z
+date: 2025-09-24T11:35:26.463Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -39,7 +39,7 @@ Virtual network devices can be created manually, through your hypervisor, or via
 ```
 ip a
 ```
-- With the example output down below you can see three devices:
+- With the example output down below we can see three devices:
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
