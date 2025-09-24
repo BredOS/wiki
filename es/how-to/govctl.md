@@ -90,13 +90,13 @@ Esto lo pondría en marcha en un 30 %.
 
 De forma predeterminada, cuando estén disponibles o no baterías, el sistema mantendrá el máximo rendimiento.
 
-- La bandera `-b` establece el gobernador usado cuando **NOT** conectado. Si quieres que sea `performance` mientras tu sistema está funcionando de ejecución de la batería:
+- La bandera `-b` establece el gobernador usado cuando **NOT** conectado. Si quieres que sea `conservador` mientras tu sistema está corriendo de energía:
 
 ```
 sudo govctl -g conservador
 ```
 
-- La bandera `-g` establece el gobernador usado cuando se conecta. Si quieres que sea `conservador` mientras tu sistema está corriendo de energía:
+- La bandera `-g` establece el gobernador usado cuando se conecta. Si quieres que sea `performance` mientras tu sistema está funcionando de ejecución de la batería:
 
 ```
 rendimiento sudo govctl -b
