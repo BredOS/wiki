@@ -119,9 +119,11 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses disk usage analyzer.\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
@@ -162,6 +164,8 @@ Sometimes, large files can take up space unnecessarily. Here are tools you can u
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
