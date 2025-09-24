@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description: 
 published: false
-date: 2025-09-24T11:33:07.984Z
+date: 2025-09-24T11:34:02.952Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -124,7 +124,7 @@ sudo ovs-vsctl add-port <your switch name here> vxlan0 -- set interface vxlan0 t
 
 As always, replace `<your switch name here>` with the name of your switch, and `<IP adress of other host>` with the IP address of the host with the other vSwitch. Thats it; your connected devices can now communicate safely over the Internet.
 
-> If your clients can ping each other, but further communication does not work, it's probably and MTU issue. 
+> If your clients can ping each other, but further communication does not work, it's probably an MTU issue. 
 {.is-danger}
 
 ## 6.1 Fix MTU issue
