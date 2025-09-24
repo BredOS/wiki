@@ -104,7 +104,7 @@ virt-manager
 
 - Click `Finish`
 
-A new window opens, allowing you to edit the settings of your virtual machine before creating it.- Open the CPUs configuration and then the XML tab Open the CPUs configuration and then the XML tab
+A new window opens, allowing you to edit the settings of your virtual machine before creating it.- Open the CPUs configuration and then the XML tab A new window opens, allowing you to edit the settings of your virtual machine before creating it.- Open the CPUs configuration and then the XML tab Open the CPUs configuration and then the XML tab
 
 - Locate `<vcpu>XYZ</vcpu>` and replace it with
 

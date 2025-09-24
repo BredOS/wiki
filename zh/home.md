@@ -2,21 +2,22 @@
 title: 主页
 description:
 published: true
-date: 2025-09-23T10:46:23.458Z
+date: 2025-09-23T10：13：07.518Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
 ---
 
-# 2. 概述
+# 2. 🌟 概览
 
 欢迎来到 BredOS 文档！BredOS 是一个基于 Arch 的用户友好型 Linux 发行版，专门为基于 ARM 的单板计算机（SBC）设计。
 本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。
+文档将引导您安装、配置和使用 BredOS 。 BredOS 旨在为基于 ARM 的单板计算机用户提供无缝且用户友好的体验。 通过利用 Arch Linux 的强大功能和灵活性，BredOS 提供了一个可以根据广泛用例进行自定义的强大平台。
 文档将引导您安装、配置和使用 BredOS 。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
-# 3. 功能
+# 3. 🚀 功能
 
 - 充满热情地制作-仅仅是为了你的愉快！
 - 尊敬的用户支持！ 无论你有什么样的裂痕或整个面包！
@@ -30,24 +31,24 @@ dateCreated: 2024-07-19T14:28:40.812Z
 - Bed-配置 - [就像皮-config，但是有更好的味道！](/bredos-config)
 - Govctl - [控制您的 CPU](/how-to/govctl) ！
 
-# 🔁 3. 系统要求
+# 🔁 3. 🛠️ 系统要求
 
 我们支持一系列广泛的设备——从振奋人心的ARM系统和实验性RISC-V安装到普通的lame x86整数/amd 板上。 我们已经覆盖了您，您是否使用了我们的 [主线。 如此安装](/install/Installation-with-ISO) 或指向我们[支持的设备表](/table-of-supported-devices) 上我们热切支持的设备列表。 We've got you covered, whether you use our [mainline .iso installation](/en/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/en/table-of-supported-devices).
 
 ## 3.1 最低限度制度要求
 
-- 最小内存: 2 GB
-- Storage: 8 GB microSD card or larger
-
-# 🔄 3. 安装
-
-我们的朋友[**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) 制作了一个关于BredOS的YouTube视频。 在这里查看： 在这里查看：
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+- **🧠 最小内存**：2 GB
+- **💾 存储**：16 GB 或更大的 microSD 卡
 
 # 🚀 4. 刷入
 
-为了便于您安装，我们为您铺设了一条线路，让您跟随。 🍞 🔸🔸🔸 🍞 🔸🔸🔸
+我们的朋友[**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) 制作了一个关于BredOS的YouTube视频。 在这里查看： 在这里查看： 在这里查看：
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# 🔄 3. 安装
+
+为了便于您安装，我们为您铺设了一条线路，让您跟随。 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸
 
 > 如果你发现面包裹破损：small_orange_diamond：在我们的社区频道上让我们头部跳过。
 > {.is-info}
@@ -74,26 +75,26 @@ If your device isn’t listed on our [download site](https://bredos.org/download
 
 查看此页面导航栏中的设备页面来查找您设备特有的问题。 如果您的问题没有列出在这里，请随时通过[我们的支持频道](#h-7-community-and-support)直接联系我们。
 
-# 4. 社区与支持
+# 4. 🌐 社区和支持
 
 加入 BredOS 社区，获取支持、分享想法并为项目做出贡献：
 
-- [Telegram](https://t.me/bredoslinux)
-- [Discord](https://discord.gg/jwhuyKXaa)
+- [📱 Telegram](https://t.me/bredoslinux)
+- [💬 Discord](https://discord.gg/jwhuyKXaa)
 - [GitHub](http://github.com/BredOS)
   {.links-list}
 
-# 8. 贡献
+# 8. 🤝 贡献
 
 BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献：
 
-- 报告错误和问题
-- 提交补丁和改进
-- 编写和改进文档
-- 在社区论坛和聊天中帮助其他用户
+- 🐛 报告错误和问题
+- 💻 提交补丁和改进
+- 📄 编写并改进文档
+- 🧑‍🤝‍🧑 帮助其他用户在社区论坛和聊天
 
 # 9. 主播活动
 
 现在，RK3588设备的 BredOS 图像依赖结壳Rockchip BSP 内核——一个小屋。 管道录制的代码库很难维护、不安全，并且总是落后于上游Linux。
 
-[我们想要更改那些](/campaigns/mainline-campaign)。
+[我们想要更改那些](/en/internal-bred-stuff/mainline-campaign)。

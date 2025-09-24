@@ -2,44 +2,44 @@
 title: BredOS Wiki
 description:
 published: false
-date: 2025-09-23T09:33:05.783Z
+date: 2025-09-23T09:15:42.581Z
 tags:
 editor: markdown
 dateCreated: 2025-09-19T15:05:44.344Z
 ---
 
-# 1. 概述
+# 1. 簡介
 
-歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).\
+歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).\
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg)
 
-# 2. 功能
+# 3. 功能
 
 - Made with passion - just for your enjoyment!
-- User support with great respect! No matter if you are a little crumb or an entire flatbread!
+- User support with great respect! No matter if you are a crumb or a flatbread!
 - Simple and plain by design! No bloat, ensuring a lightweight and responsive system!
-- Arch-based - with customization tailored to be polished and easy to use.
+- Arch-based - with customization tailored for your enjoyment.
 
-## 2.1 Featured tools
+## 3.1 Featured tools
 
 - Bakery - [your guide to your own Bred](/install/first-setup)!
 - Bred-Tools - [the swiss knife at your hand](/Tools)!
 - Bred-Config - [like raspi-config, but with better taste!](/bredos-config)
 - Govctl - [take control of your CPU](/how-to/govctl)!
 
-# 3. 系統要求
+# 4. 系統要求
 
 We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/en/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/en/table-of-supported-devices).
 
-## 3.1 Minimal System Requirements
+## 4.1 Minimal System Requirements
 
 - Minimum RAM: 2 GB
 - Storage: 8 GB microSD card or larger
 
-# 4. 安裝
+# 4. 故障排除
 
 Our friend **DroidMaster** made a YouTube video about BredOS. Check it out here:
 
@@ -54,7 +54,7 @@ To make installation easy for you, we laid out a line of bred crumbs to follow. 
 
 ## 5.1 Device specific image installation
 
-These are the boards we love the most. To install these BredOS images on them, either start with our [device specific image](/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which can be found in the navigation bar left of this.
+These are the boards we love the most. To install BredOS on them, either start with our [device specific image](/en/install/device-specific-image) installation guide, or take a glimpse to the device page at our wiki, which found in the navigation bar left of this.
 
 Visit our [download site](https://bredos.org/download.html) to find out if your device is one of them.
 
@@ -70,11 +70,11 @@ If your device isn’t listed on our [download site](https://bredos.org/download
 docker pull bredos/bredos
 ```
 
-# 5. 故障排除
+# 5. 安裝
 
 Take a look at the device pages in the navigation bar on this page to find known issues specific to your device. If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
 
-# 4. 社區與支持
+# 8. 社區與支持
 
 加入 BredOS 社區，獲取支持、分享想法並為項目做出貢獻：
 
@@ -83,9 +83,9 @@ Take a look at the device pages in the navigation bar on this page to find known
 - [GitHub](http://github.com/BredOS)
   {.grid-list}
 
-# 8. 貢獻
+# 9. 貢獻
 
-BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻：
+BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻：
 
 - 報告錯誤和問題
 - 提交補丁和改進

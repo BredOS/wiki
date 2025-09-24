@@ -55,7 +55,7 @@ startup.nsh
 VariableInfo.efi
 ```
 
-- ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 If you have trouble accessing the UEFI Settings, check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
+- ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 If you have trouble accessing the UEFI Settings, check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
 - コマンドラインインターフェースを入力するには、`Boot Manager` -> `UEFI Shell` に移動します。
 - 更新プロセスが自動的に開始されます。
 
@@ -92,7 +92,7 @@ du ./cix_flash_all.bin
 
 上の例では、ファイルサイズは `6288062` です。
 
-- チップの仕様に合わせるには、ファイルの最後に "0" を追加する必要があります。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。
+- チップの仕様に合わせるには、ファイルの最後に "0" を追加する必要があります。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。
 
 ```
 dd if=/dev/zero bs=1 count=$(((8388608 - <your file size here>)) >> ./cix_flash_all.bin

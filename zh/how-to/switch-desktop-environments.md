@@ -43,6 +43,7 @@ sudo systemctl enable gdm
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 ## 输入 **屏幕旋转**
 
@@ -75,6 +76,7 @@ sudo pacman -S extension-manager
 ## 1.4 风景风格使用
 
 如果您的设备支持风格，它只会在屏幕默认垂直旋转时正确点数。
+若要将此设置为水平工作，请按照这些步骤进行操作。
 若要将此设置为水平工作，请按照这些步骤进行操作。
 若要将此设置为水平工作，请按照这些步骤进行操作。
 
@@ -110,7 +112,7 @@ Plasma 桌面环境可以安装到软件包 "plasma-desktop"。\
 pacman -S plasma-desktop
 ```
 
-这将导致等离子体桌面安装最少。 这将导致等离子体桌面安装最少。 这将导致等离子体桌面安装最少。 若要安装更完整的 KDE 体验，请选择软件包 `plasma` (它允许您选择您想要安装的Plasma相关软件包)，或选择`plasma-meta` 以获取全部内容。 Click [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) to understand the difference between a group and a meta package.
+这将导致等离子体桌面安装最少。 这将导致等离子体桌面安装最少。 这将导致等离子体桌面安装最少。 这将导致等离子体桌面安装最少。 若要安装更完整的 KDE 体验，请选择软件包 `plasma` (它允许您选择您想要安装的Plasma相关软件包)，或选择`plasma-meta` 以获取全部内容。 Click [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) to understand the difference between a group and a meta package.
 Click [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) to understand the difference between a group and a meta package.
 
 > 避免使用 SDDM ，因为此软件已被遗弃！ 浅DM使用等离子体正常工作。

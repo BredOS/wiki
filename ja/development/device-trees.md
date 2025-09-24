@@ -40,17 +40,19 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 > DTBは1つしか指定できません。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ## Updating Device Trees in U-Boot systems with extlinux
 
-- `/boot/extlinux/extlinux.conf` ファイルを編集します。 例えば、`fdt`の行を見つけます。 例えば、`fdt`の行を見つけます。
+- Edit the extlinux configuration file `/boot/extlinux/extlinux.conf`, find the line with `fdt`, for example: 例えば、`fdt`の行を見つけます。
 
 ```bash
 fdt /dtbs/rockchip/xxx.dtb
 ```
 
-次に、デバイス ツリー パスに合わせて編集します。 保存してシステムを再起動します。 保存してシステムを再起動します。
+次に、デバイス ツリー パスに合わせて編集します。 保存してシステムを再起動します。 保存してシステムを再起動します。 保存してシステムを再起動します。
 
 > DTBは1つしか指定できません。
+> {.is-info}
 > {.is-info}
 > {.is-info}

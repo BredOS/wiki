@@ -33,6 +33,7 @@ sudo pacman -S virt-manager virt-viewer qemu-Base qemu-system-aarch64 edk2-aarch
 > 虽然`qemu`是你的超级用户，但`virt-manager`是一个基于GUI的工具来管理它。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ## 第 2 步：启用并启动 Libvirt 服务
 
@@ -58,13 +59,14 @@ sudo usermod -aG libvirt $(whoami)
 
 > 这将允许从用户层级管理虚拟机。 这可能是危险的！
 > {.is-warning} 这可能是危险的！
+> {.is-warning} 这可能是危险的！
 > {.is-warning}
 
 - 将您自己添加到群组后，注销并重新登录以使更改生效。
 
 ## 3.4 配置网络
 
-- `virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
+- `virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
 
 ```bash
 sudo virsh net-start 默认
@@ -87,10 +89,11 @@ sudo virsh net-autostart
 > 如果你还没有将你的用户添加到组 `libvirt` 中，你现在需要输入你的密码。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ## 步骤6：启用 XML 编辑
 
-- 要启用 XML 编辑 (需要稍后) ，您需要打开 `virt-manager` ，然后导航到 `Edit` 然后导航到 `Preferences` 和 \\`启用 XML 编辑'。
+- 要启用 XML 编辑 (需要稍后) ，您需要打开 `virt-manager` ，然后导航到 `Edit` 然后导航到 `Preferences` 和 \\\`启用 XML 编辑'。
 
 # 4. 3.7 创建虚拟机
 
@@ -105,6 +108,7 @@ sudo virsh net-autostart
 > 在 RK3588 上，由于小的大架构，您可以分配每vm 最多4个核。
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 - On CPUs with the little.big architecture like the RK3588 you need to check "Customize configuration before install" and edit the xml responsible for allocating cpu cores
   ![finalstep.jpg](/vms/finalstep.jpg)
@@ -116,7 +120,7 @@ sudo virsh net-autostart
 
 - 点击 `Finish`
 
-一个新窗口打开，允许您在创建之前编辑虚拟机器的设置。 打开 CPU 配置，然后打开 XML 标签。 打开 CPU 配置，然后打开 XML 标签
+一个新窗口打开，允许您在创建之前编辑虚拟机器的设置。 打开 CPU 配置，然后打开 XML 标签。 一个新窗口打开，允许您在创建之前编辑虚拟机器的设置。 打开 CPU 配置，然后打开 XML 标签。 打开 CPU 配置，然后打开 XML 标签
 
 - Locate `<vcpu>XYZ</vcpu>` and replace it with
 

@@ -29,6 +29,7 @@ dateCreated: 2024-09-21T09:12:56.606Z
 > 「_BP_」とあだ名したのは石油会社だからです
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 #### Rock 5C
 

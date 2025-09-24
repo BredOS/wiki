@@ -2,7 +2,7 @@
 title: Discos de error de Manejo
 description: Una guía sobre los datos de S.M.A.R.T y la sustitución de discos
 published: true
-date: 2025-09-23T15:57:38.497Z
+date: 2025-09-23T15:33:58.026Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -12,9 +12,9 @@ dateCreated: 2025-06-01T10:33:55.798Z
 
 Esta guía es un conjunto de consejos recopilados a partir de experiencias personales.
 Asegurar la comprensión y el riesgo adecuados al ejecutar cualquier comando de esta guía.
-La pérdida de datos es posible y probable.
+La pérdida de datos es posible.
 
-> **NO** confíe en ChatGPT o en cualquier otro LLMs con la recuperación de discos fallidos.
+> **no** confíe en ChatGPT o en cualquier otro LLMs con la recuperación de discos fallidos.
 > ¡Le decepcionará! Siempre es posible hacerlo peor.
 > {.is-danger}
 
@@ -26,10 +26,10 @@ La pérdida de datos es posible y probable.
 
 # 2. Fallos reportados
 
-El servicio BredOS News ahora reportará unidades degradadas que están adjuntas.
+El servicio BredOS News informará ahora sobre unidades dañadas o defectuosas que estén adjuntas y que presenten los datos de S.M.A.R.T.
 (Esto sólo funciona en unidades que informan S.M.A.R.T. datos)
 
-Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección correspondiente para su tipo de almacenamiento.
+Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección.
 
 # 3. Datos S.M.A.R.T
 
@@ -144,7 +144,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 ```
 
 La mayoría de estos datos son irrelevantes para impulsar la salud.
-De todo esto, debería buscar para buscar:
+De todo esto, los siguientes datos son importantes para buscar:
 
 - `SMART overall-health self-assessment`, que debe ser "PASSED". Si se informa de cualquier otro valor, la unidad debe ser reemplazada con prise.
 - `Reallocated_Sector_Ct`, el número de sectores reubicados, que si es más de uno solo indica un riesgo significativo de fallo en cascada.
@@ -438,9 +438,9 @@ Esto regresará:
 
 Si alguno de estos valores no es cero, el medio probablemente esté **SIGNIFICANTY** degradado.
 
-## 3.5 ¿Debo reemplazar la unidad?
+## 3.3 ¿Debo reemplazar la unidad?
 
-Si tienes solo unos pocos (<5) sectores reubicados, o menos de la mitad de la repuesta disponible, es probablemente bueno seguir usando el disco durante un rato.
+Si tienes sólo unos pocos sectores (<5) reubicados, probablemente esté bien seguir usando el disco durante un tiempo. También es correcto usar algunos bloques de flash nvme de sobra.
 
 Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas de sectores es sin embargo una señal de un fracaso inminente.
 

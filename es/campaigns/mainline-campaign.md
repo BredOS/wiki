@@ -2,7 +2,7 @@
 title: Campaña principal
 description:
 published: true
-date: 2025-09-23T18:06:18.145Z
+date: 2025-09-23T15:45:54.131Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -10,9 +10,9 @@ dateCreated: 2025-09-22T17:56:04.573Z
 
 # Financiar esta campaña
 
-## Soporte principal RK3588 en BredOS
+## Financiar esta campaña de características: Soporte principal RK3588 en BredOS
 
-Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado que es difícil de mantener, inseguro y siempre marca significativamente detrás de Linux.
+Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado con ductos que es difícil de mantener, inseguro y siempre señala detrás de Linux.
 
 Queremos cambiar esto.
 
@@ -20,7 +20,7 @@ Manteniendo soporte RK3588, BredOS traerá:
 
 - Mantenimiento prolongado (no más hacks de BSP)
 
-- Últimas correcciones de seguridad del núcleo
+- Correcciones de seguridad del núcleo arriba
 
 - Mejor rendimiento y estabilidad
 
@@ -30,7 +30,7 @@ Manteniendo soporte RK3588, BredOS traerá:
 
 Se trata de hacer que BredOS — y el ecosistema Linux más amplio — sea mejor para todos que usen hardware RK3588.
 
-> Nuestro objetivo con esta campaña es aumentar al menos **2500€**, para que podamos portar aproximadamente 28 tableros.
+> Nuestro objetivo con esta campaña es aumentar al menos 2500€ para que podamos puerto ~28 tableros.
 > {.is-info}
 
 ## ¿Por qué lo hacemos?
@@ -40,19 +40,19 @@ La verdad es: **solo una parte de ella es**.
 
 Mientras que gran parte del trabajo de bajo nivel (como el soporte básico del núcleo) ha llegado a la parte superior, **los elementos esenciales del día a día todavía están rotos o perdidos**:
 
-- Muchos controladores Wi-Fi/Bluetooth no funcionan
+- Muchos controladores Wi-Fi no funcionan
 - Las optimizaciones específicas del dispositivo no están cubiertas por parches genéricos de línea principal
 
 En BredOS, queremos que los dispositivos RK3588 sean **prácticos y pulidos para usuarios reales**. Eso significa:
 
 - Wi-Fi fiable y redes
-- Perfiles de ventiladores sintonizados (silenciosos cuando está inactivo, enfriando bajo carga)
+- Perfiles optimizados de ventiladores (silenciosos cuando está inactivo, enfriando bajo carga)
 - Soporte estable GPU y multimedia
-- Instalador adecuado e imágenes
+- Instalador adecuado e imágenes listas para flashear
 - Imágenes actualizadas con frecuencia
 
 Esta campaña no consiste únicamente en “hacer que arranque”.
-Se trata de hacer que los dispositivos RK3588 sean **realmente utilizables** como ordenadores de sobremesa con todas las características.
+Se trata de hacer que los dispositivos RK3588 sean **realmente utilizables**.
 
 ## Beneficios de línea principal
 

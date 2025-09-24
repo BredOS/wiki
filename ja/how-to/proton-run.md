@@ -15,7 +15,7 @@ dateCreated: 2025-05-07T14:44:47.710Z
 # 2. 要件
 
 - An RK3588 system running BredOS.
-- スチーム。 スチーム。 スチーム。 スチーム。 ([Guide here](/how-to/how-to-install-steam))
+- スチーム。 スチーム。 スチーム。 スチーム。 スチーム。 ([Guide here](/how-to/how-to-install-steam))
 
 # 3. インストール
 

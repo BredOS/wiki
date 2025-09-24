@@ -15,7 +15,7 @@ dateCreated: 2025-05-07T14：44：47.710Z
 # 1. B. 所需经费
 
 - An RK3588 system running BredOS.
-- Steam。 Steam。 Steam。 Steam。 ([Guide here](/how-to/how-to-install-steam))
+- Steam。 Steam。 Steam。 Steam。 Steam。 ([Guide here](/how-to/how-to-install-steam))
 
 # 3. 安装
 

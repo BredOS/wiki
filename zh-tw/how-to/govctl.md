@@ -90,13 +90,13 @@ This would set it to trigger at 30%.
 
 By default, when plugged in or no batteries are present, the system will maintain maximum performance.
 
-- The flag `-b` sets the governor used when **NOT** plugged in. If you want it to be `performance` while your system is running of of battery run:
+- The flag `-b` sets the governor used when **NOT** plugged in. If you want it to be `conservative` while your system is running of of power run:
 
 ```
 sudo govctl -g conservative
 ```
 
-- The flag `-g` sets the governor used when plugged in. If you want it to be `conservative` while your system is running of of power run:
+- The flag `-g` sets the governor used when plugged in. If you want it to be `performance` while your system is running of of battery run:
 
 ```
 sudo govctl -b performance
