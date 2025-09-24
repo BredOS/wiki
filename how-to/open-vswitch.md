@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description: 
 published: false
-date: 2025-09-24T11:32:34.328Z
+date: 2025-09-24T11:33:07.984Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -26,7 +26,7 @@ sudo systemctl enable --now ovs-vswitchd
 OVS and its switch(es) can be managed with the tool `ovs-vsctl`.
 - To create a new switch run:
 ```
-ovs-vsctl add-br <your switch name here>
+sudo ovs-vsctl add-br <your switch name here>
 ```
 
 Please replace `<your switch name here>` with a name of your choice.
@@ -119,7 +119,7 @@ If you have two devices connected via VPN over the Internet, it is possible to c
 
 - Run the following on both hosts:
 ```
-ovs-vsctl add-port <your switch name here> vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=<IP adress of other host>
+sudo ovs-vsctl add-port <your switch name here> vxlan0 -- set interface vxlan0 type=vxlan options:remote_ip=<IP adress of other host>
 ```
 
 As always, replace `<your switch name here>` with the name of your switch, and `<IP adress of other host>` with the IP address of the host with the other vSwitch. Thats it; your connected devices can now communicate safely over the Internet.
