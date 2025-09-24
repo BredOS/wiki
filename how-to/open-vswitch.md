@@ -1,8 +1,8 @@
 ---
 title: How to manage virtual switches
 description: 
-published: false
-date: 2025-09-24T11:40:02.738Z
+published: true
+date: 2025-09-24T12:11:02.185Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -74,7 +74,7 @@ sudo ovs-vsctl add-port <your switch name here> ve-databaselCjq tag=<your vlan i
 ```
 
 ## 4.1 Automatically through libvirt
-If you followed [this guide](/en/how-to/run-vms) to create the hypervisor stack with qemu/libvirt, you can add your newly created switch to the networks known by libvirt. This allows you to select your vSwitch in the GUI, and your VM’s virtual network device will be automatically added to that vSwitch on boot.
+If you followed [this guide](/how-to/run-vms) to create the hypervisor stack with qemu/libvirt, you can add your newly created switch to the networks known by libvirt. This allows you to select your vSwitch in the GUI, and your VM’s virtual network device will be automatically added to that vSwitch on boot.
 
 - Start `virt-manager` and right-click on `QEMU/KVM`, which is marked blue on the screenshot below. Then click on `Details`.
 
