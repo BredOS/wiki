@@ -75,6 +75,7 @@ sudo pacman -Sc
 > Pacman是管理您的 BredOS 系统的重要工具——迅速、高效和强大！
 > {.is-success}
 > {.is-success}
+> {.is-success}
 
 # 3. 平面板
 
@@ -119,6 +120,7 @@ sudo flatpak 卸载 <app name>
 > 或者，您可以使用像Pamac这样的图形商店管理Flatpak应用。 🖥️ 🖥️
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 # 4. AppImage
 
@@ -139,6 +141,7 @@ sudo pacman -S appimagelauncher
 - 选择**将应用程序集成到您的系统**或者**一次运行**。
 
 > 快乐的软件包管理！ 🎉💻 🎉💻
+> {.is-success}
 > {.is-success}
 > {.is-success}
 
