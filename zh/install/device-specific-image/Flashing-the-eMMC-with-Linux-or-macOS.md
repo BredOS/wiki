@@ -10,7 +10,7 @@ dateCreated: 2025-09-16T06:29:26.865Z
 
 # 1. 简介
 
-本指南描述如何使用 rkdeveloped tool\\` 工具刷入eMC。 它可以在 Linux 仓库中找到，也可以在 macOS 上运行。 它可以在 Linux 仓库中找到，也可以在 macOS 上运行。
+本指南描述如何使用 rkdeveloped tool\\\` 工具刷入eMC。 它可以在 Linux 仓库中找到，也可以在 macOS 上运行。 它可以在 Linux 仓库中找到，也可以在 macOS 上运行。 它可以在 Linux 仓库中找到，也可以在 macOS 上运行。
 
 要安装BredOS，需要三件事：
 
@@ -46,9 +46,9 @@ sudo dnf install rkdeveloped tools
 
 ### 2.2.1 前提条件
 
-由于没有用于 macOS 的 "rkdeveloped tool" 的二进制包，我们需要自己编译它。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。
+由于没有用于 macOS 的 "rkdeveloped tool" 的二进制包，我们需要自己编译它。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。
 
-- 安装`autocake`、`autocconf`、`libbus`、`pkg-config`、`git`和\`wget\`\\` ，具有以下命令：
+- 安装`autocake`、`autocconf`、`libbus`、`pkg-config`、`git`和\`wget\`\\\` ，具有以下命令：
 
 ```
 brew install automake autoconf libusb pkg-config git wget
@@ -97,7 +97,7 @@ cp rkdevelopmenttool/opt/homebrew/bin/
 
 ## 3.1 输入掩码
 
-要使SBC 在USB上显示为易燃设备，它需要设置为 \\`maskrom 模式'。 这可以根据您正在使用的设备来实现。 有些SBC有一个按钮，另一些则需要您短短两个粉。 请参阅贵国制造商的文件。 这可以根据您正在使用的设备来实现。 有些SBC有一个按钮，另一些则需要您短短两个粉。 请参阅贵国制造商的文件。
+要使SBC 在USB上显示为易燃设备，它需要设置为 \\\`maskrom 模式'。 这可以根据您正在使用的设备来实现。 有些SBC有一个按钮，另一些则需要您短短两个粉。 请参阅贵国制造商的文件。 这可以根据您正在使用的设备来实现。 有些SBC有一个按钮，另一些则需要您短短两个粉。 请参阅贵国制造商的文件。 这可以根据您正在使用的设备来实现。 有些SBC有一个按钮，另一些则需要您短短两个粉。 请参阅贵国制造商的文件。
 
 - 通过谷歌搜索可以轻松地找到此信息：
 
@@ -140,5 +140,6 @@ sudo rkdevelopmenttoold
 ```
 
 > 在刷入成功后，继续进行 [**First Setup**](/en/install/first-setup)。
+> {.is-success}
 > {.is-success}
 > {.is-success}
