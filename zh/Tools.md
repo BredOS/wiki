@@ -13,6 +13,7 @@ dateCreated: 2025-05-07T18:27:16.781Z
 这将作为`breddos-tools`，与任何系统架构兼容，发送到`BredOS-any`存储库中。
 它是BredOS的组成部分。 “bredos-tools”应默认安装。
 它是BredOS的组成部分。 “bredos-tools”应默认安装。
+它是BredOS的组成部分。 “bredos-tools”应默认安装。
 
 - 如果不安装它：
 
@@ -62,7 +63,14 @@ sudo grub-password -d
 > 配置保存在/etc/grub.d/99-bredos-grub-密码中。
 > 脚本通过 grub-mkconfig自动重新生成 GRUB配置。
 > 修改`/etc/grub.d/10_linux`，请不要手动恢复。
+> 配置保存在 `/etc/grub.d/99-bredos-grub-password` 中。
+> 脚本通过 `grub-mkconfig` 自动重新生成 GRUB 配置。
+> 修改 `/etc/grub.d/10_linux`，请不要手动恢复。
+> 配置保存在/etc/grub.d/99-bredos-grub-密码中。
+> 脚本通过 grub-mkconfig自动重新生成 GRUB配置。
+> 修改`/etc/grub.d/10_linux`，请不要手动恢复。
 > 这修改了 `/etc/grub.d/10_linux` ，不要手动还原它！
+> {.is-info}
 > {.is-info}
 > {.is-info}
 
@@ -81,6 +89,8 @@ yay -S dtc
 它还自动决定并生成基础设备树或叠加层。
 
 > 在您的设备上安装不正确的设备树将使它无法操作。
+> 小心，执行备份并确保一个紧急计划。
+> {.is-warning}
 > 小心，执行备份并确保一个紧急计划。
 > {.is-warning}
 > 小心，执行备份并确保一个紧急计划。
