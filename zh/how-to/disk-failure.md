@@ -37,7 +37,7 @@ BredOS 新闻服务现在将报告附加的已退化驱动程序。
 
 # 🚀 4. S.M.A.R.T 数据
 
-## 4.1 Viewing S.M.A.R.T Data (HDD)
+## 4.1 查看S.M.A.R.T Data (HDD)
 
 > 如果您有一个不同的存储介质，请在下面的头部到它的相关部分。
 > 每一个都有自己的部分。
@@ -154,7 +154,7 @@ The above only provides legacy SMART information - try 'smartctl -x' for more
 - “SMART overall health 自我评估”，应为“PASSED”。 如果报告了任何其他值，应将驱动器替换为急速。 如果报告了任何其他值，应将驱动器替换为急速。
 - `重新分配Sector_Ct`，重新安置区的数目，如果一个以上的区域显示级联失败的可能性很大。
 
-## 4.2 Viewing S.M.A.R.T Data (NVME)
+## 4.2 查看S.M.A.R.T Data (NVME)
 
 - 假设NVME `/dev/nvme0`，查看它的 S.M.A.R.T 数据，运行：
 
@@ -240,7 +240,7 @@ No Self-tests Logged
 - “介质和数据完整性错误”，表明有相当大的闪光度。
 - `错误信息记录条目`, 通常表明有多少闪光区域被掩盖了零件刷入。
 
-## 4.3 Viewing EMMC health
+## 4.3 查看EMMC的健康
 
 > 不要在SD卡上运行此操作，它会崩溃它们。
 > 它不会损害他们，但它不会做任何有益的事情。 它不会损害他们，但它不会做任何有益的事情。
@@ -424,7 +424,7 @@ eMMC Life Time Estimation B [EXT_CSD_DEVICE_LIFE_TIME_EST_TYP_B]: 0x01
 - 值`0x03`表示所使用的 21%-30%。
 - 如此是第四个...
 
-## 4.4 BTRFS reported data
+## 4.4 BTRFS 报告的数据
 
 如果你使用的 USB，SD卡 ~~或软盘驱动器 ~，很遗憾无法获得正确的报告数据。
 
@@ -448,9 +448,9 @@ sudo btrfs 设备状态 /dev/mmcblk0p3
 
 如果其中任何一个值是非零值，介质可能为 **SIGNIFICANTLY** 降解。
 
-## 4.5 Should I replace the drive?
+## 4.5 我是否应该替代驱动器？
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, reported from `smartctl` it's probably fine to keep using the disk for a little while.
+如果你只有少数(<5)搬迁区块，或不到一半可用的剩余燃油， 在 `smartctl` 中报告的信息很可能会很好地持续一段时间使用磁盘。
 
 然而，通过剩余的闪光或迅速迁移，数十个区段被烧毁是即将失败的迹象。
 
