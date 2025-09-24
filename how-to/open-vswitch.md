@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description: 
 published: false
-date: 2025-09-24T11:31:22.677Z
+date: 2025-09-24T11:32:34.328Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -17,7 +17,7 @@ Open vSwitch (OVS) is an open-source, multilayer virtual switch designed to enab
 sudo pacman -S openvswitch
 ```
 
-- After succesful installation, we need to enable and start the OVS service:
+- After successful installation, we need to enable and start the OVS service:
 ```
 sudo systemctl enable --now ovs-vswitchd
 ```
