@@ -20,17 +20,18 @@ dateCreated: 2024-11-10T18:02:07.427Z
 
 # 2. BredOS-Config
 
-- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する ツールを起動する
+- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する ツールを起動する ツールを起動する
 
 ```
 sudo bredos-config
 ```
 
-次に、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、dtb overlaysをあなたの好みに合わせて有効にします。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 変更を適用するためにシステムを再起動します。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes. 変更を適用するためにシステムを再起動します。
+次に、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、dtb overlaysをあなたの好みに合わせて有効にします。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 変更を適用するためにシステムを再起動します。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes. 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes. 変更を適用するためにシステムを再起動します。
 
-bredos-config は dtbs をインストールし、grub 設定を変更して起動時にロードすることができますが、UEFI 設定は変更できません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または`3.4 Configure UEFI`でbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。 これはユーザーが行う必要があります。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。
+bredos-config は dtbs をインストールし、grub 設定を変更して起動時にロードすることができますが、UEFI 設定は変更できません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または`3.4 Configure UEFI`でbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。 これはユーザーが行う必要があります。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。 これはユーザーが行う必要があります。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。
 
 > ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 
@@ -93,9 +94,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 🎛️ 4: UEFI の設定
 
-- UEFI搭載ボードで実行している場合は、設定する必要があります。
-  前にすでにこれを行っている場合は、手順5に進むことができます。
-  前にすでにこれを行っている場合は、手順5に進むことができます。
+- ヘルプが必要な場合は、起動順序を変更する [guide](/en/how-to/change-default-boot-order-rk3588) があります。 その最初のステップでは、UEFI設定で起動する方法を示します。
+  {.is-info} その最初のステップでは、UEFI設定で起動する方法を示します。
+  {.is-info}
 
 > ヘルプが必要な場合は、起動順序を変更する [guide](/en/how-to/change-default-boot-order-rk3588) があります。 その最初のステップでは、UEFI設定で起動する方法を示します。
 > {.is-info} その最初のステップでは、UEFI設定で起動する方法を示します。
