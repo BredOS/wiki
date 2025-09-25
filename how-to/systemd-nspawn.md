@@ -2,7 +2,7 @@
 title: Manage systemd-nspawn containers
 description: 
 published: false
-date: 2025-09-25T10:32:53.952Z
+date: 2025-09-25T10:54:42.662Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -251,4 +251,4 @@ systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bin
 ```
 
 # 6. Additional Notes
-`systemd-nspawn` is a extremly powerful tool. What we covered here are just the basics. Take a look at there [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), if you want to be amazed!
+`systemd-nspawn` is a extremly powerful tool. What we covered here are just the basics. Take a look at their [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), if you want to be amazed!
