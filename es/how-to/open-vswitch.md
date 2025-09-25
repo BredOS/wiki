@@ -2,7 +2,7 @@
 title: Cómo administrar interruptores virtuales
 description:
 published: true
-date: 2025-09-24T12:11:02.185Z
+date: 2025-09-25T06:12:54.789Z
 tags:
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.31Z
@@ -152,3 +152,18 @@ Como siempre, reemplaza `<your switch name here>` con el nombre de tu interrupto
 ## 6.1 Arreglar problema MTU
 
 El MTU define el tamaño máximo de cada paquete transferido. Mientras que los paquetes ping normalmente no se llenan hasta este máximo, la comunicación "real" lo hace. El MTU por defecto es de 1500 bytes; si envía un paquete de ese tamaño a través de un túnel, el túnel mismo necesita agregar información como direcciones de origen y destino. Esto puede exceder el MTU, causando que el paquete sea dividido, lo que puede causar problemas para las comunicaciones de sus clientes. Para arreglar esto, simplemente reduzca el MTU para sus clientes a, por ejemplo, 1200 bytes. Este ajuste puede hacerse a través de su servidor DHCP o manualmente.
+
+# 8. Comandos adicionales
+
+- Para listar todos los dispositivos conectados de su vSwitch, ejecute:
+
+```
+sudo ovs-vsctl list-ports <your switch name here> 
+```
+
+- Para desconectar un dispositivo de red, ejecute:
+
+```
+sudo ovs-vsctl del-port <your switch name here> <your adapters name here>
+```
+
