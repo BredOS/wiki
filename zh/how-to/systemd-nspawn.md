@@ -2,7 +2,7 @@
 title: 使用系统生成的容器管理
 description:
 published: false
-date: 2025-09-25T08:18:04.446Z
+date: 2025-09-25T08:57:29.846Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -48,7 +48,10 @@ mkdir 模板
 - [Arch Linux ARM](https://archlinuxarm.org/os/) 用 `latest` 和 `arch64` 或 `armv7` 标签下载.tar.gz文件。
   {.links-list}
 
-当你下载了你的rootfs tarball后，我们需要提取它。 在这个示例中，我们下载了Arch Linux ARM tarball，并稍后将其转换为 BredOS 。
+> BredOS rootfs 即将可用！
+> {.is-warning}
+
+当你下载了你的rootfs tarball后，我们需要提取它。 在此示例中，我们下载了Arch Linux ARM tarball并将其转换为BredOS。
 
 - 仍然作为根提取tarball到 `/var/lib/orges/template`：
 
@@ -126,7 +129,7 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 4. 使用虚拟网络创建容器
+# 4. 使用虚拟网络运行容器
 
 我们在第2节中创建的容器。 创建容器模板](#h-3-create-container-template) 使用了您的主机系统网络。 如果您喜欢在容器上安装虚拟网络设备，例如因为您想要使用 [Open vSwitch](/en/how-to/open-vswitch)，请做以下操作。
 
@@ -173,10 +176,10 @@ DNS=<DNS Servers address> 示例-> 9.9.9.9
 systemctl 启用 system-networkd
 ```
 
-要让容器启动该服务，它需要启动(之前的命令更像是根目录)。 我们通过使用 `--boot` 参数来缓解这个问题。
+要让容器启动该服务，它需要启动(之前的命令更像是根目录)。 我们通过使用 `--boot` 参数来缓解这个问题。 我们还添加了 "--network" 参数，用虚拟网络设备启动容器。
 
 ```
-systemd-nspawn --machine="模板" --directory=/var/lib/organes/template --boot
+systemd-nspawn --machine="模板" --directory=/var/lib/organes/template --boot --network
 ```
 
 这将引导容器并将您放入登录提示。 此处无法登录根目录，所以您要么先创建用户，然后才能进入容器，要么继续使用 [4。 将容器作为服务运行](#h-4-run-container-as-a-service)。
@@ -188,4 +191,95 @@ useradd <your username here>
 passwd <your username here>
 ```
 
+> 由于您可能想要使用您的虚拟网络设备进行实际网络连接，需要进行进一步的配置。 例如使用 [Open vSwitch](/how-to/open-vswitch) 或一个简单的桥接设备将虚拟网络设备连接到某些东西。
+> {.is-info}
+
 # 🚀 4. 将容器作为服务运行
+
+它可以启动一个容器作为一个服务，例如启动时间。 有一个通过 systemd-nspawn@.service 单位实现的实现，但它需要创建覆盖文件来配置它。 我们的首选方式是创建一个新的服务文件，其中包含我们想要用于容器的所有参数。
+
+- 克隆团队板创建新容器：
+
+```
+mkdir /var/lib/my-first container
+rsync -avP /var/lib/organes/template/* /var/lib/my-first container/
+```
+
+- 然后在您的主机上创建一个新的servicefile：
+
+```
+sudo nano /etc/systemd/system/<your containers name here>.service
+```
+
+- 并将以下内容粘贴到它：
+
+```
+[Unit]
+描述=<your containers name here>
+After=network.target目标
+Requireres=network。 arget
+
+[Service]
+ExecStart=/usr/bin/systemd-nspawn --machine=<your containers name here> --directory=/var/lib/myes/my-first container --boot
+KillMode=mixed
+Type=notificate
+Restart=始终
+
+[Install]
+WantedBy=multi-user。 arget
+
+```
+
+如果你想要在你的容器上使用虚拟网络设备，`--network`将在`ExecStart=/usr/...`的末尾使用。
+
+- 然后你可以开始容器：
+
+```
+sudo systemctl start <your containers name here>.service
+```
+
+- 或者让它在启动时开始：
+
+```
+sudo systemctl 启用 <your containers name here>.service
+```
+
+- 若要登录到您的容器，请使用“机器”：
+
+```
+sudo 机器tl shell <your containers name here>
+```
+
+- 并检查所有运行的容器 (和 VM )
+
+```
+sudo 机
+```
+
+# 🔄 3. 从容器内存访问主机上的文件/文件夹
+
+如名称所示，容器通常不能访问您的主机系统。 这可以改变为允许容器访问您的主机系统上的特定文件或文件夹。 例如，打开存储空间或让容器访问您的 GPU 。
+
+- 访问文件/文件夹可以通过 "--bind" 参数缓存：
+
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/organes/template --bind=<path to your location>
+```
+
+- 例如，如果您想要共享您的家庭浮动：
+
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/organes/template --bind=/home
+```
+
+这将把文件夹`/home`挂载到你的load中的同一位置。 如果你想要更改你的容器内的挂载点，你可以使用 <kbd>指定这一点：</kbd> 两个路径之间的挂载点。
+
+- 例如，如果您想要在 `/tmp/home` 中使用 `/home` 的话：
+
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/organes/template --bind=/home:tmp/home
+```
+
+# 5. 附加注释
+
+`systemd-nspawn`是一个极强大的工具。 我们在这里谈到的不仅仅是基本问题。 看看[man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html)，如果你想要看得很棒！
