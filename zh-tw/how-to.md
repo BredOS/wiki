@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-09-24T12:11:51.925Z
+date: 2025-09-25T11:48:01.757Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -14,9 +14,9 @@ This page contains Guides, tutorials, and tips on how to install or use certain 
 
 # 2. Useful Links
 
-- [How to play back DRM protected content (installing widevine)](/en/how-to/widevine-watch-drm-content)
+- [How to play back DRM protected content (installing widevine)](/how-to/widevine-watch-drm-content)
 
-- [How to setup Panthor on Mali GPUs with RK3588](/en/how-to/how-to-setup-panthor)
+- [🐾 How to setup Panthor on Mali GPUs with RK3588]/how-to/how-to-setup-panthor)
 
 - [How to Install STEAM on BredOS](/how-to/how-to-install-steam)
 
@@ -40,9 +40,11 @@ This page contains Guides, tutorials, and tips on how to install or use certain 
 
 - [How to handle reported disk failures](/how-to/disk-failure)
 
-- [How to install Android Apps to BredOS](/en/how-to/waydroid)
+- [How to install Android Apps to BredOS](/how-to/waydroid)
 
-- [How to manage virtual switches](/en/how-to/open-vswitch)
+- [How to manage virtual switches](/how-to/open-vswitch)
+
+- [How to manage systemd-nspawn containers](/how-to/systemd-nspawn)
 
 > Explore these guides to get the most out of BredOS!
 > {.is-info}
