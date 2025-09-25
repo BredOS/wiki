@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-09-24T12:11:51.925Z
+date: 2025-09-25T11:48:01.757Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -14,9 +14,9 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 # 2. 有用なリンク
 
-- [DRM 保護されたコンテンツの再生方法(widevineをインストール)](/en/how-to/widevine-watch-drm-content)
+- [DRM 保護されたコンテンツの再生方法(widevineをインストール)](/how-to/widevine-watch-drm-content)
 
-- [How to set Panthor on Mali GPU with RK3588](/en/how-to/how-to-setup-panthor)
+- [🐾 Mali GPUで RK3588をセットアップする方法](/how-to/how-to-setup-panthor)
 
 - [How to Install STEAM on BredOS](/how-to/how-to-install-steam)
 
@@ -40,9 +40,11 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [How to handle reported disk failures](/how-to/disk-failure)
 
-- [How to install Android Apps to BredOS](/en/how-to/waydroid)
+- [How to install Android Apps to BredOS](/how-to/waydroid)
 
-- [How to manage virtual switches](/en/how-to/open-vswitch)
+- [How to manage virtual switches](/how-to/open-vswitch)
+
+- [How to manage systemd-nspawn containers](/how-to/systemd-nspawn)
 
 > BredOSを最大限に活用するために、これらのガイドを探索してください！
 > {.is-info}
