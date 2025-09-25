@@ -2,7 +2,7 @@
 title: Manage containers with systemd-nspawn
 description: 
 published: false
-date: 2025-09-25T07:26:23.183Z
+date: 2025-09-25T07:57:30.929Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -63,16 +63,33 @@ systemd-nspawn --machine="Template" --directory=/var/lib/machines/template
 
 The parameter `--machine` defines the name of the container, while `--directory` points to the location of the container. To exit the container either use <kbd>Ctrl</kbd> + <kbd>D</kbd> or click <kbd>Ctrl</kbd> + <kbd>]</kbd> three times within one second.
 
+The first thing we want to do inside the container is initialize our package manager and update the system.
+- To do this, run:
+```
+pacman-key --init
+pacman-key --populate
+pacman -Syu
+```
+
+> If you encounter problems resolving hostnames, remove the file `/var/lib/machines/template/etc/resolv.conf` from the host system.
+{.is-danger}
+
+
+- After that we need to remove unessecary stuff like the kernel and firmware:
+```
+pacman -R linux-aarch64 linux-firmware
+```
+
 - To convert the container to BredOS, run the following:
 ```
-sudo pacman-key --recv-keys 77193F152BDBE6A6 BF0740F967BA439D DAEAD1E6D799C638 1BEF1BCEBA58EA33
-sudo pacman-key --lsign-key 77193F152BDBE6A6 BF0740F967BA439D DAEAD1E6D799C638 1BEF1BCEBA58EA33
-echo -e '# --> BredOS Mirrorlist <-- #\n\n# BredOS Main mirror\nServer = https://repo.bredos.org/repo/$repo/$arch\n' | sudo tee /etc/pacman.d/bredos-mirrorlist
+pacman-key --recv-keys 77193F152BDBE6A6 BF0740F967BA439D DAEAD1E6D799C638 1BEF1BCEBA58EA33
+pacman-key --lsign-key 77193F152BDBE6A6 BF0740F967BA439D DAEAD1E6D799C638 1BEF1BCEBA58EA33
+echo -e '# --> BredOS Mirrorlist <-- #\n\n# BredOS Main mirror\nServer = https://repo.bredos.org/repo/$repo/$arch\n' | tee /etc/pacman.d/bredos-mirrorlist
 ```
 
 - Than edit the mirror-file:
 ```
-sudo nano /etc/pacman.conf
+nano /etc/pacman.conf
 ```
 
 - And add the following at the end:
@@ -84,13 +101,49 @@ Include = /etc/pacman.d/bredos-mirrorlist
 Include = /etc/pacman.d/bredos-mirrorlist
 ```
 
-- And finally start the conversion with:
+- Finally start the conversion with:
 ```
-sudo pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
+pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 ```
 
 - Optionally install bredos-config and/or bredos-news:
 ```
-sudo pacman -Sy bredos-config bredos-news
+pacman -Sy bredos-config bredos-news
+```
+
+# 3. Create container with virtual network
+The container we created in section [2. Create container template](#h-3-create-container-template) used the network of your hostsystem. If you prefer a virtual network device on your container, for example because you want to use [open vswitch](/en/how-to/open-vswitch), do the following.
+
+- If you want to do this on a new container, clone it:
+```
+mkdir /var/lib/machines/template-veth
+rsync -avP /var/lib/machines/template/* /var/lib/machines/template-veth/
+```
+
+To simplify this guide we will continue working with our template created in [2. Create container template](#h-3-create-container-template).
+
+- First, enter the container like before:
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template
+```
+
+To keep the systemd theme, we use systemd-networkd to configure our virtual network device.
+
+- Create two configuration files with:
+```
+touch /etc/systemd/network/80-container-host0.network
+nano /etc/systemd/network/99-wolVeth.network
+```
+
+- Paste the following into the configuration file:
+```
+[Match]
+Name=host0
+
+[Network]
+Address=<containers ip address> example -> 192.168.1.100/24
+Gateway=<gateway of that network> example -> 192.168.1.1
+DNS=<DNS Servers address> example -> 9.9.9.9
+#DHCP=yes -> or comment Address, Gateway and DNS and uncomment DHCP to assign the address automatically
 ```
 
