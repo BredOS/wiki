@@ -1,8 +1,8 @@
 ---
-title: 使用系统生成的容器管理
+title: 管理系统生成的容器
 description:
 published: false
-date: 2025-09-25T10：15：56.522Z
+date: 2025-09-25T10:54:42.662Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -56,7 +56,7 @@ mkdir 模板
 - 仍然作为根提取tarball到 `/var/lib/orges/template`：
 
 ```
-tar -xzf <your distro's tarball of choice> -C /var/lib/machines/template
+tar -xzf <your distro's tarball of choice> -C /var/lib/机床/模板
 ```
 
 - 文件夹`template`的内容看起来像这样：
@@ -72,7 +72,7 @@ bin boot dev etc home lib mnt lease proc root runs sbin srv sys tmp usr var
 systemd-nspawn --machine="Template" --directory=/var/lib/organes/template
 ```
 
-参数`--machine`定义容器的名称，而`--directory`指向容器的位置。 To exit the container, use either <kbd>Ctrl</kbd> + <kbd>D</kbd> or type <kbd>Ctrl</kbd> + <kbd>]</kbd> three times within one second.
+参数`--machine`定义容器的名称，而`--directory`指向容器的位置。 离开容器， 使用 <kbd>Ctrl</kbd> + <kbd>D</kbd> 或输入 <kbd>Ctrl</kbd> + <kbd>]</kbd> 在一秒内使用三次。
 
 我们想要在容器内做的第一件事是初始化我们的包管理器并更新系统。
 
@@ -87,7 +87,7 @@ pacman -Syu
 > 如果您在解析主机名时遇到问题，请从主机系统中移除文件 `/var/lib/orges/template/etc/resolv.conf` 。
 > {.is-info}
 
-- After that we need to remove some unnecessary stuff like the kernel and firmware:
+- 在此之后，我们需要删除一些不必要的东西，如内核和固件：
 
 ```
 pacman -R linux-aarch64 linux-firmware
@@ -101,13 +101,13 @@ pacman-key --lsign-key 77193F152BDBE6A6 BF0740F967BA439D DAEAD1E6D799C638 1BEF1B
 echo -e '# --> BredOS Mirrorlist <-- #\n\n# BredOS Main mirror\nServer = https://repo.bredos.org/repo/$repo/$arch\n' | tee /etc/pacman.d/bredos-mirrorlist
 ```
 
-- Then edit the mirror file:
+- 然后编辑镜像文件：
 
 ```
 nano /etc/pacman.conf
 ```
 
-- And add the following to the end of the file:
+- 并在文件末尾添加以下内容：
 
 ```
 [BredOS-any]
@@ -117,7 +117,7 @@ nano /etc/pacman.conf
 包含= /etc/pacman.d/bredos-mirrorlist
 ```
 
-Save and close the file with <kbd>Ctrl</kbd> + <kbd>X</kbd> and <kbd>Y</kbd>
+用 <kbd>Ctrl</kbd> + <kbd>X</kbd> 和 <kbd>Y</kbd> 保存并关闭文件
 
 - 最终开始转换：
 
@@ -133,7 +133,7 @@ pacman -Sy bredos-config bredos-news
 
 # 4. 使用虚拟网络运行容器
 
-我们在第2节中创建的容器。 创建容器模板](#h-3-create-container-template) 使用了您的主机系统网络。 If you prefer a virtual network device on your container, for example if you want to use [Open vSwitch](/how-to/open-vswitch), do the following.
+我们在第2节中创建的容器。 创建容器模板](#h-3-create-container-template) 使用了您的主机系统网络。 如果您喜欢在容器上使用虚拟网络设备，例如如果您想要使用 [Open vSwitch](/how-to/open-vswitch)，请做以下操作。
 
 - 如果你想要在一个新容器上这样做，请克隆它：
 
@@ -179,13 +179,13 @@ DNS=<DNS Servers address> 示例-> 9.9.9.9
 systemctl 启用 system-networkd
 ```
 
-To let the container start that service, it needs to be booted (the previous command is more like chrooting). We achieve this by using the `--boot` parameter. Additionally, we add the `--network` parameter to start the container with a virtual network device.
+要让容器启动该服务，它需要启动(先前的命令更像是杂乱)。 我们通过使用 `--boot` 参数来实现这一点。 此外，我们添加了 `--network` 参数，用虚拟网络设备启动容器。
 
 ```
 systemd-nspawn --machine="模板" --directory=/var/lib/organes/template --boot --network
 ```
 
-This will boot the container and display the login prompt. Logging in as root is not possible, so you must either create a user before booting into the container or proceed to section [4. 将容器作为服务运行](#h-4-run-container-as-a-service)。
+这将启动容器并显示登录提示。 无法登录根目录，所以您必须先创建一个用户，然后才能启动到容器中，或者继续使用 [4。 将容器作为服务运行](#h-4-run-container-as-a-service)。
 
 - 要创建用户，请在容器内运行以下内容：
 
@@ -201,7 +201,7 @@ passwd <your username here>
 
 它可以启动一个容器作为一个服务，例如启动时间。 有一个通过 systemd-nspawn@.service 单位实现的实现，但它需要创建覆盖文件来配置它。 我们的首选方式是创建一个新的服务文件，其中包含我们想要用于容器的所有参数。
 
-- Clone the template to create a new container:
+- 复制模板创建新容器：
 
 ```
 mkdir /var/lib/my-first container
@@ -233,7 +233,7 @@ WantedBy=multi-user。 arget
 
 ```
 
-If you want to use a virtual network device on your container add, `--network` at the end of `ExecStart=/usr/...`.
+如果你想要在你的容器上使用虚拟网络设备，`ExecStart=/usr/...`--network\`。
 
 - 然后你可以开始容器：
 
@@ -259,11 +259,11 @@ sudo 机器tl shell <your containers name here>
 sudo 机
 ```
 
-# 🔄 3. 从容器内存访问主机上的文件/文件夹
+# 🔄 3. 从容器内访问主机上的文件/文件夹
 
-As the name suggests, a container typically does not have access to your host system. This can be modified to allow the container access to specific files or folders on your host system; for example, to provide additional storage space or grant the container access to your GPU.
+如名称所示，容器通常无法访问您的主机系统。 这可以被修改，以允许容器访问您主机系统上的特定文件或文件夹； 例如，提供额外的存储空间或授予您的 GPU 容器访问权限。
 
-- Access to a file/folder can be achieved with the `--bind` parameter:
+- 可以通过 "--bind" 参数实现文件/文件夹访问：
 
 ```
 systemd-nspawn --machine="Template" --directory=/var/lib/organes/template --bind=<path to your location>
@@ -275,7 +275,7 @@ systemd-nspawn --machine="Template" --directory=/var/lib/organes/template --bind
 systemd-nspawn --machine="Template" --directory=/var/lib/organes/template --bind=/home
 ```
 
-This will mount the folder `/home` to the same location within your container. If you wish to change the mount point inside your container, you can specify this by using a <kbd>:</kbd> between both paths.
+这将把文件夹`/home`挂载到你的容器中的同一位置。 如果你想要更改你的容器内的挂载点，你可以使用两个路径之间的 <kbd>:</kbd> 来指定这一点。
 
 - 例如，如果您想要在 `/tmp/home` 中使用 `/home` 的话：
 
@@ -285,4 +285,4 @@ systemd-nspawn --machine="Template" --directory=/var/lib/organes/template --bind
 
 # 5. 附加注释
 
-`systemd-nspawn`是一个极强大的工具。 What we covered here are just the basics. 看看[man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html)，如果你想要看得很棒！
+`systemd-nspawn`是一个极强大的工具。 我们在这里谈到的只是基本问题。 看看他们的 [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html)，如果你想要惊喜！
