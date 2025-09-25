@@ -2,7 +2,7 @@
 title: Manage containers with systemd-nspawn
 description: 
 published: false
-date: 2025-09-25T08:39:57.587Z
+date: 2025-09-25T08:57:29.846Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -43,7 +43,11 @@ As a container can hold any distribution's rootfs, you are relatively free in yo
 - [Arch Linux ARM](https://archlinuxarm.org/os/) Download the .tar.gz file with the `latest` and `aarch64` or `armv7` tag.
 {.links-list}
 
-After you have downloaded your rootfs tarball of choice, we need to extract it. In this example we downloaded the Arch Linux ARM tarball and convert it to BredOS later.
+> A BredOS rootfs will be available soon!
+{.is-warning}
+
+
+After you have downloaded your rootfs tarball of choice, we need to extract it. In this example we downloaded the Arch Linux ARM tarball and convert it to BredOS.
 
 - Still as root extract the tarball into `/var/lib/machines/template`:
 ```
@@ -165,7 +169,7 @@ useradd <your username here>
 passwd <your username here>
 ```
 
-> As you may want to use your virtual network device for actual networking, further configuration is needed. Use, for example, [Open vSwitch](/how-to/open-vswitch) or a simple bridge device.
+> As you may want to use your virtual network device for actual networking, further configuration is needed. Use, for example, [Open vSwitch](/how-to/open-vswitch) or a simple bridge device to connect the virtual network device to something.
 {.is-info}
 
 
@@ -221,3 +225,26 @@ sudo machinectl shell <your containers name here>
 ```
 sudo machinectl
 ```
+
+# 5. Access files/folders on host from inside the container
+As the name suggests, a container normally has no access to your hostsystem. This can be changed to let the container access specific files or folders on your hostsystem, for example to open up storage space or give the container access to your GPU. 
+
+- Access to a file/folder can be achived with the `--bind` parameter:
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bind=<path to your location>
+```
+
+- For example, if you want to share your home floder:
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bind=/home
+```
+
+This will mount the folder `/home` to the same location inside your loaction. If you want to change the mountpoint inside your container you can specify this with a <kbd>:</kbd> between both path's.
+
+- For example, if you want `/home` at `/tmp/home`:
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bind=/home:/tmp/home
+```
+
+# 6. Additional Notes
+`systemd-nspawn` is a extremly powerful tool. What we covered here is merely more than the basics. Take a look at there [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), if you want to be amazed!
