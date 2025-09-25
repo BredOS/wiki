@@ -1,8 +1,8 @@
 ---
 title: 管理系统生成的容器
 description:
-published: false
-date: 2025-09-25T10:54:42.662Z
+published: true
+date: 2025-09-25T11:47:09.582Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
