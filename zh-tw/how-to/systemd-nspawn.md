@@ -1,8 +1,8 @@
 ---
-title: Manage containers with systemd-nspawn
+title: Manage systemd-nspawn containers
 description:
 published: false
-date: 2025-09-25T10:15:56.522Z
+date: 2025-09-25T10:54:42.662Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -14,7 +14,7 @@ dateCreated: 2025-09-25T07:02:39.910Z
 
 Unlike full virtualization solutions like QEMU or container platforms like Docker, `systemd-nspawn` uses Linux namespaces and cgroups to create containers with very little overhead.
 
-# 3. Create container template
+# 3. Create a container template
 
 Containers using nspawn can be run from any location on your filesystem, but the recommended folder is `/var/lib/machines`. Inside this folder, we create a subfolder that holds our Linux/GNU rootfs. To simplify the process, this article guides you through creating a container template. The contents of that template folder can then be copied to a new location and used as a new container environment.
 
@@ -131,7 +131,7 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 4. Run container with virtual network
+# 4. Run a container with virtual network
 
 The container we created in section [2. Create container template](#h-3-create-container-template) used the network of your hostsystem. If you prefer a virtual network device on your container, for example if you want to use [Open vSwitch](/how-to/open-vswitch), do the following.
 
@@ -197,7 +197,7 @@ passwd <your username here>
 > As you may want to use your virtual network device for actual networking, further configuration is needed. Use, for example, [Open vSwitch](/how-to/open-vswitch) or a simple bridge device to connect the virtual network device to something.
 > {.is-info}
 
-# 🔁 4. Run container as a service
+# 🔁 4. Run a container as a service
 
 It it possible to start a container as a service, for example to start it on boottime. There is a implementation through the systemd-nspawn@.service unit, but it requires to create override files to configure it. Our prefered way is to create a new servicefile, which contains all parameters we want to use for our container.
 
@@ -259,7 +259,7 @@ sudo machinectl shell <your containers name here>
 sudo machinectl
 ```
 
-# 5. Access files/folders on host from inside the container
+# 5. Access files/folders on host from inside a container
 
 As the name suggests, a container typically does not have access to your host system. This can be modified to allow the container access to specific files or folders on your host system; for example, to provide additional storage space or grant the container access to your GPU.
 
@@ -285,4 +285,4 @@ systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bin
 
 # 5. Additional Notes
 
-`systemd-nspawn` is a extremly powerful tool. What we covered here are just the basics. Take a look at there [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), if you want to be amazed!
+`systemd-nspawn` is a extremly powerful tool. What we covered here are just the basics. Take a look at their [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), if you want to be amazed!
