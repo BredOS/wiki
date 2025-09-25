@@ -2,7 +2,7 @@
 title: Administrar contenedores con systemd-nspawn
 description:
 published: false
-date: 2025-09-25T08:18:04.446Z
+date: 2025-09-25T08:57:29.846Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -48,7 +48,10 @@ Como un contenedor puede contener cualquier distribución de rootfs, usted es re
 - [Arch Linux ARM](https://archlinuxarm.org/os/) Descarga el archivo .tar.gz con la etiqueta `latest` y `aarch64` o `armv7`.
   {.links-list}
 
-Después de haber descargado el tarball rootfs de su elección, tenemos que extraerlo. En este ejemplo hemos descargado el tarball Arch Linux ARM y lo convertimos a BredOS más tarde.
+> ¡Pronto estará disponible un Rootfs BredOS!
+> {.is-warning}
+
+Después de haber descargado el tarball rootfs de su elección, tenemos que extraerlo. En este ejemplo hemos descargado el tarball Arch Linux ARM y lo convertimos a BredOS.
 
 - Todavía como root extrae el tarball en `/var/lib/machines/template`:
 
@@ -126,7 +129,7 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 4. Crear contenedor con red virtual
+# 4. Ejecutar contenedor con red virtual
 
 El contenedor que hemos creado en la sección [2. Crear plantilla de contenedor](#h-3-create-container-template) usó la red de su sistema de host. Si prefieres un dispositivo de red virtual en tu contenedor, por ejemplo porque quieres usar [Abrir vSwitch](/en/how-to/open-vswitch), haz lo siguiente.
 
@@ -173,10 +176,10 @@ DNS=<DNS Servers address> ejemplo -> 9.9.9.9
 systemctl habilitar systemd-networkd
 ```
 
-Para permitir que el contenedor comience ese servicio, necesita ser arrancado (el comando anterior es más parecido a chrooting). Hemos descubierto esto mediante el uso del parámetro `--boot`.
+Para permitir que el contenedor comience ese servicio, necesita ser arrancado (el comando anterior es más parecido a chrooting). Hemos descubierto esto mediante el uso del parámetro `--boot`. También agregamos el parámetro `--network` para iniciar el contenedor con un dispositivo de red virtual.
 
 ```
-systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --boot
+systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --boot --network
 ```
 
 Esto iniciará el contenedor y le arrojará en la petición de inicio de sesión. Aquí no es posible iniciar sesión como root, así que puede crear un usuario antes de arrancar en el contenedor o continuar con la sección [4. Ejecutar contenedor como servicio](#h-4-run-container-as-a-service).
@@ -188,4 +191,95 @@ useradd <your username here>
 passwd <your username here>
 ```
 
+> Como tal vez quiera utilizar su dispositivo de red virtual para el trabajo real en red, se necesita más configuración. Use, por ejemplo, [Abrir vSwitch](/how-to/open-vswitch) o un simple dispositivo puente para conectar el dispositivo de red virtual a algo.
+> {.is-info}
+
 # 5. Ejecutar contenedor como un servicio
+
+Es posible iniciar un contenedor como un servicio, por ejemplo para iniciarlo en tiempo de arranque. Hay una implementación a través de la unidad systemd-nspawn@.service, pero requiere crear archivos de sobreescritura para configurarlo. Nuestra forma preferida es crear un nuevo fichero de servicios, el cual contiene todos los parámetros que queremos utilizar para nuestro contenedor.
+
+- Clona el teamplate para crear un nuevo contenedor:
+
+```
+mkdir /var/lib/machines/my-first-container
+rsync -avP /var/lib/machines/template/* /var/lib/machines/my-first-container/
+```
+
+- Luego crea un nuevo archivo de servicios en tu host con:
+
+```
+sudo nano ► /systemd/<your containers name here>.service
+```
+
+- Y pega lo siguiente en él:
+
+```
+[Unit]
+Description=<your containers name here>
+After=network.target
+Requires=red.
+
+[Service]
+ExecStart=/usr/bin/systemd-nspawn --machine=<your containers name here> --directory=/var/lib/machines/my-first-container --boot
+KillMode=mixed
+Type=notify
+Restart=always
+
+[Install]
+WantedBy=multi-user. Objetivo
+
+```
+
+Si quieres usar dispositivos de red virtual en tu contenedor añadido, `--network` al final de `ExecStart=/usr/...`.
+
+- Luego puede iniciar el contenedor con:
+
+```
+sudo systemctl iniciar <your containers name here>.service
+```
+
+- O dejar que empiece en tiempo de arranque con:
+
+```
+sudo systemctl habilita <your containers name here>.service
+```
+
+- Para iniciar sesión en tu contenedor, usa `machinectl`:
+
+```
+la shell de sudo machinectl <your containers name here>
+```
+
+- Y compruebe todos los contenedores en ejecución (y VM's) con:
+
+```
+maquinaria de sudo
+```
+
+# 4. Acceder a archivos/carpetas en el host desde dentro del contenedor
+
+Como su nombre lo indica, un contenedor normalmente no tiene acceso a su sistema de host. Esto puede cambiarse para permitir que el contenedor acceda a archivos o carpetas específicos en su sistema de host, por ejemplo para abrir espacio de almacenamiento o dar acceso al contenedor a su GPU.
+
+- El acceso a un archivo/carpeta se puede adquirir con el parámetro `--bind`:
+
+```
+systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --bind=<path to your location>
+```
+
+- Por ejemplo, si desea compartir su floder de inicio:
+
+```
+systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --bind=/home
+```
+
+Esto montará la carpeta `/home` a la misma ubicación dentro de tu loacción. Si quieres cambiar el punto de montaje dentro de tu contenedor puedes especificar esto con un <kbd>:</kbd> entre ambas rutas.
+
+- Por ejemplo, si quieres `/home` en `/tmp/home`:
+
+```
+systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --bind=/home:/tmp/home
+```
+
+# 8. Notas adicionales
+
+`systemd-nspawn` es una herramienta extremadamente potente. Lo que hemos tratado aquí es simplemente algo más que lo básico. Echa un vistazo a la [página de manual](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), si quieres estar asombroso!
