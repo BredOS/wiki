@@ -2,7 +2,7 @@
 title: systemd-nspawn でコンテナを管理
 description:
 published: false
-date: 2025-09-25T08:18:0446Z
+date: 2025-09-25T08:57:29.846Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -48,7 +48,12 @@ mkdir テンプレート
 - [Arch Linux ARM](https://archlinuxarm.org/os/) `latest`と`aarch64`または`armv7`タグの.tar.gzファイルをダウンロードします。
   {.links-list}
 
-選択した rootfs ターボールをダウンロードしたら、それを抽出する必要があります。 この例では、Arch Linux ARM tarball をダウンロードし、あとで BredOS に変換します。
+> BredOS のrootfsがすぐに利用可能になります!
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
+
+選択した rootfs ターボールをダウンロードしたら、それを抽出する必要があります。 この例では、Arch Linux ARM tarball をダウンロードして、BredOS に変換します。
 
 - tarball を `/var/lib/machines/template` に展開します。
 
@@ -126,7 +131,7 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 4. 仮想ネットワークでコンテナを作成
+# 4. 仮想ネットワークでコンテナを実行
 
 セクションで作成したコンテナ [2. コンテナーテンプレートを作成](#h-3-create-container-template) ホストシステムのネットワークを使用しました。 例えば、コンテナ上で仮想ネットワークデバイスを使用したい場合は、[Open vSwitch](/en/how-to/open-vswitch)を使用したい場合は、以下のようにします。
 
@@ -173,10 +178,10 @@ DNS=<DNS Servers address> example -> 9.9.9.9
 systemctl enable systemd-networkd
 ```
 
-コンテナがそのサービスを開始させるには、起動する必要があります (前のコマンドは chrootのようなものです)。 これは `--boot` パラメータを使用して行います。
+コンテナがそのサービスを開始させるには、起動する必要があります (前のコマンドは chrootのようなものです)。 これは `--boot` パラメータを使用して行います。 また、`--network` パラメータを追加して、コンテナを仮想ネットワークデバイスで起動します。
 
 ```
-systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --boot
+systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --boot -network
 ```
 
 これにより、コンテナを起動し、ログインプロンプトに移動します。 ここでは root としてログインすることはできませんので、コンテナを起動する前にユーザーを作成するか、セクション[4. コンテナをサービスとして実行する](#h-4-run-container-as-a-service)。
@@ -188,4 +193,95 @@ useradd <your username here>
 passwd <your username here>
 ```
 
+> 仮想ネットワークデバイスを実際のネットワークに使用したい場合は、さらなる設定が必要になります。 Use, for example, [Open vSwitch](/how-to/open-vswitch) or a simple bridge device to connect the virtual network device to something.
+> {.is-warning}
+
 # 🚀 4. コンテナをサービスとして実行
+
+コンテナをサービスとして起動することも可能です。例えば、ブート時に起動することも可能です。 systemd-nspawn@.service ユニットを通じて実装がありますが、それを設定するためにオーバーライドファイルを作成する必要があります。 私たちの好ましい方法は、コンテナに使用したいすべてのパラメータを含む新しいservicefileを作成することです。
+
+- チームプレートをクローンして新しいコンテナを作成します。
+
+```
+mkdir /var/lib/machines/my-first-container
+rsync -avP /var/lib/machines/template/* /var/lib/machines/my-first-container/
+```
+
+- 次に、ホストに新しいサービスファイルを作成します。
+
+```
+sudo nano /etc/systemd/system/<your containers name here>.service
+```
+
+- 次の内容に貼り付けてください：
+
+```
+[Unit]
+Description=<your containers name here>
+After=network.target
+Requires=network.target
+
+[Service]
+ExecStart=/usr/bin/systemd-nspawn --machine=<your containers name here> --directory=/var/lib/machines/my-first-container --boot
+KillMode=mixed
+Type=notify
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+コンテナ上で仮想ネットワークデバイスを使用したい場合は、 `ExecStart=/usr/...` の末尾に `--network` を追加します。
+
+- その後、次のようにコンテナを起動できます。
+
+```
+sudo systemctl start <your containers name here>.service
+```
+
+- または、起動時に起動させてください:
+
+```
+sudo systemctl enable <your containers name here>.service
+```
+
+- コンテナにログインするには、 `machinectl` を使用します。
+
+```
+sudo machinectl shell <your containers name here>
+```
+
+- 実行中のすべてのコンテナ (およびVM) を以下に確認します。
+
+```
+《須藤機械》
+```
+
+# 🔄 3. コンテナ内からホスト上のファイル/フォルダにアクセスする
+
+名前が示すように、コンテナは通常ホストへのアクセス権を持っていません。 これは、コンテナがホストシステム上の特定のファイルやフォルダにアクセスできるように変更することができます。 例えば、ストレージスペースを開いたり、コンテナが GPU にアクセスできるようにします。
+
+- `--bind`パラメータでファイル/フォルダへのアクセスを行うことができます。
+
+```
+systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --bind=<path to your location>
+```
+
+- たとえば、自宅のフロアを共有したい場合:
+
+```
+systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --bind=/home
+```
+
+フォルダ`/home`を、ロアクション内の同じ場所にマウントします。 コンテナ内のマウントポイントを変更したい場合は、両方のパス間の <kbd>:</kbd> で指定できます。
+
+- 例えば、 `/tmp/home`を`/tmp/home`にしたい場合:
+
+```
+systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --bind=/home:/tmp/home
+```
+
+# 8. 追加メモ
+
+`systemd-nspawn` は非常に強力なツールです。 ここで私たちが取り上げたものは、基本以上のものです。 あなたが驚かれたいなら、そこに[man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html)を見てみましょう!
