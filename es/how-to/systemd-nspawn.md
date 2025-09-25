@@ -2,7 +2,7 @@
 title: Administrar contenedores con systemd-nspawn
 description:
 published: false
-date: 2025-09-25T07:02:39.910Z
+date: 2025-09-25T08:18:04.446Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -41,11 +41,11 @@ Como un contenedor puede contener cualquier distribución de rootfs, usted es re
 > Cualquier comando que necesite ser ejecutado dentro de su contenedor debe ser ajustado de acuerdo a la variante de su distribución si no está usando BredOS.
 > {.is-info}
 
-- [Ubuntu-base](https://cdimage.ubuntu.com/ubuntu-base/releases/) Busque la versión elegida y descargue el .tar.gz para la arquitectura de su CPU.
-- [Debian genericcloud](https://cloud.debian.org/images/cloud/) Desplácese hacia abajo y haga clic en la versión que desea descargar, y descargue el .tar.gz para la arquitectura de su CPU.
-- [Base de Contenedor de Cálvula](https://fedoraproject.org/misc#minimal) Desplácese hacia abajo y elija entre Base de Contenedores o Base Mínima de Contenedores.
-- [Arch Linux](https://archlinux.org/download/) Elige una réplica cerca de ti, luego descarga el archivo .tar.zst .
-- [Arch Linux ARM](https://archlinuxarm.org/os/) Descarga el archivo .tar.gz con la etiqueta aarch64 o armv7.
+- [Ubuntu-base](https://cdimage.ubuntu.com/ubuntu-base/releases/) Busca la liberación de tu elección y luego descarga el `.tar.gz` para la arquitectura de tu CPU.
+- [Debian genericcloud](https://cloud.debian.org/images/cloud/) Desplácese hacia abajo y haga clic en la versión que desea descargar, luego descargue el `.tar.gz` para su arquitectura de CPU.
+- [Fedora Container Base](https://fedoraproject.org/misc#minimal) Scroll down and choose between `Container Base` or `Container Minimal Base`.
+- [Arch Linux](https://archlinux.org/download/) Elige una réplica cerca de ti, luego descarga el archivo `.tar.zst`.
+- [Arch Linux ARM](https://archlinuxarm.org/os/) Descarga el archivo .tar.gz con la etiqueta `latest` y `aarch64` o `armv7`.
   {.links-list}
 
 Después de haber descargado el tarball rootfs de su elección, tenemos que extraerlo. En este ejemplo hemos descargado el tarball Arch Linux ARM y lo convertimos a BredOS más tarde.
@@ -63,3 +63,129 @@ ls template/
 bin boot dev etc home lib mnt opt proc root run sbin srv sys tmp usr var
 ```
 
+- Para introducir el contenedor, ejecutar:
+
+```
+systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template
+```
+
+El parámetro `--machine` define el nombre del contenedor, mientras que `--directory` apunta a la ubicación del contenedor. Para salir del contenedor, usa <kbd>Ctrl</kbd> + <kbd>D</kbd> o haz clic en <kbd>Ctrl</kbd> + <kbd>]</kbd> tres veces en un segundo.
+
+Lo primero que queremos hacer dentro del contenedor es inicializar nuestro gestor de paquetes y actualizar el sistema.
+
+- Para hacer esto, ejecutar:
+
+```
+pacman-key --init
+pacman-key --populate
+pacman -Syu
+```
+
+> Si encuentra problemas al resolver nombres de host, elimine el archivo `/var/lib/machines/templateň/resolv.conf` del sistema host.
+> {.is-danger}
+
+- Después de esto necesitamos eliminar cosas unessecarias como el núcleo y firmware:
+
+```
+pacman -R linux-aarch64 linux-firmware
+```
+
+- Para convertir el contenedor a BredOS, ejecute lo siguiente:
+
+```
+pacman-key --recv-keys 77193F152BDBE6A6 BF0740F967BA439D DAEAD1E6D799C638 1BEF1BCEBA58EA33
+pacman-key --lsign-key 77193F152BDBE6A6 BF0740F967BA439D DAEAD1E6D799C638 1BEF1BCEBA58EA33
+echo -e '# --> BredOS Mirrorlist <-- #\n\n# BredOS Main mirror\nServer = https://repo.bredos.org/repo/$repo/$arch\n' | tee /etc/pacman.d/bredos-mirrorlist
+```
+
+- Que editar el archivo réplica:
+
+```
+nano /etc/pacman.conf
+```
+
+- Y añade lo siguiente al final:
+
+```
+[BredOS-any]
+Incluya = Ninguno/pacman.d/bredos-mirrorlist
+
+[BredOS]
+Incluido = Ninguno/pacman.d/bredos-mirrorlist
+```
+
+- Finalmente iniciar la conversión con:
+
+```
+pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
+```
+
+- Opcionalmente, instalar bredos-config y/o bredos-news:
+
+```
+pacman -Sy bredos-config bredos-news
+```
+
+# 4. Crear contenedor con red virtual
+
+El contenedor que hemos creado en la sección [2. Crear plantilla de contenedor](#h-3-create-container-template) usó la red de su sistema de host. Si prefieres un dispositivo de red virtual en tu contenedor, por ejemplo porque quieres usar [Abrir vSwitch](/en/how-to/open-vswitch), haz lo siguiente.
+
+- Si desea hacer esto en un nuevo contenedor, clónelo:
+
+```
+mkdir /var/lib/machines/template-veth
+rsync -avP /var/lib/machines/template/* /var/lib/machines/template-veth/
+```
+
+Para simplificar esta guía continuaremos trabajando con nuestra plantilla creada en [2. Crear plantilla de contenedor](#h-3-create-container-template).
+
+- Primero, introduzca el contenedor como antes:
+
+```
+systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template
+```
+
+Para mantener el tema systemd, usamos `systemd-networkd` para configurar nuestro dispositivo de red virtual.
+
+- Crear dos archivos de configuración con:
+
+```
+táctil, /systemd/network/80-container-host0.network
+nano /etc/systemd/network/99-wolVeth.network
+```
+
+- Pegue lo siguiente en el archivo de configuración:
+
+```
+[Match]
+Nombre=host0
+
+[Network]
+Dirección=<containers ip address> ejemplo -> 192.168.1.100/24
+Gateway=<gateway of that network> ejemplo -> 192.168. .1
+DNS=<DNS Servers address> ejemplo -> 9.9.9.9
+#DHCP=yes -> o dirección de comentarios, Gateway y DNS y descomentar DHCP para asignar la dirección automáticamente
+```
+
+- Finalmente, habilitar `systemd-networkd`:
+
+```
+systemctl habilitar systemd-networkd
+```
+
+Para permitir que el contenedor comience ese servicio, necesita ser arrancado (el comando anterior es más parecido a chrooting). Hemos descubierto esto mediante el uso del parámetro `--boot`.
+
+```
+systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --boot
+```
+
+Esto iniciará el contenedor y le arrojará en la petición de inicio de sesión. Aquí no es posible iniciar sesión como root, así que puede crear un usuario antes de arrancar en el contenedor o continuar con la sección [4. Ejecutar contenedor como servicio](#h-4-run-container-as-a-service).
+
+- Para crear un usuario, ejecute lo siguiente dentro de su contenedor:
+
+```
+useradd <your username here>
+passwd <your username here>
+```
+
+# 5. Ejecutar contenedor como un servicio
