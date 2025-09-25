@@ -2,7 +2,7 @@
 title: Manage containers with systemd-nspawn
 description: 
 published: false
-date: 2025-09-25T07:57:30.929Z
+date: 2025-09-25T08:10:46.099Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -106,13 +106,13 @@ Include = /etc/pacman.d/bredos-mirrorlist
 pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 ```
 
-- Optionally install bredos-config and/or bredos-news:
+- Optionally, install bredos-config and/or bredos-news:
 ```
 pacman -Sy bredos-config bredos-news
 ```
 
 # 3. Create container with virtual network
-The container we created in section [2. Create container template](#h-3-create-container-template) used the network of your hostsystem. If you prefer a virtual network device on your container, for example because you want to use [open vswitch](/en/how-to/open-vswitch), do the following.
+The container we created in section [2. Create container template](#h-3-create-container-template) used the network of your hostsystem. If you prefer a virtual network device on your container, for example because you want to use [Open vSwitch](/en/how-to/open-vswitch), do the following.
 
 - If you want to do this on a new container, clone it:
 ```
@@ -127,7 +127,7 @@ To simplify this guide we will continue working with our template created in [2.
 systemd-nspawn --machine="Template" --directory=/var/lib/machines/template
 ```
 
-To keep the systemd theme, we use systemd-networkd to configure our virtual network device.
+To keep the systemd theme, we use `systemd-networkd` to configure our virtual network device.
 
 - Create two configuration files with:
 ```
@@ -147,3 +147,22 @@ DNS=<DNS Servers address> example -> 9.9.9.9
 #DHCP=yes -> or comment Address, Gateway and DNS and uncomment DHCP to assign the address automatically
 ```
 
+- Finally, enable `systemd-networkd`:
+```
+systemctl enable systemd-networkd
+```
+
+To let the container start that service, it needs to be booted (the command before is more like chrooting). We achive this by the use of the `--boot` parameter.
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --boot
+```
+
+This will boot the container and throws you into the log-in. Log-in as root is not possible here so you either create a user before booting into the container or continue with section [4. Run container as a service](#h-4-run-container-as-a-service).
+
+- To create a user, run the following inside your container:
+```
+useradd <your username here>
+passwd <your username here>
+```
+
+# 4. Run container as a service
