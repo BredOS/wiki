@@ -2,7 +2,7 @@
 title: 仮想スイッチの管理方法
 description:
 published: true
-date: 2025-09-24T12:11:02.185Z
+date: 2025-09-25T06:12:54.789Z
 tags:
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -152,3 +152,18 @@ As always, replace `<your switch name here>` with the name of your switch, and `
 ## 6.1 MTUの問題を修正
 
 MTUは、転送される各パケットの最大サイズを定義します。 通常、ping パケットはこの最大値まで満たされませんが、「本当の」通信は行います。 デフォルトのMTUは1500バイトです。 トンネルを通してその大きさのパケットを送る場合トンネル自体は 送信元アドレスや宛先アドレスのような情報を追加する必要があります これは、MTUを超えてパケットが分割される可能性があり、クライアントの通信に問題が生じる可能性があります。 これを修正するには、例えば1200バイトのMTUを下げるだけです。 この調整は、DHCPサーバーまたは手動で行うことができます。
+
+# 8. 追加コマンド
+
+- vSwitchに接続されているすべてのデバイスを一覧表示するには、次を実行します。
+
+```
+sudo ovs-vsctl list-ports <your switch name here> 
+```
+
+- ネットワークデバイスを切断するには、以下を実行してください。
+
+```
+sudo ovs-vsctl del-port <your switch name here> <your adapters name here>
+```
+
