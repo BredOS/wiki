@@ -1,8 +1,8 @@
 ---
-title: Administrar contenedores con systemd-nspawn
+title: Administrar contenedores nspawn del sistema
 description:
 published: false
-date: 2025-09-25T10:15:56.522Z
+date: 2025-09-25T10:54:42.662Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -14,7 +14,7 @@ dateCreated: 2025-09-25T07:02:39.910Z
 
 A diferencia de soluciones de virtualización completas como QEMU o plataformas contenedoras como Docker, `systemd-nspawn` utiliza espacios de nombres y grupos de Linux para crear contenedores con muy poca sobrecarga.
 
-# 3. Crear plantilla de contenedor
+# 3. Crear una plantilla de contenedor
 
 Los contenedores que usan nspawn pueden ejecutarse desde cualquier ubicación en tu sistema de archivos, pero la carpeta recomendada es `/var/lib/machines`. Dentro de esta carpeta, creamos una subcarpeta que contiene nuestras raíces Linux/GNU. Para simplificar el proceso, este artículo le guía a través de la creación de una plantilla de contenedor. El contenido de esa carpeta de plantillas puede ser copiado a una nueva ubicación y usado como un nuevo entorno de contenedor.
 
@@ -107,7 +107,7 @@ echo -e '# --> BredOS Mirrorlist <-- #\n\n# BredOS Main mirror\nServer = https:/
 nano /etc/pacman.conf
 ```
 
-- And add the following to the end of the file:
+- Y añade lo siguiente al final del archivo:
 
 ```
 [BredOS-any]
@@ -117,7 +117,7 @@ Incluya = Ninguno/pacman.d/bredos-mirrorlist
 Incluido = Ninguno/pacman.d/bredos-mirrorlist
 ```
 
-Save and close the file with <kbd>Ctrl</kbd> + <kbd>X</kbd> and <kbd>Y</kbd>
+Guardar y cerrar el archivo con <kbd>Ctrl</kbd> + <kbd>X</kbd> y <kbd>Y</kbd>
 
 - Finalmente iniciar la conversión con:
 
@@ -131,9 +131,9 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 4. Ejecutar contenedor con red virtual
+# 4. Ejecutar un contenedor con red virtual
 
-El contenedor que hemos creado en la sección [2. Crear plantilla de contenedor](#h-3-create-container-template) usó la red de su sistema de host. If you prefer a virtual network device on your container, for example if you want to use [Open vSwitch](/how-to/open-vswitch), do the following.
+El contenedor que hemos creado en la sección [2. Crear plantilla de contenedor](#h-3-create-container-template) usó la red de su sistema de host. Si prefieres un dispositivo de red virtual en tu contenedor, por ejemplo si quieres usar [Abrir vSwitch](/how-to/open-vswitch), haz lo siguiente.
 
 - Si desea hacer esto en un nuevo contenedor, clónelo:
 
@@ -179,13 +179,13 @@ DNS=<DNS Servers address> ejemplo -> 9.9.9.9
 systemctl habilitar systemd-networkd
 ```
 
-To let the container start that service, it needs to be booted (the previous command is more like chrooting). We achieve this by using the `--boot` parameter. Additionally, we add the `--network` parameter to start the container with a virtual network device.
+Para permitir que el contenedor comience ese servicio, necesita ser arrancado (el comando anterior es más parecido a chrooting). Lo conseguimos usando el parámetro `--boot`. Adicionalmente, agregamos el parámetro `--network` para iniciar el contenedor con un dispositivo de red virtual.
 
 ```
 systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --boot --network
 ```
 
-This will boot the container and display the login prompt. Logging in as root is not possible, so you must either create a user before booting into the container or proceed to section [4. Ejecutar contenedor como servicio](#h-4-run-container-as-a-service).
+Esto iniciará el contenedor y mostrará la petición de inicio de sesión. No es posible iniciar sesión como root, por lo que debe crear un usuario antes de arrancar en el contenedor o proceder a la sección [4. Ejecutar contenedor como servicio](#h-4-run-container-as-a-service).
 
 - Para crear un usuario, ejecute lo siguiente dentro de su contenedor:
 
@@ -197,11 +197,11 @@ passwd <your username here>
 > Como tal vez quiera utilizar su dispositivo de red virtual para el trabajo real en red, se necesita más configuración. Use, por ejemplo, [Abrir vSwitch](/how-to/open-vswitch) o un simple dispositivo puente para conectar el dispositivo de red virtual a algo.
 > {.is-info}
 
-# 5. Ejecutar contenedor como un servicio
+# 5. Ejecutar un contenedor como un servicio
 
 Es posible iniciar un contenedor como un servicio, por ejemplo para iniciarlo en tiempo de arranque. Hay una implementación a través de la unidad systemd-nspawn@.service, pero requiere crear archivos de sobreescritura para configurarlo. Nuestra forma preferida es crear un nuevo fichero de servicios, el cual contiene todos los parámetros que queremos utilizar para nuestro contenedor.
 
-- Clone the template to create a new container:
+- Clonar la plantilla para crear un nuevo contenedor:
 
 ```
 mkdir /var/lib/machines/my-first-container
@@ -233,7 +233,7 @@ WantedBy=multi-user. Objetivo
 
 ```
 
-If you want to use a virtual network device on your container add, `--network` at the end of `ExecStart=/usr/...`.
+Si quieres usar un dispositivo de red virtual en tu contenedor añadido, `--network` al final de `ExecStart=/usr/...`.
 
 - Luego puede iniciar el contenedor con:
 
@@ -259,11 +259,11 @@ la shell de sudo machinectl <your containers name here>
 maquinaria de sudo
 ```
 
-# 4. Acceder a archivos/carpetas en el host desde dentro del contenedor
+# 4. Acceder a archivos/carpetas en el host desde dentro de un contenedor
 
-As the name suggests, a container typically does not have access to your host system. This can be modified to allow the container access to specific files or folders on your host system; for example, to provide additional storage space or grant the container access to your GPU.
+Como el nombre sugiere, un contenedor normalmente no tiene acceso a su sistema de host. Esto puede ser modificado para permitir el acceso al contenedor a archivos o carpetas específicos en su sistema de máquina; por ejemplo, para proporcionar espacio de almacenamiento adicional o permitir el acceso al contenedor a su GPU.
 
-- Access to a file/folder can be achieved with the `--bind` parameter:
+- El acceso a un archivo/carpeta se puede lograr con el parámetro `--bind`:
 
 ```
 systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --bind=<path to your location>
@@ -275,7 +275,7 @@ systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --bi
 systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --bind=/home
 ```
 
-This will mount the folder `/home` to the same location within your container. If you wish to change the mount point inside your container, you can specify this by using a <kbd>:</kbd> between both paths.
+Esto montará la carpeta `/home` a la misma ubicación dentro de tu contenedor. Si desea cambiar el punto de montaje dentro de su contenedor, puede especificar esto usando una <kbd>:</kbd> entre ambas rutas.
 
 - Por ejemplo, si quieres `/home` en `/tmp/home`:
 
@@ -285,4 +285,4 @@ systemd-nspawn --machine="Plantilla" --directory=/var/lib/machines/template --bi
 
 # 8. Notas adicionales
 
-`systemd-nspawn` es una herramienta extremadamente potente. What we covered here are just the basics. Echa un vistazo a la [página de manual](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), si quieres estar asombroso!
+`systemd-nspawn` es una herramienta extremadamente potente. Lo que hemos tratado aquí es sólo lo básico. Echa un vistazo a su [página de manual](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), si quieres estar maravillado!
