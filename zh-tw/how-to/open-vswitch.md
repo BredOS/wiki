@@ -2,7 +2,7 @@
 title: How to manage virtual switches
 description:
 published: true
-date: 2025-09-24T12:11:02.185Z
+date: 2025-09-25T06:12:54.789Z
 tags:
 editor: markdown
 dateCreated: 2025-09-24T11:30:44.331Z
@@ -152,3 +152,18 @@ As always, replace `<your switch name here>` with the name of your switch, and `
 ## 6.1 Fix MTU issue
 
 The MTU defines the maximum size of each packet transferred. While ping packets typically do not fill up to this maximum, "real" communication does. The default MTU is 1500 bytes; if you send a packet of that size through a tunnel, the tunnel itself needs to add information like source and destination addresses. This can exceed the MTU, causing the packet to be split, which may lead to problems for your client's communications. To fix this, simply lower the MTU for your clients to, for example, 1200 bytes. This adjustment can be made through your DHCP server or manually.
+
+# 8. Additional commands
+
+- To list all connected devices of your vSwitch, run:
+
+```
+sudo ovs-vsctl list-ports <your switch name here> 
+```
+
+- To disconnect a network device, run:
+
+```
+sudo ovs-vsctl del-port <your switch name here> <your adapters name here>
+```
+
