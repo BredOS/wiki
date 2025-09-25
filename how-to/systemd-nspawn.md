@@ -2,7 +2,7 @@
 title: Manage systemd-nspawn containers
 description: 
 published: false
-date: 2025-09-25T10:32:01.638Z
+date: 2025-09-25T10:32:53.952Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -13,7 +13,7 @@ dateCreated: 2025-09-25T07:02:39.910Z
 
 Unlike full virtualization solutions like QEMU or container platforms like Docker, `systemd-nspawn` uses Linux namespaces and cgroups to create containers with very little overhead.
 
-# 2. Create container template
+# 2. Create a container template
 Containers using nspawn can be run from any location on your filesystem, but the recommended folder is `/var/lib/machines`. Inside this folder, we create a subfolder that holds our Linux/GNU rootfs. To simplify the process, this article guides you through creating a container template. The contents of that template folder can then be copied to a new location and used as a new container environment.
 
 - Switch to your root user:
@@ -117,7 +117,7 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 3. Run container with virtual network
+# 3. Run a container with virtual network
 The container we created in section [2. Create container template](#h-3-create-container-template) used the network of your hostsystem. If you prefer a virtual network device on your container, for example if you want to use [Open vSwitch](/how-to/open-vswitch), do the following.
 
 - If you want to do this on a new container, clone it:
@@ -177,7 +177,7 @@ passwd <your username here>
 {.is-info}
 
 
-# 4. Run container as a service
+# 4. Run a container as a service
 It it possible to start a container as a service, for example to start it on boottime. There is a implementation through the systemd-nspawn@.service unit, but it requires to create override files to configure it. Our prefered way is to create a new servicefile, which contains all parameters we want to use for our container.
 
 - Clone the template to create a new container:
@@ -230,7 +230,7 @@ sudo machinectl shell <your containers name here>
 sudo machinectl
 ```
 
-# 5. Access files/folders on host from inside the container
+# 5. Access files/folders on host from inside a container
 As the name suggests, a container typically does not have access to your host system. This can be modified to allow the container access to specific files or folders on your host system; for example, to provide additional storage space or grant the container access to your GPU.
 
 - Access to a file/folder can be achieved with the `--bind` parameter:
