@@ -2,7 +2,7 @@
 title: Manage containers with systemd-nspawn
 description: 
 published: false
-date: 2025-09-25T08:18:04.446Z
+date: 2025-09-25T08:36:59.822Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -152,9 +152,9 @@ DNS=<DNS Servers address> example -> 9.9.9.9
 systemctl enable systemd-networkd
 ```
 
-To let the container start that service, it needs to be booted (the command before is more like chrooting). We achive this by the use of the `--boot` parameter.
+To let the container start that service, it needs to be booted (the command before is more like chrooting). We achive this by the use of the `--boot` parameter. Also we add the `--network` parameter to start the container with a virtual network device.
 ```
-systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --boot
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --boot --network
 ```
 
 This will boot the container and throws you into the log-in prompt. Log-in as root is not possible here so you either create a user before booting into the container or continue with section [4. Run container as a service](#h-4-run-container-as-a-service).
@@ -166,3 +166,54 @@ passwd <your username here>
 ```
 
 # 4. Run container as a service
+It it possible to start a container as a service, for example to start it on boottime. There is a implementation through the systemd-nspawn@.service unit, but it requires to create override files to configure it. Our prefered way is to create a new servicefile, which contains all parameters we want to use for our container.
+
+- Clone the teamplate to create a new container:
+```
+mkdir /var/lib/machines/my-first-container
+rsync -avP /var/lib/machines/template/* /var/lib/machines/my-first-container/
+```
+
+- Then create a new servicefile on your host with:
+```
+sudo nano /etc/systemd/system/<your containers name here>.service
+```
+
+- And paste the following into it:
+```
+[Unit]
+Description=<your containers name here>
+After=network.target
+Requires=network.target
+
+[Service]
+ExecStart=/usr/bin/systemd-nspawn --machine=<your containers name here> --directory=/var/lib/machines/my-first-container --boot
+KillMode=mixed
+Type=notify
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+If you want to use virtual network devices on your container add, `--network` at the end of `ExecStart=/usr/...`.
+
+- You can then start the container with:
+```
+sudo systemctl start <your containers name here>.service
+```
+- Or let it start on boottime with:
+```
+sudo systemctl enable <your containers name here>.service
+```
+
+- To log into your container, use `machinectl`:
+```
+sudo machinectl shell <your containers name here>
+```
+
+- And check all running containers (and VM's) with:
+```
+sudo machinectl
+```
