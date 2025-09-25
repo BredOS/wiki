@@ -1,8 +1,8 @@
 ---
-title: Manage containers with systemd-nspawn
+title: Manage systemd-nspawn containers
 description: 
 published: false
-date: 2025-09-25T10:15:56.522Z
+date: 2025-09-25T10:32:01.638Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
