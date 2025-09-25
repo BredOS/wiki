@@ -1,8 +1,8 @@
 ---
-title: systemd-nspawn でコンテナを管理
+title: systemd-nspawn コンテナの管理
 description:
 published: false
-date: 2025-09-25T10:15:56.522Z
+date: 2025-09-25T10:54:42.662Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -109,7 +109,7 @@ echo -e '# --> BredOS Mirrorlist <-- #\n\n# BredOS Main mirror\nServer = https:/
 nano /etc/pacman.conf
 ```
 
-- And add the following to the end of the file:
+- ファイルの最後に以下を追加します。
 
 ```
 [BredOS-any]
@@ -119,7 +119,7 @@ Include = /etc/pacman.d/bredos-mirrorlist
 Include = /etc/pacman.d/bredos-mirrorlist
 ```
 
-Save and close the file with <kbd>Ctrl</kbd> + <kbd>X</kbd> and <kbd>Y</kbd>
+<kbd>Ctrl</kbd> + <kbd>X</kbd> と <kbd>Y</kbd>
 
 - 最後に変換を開始します:
 
@@ -133,9 +133,9 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 4. 仮想ネットワークでコンテナを実行
+# 4. 仮想ネットワークを使用してコンテナを実行
 
-セクションで作成したコンテナ [2. コンテナーテンプレートを作成](#h-3-create-container-template) ホストシステムのネットワークを使用しました。 If you prefer a virtual network device on your container, for example if you want to use [Open vSwitch](/how-to/open-vswitch), do the following.
+セクションで作成したコンテナ [2. コンテナーテンプレートを作成](#h-3-create-container-template) ホストシステムのネットワークを使用しました。 コンテナ上で仮想ネットワークデバイスを使用する場合、例えば[Open vSwitch](/how-to/open-vswitch)を使用する場合は、以下の手順を実行します。
 
 - 新しいコンテナでこれを行いたい場合は、以下のようにします。
 
@@ -181,13 +181,13 @@ DNS=<DNS Servers address> example -> 9.9.9.9
 systemctl enable systemd-networkd
 ```
 
-To let the container start that service, it needs to be booted (the previous command is more like chrooting). We achieve this by using the `--boot` parameter. Additionally, we add the `--network` parameter to start the container with a virtual network device.
+コンテナがそのサービスを開始させるには、起動する必要があります (前のコマンドは chrootのようなものです)。 `--boot` パラメータを使用してこれを達成します。 さらに、`--network` パラメータを追加して、仮想ネットワークデバイスでコンテナを起動します。
 
 ```
 systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --boot -network
 ```
 
-This will boot the container and display the login prompt. Logging in as root is not possible, so you must either create a user before booting into the container or proceed to section [4. コンテナをサービスとして実行する](#h-4-run-container-as-a-service)。
+これでコンテナを起動し、ログインプロンプトが表示されます。 root としてログインすることはできませんので、コンテナを起動する前にユーザを作成するか、セクションに進んでください[4. コンテナをサービスとして実行する](#h-4-run-container-as-a-service)。
 
 - ユーザーを作成するには、コンテナ内で以下を実行します。
 
@@ -203,7 +203,7 @@ passwd <your username here>
 
 コンテナをサービスとして起動することも可能です。例えば、ブート時に起動することも可能です。 systemd-nspawn@.service ユニットを通じて実装がありますが、それを設定するためにオーバーライドファイルを作成する必要があります。 私たちの好ましい方法は、コンテナに使用したいすべてのパラメータを含む新しいservicefileを作成することです。
 
-- Clone the template to create a new container:
+- 新しいコンテナを作成するためにテンプレートをクローンします:
 
 ```
 mkdir /var/lib/machines/my-first-container
@@ -235,7 +235,7 @@ WantedBy=multi-user.target
 
 ```
 
-If you want to use a virtual network device on your container add, `--network` at the end of `ExecStart=/usr/...`.
+コンテナ上で仮想ネットワークデバイスを使用したい場合は、 `ExecStart=/usr/...` の末尾に `--network` を追加します。
 
 - その後、次のようにコンテナを起動できます。
 
@@ -263,9 +263,9 @@ sudo machinectl shell <your containers name here>
 
 # 🔄 3. コンテナ内からホスト上のファイル/フォルダにアクセスする
 
-As the name suggests, a container typically does not have access to your host system. This can be modified to allow the container access to specific files or folders on your host system; for example, to provide additional storage space or grant the container access to your GPU.
+名前が示すように、コンテナは通常、ホストシステムにアクセスできません。 これは、コンテナがホストシステム上の特定のファイルやフォルダにアクセスできるように変更することができます。 たとえば、追加のストレージスペースを提供したり、ご使用の GPU へのコンテナアクセスを許可するなどです。
 
-- Access to a file/folder can be achieved with the `--bind` parameter:
+- `--bind`パラメータでファイル/フォルダへのアクセスを行うことができます。
 
 ```
 systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --bind=<path to your location>
@@ -277,7 +277,7 @@ systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/temp
 systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/template --bind=/home
 ```
 
-This will mount the folder `/home` to the same location within your container. If you wish to change the mount point inside your container, you can specify this by using a <kbd>:</kbd> between both paths.
+フォルダ`/home`をコンテナ内の同じ場所にマウントします。 コンテナ内のマウントポイントを変更したい場合は、両方のパス間で <kbd>:</kbd> を使用して指定できます。
 
 - 例えば、 `/tmp/home`を`/tmp/home`にしたい場合:
 
@@ -287,4 +287,4 @@ systemd-nspawn --machine="テンプレート" --directory=/var/lib/machines/temp
 
 # 8. 追加メモ
 
-`systemd-nspawn` は非常に強力なツールです。 What we covered here are just the basics. あなたが驚かれたいなら、そこに[man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html)を見てみましょう!
+`systemd-nspawn` は非常に強力なツールです。 ここで私たちが取り上げたのは、基本的なことです。 驚かせたいなら、彼らの [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html) を見てみよう！
