@@ -2,7 +2,7 @@
 title: Manage containers with systemd-nspawn
 description: 
 published: false
-date: 2025-09-25T08:10:46.099Z
+date: 2025-09-25T08:18:04.446Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -157,7 +157,7 @@ To let the container start that service, it needs to be booted (the command befo
 systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --boot
 ```
 
-This will boot the container and throws you into the log-in. Log-in as root is not possible here so you either create a user before booting into the container or continue with section [4. Run container as a service](#h-4-run-container-as-a-service).
+This will boot the container and throws you into the log-in prompt. Log-in as root is not possible here so you either create a user before booting into the container or continue with section [4. Run container as a service](#h-4-run-container-as-a-service).
 
 - To create a user, run the following inside your container:
 ```
