@@ -2,7 +2,7 @@
 title: 如何管理虚拟开关
 description:
 published: true
-date: 2025-09-24T12:11:02.185Z
+date: 2025-09-25T06:12:54.789Z
 tags:
 editor: markdown
 dateCreated: 2025-09-24T11：30：44.331Z
@@ -152,3 +152,18 @@ As always, replace `<your switch name here>` with the name of your switch, and `
 ## 6.1 解决MTU问题
 
 MTU 定义了每个传输数据包的最大尺寸。 虽然ping 数据包通常不会填充到这个最大值，“real”通信就是这样的。 默认的 MTU 是 1500 字节； 如果你通过隧道发送了一个这么大的数据包，隧道本身需要添加诸如源地址和目的地址等信息。 这可能超过 MTU，导致数据包被分割，这可能会导致您客户的通信出现问题。 为了解决这个问题，只需将您客户端的 MTU 降低到1 200字节。 此调整可以通过您的DHCP服务器或手动进行。
+
+# 8. 附加命令
+
+- 若要列出您vSwitch的所有已连接设备，请运行：
+
+```
+sudo ovs-vsctl 列表端口 <your switch name here> 
+```
+
+- 要断开网络设备，请运行：
+
+```
+sudo ovs-vscl del-port <your switch name here> <your adapters name here>
+```
+
