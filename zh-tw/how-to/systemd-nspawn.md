@@ -2,7 +2,7 @@
 title: Manage containers with systemd-nspawn
 description:
 published: false
-date: 2025-09-25T08:18:04.446Z
+date: 2025-09-25T08:57:29.846Z
 tags:
 editor: markdown
 dateCreated: 2025-09-25T07:02:39.910Z
@@ -48,7 +48,10 @@ As a container can hold any distribution's rootfs, you are relatively free in yo
 - [Arch Linux ARM](https://archlinuxarm.org/os/) Download the .tar.gz file with the `latest` and `aarch64` or `armv7` tag.
   {.links-list}
 
-After you have downloaded your rootfs tarball of choice, we need to extract it. In this example we downloaded the Arch Linux ARM tarball and convert it to BredOS later.
+> A BredOS rootfs will be available soon!
+> {.is-warning}
+
+After you have downloaded your rootfs tarball of choice, we need to extract it. In this example we downloaded the Arch Linux ARM tarball and convert it to BredOS.
 
 - Still as root extract the tarball into `/var/lib/machines/template`:
 
@@ -126,7 +129,7 @@ pacman -Syu bred-os-release BredOS-any/lsb-release bredos-logo
 pacman -Sy bredos-config bredos-news
 ```
 
-# 4. Create container with virtual network
+# 4. Run container with virtual network
 
 The container we created in section [2. Create container template](#h-3-create-container-template) used the network of your hostsystem. If you prefer a virtual network device on your container, for example because you want to use [Open vSwitch](/en/how-to/open-vswitch), do the following.
 
@@ -173,10 +176,10 @@ DNS=<DNS Servers address> example -> 9.9.9.9
 systemctl enable systemd-networkd
 ```
 
-To let the container start that service, it needs to be booted (the command before is more like chrooting). We achive this by the use of the `--boot` parameter.
+To let the container start that service, it needs to be booted (the command before is more like chrooting). We achive this by the use of the `--boot` parameter. Also we add the `--network` parameter to start the container with a virtual network device.
 
 ```
-systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --boot
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --boot --network
 ```
 
 This will boot the container and throws you into the log-in prompt. Log-in as root is not possible here so you either create a user before booting into the container or continue with section [4. Run container as a service](#h-4-run-container-as-a-service).
@@ -188,4 +191,95 @@ useradd <your username here>
 passwd <your username here>
 ```
 
+> As you may want to use your virtual network device for actual networking, further configuration is needed. Use, for example, [Open vSwitch](/how-to/open-vswitch) or a simple bridge device to connect the virtual network device to something.
+> {.is-info}
+
 # 🔁 4. Run container as a service
+
+It it possible to start a container as a service, for example to start it on boottime. There is a implementation through the systemd-nspawn@.service unit, but it requires to create override files to configure it. Our prefered way is to create a new servicefile, which contains all parameters we want to use for our container.
+
+- Clone the teamplate to create a new container:
+
+```
+mkdir /var/lib/machines/my-first-container
+rsync -avP /var/lib/machines/template/* /var/lib/machines/my-first-container/
+```
+
+- Then create a new servicefile on your host with:
+
+```
+sudo nano /etc/systemd/system/<your containers name here>.service
+```
+
+- And paste the following into it:
+
+```
+[Unit]
+Description=<your containers name here>
+After=network.target
+Requires=network.target
+
+[Service]
+ExecStart=/usr/bin/systemd-nspawn --machine=<your containers name here> --directory=/var/lib/machines/my-first-container --boot
+KillMode=mixed
+Type=notify
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+If you want to use virtual network devices on your container add, `--network` at the end of `ExecStart=/usr/...`.
+
+- You can then start the container with:
+
+```
+sudo systemctl start <your containers name here>.service
+```
+
+- Or let it start on boottime with:
+
+```
+sudo systemctl enable <your containers name here>.service
+```
+
+- To log into your container, use `machinectl`:
+
+```
+sudo machinectl shell <your containers name here>
+```
+
+- And check all running containers (and VM's) with:
+
+```
+sudo machinectl
+```
+
+# 5. Access files/folders on host from inside the container
+
+As the name suggests, a container normally has no access to your hostsystem. This can be changed to let the container access specific files or folders on your hostsystem, for example to open up storage space or give the container access to your GPU.
+
+- Access to a file/folder can be achived with the `--bind` parameter:
+
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bind=<path to your location>
+```
+
+- For example, if you want to share your home floder:
+
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bind=/home
+```
+
+This will mount the folder `/home` to the same location inside your loaction. If you want to change the mountpoint inside your container you can specify this with a <kbd>:</kbd> between both path's.
+
+- For example, if you want `/home` at `/tmp/home`:
+
+```
+systemd-nspawn --machine="Template" --directory=/var/lib/machines/template --bind=/home:/tmp/home
+```
+
+# 5. Additional Notes
+
+`systemd-nspawn` is a extremly powerful tool. What we covered here is merely more than the basics. Take a look at there [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html), if you want to be amazed!
