@@ -22,7 +22,7 @@ sudo pacman -S waydroid
 
 ## 2.1 RK3588
 
-You need panthor enabled and setup. To do this follow [this guide](/how-to/how-to-setup-panthor).
+您需要启用全景并进行设置。 要做到这一点，请关注[本指南](/how-to/how-to-setup-panthor)。
 
 - Install panthor image:
 
