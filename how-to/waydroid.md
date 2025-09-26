@@ -2,7 +2,7 @@
 title: Run Android apps (waydroid)
 description: 
 published: true
-date: 2025-09-21T12:54:43.353Z
+date: 2025-09-26T10:03:46.309Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T08:40:19.752Z
@@ -19,7 +19,7 @@ sudo pacman -S waydroid
 
 ## 2.1 RK3588
 
-You need panthor enabled and setup follow [this guide](/how-to/how-to-setup-panthor).
+You need panthor enabled and setup. To do this follow [this guide](/how-to/how-to-setup-panthor).
 - Install panthor image:
 
 ```
