@@ -22,7 +22,7 @@ sudo pacman -S waydroid
 
 ## 2.1 RK3588
 
-You need panthor enabled and setup. To do this follow [this guide](/how-to/how-to-setup-panthor).
+Necesitas activar y configurar el panthor. Para hacer esto, sigue [esta guía] (/how-to/how-to-setup-panthor).
 
 - Install panthor image:
 
