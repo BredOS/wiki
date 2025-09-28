@@ -2,7 +2,7 @@
 title: UEFIのインストール
 description:
 published: true
-date: 2025-09-28T08:24:50.721Z
+date: 2025-09-28T09:53:54.047Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -37,7 +37,7 @@ dateCreated: 2025-09-16T11:29:43.061Z
 > 今、あなたのデバイスはすべての素敵なUEFIグッズが可能です!
 > {.is-success}
 
-## 3.2 SPIへのインストール
+## 3.2 UEFI内からSPIへのインストール
 
 > 3.1をスキップした場合は、戻ります。 このステップはSPIチップに点滅するために必要です!
 > その後、SDカードを削除できます。
@@ -67,6 +67,10 @@ sf updatefile <FIRMWARE.img> 0x0
 ```
 
 - SBCをパワーダウンし、SDカードを取り外します。
+
+## 3.3 BredOS内からSPIへのインストール
+
+If your board is booted into BredOS, it is possible to install UEFI on your SPI by following [this guide](/en/how-to/update-uefi-rk3588). セクションの下[3. UEFI ファームウェアの書き込み中です](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) `/dev/mtdblock0` をターゲットデバイスとして使用します。
 
 > 今、あなたのデバイスはすべての素敵なUEFIグッズが可能です!
 > {.is-success}
