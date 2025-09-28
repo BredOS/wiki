@@ -1,8 +1,8 @@
 ---
 title: Flashing the eMMC with Microsoft Windows
 description: 
-published: false
-date: 2025-09-18T08:59:46.182Z
+published: true
+date: 2025-09-28T12:17:17.885Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
