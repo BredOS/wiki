@@ -2,7 +2,7 @@
 title: Flashing the eMMC with Microsoft Windows
 description: 
 published: true
-date: 2025-09-28T12:17:17.885Z
+date: 2025-09-28T12:18:15.607Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -39,6 +39,13 @@ In `RKDevTool` set the following configuration and click on `RUN`:
 - Click on `RUN` and wait until the process finishes.
 
 > We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
+{.is-warning}
+
+> The Maskrom button should be held down **while power is being plugged** into the board.
+{.is-info}
+
+> Using USB-C to C cables, or a USB-C to A cable backwards may result to the board not being detected.
+It is recommended to use a USB-C to A cable, then a [USB-C Female to USB-A Male adapter](https://www.aliexpress.com/item/1005004767752226.html) or a USB-A to A cable.
 {.is-warning}
 
 Wait for it to finish the flashing process and you are good to go.
