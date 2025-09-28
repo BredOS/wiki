@@ -90,11 +90,11 @@ dateCreated: 2025-09-15T12:36.362Z
 
 ### 3.3.1 前提条件
 
-As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
+由于我们的设备不支持直接从NVMe驱动器启动，我们需要将UEFI安装到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
 
-### 3.3.2 Flashing NVMe
+### 3.3.2 燃NVMe
 
-直接或通过 USB 适配器将驱动器连接到您的电脑。 Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the NVMe port of your SBC.
+直接或通过 USB 适配器将驱动器连接到您的电脑。 Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive. 刷入后将驱动器连接到 SBC 的 NVMe 端口。
 
 ### 3.3.3 启动顺序
 
