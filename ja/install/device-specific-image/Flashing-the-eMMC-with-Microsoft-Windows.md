@@ -2,7 +2,7 @@
 title: Microsoft Windows で eMMC の書き込み
 description:
 published: true
-date: 2025-09-28T12:18:15.607Z
+date: 2025-09-28T12:20:24.588Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -25,7 +25,11 @@ BredOS のインストールには、以下の4つのものが必要です:
 3. [RockChip Maskrom drivers](https://dl.radxa.com/tools/windows/)
 4. [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool), [Alternative Link 1](https://dl.radxa.com/tools/windows/)
 
-# 2) 2) ドライバ
+> 画像は .xz 圧縮ファイルとして提供します。 画像は .xz 圧縮ファイルとして提供します。 書き込みの前に含まれている .img ファイルを抽出する必要があります。
+> {.is-warning}
+> {.is-warning}
+
+# 2. 2. ドライバ
 
 We start with the installation of the [Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip). その.zipファイルをダウンロードした後、それをあなたの好みの場所に抽出します。
 内部には、ツール「DriverInstall.exe」があります。 権利を高めて実行します。
@@ -47,10 +51,6 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 - SBCのブレッドOSイメージ (.img) を選択します。
 - 「アドレスで書く」をチェックします。
 - `RUN`をクリックして、プロセスが終了するまで待ちます。
-
-> 画像は .xz 圧縮ファイルとして提供します。 画像は .xz 圧縮ファイルとして提供します。 書き込みの前に含まれている .img ファイルを抽出する必要があります。
-> {.is-warning}
-> {.is-warning}
 
 > 電源が差し込まれている間、Maskromボタンを押したままにします。
 > {.is-warning}
