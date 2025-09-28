@@ -2,7 +2,7 @@
 title: Página web
 description:
 published: true
-date: 2025-09-23T10:13:07.518Z
+date: 2025-09-28T08:28:08.206Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -37,7 +37,7 @@ Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados 
 ## 🛠️ Requisitos del sistema
 
 - **🧠 RAM mínimo**: 2 GB
-- **💾 Almacenamiento**: tarjeta microSD de 16 GB o mayor
+- Almacenamiento: 8 GB de tarjeta microSD, eMMC/NVMe o más grande
 
 # 4. Instalación
 
