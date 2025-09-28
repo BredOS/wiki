@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: true
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-28T08:24:20.184Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -26,7 +26,7 @@ dateCreated: 2025-09-15T12:36.362Z
 
 - `3.1 不可移动eMMC`
 - `3.2 可移动eMMC 和 SD Card`
-- `3.3 nVME`
+- [3.3 NVMe](#h-33-nvme)
 
 > 在您开始之前，请检查您的设备上有哪些选项可用！
 > {.is-info}
@@ -86,15 +86,15 @@ dateCreated: 2025-09-15T12:36.362Z
 > {.is-warning} 请确保你在刷入之前解压他们！
 > {.is-warning}
 
-## 3.3 nVME
+## 3.3 NVMe
 
 ### 3.3.1 前提条件
 
-由于我们的设备不支持直接从 nVME 驱动器启动，我们需要安装 UEFI 到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 要将 UEFI 安装到您的 SPI 或 SD 卡遵循[本指南](/en/install/Installation-of-UEFI)。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide. 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
+As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
 
-### 3.3.2 Flashing nVME
+### 3.3.2 Flashing NVMe
 
-直接或通过 USB 适配器将驱动器连接到您的电脑。 Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive. 直接或通过 USB 适配器将驱动器连接到您的电脑。 After flashing connect the drive to the nVME port of your SBC.
+直接或通过 USB 适配器将驱动器连接到您的电脑。 Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the NVMe port of your SBC.
 
 ### 3.3.3 启动顺序
 
