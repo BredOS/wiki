@@ -87,11 +87,11 @@ SDカードやeMMCをフラッシュするための無数のツールがあり�
 
 ### 3.3.1 事前要件
 
-As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide. To install UEFI to your SPI or SD Card follow this guide.
+NVMeドライブからの直接起動はデバイスではサポートされていないため、UEFIを別のメディアにインストールする必要があります。 UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide. To install UEFI to your SPI or SD Card follow this guide.
 
-### 3.3.2 Flashing NVMe
+### 3.3.2 NVMeのフラッシュ
 
-ドライブを直接またはUSBアダプタ経由でPCに接続します。 ドライブを直接またはUSBアダプタ経由でPCに接続します。 次に、[3.2] で推奨されるツールのいずれかを使用します。 EMMC / SDカードの書き込み](#h-322-flashing-emmc-sd-card)、NVMeドライブの正しいドライブ文字またはパスを使用してください。 点滅後、ドライブをSBCのnVMEポートに接続します。 After flashing connect the drive to the NVMe port of your SBC.
+ドライブを直接またはUSBアダプタ経由でPCに接続します。 ドライブを直接またはUSBアダプタ経由でPCに接続します。 次に、[3.2] で推奨されるツールのいずれかを使用します。 EMMC / SDカードの書き込み](#h-322-flashing-emmc-sd-card)、NVMeドライブの正しいドライブ文字またはパスを使用してください。 点滅後、ドライブをSBCのnVMEポートに接続します。 点滅後、ドライブをSBCのNVMeポートに接続します。
 
 ### 3.3.3 ブートオーダー
 
