@@ -2,7 +2,7 @@
 title: BredOS 主頁
 description:
 published: true
-date: 2025-09-23T10:13:07.518Z
+date: 2025-09-28T08:28:08.206Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
@@ -39,7 +39,7 @@ We support a wide range of devices—from exciting ARM-based systems and experim
 ## 🛠️ System Requirements
 
 - **🧠 Minimum RAM**: 2 GB
-- **💾 Storage**: 16 GB microSD card or larger
+- Storage: 8 GB microSD card/eMMC/NVMe or larger
 
 # 🔁 4. 安裝
 
