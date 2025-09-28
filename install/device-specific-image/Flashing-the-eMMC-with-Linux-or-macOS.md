@@ -1,8 +1,8 @@
 ---
 title: Flashing the eMMC with Linux or macOS
 description: 
-published: false
-date: 2025-09-28T12:16:09.550Z
+published: true
+date: 2025-09-28T12:16:17.455Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
