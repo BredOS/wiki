@@ -1,8 +1,8 @@
 ---
 title: Flashear el eMMC con Microsoft Windows
 description:
-published: false
-date: 2025-09-18T08:59:46.182Z
+published: true
+date: 2025-09-28T12:18:15.607Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -43,6 +43,13 @@ En `RKDevTool` establece la siguiente configuración y haz clic en `RUN`:
 - Haga clic en `RUN` y espere hasta que el proceso termine
 
 > Proporcionamos nuestras imágenes como archivos comprimidos .xz. ¡Necesita extraer el archivo .img que contiene antes de flashear!
+> {.is-warning}
+
+> El botón de Maskrom se debe mantener presionado **mientras se conecta la energía** en el tablero.
+> {.is-info}
+
+> El uso de cables USB-C a C, o de un cable USB-C a un cable hacia atrás puede resultar en que no se detecte la placa.
+> Se recomienda usar un cable USB-C a un cable, luego una [USB-C Femenina al adaptador USB-A Masal](https://www.aliexpress.com/item/1005004767752226.html) o un cable USB-A.
 > {.is-warning}
 
 Espere a que termine el proceso de parpadeo y estará listo para empezar.
