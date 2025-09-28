@@ -1,8 +1,8 @@
 ---
 title: Flashing the eMMC with Linux or macOS
 description:
-published: false
-date: 2025-09-18T08:57:18.967Z
+published: true
+date: 2025-09-28T12:19:08.941Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,11 +14,20 @@ This guide describes how to flash an eMMC using the tool `rkdeveloptool`. It can
 
 For the installation of BredOS, three things are required:
 
-1. SPI loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. SPL loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
-# 3) Flashing
+> We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
+> {.is-warning}
+
+> Other Rockchip chip variants require different SPL loaders!
+> \
+> For example, for the RK3566, the SPL loader can be found here:
+> [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+> {.is-info}
+
+# 3. Flashing
 
 The installation of `rkdeveloptool` can be done with the following steps.
 
@@ -27,7 +36,7 @@ The installation of `rkdeveloptool` can be done with the following steps.
 - If you are using an Arch-based distribution
 
 ```
-sudo pacman -S rkdeveloptool
+sudo pacman -S rkdeveloptool-git
 ```
 
 - If you are using an Debian-based distribution
@@ -116,6 +125,13 @@ sudo rkdeveloptool ld
 ```
 DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom
 ```
+
+> The Maskrom button should be held down **while power is being plugged** into the board.
+> {.is-info}
+
+> Using USB-C to C cables, or a USB-C to A cable backwards may result to the board not being detected.
+> It is recommended to use a USB-C to A cable, then a [USB-C Female to USB-A Male adapter](https://www.aliexpress.com/item/1005004767752226.html) or a USB-A to A cable.
+> {.is-warning}
 
 ## 3.2 Flash BredOS
 
