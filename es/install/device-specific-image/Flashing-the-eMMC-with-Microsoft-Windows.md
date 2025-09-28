@@ -2,7 +2,7 @@
 title: Flashear el eMMC con Microsoft Windows
 description:
 published: true
-date: 2025-09-28T12:18:15.607Z
+date: 2025-09-28T12:20:24.588Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -21,7 +21,10 @@ Para la instalación de BredOS, son necesarias cuatro cosas:
 3. [RockChip Maskrom drivers](https://dl.radxa.com/tools/windows/)
 4. [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool), [Enlace alternativo 1](https://dl.radxa.com/tools/windows/)
 
-# 2) Conductores
+> Proporcionamos nuestras imágenes como archivos comprimidos .xz. ¡Necesita extraer el archivo .img que contiene antes de flashear!
+> {.is-warning}
+
+# 2. Conductores
 
 Empezamos con la instalación del [Motivador de Rockchip](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip). Después de descargar ese archivo .zip, extraerlo a su ubicación preferida.
 Dentro encontrará la herramienta `DriverInstall.exe`. Ejecutar con derechos elevados.
@@ -41,9 +44,6 @@ En `RKDevTool` establece la siguiente configuración y haz clic en `RUN`:
 - Seleccione la imagen BredOS (.img) para su SBC
 - Comprueba `Escribir por Dirección`
 - Haga clic en `RUN` y espere hasta que el proceso termine
-
-> Proporcionamos nuestras imágenes como archivos comprimidos .xz. ¡Necesita extraer el archivo .img que contiene antes de flashear!
-> {.is-warning}
 
 > El botón de Maskrom se debe mantener presionado **mientras se conecta la energía** en el tablero.
 > {.is-info}
