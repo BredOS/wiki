@@ -2,7 +2,7 @@
 title: 主页
 description:
 published: true
-date: 2025-09-23T10：13：07.518Z
+date: 2025-09-28T08:28:08.206Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -38,7 +38,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 ## 3.1 最低限度制度要求
 
 - **🧠 最小内存**：2 GB
-- **💾 存储**：16 GB 或更大的 microSD 卡
+- 存储: 8 GB microSD card/eMMC/NVMe 或大于
 
 # 🚀 4. 刷入
 
