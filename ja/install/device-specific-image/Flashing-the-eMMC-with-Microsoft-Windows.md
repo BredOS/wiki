@@ -1,8 +1,8 @@
 ---
 title: Microsoft Windows で eMMC の書き込み
 description:
-published: false
-date: 2025-09-18T08:59:46.182Z
+published: true
+date: 2025-09-28T12:18:15.607Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -49,6 +49,15 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 - `RUN`をクリックして、プロセスが終了するまで待ちます。
 
 > 画像は .xz 圧縮ファイルとして提供します。 画像は .xz 圧縮ファイルとして提供します。 書き込みの前に含まれている .img ファイルを抽出する必要があります。
+> {.is-warning}
+> {.is-warning}
+
+> 電源が差し込まれている間、Maskromボタンを押したままにします。
+> {.is-warning}
+
+> USB-CからCへのケーブル、またはUSB-CからAへのケーブルを使用すると、ボードが検出されない可能性があります。
+> USB-CをAケーブルに使用することをお勧めします。 次に、[USB-C メスから USB-A 男性アダプタ](https://www.aliexpress.com/item/1005004767752226.html)またはUSB-A ケーブル。
+> これを実行することはできません！
 > {.is-warning}
 > {.is-warning}
 
