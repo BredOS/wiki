@@ -2,7 +2,7 @@
 title: ホームページ
 description:
 published: true
-date: 2025-09-23T10:13:07.518Z
+date: 2025-09-28T08:28:08.206Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -38,7 +38,7 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 ## 3.1 最小システム要件
 
 - **🧠 最小RAM**: 2 GB
-- Storage: 8 GB microSD card or larger
+- ストレージ: 8 GB microSD カード/eMMC/NVMe 以上
 
 # 🚀 4. インストール
 
