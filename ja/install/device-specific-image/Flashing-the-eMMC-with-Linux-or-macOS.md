@@ -1,8 +1,8 @@
 ---
 title: Linux または macOS で eMMC の書き込み
 description:
-published: false
-date: 2025-09-18T08:57:18.967Z
+published: true
+date: 2025-09-28T12:19:08.941Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,11 +14,23 @@ dateCreated: 2025-09-16T06:29:26.865Z
 
 BredOS のインストールには、以下の3つのことが必要です。
 
-1. SPI loader file for example, for the RK3588: [`rk3588_spl_loader_v1.15.11.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.11.bin)
+1. SPLローダーファイル、例えばRK3588: [`rk3588_spl_loader_v1.15.115.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
-# 3) フラッシュ中
+> 画像は .xz 圧縮ファイルとして提供します。 画像は .xz 圧縮ファイルとして提供します。 書き込みの前に含まれている .img ファイルを抽出する必要があります。
+> {.is-warning}
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
+
+> その他の Rockchip チップバリアントには、異なる SPL ローダーが必要です。
+> \
+> 例えば、RK3566の場合、SPLローダーはここにあります:
+> [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+> {.is-info}
+
+# 3. フラッシュ中
 
 `rkdeveloptool` のインストールは以下の手順で行うことができます。
 
@@ -27,7 +39,7 @@ BredOS のインストールには、以下の3つのことが必要です。
 - Archベースのディストリビューションを使用している場合
 
 ```
-sudo pacman -S rkdeveloptool
+sudo pacman -S rkdeveloptool-git
 ```
 
 - Debian ベースのディストリビューションを使用している場合
@@ -116,6 +128,15 @@ sudo rkdeveloptool ld
 ```
 DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801マスク
 ```
+
+> 電源が差し込まれている間、Maskromボタンを押したままにします。
+> {.is-warning}
+
+> USB-CからCへのケーブル、またはUSB-CからAへのケーブルを使用すると、ボードが検出されない可能性があります。
+> USB-CをAケーブルに使用することをお勧めします。 次に、[USB-C メスから USB-A 男性アダプタ](https://www.aliexpress.com/item/1005004767752226.html)またはUSB-A ケーブル。
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
 
 ## 3.2 フラッシュブレッドOS
 
