@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-09-25T11:48:01.757Z
+date: 2025-09-28T12:21:49.254Z
 tags:
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -45,6 +45,8 @@ Esta página contiene guías, tutoriales y consejos sobre cómo instalar o usar 
 - [Cómo administrar los switches virtuales](/how-to/open-vswitch)
 
 - [Cómo administrar los contenedores de nspawn del sistema](/how-to/systemd-nspawn)
+
+- [Guía de parpadeo extendida](/how-to/extended-flashing-guide)
 
 > ¡Explora estas guías para sacar el máximo provecho de BredOS!
 > {.is-info}
