@@ -1,8 +1,8 @@
 ---
 title: Flashear el eMMC con Linux o macOS
 description:
-published: false
-date: 2025-09-18T08:57:18.967Z
+published: true
+date: 2025-09-28T12:19:08.941Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,11 +14,20 @@ Esta guía describe cómo flashear un eMMC usando la herramienta `rkdeveloptool`
 
 Para la instalación de BredOS, se requieren tres cosas:
 
-1. Archivo de cargador SPI, por ejemplo para el RK3588: [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. Archivo del cargador SPL, por ejemplo para el RK3588: [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 2. Imagen específica del dispositivo de nuestro [sitio web oficial](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
-# 3) Parpadeando
+> Proporcionamos nuestras imágenes como archivos comprimidos .xz. ¡Necesita extraer el archivo .img que contiene antes de flashear!
+> {.is-warning}
+
+> Otras variantes de chip Rockchip requieren diferentes cargadores SPL!
+> \
+> Por ejemplo, para el RK3566, el cargador SPL se puede encontrar aquí:
+> [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+> {.is-info}
+
+# 3. Parpadeando
 
 La instalación de `rkdeveloptool` se puede realizar con los siguientes pasos.
 
@@ -27,7 +36,7 @@ La instalación de `rkdeveloptool` se puede realizar con los siguientes pasos.
 - Si está utilizando una distribución basada en arco
 
 ```
-sudo pacman -S rkdeveloptool
+sudo pacman -S rkdeveloptool-git
 ```
 
 - Si está utilizando una distribución basada en Debian
@@ -116,6 +125,13 @@ sudo rkdeveloptool ld
 ```
 DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom
 ```
+
+> El botón de Maskrom se debe mantener presionado **mientras se conecta la energía** en el tablero.
+> {.is-info}
+
+> El uso de cables USB-C a C, o de un cable USB-C a un cable hacia atrás puede resultar en que no se detecte la placa.
+> Se recomienda usar un cable USB-C a un cable, luego una [USB-C Femenina al adaptador USB-A Masal](https://www.aliexpress.com/item/1005004767752226.html) o un cable USB-A.
+> {.is-warning}
 
 ## 3.2 Flash BredOS
 
