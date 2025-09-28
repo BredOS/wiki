@@ -2,13 +2,13 @@
 title: Extended Flashing Guide
 description: A bit more on how to use RKDevelopTool
 published: true
-date: 2025-09-28T13:02:13.948Z
+date: 2025-09-28T13:02:34.069Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-28T13:02:13.948Z
 ---
 
-Well, you want just want more progress bars in your life, right?
+Well, you just want more progress bars in your life, right?
 We gotya covered :thumbsup: don't worry.
 
 ## Reading chosen flash medium info
