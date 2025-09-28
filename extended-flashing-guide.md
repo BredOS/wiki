@@ -2,7 +2,7 @@
 title: Extended Flashing Guide
 description: A bit more on how to use RKDevelopTool
 published: true
-date: 2025-09-28T13:02:34.069Z
+date: 2025-09-28T13:03:36.252Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-28T13:02:13.948Z
@@ -14,7 +14,7 @@ We gotya covered :thumbsup: don't worry.
 ## Reading chosen flash medium info
  - `sudo rkdeveloptool rfi`
  
-This command will show you what is the chosen flash medium that is going to be flashed.
+This command will show you the details of the chosen flash medium.
 By default, this usually is the eMMC, unless it's unavailable.
 
 ```
