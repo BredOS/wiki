@@ -2,7 +2,7 @@
 title: Flashing the eMMC with Linux or macOS
 description: 
 published: true
-date: 2025-09-28T12:16:17.455Z
+date: 2025-09-28T12:19:08.941Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -16,12 +16,14 @@ For the installation of BredOS, three things are required:
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
+> We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
+{.is-warning}
+
 > Other Rockchip chip variants require different SPL loaders!
 \
 For example, for the RK3566, the SPL loader can be found here:
 [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
-{.is-warning}
-
+{.is-info}
 
 # 2. Installation
 The installation of `rkdeveloptool` can be done with the following steps.
