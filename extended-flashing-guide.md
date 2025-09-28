@@ -2,7 +2,7 @@
 title: Extended Flashing Guide
 description: A bit more on how to use RKDevelopTool
 published: true
-date: 2025-09-28T13:03:36.252Z
+date: 2025-09-28T13:04:20.111Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-28T13:02:13.948Z
@@ -33,8 +33,8 @@ Flash Info:
 ## Changing flash target
 Want to flash / dump not the eMMC but a different thing?
 
-`sudo rkdeveloptool cs 2` to choose the sdcard.
-`sudo rkdeveloptool cs 9` to select the SPINOR chip.
-`sudo rkdeveloptool cs 1` to select the eMMC again.
+ - `sudo rkdeveloptool cs 2` to choose the sdcard.
+ - `sudo rkdeveloptool cs 9` to select the SPINOR chip.
+ - `sudo rkdeveloptool cs 1` to select the eMMC again.
 
-The change will be shown in `sudo rkdeveloptool rfi`.
+The change will be reflected in `sudo rkdeveloptool rfi`.
