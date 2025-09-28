@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-09-25T11:48:01.757Z
+date: 2025-09-28T12:21:49.254Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -45,6 +45,8 @@ dateCreated: 2024-08-27T06:01:06.954Z
 - [How to manage virtual switches](/how-to/open-vswitch)
 
 - [How to manage systemd-nspawn containers](/how-to/systemd-nspawn)
+
+- [Extended flashing guide](/how-to/extended-flashing-guide)
 
 > BredOSを最大限に活用するために、これらのガイドを探索してください！
 > {.is-info}
