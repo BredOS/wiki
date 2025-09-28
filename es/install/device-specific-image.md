@@ -80,11 +80,11 @@ Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta g
 
 ### 3.3.1 Prerrequisitos
 
-As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
+Como el arranque directo desde la unidad NVMe no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
 
-### 3.3.2 Flashing NVMe
+### 3.3.2 Flashear NVMe
 
-Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. After flashing connect the drive to the NVMe port of your SBC.
+Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Después de flashear, conecte la unidad al puerto NVMe de su SBC.
 
 ### 3.3.3 Orden de Arranque
 
