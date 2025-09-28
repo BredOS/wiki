@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: true
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-28T08:24:20.184Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -25,7 +25,7 @@ La instalación varía de dispositivo a dispositivo y el medio en el que desea i
 
 - `3.1 eMC` no extraíble
 - `3.2 removable eMMC y SD Card`
-- `3.3 nVME`
+- [3.3 NVMe](#h-33-nvme)
 
 > Antes de comenzar, por favor compruebe qué opciones están disponibles en su dispositivo!
 > {.is-info}
@@ -76,15 +76,15 @@ Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta g
 > Proporcionamos imágenes comprimidas como archivos .xz. ¡Asegúrate de descomprimirlos antes de parpadear!
 > {.is-warning}
 
-## 3.3 nVME
+## 3.3 NVMe
 
 ### 3.3.1 Prerrequisitos
 
-Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
+As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
 
-### 3.3.2 Flashear nVME
+### 3.3.2 Flashing NVMe
 
-Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive.
+Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. After flashing connect the drive to the NVMe port of your SBC.
 
 ### 3.3.3 Orden de Arranque
 
