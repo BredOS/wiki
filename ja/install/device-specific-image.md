@@ -2,7 +2,7 @@
 title: デバイス固有の画像を使用したインストール
 description:
 published: true
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-28T08:24:20.184Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -26,7 +26,7 @@ BredOS をインストールするために、当社は特定のデバイスの�
 
 - `3.1 non-removable eMMC`
 - `3.2 リムーバブルeMMCとSDカード`
-- `3.3 nVME`
+- [3.3 NVMe](#h-33-nvme)
 
 > 始める前に、お使いのデバイスで利用可能なオプションを確認してください!
 > {.is-info}
@@ -83,15 +83,15 @@ SDカードやeMMCをフラッシュするための無数のツールがあり�
 > .xz ファイルとして圧縮された画像を提供します。 点滅する前にそれらを解凍してください! 点滅する前にそれらを解凍してください!
 > {.is-warning}
 
-## 3.3 nVME
+## 3.3 NVMe
 
 ### 3.3.1 事前要件
 
-NVMEドライブからの直接起動はデバイスではサポートされていないため、UEFIを別のメディアにインストールする必要があります。 UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI). UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide. To install UEFI to your SPI or SD Card follow this guide.
+As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide. To install UEFI to your SPI or SD Card follow this guide.
 
-### 3.3.2 nVMEのフラッシュ
+### 3.3.2 Flashing NVMe
 
-ドライブを直接またはUSBアダプタ経由でPCに接続します。 ドライブを直接またはUSBアダプタ経由でPCに接続します。 次に、[3.2] で推奨されるツールのいずれかを使用します。 EMMC / SDカードの書き込み](#h-322-flashing-emmc-sd-card)、NVMeドライブの正しいドライブ文字またはパスを使用してください。 点滅後、ドライブをSBCのnVMEポートに接続します。 ドライブを直接またはUSBアダプタ経由でPCに接続します。 After flashing connect the drive to the nVME port of your SBC.
+ドライブを直接またはUSBアダプタ経由でPCに接続します。 ドライブを直接またはUSBアダプタ経由でPCに接続します。 次に、[3.2] で推奨されるツールのいずれかを使用します。 EMMC / SDカードの書き込み](#h-322-flashing-emmc-sd-card)、NVMeドライブの正しいドライブ文字またはパスを使用してください。 点滅後、ドライブをSBCのnVMEポートに接続します。 After flashing connect the drive to the NVMe port of your SBC.
 
 ### 3.3.3 ブートオーダー
 
