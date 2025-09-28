@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description:
 published: true
-date: 2025-09-16T11:46:02.777Z
+date: 2025-09-28T08:24:20.184Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -25,7 +25,7 @@ Installation varies from device to device and the medium you want to install Bre
 
 - `3.1 non-removable eMMC`
 - `3.2 removable eMMC and SD Card`
-- `3.3 nVME`
+- [3.3 NVMe](#h-33-nvme)
 
 > Before you begin please check which options are available with your device!
 > {.is-info}
@@ -76,15 +76,15 @@ There are countless tools to flash an sd card or eMMC. In this guide we will cov
 > We provide images compressed as .xz files. Make sure you decompress them before flashing!
 > {.is-warning}
 
-## 3.3 nVME
+## 3.3 NVMe
 
 ### 3.3.1 Prerequisites
 
-As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
+As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
 
-### 3.3.2 Flashing nVME
+### 3.3.2 Flashing NVMe
 
-Connect the drive to your PC, either directly or via a USB adapter. After flashing connect the drive to the nVME port of your SBC. Then use one of the recommended tools in [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card), making sure to use the correct drive letter or path for your NVMe drive.
+Connect the drive to your PC, either directly or via a USB adapter. After flashing connect the drive to the nVME port of your SBC. After flashing connect the drive to the NVMe port of your SBC.
 
 ### 3.3.3 Boot Order
 
