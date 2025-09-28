@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2025-09-23T10:46:23.458Z
+date: 2025-09-28T08:28:08.206Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -32,7 +32,7 @@ We support a wide range of devices—from exciting ARM-based systems and experim
  
 ## 3.1 Minimal System Requirements
  - Minimum RAM: 2 GB
- - Storage: 8 GB microSD card/eMMC/nVME or larger
+ - Storage: 8 GB microSD card/eMMC/NVMe or larger
  
 # 4. Preview
 Our friend [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) made a YouTube video about BredOS. Check it out here:
