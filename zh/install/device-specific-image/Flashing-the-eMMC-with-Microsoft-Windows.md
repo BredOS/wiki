@@ -1,8 +1,8 @@
 ---
 title: 使用 Microsoft Windows 刷入 eMMC
 description:
-published: false
-date: 2025-09-18T08:59:46.182Z
+published: true
+date: 2025-09-28T12:18:15.607Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -52,6 +52,13 @@ dateCreated: 2025-09-16T09:55:34.272Z
 
 > 我们以压缩文件提供我们的图像。 我们以压缩文件提供我们的图像。 您需要在刷入之前提取包含.img的文件！
 > {.is-warning}
+> {.is-warning}
+
+> Maskrom 按钮应该在电源插入棋盘时按住 \*\*。
+> {.is-info}
+
+> 使用USB-C到C电缆，或使用USB-C到电缆向后可能导致未被发现。
+> 建议使用USB-C到A电缆， 然后是 [USB-C 女性到 USB-A 男性适配器](https://www.aliexpress.com/item/1005004767752226.html) 或 USB-A 到 A 电缆。
 > {.is-warning}
 
 等待它完成刷入过程，你很好。
