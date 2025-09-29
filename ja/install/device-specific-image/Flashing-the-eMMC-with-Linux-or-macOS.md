@@ -2,7 +2,7 @@
 title: Linux または macOS で eMMC の書き込み
 description:
 published: true
-date: 2025-09-28T12:19:08.941Z
+date: 2025-09-29T06:00:19.076Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,7 +14,20 @@ dateCreated: 2025-09-16T06:29:26.865Z
 
 BredOS のインストールには、以下の3つのことが必要です。
 
-1. SPLローダーファイル、例えばRK3588: [`rk3588_spl_loader_v1.15.115.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. SPL ローダーファイル:
+
+### Tabset {.tabset}
+
+#### RK3588
+
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+
+#### RK3566
+
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+###
+
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
@@ -23,12 +36,6 @@ BredOS のインストールには、以下の3つのことが必要です。
 > これを実行することはできません！
 > {.is-warning}
 > {.is-warning}
-
-> その他の Rockchip チップバリアントには、異なる SPL ローダーが必要です。
-> \
-> 例えば、RK3566の場合、SPLローダーはここにあります:
-> [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
-> {.is-info}
 
 # 3. フラッシュ中
 
