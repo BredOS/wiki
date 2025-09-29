@@ -2,7 +2,7 @@
 title: Flashear el eMMC con Linux o macOS
 description:
 published: true
-date: 2025-09-28T12:19:08.941Z
+date: 2025-09-29T06:00:19.076Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,18 +14,25 @@ Esta guía describe cómo flashear un eMMC usando la herramienta `rkdeveloptool`
 
 Para la instalación de BredOS, se requieren tres cosas:
 
-1. Archivo del cargador SPL, por ejemplo para el RK3588: [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. Archivo del cargador SPL:
+
+### Tabset {.tabset}
+
+#### RK3588
+
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+
+#### RK3566
+
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+###
+
 2. Imagen específica del dispositivo de nuestro [sitio web oficial](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
 > Proporcionamos nuestras imágenes como archivos comprimidos .xz. ¡Necesita extraer el archivo .img que contiene antes de flashear!
 > {.is-warning}
-
-> Otras variantes de chip Rockchip requieren diferentes cargadores SPL!
-> \
-> Por ejemplo, para el RK3566, el cargador SPL se puede encontrar aquí:
-> [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
-> {.is-info}
 
 # 3. Parpadeando
 
