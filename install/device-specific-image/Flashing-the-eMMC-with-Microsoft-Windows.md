@@ -2,7 +2,7 @@
 title: Flashing the eMMC with Microsoft Windows
 description: 
 published: true
-date: 2025-09-28T12:20:24.588Z
+date: 2025-09-29T06:09:51.531Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -14,7 +14,14 @@ But fear not – we've got you covered anyway.
 This article guides you through the process of installing `RKDevTool` and the necessary `RockChip Maskrom drivers`.
 
 For the installation of BredOS, four things are required:
-1. SPI loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. SPL loader file:
+### Tabset {.tabset}
+#### RK3588
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+#### RK3566
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+###
+
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. [RockChip Maskrom drivers](https://dl.radxa.com/tools/windows/)
 4. [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool),     [Alternative Link 1](https://dl.radxa.com/tools/windows/)
