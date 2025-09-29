@@ -2,7 +2,7 @@
 title: 使用 Microsoft Windows 刷入 eMMC
 description:
 published: true
-date: 2025-09-28T12:20:24.588Z
+date: 2025-09-29T06:09:51.531Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -20,7 +20,20 @@ dateCreated: 2025-09-16T09:55:34.272Z
 
 要安装BredOS，需要四件事：
 
-1. SPI 加载器文件，例如 RK3588: [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. SPL 加载器文件：
+
+### Tabset {.tabset}
+
+#### RK3588
+
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+
+#### RK3566
+
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+###
+
 2. 来自我们[官方网站]的设备特定图像(https://bredos.org/download.html)
 3. [RockChip Maskrom drivers](https://dl.radxa.com/tools/windows/)
 4. [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool), [替代链接 1](https://dl.radxa.com/tools/windows/)
