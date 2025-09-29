@@ -2,7 +2,7 @@
 title: 使用 Linux 或 macOS 刷入 eMMC
 description:
 published: true
-date: 2025-09-28T12：19：08.941Z
+date: 2025-09-29T06:00:19.076Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,19 +14,26 @@ dateCreated: 2025-09-16T06:29:26.865Z
 
 要安装BredOS，需要三件事：
 
-1. SPL 加载文件，例如 RK3588: [[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. SPL 加载器文件：
+
+### Tabset {.tabset}
+
+#### RK3588
+
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+
+#### RK3566
+
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+###
+
 2. 来自我们[官方网站]的设备特定图像(https://bredos.org/download.html)
 3. `rkdevelopmenttool`
 
 > 我们以压缩文件提供我们的图像。 我们以压缩文件提供我们的图像。 您需要在刷入之前提取包含.img的文件！
 > {.is-warning}
 > {.is-warning}
-
-> 其他的 Rockchip 芯片变体需要不同的 SPL 加载器！
-> \
-> For example, for the RK3566, the SPL loader can be found here:
-> [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
-> {.is-info}
 
 # 3. 刷入
 
