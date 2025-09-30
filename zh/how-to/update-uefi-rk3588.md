@@ -2,7 +2,7 @@
 title: 如何在 RK3588 上更新 UEFI
 description: 学习如何更新基于RK3588的运行 BredOS 设备的 UEFI 固件
 published: true
-date: 2025-09-15T11：14：54.063Z
+date: 2025-09-30T06:41:56.433Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15：28：48.131Z
@@ -48,15 +48,27 @@ sudo pacman -S fydetab-duo-uefi
 
 - 命令的 **general** 格式是：
 
+### Tabset {.tabset}
+
+#### eMMC
+
 ```
-sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/<TARGET_DEVICE> bs=512 skip=64 seek=64 conv=notrunc
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-用适当的存储设备替换<TARGET_DEVICE>\\`：
+#### SD 卡
 
-> - **eMMC** 的`/dev/mmcblk0`
-> - **SD 卡** `/dev/mmcblk1`
-> - `/dev/mtdblock0` for **SPI flash**> {.is-info}
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mmcblk1 bs=512 skip=64 seek=64 conv=notrunc
+```
+
+#### SPI 闪光灯
+
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
+```
+
+###
 
 例如，如果你在 **FydetabDuo** 上使用 **eMMC 存储** ，命令将是：
 
