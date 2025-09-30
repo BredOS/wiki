@@ -2,7 +2,7 @@
 title: RK3588でUEFIをアップデートする方法
 description: BredOSを実行しているRK3588ベースのデバイスでUEFIファームウェアをアップデートする方法を学ぶ
 published: true
-date: 2025-09-15T11:14:54.063Z
+date: 2025-09-30T06:41:56.433Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
@@ -48,15 +48,27 @@ sudo pacman -S fydetab-duo-uefi
 
 - コマンドの **general** 形式は次のとおりです。
 
+### Tabset {.tabset}
+
+#### eMMC
+
 ```
-sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/<TARGET_DEVICE> bs=512 skip=64 seek=64 conv=notrunc
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-`<TARGET_DEVICE>` を適切なストレージデバイスに置き換えます:
+#### SD カード
 
-> - **eMMC** 用 `/dev/mmcblk0`
-> - `/dev/mmcblk1` for **SD card**
-> - `/dev/mtdblock0` for **SPIフラッシュ**> {.is-info}
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mmcblk1 bs=512 skip=64 seek=64 conv=notrunc
+```
+
+#### SPIフラッシュ
+
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
+```
+
+###
 
 たとえば、**Fydetab Duo**で **eMMCストレージ**を使用している場合、コマンドは次のようになります。
 
