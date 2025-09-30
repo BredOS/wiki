@@ -2,97 +2,97 @@
 title: Cómo administrar los servicios
 description:
 published: false
-date: 2025-09-30T10:58:41.487Z
+date: 2025-09-30T11:18:31.209Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
 ---
 
-# 🎛️ 1. Introduction
+# 🎛️ 1. 📥 Instalar el Firmware
 
-Managing services is a core part of administering a Linux system, and systemctl—part of the systemd suite—is the primary tool for the job on most modern distributions. Whether you need to start a service, stop it, check its status, or configure it to launch at boot, systemctl provides a consistent and powerful interface. This guide will walk you through the essential commands and practical examples to help you take control of system services with confidence.
+La gestión de servicios es una parte central de la administración de un sistema Linux, y systemctl—parte de la suite systemd—es la herramienta principal para el trabajo en la mayoría de las distribuciones modernas, incluyendo BredOS. Si necesita iniciar un servicio, detenerlo, compruebe su estado. o configurarlo para que se ejecute al arranque, systemctl proporciona una interfaz consistente y potente. Esta guía le guiará a través de los comandos esenciales y ejemplos prácticos para ayudarle a tomar el control de los servicios del sistema con confianza.
 
-# 2. Examine your services
+# 3. Examine sus servicios
 
-## 2.1 With `bredos-news`
+## 2.1 Con `bredos-news`
 
-- The tool `bredos-news` automatically starts whenever you open the command line.
+- La herramienta `bredos-news` se inicia automáticamente cuando se abre la línea de comandos.
 
 ![bredos-news.png](/systemd/bredos-news.png)
 
-At the end of its output, you can read the text "System is operating normally." This means that all services supposed to start on boot have been started without any error. If you have just booted your device, it may show the warning "PLEASE ADD WARNING HERE." This is normal, as many services can be started in parallel, which can lead to delays while starting. This warning should go away after a few minutes.
+Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Si acaba de iniciar su dispositivo, puede mostrar la advertencia "AÑADIR AÑADIR AQUÍ". Esto es normal, ya que muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar. Esta advertencia debería desaparecer después de unos minutos.
 
-If you see the error message, "PLEASE ADD ERROR MESSAGE HERE," one or more services have failed to start. To identify the issue with the service and potentially fix it, continue with Section 3.
+Si ves el mensaje de error, "POR FAVOR AÑADIR ERROR MESSAGE HERE", uno o más servicios no han podido iniciarse. Para identificar el problema con el servicio y potencialmente arreglarlo, continúe con la Sección 3.
 
-## 2.2 With `systemctl`
+## 2.2 Con `systemctl`
 
-- To list all services on your computer run:
+- Para listar todos los servicios en su computadora ejecute:
 
 ```
 systemctl list-units --type=service
 ```
 
-This outputs a list of services. Navigate though it with your arrow keys, or use <kbd>space</kbd> to go one page down. Leave it with the <kbd>Q</kbd> key.
+Esto genera una lista de servicios. Navega con tus teclas de flecha, o usa <kbd>espacio</kbd> para ir una página abajo. Déjalo con la tecla <kbd>Q</kbd>.
 
-Services can have different states as shown in the row "SUB". They can be `running`, `exited`, or `failed`.
+Los servicios pueden tener diferentes estados como se muestra en la fila "SUB". Pueden ser `running`, `exited`, o `failed`.
 
-- A `running` service performs background tasks for you. A great example of this is Network Manager. This service manages your network connectivity. Since you can always plug in an Ethernet cable, the program needs to run continuously to manage your network accordingly. This is achieved by a `running` service.
+- Un servicio `corriendo` realiza tareas de fondo para ti. Un buen ejemplo de esto es Network Manager. Este servicio administra la conectividad de red. Ya que siempre se puede conectar un cable Ethernet, el programa debe ejecutarse continuamente para gestionar la red en consecuencia. Esto se consigue mediante un servicio `ejecutando`.
 
-- An `exited` service is one that runs at boot, performs its task, and then terminates cleanly. A good example of this is the systemd-tmpfiles-setup service. It starts on boot, sets up a ramdisk, mounts it to /tmp, and then exits gracefully.
+- Un servicio `exited` es uno que se ejecuta al arrancar, realiza su tarea y luego termina limpiamente. Un buen ejemplo de esto es el servicio systemd-tmpfiles-configuración. Comienza al arrancar, monta un ramdisk, lo monta a /tmp, y luego sale con gracia.
 
-- A `failed` service did not start correctly or encountered a problem while running and stopped with an error code. This does not mean that your system is broken, but fixing it might still be advisable.
+- Un servicio `failed` no se inició correctamente o se encontró con un problema mientras se ejecutaba y se detuvo con un código de error. Esto no significa que su sistema esté dañado, pero corregirlo podría ser recomendable.
 
-It is also possible to check the status of a given service, which provides more output, including its error message, if it has failed.
+También es posible comprobar el estado de un servicio dado, que proporciona más salida, incluyendo su mensaje de error, si ha fallado.
 
-- To check the status of a given service run:
+- Para comprobar el estado de un servicio dado ejecutar:
 
 ```
-systemctl status <your service name here>
+estado de systemctl <your service name here>
 ```
 
-- For example, here is the output of a failed service containing its problem:
+- Por ejemplo, aquí está la salida de un servicio fallido que contiene su problema:
 
 ```
 ● nordvpnd.service - NordVPN Daemon
-     Loaded: loaded (/usr/lib/systemd/system/nordvpnd.service; enabled; preset: disabled)
-     Active: activating (auto-restart) (Result: exit-code) since Fri 2025-09-26 12:53:07 CEST; 3s ago
- Invocation: adf87be78f8b44e3ba66a18268b87241
-TriggeredBy: ● nordvpnd.socket
-    Process: 1916 ExecStart=/usr/sbin/nordvpnd (code=exited, status=127)
-   Main PID: 1916 (code=exited, status=127)
-   Mem peak: 2M
+     Cargado: cargado (/usr/lib/systemd/system/nordvpnd. ervice; enabled; preset: disabled)
+     Active: activating (auto-restart) (Result: exit-code) since Fri 2025-09-26 12:53:07 CEST; Hace 3s
+ Invocación: adf87be78f8b44e3ba66a18268b87241
+TriggeredBy: ● nordvpnd. ocket
+    Proceso: 1916 ExecStart=/usr/sbin/nordvpnd (code=exited, status=127)
+   PID principal: 1916 (code=exitado, status=127)
+   Mem piak: 2M
         CPU: 28ms
 
-Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Scheduled restart job, restart counter is at 1.
-Sep 26 12:53:13 bredos systemd[1]: Stopped NordVPN Daemon.
-Sep 26 12:53:13 bredos systemd[1]: Started NordVPN Daemon.
-Sep 26 12:53:13 bredos nordvpnd[1971]: /usr/sbin/nordvpnd: error while loading shared libraries: libxml2.so.2: cannot open shared object file: No such file or directory
-Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Main process exited, code=exited, status=127/n/a
-Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Failed with result 'exit-code'.
+Sep 26 12:53:13 bredos systemd[1]: nordvpnd. ervice: Reinicio programado de trabajo, contador de reinicio está en 1.
+Sep 26 12:53:13 bredos systemd[1]: Detenido NordVPN Daemon.
+Sep 26 12:53:13 bredos systemd[1]: NordVPN Daemon iniciado.
+Sep 26 12:53:13 bredos nordvpnd[1971]: /usr/sbin/nordvpnd: error al cargar librerías compartidas: libxml2. o.2: cannot open shared object file: no such file or directory
+Sep 26 12:53:13 bredos systemd[1]: nordvpnd. ervice: Proceso principal terminado, code=exited, status=127/n/a
+Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Error con resultado 'exit-code'.
 ```
 
-In the given example above, the nordvpnd service failed to start because it is missing the library libxml2.so.2. With this information, it is easily fixable.
+En el ejemplo anterior, el servicio nordvpnd no pudo iniciarse porque le falta la librería libxml2.so.2. Con esta información, es fácilmente fijable.
 
-# 3. Manage services
+# 4. Administrar servicios
 
-Services can be started and/or stopped manually or at boot. To manage the behaviour of a service do the following.
+Los servicios pueden iniciarse y/o detenerse manualmente o al arrancar. Para gestionar el comportamiento de un servicio hacer lo siguiente.
 
-- To start a service manually, run:
+- Para iniciar un servicio manualmente, ejecute:
 
 ```
-sudo systemctl start <your service name here>
+sudo systemctl iniciar <your service name here>
 ```
 
-- And to stop it, run:
+- Y para detenerlo, ejecutar:
 
 ```
 sudo systemctl stop <your service name here>
 ```
 
-The logic continues with activating and deactivating services on boot. Use `systemctl enable` to start them on boot, or `systemctl disable` to prevent them from starting on boot. With the parameter `--now`, you can start and activate them at the same time.
+La lógica continúa con la activación y desactivación de servicios al arrancar. Usa `systemctl enable` para iniciarlos al arrancar, o `systemctl disable` para evitar que inicien al arrancar. Con el parámetro `--now`, puede iniciarlos y activarlos al mismo tiempo.
 
-- For example, if you want to activate nordvpnd on boot and start it with the same command, run:
+- Por ejemplo, si quieres activar nordvpnd en el arranque y iniciarlo con el mismo comando, ejecutar:
 
 ```
-sudo systemctl enable --now nordvpnd
+sudo systemctl habilitar --now nordvpnd
 ```
