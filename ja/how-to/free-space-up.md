@@ -112,33 +112,33 @@ rm -rf ~/.cache/*
 
 - **du** — ディスク使用状況の検査官。\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
-  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`  
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — コンソールインターフェイスを備えたディスク使用量アナライザ。\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
-  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`  
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses disk usage analyzer.\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
-  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`  
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
 ## グラフィカルツール 🖼️
 
 - **Filelight** — 同心円リングによるインタラクティブなディスク使用量マップ。\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`  
   **Filelight** — 同心円リングによるインタラクティブなディスク使用量マップ。\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
-  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`  
   **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
@@ -150,7 +150,7 @@ rm -rf ~/.cache/*
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
-  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`  
   **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   **qdirstat** — Qt-based directory statistics tool.\
