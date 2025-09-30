@@ -2,7 +2,7 @@
 title: Update UEFI on RK3588
 description: Learn how to update the UEFI firmware on RK3588-based devices running BredOS
 published: true
-date: 2025-09-18T07:50:28.639Z
+date: 2025-09-30T06:41:56.433Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
@@ -46,16 +46,21 @@ After installation, the firmware image will be located in `/usr/share/edk2/<devi
 
 - A **general** format of the command is:
 
+### Tabset {.tabset}
+#### eMMC
 ```
-sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/<TARGET_DEVICE> bs=512 skip=64 seek=64 conv=notrunc
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
+#### SD card
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mmcblk1 bs=512 skip=64 seek=64 conv=notrunc
+```
+#### SPI Flash
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
+```
+###
 
-Replace `<TARGET_DEVICE>` with the appropriate storage device:  
-
-> - `/dev/mmcblk0` for **eMMC**
-> - `/dev/mmcblk1` for **SD card**
-> - `/dev/mtdblock0` for **SPI flash**
-{.is-info}
 
 
 For example, if you are using **eMMC storage** on a **Fydetab Duo**, the command would be:
