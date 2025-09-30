@@ -2,7 +2,7 @@
 title: Cómo actualizar UEFI en RK3588
 description: Aprenda cómo actualizar el firmware UEFI en dispositivos basados en RK35888 ejecutando BredOS
 published: true
-date: 2025-09-15T11:14:54.063Z
+date: 2025-09-30T06:41:56.43Z
 tags:
 editor: markdown
 dateCreated: 2025-02-23T15:28:48.131Z
@@ -49,15 +49,27 @@ Después de la instalación, la imagen del firmware se ubicará en `/usr/share/e
 
 - El formato **general** del comando es:
 
+### Tabset {.tabset}
+
+#### eMMC
+
 ```
-sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.X.X.img of=/dev/<TARGET_DEVICE> bs=512 skip=64 seek=64 conv=notrunc
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.X.X.img of=/dev/mmcblk0 bs=512 skip=64 seek=64 conv=notrunc
 ```
 
-Reemplazar `<TARGET_DEVICE>` por el dispositivo de almacenamiento apropiado:
+#### Tarjeta SD
 
-> - `/dev/mmcblk0` para **eMMC**
-> - `/dev/mmcblk1` para **tarjeta SD**
-> - `/dev/mtdblock0` para **SPI flash**> {.is-info}
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.X.X.img of=/dev/mmcblk1 bs=512 skip=64 seek=64 conv=notrunc
+```
+
+#### Flash SPI
+
+```
+sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.X.X.img of=/dev/mtdblock0
+```
+
+###
 
 Por ejemplo, si estás usando **eMMC storage** en un **Fy.Ub Duo**, el comando sería:
 
