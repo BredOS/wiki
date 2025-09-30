@@ -2,7 +2,7 @@
 title: How to manage services
 description: 
 published: false
-date: 2025-09-30T10:31:51.284Z
+date: 2025-09-30T10:47:45.576Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -37,3 +37,32 @@ Services can have different states as shown in the row "SUB". They can be `runni
 
 - A `failed` service did not start correctly or encountered a problem while running and stopped with an error code. This does not mean that your system is broken, but fixing it might still be advisable.
 
+It is also possible to check the status of a given service, which gives you more output containing it's error message if it has failed. 
+- To check the status of a given service run:
+```
+systemctl status <your service name here>
+```
+
+- For example this is the ouput of a failed service containing its problem:
+```
+● nordvpnd.service - NordVPN Daemon
+     Loaded: loaded (/usr/lib/systemd/system/nordvpnd.service; enabled; preset: disabled)
+     Active: activating (auto-restart) (Result: exit-code) since Fri 2025-09-26 12:53:07 CEST; 3s ago
+ Invocation: adf87be78f8b44e3ba66a18268b87241
+TriggeredBy: ● nordvpnd.socket
+    Process: 1916 ExecStart=/usr/sbin/nordvpnd (code=exited, status=127)
+   Main PID: 1916 (code=exited, status=127)
+   Mem peak: 2M
+        CPU: 28ms
+
+Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Scheduled restart job, restart counter is at 1.
+Sep 26 12:53:13 bredos systemd[1]: Stopped NordVPN Daemon.
+Sep 26 12:53:13 bredos systemd[1]: Started NordVPN Daemon.
+Sep 26 12:53:13 bredos nordvpnd[1971]: /usr/sbin/nordvpnd: error while loading shared libraries: libxml2.so.2: cannot open shared object file: No such file or directory
+Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Main process exited, code=exited, status=127/n/a
+Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Failed with result 'exit-code'.
+```
+
+In the given example above nordvpnd service failed starting because its missing the library libxml2.so.2. With that information it's easy fixable.
+
+# 3. Manage services
