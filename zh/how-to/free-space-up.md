@@ -111,27 +111,27 @@ rm -rf ~/.cache/*
 ## 控制台工具 ⌨️
 
 - **duc** - 磁盘使用情况检查器。\
-  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`  
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** - 控制台界面的磁盘使用情况分析器。\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dunde/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
-  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`  
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** - ncurses 磁盘使用情况分析器。\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
-  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`  
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
 ## 图形工具 🖼️
 
 - **Filelight** - 具有聚合环的交互式磁盘使用图。\
-  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`  
   **Filelight** - 具有聚合环的交互式磁盘使用图。\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   **Filelight** - 具有聚合环的交互式磁盘使用图。\
@@ -146,12 +146,12 @@ rm -rf ~/.cache/*
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   **duc** - 磁盘使用情况检查器。\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
-  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`  
   **duc** - 磁盘使用情况检查器。\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
-- 📚 目录\
+- 📚 目录  
   📚 目录\
   📚 目录\
   📚 目录\
