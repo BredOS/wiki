@@ -2,7 +2,7 @@
 title: サービスを管理する方法
 description:
 published: false
-date: 2025-09-30T10:58:41.487Z
+date: 2025-09-30T11:18:31.209Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -10,47 +10,47 @@ dateCreated: 2025-09-30T10:31:51.284Z
 
 # 🔄 1. 入門情報
 
-Managing services is a core part of administering a Linux system, and systemctl—part of the systemd suite—is the primary tool for the job on most modern distributions. Whether you need to start a service, stop it, check its status, or configure it to launch at boot, systemctl provides a consistent and powerful interface. This guide will walk you through the essential commands and practical examples to help you take control of system services with confidence.
+サービスの管理は、Linuxシステムの管理の中核となるものです。 systemd スイートの一部である systemctl は、BredOS を含むほとんどの最新のディストリビューションにおけるジョブの主要なツールです。 サービスを開始する必要があるかどうか、停止し、その状態を確認してください。 または、起動時に起動するように設定します。systemctlは一貫性のある強力なインターフェイスを提供します。 このガイドでは、システムサービスを自信を持ってコントロールするのに役立つ重要なコマンドと実践例をご紹介します。
 
-# 📥 2. Examine your services
+# 📥 2. サービスを調べる
 
-## 2.1 With `bredos-news`
+## 2.1 「bredos-news」あり
 
-- The tool `bredos-news` automatically starts whenever you open the command line.
+- 「bredos-news」ツールは、コマンドラインを開くたびに自動的に開始されます。
 
 ![bredos-news.png](/systemd/bredos-news.png)
 
-At the end of its output, you can read the text "System is operating normally." This means that all services supposed to start on boot have been started without any error. If you have just booted your device, it may show the warning "PLEASE ADD WARNING HERE." This is normal, as many services can be started in parallel, which can lead to delays while starting. This warning should go away after a few minutes.
+出力の最後に「システムは正常に動作しています」というテキストが表示されます。 これは、ブート時に起動するはずのすべてのサービスがエラーなしで開始されたことを意味します。 端末を起動したばかりの場合は、「ここに警告を追加」という警告が表示される場合があります。 これは通常であり、多くのサービスが並行して開始されるため、起動中に遅延につながる可能性があります。 この警告は数分後に消えるはずです。
 
-If you see the error message, "PLEASE ADD ERROR MESSAGE HERE," one or more services have failed to start. To identify the issue with the service and potentially fix it, continue with Section 3.
+エラーメッセージが表示された場合は、「ここにエラーメッセージを追加」をクリックしてください。1つ以上のサービスが起動できませんでした。 サービスで問題を特定し、潜在的に修正するには、セクション3を続けてください。
 
-## 2.2 With `systemctl`
+## 2.2 `systemctl`で
 
-- To list all services on your computer run:
+- 実行中のコンピュータ上のすべてのサービスを一覧表示するには:
 
 ```
 systemctl list-units --type=service
 ```
 
-This outputs a list of services. Navigate though it with your arrow keys, or use <kbd>space</kbd> to go one page down. Leave it with the <kbd>Q</kbd> key.
+これはサービスのリストを出力します。 矢印キーで移動するか、 <kbd>スペース</kbd> を使用して1ページ下に移動します。 <kbd>Q</kbd> キーでそのままにします。
 
-Services can have different states as shown in the row "SUB". They can be `running`, `exited`, or `failed`.
+サービスは、行「SUB」に示すように異なる状態を持つことができます。 `running`、`exited`、または `failed`のいずれかです。
 
-- A `running` service performs background tasks for you. A great example of this is Network Manager. This service manages your network connectivity. Since you can always plug in an Ethernet cable, the program needs to run continuously to manage your network accordingly. This is achieved by a `running` service.
+- `running`サービスはバックグラウンドタスクを実行します。 その良い例がネットワークマネージャです。 このサービスはネットワーク接続を管理します。 イーサネットケーブルを常に差し込むことができるため、プログラムはネットワークを適切に管理するために連続的に実行する必要があります。 これは `running` サービスによって実現されます。
 
-- An `exited` service is one that runs at boot, performs its task, and then terminates cleanly. A good example of this is the systemd-tmpfiles-setup service. It starts on boot, sets up a ramdisk, mounts it to /tmp, and then exits gracefully.
+- `exited` サービスは、起動時に実行され、タスクを実行し、その後きれいに終了します。 この良い例として、systemd-tmpfiles-setup サービスがあります。 起動時に起動し、ramdisk をセットアップし、/tmpにマウントし、そして優雅に終了します。
 
-- A `failed` service did not start correctly or encountered a problem while running and stopped with an error code. This does not mean that your system is broken, but fixing it might still be advisable.
+- `failed` サービスが正しく起動しなかったか、エラーコードで実行中に問題が発生して停止しました。 これは、システムが壊れていることを意味するものではありませんが、それを修正することはまだお勧めできます。
 
-It is also possible to check the status of a given service, which provides more output, including its error message, if it has failed.
+与えられたサービスの状態をチェックすることもできます。これは、失敗した場合にエラーメッセージを含む、より多くの出力を提供します。
 
-- To check the status of a given service run:
+- 指定されたサービスのステータスを確認するには:
 
 ```
-systemctl status <your service name here>
+systemctl 状態 <your service name here>
 ```
 
-- For example, here is the output of a failed service containing its problem:
+- 例えば、以下に問題を含む失敗したサービスの出力を示します。
 
 ```
 ● nordvpnd.service - NordVPN Daemon
@@ -71,27 +71,27 @@ Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Main process exited, code=e
 Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Failed with result 'exit-code'.
 ```
 
-In the given example above, the nordvpnd service failed to start because it is missing the library libxml2.so.2. With this information, it is easily fixable.
+上記の例では、nordvpnd サービスはライブラリの libxml2.so がないため起動に失敗しました。 この情報を使用すると、それは簡単に修正可能です。
 
-# 3. Manage services
+# 4. サービスの管理
 
-Services can be started and/or stopped manually or at boot. To manage the behaviour of a service do the following.
+サービスは手動または起動時または起動時に開始および/または停止することができます。 サービスの動作を管理するには、以下を行います。
 
-- To start a service manually, run:
+- サービスを手動で開始するには、次を実行します。
 
 ```
 sudo systemctl start <your service name here>
 ```
 
-- And to stop it, run:
+- そして、それを停止するには、次を実行します。
 
 ```
 sudo systemctl stop <your service name here>
 ```
 
-The logic continues with activating and deactivating services on boot. Use `systemctl enable` to start them on boot, or `systemctl disable` to prevent them from starting on boot. With the parameter `--now`, you can start and activate them at the same time.
+このロジックは、起動時にサービスを有効化および無効化し続けます。 `systemctl enable` を使用すると起動時に起動できます。systemctl disable`を使用すると起動時に起動できなくなります。 パラメータ`--now\` を使用すると、起動して同時に有効にすることができます。
 
-- For example, if you want to activate nordvpnd on boot and start it with the same command, run:
+- たとえば、起動時に nordvpnd を有効にして同じコマンドで開始したい場合は、以下を実行します。
 
 ```
 sudo systemctl enable --now nordvpnd
