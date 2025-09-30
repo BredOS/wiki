@@ -2,7 +2,7 @@
 title: How to manage services
 description: 
 published: false
-date: 2025-09-30T10:47:45.576Z
+date: 2025-09-30T10:58:41.487Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -37,13 +37,13 @@ Services can have different states as shown in the row "SUB". They can be `runni
 
 - A `failed` service did not start correctly or encountered a problem while running and stopped with an error code. This does not mean that your system is broken, but fixing it might still be advisable.
 
-It is also possible to check the status of a given service, which gives you more output containing it's error message if it has failed. 
+It is also possible to check the status of a given service, which provides more output, including its error message, if it has failed.
 - To check the status of a given service run:
 ```
 systemctl status <your service name here>
 ```
 
-- For example this is the ouput of a failed service containing its problem:
+- For example, here is the output of a failed service containing its problem:
 ```
 ● nordvpnd.service - NordVPN Daemon
      Loaded: loaded (/usr/lib/systemd/system/nordvpnd.service; enabled; preset: disabled)
@@ -63,6 +63,24 @@ Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Main process exited, code=e
 Sep 26 12:53:13 bredos systemd[1]: nordvpnd.service: Failed with result 'exit-code'.
 ```
 
-In the given example above nordvpnd service failed starting because its missing the library libxml2.so.2. With that information it's easy fixable.
+In the given example above, the nordvpnd service failed to start because it is missing the library libxml2.so.2. With this information, it is easily fixable.
 
 # 3. Manage services
+Services can be started and/or stopped manually or at boot. To manage the behaviour of a service do the following.
+
+- To start a service manually, run:
+```
+sudo systemctl start <your service name here>
+```
+
+- And to stop it, run:
+```
+sudo systemctl stop <your service name here>
+```
+
+The logic continues with activating and deactivating services on boot. Use `systemctl enable` to start them on boot, or `systemctl disable` to prevent them from starting on boot. With the parameter `--now`, you can start and activate them at the same time.
+
+- For example, if you want to activate nordvpnd on boot and start it with the same command, run:
+```
+sudo systemctl enable --now nordvpnd
+```
