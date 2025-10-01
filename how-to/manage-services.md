@@ -2,7 +2,7 @@
 title: How to manage services
 description: 
 published: false
-date: 2025-10-01T10:43:27.089Z
+date: 2025-10-01T11:12:56.618Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -95,7 +95,7 @@ It is also possible to edit or create services to your liking. System-wide servi
 
 - To create a system-wide service-file, run:
 ```
-sudo nano /etc/systemd/system/<your service-file name here>
+sudo nano /etc/systemd/system/<your service-file name here>.service
 ```
 
 - Then fill the newly created file with some info. For example:
