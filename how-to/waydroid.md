@@ -2,7 +2,7 @@
 title: Run Android apps (waydroid)
 description: 
 published: true
-date: 2025-09-26T10:03:46.309Z
+date: 2025-10-01T11:42:20.885Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T08:40:19.752Z
@@ -23,7 +23,7 @@ You need panthor enabled and setup. To do this follow [this guide](/how-to/how-t
 - Install panthor image:
 
 ```
-sudo pacman -S waydroid-panthor-image
+sudo pacman -S waydroid-image-panthor
 ```
 
 - Initialize waydroid:
