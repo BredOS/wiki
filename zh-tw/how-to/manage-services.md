@@ -2,7 +2,7 @@
 title: How to manage services
 description:
 published: false
-date: 2025-10-01T11:12:56.618Z
+date: 2025-10-01T11:35:53.087Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -22,7 +22,7 @@ Managing services is a core part of administering a Linux system, and systemctlâ
 
 At the end of its output, you can read the text "System is operating normally." This means that all services supposed to start on boot have been started without any error. If you have just booted your device, it may show the warning "**X** services report status activating" This is normal, as many services can be started in parallel, which can lead to delays while starting. This warning should go away after a few minutes.
 
-If you see the error message, "**X** services report status failed" one or more services have failed to start. To identify the issue with the service and potentially fix it, continue with Section 3.
+If you see the error message, "**X** services report status failed" one or more services have failed to start.
 
 ## 2.2 With `systemctl`
 
