@@ -2,7 +2,7 @@
 title: サービスを管理する方法
 description:
 published: false
-date: 2025-09-30T11:18:31.209Z
+date: 2025-10-01T11:12:56.618Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -20,19 +20,25 @@ dateCreated: 2025-09-30T10:31:51.284Z
 
 ![bredos-news.png](/systemd/bredos-news.png)
 
-出力の最後に「システムは正常に動作しています」というテキストが表示されます。 これは、ブート時に起動するはずのすべてのサービスがエラーなしで開始されたことを意味します。 端末を起動したばかりの場合は、「ここに警告を追加」という警告が表示される場合があります。 これは通常であり、多くのサービスが並行して開始されるため、起動中に遅延につながる可能性があります。 この警告は数分後に消えるはずです。
+出力の最後に「システムは正常に動作しています」というテキストが表示されます。 これは、ブート時に起動するはずのすべてのサービスがエラーなしで開始されたことを意味します。 端末を起動したばかりの場合、「**X** サービスレポートの状態を有効にする」という警告が表示されることがあります。 多くのサービスが並行して開始でき、開始時の遅延につながる可能性があります。 この警告は数分後に消えるはずです。
 
-エラーメッセージが表示された場合は、「ここにエラーメッセージを追加」をクリックしてください。1つ以上のサービスが起動できませんでした。 サービスで問題を特定し、潜在的に修正するには、セクション3を続けてください。
+エラーメッセージが表示された場合、"**X** サービスのレポートステータスが失敗しました" 1つ以上のサービスの起動に失敗しました。 サービスで問題を特定し、潜在的に修正するには、セクション3を続けてください。
 
 ## 2.2 `systemctl`で
 
-- 実行中のコンピュータ上のすべてのサービスを一覧表示するには:
+- コンピュータ上のすべてのシステム全体のサービスを一覧表示するには、次を実行します。
 
 ```
 systemctl list-units --type=service
 ```
 
-これはサービスのリストを出力します。 矢印キーで移動するか、 <kbd>スペース</kbd> を使用して1ページ下に移動します。 <kbd>Q</kbd> キーでそのままにします。
+- ユーザー全体のすべてのサービスをコンピュータに表示するには、次を実行します。
+
+```
+systemctl list-units --type=service --user
+```
+
+これはサービスのリストを出力します。 矢印キーで移動するか、 <kbd>スペース</kbd> を使用して1ページ下に移動します。 <kbd>Q</kbd> キーで終了します。
 
 サービスは、行「SUB」に示すように異なる状態を持つことができます。 `running`、`exited`、または `failed`のいずれかです。
 
@@ -96,3 +102,50 @@ sudo systemctl stop <your service name here>
 ```
 sudo systemctl enable --now nordvpnd
 ```
+
+# 🚀 4. サービスの編集と作成
+
+また、好みのサービスを編集または作成することもできます。 システム全体のサービスファイルは通常、 `/usr/lib/systemd/system` または `/etc/systemd/system` に保存され、ユーザ全体のサービスファイルは `~/.config/systemd/user` または `/etc/systemd/user` に保存されます。
+
+- システム全体の service-file を作成するには、以下を実行します。
+
+```
+sudo nano /etc/systemd/system/<your service-file name here>.service
+```
+
+- 次に、新しく作成したファイルにいくつかの情報を入力します。 例:
+
+```
+[Unit]
+Description=Run my one-shot script at start
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/my-oneshot script.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+このservice-file は /usr/local/bin/my-oneshot-script.sh を実行し、スクリプトがきれいに終了した後に `exited` と入力します。
+
+- 既存のサービスを編集するには、次を実行します。
+
+```
+sudo systemctl 編集 <your service-file name here>
+```
+
+> service-files の編集は **危険**であることに注意してください!
+> {.is-danger}
+
+- service-fileを編集した後、syystemd-daemonをリロードする必要があります:
+
+```
+sudo systemctl daemon-reload
+```
+
+# 🔄 3. チートシート
+
+多くのLinuxの気晴らしは、システムのためのチートシートを公開します。 基本的には全部同じなので、[システム用レッドハットのチートシート](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf)へのリンクを提供します。
