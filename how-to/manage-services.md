@@ -2,7 +2,7 @@
 title: How to manage services
 description: 
 published: false
-date: 2025-09-30T11:18:31.209Z
+date: 2025-10-01T10:13:28.737Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -84,3 +84,43 @@ The logic continues with activating and deactivating services on boot. Use `syst
 ```
 sudo systemctl enable --now nordvpnd
 ```
+
+# 4. Edit and create services
+It is also possible to edit or create services to your liking. System-wide service-files, which come through a package installation, are typically stored in `/usr/lib/systemd/system`, or `/etc/systemd/system`, while user-wide service-files are stored in `~/.config/systemd/user`, or `/etc/systemd/user`.
+
+- To create a system-wide service-file, run:
+```
+sudo nano /etc/systemd/system/<your service-file name here>
+```
+
+- Then fill the newly created file with some info. For example:
+```
+[Unit]
+Description=Run my one-shot script at startup
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/my-oneshot-script.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+This service-file will run /usr/local/bin/my-oneshot-script.sh and go into the state `exited` after the script terminates cleanly. 
+
+- To edit a existing service, run:
+```
+sudo systemctl edit <your service-file name here>
+```
+
+> Please be aware that editing service-files **can** be dangerous!
+{.is-danger}
+
+- After you edited a service-file you need to reload the syystemd-daemon:
+```
+sudo systemctl daemon-reload
+```
+
+
