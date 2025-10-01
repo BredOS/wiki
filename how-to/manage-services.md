@@ -2,7 +2,7 @@
 title: How to manage services
 description: 
 published: false
-date: 2025-10-01T10:33:44.988Z
+date: 2025-10-01T10:36:41.750Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -129,4 +129,4 @@ sudo systemctl daemon-reload
 ```
 
 # 5. Cheat Sheet
-Many linux distrubiutions publish cheatsheets for systemd. As they are basically all the same we provide a link to [Red Hat's Cheat Sheet](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf).
+Many linux distrubiutions publish cheatsheets for systemd. As they are basically all the same, so we provide a link to [Red Hat's Cheat Sheet for systemd](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf).
