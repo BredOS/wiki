@@ -2,7 +2,7 @@
 title: Cómo administrar los servicios
 description:
 published: false
-date: 2025-10-01T11:12:56.618Z
+date: 2025-10-01T11:35:53.087Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -22,7 +22,7 @@ La gestión de servicios es una parte central de la administración de un sistem
 
 Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Si acaba de arrancar su dispositivo, puede mostrar la advertencia "**X** services report activating" Esto es normal, como muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar. Esta advertencia debería desaparecer después de unos minutos.
 
-Si ves el mensaje de error, uno o más servicios no han podido iniciarse "**X** informes de estado fallido". Para identificar el problema con el servicio y potencialmente arreglarlo, continúe con la Sección 3.
+Si ves el mensaje de error, uno o más servicios no han podido iniciarse "**X** informes de estado fallido".
 
 ## 2.2 Con `systemctl`
 
