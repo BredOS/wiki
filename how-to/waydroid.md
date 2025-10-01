@@ -2,7 +2,7 @@
 title: Run Android apps (waydroid)
 description: 
 published: true
-date: 2025-10-01T11:42:20.885Z
+date: 2025-10-01T11:45:53.352Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T08:40:19.752Z
@@ -44,6 +44,11 @@ sudo waydroid init -s GAPPS
 - Enable and start Waydroid:
 ```
 sudo systemctl enable --now waydroid-container
+```
+
+- Then start your waydroid-container with:
+```
+waydroid session start
 ```
 
 # 4. Install apps
