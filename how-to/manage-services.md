@@ -2,7 +2,7 @@
 title: How to manage services
 description: 
 published: false
-date: 2025-10-01T10:13:28.737Z
+date: 2025-10-01T10:31:31.894Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -22,12 +22,17 @@ At the end of its output, you can read the text "System is operating normally." 
 If you see the error message, "PLEASE ADD ERROR MESSAGE HERE," one or more services have failed to start. To identify the issue with the service and potentially fix it, continue with Section 3.
 
 ## 2.2 With `systemctl`
-- To list all services on your computer run:
+- To list all system-wide services on your computer, run:
 ```
 systemctl list-units --type=service
 ```
 
-This outputs a list of services. Navigate though it with your arrow keys, or use <kbd>space</kbd> to go one page down. Leave it with the <kbd>Q</kbd> key. 
+- To list all user-wide services on your computer, run:
+```
+systemctl list-units --type=service --user
+```
+
+This outputs a list of services. Navigate though it with your arrow keys, or use <kbd>space</kbd> to go one page down. Exit it with the <kbd>Q</kbd> key. 
 
 Services can have different states as shown in the row "SUB". They can be `running`, `exited`, or `failed`.
 
@@ -86,7 +91,7 @@ sudo systemctl enable --now nordvpnd
 ```
 
 # 4. Edit and create services
-It is also possible to edit or create services to your liking. System-wide service-files, which come through a package installation, are typically stored in `/usr/lib/systemd/system`, or `/etc/systemd/system`, while user-wide service-files are stored in `~/.config/systemd/user`, or `/etc/systemd/user`.
+It is also possible to edit or create services to your liking. System-wide service-files are typically stored in `/usr/lib/systemd/system`, or `/etc/systemd/system`, while user-wide service-files are stored in `~/.config/systemd/user`, or `/etc/systemd/user`.
 
 - To create a system-wide service-file, run:
 ```
