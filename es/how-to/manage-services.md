@@ -2,7 +2,7 @@
 title: Cómo administrar los servicios
 description:
 published: false
-date: 2025-09-30T11:18:31.209Z
+date: 2025-10-01T11:12:56.618Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -20,19 +20,25 @@ La gestión de servicios es una parte central de la administración de un sistem
 
 ![bredos-news.png](/systemd/bredos-news.png)
 
-Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Si acaba de iniciar su dispositivo, puede mostrar la advertencia "AÑADIR AÑADIR AQUÍ". Esto es normal, ya que muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar. Esta advertencia debería desaparecer después de unos minutos.
+Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Si acaba de arrancar su dispositivo, puede mostrar la advertencia "**X** services report activating" Esto es normal, como muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar. Esta advertencia debería desaparecer después de unos minutos.
 
-Si ves el mensaje de error, "POR FAVOR AÑADIR ERROR MESSAGE HERE", uno o más servicios no han podido iniciarse. Para identificar el problema con el servicio y potencialmente arreglarlo, continúe con la Sección 3.
+Si ves el mensaje de error, uno o más servicios no han podido iniciarse "**X** informes de estado fallido". Para identificar el problema con el servicio y potencialmente arreglarlo, continúe con la Sección 3.
 
 ## 2.2 Con `systemctl`
 
-- Para listar todos los servicios en su computadora ejecute:
+- Para listar todos los servicios del sistema en su computadora, ejecute:
 
 ```
 systemctl list-units --type=service
 ```
 
-Esto genera una lista de servicios. Navega con tus teclas de flecha, o usa <kbd>espacio</kbd> para ir una página abajo. Déjalo con la tecla <kbd>Q</kbd>.
+- Para listar todos los servicios de todo el usuario en su computadora, ejecute:
+
+```
+systemctl list-units --type=service --user
+```
+
+Esto genera una lista de servicios. Navega con tus teclas de flecha, o usa <kbd>espacio</kbd> para ir una página abajo. Sal con la tecla <kbd>Q</kbd>.
 
 Los servicios pueden tener diferentes estados como se muestra en la fila "SUB". Pueden ser `running`, `exited`, o `failed`.
 
@@ -96,3 +102,50 @@ La lógica continúa con la activación y desactivación de servicios al arranca
 ```
 sudo systemctl habilitar --now nordvpnd
 ```
+
+# 5. Editar y crear servicios
+
+También es posible editar o crear servicios a su gusto. Los archivos de servicio para todo el sistema normalmente se almacenan en `/usr/lib/systemd/system` o `/etc/systemd/system`, mientras que los archivos de servicio para todo el usuario se almacenan en `~/.config/systemd/user` o `/etc/systemd/user`.
+
+- Para crear un archivo de servicio para todo el sistema, ejecute:
+
+```
+sudo nano ► /systemd/<your service-file name here>.service
+```
+
+- Luego rellene el archivo recién creado con alguna información. Por ejemplo:
+
+```
+[Unit]
+Description=Ejecute mi script de un solo disparo al iniciar
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/my-oneshot-script.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-usuario.target
+```
+
+Este archivo de servicio ejecutará /usr/local/bin/my-oneshot-script.sh e introducirá el estado `exited` después de que el script termine limpiamente.
+
+- Para editar un servicio existente, ejecute:
+
+```
+sudo systemctl editar <your service-file name here>
+```
+
+> Por favor, ten en cuenta que editar archivos de servicio **puede** ser peligroso!
+> {.is-danger}
+
+- Después de editar un archivo de servicio necesita recargar el syystemd-daemon:
+
+```
+sudo systemctl daemon-recargar
+```
+
+# 4. Hoja de trampas
+
+Muchas distrubiuciones de linux publican hojas de trampa para el sistema. Como básicamente son todos los mismos, por lo que proporcionamos un enlace a [Hoja de Cheat de Red Hat para sistema](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf).
