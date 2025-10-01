@@ -2,7 +2,7 @@
 title: Run Android apps (waydroid)
 description: 
 published: true
-date: 2025-10-01T11:45:53.352Z
+date: 2025-10-01T11:49:34.331Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-21T08:40:19.752Z
@@ -56,3 +56,12 @@ waydroid session start
 ```
 waydroid app install <apk>.apk
 ```
+
+# 5. Enable Window integration
+Waydroid by default always runs in fullscreen. 
+- If you want waydroid to integrate with your Desktop Environments Window Manager, run:
+```
+waydroid prop set persist.waydroid.multi_windows true
+```
+
+Then restart your waydroid session.
