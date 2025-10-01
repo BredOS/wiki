@@ -2,7 +2,7 @@
 title: BtrfsスナップショットとTimeshift
 description: Timeshift スナップショットとシステムロールバックのセットアップに関する包括的なガイド
 published: true
-date: 2025-09-16T10:41:28.622Z
+date: 2025-10-01T09:05:40.858Z
 tags:
 editor: markdown
 dateCreated: 2024-09-27T19:19:08.209Z
@@ -88,7 +88,7 @@ sudo nano /etc/default/grub-btrfs/config
 - `timeshift-autosnap` をインストールするには:
 
 ```
-sudo pacman -S timeshift-autosnap
+yay -S timeshift-autosnap
 ```
 
 ## 3.2: GRUBの重複アップデートを防止
