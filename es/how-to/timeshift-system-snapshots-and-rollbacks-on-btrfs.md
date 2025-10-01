@@ -2,7 +2,7 @@
 title: Instantáneas y retrocesos Btrfs con Timeshift
 description: Una guía completa sobre cómo configurar instantáneas Btrfs y retrocesos del sistema usando Timeshift
 published: true
-date: 2025-10-01T09:05:40.858Z
+date: 2025-10-01T09:19:56.756Z
 tags:
 editor: markdown
 dateCreated: 2024-27-27T19:19:08.209Z
@@ -90,6 +90,9 @@ Es posible que desee instalar `timeshift-autosnap`, que automáticamente crea Sn
 ```
 yay -S timeshift-autosnap
 ```
+
+> `timeshift-autosnap` puede requerir reiniciar tu consola antes de que funcione como se esperaba.
+> {.is-warning}
 
 ## 3.2: Prevenir actualizaciones GRUB Duplicadas
 
