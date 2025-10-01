@@ -2,7 +2,7 @@
 title: 如何管理服务
 description:
 published: false
-date: 2025-09-30T11：18：31.209Z
+date: 2025-10-01T11:12:56.618Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -20,19 +20,25 @@ dateCreated: 2025-09-30T10:31:51.284Z
 
 ![bredos-news.png](/systemd/bredos-news.png)
 
-在输出结束时，您可以读取文本“系统正常运行”。 这意味着本应在启动时启动的所有服务已经启动，没有任何错误。 如果您刚刚启动了您的设备，它可以显示警告“请添加警告”。 这是正常的，因为许多服务可以平行启动，这可能导致在启动时出现延误。 这种警告将在几分钟后消失。
+在输出结束时，您可以读取文本“系统正常运行”。 这意味着本应在启动时启动的所有服务已经启动，没有任何错误。 如果您刚刚启动了您的设备，它可能会显示警告“**X** 服务报告状态激活”。这是正常的， 许多服务可以平行启动，这可能导致在启动时出现延误。 这种警告将在几分钟后消失。
 
-如果您看到错误消息，"请输入错误消息，"一个或多个服务未能启动。 为了确定该处的问题并可能予以解决，继续第3节。
+如果您看到错误消息，"**X** 服务报告状态失败"一个或多个服务启动失败。 为了确定该处的问题并可能予以解决，继续第3节。
 
 ## 2.2 使用 `systemctl`
 
-- 要列出您电脑运行的所有服务：
+- 要列出您计算机上的所有全系统服务，请运行：
 
 ```
 systemctl list-units --type=service
 ```
 
-此输出服务列表。 使用箭头键导航，或使用 <kbd>空间</kbd> 向下转一页。 使用 <kbd>Q</kbd> 键离开它。
+- 要列出您计算机上所有用户范围的服务，请运行：
+
+```
+systemctl list-units --type=service --user
+```
+
+此输出服务列表。 使用箭头键导航，或使用 <kbd>空间</kbd> 向下转一页。 用 <kbd>Q</kbd> 键退出
 
 服务可以有不同的状态，如“SUB”行所示。 它们可以是 `running`, `exited`, 或 `failed`。
 
@@ -96,3 +102,50 @@ sudo systemctl stop <your service name here>
 ```
 sudo systemctl 启用 --now nordvpnd
 ```
+
+# 🚀 4. 编辑和创建服务
+
+它也可以根据您的喜好编辑或创建服务。 全系统服务文件通常存储在`/usr/lib/systemd/system`或`/etc/systemd/system`中，而全用户范围的服务文件则存储在`~/.config/systemd/user`或`/etc/systemd/user`中。
+
+- 要创建全系统服务文件，请运行：
+
+```
+sudo nano /etc/systemd/system/<your service-file name here>.service
+```
+
+- 然后用一些信息填写新创建的文件。 例如：
+
+```
+[Unit]
+Description=Run my one-shot script at startup
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/my-oneshot-script.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+此服务文件将运行 /usr/local/bin/my-oneshot-script.sh 并在脚本全部终止后输入状态“exited”。
+
+- 要编辑现有的服务，请运行：
+
+```
+sudo systemctl edit <your service-file name here>
+```
+
+> 请注意编辑服务文件 **可以** 危险！
+> {.is-danger}
+
+- 在您编辑服务文件后，您需要重新加载系统系统：
+
+```
+sudo systemctl 守护进程重载
+```
+
+# 🔄 3. 作弊表
+
+许多linux disruubiutions 发布系统的作弊单。 由于它们基本上是一样的，所以我们提供了一个链接到[Red Hat's Cheat Sheet for system](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf)。
