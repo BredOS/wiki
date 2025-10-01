@@ -2,7 +2,7 @@
 title: How to manage services
 description: 
 published: false
-date: 2025-10-01T10:36:41.750Z
+date: 2025-10-01T10:41:36.395Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -91,7 +91,7 @@ sudo systemctl enable --now nordvpnd
 ```
 
 # 4. Edit and create services
-It is also possible to edit or create services to your liking. System-wide service-files are typically stored in `/usr/lib/systemd/system`, or `/etc/systemd/system`, while user-wide service-files are stored in `~/.config/systemd/user`, or `/etc/systemd/user`.
+It is also possible to edit or create services to your liking. System-wide service-files are typically stored in `/usr/lib/systemd/system` or `/etc/systemd/system`, while user-wide service-files are stored in `~/.config/systemd/user` or `/etc/systemd/user`.
 
 - To create a system-wide service-file, run:
 ```
@@ -113,7 +113,7 @@ RemainAfterExit=true
 WantedBy=multi-user.target
 ```
 
-This service-file will run /usr/local/bin/my-oneshot-script.sh and go into the state `exited` after the script terminates cleanly. 
+This service-file will run /usr/local/bin/my-oneshot-script.sh and enter the state `exited` after the script terminates cleanly. 
 
 - To edit a existing service, run:
 ```
