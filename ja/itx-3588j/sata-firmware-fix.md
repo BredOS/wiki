@@ -2,7 +2,7 @@
 title: Sata ファームウェアの修正
 description:
 published: true
-date: 2025-09-19T05:01:28.982Z
+date: 2025-10-03T05:08:32.217Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -32,7 +32,11 @@ SPIチップに接続する最も簡単な方法は、クリップを使用す�
 - SPIチップは、mSATAスロットのすぐ隣にSATAポートの近くにあります。 SPIチップは、mSATAスロットのすぐ隣にSATAポートの近くにあります。 SPIチップは、mSATAスロットのすぐ隣にSATAポートの近くにあります。 「JMB575」というラベルの正方形チップを探してください。これがSATAコントローラです。 その隣には、SPIチップである「W25X40CL」というラベルの付いた小さな8ピンチップがあります。 SPIチップ上のラベルは読みにくい場合があります しかし、SATAコントローラを見つけたら、SPIチップを簡単に識別できるはずです。
   ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) その隣には、SPIチップである「W25X40CL」というラベルの付いた小さな8ピンチップがあります。 SPIチップ上のラベルは読みにくい場合があります しかし、SATAコントローラを見つけたら、SPIチップを簡単に識別できるはずです。 その隣には、SPIチップである「W25X40CL」というラベルの付いた小さな8ピンチップがあります。 SPIチップ上のラベルは読みにくい場合があります しかし、SATAコントローラを見つけたら、SPIチップを簡単に識別できるはずです。
 
+<details><summary><b>SATAコントローラとSPIチップ</b></summary>
+
 ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg)
+
+</details>
 
 ## 2.1 クリップを接続する
 
@@ -40,11 +44,19 @@ SPIチップに接続する最も簡単な方法は、クリップを使用す�
 
 - クリップが完全に挿入されていることを確認します。 クリップが完全に挿入されていることを確認します。 クリップが完全に挿入されていることを確認します。 正しく接続されている場合は、クリップを使用してボードを持ち上げることができます。
 
+<details><summary><b>SPI</b></summary> に接続されているクリップの方向
+
 ![spi-clip-connected-cut.jpg](/wiki-itx3588j-pics/spi-clip-connected-cut.jpg)
+
+</details>
 
 - ケーブルのもう一方の端をフラッシャーに接続します。 正しい方向は以下のとおりです。フラッシャーの USB コネクタがあなたを指している場合。 ケーブルは下の4つの穴に入って左上に赤い線が入ってるはずだ
 
+<details><summary><b>Orientation of the clip connected to the flasher</b></summary>
+
 ![flasher-clip-connected-cut-scaled.jpg](/wiki-itx3588j-pics/flasher-clip-connected-cut-scaled.jpg)
+
+</details>
 
 ## 2.2 またはSPIチップを元に戻す
 
@@ -55,17 +67,22 @@ SPIチップに接続する最も簡単な方法は、クリップを使用す�
 チップをフラッシャーに直接半田付けすることができます（これにはフラッシャーの背面にパッドがあります） または、上記のパックに含まれているアダプターボードのいずれかを使用してください。
 パックの一部として、無人のボードとZIF Socketがある必要があります。 賢明に選びなさい。
 パックの一部として、無人のボードとZIF Socketがある必要があります。 賢明に選びなさい。 賢明に選びなさい。
+ピン1はチップ上に小さなドットでマークされ、フラッシャーまたはアダプターボード上に「1」と表示されます。
+![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
+または
+![spi-soldered-cut.jpg](/wiki-itx3588j-pics/spi-soldered-cut.jpg)
 
-- ピン1はチップ上に小さなドットでマークされ、フラッシャーまたはアダプターボード上に「1」と表示されます。
-  ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
-  または
-  ![spi-soldered-cut.jpg](/wiki-itx3588j-pics/spi-soldered-cut.jpg)
+<details><summary><b>ZIF Socket</b></summary>
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
-- または
+</details>
+
+<details><summary><b>SPI Chip soldered to the adapter board</b></summary>
 
 ![spi-soldered-cut.jpg](/wiki-itx3588j-pics/spi-soldered-cut.jpg)
+
+</details>
 
 ## 2.3 接続の確認
 
