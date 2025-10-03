@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: true
-date: 2025-09-28T08:24:20.184Z
+date: 2025-10-03T04:59:17.765Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -62,18 +62,28 @@ dateCreated: 2025-09-15T12:36.362Z
   坚定按下 eMMC 的连接器到 uSD 适配器并将它们连接到您的 SD 卡阅读器。
   ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
+<details><summary><b>uSD Adpater and eMMC</b></summary>
+
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
-- 如果您没有使用 eMC存储设备，请跳至 `3.2.2 刷入eMMC / SD Card` 。
-  {.is-info}
+</details>
+- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+
+<details><summary><b>uSD 适配器连接到阅读器</b></summary>
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+
+  </details>
 
 #### 3.2.1.2 使用 USB 为 eMMC 适配器
 
 - 由于几乎所有已知的 USB Sticks 都是基于eMC 存储设备，在那里有 USB 到 eMMC 适配器，这些适配器是 USB-Stics ，但是可以移除eMMC 存储设备。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。
 
+<details><summary><b>USB 到 eMMC 适配器</b></summary>
+
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
+
+   </details>
 
 ### 3.2.2 刷入 eMMC / SD 卡
 
