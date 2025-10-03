@@ -2,7 +2,7 @@
 title: Arreglo de firmware de Sata
 description:
 published: true
-date: 2025-09-19T05:01:28.982Z
+date: 2025-10-03T05:08:32.217Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -32,7 +32,11 @@ Por otro lado, si tienes experiencia de soldadura, no es una tarea difícil dese
 
 - El chip SPI está situado cerca de los puertos SATA, justo al lado del mSATA. Busca el chip cuadrado etiquetado como "JMB575" — ese es el controlador SATA. Junto a él, encontrarás un chip de 8 pines más pequeño etiquetado como "W25X40CL", que es el chip SPI. La etiqueta del chip SPI puede ser difícil de leer, pero una vez que hayas localizado el controlador SATA, debería ser fácil identificar el chip SPI.
 
+<details><summary><b>Controlador SATA y Chip SPI</b></summary>
+
 ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg)
+
+</details>
 
 ## 2.1 Conectar el clip
 
@@ -40,11 +44,19 @@ Pin 1 en el clip está codificado por color en el cable — el cable rojo lo ind
 
 - Asegúrese de que el clip está completamente insertado. Si está conectado correctamente, debería ser capaz de levantar el tablero usando el clip.
 
+<details><summary><b>Orientación del clip conectado al SPI</b></summary>
+
 ![spi-clip-connected-cut.jpg](/wiki-itx3588j-pics/spi-clip-connected-cut.jpg)
+
+</details>
 
 - Conecte el otro extremo del cable al parpadeo. La orientación correcta es la siguiente: si el conector USB del flasheador apunta hacia ti, el cable debe entrar en los cuatro orificios inferiores, con el cable rojo en la esquina superior izquierda.
 
+<details><summary><b>Orientación del clip conectado al flasheador</b></summary>
+
 ![flasher-clip-connected-cut-scaled.jpg](/wiki-itx3588j-pics/flasher-clip-connected-cut-scaled.jpg)
+
+</details>
 
 ## 2.2 O desmayado el chip SPI
 
@@ -52,14 +64,19 @@ Toca un poco de mecha de soldar y flujo, calienta tu hierro, y desmayas la ficha
 
 Entonces puede soldar la ficha directamente sobre el flasher (hay una almohadilla en la parte posterior del flasheador para esto), o utilice una de las tarjetas de adaptador incluidas en el paquete mencionado anteriormente.
 Debe haber una placa no poblada y un conector ZIF como parte del paquete. Elija sabiamente.
+Pin 1 está marcado en la ficha con un punto pequeño y está etiquetado con un "1" en la placa de flasher o adaptador.
 
-- Pin 1 está marcado en la ficha con un punto pequeño y está etiquetado con un "1" en la placa de flasher o adaptador.
+<details><summary><b>SPI Chip conectado a Flasher a través de un ZIF Socket</b></summary>
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
-- o
+</details>
+
+<details><summary><b>SPI Chip soldado al adaptador</b></summary>
 
 ![spi-soldered-cut.jpg](/wiki-itx3588j-pics/spi-soldered-cut.jpg)
+
+</details>
 
 ## 2.3 Comprobar conexión
 
