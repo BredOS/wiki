@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: true
-date: 2025-09-28T08:24:20.184Z
+date: 2025-10-03T04:59:17.765Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -45,15 +45,29 @@ In the following we describe how to flash eMMC with an adapter. If you do not ow
 #### 3.2.1.1 with uSD adapter
 - As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to convert them into an SD Card.
 
+<details>
+<summary><b>uSD Adpater and eMMC</b></summary>
+
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
+
+</details>
 - Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
 
+<details>
+<summary><b>uSD Adapter connected to reader</b></summary>
+
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+  
+  </details>
 
 #### 3.2.1.2 with USB to eMMC adapter
 - As almost all commonly known USB Sticks are based on eMMC storage there are USB to eMMC adapters out there which are USB-Sticks but with removable eMMC storage. These can be used to flash BredOS too.
 
+<details>
+<summary><b>USB to eMMC adapter</b></summary>
+
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
+   </details>
 
 ### 3.2.2 Flashing eMMC / SD Card
 There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows. 
