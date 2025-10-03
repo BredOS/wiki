@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: true
-date: 2025-09-28T08:24:20.184Z
+date: 2025-10-03T04:59:17.765Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -53,18 +53,28 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee u
 
 - Como eMMC es básicamente una tarjeta SD que es (en su mayoría) de cable duro a la SBC hay adaptadores que puedes conectar tu eMMC para convertirlos en una tarjeta SD.
 
+<details><summary><b>uSD Adpater y eMMC</b></summary>
+
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
-- ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
-  Presiona firmemente el conector del eMMC al adaptador uSD y conéctalos al lector de tu tarjeta SD.
+</details>
+- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+
+<details><summary><b>adaptador uSD conectado al lector</b></summary>
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+
+  </details>
 
 #### 3.2.1.2 con adaptador USB a eMMC
 
 - Como casi todos los USB conocidos comúnmente se basan en el almacenamiento eMMC, existen adaptadores USB a eMMC que son USB-Sticks pero con almacenamiento eMMC extraíble. Estos pueden ser usados para flashear BredOS también.
 
+<details><summary><b>USB al adaptador eMMC</b></summary>
+
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
+
+   </details>
 
 ### 3.2.2 Flashear eMMC / Tarjeta SD
 
