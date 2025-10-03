@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: true
-date: 2025-09-19T05:04:35.739Z
+date: 2025-10-03T05:08:32.217Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -32,32 +32,56 @@ On the other hand, if you have soldering experience, it's not a difficult task t
 
 - The SPI chip is located near the SATA ports, right next to the mSATA slot. Look for the square chip labeled "JMB575" — that's the SATA controller. Next to it, you'll find a smaller 8-pin chip labeled "W25X40CL", which is the SPI chip. The label on the SPI chip can be hard to read, but once you've located the SATA controller, it should be easy to identify the SPI chip.
 
+<details>
+<summary><b>SATA Controller and SPI Chip</b></summary>
+
 ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg)
+  
+</details>
+ 
  ## 2.1 Connect the Clip
 
 Pin 1 on the clip is color-coded on the cable — the red wire indicates it. The red wire should face the edge of the board where the SATA ports are located.
 - Make sure the clip is fully inserted. If it's connected correctly, you should be able to lift the board using the clip.
 
+<details>
+<summary><b>Orientation of the clip connected to the SPI</b></summary>
+
 ![spi-clip-connected-cut.jpg](/wiki-itx3588j-pics/spi-clip-connected-cut.jpg)
 
+</details>
+  
 - Connect the other end of the cable to the flasher. The correct orientation is as follows: if the USB connector of the flasher is pointing towards you, the cable should go into the lower four holes, with the red wire in the top left corner.
+
+<details>
+<summary><b>Orientation of the clip connected to the flasher</b></summary>
 
 ![flasher-clip-connected-cut-scaled.jpg](/wiki-itx3588j-pics/flasher-clip-connected-cut-scaled.jpg)
  
+</details>
  
  ## 2.2 Or desolder the SPI Chip
 Grab some soldering wick and flux, heat up your iron, and desolder the chip. You should know what you're doing!
 
 You can then either solder the chip directly onto the flasher (there’s a pad on the back of the flasher for this), or use one of the adapter boards included in the pack mentioned above.
 There should be an unpopulated board and a ZIF Socket as part of the pack. Choose wisely.
+Pin 1 is marked on the chip with a small dot and is labeled with a "1" on the flasher or adapter board.
 
-- Pin 1 is marked on the chip with a small dot and is labeled with a "1" on the flasher or adapter board.
+<details>
+<summary><b>SPI Chip connected to Flasher through a ZIF Socket</b></summary>
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
-- or
+
+
+</details>
+
+<details>
+<summary><b>SPI Chip soldered to the adapter board</b></summary>
 
 ![spi-soldered-cut.jpg](/wiki-itx3588j-pics/spi-soldered-cut.jpg)
 
+</details>
+  
 ## 2.3 Check connection
 - First you need to install flashrom.
 ```
