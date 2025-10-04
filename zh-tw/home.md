@@ -2,7 +2,7 @@
 title: BredOS 主頁
 description:
 published: true
-date: 2025-10-04T09:42:23.478Z
+date: 2025-10-04T10:55:09.705Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
@@ -21,7 +21,7 @@ The documentation will guide you through the installation, configuration, and us
 # 3. 🚀 Features
 
 - We ship functional installations, not configurations.
-- No experience required. It’s easy; everything is documented, and [we love to help](#h-7-community-and-support)!
+- No experience required. It’s easy; everything is documented, and [we love to help](#h-8-community-and-support)!
 - Simple and plain by design! **⚡ Lightweight**: Minimal bloat, ensuring a lightweight and responsive system.
 - Arch-based - with customization tailored to be polished and easy to use.
 
@@ -75,7 +75,7 @@ docker pull bredos/bredos
 
 # 4. 安裝
 
-Take a look at the device pages in the navigation bar on this page to find known issues specific to your device. If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
+Take a look at the device pages in the navigation bar on this page to find known issues specific to your device. If your problem is not listed there, feel free to contact us directly via [our support channels](#h-8-community-and-support).
 
 # 8. 🌐 Community and Support
 
