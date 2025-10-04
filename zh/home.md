@@ -2,7 +2,7 @@
 title: 主页
 description:
 published: true
-date: 2025-10-04T09:42:23.478Z
+date: 2025-10-04T10:55:09.705Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -20,7 +20,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 # 3. 🚀 功能
 
 - 我们运送功能安装，而不是配置。
-- 无需体验。 这很简单；一切都有记录，[我们希望帮助](#h-7-community-and-support)！
+- 无需体验。 这很简单；一切都有记录，[我们希望帮助](#h-8-community-and-support)！
 - 设计简单明了！ 设计简单明了！ 没有博客，确保一个轻量和响应系统！
 - 以存档为基础——专门设计用于打磨和易于使用的自定义系统。
 
@@ -74,7 +74,7 @@ If your device isn’t listed on our [download site](https://bredos.org/download
 
 # 4. 安装
 
-查看此页面导航栏中的设备页面来查找您设备特有的问题。 如果您的问题没有列出在这里，请随时通过[我们的支持频道](#h-7-community-and-support)直接联系我们。
+查看此页面导航栏中的设备页面来查找您设备特有的问题。 如果您的问题没有列出在这里，请随时通过[我们的支持频道](#h-8-community-and-support)直接联系我们。
 
 # 8. 🌐 社区和支持
 
