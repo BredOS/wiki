@@ -2,7 +2,7 @@
 title: ホームページ
 description:
 published: true
-date: 2025-10-04T09:42:23.478Z
+date: 2025-10-04T10:55:09.705Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -20,7 +20,7 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 # 📦 2. 🚀 機能
 
 - 私たちは構成ではなく機能的なインストールを出荷します。
-- 経験は必要ありません。 It’s easy; everything is documented, and [we love to help](#h-7-community-and-support)!
+- 経験は必要ありません。 It’s easy; everything is documented, and [we love to help](#h-8-community-and-support)!
 - シンプルでシンプルなデザイン! 肥満なし、軽量で応答性の高いシステムを確保します!
 - Archベース - 洗練され、使いやすいようにカスタマイズされたカスタマイズが可能です。
 
@@ -74,7 +74,7 @@ docker pull bredos/bredos
 
 # 4. コントリビューション
 
-このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support). このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support).
+このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 このページのナビゲーションバーのデバイス ページを見て、デバイス固有の既知の問題を見つけてください。 If your problem is not listed there, feel free to contact us directly via [our support channels](#h-7-community-and-support). If your problem is not listed there, feel free to contact us directly via [our support channels](#h-8-community-and-support).
 
 # 8. 🌐 コミュニティとサポート
 
