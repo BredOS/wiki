@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2025-10-04T08:16:16.049Z
+date: 2025-10-04T08:55:04.581Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -28,7 +28,7 @@ The documentation will guide you through the installation, configuration, and us
  - Govctl - [take control of your CPU](/how-to/govctl)!
  
  # 3. System Requirements
-We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/table-of-supported-devices).
+We support a wide range of devices—from exciting ARM-based systems and experimental RISC-V setups to plain old lame x86_64 intel/amd boards. We've got you covered, whether you use our [mainline .iso installation](/install/Installation-with-ISO) or refer to the list of devices we passionately support on our [table of supported devices](/table-of-supported-devices).
  
 ## 3.1 Minimal System Requirements
  - Minimum RAM: 2 GB
@@ -50,7 +50,7 @@ These are images for the boards we love the most. To install these BredOS images
 Visit our [download site](https://bredos.org/download.html) to find out if your device is one of them.
 
 ## 6.2 Generic installation
-If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
+If your device isn’t listed on our [download site](https://bredos.org/download.html) but supports booting UEFI and is based on either x86_64- or ARM64 architecture, simply follow our guide for a generic installation available [here](/install/Installation-with-ISO).
 
 ## 6.3 Docker container installation
 - Easy as one line of command:
