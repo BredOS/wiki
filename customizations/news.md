@@ -2,7 +2,7 @@
 title: BredOS News
 description: Customizing this suprisingly complicated piece of software.
 published: true
-date: 2025-10-04T21:13:09.732Z
+date: 2025-10-04T21:14:51.210Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -73,3 +73,7 @@ Special keys and combinations are currently not supported.
 Symbols are supported.
 
 ## Environment overrides
+
+Setting `HUSH_NEWS=1` will prevent BredOS News from running.
+
+Creating `~/.hush_login` also has the same effect.
