@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2025-10-04T08:55:04.581Z
+date: 2025-10-04T09:04:56.844Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -15,7 +15,7 @@ The documentation will guide you through the installation, configuration, and us
 ![boot-no-loop.gif](/boot-no-loop.gif)
 
 # 2. Features
- - Made with passion - just for your enjoyment!
+ - We ship functional installations, not configurations.
  - User support with great respect! No matter if you are a little crumb or an entire flatbread!
  - Simple and plain by design! No bloat, ensuring a lightweight and responsive system!
  - Arch-based - with customization tailored to be polished and easy to use.
