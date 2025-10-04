@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2025-10-04T09:04:56.844Z
+date: 2025-10-04T09:42:23.478Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -16,7 +16,7 @@ The documentation will guide you through the installation, configuration, and us
 
 # 2. Features
  - We ship functional installations, not configurations.
- - User support with great respect! No matter if you are a little crumb or an entire flatbread!
+ - No experience required. It’s easy; everything is documented, and [we love to help](#h-7-community-and-support)!
  - Simple and plain by design! No bloat, ensuring a lightweight and responsive system!
  - Arch-based - with customization tailored to be polished and easy to use.
 
