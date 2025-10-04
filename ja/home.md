@@ -2,7 +2,7 @@
 title: ホームページ
 description:
 published: true
-date: 2025-10-04T09:04:56.844Z
+date: 2025-10-04T09:42:23.478Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -20,7 +20,7 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 # 📦 2. 🚀 機能
 
 - 私たちは構成ではなく機能的なインストールを出荷します。
-- 素晴らしい敬意を持つユーザーサポート! あなたが小さなパン粉であっても、フラットブレッド全体であっても!
+- 経験は必要ありません。 It’s easy; everything is documented, and [we love to help](#h-7-community-and-support)!
 - シンプルでシンプルなデザイン! 肥満なし、軽量で応答性の高いシステムを確保します!
 - Archベース - 洗練され、使いやすいようにカスタマイズされたカスタマイズが可能です。
 
