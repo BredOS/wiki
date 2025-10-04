@@ -2,7 +2,7 @@
 title: Página web
 description:
 published: true
-date: 2025-10-04T09:04:56.844Z
+date: 2025-10-04T09:42:23.478Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -19,7 +19,7 @@ La documentación le guiará a través de la instalación, configuración y uso 
 # 3. 🚀 Características
 
 - Enviamos instalaciones funcionales, no configuraciones.
-- ¡Soporte al usuario con gran respeto! No importa si usted es un poco de migajas o todo un plano!
+- No se requiere experiencia. ¡Es fácil; todo está documentado y [nos encanta ayudar](#h-7-community-and-support)!
 - ¡Simple y simple por diseño! ¡Sin problemas, garantizando un sistema ligero y receptivo!
 - Arquero - con personalización hecha a medida para ser pulida y fácil de usar.
 
