@@ -2,7 +2,7 @@
 title: Página web
 description:
 published: true
-date: 2025-10-04T09:42:23.478Z
+date: 2025-10-04T10:55:09.705Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -19,7 +19,7 @@ La documentación le guiará a través de la instalación, configuración y uso 
 # 3. 🚀 Características
 
 - Enviamos instalaciones funcionales, no configuraciones.
-- No se requiere experiencia. ¡Es fácil; todo está documentado y [nos encanta ayudar](#h-7-community-and-support)!
+- No se requiere experiencia. ¡Es fácil; todo está documentado y [nos encanta ayudar](#h-8-community-and-support)!
 - ¡Simple y simple por diseño! ¡Sin problemas, garantizando un sistema ligero y receptivo!
 - Arquero - con personalización hecha a medida para ser pulida y fácil de usar.
 
@@ -73,7 +73,7 @@ trituradores/bredos/bredos
 
 # 4. Contribuyendo
 
-Eche un vistazo a las páginas del dispositivo en la barra de navegación de esta página para encontrar problemas conocidos específicos de su dispositivo. Si tu problema no está listado, no dudes en contactar con nosotros directamente a través de [nuestros canales de soporte](#h-7-community-and-support).
+Eche un vistazo a las páginas del dispositivo en la barra de navegación de esta página para encontrar problemas conocidos específicos de su dispositivo. Si tu problema no está listado, no dudes en contactar con nosotros directamente a través de [nuestros canales de soporte](#h-8-community-and-support).
 
 # 9. 🌐 Comunidad y soporte
 
