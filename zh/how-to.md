@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些功能的指南、教程和提示
 published: true
-date: 2025-09-28T12:21:49.254Z
+date: 2025-10-05T07:05:01.193Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -46,7 +46,7 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [How to manage systemd-nspawn containers](/how-to/systemd-nspawn)
 
-- [扩展刷入指南](/how-to/extended-flashing-guide)
+- [如何管理服务](/how-to/manage-services)
 
 > ✨ 探索这些指南以获得最佳的 BredOS 体验！
 > {.is-info}
