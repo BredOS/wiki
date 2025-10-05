@@ -1,8 +1,8 @@
 ---
 title: サービスを管理する方法
 description:
-published: false
-date: 2025-10-01T11:35:53.087Z
+published: true
+date: 2025-10-05T07:04:12.252Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
