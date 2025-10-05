@@ -16,9 +16,9 @@ dateCreated: 2025-10-04T21:13:09.732Z
 
 # 3. 設定と上書き
 
-A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank configuration is automatically (re)generated after the first run of the app, so it is possible to reset its configuration by deleting this file.
+`~/.newsrc` には、permenant (ユーザ毎) の設定ができます。 デフォルトの空白設定は、アプリの最初の実行後に自動的に(再)生成されます。 このファイルを削除することで構成をリセットすることができます。
 
-- The default configuration file should look like this:
+- デフォルトの設定ファイルは以下のようになります:
 
 ```
 # BredOS-News Configuration
@@ -40,41 +40,41 @@ A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank 
 # }
 ```
 
-> To activate a parameter in this configuration file, remove the <kbd>#</kbd> at the beginning of the line.
+> この設定ファイルでパラメータを有効にするには、行頭の <kbd>#</kbd> を削除します。
 > {.is-warning}
 
-## 2.1 Set accent (color)
+## 2.1 アクセントを設定 (色)
 
-The parameter `Accent` sets the primary colors, `Accent_Secondary` sets the colors for all the details. 任意の ANSI エスケープシーケンスを適用することができます。
+パラメータ`Accent`は、基本色を設定します。`Accent_Secondary`は、すべての詳細の色を設定します。 任意の ANSI エスケープシーケンスを適用することができます。
 
 > ANSI エスケープシーケンスと例の詳細については、[this link](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) に従ってください。
 > {.is-warning}
 
-## 2.2 Disabling features
+## 2.2 機能の無効化
 
-| Parameter                | Description                                                                               |
-| ------------------------ | ----------------------------------------------------------------------------------------- |
-| `Hush_Updates` = `False` | Removes the package updates section entirely.                             |
-| `Hush_Disks` = `False`   | Removes the attached medium storage usage notes.                          |
-| `Hush_Smart` = `False`   | Mutes disk failure warnings. This should **not** be used. |
+| パラメータ                    | 説明                                   |
+| ------------------------ | ------------------------------------ |
+| `Hush_Updates` = `False` | パッケージの更新セクションを完全に削除します。              |
+| `Hush_Disks` = `False`   | 添付されているメディアストレージの使用状況メモを削除します。       |
+| `Hush_Smart` = `False`   | ディスク障害の警告をミュートします。 これは**使わない**でください。 |
 
-## 2.3 Configuring animation time
+## 2.3 アニメーション時間の設定
 
-| Parameter               | Description                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------- |
-| `Time_Tick` = `0.1`     | Configures the time between frames of the animation.                            |
-| `Time_Refresh` = `0.25` | Configures how often the system details refresh.                                |
-| `Onetime` = `False`     | Disables the animation loop, the shortcut system and terminal resize functions. |
+| パラメータ                   | 説明                                        |
+| ----------------------- | ----------------------------------------- |
+| `Time_Tick` = `0.1`     | アニメーションのフレーム間の時間を設定します。                   |
+| `Time_Refresh` = `0.25` | システム詳細の更新頻度を設定します。                        |
+| `Onetime` = `False`     | アニメーションループ、ショートカットシステム、端末のサイズ変更機能を無効にします。 |
 
 > これらの値はすでに最高です。 これ以上もしくはcpuの使用を減らさないでください **スパイク** 。
 > {.is-warning}
 
 # 4. ショートカット
 
-The `shortcuts` array is a dictionary of settable keybinds. This is basically quick-dial for your terminal. While `bredos-news` is looping it's animation, pressing one of the configured keys will, instead of passing the key to the shell, launch the preconfigured shortcut.
+`shortcuts` 配列は、設定可能なキー割り当ての辞書です。 これは基本的にあなたの端末のためのクイックダイヤルです。 `bredos-news` はアニメーションをループさせていますが、設定されたキーのいずれかを押すとシェルにキーを渡すのではなく、あらかじめ設定されたショートカットを起動します。
 
-Setting shortcut keys, like how it's shown in the example, allows running commands or python functions. For the given example above, pressing <kbd>1</kbd> will launch the tool `bredos-config`. All shell operations, like changing directory and/or piping, are fully supported, while special keys and key combinations are currently not supported.
+例のようにショートカットキーを設定すると、コマンドやPython関数を実行することができます。 上記の例では、 <kbd>1</kbd> を押すとツール`bredos-config`が起動します。 ディレクトリおよび/または配管の変更など、すべてのシェル操作は完全にサポートされていますが、特殊なキーとキーの組み合わせは現在サポートされていません。
 
-# 4. 環境の上書き
+# 🚀 4. 環境の上書き
 
-Setting the variable `HUSH_NEWS=1` or creating the file `~/.hush_login` will prevent BredOS News from running.
+変数 `HUSH_NEWS=1` を設定したり、ファイル `~/.hush_login` を作成したりすると、BredOS ニュースが実行されなくなります。
