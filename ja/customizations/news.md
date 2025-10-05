@@ -2,7 +2,7 @@
 title: BredOS ニュース
 description: この驚くほど複雑なソフトウェアをカスタマイズします
 published: true
-date: 2025-10-05T12:26:26.876Z
+date: 2025-10-05T13:04:29.052Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -10,9 +10,9 @@ dateCreated: 2025-10-04T21:13:09.732Z
 
 # 🔄 1. はじめに
 
-デフォルトでは、シェルを開くたびに「bredos-news」が起動します。 This is set by the line `bredos-news || true` in `~/.bashrc` and by the existence of `/etc/profile.d/99-bredos-news.sh`
+デフォルトでは、シェルを開くたびに「bredos-news」が起動します。 `~/.bashrc`の`bredos-news || true`と`/etc/profile.d/99-bredos-news.sh`の行によって設定されます。
 
-「bredos-news」のすべてのコピーをパーソナライズすることができます。つまり、あなたが望む機能とそれを完全にテーマに設定することができます。
+「bredos-news」のすべてのコピーはパーソナライズされています。つまり、あなたが望む機能とそれを完全にテーマに設定することができます。
 
 # 3. 設定と上書き
 
@@ -21,7 +21,12 @@ dateCreated: 2025-10-04T21:13:09.732Z
 - デフォルトの設定ファイルは以下のようになります:
 
 ```
-# BredOS-News Configuration
+"""
+BredOS-News Configuration
+
+Refer to `https://wiki.bredos.org/e/en/customizations/news`,
+for detailed instructions on how to configure.
+"""
 
 # Accent = "\033[38;5;129m"
 # Accent_Secondary = "\033[38;5;104m"
@@ -33,11 +38,27 @@ dateCreated: 2025-10-04T21:13:09.732Z
 # Time_Refresh = 0.25
 # Onetime = False
 
-# Shortcuts configuration
+"""
+Shortcuts configuration
 
-# shortcuts = {
-#     "1": "bredos-config",
-# }
+Shell commands, using $SHELL, and python functions are fully supported.
+Only alphanumeric and symbol keys can be captured, no key combinations.
+Capital keys work and can be bound to seperate shortcuts from lowercase.
+"""
+
+def shortcuts_help() -> None:
+    print("Configured shortcuts:")
+    for i in shortcuts.keys():
+        shortcut = shortcuts[i]
+        if is_function(shortcut):
+            print(f" - {i}: Function {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{shortcuts[i]}"')
+    print("\n")
+
+shortcuts["1"] = "bredos-config"
+shortcuts["0"] = "sudo sys-report"
+shortcuts["?"] = shortcuts_help
 ```
 
 > この設定ファイルでパラメータを有効にするには、行頭の <kbd>#</kbd> を削除します。
@@ -49,6 +70,15 @@ dateCreated: 2025-10-04T21:13:09.732Z
 
 > ANSI エスケープシーケンスと例の詳細については、[this link](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) に従ってください。
 > {.is-warning}
+
+共通のスタイル：
+
+| 色          | コード                                                                                                               |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| パーフェクトパープル | `Accent = "\033[38;5;129m"`                                                                                      |
+|            | `Accent_Secondary = "\033[38;5;104m"`                                                                            |
+| 太字の赤       | \`Accent = "\033[1m\033[38;5;124m"] |
+|            | `Accent_Secondary = "\033[38;5;160m"`                                                                            |
 
 ## 2.2 機能の無効化
 
