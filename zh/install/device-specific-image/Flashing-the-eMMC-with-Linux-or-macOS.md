@@ -2,7 +2,7 @@
 title: 使用 Linux 或 macOS 刷入 eMMC
 description:
 published: true
-date: 2025-09-29T06:00:19.076Z
+date: 2025-10-05T06:59:09.446Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -167,3 +167,35 @@ sudo rkdevelopmenttoold
 > {.is-success}
 > {.is-success}
 > {.is-success}
+
+# 🚀 4. 附加信息
+
+好吧，你只是想要更多进度条在你的生活中，对吗？ 我们已经覆盖了你，不要担心。
+
+## 4.1 读取选定的闪光介质信息
+
+命令`sudo rkdeveloptools rfi`将向您显示所选闪光介质的详细信息。
+
+- 默认情况下，这通常是 eMMC，除非它不可用。
+
+```
+闪光信息：
+	制造商：SAMSUNG， value=00
+	Flash Size: 14910 MB
+	Flash Size: 30535680 Sectors
+	Block Size: 512 KB
+	页面大小: 2 KB
+	ECC Bits: 0
+	访问时间: 40
+	Flash CS: Flash<0>
+```
+
+## 4.2 改变闪光目标
+
+想要刷入/转储不是eMC，而是一个不同的东西？
+
+- `sudo rkdeveloped tools cs 2` 用于选择SD卡。
+- `sudo rkdeveloped tools cs 9` 用于选择SPINOR芯片。
+- `sudo rkdeveloped tools cs 1`再次选择 eMMC 。
+
+更改将反映在`sudo rkdeveloptool rfi`中。
