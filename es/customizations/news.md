@@ -16,65 +16,65 @@ Cada copia de `bredos-news` puede ser personalizada, lo que significa que puedes
 
 # 3. Configuración y sobrescritos
 
-A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank configuration is automatically (re)generated after the first run of the app, so it is possible to reset its configuration by deleting this file.
+Una configuración permenant (por usuario) puede establecerse en `~/.newsrc`. Una configuración en blanco por defecto se genera automáticamente (re)después de la primera ejecución de la aplicación, para que sea posible restablecer su configuración eliminando este archivo.
 
-- The default configuration file should look like this:
+- El archivo de configuración por defecto debería verse así:
 
 ```
-# BredOS-News Configuration
+# Configuración BredOS-Noticias
 
-# Accent = "\033[38;5;129m"
-# Accent_Secondary = "\033[38;5;104m"
+# Acento = "\033[38;5;129m"
+# Accent_Segunddary = "\033[38;5; 04m"
 
-# Hush_Updates = False
-# Hush_Disks = False
-# Hush_Smart = False
-# Time_Tick = 0.1
-# Time_Refresh = 0.25
+# mañana_Actualizaciones = False
+# mañana_Discos = False
+# mañana_Smart = False
+# Time_Tick = 0.
+# Time_Refresh = 0. 5
 # Onetime = False
 
-# Shortcuts configuration
+# Atajos de configuración
 
-# shortcuts = {
-#     "1": "bredos-config",
+# atajos = {
+# "1": "bredos-config",
 # }
 ```
 
-> To activate a parameter in this configuration file, remove the <kbd>#</kbd> at the beginning of the line.
+> Para activar un parámetro en este archivo de configuración, elimine el <kbd>#</kbd> al comienzo de la línea.
 > {.is-info}
 
-## 2.1 Set accent (color)
+## 2.1 Establecer acento (color)
 
-The parameter `Accent` sets the primary colors, `Accent_Secondary` sets the colors for all the details. Se puede aplicar cualquier secuencia de escape arbitraria ANSI.
+El parámetro `Accent` establece los colores primarios, `Accent_Segundo` establece los colores para todos los detalles. Se puede aplicar cualquier secuencia de escape arbitraria ANSI.
 
 > Para más información sobre secuencias de escape ANSI y ejemplos, siga [este enlace](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 > {.is-info}
 
-## 2.2 Disabling features
+## 2.2 Desactivando características
 
-| Parameter                | Description                                                                               |
-| ------------------------ | ----------------------------------------------------------------------------------------- |
-| `Hush_Updates` = `False` | Removes the package updates section entirely.                             |
-| `Hush_Disks` = `False`   | Removes the attached medium storage usage notes.                          |
-| `Hush_Smart` = `False`   | Mutes disk failure warnings. This should **not** be used. |
+| Parámetro                | Descripción                                                                                               |
+| ------------------------ | --------------------------------------------------------------------------------------------------------- |
+| `j_Updates` = `False`    | Elimina completamente la sección de actualizaciones de paquetes.                          |
+| `mañana_Disco` = `False` | Elimina las notas de uso de almacenamiento medio adjuntas.                                |
+| `n_h_Smart` = `False`    | Silencia las advertencias de fallo del disco. Esto **no** debe ser usado. |
 
-## 2.3 Configuring animation time
+## 2.3 Configurando tiempo de animación
 
-| Parameter               | Description                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------- |
-| `Time_Tick` = `0.1`     | Configures the time between frames of the animation.                            |
-| `Time_Refresh` = `0.25` | Configures how often the system details refresh.                                |
-| `Onetime` = `False`     | Disables the animation loop, the shortcut system and terminal resize functions. |
+| Parámetro               | Descripción                                                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `Time_Tick` = `0.1`     | Configura el tiempo entre fotogramas de la animación.                                                                 |
+| `Time_Refresh` = `0.25` | Configura la frecuencia con que se actualizan los detalles del sistema.                                               |
+| `Onetime` = `False`     | Deshabilita el bucle de animación, el sistema de acceso directo y las funciones de redimensionamiento de la terminal. |
 
 > Estos valores son los mejores ya existentes. No reduzca más o el uso de cpu **será** ppike.
 > {.is-info}
 
-# 3. Atajos
+# 4. Atajos
 
-The `shortcuts` array is a dictionary of settable keybinds. This is basically quick-dial for your terminal. While `bredos-news` is looping it's animation, pressing one of the configured keys will, instead of passing the key to the shell, launch the preconfigured shortcut.
+La matriz `shortcuts` es un diccionario de keybinds configurables. Este es básicamente un dial rápido para su terminal. Mientras que `bredos-news` está haciendo un bucle en su animación, pulsando una de las teclas configuradas, en lugar de pasar la tecla al shell, se iniciará el atajo preconfigurado.
 
-Setting shortcut keys, like how it's shown in the example, allows running commands or python functions. For the given example above, pressing <kbd>1</kbd> will launch the tool `bredos-config`. All shell operations, like changing directory and/or piping, are fully supported, while special keys and key combinations are currently not supported.
+Configurar teclas de acceso directo, como cómo se muestra en el ejemplo, permite ejecutar comandos o funciones de python. Para el ejemplo anterior, presionando <kbd>1</kbd> iniciará la herramienta `bredos-config`. Todas las operaciones de shell, como cambiar directorio y/o tubería, están totalmente soportadas, mientras que las claves especiales y combinaciones de teclas no están soportadas actualmente.
 
-# 4. Sobreescritura del entorno
+# 5. Sobreescritura del entorno
 
-Setting the variable `HUSH_NEWS=1` or creating the file `~/.hush_login` will prevent BredOS News from running.
+Establecer la variable `HUSH_NEWS=1` o crear el archivo `~/.hush_login` evitará que BredOS News se ejecute.
