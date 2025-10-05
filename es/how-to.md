@@ -2,7 +2,7 @@
 title: ¡Cómo hacer!
 description: Guías, tutoriales y consejos sobre cómo instalar o usar ciertas cosas en BredOS
 published: true
-date: 2025-09-28T12:21:49.254Z
+date: 2025-10-05T07:05:01.193Z
 tags:
 editor: markdown
 dateCreated: 2024-27T06:01:06.954Z
@@ -46,7 +46,7 @@ Esta página contiene guías, tutoriales y consejos sobre cómo instalar o usar 
 
 - [Cómo administrar los contenedores de nspawn del sistema](/how-to/systemd-nspawn)
 
-- [Guía de parpadeo extendida](/how-to/extended-flashing-guide)
+- [Cómo administrar los servicios](/how-to/manage-services)
 
 > ¡Explora estas guías para sacar el máximo provecho de BredOS!
 > {.is-info}
