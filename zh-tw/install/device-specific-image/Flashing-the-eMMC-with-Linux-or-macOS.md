@@ -2,7 +2,7 @@
 title: Flashing the eMMC with Linux or macOS
 description:
 published: true
-date: 2025-09-29T06:00:19.076Z
+date: 2025-10-05T06:59:09.446Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -164,3 +164,35 @@ sudo rkdeveloptool rd
 
 > After successful flashing proceed with [**First Setup**](/en/install/first-setup).
 > {.is-success}
+
+# 🔁 4. Additional Info
+
+Well, you just want more progress bars in your life, right? We got you covered, don't worry.
+
+## 4.1 Reading chosen flash medium info
+
+The command `sudo rkdeveloptool rfi` will show you the details of the chosen flash medium.
+
+- By default, this usually is the eMMC, unless it's unavailable.
+
+```
+Flash Info:
+	Manufacturer: SAMSUNG, value=00
+	Flash Size: 14910 MB
+	Flash Size: 30535680 Sectors
+	Block Size: 512 KB
+	Page Size: 2 KB
+	ECC Bits: 0
+	Access Time: 40
+	Flash CS: Flash<0>
+```
+
+## 4.2 Changing flash target
+
+Want to flash / dump not the eMMC but a different thing?
+
+- `sudo rkdeveloptool cs 2` to choose the sdcard.
+- `sudo rkdeveloptool cs 9` to select the SPINOR chip.
+- `sudo rkdeveloptool cs 1` to select the eMMC again.
+
+The change will be reflected in `sudo rkdeveloptool rfi`.
