@@ -2,7 +2,7 @@
 title: BredOS News
 description: Customizing this suprisingly complicated piece of software.
 published: true
-date: 2025-10-05T12:26:26.876Z
+date: 2025-10-05T13:04:29.052Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -12,7 +12,7 @@ dateCreated: 2025-10-04T21:13:09.732Z
 
 By default `bredos-news` launches every time you open your shell. This is set by the line `bredos-news || true` in `~/.bashrc` and by the existence of `/etc/profile.d/99-bredos-news.sh`
 
-Every copy of `bredos-news` can be personalized, which means you can fully configure which features of it you want, as well as theme it fully.
+Every copy of `bredos-news` is personalized, which means you can fully configure which features of it you want, as well as theme it fully.
 
 # 3. Configuration & Overrides
 
@@ -21,7 +21,12 @@ A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank 
 - The default configuration file should look like this:
 
 ```
-# BredOS-News Configuration
+"""
+BredOS-News Configuration
+
+Refer to `https://wiki.bredos.org/e/en/customizations/news`,
+for detailed instructions on how to configure.
+"""
 
 # Accent = "\033[38;5;129m"
 # Accent_Secondary = "\033[38;5;104m"
@@ -33,11 +38,27 @@ A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank 
 # Time_Refresh = 0.25
 # Onetime = False
 
-# Shortcuts configuration
+"""
+Shortcuts configuration
 
-# shortcuts = {
-#     "1": "bredos-config",
-# }
+Shell commands, using $SHELL, and python functions are fully supported.
+Only alphanumeric and symbol keys can be captured, no key combinations.
+Capital keys work and can be bound to seperate shortcuts from lowercase.
+"""
+
+def shortcuts_help() -> None:
+    print("Configured shortcuts:")
+    for i in shortcuts.keys():
+        shortcut = shortcuts[i]
+        if is_function(shortcut):
+            print(f" - {i}: Function {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{shortcuts[i]}"')
+    print("\n")
+
+shortcuts["1"] = "bredos-config"
+shortcuts["0"] = "sudo sys-report"
+shortcuts["?"] = shortcuts_help
 ```
 
 > To activate a parameter in this configuration file, remove the <kbd>#</kbd> at the beginning of the line.
@@ -49,6 +70,15 @@ The parameter `Accent` sets the primary colors, `Accent_Secondary` sets the colo
 
 > For more info on ANSI escape sequences and examples, follow [this link](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 > {.is-info}
+
+Common styles:
+
+| Color          | Code                                   |
+| -------------- | -------------------------------------- |
+| Perfect Purple | `Accent = "\033[38;5;129m"`           |
+|                | `Accent_Secondary = "\033[38;5;104m"` |
+| Bold Red       | `Accent = "\033[1m\033[38;5;124m"`   |
+|                | `Accent_Secondary = "\033[38;5;160m"` |
 
 ## 2.2 Disabling features
 
