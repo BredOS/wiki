@@ -2,7 +2,7 @@
 title: BredOS ニュース
 description: この驚くほど複雑なソフトウェアをカスタマイズします
 published: true
-date: 2025-10-05T06:49:33.972Z
+date: 2025-10-05T12:26:26.876Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -10,7 +10,7 @@ dateCreated: 2025-10-04T21:13:09.732Z
 
 # 🔄 1. はじめに
 
-デフォルトでは、シェルを開くたびに「bredos-news」が起動します。 `~/.bashrc` と `/etc/profile.d/99-bredos-news.sh` の設定で設定します。
+デフォルトでは、シェルを開くたびに「bredos-news」が起動します。 This is set by the line `bredos-news || true` in `~/.bashrc` and by the existence of `/etc/profile.d/99-bredos-news.sh`
 
 「bredos-news」のすべてのコピーをパーソナライズすることができます。つまり、あなたが望む機能とそれを完全にテーマに設定することができます。
 
