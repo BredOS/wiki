@@ -2,7 +2,7 @@
 title: BredOS News
 description: Customizing this suprisingly complicated piece of software.
 published: true
-date: 2025-10-05T12:47:48.764Z
+date: 2025-10-05T12:54:55.865Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -43,7 +43,6 @@ Shell commands, using $SHELL, and python functions are fully supported.
 Only alphanumeric and symbol keys can be captured, no key combinations.
 Capital keys work and can be bound to seperate shortcuts from lowercase.
 """
-
 
 def shortcuts_help() -> None:
     print("Configured shortcuts:")
