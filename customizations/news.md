@@ -2,14 +2,14 @@
 title: BredOS News
 description: Customizing this suprisingly complicated piece of software.
 published: true
-date: 2025-10-05T06:49:33.972Z
+date: 2025-10-05T12:26:26.876Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
 ---
 
 # 1. Overview
-By default `bredos-news` launches every time you open your shell. This is set by a configuration in `~/.bashrc` and `/etc/profile.d/99-bredos-news.sh`.
+By default `bredos-news` launches every time you open your shell. This is set by the line `bredos-news || true` in `~/.bashrc` and by the existence of `/etc/profile.d/99-bredos-news.sh`
 
 Every copy of `bredos-news` can be personalized, which means you can fully configure which features of it you want, as well as theme it fully.
 
