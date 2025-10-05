@@ -2,29 +2,23 @@
 title: BredOS ニュース
 description: この驚くほど複雑なソフトウェアをカスタマイズします
 published: true
-date: 2025-10-04T21:14:51.210Z
+date: 2025-10-05T06:49:33.972Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
 ---
 
-# はじめに
+# 🔄 1. はじめに
 
-BledOS ニュースは、シェルを開くたびに起動します。
+デフォルトでは、シェルを開くたびに「bredos-news」が起動します。 `~/.bashrc` と `/etc/profile.d/99-bredos-news.sh` の設定で設定します。
 
-BredOS はデフォルトで `~/.bashrc` と `/etc/profile.d/99-bredos-news.sh` を設定します。
+「bredos-news」のすべてのコピーをパーソナライズすることができます。つまり、あなたが望む機能とそれを完全にテーマに設定することができます。
 
-ニュースのすべてのコピーがパーソナライズされます。
+# 3. 設定と上書き
 
-あなたは完全にそれのどの機能を望むだけでなく、それを完全にテーマに設定することができます。
+A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank configuration is automatically (re)generated after the first run of the app, so it is possible to reset its configuration by deleting this file.
 
-## 設定と上書き
-
-BredOS Newsはそれをカスタマイズするかなりの方法を提供しています。
-Permenant (per-user) の設定は `~/.newsrc` で行うことができます。
-
-デフォルトの空白設定は、アプリの最初の実行後に自動的に(再)生成されます。
-書き込み時にデフォルトのファイルは次のようになります。
+- The default configuration file should look like this:
 
 ```
 # BredOS-News Configuration
@@ -46,37 +40,41 @@ Permenant (per-user) の設定は `~/.newsrc` で行うことができます。
 # }
 ```
 
-`Accent` は基本的な色を設定します。`Accent_Secondary` はすべての詳細の色を設定します。
-任意の ANSI エスケープシーケンスを適用することができます。
-ANSI エスケープシーケンスと例の詳細については、[this link](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) に従ってください。
+> To activate a parameter in this configuration file, remove the <kbd>#</kbd> at the beginning of the line.
+> {.is-warning}
 
-### 機能を無効にしています
+## 2.1 Set accent (color)
 
-`Hush_Updates` はパッケージの更新セクションを完全に削除します。
-`Hush_Disks` は添付されたメディアストレージの使用状況メモを削除します。
-`Hush_Smart` はディスク障害の警告をミュートします。 これは使用しないでください。
+The parameter `Accent` sets the primary colors, `Accent_Secondary` sets the colors for all the details. 任意の ANSI エスケープシーケンスを適用することができます。
 
-### アニメーション時間の設定
+> ANSI エスケープシーケンスと例の詳細については、[this link](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) に従ってください。
+> {.is-warning}
 
-`Time_Tick` はアニメーションのフレーム間の時間を設定します。
-`Time_Refresh` はシステムの詳細が更新される頻度を設定します。
-これらの値はすでに最高です。 これ以上もしくはcpuの使用を減らさないでください **スパイク** 。
+## 2.2 Disabling features
 
-`Onetime` はアニメーションループ、ショートカットシステム、端末のリサイズ機能を無効にします。
+| Parameter                | Description                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------- |
+| `Hush_Updates` = `False` | Removes the package updates section entirely.                             |
+| `Hush_Disks` = `False`   | Removes the attached medium storage usage notes.                          |
+| `Hush_Smart` = `False`   | Mutes disk failure warnings. This should **not** be used. |
 
-## ショートカット
+## 2.3 Configuring animation time
 
-`shortcuts` は設定可能なキー割り当ての辞書です。 あなたの端末のためのクイックダイヤル。
+| Parameter               | Description                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `Time_Tick` = `0.1`     | Configures the time between frames of the animation.                            |
+| `Time_Refresh` = `0.25` | Configures how often the system details refresh.                                |
+| `Onetime` = `False`     | Disables the animation loop, the shortcut system and terminal resize functions. |
 
-News はアニメーションをループさせていますが、設定されたキーのいずれかを押すと、シェルにキーを渡すのではなく、事前設定されたショートカットを起動します。
+> これらの値はすでに最高です。 これ以上もしくはcpuの使用を減らさないでください **スパイク** 。
+> {.is-warning}
 
-例のようにキーを設定すると、コマンドやPython関数を実行することができます。
-ディレクトリや配管の変更などのシェル操作が完全にサポートされています。
-特殊キーと組み合わせは現在サポートされていません。
-記号がサポートされています。
+# 4. ショートカット
 
-## 環境の上書き
+The `shortcuts` array is a dictionary of settable keybinds. This is basically quick-dial for your terminal. While `bredos-news` is looping it's animation, pressing one of the configured keys will, instead of passing the key to the shell, launch the preconfigured shortcut.
 
-`HUSH_NEWS=1` を設定すると、BredOS ニュースが実行されなくなります。
+Setting shortcut keys, like how it's shown in the example, allows running commands or python functions. For the given example above, pressing <kbd>1</kbd> will launch the tool `bredos-config`. All shell operations, like changing directory and/or piping, are fully supported, while special keys and key combinations are currently not supported.
 
-`~/.hush_login` も同じ効果を持っています。
+# 4. 環境の上書き
+
+Setting the variable `HUSH_NEWS=1` or creating the file `~/.hush_login` will prevent BredOS News from running.
