@@ -2,7 +2,7 @@
 title: Linux または macOS で eMMC の書き込み
 description:
 published: true
-date: 2025-09-29T06:00:19.076Z
+date: 2025-10-05T06:59:09.446Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -171,3 +171,35 @@ sudo rkdeveloptool rd
 > {.is-success}
 > {.is-success}
 > {.is-success}
+
+# 🚀 4. 追加情報
+
+人生でもっとプログレスバーが欲しいだけですよね？ 私たちはあなたをカバーし、心配しないでください。
+
+## 4.1 選択したフラッシュメディア情報を読み込み中
+
+`sudo rkdeveloptool rfi`コマンドは、選択したフラッシュメディアの詳細を表示します。
+
+- デフォルトでは、これは通常、利用できない場合を除き、eMMCです。
+
+```
+Flash Info:
+	Manufacturer: SAMSUNG, value=00
+	Flash Size: 14910 MB
+	Flash Size: 30535680 Sectors
+	Block Size: 512 KB
+	Page Size: 2 KB
+	ECC Bits: 0
+	Access Time: 40
+	Flash CS: Flash<0>
+```
+
+## 4.2 フラッシュターゲットの変更
+
+フラッシュ/ないeMMCではなく別のことをダンプしたいですか?
+
+- SDカードを選択するには `sudo rkdeveloptool cs 2` 。
+- `sudo rkdeveloptool cs 9` で SPINOR チップを選択します。
+- `sudo rkdeveloptool cs 1` で再びeMMCを選択します。
+
+変更は `sudo rkdeveloptool rfi` に反映されます。
