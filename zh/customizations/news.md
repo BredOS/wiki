@@ -2,81 +2,79 @@
 title: BredOS 新闻
 description: 自定义这个非常复杂的软件。
 published: true
-date: 2025-10-04T21：14：51.210Z
+date: 2025-10-05T06:49:33.972Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732 Z
 ---
 
-# 简介
+# 2. 简介
 
-BredOS 新闻每次打开您的外壳时都会触发。
+默认情况下，"bredos-news" 每次打开外壳时都会触发。 这是由`~/.bashrc`和`/etc/profile.d/99-bredos-news.sh`中的配置设置的。
 
-默认情况下，BredOS 配置`~/.bashrc`和`/etc/profile.d/99-bredos-news.sh`来运行它。
+每一个 ' bredos-news' 副本都可以个性化，这意味着你可以完全配置你想要的特征以及它的主题。
 
-每份新闻都是个性化的。
+# 3. 配置和覆盖
 
-您可以充分配置您想要的功能以及主题。
+A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank configuration is automatically (re)generated after the first run of the app, so it is possible to reset its configuration by deleting this file.
 
-## 配置和覆盖
-
-BredOS 新闻提供了相当多的自定义方法。
-Permenant (per user) 配置可以在 "~/.newsrc" 中完成。
-
-首次运行后自动生成默认空白配置。
-在写入时默认文件看起来就像这样：
+- The default configuration file should look like this:
 
 ```
 # BredOS-News Configuration
 
 # Accent = "\033[38;5;129m"
-# Accent_Second= "\033[38;5; 04m"
+# Accent_Secondary = "\033[38;5;104m"
 
 # Hush_Updates = False
 # Hush_Disks = False
 # Hush_Smart = False
-# Time_Tick = 0.
-# 时间刷新= 0。 5
-# 1time = False
+# Time_Tick = 0.1
+# Time_Refresh = 0.25
+# Onetime = False
 
-# 快捷键配置
+# Shortcuts configuration
 
-# 快捷键= Power
-# "1": "bredos-config",
+# shortcuts = {
+#     "1": "bredos-config",
 # }
 ```
 
-`Accent` 设置主颜色，`Accent_Secary` 为所有细节设置颜色。
-任何武断的 ANSI 逃脱序列都可以应用。
-关于ANSI逃避序列和示例的更多信息，请点击[此链接](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)。
+> To activate a parameter in this configuration file, remove the <kbd>#</kbd> at the beginning of the line.
+> {.is-info}
 
-### 禁用功能
+## 2.1 Set accent (color)
 
-`Hush_Updates` 完全删除软件包更新部分。
-`Hush_Disks`删除附加的介质存储使用说明。
-`Hush_Smart` 静音磁盘失败警告。 不应使用这种方法。
+The parameter `Accent` sets the primary colors, `Accent_Secondary` sets the colors for all the details. 任何武断的 ANSI 逃脱序列都可以应用。
 
-### 配置动画时间
+> 关于ANSI逃避序列和示例的更多信息，请点击[此链接](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)。
+> {.is-info}
 
-`Time_Tick`配置动画帧之间的时间。
-`Time_Refresh` 配置系统详细信息刷新的频率。
-这些值已经是最好的。 不要再减少任何cpu的使用 \*\*will \*\* 溢出。
+## 2.2 Disabling features
 
-`Onetime` 禁用动画循环、快捷方式系统和终端调整大小函数。
+| Parameter                | Description                                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------- |
+| `Hush_Updates` = `False` | Removes the package updates section entirely.                             |
+| `Hush_Disks` = `False`   | Removes the attached medium storage usage notes.                          |
+| `Hush_Smart` = `False`   | Mutes disk failure warnings. This should **not** be used. |
 
-## 快捷键
+## 2.3 Configuring animation time
 
-`shortcuts` 是一个可设置键绑定的字典。 快速拨打您的终端。
+| Parameter               | Description                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `Time_Tick` = `0.1`     | Configures the time between frames of the animation.                            |
+| `Time_Refresh` = `0.25` | Configures how often the system details refresh.                                |
+| `Onetime` = `False`     | Disables the animation loop, the shortcut system and terminal resize functions. |
 
-当新闻正在循环它的动画时，按一种已配置的密钥将不会将密钥传递给外壳，而是启动预配置的快捷方式。
+> 这些值已经是最好的。 不要再减少任何cpu的使用 \*\*will \*\* 溢出。
+> {.is-info}
 
-设置键像它在示例中显示的那样，允许运行命令或python函数。
-完全支持 Shell 操作，如更改目录和/或管道。
-当前不支持特殊键和组合。
-支持符号。
+# 4. 快捷键
 
-## 环境覆盖
+The `shortcuts` array is a dictionary of settable keybinds. This is basically quick-dial for your terminal. While `bredos-news` is looping it's animation, pressing one of the configured keys will, instead of passing the key to the shell, launch the preconfigured shortcut.
 
-设置 `HUSH_NEWS=1` 将阻止BredOS 新闻运行。
+Setting shortcut keys, like how it's shown in the example, allows running commands or python functions. For the given example above, pressing <kbd>1</kbd> will launch the tool `bredos-config`. All shell operations, like changing directory and/or piping, are fully supported, while special keys and key combinations are currently not supported.
 
-创建 "~/.hush_login" 也具有同样的效果。
+# 🚀 4. 环境覆盖
+
+Setting the variable `HUSH_NEWS=1` or creating the file `~/.hush_login` will prevent BredOS News from running.
