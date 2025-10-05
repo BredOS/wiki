@@ -2,7 +2,7 @@
 title: BredOS 新闻
 description: 自定义这个非常复杂的软件。
 published: true
-date: 2025-10-05T06:49:33.972Z
+date: 2025-10-05T12:26:26.876Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732 Z
@@ -10,7 +10,7 @@ dateCreated: 2025-10-04T21:13:09.732 Z
 
 # 2. 简介
 
-默认情况下，"bredos-news" 每次打开外壳时都会触发。 这是由`~/.bashrc`和`/etc/profile.d/99-bredos-news.sh`中的配置设置的。
+默认情况下，"bredos-news" 每次打开外壳时都会触发。 This is set by the line `bredos-news || true` in `~/.bashrc` and by the existence of `/etc/profile.d/99-bredos-news.sh`
 
 每一个 ' bredos-news' 副本都可以个性化，这意味着你可以完全配置你想要的特征以及它的主题。
 
