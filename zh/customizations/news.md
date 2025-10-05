@@ -2,7 +2,7 @@
 title: BredOS 新闻
 description: 自定义这个非常复杂的软件。
 published: true
-date: 2025-10-05T12:26:26.876Z
+date: 2025-10-05T13：04：29.052Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732 Z
@@ -10,9 +10,9 @@ dateCreated: 2025-10-04T21:13:09.732 Z
 
 # 2. 简介
 
-默认情况下，"bredos-news" 每次打开外壳时都会触发。 This is set by the line `bredos-news || true` in `~/.bashrc` and by the existence of `/etc/profile.d/99-bredos-news.sh`
+默认情况下，"bredos-news" 每次打开外壳时都会触发。 这是由 `~/.bashrc` 中的 `bredos-news|| true` 行和`/etc/profile.d/99-bredos-news.sh` 行设置的。
 
-每一个 ' bredos-news' 副本都可以个性化，这意味着你可以完全配置你想要的特征以及它的主题。
+每一个 ' bredos-news' 的副本都是个性化的，这意味着你可以完全配置你想要的特征以及它的主题。
 
 # 3. 配置和覆盖
 
@@ -21,23 +21,44 @@ dateCreated: 2025-10-04T21:13:09.732 Z
 - 默认配置文件看起来像这样：
 
 ```
-# BredOS-News Configuration
+"""
+BredOS-News Configuration
+
+Refer to `https://wiki.bredos.org/e/en/customizations/news`,
+for detailed instructions on how to configure.
+"""
 
 # Accent = "\033[38;5;129m"
-# Accent_Second= "\033[38;5; 04m"
+# Accent_Secondary = "\033[38;5;104m"
 
 # Hush_Updates = False
 # Hush_Disks = False
 # Hush_Smart = False
-# Time_Tick = 0.
-# 时间刷新= 0。 5
-# 1time = False
+# Time_Tick = 0.1
+# Time_Refresh = 0.25
+# Onetime = False
 
-# 快捷键配置
+"""
+Shortcuts configuration
 
-# 快捷键= Power
-# "1": "bredos-config",
-# }
+Shell commands, using $SHELL, and python functions are fully supported.
+Only alphanumeric and symbol keys can be captured, no key combinations.
+Capital keys work and can be bound to seperate shortcuts from lowercase.
+"""
+
+def shortcuts_help() -> None:
+    print("Configured shortcuts:")
+    for i in shortcuts.keys():
+        shortcut = shortcuts[i]
+        if is_function(shortcut):
+            print(f" - {i}: Function {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{shortcuts[i]}"')
+    print("\n")
+
+shortcuts["1"] = "bredos-config"
+shortcuts["0"] = "sudo sys-report"
+shortcuts["?"] = shortcuts_help
 ```
 
 > 要激活此配置文件中的参数，请在行开始处删除 <kbd>#</kbd>。
@@ -49,6 +70,15 @@ dateCreated: 2025-10-04T21:13:09.732 Z
 
 > 关于ANSI逃避序列和示例的更多信息，请点击[此链接](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)。
 > {.is-info}
+
+常用样式：
+
+| 颜色    | 代码                                                                                      |
+| ----- | --------------------------------------------------------------------------------------- |
+| 完美的紫色 | \`Accent = "\033[38;5;129m""                                  |
+|       | \`Accent_Second = "\033[38;5;104m""      |
+| 粗体    | \`Accent = "\033[1m\033[38;5;124m"" |
+|       | \`Accent_Second = "\033[38;5;160m""      |
 
 ## 2.2 禁用功能
 
