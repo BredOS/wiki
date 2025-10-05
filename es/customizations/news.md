@@ -2,7 +2,7 @@
 title: Noticias BredOS
 description: Personalizar esta pieza de software sorprendentemente complicada.
 published: true
-date: 2025-10-05T12:26:26.876Z
+date: 2025-10-05T13:04:29.052Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -10,9 +10,9 @@ dateCreated: 2025-10-04T21:13:09.732Z
 
 # 🎛️ 1. Introducción
 
-Por defecto `bredos-news` se inicia cada vez que abras tu shell. This is set by the line `bredos-news || true` in `~/.bashrc` and by the existence of `/etc/profile.d/99-bredos-news.sh`
+Por defecto `bredos-news` se inicia cada vez que abras tu shell. Esto está establecido por la línea `bredos-news || true` en `~/.bashrc` y por la existencia de `/etc/profile.d/99-bredos-news.sh`
 
-Cada copia de `bredos-news` puede ser personalizada, lo que significa que puedes configurar completamente las características que quieres, así como temarlo completamente.
+Cada copia de 'bredos-news' es personalizada, lo que significa que puedes configurar completamente las características que quieres, así como el tema completo.
 
 # 3. Configuración y sobrescritos
 
@@ -21,10 +21,15 @@ Una configuración permenant (por usuario) puede establecerse en `~/.newsrc`. Un
 - El archivo de configuración por defecto debería verse así:
 
 ```
-# Configuración BredOS-Noticias
+"""
+Configuración de noticias BredOS-
+
+Consulte `https://wiki.bredos.org/e/en/customizations/news`,
+para instrucciones detalladas sobre cómo configurar.
+"""
 
 # Acento = "\033[38;5;129m"
-# Accent_Segunddary = "\033[38;5; 04m"
+# Accent_seconds = "\033[38;5; 04m"
 
 # mañana_Actualizaciones = False
 # mañana_Discos = False
@@ -33,11 +38,27 @@ Una configuración permenant (por usuario) puede establecerse en `~/.newsrc`. Un
 # Time_Refresh = 0. 5
 # Onetime = False
 
-# Atajos de configuración
+"""
+Atajos de configuración
 
-# atajos = {
-# "1": "bredos-config",
-# }
+comandos de Shell, usando $SHELL, y las funciones de python están totalmente soportadas.
+Sólo las teclas alfanuméricas y las teclas de símbolos pueden ser capturadas, sin combinaciones de claves.
+Las claves mayúsculas funcionan y pueden estar vinculadas a separar los accesos directos de las minúsculas.
+"""
+
+accesos directos def -> Ninguno:
+    print("Atajos directos configurados:")
+    para i en atajos. eys():
+        atajo = atajos[i]
+        if is_function(atajo):
+            print(f" - {i}: Función {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{atajos directos[i]}"')
+    print("\n")
+
+atajos["1"] = "bredos-config"
+atajos["0"] = "sudo sys-report"
+atajos["? ] = atajos_ayuda
 ```
 
 > Para activar un parámetro en este archivo de configuración, elimine el <kbd>#</kbd> al comienzo de la línea.
@@ -49,6 +70,15 @@ El parámetro `Accent` establece los colores primarios, `Accent_Segundo` estable
 
 > Para más información sobre secuencias de escape ANSI y ejemplos, siga [este enlace](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 > {.is-info}
+
+Estilos comunes:
+
+| Color            | Código                               |
+| ---------------- | ------------------------------------ |
+| Púrpura Perfecto | `Acento = "\033[38;5;129m"`         |
+|                  | `Accent_Segundo= "\033[38;5;104m"`  |
+| Rojo negrita     | `Acento = "\033[1m\033[38;5;124m"` |
+|                  | `Accent_Segundo= "\033[38;5;160m"`  |
 
 ## 2.2 Desactivando características
 
