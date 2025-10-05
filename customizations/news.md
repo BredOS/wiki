@@ -2,7 +2,7 @@
 title: BredOS News
 description: Customizing this suprisingly complicated piece of software.
 published: true
-date: 2025-10-05T12:54:55.865Z
+date: 2025-10-05T13:04:29.052Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -68,6 +68,14 @@ The parameter `Accent` sets the primary colors, `Accent_Secondary` sets the colo
 
 > For more info on ANSI escape sequences and examples, follow [this link](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 {.is-info}
+
+Common styles:
+| Color | Code |
+| ----- | ---- |
+| Perfect Purple | `Accent = "\033[38;5;129m"`           |
+|                | `Accent_Secondary = "\033[38;5;104m"` |
+| Bold Red       | `Accent = "\033[1m\033[38;5;124m"`    |
+|					       | `Accent_Secondary = "\033[38;5;160m"` |
 
 
 ## 2.2 Disabling features
