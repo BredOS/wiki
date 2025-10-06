@@ -32,7 +32,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 - Bakery - [your guide to your own Bred](/install/first-setup)!
 - Bred-News - [the news channel about your Bred](/customizations/news)!
 - Bred-Tools - [你手上的swiss knife](/Tools)！
-- Bred-Config - [like raspi-config, but with better taste](/bredos-config)!
+- Bed-配置 - [就像皮-config，但是有更好的标记](/bredos-config) ！
 - Govctl - [控制您的 CPU](/how-to/govctl) ！
 
 # 🔁 3. 🛠️ 系统要求
