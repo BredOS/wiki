@@ -73,6 +73,7 @@ systemctl --user daemon-reload
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 このハックはあなたのオーディオには影響しません。
 もう少し余裕を持たせたい場合は、`CPUQuota`の行でパーセンテージを変更します。
