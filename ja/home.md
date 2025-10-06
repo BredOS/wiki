@@ -2,7 +2,7 @@
 title: ホームページ
 description:
 published: true
-date: 2025-10-04T10:55:09.705Z
+date: 2025-10-06T05:41:19.201Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -27,6 +27,7 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 ## 2.1 特徴的なツール
 
 - Bakery - [your guide to your own Bred](/install/first-setup)!
+- Bred-News - [the news channel about your Bred](/en/customizations/news)!
 - Bred-Tools - [the swiss knife at your hand](/Tools)!
 - Bred-Config - [raspi-configのように、しかしより良い味を持つ!](/bredos-config)
 - Govctl - [take control of your CPU](/how-to/govctl)!
@@ -99,3 +100,4 @@ BredOSはオープンソースのプロジェクトであり、貢献は歓迎�
 今のところ、RK3588デバイス用のブレッドOS画像は、巨大なロックチップBSPカーネルに依存しています。 ダクトテープ付きのコードベースは、メンテナンスが難しく、安全ではなく、常に上流の Linux より遅れをとっています。
 
 [We want to change that](/en/internal-bred-stuff/mainline-campaign).
+
