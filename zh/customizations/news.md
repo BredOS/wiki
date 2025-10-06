@@ -2,7 +2,7 @@
 title: BredOS 新闻
 description: 自定义这个非常复杂的软件。
 published: true
-date: 2025-10-05T12:26:26.876Z
+date: 2025-10-06T07:18:15.049Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732 Z
@@ -22,7 +22,12 @@ Permenant (per user) 配置可以在 "~/.newsrc" 中完成。 一个permenant (�
 - 默认配置文件看起来像这样：
 
 ```
-# BredOS-News Configuration
+"""
+BredOS-News Configuration
+
+Refer to `https://wiki.bredos.org/customizations/news`,
+for detailed instructions on how to configure.
+"""
 
 # Accent = "\033[38;5;129m"
 # Accent_Secondary = "\033[38;5;104m"
@@ -34,11 +39,27 @@ Permenant (per user) 配置可以在 "~/.newsrc" 中完成。 一个permenant (�
 # Time_Refresh = 0.25
 # Onetime = False
 
-# Shortcuts configuration
+"""
+Shortcuts configuration
 
-# shortcuts = {
-#     "1": "bredos-config",
-# }
+Shell commands, using $SHELL, and python functions are fully supported.
+Only alphanumeric and symbol keys can be captured, no key combinations.
+Capital keys work and can be bound to seperate shortcuts from lowercase.
+"""
+
+def shortcuts_help() -> None:
+    print("Configured shortcuts:")
+    for i in shortcuts.keys():
+        shortcut = shortcuts[i]
+        if is_function(shortcut):
+            print(f" - {i}: Function {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{shortcuts[i]}"')
+    print("\n")
+
+shortcuts["1"] = "bredos-config"
+shortcuts["0"] = "sudo sys-report"
+shortcuts["?"] = shortcuts_help
 ```
 
 > 要激活此配置文件中的参数，请在行开始处删除 <kbd>#</kbd>。
