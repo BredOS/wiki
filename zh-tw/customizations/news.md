@@ -2,7 +2,7 @@
 title: BredOS News
 description: Customizing this suprisingly complicated piece of software.
 published: true
-date: 2025-10-05T12:26:26.876Z
+date: 2025-10-06T07:18:15.049Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -21,7 +21,12 @@ Permenant (per-user) configuration can be done at `~/.newsrc`. The default blank
 - The default file looks like this at the time of writing:
 
 ```
-# BredOS-News Configuration
+"""
+BredOS-News Configuration
+
+Refer to `https://wiki.bredos.org/customizations/news`,
+for detailed instructions on how to configure.
+"""
 
 # Accent = "\033[38;5;129m"
 # Accent_Secondary = "\033[38;5;104m"
@@ -33,11 +38,27 @@ Permenant (per-user) configuration can be done at `~/.newsrc`. The default blank
 # Time_Refresh = 0.25
 # Onetime = False
 
-# Shortcuts configuration
+"""
+Shortcuts configuration
 
-# shortcuts = {
-#     "1": "bredos-config",
-# }
+Shell commands, using $SHELL, and python functions are fully supported.
+Only alphanumeric and symbol keys can be captured, no key combinations.
+Capital keys work and can be bound to seperate shortcuts from lowercase.
+"""
+
+def shortcuts_help() -> None:
+    print("Configured shortcuts:")
+    for i in shortcuts.keys():
+        shortcut = shortcuts[i]
+        if is_function(shortcut):
+            print(f" - {i}: Function {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{shortcuts[i]}"')
+    print("\n")
+
+shortcuts["1"] = "bredos-config"
+shortcuts["0"] = "sudo sys-report"
+shortcuts["?"] = shortcuts_help
 ```
 
 > To activate a parameter in this configuration file, remove the <kbd>#</kbd> at the beginning of the line.
