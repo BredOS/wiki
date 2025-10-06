@@ -2,7 +2,7 @@
 title: Flashing the eMMC with Linux or macOS
 description:
 published: true
-date: 2025-10-05T06:59:09.446Z
+date: 2025-09-29T06:00:19.076Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -20,11 +20,14 @@ For the installation of BredOS, three things are required:
 
 #### RK3588
 
-[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+SPL loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 
 #### RK3566
 
+\
+For example, for the RK3566, the SPL loader can be found here:
 [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+{.is-info}
 
 ###
 
