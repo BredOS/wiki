@@ -2,7 +2,7 @@
 title: DTBOを有効にする方法
 description:
 published: true
-date: 2025-09-24T10:24:19.675Z
+date: 2025-09-16T10:44:14.092Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -20,17 +20,18 @@ dateCreated: 2024-11-10T18:02:07.427Z
 
 # 2. BredOS-Config
 
-- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する ツールを起動する ツールを起動する
+- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを起動する ツールを起動する ツールを起動する ツールを起動する
 
 ```
 sudo bredos-config
 ```
 
-次に、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、dtb overlaysをあなたの好みに合わせて有効にします。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 変更を適用するためにシステムを再起動します。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes. 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes. 変更を適用するためにシステムを再起動します。
+次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes. 次に、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、dtb overlaysをあなたの好みに合わせて有効にします。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 変更を適用するためにシステムを再起動します。 次に、このツールはベース デバイス ツリーと選択したオーバーレイをインストールします。 Reboot your system to apply the changes. 変更を適用するためにシステムを再起動します。
 
-bredos-config は dtbs をインストールし、grub 設定を変更して起動時にロードすることができますが、UEFI 設定は変更できません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または`3.4 Configure UEFI`でbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。 これはユーザーが行う必要があります。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または[3.4 Configure UEFI](#h-34-configure-uefi)でbredos-configによって表示されます。 デバイスが `u-boot` ベースの場合、これ以上の変更は必要ありません。
+bredos-config は dtbs をインストールし、grub 設定を変更して起動時にロードすることができますが、UEFI 設定は変更できません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または`3.4 Configure UEFI`でbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。 これはユーザーが行う必要があります。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 デバイスが `u-boot-based` の場合、これ以上変更は必要ありません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または[3.4 Configure UEFI](#h-34-configure-uefi)でbredos-configによって表示されます。 デバイスが `u-boot` ベースの場合、これ以上の変更は必要ありません。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時または[3.4 Configure UEFI](#h-34-configure-uefi)でbredos-configによって表示されます。 デバイスが `u-boot` ベースの場合、これ以上の変更は必要ありません。
 
 > ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
@@ -60,7 +61,7 @@ sudo mkdir -p <ESP>/dtb/{base,overlays}
 
 ## 🗄️ 2: DTBをベースにコピーする
 
-- 他のRK3588ベースのボードについては、実際のデバイス名に`<your-board-name.dtb>`を置き換えてください:
+- 他のRK3588ベースのボードについては、実際のデバイス名に`rk3588-board.dtb`を置き換えてください:
 
 ```
 sudo cp /boot/dtbs/rockchip/rk3588-board.dtb <ESP>/dtb/base/
@@ -88,10 +89,14 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 🎛️ 4: UEFI の設定
 
-- UEFIに再起動します。
+- ヘルプが必要な場合は、起動順序を変更する [guide](/en/how-to/change-default-boot-order-rk3588) があります。 その最初のステップでは、UEFI設定で起動する方法を示します。
+  {.is-info} その最初のステップでは、UEFI設定で起動する方法を示します。
+  {.is-info}
 
 > ヘルプが必要な場合は、起動順序を変更する [guide](/en/how-to/change-default-boot-order-rk3588) があります。 その最初のステップでは、UEFI設定で起動する方法を示します。
+> {.is-info} ヘルプが必要な場合は、起動順序を変更する [guide](/en/how-to/change-default-boot-order-rk3588) があります。 その最初のステップでは、UEFI設定で起動する方法を示します。
 > {.is-info} その最初のステップでは、UEFI設定で起動する方法を示します。
+> {.is-info}
 > {.is-info}
 
 - `Device Manager` > `Rockchip Platform Configuration` > `ACPI / Device Tree`に移動します
@@ -106,7 +111,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 🔄 5: DTBO をコピー
 
-- `<my-overlay.dtbo>`をお好みのdtboに置き換えます。
+- `my-overlay`をお好みのdtboに置き換えてください。
 
 ```
 sudo cp /boot/dtbs/rockchip/overlay/my-overlay.dtbo <ESP>/dtb/overlays/
@@ -137,6 +142,9 @@ fdtoverlays /dtbs/rockchip/overlay/my-overlay.dtbo
 > 複数のDTBOを有効にしたい場合は、空白文字で区切られた1行に追加します。
 > 例:
 > 例:
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
 > これを実行することはできません！
 > {.is-warning}
 > {.is-warning}
