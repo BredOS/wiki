@@ -2,7 +2,7 @@
 title: BredOS 主頁
 description:
 published: true
-date: 2025-10-06T05:45:30.312Z
+date: 2025-10-06T09:38:43.497Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
@@ -30,7 +30,7 @@ The documentation will guide you through the installation, configuration, and us
 - Bakery - [your guide to your own Bred](/install/first-setup)!
 - Bred-News - [the news channel about your Bred](/customizations/news)!
 - Bred-Tools - [the swiss knife at your hand](/Tools)!
-- Bred-Config - [like raspi-config, but with better taste!](/bredos-config)
+- Bred-Config - [like raspi-config, but with better taste](/bredos-config)!
 - Govctl - [take control of your CPU](/how-to/govctl)!
 
 # 4. [🛠️ System Requirements](#system-requirements)
