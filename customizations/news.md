@@ -2,7 +2,7 @@
 title: BredOS News
 description: Customizing this suprisingly complicated piece of software.
 published: true
-date: 2025-10-05T13:04:29.052Z
+date: 2025-10-06T07:18:15.049Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -22,7 +22,7 @@ A permenant (per-user) configuration can be set at `~/.newsrc`. A default blank 
 """
 BredOS-News Configuration
 
-Refer to `https://wiki.bredos.org/e/en/customizations/news`,
+Refer to `https://wiki.bredos.org/customizations/news`,
 for detailed instructions on how to configure.
 """
 
