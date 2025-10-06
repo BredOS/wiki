@@ -2,7 +2,7 @@
 title: 主页
 description:
 published: true
-date: 2025-10-06T05:45:30.312Z
+date: 2025-10-06T09:38:43.497Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -32,7 +32,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 - Bakery - [your guide to your own Bred](/install/first-setup)!
 - Bred-News - [the news channel about your Bred](/customizations/news)!
 - Bred-Tools - [你手上的swiss knife](/Tools)！
-- Bed-配置 - [就像皮-config，但是有更好的味道！](/bredos-config)
+- Bred-Config - [like raspi-config, but with better taste](/bredos-config)!
 - Govctl - [控制您的 CPU](/how-to/govctl) ！
 
 # 🔁 3. 🛠️ 系统要求
