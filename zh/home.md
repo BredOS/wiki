@@ -2,7 +2,7 @@
 title: 主页
 description:
 published: true
-date: 2025-10-04T10:55:09.705Z
+date: 2025-10-06T05:41:19.201Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -27,6 +27,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 ## 2.1 特色工具
 
 - Bakery - [your guide to your own Bred](/install/first-setup)!
+- Bred-News - [the news channel about your Bred](/en/customizations/news)!
 - Bred-Tools - [你手上的swiss knife](/Tools)！
 - Bed-配置 - [就像皮-config，但是有更好的味道！](/bredos-config)
 - Govctl - [控制您的 CPU](/how-to/govctl) ！
@@ -99,3 +100,4 @@ BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出�
 现在，RK3588设备的 BredOS 图像依赖结壳Rockchip BSP 内核——一个小屋。 管道录制的代码库很难维护、不安全，并且总是落后于上游Linux。
 
 [我们想要更改那些](/en/internal-bred-stuff/mainline-campaign)。
+
