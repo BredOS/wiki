@@ -11,6 +11,7 @@ dateCreated: 2025-09-19T15:05:44.344Z
 # 1. 簡介
 
 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).\
+The documentation will guide you through the installation, configuration, and usage of BredOS. 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ 歡迎來到 BredOS 文檔！ BredOS is a user-friendly Arch-based Linux distribution specifically designed for ARM and RISC-V based single board computers (SBCs).\
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 The documentation will guide you through the installation, configuration, and usage of BredOS.
 
@@ -85,7 +86,7 @@ Take a look at the device pages in the navigation bar on this page to find known
 
 # 9. 貢獻
 
-BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻：
+BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻： 您可以通過以下方式進行貢獻：
 
 - 報告錯誤和問題
 - 提交補丁和改進
