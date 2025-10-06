@@ -13,6 +13,7 @@ dateCreated: 2025-09-19T15:05:44.344Z
 BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
+このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。 BredOSは、ARMおよびRISC-Vベースのシングルボードコンピュータ(SBC)用に特別に設計された、ユーザーフレンドリーなArchベースのLinuxディストリビューションです。
 このドキュメントでは、BredOS のインストール、設定、および使用方法について説明します。
 
 ![](https://github.com/LinuxDroidMaster/Fydetab-Duo-DroidMaster-wiki/raw/main/Images/Linux/BredOS/preview.jpg
@@ -42,13 +43,13 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 
 # 4. トラブルシューティング
 
-私たちの友人 [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) は、BredOS についての YouTube 動画を作成しました。 こちらをご覧ください: こちらをご覧ください: こちらをご覧ください:
+私たちの友人 [**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) は、BredOS についての YouTube 動画を作成しました。 こちらをご覧ください: こちらをご覧ください: こちらをご覧ください: こちらをご覧ください:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # 5. インストール
 
-あなたのためにインストールを容易にするために、私たちはあなたが従うように交配されたパン粉のラインをレイアウトしました。 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸
+あなたのためにインストールを容易にするために、私たちはあなたが従うように交配されたパン粉のラインをレイアウトしました。 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸
 
 > パンくずリスト🔸を見つけた場合は、コミュニティチャネルで頭を上げてください。
 > {.is-info}

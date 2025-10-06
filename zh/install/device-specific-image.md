@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: true
-date: 2025-10-03T04:59:17.765Z
+date: 2025-09-28T08:24:20.184Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36.362Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-15T12:36.362Z
 
 # 1. 简介
 
-为了安装 BredOS ，我们提供了特定的设备图像，用于在其特定设备的箱子中解锁。 这将这些图像与通过ISO图像进行的安装区分开来。 通过 ISO 镜像安装更通用，但我们提供的设备支持之外的设备。 这将这些图像与通过ISO图像进行的安装区分开来。 通过 ISO 镜像安装更通用，但我们提供的设备支持之外的设备。 这将这些图像与通过ISO图像进行的安装区分开来。 通过 ISO 镜像安装更通用，但我们提供的设备支持之外的设备。
+为了安装 BredOS ，我们提供了特定的设备图像，用于在其特定设备的箱子中解锁。 这将这些图像与通过ISO图像进行的安装区分开来。 通过 ISO 镜像安装更通用，但我们提供的设备支持之外的设备。 这将这些图像与通过ISO图像进行的安装区分开来。 通过 ISO 镜像安装更通用，但我们提供的设备支持之外的设备。 这将这些图像与通过ISO图像进行的安装区分开来。 通过 ISO 镜像安装更通用，但我们提供的设备支持之外的设备。 这将这些图像与通过ISO图像进行的安装区分开来。 通过 ISO 镜像安装更通用，但我们提供的设备支持之外的设备。
 
 > 如果你熟悉刷新树莓操作系统，不需要进一步阅读。 只需抓取您的 SD 卡或 eMMC，您的设备特定的 BredOS 图像并用您的首选工具闪烁。
 > {.is-info} Just grab your SD-Card or eMMC, your device specific image and flash with your preferred Tool.
@@ -22,15 +22,14 @@ dateCreated: 2025-09-15T12:36.362Z
 
 # 3. 安装
 
-安装方式因设备而异，您想要安装 BredOS 的介质。 在本指南中，我们将涵盖安装到 在本指南中，我们将涵盖安装到 在本指南中，我们将涵盖安装到
+安装方式因设备而异，您想要安装 BredOS 的介质。 在本指南中，我们将涵盖安装到 在本指南中，我们将涵盖安装到 在本指南中，我们将涵盖安装到 在本指南中，我们将涵盖安装到
 
 - `3.1 不可移动eMMC`
 - `3.2 可移动eMMC 和 SD Card`
-- [3.3 NVMe](#h-33-nvme)
+- `3.3 nVME`
 
-> 在您开始之前，请检查您的设备上有哪些选项可用！
-> {.is-info}
-> {.is-info}
+> 如果你熟悉刷新树莓操作系统，不需要进一步阅读。 只需抓取您的 SD 卡或 eMMC，您的设备特定的 BredOS 图像并用您的首选工具闪烁。
+> {.is-info} Just grab your SD-Card or eMMC, your device specific image and flash with your preferred Tool.
 > {.is-info}
 
 ## 3.1 不可移动eMMC
@@ -46,11 +45,12 @@ dateCreated: 2025-09-15T12:36.362Z
 > {.is-info} Just grab your SD-Card or eMMC, your device specific image and flash with your preferred Tool.
 > {.is-info}
 
-下面我们描述如何用适配器刷入eMMC。 下面我们描述如何用适配器刷入eMMC。 下面我们描述如何用适配器刷入eMMC。 If you do not own a suitable adapter leave the eMMC connected to your SBC and follow [3.1 non-removable eMMC](#h-31-non-removable-emmc).
+下面我们描述如何用适配器刷入eMMC。 下面我们描述如何用适配器刷入eMMC。 下面我们描述如何用适配器刷入eMMC。 下面我们描述如何用适配器刷入eMMC。 If you do not own a suitable adapter leave the eMMC connected to your SBC and follow [3.1 non-removable eMMC](#h-31-non-removable-emmc).
 
 ### 3.2.1 准备好您可移除的 eMMC
 
 > 如果您没有使用 eMC存储设备，请跳至 [3.2.2 刷入 eMMC / SD 卡](#h-322-flashing-emmc-sd-card)。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}
@@ -75,9 +75,9 @@ dateCreated: 2025-09-15T12:36.362Z
 
   </details>
 
-#### 3.2.1.2 使用 USB 为 eMMC 适配器
+#### 3.2.2 刷入 eMMC / SD 卡
 
-- 由于几乎所有已知的 USB Sticks 都是基于eMC 存储设备，在那里有 USB 到 eMMC 适配器，这些适配器是 USB-Stics ，但是可以移除eMMC 存储设备。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。
+- 由于几乎所有已知的 USB Sticks 都是基于eMC 存储设备，在那里有 USB 到 eMMC 适配器，这些适配器是 USB-Stics ，但是可以移除eMMC 存储设备。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。
 
 <details><summary><b>USB 到 eMMC 适配器</b></summary>
 
@@ -85,9 +85,9 @@ dateCreated: 2025-09-15T12:36.362Z
 
    </details>
 
-### 3.2.2 刷入 eMMC / SD 卡
+### 如果您没有使用 eMC存储设备，请跳至 `3.2.2 刷入eMMC / SD Card` 。&#xA;{.is-info}
 
-有无数工具刷入sd 卡或 eMMC。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。
+有无数工具刷入sd 卡或 eMMC。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。
 
 - [BalenaEtcher](https://etcher.balena.io/)
 - [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
@@ -96,15 +96,15 @@ dateCreated: 2025-09-15T12:36.362Z
 > {.is-warning} 请确保你在刷入之前解压他们！
 > {.is-warning}
 
-## 3.3 NVMe
+## 3.3 nVME
 
 ### 3.3.1 前提条件
 
-由于我们的设备不支持直接从NVMe驱动器启动，我们需要将UEFI安装到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
+由于我们的设备不支持直接从NVMe驱动器启动，我们需要将UEFI安装到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide. 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
 
-### 3.3.2 燃NVMe
+### 3.3.2 Flashing nVME
 
-直接或通过 USB 适配器将驱动器连接到您的电脑。 Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive. 刷入后将驱动器连接到 SBC 的 NVMe 端口。
+直接或通过 USB 适配器将驱动器连接到您的电脑。 直接或通过 USB 适配器将驱动器连接到您的电脑。 Then follow the steps in `3.2 Removable eMMC and SD Card`, making sure to use the correct drive letter or path for your NVMe drive. 直接或通过 USB 适配器将驱动器连接到您的电脑。 After flashing connect the drive to the nVME port of your SBC.
 
 ### 3.3.3 启动顺序
 

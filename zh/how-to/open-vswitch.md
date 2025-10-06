@@ -2,7 +2,7 @@
 title: 如何管理虚拟开关
 description:
 published: true
-date: 2025-09-25T06:12:54.789Z
+date: 2025-09-24T12:11:02.185Z
 tags:
 editor: markdown
 dateCreated: 2025-09-24T11：30：44.331Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-24T11：30：44.331Z
 
 # 2. 介绍信息
 
-Open vSwitch (OVS) 是一个开源、多层虚拟开关，旨在启用高级网络自动化，同时支持标准管理接口和协议。 它主要用于虚拟环境，以便利虚拟机之间以及虚拟机与物理网络之间的通信。
+Open vSwitch (OVS) 是一个开源、多层虚拟开关，旨在启用高级网络自动化，同时支持标准管理接口和协议。 它主要用于虚拟环境，以便利虚拟机之间以及虚拟机与物理网络之间的通信。 它主要用于虚拟环境，以便利虚拟机之间以及虚拟机与物理网络之间的通信。
 
 # 1. 安装
 
@@ -42,7 +42,7 @@ sudo ovs-vsctl add-br <your switch name here>
 
 ## 4.1 手动的
 
-虚拟网络设备可以通过您的超访问器或通过容器手动创建。 它们将出现并发挥物理网络设备的功能。
+虚拟网络设备可以通过您的超访问器或通过容器手动创建。 它们将出现并发挥物理网络设备的功能。 它们将出现并发挥物理网络设备的功能。
 
 - 要列出所有网络设备运行：
 
@@ -89,9 +89,9 @@ sudo ovs-vsctl 附加端口 <your switch name here> ve-databaselCjq 标签=<your
 
 ## 4.1 自动通过 libvirt
 
-如果您跟随[本指南](/how-to/run-vms)创建带有qemu/libvirt的超高维度堆栈， 您可以将您新创建的开关添加到 libvirt 已知的网络。 这允许您在GUI中选择您的 vSwitch ，您的 VM 虚拟网络设备将自动添加到启动后的 vSwitch 中。
+如果您跟随[本指南](/how-to/run-vms)创建带有qemu/libvirt的超高维度堆栈， 您可以将您新创建的开关添加到 libvirt 已知的网络。 这允许您在GUI中选择您的 vSwitch ，您的 VM 虚拟网络设备将自动添加到启动后的 vSwitch 中。 这允许您在GUI中选择您的 vSwitch ，您的 VM 虚拟网络设备将自动添加到启动后的 vSwitch 中。
 
-- 启动 `virt-manager` 并右键点击 `QEMU/KVM` ，该屏幕截图中标记为蓝色。 然后点击“详细信息”。
+- 启动 `virt-manager` 并右键点击 `QEMU/KVM` ，该屏幕截图中标记为蓝色。 然后点击“详细信息”。 然后点击“详细信息”。
 
 ![main.png](/vswitch/main.png)
 
@@ -119,11 +119,12 @@ sudo ovs-vsctl 附加端口 <your switch name here> ve-databaselCjq 标签=<your
 
 ![network.png](/vswitch/network.png)
 
-# 🔄 3. 将 vSwitch 连接到物理网络
+# 🔄 3. 通过互联网连接两个vSwitch
 
 如果您想要将您的 vSwitch 连接到物理网络，您必须使用物理网络设备。
 
 > 请注意，使用过的网络设备必须**没有**指定IP地址！
+> {.is-info}
 > {.is-info}
 
 - 若要从上面的示例输出添加 `enp49s0` ，请运行：
@@ -132,11 +133,11 @@ sudo ovs-vsctl 附加端口 <your switch name here> ve-databaselCjq 标签=<your
 sudo ovs-vsctl 附加端口 <your switch name here> enp49s0
 ```
 
-如果您只有一个物理网络设备和/或想要将它用于您的主机网络， 您必须将 IP 地址分配给vSwitch 而不是物理网络设备。 这可以使用任何工具，例如网络管理员的图形界面或通过系统进行。
+如果您只有一个物理网络设备和/或想要将它用于您的主机网络， 您必须将 IP 地址分配给vSwitch 而不是物理网络设备。 这可以使用任何工具，例如网络管理员的图形界面或通过系统进行。 这可以使用任何工具，例如网络管理员的图形界面或通过系统进行。
 
-# 5. 通过互联网连接两个vSwitch
+# 🔄 3. 将 vSwitch 连接到物理网络
 
-如果您在互联网上有两个通过 VPN 连接的设备，可以连接他们的 vSwitch。 这使得这些vSwitch上的设备可以不再配置地相互通信。 如果您的 vSwitch 已连接到物理开关，甚至可以通过互联网连接到物理设备。 这对许多目的都是有用的。
+如果您在互联网上有两个通过 VPN 连接的设备，可以连接他们的 vSwitch。 这使得这些vSwitch上的设备可以不再配置地相互通信。 如果您的 vSwitch 已连接到物理开关，甚至可以通过互联网连接到物理设备。 这对许多目的都是有用的。 这使得这些vSwitch上的设备可以不再配置地相互通信。 如果您的 vSwitch 已连接到物理开关，甚至可以通过互联网连接到物理设备。 这对许多目的都是有用的。
 
 - 在两个主机上运行以下内容：
 
@@ -147,6 +148,7 @@ sudo ovs-vsctl 附加端口 <your switch name here> vxlan0 - 设置接口 vxlan0
 As always, replace `<your switch name here>` with the name of your switch, and `<IP address of other host>` with the IP address of the host with the other vSwitch. 净化它；您已连接的设备现在可以在互联网上安全通信。
 
 > 如果您的客户端能够相互控制，但是进一步的通信不起作用，这可能是一个MTU问题。
+> {.is-danger}
 > {.is-danger}
 
 ## 6.1 解决MTU问题

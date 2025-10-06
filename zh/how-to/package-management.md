@@ -76,6 +76,7 @@ sudo pacman -Sc
 > {.is-success}
 > {.is-success}
 > {.is-success}
+> {.is-success}
 
 # 3. 平面板
 
@@ -118,6 +119,7 @@ sudo flatpak 卸载 <app name>
 ```
 
 > 或者，您可以使用像Pamac这样的图形商店管理Flatpak应用。 🖥️ 🖥️
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}

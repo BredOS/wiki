@@ -2,7 +2,7 @@
 title: Discos de error de Manejo
 description: Una guía sobre los datos de S.M.A.R.T y la sustitución de discos
 published: true
-date: 2025-09-24T09:25:24.826Z
+date: 2025-09-23T15:33:58.026Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -10,18 +10,21 @@ dateCreated: 2025-06-01T10:33:55.798Z
 
 # 1. DECLARACIÓN IMPORTANTE
 
-Esta guía es un conjunto de consejos recopilados a partir de experiencias personales. Necesitas asegurar la comprensión y el riesgo adecuados al ejecutar cualquier comando de esta guía. **La pérdida de datos es posible y probable.**
+Esta guía es un conjunto de consejos recopilados a partir de experiencias personales. Asegurar la comprensión y el riesgo adecuados al ejecutar cualquier comando de esta guía. La pérdida de datos es posible.
 
 > **no** confíe en ChatGPT o en cualquier otro LLMs con la recuperación de discos fallidos.
 > ¡Le decepcionará! Siempre es posible hacerlo peor.
 > {.is-danger}
 
-# 2. Ayúdame
+# 2. Fallos reportados
 
 En BredOS, nos negamos a permitir la pérdida de datos de cualquier usuario. Lea este artículo cuidadosamente; si necesita más ayuda, no dude en ponerse en contacto con nosotros por nuestros canales de soporte o por correo electrónico.
 
 - [📱 Telegram](https://t.me/bredoslinux)
-- [💬 Discord](https://discord.gg/jwhxuyKXaa)
+- Discord: https://discord.gg/beSUnWGVH2
+  Telegram: https://t.me/+MUeb_iKsgY0
+  Email: support@bredos.org
+  {.is-success}
 - [Email](mailto:support@bredos.org)
   {.links-list}
 
@@ -34,7 +37,7 @@ Si ha sido vinculado a esto desde BredOS News, diríjase a la siguiente sección
 
 # 5. Datos S.M.A.R.T
 
-## 4.1 Visualización de datos S.M.A.R.T (HDD)
+## 3.1 Visualización de datos S.M.A.R.T (HDD)
 
 > Si tiene un medio de almacenamiento diferente, diríjase a continuación a su sección relevante.
 > {.is-info}
@@ -149,7 +152,7 @@ La mayoría de estos datos son irrelevantes para impulsar la salud. De todo esto
 - `SMART overall-health self-assessment`, que debe ser "PASSED". Si se informa de cualquier otro valor, la unidad debe ser reemplazada con prise.
 - `Reallocated_Sector_Ct`, el número de sectores reubicados, que si es más de uno solo indica un riesgo significativo de fallo en cascada.
 
-## 4.2 Ver datos de S.M.A.R.T (NVME)
+## 3.2 Ver datos de S.M.A.R.T (NVME)
 
 - Asumiendo NVME `/dev/nvme0`, para ver sus datos S.M.A.R.T, ejecutar:
 
@@ -234,7 +237,7 @@ Aquí, los únicos valores importantes son:
 - `Media and Data Integrity Errors`, que indican una significativa gradación del flash.
 - `Entradas de registro de información de errores`, que generalmente indican cuántas regiones de flash han sido enmascaradas con la flash.
 
-## 4.3 Vistas de salud EMMC
+## 3.3 Viendo salud EMMC
 
 > No ejecute esto en las tarjetas SD, las bloqueará. No los dañará, pero no hace nada productivo.
 > {.is-info}
@@ -414,7 +417,7 @@ Este valor indica un rango porcentual de la salud.
 - El valor `0x03` indica 21-30% de salud usada.
 - Y así sucesivamente..
 
-## 4.4 BTRFS reportó datos
+## 3.4 BTRFS reportó datos
 
 Si en su lugar estás usando un USB, una tarjeta SD ~~~o unidades disquetes~~, por desgracia es imposible obtener los datos de reportes adecuados.
 
@@ -438,9 +441,9 @@ estadísticas del dispositivo sudo btrfs /dev/mmcblk0p3
 
 Si alguno de estos valores no es cero, el medio probablemente esté **SIGNIFICANTY** degradado.
 
-## 4.5 ¿Debo reemplazar la unidad?
+## 3.3 ¿Debo reemplazar la unidad?
 
-Si tienes solo unos pocos (<5) sectores reubicados, o menos de la mitad de la repuesta disponible, reportado desde `smartctl` probablemente esté bien seguir usando el disco durante un rato.
+Si tienes sólo unos pocos sectores (<5) reubicados, probablemente esté bien seguir usando el disco durante un tiempo. También es correcto usar algunos bloques de flash nvme de sobra.
 
 Sin embargo, quemar a través del flash libre o trasladar rápidamente docenas de sectores es sin embargo una señal de un fracaso inminente.
 

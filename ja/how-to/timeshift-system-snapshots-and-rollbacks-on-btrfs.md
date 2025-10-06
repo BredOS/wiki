@@ -2,7 +2,7 @@
 title: BtrfsスナップショットとTimeshift
 description: Timeshift スナップショットとシステムロールバックのセットアップに関する包括的なガイド
 published: true
-date: 2025-10-01T09:19:56.756Z
+date: 2025-10-01T09:05:40.858Z
 tags:
 editor: markdown
 dateCreated: 2024-09-27T19:19:08.209Z
@@ -81,7 +81,7 @@ sudo nano /etc/default/grub-btrfs/config
 
 # 3. Timeshift-autosnapでパッケージをアップグレードする前に自動システムスナップショットを作成する
 
-`timeshift-autosnap` をインストールすると、パックマン経由でパッケージをアップグレードする前に、タイムシフトスナップショットが自動的に作成されます。 これにより、システムに変更が加えられる前に常に復元ポイントがあることが保証されます。 これにより、システムに変更が加えられる前に常に復元ポイントがあることが保証されます。
+`timeshift-autosnap` をインストールすると、パックマン経由でパッケージをアップグレードする前に、タイムシフトスナップショットが自動的に作成されます。 これにより、システムに変更が加えられる前に常に復元ポイントがあることが保証されます。 これにより、システムに変更が加えられる前に常に復元ポイントがあることが保証されます。 これにより、システムに変更が加えられる前に常に復元ポイントがあることが保証されます。
 
 ## 3.1: timeshift-autosnap のインストール
 
@@ -95,12 +95,16 @@ yay -S timeshift-autosnap
 > これを実行することはできません！
 > {.is-warning}
 > {.is-warning}
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
 
 ## 3.2: GRUBの重複アップデートを防止
 
 timeshift-autosnap によってスナップショットが作成されたときに GRUB が2回更新されないようにするには、設定ファイルを変更することをお勧めします。 Set `updateGrub` to `false` by editing the following file:
 
 - 堅牢なスナップショットシステムを使用すると、アップデートやシステムの変更中に問題が発生した場合に備えて一日を節約できます。
+  {.is-success}
   {.is-success}
 
 ```

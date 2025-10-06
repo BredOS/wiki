@@ -2,7 +2,7 @@
 title: 运行 Android 应用程序(waydroid)
 description:
 published: true
-date: 2025-10-01T11:53:29.300Z
+date: 2025-09-26T10:03:46.309Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T08：40：19.752Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-21T08：40：19.752Z
 
 # 1. 简介
 
-Waydroid 是基于 Wayland 在 Linux / GNU 上运行 Android 的一个基于容器的解决方案。 本指南将带你走上安装它的必要步骤。 本指南将带你走上安装它的必要步骤。 本指南将带你走上安装它的必要步骤。
+Waydroid 是基于 Wayland 在 Linux / GNU 上运行 Android 的一个基于容器的解决方案。 本指南将带你走上安装它的必要步骤。 本指南将带你走上安装它的必要步骤。 本指南将带你走上安装它的必要步骤。 本指南将带你走上安装它的必要步骤。
 
 # 2. 安装
 
@@ -20,14 +20,14 @@ Waydroid 是基于 Wayland 在 Linux / GNU 上运行 Android 的一个基于容�
 sudo pacman -S waydroid
 ```
 
-## 2.1 RK3588 安卓图像
+## 2.1 RK3588
 
 您需要启用全景并进行设置。 要做到这一点，请关注[本指南](/how-to/how-to-setup-panthor)。
 
 - Install panthor image:
 
 ```
-sudo pacman -S waydroid-image-panthor
+sudo pacman -S waydroid-panthor-image
 ```
 
 - Initialize waydroid:
@@ -36,7 +36,7 @@ sudo pacman -S waydroid-image-panthor
 sudo waydroid init -f -i /usr/share/waydroid-extra/images
 ```
 
-## 2.2 通用ARM64/X86_64 的 Android 图像
+## 2.2 通用ARM64/X86_64
 
 - 这将下载并安装 GAPPS 版本的 android:
 
@@ -66,7 +66,7 @@ waydroid 会话开始
 安装 <apk>.apk
 ```
 
-# 🔄 3. 启用窗口集成
+# 4. 安装应用
 
 默认情况下，Waydroid总是以全屏方式运行。
 

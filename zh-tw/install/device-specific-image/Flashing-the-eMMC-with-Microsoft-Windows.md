@@ -2,7 +2,7 @@
 title: Flashing the eMMC with Microsoft Windows
 description:
 published: true
-date: 2025-09-29T06:09:51.531Z
+date: 2025-09-28T12:20:24.588Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -22,7 +22,7 @@ For the installation of BredOS, four things are required:
 
 #### RK3588
 
-[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+SPI loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 
 #### RK3566
 

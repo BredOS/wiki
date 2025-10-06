@@ -2,7 +2,7 @@
 title: 📸🔄 Btrfs Snapshots and Rollback, with Timeshift
 description: 使用 Timeshift 设置Btrfs 快照和系统回滚的综合指南
 published: true
-date: 2025-10-01T09：19：56.756Z
+date: 2025-10-01T09:05:40.858Z
 tags:
 editor: markdown
 dateCreated: 2024-09-27T19：19：08.209Z
@@ -93,12 +93,14 @@ yay -S tift-autosnap
 
 > `timeeshift-autosnap` 可能要求您在设备正常运行之前重新启动。
 > {.is-warning}
+> {.is-warning}
 
 ## 3.2：防止重复 GRUB 更新
 
 您可能想要安装 `timeshift-autosnap` ，在通过 Pacman 进行任何软件包升级之前自动创建时间快照。 这将确保您在系统更改之前总是有一个恢复点。
 
 - 拥有一个强大的快照系统可以在更新或系统更改过程中发生错误时节省您的日子。
+  {.is-success}
   {.is-success}
 
 ```

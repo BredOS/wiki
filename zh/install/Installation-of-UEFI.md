@@ -2,7 +2,7 @@
 title: 安装UEFI(RK3588)
 description:
 published: true
-date: 2025-09-28T09:53:54.047Z
+date: 2025-09-28T08:24:50.721Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -10,16 +10,17 @@ dateCreated: 2025-09-16T11:29:43.061Z
 
 # 1. 简介
 
-我们支持的许多设备确实为“UEFI”提供支持，这是一个启动硬件并启动操作系统的现代固件接口。 在`UEFI`的帮助下，您的设备能够启动 。 这样文件 (写入 USB-Stick 或烧毁到 DVD) 以及直接从NVMe 驱动器或通过 PXE 在网络上启动您的操作系统。
+我们支持的许多设备确实为“UEFI”提供支持，这是一个启动硬件并启动操作系统的现代固件接口。 我们支持的许多设备确实为“UEFI”提供支持，这是一个启动硬件并启动操作系统的现代固件接口。 在`UEFI`的帮助下，您的设备能够启动 。 这样文件 (写入 USB-Stick 或烧毁到 DVD) 以及直接从NVMe 驱动器或通过 PXE 在网络上启动您的操作系统。
 
 > UEFI 的多个安装在保存您的 UEFI 设置时可能造成问题。
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
 
 # 2. 检查您的设备
 
-不幸的是，我们所支持的并非所有设备都支持启动 \\\`UEFI'。 而且，并非每个设备都安装了SPI 芯片。 而且，并非每个设备都安装了SPI 芯片。 而且，并非每个设备都安装了SPI 芯片。
+不幸的是，我们所支持的并非所有设备都支持启动 \\\\`UEFI'。 而且，并非每个设备都安装了SPI 芯片。 而且，并非每个设备都安装了SPI 芯片。 而且，并非每个设备都安装了SPI 芯片。 而且，并非每个设备都安装了SPI 芯片。
 
 - To determine what your device is capable of, check [this table](/en/table-of-supported-devices).
 
@@ -29,7 +30,7 @@ dateCreated: 2025-09-16T11:29:43.061Z
 
 ## 3.1 SD 卡安装
 
-下载与您的设备匹配的最新版本，向您的写作者输入任何大小的 SD 卡并使用您预感刷入工具。 我们建议使用： 我们建议使用： 我们建议使用：
+下载与您的设备匹配的最新版本，向您的写作者输入任何大小的 SD 卡并使用您预感刷入工具。 我们建议使用： 我们建议使用： 我们建议使用： 我们建议使用：
 
 - [BalenaEtcher](https://etcher.balena.io/)
 - [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
@@ -39,7 +40,7 @@ dateCreated: 2025-09-16T11:29:43.061Z
 > {.is-success}
 > {.is-success}
 
-## 3.2 在UEFI内部安装SPI设备
+## 3.2 安装SPI设备
 
 > 如果您跳过了3.1，请回来。 需要这个步骤来刷入SPI芯片！
 > 您可以在此后移除SD卡。
@@ -53,8 +54,8 @@ dateCreated: 2025-09-16T11:29:43.061Z
 - 将我们的`UEFI`的最新版本复制到FAT32格式的 USB-Stick 并连接到您的 SBC。
 - 从你的SD卡上启动你的棋盘到`UEFI`。 如果您在访问 UEFI 设置时遇到问题，请检查 [本指南] (/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu)。 如果您在访问 UEFI 设置时遇到问题，请检查 [本指南] (/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu)。
 - 浏览至`Boot Manager` -> `UEFI Shell` 以进入命令行接口。
-- 列出使用`map`命令的所有可读分区。 列出使用`map`命令的所有可读分区。 列出使用`map`命令的所有可读分区。 此命令列出所有分区与 fs0:`, fs1:`...
-- 输入文件系统名称并按 `Enter` 键将目录更改为包含固件图像的 USB-Stick 。 如果您不确定要使用哪个文件系统，请运行以下列出其内容： 如果您不确定要使用哪个文件系统，请运行以下列出其内容： 如果您不确定要使用哪个文件系统，请运行以下列出其内容：
+- 列出使用`map`命令的所有可读分区。 列出使用`map`命令的所有可读分区。 列出使用`map`命令的所有可读分区。 此命令列出所有分区与 fs0:`, fs1:`... 列出使用`map`命令的所有可读分区。 列出使用`map`命令的所有可读分区。 此命令列出所有分区与 fs0:`, fs1:`...
+- 输入文件系统名称并按 `Enter` 键将目录更改为包含固件图像的 USB-Stick 。 如果您不确定要使用哪个文件系统，请运行以下列出其内容： 如果您不确定要使用哪个文件系统，请运行以下列出其内容： 如果您不确定要使用哪个文件系统，请运行以下列出其内容： 如果您不确定要使用哪个文件系统，请运行以下列出其内容：
 
 ```
 ls fs<your drive number here>: 
@@ -70,9 +71,10 @@ sf 更新文件 <FIRMWARE.img> 0x0
 
 ## 3.3 从 BredOS 内部安装 SPI
 
-If your board is booted into BredOS, it is possible to install UEFI on your SPI by following [this guide](/en/how-to/update-uefi-rk3588). 在第[3]节下。 刷入 UEFI 固件](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) 使用`/dev/mtdblock0` 作为您的目标设备。
+If your board is booted into BredOS, it is possible to install UEFI on your SPI by following [this guide](/en/how-to/update-uefi-rk3588). 在第[3]节下。 在第[3]节下。 刷入 UEFI 固件](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) 使用`/dev/mtdblock0` 作为您的目标设备。
 
 > 现在你的设备能够获得所有好的 UEFI 谷物！
+> {.is-success}
 > {.is-success}
 > {.is-success}
 > {.is-success}

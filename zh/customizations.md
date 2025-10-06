@@ -26,3 +26,4 @@ If you wish to change your shell or adjust its settings and behavior, follow thi
 
 您可以完全自定义BredOS News Shell 欢迎程序。
 Follow [this link](/customizations/news) to go to the guide.
+Follow [this link](/customizations/news) to go to the guide.

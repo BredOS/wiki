@@ -2,7 +2,7 @@
 title: Linux または macOS で eMMC の書き込み
 description:
 published: true
-date: 2025-10-05T06:59:09.446Z
+date: 2025-09-29T06:00:19.076Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -10,17 +10,17 @@ dateCreated: 2025-09-16T06:29:26.865Z
 
 # 1. はじめに
 
-このガイドでは、ツール `rkdeveloptool` を使用して eMMC をフラッシュする方法について説明します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。
+このガイドでは、ツール `rkdeveloptool` を使用して eMMC をフラッシュする方法について説明します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。 ほとんどのLinuxリポジトリで見つけることができ、macOS上でも動作します。
 
 BredOS のインストールには、以下の3つのことが必要です。
 
-1. SPL ローダーファイル:
+1. SPLローダーファイル、例えばRK3588: [`rk3588_spl_loader_v1.15.115.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 
 ### Tabset {.tabset}
 
 #### RK3588
 
-[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+SPI loader file for example, for the RK3588: [`rk3588_spl_loader_v1.15.11.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.11.bin)
 
 #### RK3566
 
@@ -46,7 +46,7 @@ BredOS のインストールには、以下の3つのことが必要です。
 - Archベースのディストリビューションを使用している場合
 
 ```
-sudo pacman -S rkdeveloptool-git
+sudo pacman -S rkdeveloptool
 ```
 
 - Debian ベースのディストリビューションを使用している場合
@@ -65,7 +65,7 @@ sudo dnf install rkdeveloptool
 
 ### 2.2.1 前提条件
 
-macOS用の`rkdeveloptool`のバイナリパッケージがないので、自分でコンパイルする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。
+macOS用の`rkdeveloptool`のバイナリパッケージがないので、自分でコンパイルする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。 そのためには、 [Brew](https://brew.sh/) 経由でパッケージをインストールする必要があります。
 
 - 次のコマンドで`automake`、`autoconf`、`libusb`、`pkg-config`、`git`、`wget`をインストールします。
 
@@ -116,7 +116,7 @@ cp rkdeveloptool /opt/homebrew/bin/
 
 ## 3.1 マスクロームを入力
 
-USB経由でフラッシュ可能なデバイスとしてSBCを表示するには、`maskromモード`に設定する必要があります。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。
+USB経由でフラッシュ可能なデバイスとしてSBCを表示するには、`maskromモード`に設定する必要があります。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。 これは、使用しているデバイスによって異なります。 一部のSBCにはボタンがありますが、または2つのピンを短くする必要があります。 SBCメーカーのマニュアルを参照してください。
 
 - この情報は Google 検索で簡単に見つけることができます:
 
@@ -140,7 +140,11 @@ DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801マスク
 > {.is-warning}
 
 > USB-CからCへのケーブル、またはUSB-CからAへのケーブルを使用すると、ボードが検出されない可能性があります。
+> USB-CからCへのケーブル、またはUSB-CからAへのケーブルを使用すると、ボードが検出されない可能性があります。
 > USB-CをAケーブルに使用することをお勧めします。 次に、[USB-C メスから USB-A 男性アダプタ](https://www.aliexpress.com/item/1005004767752226.html)またはUSB-A ケーブル。
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
 > これを実行することはできません！
 > {.is-warning}
 > {.is-warning}
@@ -168,6 +172,7 @@ sudo rkdeveloptool rd
 ```
 
 > フラッシュに成功したら[**最初のセットアップ**](/en/install/first-setup)で続行します。
+> {.is-success}
 > {.is-success}
 > {.is-success}
 > {.is-success}

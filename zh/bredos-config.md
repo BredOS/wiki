@@ -18,6 +18,7 @@ dateCreated: 2025-09-21T09:27:04.136Z
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 - 如果您删除了它或想要重新安装它，请运行：
 

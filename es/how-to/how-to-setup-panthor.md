@@ -30,7 +30,7 @@ y vaya a `Device Tree Manager` -> `Enable / disable overlays` y active `rockchip
 Mientras que bredos-config es capaz de instalar dtbs y alterar la configuración de grub para cargarlos en el arranque, _no_ puede alterar la configuración de uefi. Esto tiene que hacerlo el usuario. Los cambios que el usuario tiene que hacer son mostrados por bredos-config en la primera instalación de base/overlay dtbs. Los cambios también se pueden encontrar en la [Guía del árbol del dispositivo](/how-to/how-to-enable-dtbos).
 
 > ¡No reinicie su sistema después de la instalación de la superposición dtb!
-> Continuar con \\\`3. Reemplace los gráficos de Panfork.
+> Continuar con \\\\`3. Reemplace los gráficos de Panfork.
 > {.is-warning}
 
 ## 🦶 1.2 Manualmente
@@ -40,7 +40,7 @@ Sigue la [Guía de la capa del árbol del dispositivo](/how-to/how-to-enable-dtb
 **¡No reinicie su sistema después de copiar el DTBO!**
 
 > ¡No reinicie su sistema después de la instalación de la superposición dtb!
-> Continuar con \\\`3. Reemplace los gráficos de Panfork.
+> Continuar con \\\\`3. Reemplace los gráficos de Panfork.
 > {.is-warning}
 
 # 🔁 3. Reemplazar gráficos de Panfork

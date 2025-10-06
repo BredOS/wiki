@@ -2,7 +2,7 @@
 title: Sata固件修复
 description:
 published: true
-date: 2025-10-03T05:08:32.217Z
+date: 2025-09-19T05:01:28.982Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09：18：06.486Z
@@ -97,6 +97,7 @@ Pin 1在芯片上用一个小点标记，并在平面板或适配器板上贴上
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 检查所有电缆并确保您的 ITX-3588J 板在使用片段时断电。
 然后连接到您的Linux设备并运行以下命令。
@@ -155,10 +156,10 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 - 正如标题所表明的那样简单：
 
 ```
-检查所有电缆并确保您的 ITX-3588J 板在使用片段时断电。
-然后连接到您的Linux设备并运行以下命令。
-如果它报告了上述SPI芯片的名字，你很乐意去做。
-然后连接到您的Linux设备并运行以下命令。
+所有的 SATA 端口都应该很好的工作！
+{.is-success}
+{.is-success}
+{.is-success}
 ```
 
 ```
@@ -185,6 +186,7 @@ Verifying flash... VERIFIED.
 如果您看到文本"VERIFIED"，固件已被正确刷入。 如果你使用了片段，简单地断开它的连接，你很好。 如果你去除芯片，你知道要做什么。 如果你使用了片段，简单地断开它的连接，你很好。 如果你去除芯片，你知道要做什么。
 
 > 所有的 SATA 端口都应该很好的工作！
+> {.is-success}
 > {.is-success}
 > {.is-success}
 > {.is-success}

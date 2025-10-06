@@ -2,7 +2,7 @@
 title: 使用 Microsoft Windows 刷入 eMMC
 description:
 published: true
-date: 2025-09-29T06:09:51.531Z
+date: 2025-09-28T12:20:24.588Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -47,9 +47,11 @@ dateCreated: 2025-09-16T09:55:34.272Z
 我们从安装 [Rockchip 驱动器] (https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip )开始。 在你下载了那个.zip文件后，将其提取到你的预置位置。
 你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。 在你下载了那个.zip文件后，将其提取到你的预置位置。
 你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。 在你下载了那个.zip文件后，将其提取到你的预置位置。
+你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。 在你下载了那个.zip文件后，将其提取到你的预置位置。
 你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。
 
 > 如果您被问到：“您想要允许此应用更改您的设备吗？” ，点击“是”。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}
@@ -58,7 +60,7 @@ dateCreated: 2025-09-16T09:55:34.272Z
 
 # 3. 使用 RKDevTool 闪烁BredOS
 
-有了驱动程序，我们可以继续使用 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。
+有了驱动程序，我们可以继续使用 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。
 
 在 `RKDevTool` 中，设置了以下配置并点击`RUN`：
 
@@ -69,14 +71,18 @@ dateCreated: 2025-09-16T09:55:34.272Z
 
 > Maskrom 按钮应该在电源插入棋盘时按住 \*\*。
 > {.is-info}
+> {.is-info}
 
 > 使用USB-C到C电缆，或使用USB-C到电缆向后可能导致未被发现。
+> 使用USB-C到C电缆，或使用USB-C到电缆向后可能导致未被发现。
 > 建议使用USB-C到A电缆， 然后是 [USB-C 女性到 USB-A 男性适配器](https://www.aliexpress.com/item/1005004767752226.html) 或 USB-A 到 A 电缆。
+> {.is-warning}
 > {.is-warning}
 
 等待它完成刷入过程，你很好。
 
 > 在刷入成功后，继续进行 [**First Setup**](/en/install/first-setup)。
+> {.is-success}
 > {.is-success}
 > {.is-success}
 > {.is-success}

@@ -2,7 +2,7 @@
 title: Ejecutar aplicaciones Android (waydroid)
 description:
 published: true
-date: 2025-10-01T11:53:29.300Z
+date: 2025-09-26T10:03:46.309Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T08:40:19.752Z
@@ -20,14 +20,14 @@ Waydroid es una solución basada en contenedores para ejecutar Android en Linux/
 sudo pacman -S waydroid
 ```
 
-## 2.1 Imagen Android para RK3588
+## 2.1 RK3588
 
 Necesitas activar y configurar el panthor. Para hacer esto, sigue [esta guía] (/how-to/how-to-setup-panthor).
 
 - Install panthor image:
 
 ```
-sudo pacman -S waydroid-image-panthor
+sudo pacman -S waydroid-panthor-image
 ```
 
 - Initialize waydroid:
@@ -36,7 +36,7 @@ sudo pacman -S waydroid-image-panthor
 sudo waydroid init -f -i /usr/share/waydroid-extra/images
 ```
 
-## 2.2 Imagen Android para ARM64/X86_64 genérico
+## 2.2 ARM64/X86_64 genéricos
 
 - Esto descargará e instalará la versión GAPPS de android:
 
@@ -66,7 +66,7 @@ inicio de sesión waydroid
 app waydroid instalar <apk>.apk
 ```
 
-# 4. Habilitar integración de Ventana
+# 4. Instalar aplicaciones
 
 Waydroid por defecto siempre se ejecuta en pantalla completa.
 

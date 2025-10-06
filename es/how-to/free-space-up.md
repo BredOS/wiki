@@ -122,6 +122,7 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`  
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`  
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses el analizador de uso de disco.\
@@ -149,6 +150,8 @@ A veces, archivos grandes pueden ocupar espacio innecesariamente. Aquí están l
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\  
+  **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\  
   **Analizador de uso de discos GNOME (baobab)** — Analizador de uso de discos para GNOME.\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\\

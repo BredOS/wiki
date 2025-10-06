@@ -2,7 +2,7 @@
 title: Installation of UEFI
 description:
 published: true
-date: 2025-09-28T09:53:54.047Z
+date: 2025-09-28T08:24:50.721Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-16T11:29:43.061Z
 
 # 1. 簡介
 
-Many of our supported devices do offer support for `UEFI`, which is a modern firmware interface that initializes hardware and starts the operating system. With the help of `UEFI` your device is capable of booting .iso files (written to a USB-Stick or burned to a DVD) as well as booting your OS directly from the NVMe drive or over the network via PXE.
+Many of our supported devices do offer support for `UEFI`, which is a modern firmware interface that initializes hardware and starts the operating system. With the help of `UEFI` your device is capable of booting .iso files (written to a USB-Stick or burned to a DVD) as well as booting your OS directly from the nVME drive or over the network via PXE.
 
 > Multiple installations of UEFI can cause problems when saving your UEFI settings.
 > {.is-warning}
@@ -35,10 +35,11 @@ Download the latest release matching your device, insert a SD Card of (almost) a
 > Insert your SD Card into your SBC and you are good to go!
 > {.is-success}
 
-## 3.2 Installation to SPI from within UEFI
+## 3.2 Installation to SPI
 
 > If you have skipped 3.1, go back. This step is needed for flashing to the SPI chip!
 > You can remove the SD Card afterwards
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}

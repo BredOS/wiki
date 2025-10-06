@@ -44,6 +44,7 @@ sudo systemctl enable gdm
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 ## **画面の回転** と入力します
 
@@ -76,6 +77,7 @@ sudo pacman -S extension-manager
 ## 1.4 ランドスケープスタイラスの使用法
 
 お使いのデバイスがスタイラスに対応している場合、デフォルトで画面が垂直方向に回転されている場合にのみ、正しくポイントされます。
+代わりに水平方向に動作するように設定するには、次の手順に従います。
 代わりに水平方向に動作するように設定するには、次の手順に従います。
 代わりに水平方向に動作するように設定するには、次の手順に従います。
 代わりに水平方向に動作するように設定するには、次の手順に従います。
@@ -118,6 +120,7 @@ pacman -S plasma-desktop
 グループとメタ パッケージの違いを理解するには、 [here](https://wiki.archlinux.org/title/Meta_package_and_package_group) をクリックします。
 
 > このソフトウェアは廃止されているため、SDDMの使用を避けてください! LightDMはプラズマでうまく動作します。
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}

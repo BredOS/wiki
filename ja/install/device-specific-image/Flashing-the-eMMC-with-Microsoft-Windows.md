@@ -2,7 +2,7 @@
 title: Microsoft Windows で eMMC の書き込み
 description:
 published: true
-date: 2025-09-29T06:09:51.531Z
+date: 2025-09-28T12:20:24.588Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -10,6 +10,8 @@ dateCreated: 2025-09-16T09:55:34.272Z
 
 # 1. はじめに
 
+何よりもまず、Windowsを使用する必要があると聞いて申し訳ありません。
+しかし、恐れはありません - とにかくあなたをカバーしています。
 何よりもまず、Windowsを使用する必要があると聞いて申し訳ありません。
 しかし、恐れはありません - とにかくあなたをカバーしています。
 何よりもまず、Windowsを使用する必要があると聞いて申し訳ありません。
@@ -26,7 +28,7 @@ BredOS のインストールには、以下の4つのものが必要です:
 
 #### RK3588
 
-[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+SPI loader file for example, for the RK3588: [`rk3588_spl_loader_v1.15.11.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.11.bin)
 
 #### RK3566
 
@@ -51,12 +53,13 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ウィンドウがポップアップします。 ウィンドウがポップアップします。 `Install Driver`をクリックします。 ドライバはシステムにインストールされます。 ドライバはシステムにインストールされます。
 
 # 3. RKDevToolを使ってブレッドOSをフラッシュする
 
-所定の場所にあるドライバでは、 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool) の使用を続けることができます。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。
+所定の場所にあるドライバでは、 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool) の使用を続けることができます。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。
 
 `RKDevTool` で次の設定を行い、`RUN`をクリックします。
 
@@ -69,7 +72,11 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 > {.is-warning}
 
 > USB-CからCへのケーブル、またはUSB-CからAへのケーブルを使用すると、ボードが検出されない可能性があります。
+> USB-CからCへのケーブル、またはUSB-CからAへのケーブルを使用すると、ボードが検出されない可能性があります。
 > USB-CをAケーブルに使用することをお勧めします。 次に、[USB-C メスから USB-A 男性アダプタ](https://www.aliexpress.com/item/1005004767752226.html)またはUSB-A ケーブル。
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
 > これを実行することはできません！
 > {.is-warning}
 > {.is-warning}
@@ -77,6 +84,7 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 それが点滅プロセスを終えるのを待ち、あなたは行くのが良いです。
 
 > フラッシュに成功したら[**最初のセットアップ**](/en/install/first-setup)で続行します。
+> {.is-success}
 > {.is-success}
 > {.is-success}
 > {.is-success}
