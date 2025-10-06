@@ -2,7 +2,7 @@
 title: Homepage
 description: 
 published: true
-date: 2025-10-06T05:41:19.201Z
+date: 2025-10-06T05:45:30.312Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -23,7 +23,7 @@ The documentation will guide you through the installation, configuration, and us
 ## 2.1 Featured tools
 
  - Bakery - [your guide to your own Bred](/install/first-setup)!
- - Bred-News - [the news channel about your Bred](/en/customizations/news)!
+ - Bred-News - [the news channel about your Bred](/customizations/news)!
  - Bred-Tools - [the swiss knife at your hand](/Tools)!
  - Bred-Config - [like raspi-config, but with better taste!](/bredos-config)
  - Govctl - [take control of your CPU](/how-to/govctl)!
