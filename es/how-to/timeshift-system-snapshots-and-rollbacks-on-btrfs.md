@@ -2,7 +2,7 @@
 title: Instantáneas y retrocesos Btrfs con Timeshift
 description: Una guía completa sobre cómo configurar instantáneas Btrfs y retrocesos del sistema usando Timeshift
 published: true
-date: 2025-10-01T09:19:56.756Z
+date: 2025-10-01T09:05:40.858Z
 tags:
 editor: markdown
 dateCreated: 2024-27-27T19:19:08.209Z
