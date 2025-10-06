@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: true
-date: 2025-10-03T04:59:17.765Z
+date: 2025-09-28T08:24:20.184Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -25,7 +25,7 @@ La instalación varía de dispositivo a dispositivo y el medio en el que desea i
 
 - `3.1 eMC` no extraíble
 - `3.2 removable eMMC y SD Card`
-- [3.3 NVMe](#h-33-nvme)
+- `3.3 nVME`
 
 > Antes de comenzar, por favor compruebe qué opciones están disponibles en su dispositivo!
 > {.is-info}
@@ -66,7 +66,7 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee u
 
   </details>
 
-#### 3.2.1.2 con adaptador USB a eMMC
+#### 3.2.2 Flashear eMMC / Tarjeta SD
 
 - Como casi todos los USB conocidos comúnmente se basan en el almacenamiento eMMC, existen adaptadores USB a eMMC que son USB-Sticks pero con almacenamiento eMMC extraíble. Estos pueden ser usados para flashear BredOS también.
 
@@ -76,7 +76,7 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee u
 
    </details>
 
-### 3.2.2 Flashear eMMC / Tarjeta SD
+### 3.2.1.2 con adaptador USB a eMMC
 
 Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta guía cubriremos `BalenaEtcher` y `Raspberry Pi Imager`. Ambas herramientas ofrecen soporte para Linux, macOS y Microsoft Windows.
 
@@ -86,13 +86,13 @@ Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta g
 > Proporcionamos imágenes comprimidas como archivos .xz. ¡Asegúrate de descomprimirlos antes de parpadear!
 > {.is-warning}
 
-## 3.3 NVMe
+## 3.3 nVME
 
 ### 3.3.1 Prerrequisitos
 
-Como el arranque directo desde la unidad NVMe no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
+Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
 
-### 3.3.2 Flashear NVMe
+### 3.3.2 Flashear nVME
 
 Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Después de flashear, conecte la unidad al puerto NVMe de su SBC.
 
