@@ -2,7 +2,7 @@
 title: Handling Failing Disks
 description: A guide on S.M.A.R.T data and replacing disks
 published: true
-date: 2025-09-24T09:25:24.826Z
+date: 2025-09-23T15:33:58.026Z
 tags:
 editor: markdown
 dateCreated: 2025-06-01T10:33:55.798Z
@@ -10,18 +10,21 @@ dateCreated: 2025-06-01T10:33:55.798Z
 
 # 1. IMPORTANT DISCLAIMER
 
-This guide is a set of tips gathered from personal experiences. You need to ensure proper understanding and risk when executing any commands from this guide. **Data loss is possible, and likely.**
+This guide is a set of tips gathered from personal experiences. Ensure proper understanding and risk when executing any commands from this guide. Data loss is possible.
 
 > Do **not** trust ChatGPT or any other LLMs with recovering failed disks.
 > You will be disappointed! Making it worse is always possible.
 > {.is-danger}
 
-# 2. Help me
+# 2. Reported Failures
 
 At BredOS, we refuse to let any users experience data loss. Read through this article carefully; if you need further help, feel free to contact us on our support channels or via mail.
 
 - [📱 Telegram](https://t.me/bredoslinux)
-- [💬 Discord](https://discord.gg/jwhxuyKXaa)
+- Discord: https://discord.gg/beSUnWGVH2
+  Telegram: https://t.me/+MUeb_iKsggY5YzY0
+  Email: support@bredos.org
+  {.is-success}
 - [Email](mailto:support@bredos.org)
   {.links-list}
 
@@ -34,10 +37,10 @@ If you've been linked to this from BredOS News, head to the following section.
 
 # 🔁 4. S.M.A.R.T Data
 
-## 4.1 Viewing S.M.A.R.T Data (HDD)
+## 3.1 Viewing S.M.A.R.T Data (HDD)
 
 > If you have a different storage medium, head below to it's relevant section.
-> {.is-info}
+> Each has it's own section.
 
 - Assuming hard disk `/dev/sda`, to view it's S.M.A.R.T data, run:
 
@@ -149,7 +152,7 @@ Most of this data is irrelevant to drive health. Out of all of this, the followi
 - `SMART overall-health self-assessment`, which should be "PASSED". If any other value is reported, the drive should be replaced with haste.
 - `Reallocated_Sector_Ct`, the number of relocated sectors, which if more than a single one indicates significant risk of cascading failure.
 
-## 4.2 Viewing S.M.A.R.T Data (NVME)
+## 3.2 Viewing S.M.A.R.T Data (NVME)
 
 - Assuming NVME `/dev/nvme0`, to view it's S.M.A.R.T data, run:
 
@@ -234,7 +237,7 @@ Here, the only important values are:
 - `Media and Data Integrity Errors`, which indicate significant flash degredation.
 - `Error Information Log Entries`, which usually indicate how many flash regions have been masked with spare flash.
 
-## 4.3 Viewing EMMC health
+## 3.3 Viewing EMMC health
 
 > Do not run this on SD cards, it will crash them. It won't damage them, but it doesn't do anything productive.
 > {.is-info}
@@ -414,7 +417,7 @@ This value indicates a percentage-range of health.
 - Value `0x03` indicates 21-30% health used.
 - And so on and so fourth..
 
-## 4.4 BTRFS reported data
+## 3.4 BTRFS reported data
 
 If you are instead using a USB, an SD card ~~or floppy drives~~, it is unfortunately impossible to get proper reporting data.
 
@@ -438,9 +441,9 @@ sudo btrfs device stats /dev/mmcblk0p3
 
 If any of these values is non-zero, the medium is probably **SIGNIFICANTLY** degraded.
 
-## 4.5 Should I replace the drive?
+## 3.3 Should I replace the drive?
 
-If you have just a few (<5) relocated sectors, or less than half available spare flash, reported from `smartctl` it's probably fine to keep using the disk for a little while.
+If you have just a few (<5) relocated sectors, it's probably fine to keep using the disk for a little while.
 
 However burning through spare flash or rapidly relocating dozens of sectors is however a sign of imminent failure.
 
