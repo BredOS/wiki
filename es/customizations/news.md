@@ -2,7 +2,7 @@
 title: Noticias BredOS
 description: Personalizar esta pieza de software sorprendentemente complicada.
 published: true
-date: 2025-10-05T12:26:26.876Z
+date: 2025-10-06T07:18:15.049Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732Z
@@ -21,23 +21,44 @@ La configuración permenante (por usuario) se puede hacer en `~/.newsrc`. La con
 - El archivo de configuración por defecto debería verse así:
 
 ```
-# BredOS-News Configuration
+"""
+Configuración de noticias BredOS-
 
-# Accent = "\033[38;5;129m"
-# Accent_Secondary = "\033[38;5;104m"
+Consulte `https://wiki.bredos.org/customizations/news`,
+para instrucciones detalladas sobre cómo configurar.
+"""
 
-# Hush_Updates = False
-# Hush_Disks = False
-# Hush_Smart = False
-# Time_Tick = 0.1
-# Time_Refresh = 0.25
+# Acento = "\033[38;5;129m"
+# Accent_seconds = "\033[38;5; 04m"
+
+# mañana_Actualizaciones = False
+# mañana_Discos = False
+# mañana_Smart = False
+# Time_Tick = 0.
+# Time_Refresh = 0. 5
 # Onetime = False
 
-# Shortcuts configuration
+"""
+Atajos de configuración
 
-# shortcuts = {
-#     "1": "bredos-config",
-# }
+comandos de Shell, usando $SHELL, y las funciones de python están totalmente soportadas.
+Sólo las teclas alfanuméricas y las teclas de símbolos pueden ser capturadas, sin combinaciones de claves.
+Las claves mayúsculas funcionan y pueden estar vinculadas a separar los accesos directos de las minúsculas.
+"""
+
+accesos directos def -> Ninguno:
+    print("Atajos directos configurados:")
+    para i en atajos. eys():
+        atajo = atajos[i]
+        if is_function(atajo):
+            print(f" - {i}: Función {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{atajos directos[i]}"')
+    print("\n")
+
+atajos["1"] = "bredos-config"
+atajos["0"] = "sudo sys-report"
+atajos["? ] = atajos_ayuda
 ```
 
 > Para activar un parámetro en este archivo de configuración, elimine el <kbd>#</kbd> al comienzo de la línea.
