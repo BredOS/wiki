@@ -18,6 +18,7 @@ dateCreated: 2025-09-21T09:27:04.136Z
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 - 削除した場合および/または再インストールしたい場合は、以下を実行してください:
 
@@ -39,6 +40,7 @@ sudo pacman -S bredos-config
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 ![update.png](/bredos-config/update.png)
 
@@ -57,6 +59,7 @@ sudo pacman -S bredos-config
 ## 2.5 移行
 
 > このオプションは現在構築中です！
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
