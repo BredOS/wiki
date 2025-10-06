@@ -28,7 +28,7 @@ La documentación le guiará a través de la instalación, configuración y uso 
 - Pastelería - [tu guía para tu propio Bred](/install/first-setup)!
 - Bred-News - [el canal de noticias sobre tu Bred](/customizations/news)!
 - Bred-Tools - [el cuchillo suizo a tu mano](/Tools)!
-- Bred-Config - [like raspi-config, but with better taste](/bredos-config)!
+- Bred-Config - [como raspi-config, pero con mejor gusto](/bredos-config)!
 - Govctl - [toma el control de tu CPU](/how-to/govctl)!
 
 # 4. [🛠️ Requisitos del sistema](#system-requirements)
