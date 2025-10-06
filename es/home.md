@@ -2,7 +2,7 @@
 title: Página web
 description:
 published: true
-date: 2025-10-06T05:45:30.312Z
+date: 2025-10-06T09:38:43.497Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -28,7 +28,7 @@ La documentación le guiará a través de la instalación, configuración y uso 
 - Pastelería - [tu guía para tu propio Bred](/install/first-setup)!
 - Bred-News - [el canal de noticias sobre tu Bred](/customizations/news)!
 - Bred-Tools - [el cuchillo suizo a tu mano](/Tools)!
-- Bred-Config - [como raspi-config, ¡pero con mejor gusto!](/bredos-config)
+- Bred-Config - [like raspi-config, but with better taste](/bredos-config)!
 - Govctl - [toma el control de tu CPU](/how-to/govctl)!
 
 # 4. [🛠️ Requisitos del sistema](#system-requirements)
