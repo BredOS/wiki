@@ -2,7 +2,7 @@
 title: Run Android apps (waydroid)
 description:
 published: true
-date: 2025-10-01T11:53:29.300Z
+date: 2025-09-26T10:03:46.309Z
 tags:
 editor: markdown
 dateCreated: 2025-09-21T08:40:19.752Z
@@ -20,14 +20,14 @@ Waydroid is a container-based solution for running Android on Linux/GNU using Wa
 sudo pacman -S waydroid
 ```
 
-## 2.1 Android Image for RK3588
+## 2.1 RK3588
 
 You need panthor enabled and setup. To do this follow [this guide](/how-to/how-to-setup-panthor).
 
 - Install panthor image:
 
 ```
-sudo pacman -S waydroid-image-panthor
+sudo pacman -S waydroid-panthor-image
 ```
 
 - Initialize waydroid:
@@ -36,7 +36,7 @@ sudo pacman -S waydroid-image-panthor
 sudo waydroid init -f -i /usr/share/waydroid-extra/images
 ```
 
-## 2.2 Android Image for Generic ARM64/X86_64
+## 2.2 Generic ARM64/X86_64
 
 - This will download and install the GAPPS version of android:
 
@@ -66,7 +66,7 @@ waydroid session start
 waydroid app install <apk>.apk
 ```
 
-# 5. Enable Window integration
+# 3. Enable and start waydroid
 
 Waydroid by default always runs in fullscreen.
 
