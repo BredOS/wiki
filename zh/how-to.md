@@ -2,7 +2,7 @@
 title: 如何发送到！
 description: 关于如何在 BredOS 中安装或使用某些功能的指南、教程和提示
 published: true
-date: 2025-09-16T10：19：46.986Z
+date: 2025-10-05T07:05:01.193Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -14,9 +14,9 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 # 2. 🛠️ 有用的链接
 
-- [🎥 如何播放 DRM 保护的内容（安装 Widevine）](/how-to/widevine-watch-drm-content)
+- [如何播放 DRM 受保护的内容(安装宽带)](/how-to/widevine-watch-drm-content)
 
-- [🐾 如何在 RK3588 的 Mali GPU 上设置 Panthor](/how-to/how-to-setup-panthor)
+- [🐾 如何在 Mali GPU 上设置 Panthor (RK3588)](/how-to/how-to-setup-panthor)
 
 - [🎮 如何在 BredOS 上安装 STEAM](/how-to/how-to-install-steam)
 
@@ -40,8 +40,13 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [如何处理报告的磁盘故障](/how-to/disk-failure)
 
-- ✨ 探索这些指南以获得最佳的 BredOS 体验！
+- [How to install Android Apps to BredOS](/how-to/waydroid)
 
-> 探索这些指南以从BredOS中获得最大效果！
-> {.is-info}
+- [如何管理虚拟开关](/how-to/open-vswitch)
+
+- [How to manage systemd-nspawn containers](/how-to/systemd-nspawn)
+
+- [如何管理服务](/how-to/manage-services)
+
+> ✨ 探索这些指南以获得最佳的 BredOS 体验！
 > {.is-info}

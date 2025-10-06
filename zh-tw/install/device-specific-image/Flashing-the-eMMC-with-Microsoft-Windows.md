@@ -1,8 +1,8 @@
 ---
 title: Flashing the eMMC with Microsoft Windows
 description:
-published: false
-date: 2025-09-18T08:59:46.182Z
+published: true
+date: 2025-09-29T06:09:51.531Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -16,12 +16,28 @@ This article guides you through the process of installing `RKDevTool` and the ne
 
 For the installation of BredOS, four things are required:
 
-1. SPI loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. SPL loader file:
+
+### Tabset {.tabset}
+
+#### RK3588
+
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+
+#### RK3566
+
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+###
+
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. [RockChip Maskrom drivers](https://dl.radxa.com/tools/windows/)
 4. [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool),     [Alternative Link 1](https://dl.radxa.com/tools/windows/)
 
-# 2) 2) Drivers
+> We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
+> {.is-warning}
+
+# 2. 2. Drivers
 
 We start with the installation of the [Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip). After you downloaded that .zip file, extract it to your prefered location.
 Inside you will find the tool `DriverInstall.exe`. Execute it with elevated rights.
@@ -42,7 +58,11 @@ In `RKDevTool` set the following configuration and click on `RUN`:
 - Check `Write by Address`
 - Click on `RUN` and wait until the process finishes
 
-> We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
+> The Maskrom button should be held down **while power is being plugged** into the board.
+> {.is-info}
+
+> Using USB-C to C cables, or a USB-C to A cable backwards may result to the board not being detected.
+> It is recommended to use a USB-C to A cable, then a [USB-C Female to USB-A Male adapter](https://www.aliexpress.com/item/1005004767752226.html) or a USB-A to A cable.
 > {.is-warning}
 
 Wait for it to finish the flashing process and you are good to go.

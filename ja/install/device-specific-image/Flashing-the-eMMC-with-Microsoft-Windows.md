@@ -1,8 +1,8 @@
 ---
 title: Microsoft Windows で eMMC の書き込み
 description:
-published: false
-date: 2025-09-18T08:59:46.182Z
+published: true
+date: 2025-09-29T06:09:51.531Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T09:55:34.272Z
@@ -14,16 +14,35 @@ dateCreated: 2025-09-16T09:55:34.272Z
 しかし、恐れはありません - とにかくあなたをカバーしています。
 何よりもまず、Windowsを使用する必要があると聞いて申し訳ありません。
 しかし、恐れはありません - とにかくあなたをカバーしています。
+何よりもまず、Windowsを使用する必要があると聞いて申し訳ありません。
+しかし、恐れはありません - とにかくあなたをカバーしています。
 この記事では、 `RKDevTool` と必要な `RockChip Maskromドライバ` をインストールするプロセスを説明します。
 
 BredOS のインストールには、以下の4つのものが必要です:
 
-1. SPI loader file for example, for the RK3588: [`rk3588_spl_loader_v1.15.11.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.11.bin)
+1. SPL ローダーファイル:
+
+### Tabset {.tabset}
+
+#### RK3588
+
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+
+#### RK3566
+
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+###
+
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. [RockChip Maskrom drivers](https://dl.radxa.com/tools/windows/)
 4. [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool), [Alternative Link 1](https://dl.radxa.com/tools/windows/)
 
-# 2) 2) ドライバ
+> 画像は .xz 圧縮ファイルとして提供します。 画像は .xz 圧縮ファイルとして提供します。 書き込みの前に含まれている .img ファイルを抽出する必要があります。
+> {.is-warning}
+> {.is-warning}
+
+# 2. 2. ドライバ
 
 We start with the installation of the [Rockchip Driver](https://dl.radxa.com/tools/windows/DriverAssitant_v5.0.zip). その.zipファイルをダウンロードした後、それをあなたの好みの場所に抽出します。
 内部には、ツール「DriverInstall.exe」があります。 権利を高めて実行します。
@@ -31,12 +50,13 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 > 「このアプリでデバイスに変更を許可しますか？」と聞かれた場合は、「はい」をクリックします。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ウィンドウがポップアップします。 ウィンドウがポップアップします。 `Install Driver`をクリックします。 ドライバはシステムにインストールされます。 ドライバはシステムにインストールされます。
 
 # 3. RKDevToolを使ってブレッドOSをフラッシュする
 
-所定の場所にあるドライバでは、 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool) の使用を続けることができます。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。
+所定の場所にあるドライバでは、 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool) の使用を続けることができます。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。 .zip ファイルを抽出し、`RKDevTool.exe` を実行します。
 
 `RKDevTool` で次の設定を行い、`RUN`をクリックします。
 
@@ -45,12 +65,18 @@ We start with the installation of the [Rockchip Driver](https://dl.radxa.com/too
 - 「アドレスで書く」をチェックします。
 - `RUN`をクリックして、プロセスが終了するまで待ちます。
 
-> 画像は .xz 圧縮ファイルとして提供します。 画像は .xz 圧縮ファイルとして提供します。 書き込みの前に含まれている .img ファイルを抽出する必要があります。
+> 電源が差し込まれている間、Maskromボタンを押したままにします。
+> {.is-warning}
+
+> USB-CからCへのケーブル、またはUSB-CからAへのケーブルを使用すると、ボードが検出されない可能性があります。
+> USB-CをAケーブルに使用することをお勧めします。 次に、[USB-C メスから USB-A 男性アダプタ](https://www.aliexpress.com/item/1005004767752226.html)またはUSB-A ケーブル。
+> これを実行することはできません！
 > {.is-warning}
 > {.is-warning}
 
 それが点滅プロセスを終えるのを待ち、あなたは行くのが良いです。
 
 > フラッシュに成功したら[**最初のセットアップ**](/en/install/first-setup)で続行します。
+> {.is-success}
 > {.is-success}
 > {.is-success}

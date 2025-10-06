@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description:
 published: true
-date: 2025-09-23T09:38:43.252Z
+date: 2025-10-03T04:59:17.765Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -25,7 +25,7 @@ Installation varies from device to device and the medium you want to install Bre
 
 - `3.1 non-removable eMMC`
 - `3.2 removable eMMC and SD Card`
-- `3.3 nVME`
+- [3.3 NVMe](#h-33-nvme)
 
 > Before you begin please check which options are available with your device!
 > {.is-info}
@@ -53,18 +53,28 @@ In the following we describe how to flash eMMC with an adapter. If you do not ow
 
 - As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to to convert them into an SD Card.
 
+<details><summary><b>uSD Adpater and eMMC</b></summary>
+
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
-- ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
-  Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+</details>
+- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+
+<details><summary><b>uSD Adapter connected to reader</b></summary>
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+
+  </details>
 
 #### 3.2.1.2 with USB to eMMC adapter
 
 - As almost all commonly known USB Sticks are based on eMMC storage there are USB to eMMC adapters out there which are USB-Sticks but with removable eMMC storage. These can be used to flash BredOS too.
 
+<details><summary><b>USB to eMMC adapter</b></summary>
+
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
+
+   </details>
 
 ### 3.2.2 Flashing eMMC / SD Card
 
@@ -76,15 +86,15 @@ There are countless tools to flash an sd card or eMMC. In this guide we will cov
 > We provide images compressed as .xz files. Make sure you decompress them before flashing!
 > {.is-warning}
 
-## 3.3 nVME
+## 3.3 NVMe
 
 ### 3.3.1 Prerequisites
 
-As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
+As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow this guide.
 
-### 3.3.2 Flashing nVME
+### 3.3.2 Flashing NVMe
 
-Connect the drive to your PC, either directly or via a USB adapter. After flashing connect the drive to the nVME port of your SBC. Then use one of the recommended tools in [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card), making sure to use the correct drive letter or path for your NVMe drive.
+Connect the drive to your PC, either directly or via a USB adapter. After flashing connect the drive to the nVME port of your SBC. After flashing connect the drive to the NVMe port of your SBC.
 
 ### 3.3.3 Boot Order
 

@@ -1,8 +1,8 @@
 ---
 title: Flashing the eMMC with Linux or macOS
 description:
-published: false
-date: 2025-09-18T08:57:18.967Z
+published: true
+date: 2025-10-05T06:59:09.446Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,11 +14,27 @@ This guide describes how to flash an eMMC using the tool `rkdeveloptool`. It can
 
 For the installation of BredOS, three things are required:
 
-1. SPI loader file, for example for the RK3588:  [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+1. SPL loader file:
+
+### Tabset {.tabset}
+
+#### RK3588
+
+[`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
+
+#### RK3566
+
+[`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+###
+
 2. Device Specific Image from our [official website](https://bredos.org/download.html)
 3. `rkdeveloptool`
 
-# 3) Flashing
+> We provide our Images as .xz compressed files. You need to extract the containing .img file before flashing!
+> {.is-warning}
+
+# 3. Flashing
 
 The installation of `rkdeveloptool` can be done with the following steps.
 
@@ -27,7 +43,7 @@ The installation of `rkdeveloptool` can be done with the following steps.
 - If you are using an Arch-based distribution
 
 ```
-sudo pacman -S rkdeveloptool
+sudo pacman -S rkdeveloptool-git
 ```
 
 - If you are using an Debian-based distribution
@@ -117,6 +133,13 @@ sudo rkdeveloptool ld
 DevNo=1 Vid=0x2207,Pid=0x350b,LocationID=801 Maskrom
 ```
 
+> The Maskrom button should be held down **while power is being plugged** into the board.
+> {.is-info}
+
+> Using USB-C to C cables, or a USB-C to A cable backwards may result to the board not being detected.
+> It is recommended to use a USB-C to A cable, then a [USB-C Female to USB-A Male adapter](https://www.aliexpress.com/item/1005004767752226.html) or a USB-A to A cable.
+> {.is-warning}
+
 ## 3.2 Flash BredOS
 
 Now that we are able to send commands to the device with `rkdeveloptool`, lets make a BredOS SBC out of it.
@@ -141,3 +164,35 @@ sudo rkdeveloptool rd
 
 > After successful flashing proceed with [**First Setup**](/en/install/first-setup).
 > {.is-success}
+
+# 🔁 4. Additional Info
+
+Well, you just want more progress bars in your life, right? We got you covered, don't worry.
+
+## 4.1 Reading chosen flash medium info
+
+The command `sudo rkdeveloptool rfi` will show you the details of the chosen flash medium.
+
+- By default, this usually is the eMMC, unless it's unavailable.
+
+```
+Flash Info:
+	Manufacturer: SAMSUNG, value=00
+	Flash Size: 14910 MB
+	Flash Size: 30535680 Sectors
+	Block Size: 512 KB
+	Page Size: 2 KB
+	ECC Bits: 0
+	Access Time: 40
+	Flash CS: Flash<0>
+```
+
+## 4.2 Changing flash target
+
+Want to flash / dump not the eMMC but a different thing?
+
+- `sudo rkdeveloptool cs 2` to choose the sdcard.
+- `sudo rkdeveloptool cs 9` to select the SPINOR chip.
+- `sudo rkdeveloptool cs 1` to select the eMMC again.
+
+The change will be reflected in `sudo rkdeveloptool rfi`.

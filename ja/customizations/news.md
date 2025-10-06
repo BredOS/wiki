@@ -1,0 +1,110 @@
+---
+title: BredOS ニュース
+description: この驚くほど複雑なソフトウェアをカスタマイズします
+published: true
+date: 2025-10-05T13:04:29.052Z
+tags:
+editor: markdown
+dateCreated: 2025-10-04T21:13:09.732Z
+---
+
+# 🔄 1. はじめに
+
+デフォルトでは、シェルを開くたびに「bredos-news」が起動します。 `~/.bashrc`の`bredos-news || true`と`/etc/profile.d/99-bredos-news.sh`の行によって設定されます。
+
+「bredos-news」のすべてのコピーはパーソナライズされています。つまり、あなたが望む機能とそれを完全にテーマに設定することができます。
+
+# 3. 設定と上書き
+
+`~/.newsrc` には、permenant (ユーザ毎) の設定ができます。 デフォルトの空白設定は、アプリの最初の実行後に自動的に(再)生成されます。 このファイルを削除することで構成をリセットすることができます。
+
+- デフォルトの設定ファイルは以下のようになります:
+
+```
+"""
+BredOS-News Configuration
+
+Refer to `https://wiki.bredos.org/e/en/customizations/news`,
+for detailed instructions on how to configure.
+"""
+
+# Accent = "\033[38;5;129m"
+# Accent_Secondary = "\033[38;5;104m"
+
+# Hush_Updates = False
+# Hush_Disks = False
+# Hush_Smart = False
+# Time_Tick = 0.1
+# Time_Refresh = 0.25
+# Onetime = False
+
+"""
+Shortcuts configuration
+
+Shell commands, using $SHELL, and python functions are fully supported.
+Only alphanumeric and symbol keys can be captured, no key combinations.
+Capital keys work and can be bound to seperate shortcuts from lowercase.
+"""
+
+def shortcuts_help() -> None:
+    print("Configured shortcuts:")
+    for i in shortcuts.keys():
+        shortcut = shortcuts[i]
+        if is_function(shortcut):
+            print(f" - {i}: Function {shortcut.__name__}")
+        else:
+            print(f' - {i}: "{shortcuts[i]}"')
+    print("\n")
+
+shortcuts["1"] = "bredos-config"
+shortcuts["0"] = "sudo sys-report"
+shortcuts["?"] = shortcuts_help
+```
+
+> この設定ファイルでパラメータを有効にするには、行頭の <kbd>#</kbd> を削除します。
+> {.is-warning}
+
+## 2.1 アクセントを設定 (色)
+
+パラメータ`Accent`は、基本色を設定します。`Accent_Secondary`は、すべての詳細の色を設定します。 任意の ANSI エスケープシーケンスを適用することができます。
+
+> ANSI エスケープシーケンスと例の詳細については、[this link](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797) に従ってください。
+> {.is-warning}
+
+共通のスタイル：
+
+| 色          | コード                                                                                                               |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| パーフェクトパープル | `Accent = "\033[38;5;129m"`                                                                                      |
+|            | `Accent_Secondary = "\033[38;5;104m"`                                                                            |
+| 太字の赤       | \`Accent = "\033[1m\033[38;5;124m"] |
+|            | `Accent_Secondary = "\033[38;5;160m"`                                                                            |
+
+## 2.2 機能の無効化
+
+| パラメータ                    | 説明                                   |
+| ------------------------ | ------------------------------------ |
+| `Hush_Updates` = `False` | パッケージの更新セクションを完全に削除します。              |
+| `Hush_Disks` = `False`   | 添付されているメディアストレージの使用状況メモを削除します。       |
+| `Hush_Smart` = `False`   | ディスク障害の警告をミュートします。 これは**使わない**でください。 |
+
+## 2.3 アニメーション時間の設定
+
+| パラメータ                   | 説明                                        |
+| ----------------------- | ----------------------------------------- |
+| `Time_Tick` = `0.1`     | アニメーションのフレーム間の時間を設定します。                   |
+| `Time_Refresh` = `0.25` | システム詳細の更新頻度を設定します。                        |
+| `Onetime` = `False`     | アニメーションループ、ショートカットシステム、端末のサイズ変更機能を無効にします。 |
+
+> これらの値はすでに最高です。 これ以上もしくはcpuの使用を減らさないでください **スパイク** 。
+> {.is-warning}
+
+# 4. ショートカット
+
+`shortcuts` 配列は、設定可能なキー割り当ての辞書です。 これは基本的にあなたの端末のためのクイックダイヤルです。 `bredos-news` はアニメーションをループさせていますが、設定されたキーのいずれかを押すとシェルにキーを渡すのではなく、あらかじめ設定されたショートカットを起動します。
+
+例のようにショートカットキーを設定すると、コマンドやPython関数を実行することができます。 上記の例では、 <kbd>1</kbd> を押すとツール`bredos-config`が起動します。 ディレクトリおよび/または配管の変更など、すべてのシェル操作は完全にサポートされていますが、特殊なキーとキーの組み合わせは現在サポートされていません。
+
+# 🚀 4. 環境の上書き
+
+変数 `HUSH_NEWS=1` を設定したり、ファイル `~/.hush_login` を作成したりすると、BredOS ニュースが実行されなくなります。

@@ -2,7 +2,7 @@
 title: Sata固件修复
 description:
 published: true
-date: 2025-09-19T05:01:28.982Z
+date: 2025-10-03T05:08:32.217Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09：18：06.486Z
@@ -30,13 +30,18 @@ https://www.aliexpress.com/item/3226327388.html
 
 另一方面，如果你有沉浸的经历，要去除和解析SPI芯片的八个粉丝并不是一个困难的任务。
 
-- SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+- SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
   ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
   ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+
+<details><summary><b>SATA Controller and SPI Chip</b></summary>
 
 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
 ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
 ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg)
+
+</details>
 
 ## 2.1 连接片段
 
@@ -44,13 +49,21 @@ SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA �
 
 - 确保素材已完全插入. 如果它连接正确，你应该能够使用片段取消看板。
 
+<details><summary><b>连接到 SPI</b></summary> 的片段方向
+
 如果它连接正确，你应该能够使用片段取消看板。
 如果它连接正确，你应该能够使用片段取消看板。
 ![spi-clip-connected-cut.jpg](/wiki-itx3588j-pics/spi-clip-connected-cut.jpg)
 
+</details>
+
 - 将电缆的另一端连接到烧录器。 将电缆的另一端连接到烧录器。 正确的方向如下：如果飞行器的 USB 连接器指向您。 电缆应该进入下面的四个洞，左上角的红线应该是红线。
 
+<details><summary><b>连接到平面的</b></summary> 的片段方向
+
 ![flasher-clip-connected-cut-scaled.jpg](/wiki-itx3588j-pics/flasher-clip-connected-cut-scaled.jpg)
+
+</details>
 
 ## 2.2 或去除SPI芯片
 
@@ -58,14 +71,19 @@ SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA �
 
 然后你就可以把芯片直接放到平面上(在平面背面上有一个平面)，然后你就可以把它放到平面上， 或使用上面提到的包中包含的适配板之一。
 应该有一个没有人居住的委员会和ZIF套接字作为包的一部分。 选择明智。
+Pin 1在芯片上用一个小点标记，并在平面板或适配器板上贴上"1"标签。
 
-- Pin 1在芯片上用一个小点标记，并在平面板或适配器板上贴上"1"标签。
+<details><summary><b>SPI Chip connected to Flasher through a ZIF Socket</b></summary>
 
 ![zif-socket-cut-scaled.jpg](/wiki-itx3588j-pics/zif-socket-cut-scaled.jpg)
 
-- 或
+</details>
+
+<details><summary><b>SPI 芯片已摊派给适配板</b></summary>
 
 ![spi-soldered-cut.jpg](/wiki-itx3588j-pics/spi-soldered-cut.jpg)
+
+</details>
 
 ## 2.3 检查连接
 
@@ -76,6 +94,7 @@ SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA �
 ```
 
 > 确保你的火焰被设置为3.3伏！
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 
@@ -166,5 +185,6 @@ Verifying flash... VERIFIED.
 如果您看到文本"VERIFIED"，固件已被正确刷入。 如果你使用了片段，简单地断开它的连接，你很好。 如果你去除芯片，你知道要做什么。 如果你使用了片段，简单地断开它的连接，你很好。 如果你去除芯片，你知道要做什么。
 
 > 所有的 SATA 端口都应该很好的工作！
+> {.is-success}
 > {.is-success}
 > {.is-success}

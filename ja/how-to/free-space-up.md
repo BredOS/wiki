@@ -14,7 +14,7 @@ dateCreated: 2024-09-20T20:26:57.698Z
 
 # 2. クリーンパッケージキャッシュ📦
 
-パッケージをインストールまたは更新する場合、`pacman` は `/var/cache/pkg/` にキャッシュされたコピーを保持し、再インストールを高速化します。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。
+パッケージをインストールまたは更新する場合、`pacman` は `/var/cache/pkg/` にキャッシュされたコピーを保持し、再インストールを高速化します。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。 ただし、これらのキャッシュされたパッケージは蓄積され、ディスク領域を使用する可能性があります。
 
 ## キャッシュサイズを確認する 📏
 
@@ -68,7 +68,7 @@ Exec = /usr/bin/paccache -r
 
 # 3. 古いログファイルを消去する 📝
 
-- システムログは時間の経過とともにかなりのスペースを占める可能性があります。 ログのサイズは次のとおりです。 ログのサイズは次のとおりです。 ログのサイズは次のとおりです。
+- システムログは時間の経過とともにかなりのスペースを占める可能性があります。 ログのサイズは次のとおりです。 ログのサイズは次のとおりです。 ログのサイズは次のとおりです。 ログのサイズは次のとおりです。
 
 ```bash
 journalctl --disk-usage
@@ -84,7 +84,7 @@ sudo journalctl --vacuum-time=3d
 
 # 4. BleachBit :spongeを使用
 
-BleachBitは、システムジャンク、空きディスク容量をクリーンアップし、プライバシーを保護する強力なツールです。 BleachBit [here](https://www.bleachbit.org/) の使い方の詳細を学ぶことができます。 BleachBit [here](https://www.bleachbit.org/) の使い方の詳細を学ぶことができます。
+BleachBitは、システムジャンク、空きディスク容量をクリーンアップし、プライバシーを保護する強力なツールです。 BleachBit [here](https://www.bleachbit.org/) の使い方の詳細を学ぶことができます。 BleachBit [here](https://www.bleachbit.org/) の使い方の詳細を学ぶことができます。 BleachBit [here](https://www.bleachbit.org/) の使い方の詳細を学ぶことができます。
 
 # 5. ユーザーキャッシュをクリア 🏠
 
@@ -112,27 +112,34 @@ rm -rf ~/.cache/*
 
 - **du** — ディスク使用状況の検査官。\
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
-  [Website](https://duc.zevv.nl) | AUR: `ducAUR`\
+  [Website](https://duc.zevv.nl) | AUR: `ducAUR`  
   [Website](https://duc.zevv.nl) | AUR: `ducAUR`
 
 - **gdu** — コンソールインターフェイスを備えたディスク使用量アナライザ。\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`\
+  [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`  
   [GitHub](https://github.com/dundee/gdu) | AUR: `gduAUR`
 
 - **ncdu** — ncurses disk usage analyzer.\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`\
+  [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`  
   [Website](https://dev.yorhel.nl/ncdu) | AUR: `ncdu`
 
 ## グラフィカルツール 🖼️
 
 - **Filelight** — 同心円リングによるインタラクティブなディスク使用量マップ。\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`  
+  **Filelight** — 同心円リングによるインタラクティブなディスク使用量マップ。\
+  [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`\
   [Website](https://apps.kde.org/filelight) | AUR: `filelight`
 
 - **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
+  [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`  
+  **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
   **GNOME Disk Usage Analyzer(baobab)** — GNOME用ディスク使用量アナライザ。\
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`\
@@ -143,6 +150,8 @@ rm -rf ~/.cache/*
   [Website](https://wiki.gnome.org/Apps/DiskUsageAnalyzer) | AUR: `baobab`
 
 - **qdirstat** — Qt-based directory statistics tool.\
+  [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`  
+  **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
   **qdirstat** — Qt-based directory statistics tool.\
   [GitHub](https://github.com/shundhammer/qdirstat) | AUR: `qdirstatAUR`\
@@ -155,6 +164,7 @@ rm -rf ~/.cache/*
 ---
 
 > 空き容量を増やし、BredOS システムをスムーズに稼働させてください。 💪✨
+> {.is-success}
 > {.is-success}
 > {.is-success}
 
