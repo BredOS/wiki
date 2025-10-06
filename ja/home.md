@@ -2,7 +2,7 @@
 title: ホームページ
 description:
 published: true
-date: 2025-10-06T05:45:30.312Z
+date: 2025-10-06T09:38:43.497Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -29,7 +29,7 @@ BredOS のドキュメントへようこそ！ BredOSは、ARMベースのシン
 - Bakery - [your guide to your own Bred](/install/first-setup)!
 - Bred-News - [the news channel about your Bred](/customizations/news)!
 - Bred-Tools - [the swiss knife at your hand](/Tools)!
-- Bred-Config - [raspi-configのように、しかしより良い味を持つ!](/bredos-config)
+- Bred-Config - [like raspi-config, but with better taste](/bredos-config)!
 - Govctl - [take control of your CPU](/how-to/govctl)!
 
 # 🔁 3. 🛠️ システム要件
