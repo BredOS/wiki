@@ -2,7 +2,7 @@
 title: BredOS 主頁
 description:
 published: true
-date: 2025-10-04T10:55:09.705Z
+date: 2025-10-06T05:41:19.201Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:36:23.702Z
@@ -28,6 +28,7 @@ The documentation will guide you through the installation, configuration, and us
 ## 2.1 Featured tools
 
 - Bakery - [your guide to your own Bred](/install/first-setup)!
+- Bred-News - [the news channel about your Bred](/en/customizations/news)!
 - Bred-Tools - [the swiss knife at your hand](/Tools)!
 - Bred-Config - [like raspi-config, but with better taste!](/bredos-config)
 - Govctl - [take control of your CPU](/how-to/govctl)!
@@ -100,3 +101,4 @@ BredOS 是一個開源項目，歡迎貢獻 您可以通過以下方式進行貢
 Right now, BredOS images for RK3588 devices rely on the crusty Rockchip BSP kernel — a huge, duct-taped codebase that’s hard to maintain, insecure, and always lags behind upstream Linux.
 
 [We want to change that](/en/internal-bred-stuff/mainline-campaign).
+
