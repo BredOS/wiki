@@ -2,7 +2,7 @@
 title: Cómo administrar los servicios
 description:
 published: true
-date: 2025-10-01T11:35:53.087Z
+date: 2025-10-10T06:09:36.168Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -22,7 +22,7 @@ Managing services is a core part of administering a Linux system, and systemctl�
 
 Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Esta advertencia debería desaparecer después de unos minutos. Si acaba de arrancar su dispositivo, puede mostrar la advertencia "**X** services report activating" Esto es normal, como muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar.
 
-Si ves el mensaje de error, "POR FAVOR AÑADIR ERROR MESSAGE HERE", uno o más servicios no han podido iniciarse.
+If you see the error message, "**X** services have failed" one or more services have failed to start.
 
 ## 2.2 Con `systemctl`
 
