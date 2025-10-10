@@ -22,7 +22,7 @@ Managing services is a core part of administering a Linux system, and systemctl�
 
 Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Esta advertencia debería desaparecer después de unos minutos. Si acaba de arrancar su dispositivo, puede mostrar la advertencia "**X** services report activating" Esto es normal, como muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar.
 
-If you see the error message, "**X** services have failed" one or more services have failed to start.
+Si ves el mensaje de error, "los servicios **X** han fallado" uno o más servicios han fallado.
 
 ## 2.2 Con `systemctl`
 
