@@ -22,7 +22,7 @@ Managing services is a core part of administering a Linux system, and systemctl�
 
 出力の最後に「システムは正常に動作しています」というテキストが表示されます。 これは、ブート時に起動するはずのすべてのサービスがエラーなしで開始されたことを意味します。 If you have just booted your device, it may show the warning "PLEASE ADD WARNING HERE." This is normal, as many services can be started in parallel, which can lead to delays while starting. この警告は数分後に消えるはずです。
 
-If you see the error message, "**X** services have failed" one or more services have failed to start.
+「**X** サービスが失敗しました」というエラーメッセージが表示された場合は、1つ以上のサービスが起動できませんでした。
 
 ## 2.2 `systemctl`で
 
