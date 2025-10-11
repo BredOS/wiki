@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-10-11T09:12:40.128Z
+date: 2025-10-11T09:21:31.417Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -41,7 +41,7 @@ Insert your SD Card into your SBC and continue with the guide accordingly to you
 </details>
 
 
-#### non-removeable eMMC
+#### Non-removeable eMMC
 
 <details>
 <summary><b>With RKdeveloptool</b></summary>
@@ -52,7 +52,7 @@ Continue with the guide accordingly to your PC's OS found in section [**4.2 with
 </details>
 
 
-#### removeable eMMC
+#### Removable eMMC
 
 <details>
 <summary><b>With eMMC to USB Adapter</b></summary>
@@ -104,7 +104,7 @@ Connect your eMMC to your SBC and continue with the guide accordingly to your PC
 <details>
 <summary><b>Preperation - DONT SKIP!</b></summary>
   
-As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
+As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the NVMe drive directly. To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
 
 </details>
 
