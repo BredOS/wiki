@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-10-11T09:38:50.921Z
+date: 2025-10-11T09:40:45.325Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -33,7 +33,7 @@ Insert  your SD Card into your SD Card reader of your PC and continue with [**4.
 <summary><b>Without SD Card Adapter</b></summary>
   
 Insert your SD Card into your SBC and continue with the guide according to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool). 
-> Before flashing you must set your target device to `sd card`. To process to do so is documented in the guide.
+> Before flashing you must set your target device to `sd card`. To do so have a look at [4.2 Changing flash target](/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS#h-42-changing-flash-target)
 {.is-info}
 
   
