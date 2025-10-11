@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description:
 published: false
-date: 2025-10-11T09:41:50.711Z
+date: 2025-10-11T10:05:36.426Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -94,11 +94,8 @@ Connect your eMMC to your SBC and continue with the guide according to your PC's
 
 #### NVMe
 
-<details><summary><b>Preperation - DONT SKIP!</b></summary>
-
-As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the NVMe drive directly. To install UEFI to your SPI or SD Card follow this guide.
-
-</details>
+> As direct booting from the nVME drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the NVMe drive directly. To install UEFI to your SPI or SD Card follow this guide.
+> {.is-warning}
 
 <details><summary><b>With USB Adapter</b></summary>
 
