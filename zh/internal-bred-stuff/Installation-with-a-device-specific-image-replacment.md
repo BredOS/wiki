@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-10-11T08:42:36.971Z
+date: 2025-10-11T09:41:50.711Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -20,93 +20,118 @@ dateCreated: 2025-10-11T08:42:36.971Z
 
 您可以在我们的 [Github](https://github.com/BredOS/images/releases/latest) 中找到镜像的下载链接
 
-# 3. Installation
+# 4. 启动设备
 
-## Board
+- 选择您想要安装 BredOS 的存储设备：
 
 ### Tabset {.tabset}
 
-#### SD Card
+#### SD 卡
 
-<details><summary><b>With SD Card Adapter</b></summary>
+<details><summary><b>有SD卡适配器</b></summary>
 
-There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows.
-
-- [BalenaEtcher](https://etcher.balena.io/)
-- [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
+将 SD 卡插入您的 PC 的 SD 卡读卡器并继续 [**4.1 与存储适配器**](#h-41-with-storage-adapter)
 
 </details>
 
-<details><summary><b>Without SD Card Adapter</b></summary>
+<details><summary><b>没有SD卡适配器</b></summary>
 
-Text
+将您的 SD 卡插入您的 SBC 并根据您的 PC OS 在部分 [**4.2 与 RKdeveloped tool**](#h-4-2-with-rkdeveloptool)中找到的指南继续。
 
-- Bullet
-- Points
+> 在刷入之前，您必须将目标设备设置为“sd card”。 To do so have a look at [4.2 Changing flash target](/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS#h-42-changing-flash-target).
+> {.is-info}
 
 </details>
 
-#### non-removeable eMMC
+#### 不可移除的 eMMC
 
-To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
+<details><summary><b>使用 RKdeveloped 工具</b></summary>
 
-- [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
-- [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
+根据您在 [**4.2 与 RKdevelopttool**](#h-4-2-with-rkdeveloptool) 中找到的 PCOS 继续使用指南
 
-#### removeable eMMC
+</details>
+
+#### 可移动eMMC
 
 <details><summary><b>With eMMC to USB Adapter</b></summary>
 
-- As almost all commonly known USB Sticks are based on eMMC storage there are USB to eMMC adapters out there which are USB-Sticks but with removable eMMC storage. These can be used to flash BredOS too.
+由于几乎所有已知的 USB Sticks 都是基于eMC 存储设备，在那里有 USB 到 eMMC 适配器，这些适配器是 USB-Stics ，但是可以移除eMMC 存储设备。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。 这些也可以用于闪烁BredOS。 如下面屏幕截图所示，将eMMC连接到您的适配器。
 
-<details><summary><b>USB to eMMC adapter</b></summary>
+<details><summary><b>USB 到 eMMC 适配器</b></summary>
 
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
 
    </details>
 
+Then continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter).
+
 </details>
 
-<details><summary><b>With uSD Adapter</b></summary>
-
-- As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to convert them into an SD Card.
+<details><summary><b>有uSD 适配器</b></summary>
+eMMC 基本上是一个 SD 卡，它是硬线到 SBC 的 (大多) SD卡，有适配器可以连接您的 eMC 将它们转换为 SD 卡。
 
 <details><summary><b>uSD Adpater and eMMC</b></summary>
 
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
 </details>
-- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
 
-<details><summary><b>uSD Adapter connected to reader</b></summary>
+<details><summary><b>uSD 适配器连接到阅读器</b></summary>
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
 
-  </details>
+</details>
 
-<details><summary><b>Without Adapter</b></summary>
-
-Text
-
-- Bullet
-- Points
+Then continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter).
 
 </details>
 
+<details><summary><b>没有适配器</b></summary>
+
+将您的 eMMC 连接到您的 SBC 并根据您在 [**4.2 与 RKdevelopttool**](#h-4-2-with-rkdeveloptool)中发现的PC操作系统继续使用指南。
+
 </details>
 
-#### NVMe
+#### NVME
 
-As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
+<details><summary><b>Preperation - DONT SKIP!</b></summary>
 
-Connect the drive to your PC, either directly or via a USB adapter. Then use one of the recommended tools in [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card), making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the NVMe port of your SBC.
+由于我们的设备不支持直接从NVMe驱动器启动，我们需要将UEFI安装到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide. 在 UEFI 启动后，您可以直接从 NVMe 驱动器启动。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
 
-# 4. Flashing
+</details>
 
-There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows.
+<details><summary><b>使用 USB 适配器</b></summary>
+
+通过 USB 适配器将驱动器连接到您的电脑并继续 [**4.1 与存储适配器**](#h-41-with-storage-adapter)。 直接或通过 USB 适配器将驱动器连接到您的电脑。 After flashing connect the drive to the nVME port of your SBC.
+
+</details>
+
+<details><summary><b>没有适配器</b></summary>
+
+将您的 NVMe 驱动器连接到您的 SBC 并按相应的指南继续您在 [**4.2 与 RKdeveloptool**](#h-4-2-with-rkdeveloptool)中找到的 PCOS 中。
+
+> 在刷入之前，您必须将目标设备设置为“NVMe”。 To do so have a look at [4.2 Changing flash target](/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS#h-42-changing-flash-target).
+> {.is-info}
+
+</details>
+
+# 🚀 4. 刷入
+
+> 我们提供了压缩为.xz文件的图像。 请确保你在刷入之前解压他们！
+> {.is-warning} 请确保你在刷入之前解压他们！
+> {.is-warning}
+
+## 4.1 与存储适配器
+
+有无数工具刷入sd 卡或 eMMC。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。 我们建议使用 `BalenaEtcher` 或 `Raspberry Pi Imager` 。 这两个工具都支持 Linux、macOS 和 Microsoft Windows。
 
 - [BalenaEtcher](https://etcher.balena.io/)
 - [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
 
-> We provide images compressed as .xz files. Make sure you decompress them before flashing!
-> {.is-warning}
+## 4.2 使用 RKdeveloped 工具
+
+为了覆盖您可以使用的操作系统的多样性，我们决定将安装分成不可移除的 eMMC 到这两个指南：
+
+- [在 Linux 或 macOS下与 RKDevelop 一起刷新](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
+- [Flashing with RKDevelop under Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
