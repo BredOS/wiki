@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-10-11T09:41:50.711Z
+date: 2025-10-11T10:05:36.426Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -95,11 +95,8 @@ Then continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter).
 
 #### NVME
 
-<details><summary><b>Preperation - DONT SKIP!</b></summary>
-
-由于我们的设备不支持直接从NVMe驱动器启动，我们需要将UEFI安装到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide. 在 UEFI 启动后，您可以直接从 NVMe 驱动器启动。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
-
-</details>
+> 由于我们的设备不支持直接从NVMe驱动器启动，我们需要将UEFI安装到另一个介质。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide. 在 UEFI 启动后，您可以直接从 NVMe 驱动器启动。 在 UEFI 启动后，您可以直接从 nVME 驱动器启动。 To install UEFI to your SPI or SD Card follow this guide.
+> {.is-warning}
 
 <details><summary><b>使用 USB 适配器</b></summary>
 
