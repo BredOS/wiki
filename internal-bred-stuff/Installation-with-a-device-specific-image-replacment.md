@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-10-11T09:00:25.875Z
+date: 2025-10-11T09:04:10.567Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -25,14 +25,12 @@ You can find download links for images in our [website](https://bredos.org/downl
 
 <details>
 <summary><b>With SD Card Adapter</b></summary>
-
 Insert  your SD Card into your SD Card reader of your PC and continue with [4.1 with Storage Adapter](#h-41-with-storage-adapter).
 
 </details>
 
 <details>
 <summary><b>Without SD Card Adapter</b></summary>
-
 Insert your SD Card into your SBC and continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool). Before flashing you must set your target to the sd card. To process to do so is documented in the guide.
   
 
@@ -43,7 +41,6 @@ Insert your SD Card into your SBC and continue with the guide accordingly to you
 
 <details>
 <summary><b>With RKdeveloptool</b></summary>
-
 Continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool)
   
 
@@ -54,8 +51,7 @@ Continue with the guide accordingly to your PC's OS found in section [4.2 with R
 
 <details>
 <summary><b>With eMMC to USB Adapter</b></summary>
-
-- As almost all commonly known USB Sticks are based on eMMC storage there are USB to eMMC adapters out there which are USB-Sticks but with removable eMMC storage. These can be used to flash BredOS too.
+As almost all commonly known USB Sticks are based on eMMC storage there are USB to eMMC adapters out there which are USB-Sticks but with removable eMMC storage. These can be used to flash BredOS too.
 
 <details>
 <summary><b>USB to eMMC adapter</b></summary>
@@ -63,12 +59,13 @@ Continue with the guide accordingly to your PC's OS found in section [4.2 with R
 ![emmc-reader-cut.png](/installation-dsi/emmc-reader-cut.png)
    </details>
 
+Then continue with [4.1 with Storage Adapter](#h-41-with-storage-adapter).
+  
 </details>
 
 <details>
 <summary><b>With uSD Adapter</b></summary>
-
-- As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to convert them into an SD Card.
+As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to convert them into an SD Card.
 
 <details>
 <summary><b>uSD Adpater and eMMC</b></summary>
@@ -76,7 +73,7 @@ Continue with the guide accordingly to your PC's OS found in section [4.2 with R
 ![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
 
 </details>
-- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
 
 <details>
 <summary><b>uSD Adapter connected to reader</b></summary>
@@ -85,11 +82,12 @@ Continue with the guide accordingly to your PC's OS found in section [4.2 with R
   
 </details>
 
+Then continue with [4.1 with Storage Adapter](#h-41-with-storage-adapter).
+  
 </details>
 
 <details>
 <summary><b>Without Adapter</b></summary>
-
 Connect your eMMC to your SBC and continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool). 
 
 </details>
@@ -98,21 +96,18 @@ Connect your eMMC to your SBC and continue with the guide accordingly to your PC
 
 <details>
 <summary><b>Preperation - DONT SKIP!</b></summary>
-
 As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
 
 </details>
 
 <details>
 <summary><b>With USB Adapter</b></summary>
-
 Connect the drive to your PC via a USB adapter and continue with [4.1 with Storage Adapter](#h-41-with-storage-adapter). After flashing connect the drive to the NVMe port of your SBC.
 
 </details>
 
 <details>
 <summary><b>Without Adapter</b></summary>
-
 Connect your NVMe drive to your SBC and continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool). Before flashing you must set your target to NVMe. To process to do so is documented in the guide.
 
 </details>
