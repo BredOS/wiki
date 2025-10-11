@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-10-11T08:42:36.971Z
+date: 2025-10-11T09:00:25.875Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -19,37 +19,36 @@ You can find download links for images in our [website](https://bredos.org/downl
 
 # 3. Installation
 
-## Board
+## Choose your boot device
 ### Tabset {.tabset}
 #### SD Card
 
 <details>
 <summary><b>With SD Card Adapter</b></summary>
 
-There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows. 
-
-- [BalenaEtcher](https://etcher.balena.io/)
-- [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
+Insert  your SD Card into your SD Card reader of your PC and continue with [4.1 with Storage Adapter](#h-41-with-storage-adapter).
 
 </details>
 
 <details>
 <summary><b>Without SD Card Adapter</b></summary>
 
-Text
-
-- Bullet
-- Points
+Insert your SD Card into your SBC and continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool). Before flashing you must set your target to the sd card. To process to do so is documented in the guide.
+  
 
 </details>
 
 
 #### non-removeable eMMC
 
-To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
+<details>
+<summary><b>With RKdeveloptool</b></summary>
 
- - [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
- - [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
+Continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool)
+  
+
+</details>
+
 
 #### removeable eMMC
 
@@ -84,32 +83,57 @@ To cover the variety of operating systems you can use for this, we decided to sp
 
 ![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
   
-  </details>
-  
+</details>
+
+</details>
+
 <details>
 <summary><b>Without Adapter</b></summary>
 
-Text
-
-- Bullet
-- Points
-
-</details>
+Connect your eMMC to your SBC and continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool). 
 
 </details>
 
 #### NVMe
+
+<details>
+<summary><b>Preperation - DONT SKIP!</b></summary>
+
 As direct booting from the NVMe drive is not supported by our devices we need to install UEFI to a different medium. After UEFI is booted you then are able to boot from the nVME drive directly. To install UEFI to your SPI or SD Card follow [this guide](/en/install/Installation-of-UEFI).
+
+</details>
+
+<details>
+<summary><b>With USB Adapter</b></summary>
+
+Connect the drive to your PC via a USB adapter and continue with [4.1 with Storage Adapter](#h-41-with-storage-adapter). After flashing connect the drive to the NVMe port of your SBC.
+
+</details>
+
+<details>
+<summary><b>Without Adapter</b></summary>
+
+Connect your NVMe drive to your SBC and continue with the guide accordingly to your PC's OS found in section [4.2 with RKdeveloptool](#h-4-2-with-rkdeveloptool). Before flashing you must set your target to NVMe. To process to do so is documented in the guide.
+
+</details>
   
-Connect the drive to your PC, either directly or via a USB adapter. Then use one of the recommended tools in [3.2.2 Flashing eMMC / SD Card](#h-322-flashing-emmc-sd-card), making sure to use the correct drive letter or path for your NVMe drive. After flashing connect the drive to the NVMe port of your SBC.
+
 
 
 
 # 4. Flashing 
+> We provide images compressed as .xz files. Make sure you decompress them before flashing!
+{.is-warning}
+## 4.1 with Storage Adapter
 There are countless tools to flash an sd card or eMMC. We recommend the use of `BalenaEtcher` or `Raspberry Pi Imager`. Both tools offer support for Linux, macOS and Microsoft Windows. 
 
 - [BalenaEtcher](https://etcher.balena.io/)
 - [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager)
 
-> We provide images compressed as .xz files. Make sure you decompress them before flashing!
-{.is-warning}
+
+
+## 4.2 with RKdeveloptool
+To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
+
+ - [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
+ - [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
