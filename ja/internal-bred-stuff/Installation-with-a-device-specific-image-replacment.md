@@ -2,7 +2,7 @@
 title: デバイス固有の画像を使用したインストール
 description:
 published: false
-date: 2025-10-11T09:41:50.711Z
+date: 2025-10-11T10:05:36.426Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -95,11 +95,10 @@ Firmly press the connector of the eMMC onto the uSD Adapter and connect them to 
 
 #### NVMe
 
-<details><summary><b>Preperation - DONT SKIP!</b></summary>
-
-NVMeドライブからの直接起動はデバイスではサポートされていないため、UEFIを別のメディアにインストールする必要があります。 UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide. UEFIが起動されると、NVMeドライブから直接起動することができます。 UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide.
-
-</details>
+> NVMeドライブからの直接起動はデバイスではサポートされていないため、UEFIを別のメディアにインストールする必要があります。 UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide. UEFIが起動されると、NVMeドライブから直接起動することができます。 UEFIが起動されると、nVMEドライブから直接起動することができます。 To install UEFI to your SPI or SD Card follow this guide.
+> これを実行することはできません！
+> {.is-warning}
+> {.is-warning}
 
 <details><summary><b>USBアダプタ</b></summary>
 
