@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description: 
 published: false
-date: 2025-10-11T09:21:31.417Z
+date: 2025-10-11T09:38:50.921Z
 tags: 
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -32,8 +32,8 @@ Insert  your SD Card into your SD Card reader of your PC and continue with [**4.
 <details>
 <summary><b>Without SD Card Adapter</b></summary>
   
-Insert your SD Card into your SBC and continue with the guide accordingly to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool). 
-> Before flashing you must set your target to the sd card. To process to do so is documented in the guide.
+Insert your SD Card into your SBC and continue with the guide according to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool). 
+> Before flashing you must set your target device to `sd card`. To process to do so is documented in the guide.
 {.is-info}
 
   
@@ -46,7 +46,7 @@ Insert your SD Card into your SBC and continue with the guide accordingly to you
 <details>
 <summary><b>With RKdeveloptool</b></summary>
   
-Continue with the guide accordingly to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool)
+Continue with the guide according to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool)
   
 
 </details>
@@ -95,7 +95,7 @@ Then continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter).
 <details>
 <summary><b>Without Adapter</b></summary>
   
-Connect your eMMC to your SBC and continue with the guide accordingly to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool). 
+Connect your eMMC to your SBC and continue with the guide according to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool). 
 
 </details>
 
@@ -119,7 +119,7 @@ Connect the drive to your PC via a USB adapter and continue with [**4.1 with Sto
 <summary><b>Without Adapter</b></summary>
   
 Connect your NVMe drive to your SBC and continue with the guide accordingly to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool). 
-> Before flashing you must set your target to NVMe. To process to do so is documented in the guide.
+> Before flashing you must set your target device to `NVMe`. To process to do so is documented in the guide.
 {.is-info}
 
 
@@ -143,5 +143,5 @@ There are countless tools to flash an sd card or eMMC. We recommend the use of `
 ## 4.2 with RKdeveloptool
 To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
 
- - [Flashing the eMMC with Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
- - [Flashing the eMMC with Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
+ - [Flashing with RKDevelop under Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
+ - [Flashing with RKDevelop under Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
