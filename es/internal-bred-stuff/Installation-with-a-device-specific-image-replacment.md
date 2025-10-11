@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: false
-date: 2025-10-11T09:41:50.711Z
+date: 2025-10-11T10:05:36.426Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -94,11 +94,8 @@ Conecta tu eMMC a tu SBC y continúa con la guía según el sistema operativo de
 
 #### NVMe
 
-<details><summary><b>Preperación - ¡DESCUENTA!</b></summary>
-
-Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que la UEFI es arrancada usted es capaz de arrancar desde la unidad NVMe directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
-
-</details>
+> Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que la UEFI es arrancada usted es capaz de arrancar desde la unidad NVMe directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
+> {.is-warning}
 
 <details><summary><b>Con USB Adapter</b></summary>
 
