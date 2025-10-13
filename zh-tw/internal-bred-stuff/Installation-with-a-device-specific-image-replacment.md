@@ -2,7 +2,7 @@
 title: Installation with a device specific image
 description:
 published: false
-date: 2025-10-11T10:05:36.426Z
+date: 2025-10-13T11:04:07.996Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -105,10 +105,7 @@ Connect the drive to your PC via a USB adapter and continue with [**4.1 with Sto
 
 <details><summary><b>Without Adapter</b></summary>
 
-Connect your NVMe drive to your SBC and continue with the guide accordingly to your PC's OS found in section [**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool).
-
-> Before flashing you must set your target device to `NVMe`. To do so have a look at [4.2 Changing flash target](/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS#h-42-changing-flash-target).
-> {.is-danger}
+Connect your NVMe drive directly to your PC and continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter). You may have to force your flashing tool to write to a hard drive.
 
 </details>
 
@@ -126,7 +123,7 @@ There are countless tools to flash an sd card or eMMC. In this guide we will cov
 
 ## 4.2 with RKdeveloptool
 
-To cover the variety of operating systems you can use for this, we decided to split the installation to non-removable eMMC into these two guides:
+To cover the variety of operating systems you can use for this, we decided to split the installation into these two guides:
 
 - [Flashing with RKDevelop under Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - [Flashing with RKDevelop under Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
