@@ -2,7 +2,7 @@
 title: デバイス固有の画像を使用したインストール
 description:
 published: false
-date: 2025-10-11T10:05:36.426Z
+date: 2025-10-13T11:04:07.996Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -108,10 +108,7 @@ USBアダプタを介してドライブをPCに接続し、[**4.1 with Storage A
 
 <details><summary><b>Without Adapter</b></summary>
 
-NVMeドライブをSBCに接続し、[**4.2 with RKdeveloptool**](#h-4-2-with-rkdeveloptool)のセクションにあるPCのOSに従ってガイドを続行します。
-
-> 点滅する前に、ターゲットデバイスを `NVMe` に設定する必要があります。 そのためには、[4.2 フラッシュターゲットの変更](/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS#h-42-changing-flash-target)を見てください。
-> {.is-warning}
+NVMeドライブをPCに直接接続し、[**4.1 with Storage Adapter**](#h-41-with-storage-adapter)を続行します。 ハードドライブに書き込むには、フラッシュツールを強制する必要があります。
 
 </details>
 
@@ -131,7 +128,7 @@ SDカードやeMMCをフラッシュするための無数のツールがあり�
 
 ## 4.2 rKdeveloptool
 
-このために使用できるさまざまなオペレーティングシステムをカバーするために、インストールを取り外し不可能なeMMCに分割することにしました。
+To cover the variety of operating systems you can use for this, we decided to split the installation into these two guides:
 
 - [Flashing with RKDevelop under Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - [Flashing with RKDevelop under Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
