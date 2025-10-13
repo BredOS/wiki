@@ -123,7 +123,7 @@ Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta g
 
 ## 4.2 con RKdeveloptool
 
-To cover the variety of operating systems you can use for this, we decided to split the installation into these two guides:
+Para cubrir la variedad de sistemas operativos que puede utilizar para esto, decidimos dividir la instalación en estas dos guías:
 
 - [Flashear con RKDevelop bajo Linux o macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - [Flashear con RKDevelop en Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
