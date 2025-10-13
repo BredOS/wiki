@@ -2,7 +2,7 @@
 title: 安装设备特定图像
 description:
 published: false
-date: 2025-10-11T10:05:36.426Z
+date: 2025-10-13T11:04:07.996Z
 tags:
 editor: markdown
 dateCreated: 2025-10-11T08:42:36.971Z
@@ -106,10 +106,7 @@ Then continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter).
 
 <details><summary><b>没有适配器</b></summary>
 
-将您的 NVMe 驱动器连接到您的 SBC 并按相应的指南继续您在 [**4.2 与 RKdeveloptool**](#h-4-2-with-rkdeveloptool)中找到的 PCOS 中。
-
-> 在刷入之前，您必须将目标设备设置为“NVMe”。 To do so have a look at [4.2 Changing flash target](/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS#h-42-changing-flash-target).
-> {.is-info}
+将您的 NVMe 驱动器直接连接到您的 PC 并继续 [**4.1 与存储适配器**](#h-41-with-storage-adapter)。 您可能必须强制您的刷入工具写入硬盘。
 
 </details>
 
@@ -128,7 +125,7 @@ Then continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter).
 
 ## 4.2 使用 RKdeveloped 工具
 
-为了覆盖您可以使用的操作系统的多样性，我们决定将安装分成不可移除的 eMMC 到这两个指南：
+To cover the variety of operating systems you can use for this, we decided to split the installation into these two guides:
 
 - [在 Linux 或 macOS下与 RKDevelop 一起刷新](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - [Flashing with RKDevelop under Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
