@@ -125,7 +125,7 @@ Then continue with [**4.1 with Storage Adapter**](#h-41-with-storage-adapter).
 
 ## 4.2 使用 RKdeveloped 工具
 
-To cover the variety of operating systems you can use for this, we decided to split the installation into these two guides:
+为了涵盖您可以为此使用的操作系统，我们决定将安装分成这两个指南：
 
 - [在 Linux 或 macOS下与 RKDevelop 一起刷新](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - [Flashing with RKDevelop under Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
