@@ -128,7 +128,7 @@ SDカードやeMMCをフラッシュするための無数のツールがあり�
 
 ## 4.2 rKdeveloptool
 
-To cover the variety of operating systems you can use for this, we decided to split the installation into these two guides:
+このために使用できるさまざまなオペレーティングシステムをカバーするために、以下の2つのガイドにインストールを分割することにしました:
 
 - [Flashing with RKDevelop under Linux or macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
 - [Flashing with RKDevelop under Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)
