@@ -2,7 +2,7 @@
 title: Installation of UEFI (on RK3588)
 description: 
 published: true
-date: 2025-09-28T09:53:54.047Z
+date: 2025-10-20T05:14:21.445Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -37,10 +37,6 @@ Download the latest release matching your device, insert a SD Card of (almost) a
 > If you have skipped 3.1, go back. This step is needed for flashing to the SPI chip!
 > You can remove the SD Card afterwards.
 {.is-info}
-
-> This procedure is untested. If you have done it successfuly please report back on our Discord or Telegram channel.
-{.is-warning}
-
 
 Follow the steps down below to install `UEFI` to your SPI chip.
 
