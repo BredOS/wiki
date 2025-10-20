@@ -2,7 +2,7 @@
 title: UEFIのインストール
 description:
 published: true
-date: 2025-09-28T08:24:50.721Z
+date: 2025-10-20T05:14:21.445Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -46,9 +46,6 @@ dateCreated: 2025-09-16T11:29:43.061Z
 > {.is-info}
 > {.is-info}
 > {.is-info}
-
-> この手順はテストされていません。 正常に完了した場合は、DiscordまたはTelegramのチャンネルをご報告ください。
-> {.is-warning}
 
 以下の手順に従って、SPIチップに`UEFI`をインストールしてください。
 
