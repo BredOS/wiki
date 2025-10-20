@@ -2,7 +2,7 @@
 title: Instalación de UEFI
 description:
 published: true
-date: 2025-09-28T08:24:50.721Z
+date: 2025-10-20T05:14:21.445Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -43,9 +43,6 @@ Descargue la última versión que coincida con su dispositivo, inserte una tarje
 > {.is-info}
 > {.is-info}
 > {.is-info}
-
-> Este procedimiento no está probado. Si lo has hecho con éxito, por favor informa sobre nuestro canal Discord o Telegram.
-> {.is-warning}
 
 Sigue los pasos abajo para instalar `UEFI` en tu chip SPI.
 
