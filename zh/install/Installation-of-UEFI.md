@@ -2,7 +2,7 @@
 title: 安装UEFI(RK3588)
 description:
 published: true
-date: 2025-09-28T08:24:50.721Z
+date: 2025-10-20T05:14:21.445Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -45,9 +45,6 @@ dateCreated: 2025-09-16T11:29:43.061Z
 > 如果您跳过了3.1，请回来。 需要这个步骤来刷入SPI芯片！
 > 您可以在此后移除SD卡。
 > {.is-info}
-
-> 这一程序尚未经过测试。 如果您成功完成了这项工作，请在我们的 Discord 或 Telegram 频道上汇报。
-> {.is-warning}
 
 按照下面的步骤安装`UEFI`到你的SPI 芯片。
 
