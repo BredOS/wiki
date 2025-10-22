@@ -2,7 +2,7 @@
 title: 安装UEFI(RK3588)
 description:
 published: true
-date: 2025-10-20T05:14:21.445Z
+date: 2025-10-22T07:50:08.140Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -68,10 +68,18 @@ sf 更新文件 <FIRMWARE.img> 0x0
 
 ## 3.3 从 BredOS 内部安装 SPI
 
-If your board is booted into BredOS, it is possible to install UEFI on your SPI by following [this guide](/en/how-to/update-uefi-rk3588). 在第[3]节下。 在第[3]节下。 刷入 UEFI 固件](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) 使用`/dev/mtdblock0` 作为您的目标设备。
+- 如果你的棋盘已经启动到 BredOS，可以通过运行以下命令在你的SPI 上安装UEFI：
+
+```
+sudo dd if=/path/to/downloaded/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
+```
+
+- 请关闭您的SBC并移除SD卡。
 
 > 现在你的设备能够获得所有好的 UEFI 谷物！
 > {.is-success}
 > {.is-success}
+> {.is-success}
+> 快乐游戏！
 > {.is-success}
 > {.is-success}
