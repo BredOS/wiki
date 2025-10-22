@@ -2,7 +2,7 @@
 title: UEFIのインストール
 description:
 published: true
-date: 2025-10-22T07:50:08.140Z
+date: 2025-10-22T08:32:15.492Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -74,6 +74,9 @@ sf updatefile <FIRMWARE.img> 0x0
 ```
 sudo dd if=/path/to/download/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
 ```
+
+> 以下のセクションをお勧めします。 詳細については、UEFI ファームウェアの書き込み](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) を行ってください。
+> {.is-warning}
 
 - SBCをパワーダウンし、SDカードを取り外します。
 
