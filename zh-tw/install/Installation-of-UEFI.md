@@ -2,7 +2,7 @@
 title: Installation of UEFI
 description:
 published: true
-date: 2025-10-22T07:50:08.140Z
+date: 2025-10-22T08:32:15.492Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -71,6 +71,9 @@ sf updatefile <FIRMWARE.img> 0x0
 ```
 sudo dd if=/path/to/downloaded/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
 ```
+
+> We recommend following section [3. Flashing the UEFI Firmware](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) to learn more.
+> {.is-danger}
 
 - Power down your SBC and remove the SD Card.
 
