@@ -2,7 +2,7 @@
 title: 安装UEFI(RK3588)
 description:
 published: true
-date: 2025-10-22T07:50:08.140Z
+date: 2025-10-22T08:32:15.492Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -73,6 +73,9 @@ sf 更新文件 <FIRMWARE.img> 0x0
 ```
 sudo dd if=/path/to/downloaded/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
 ```
+
+> 我们建议接下来的章节[3。 Flashing the UEFI Firmware](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) to learn more.
+> {.is-info}
 
 - 请关闭您的SBC并移除SD卡。
 
