@@ -2,7 +2,7 @@
 title: Instalación de UEFI
 description:
 published: true
-date: 2025-10-22T08:32:15.492Z
+date: 2025-10-23T06:14:27.097Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -69,7 +69,7 @@ sf updatefile <FIRMWARE.img> 0x0
 - Si tu tablero está arrancado en BredOS, es posible instalar UEFI en tu SPI ejecutando el siguiente comando:
 
 ```
-sudo dd if=/ruta/a/descargado/uefi/<device-name>_UEFI_Release_vX.X.X.img of=/dev/mtdblock0
+sudo dd if=/ruta/a/descargado/uefi/<device-name>_UEFI_Release_vX.X.X.img of=/dev/mtd0
 ```
 
 > Recomendamos la siguiente sección [3. Flashear la Firmware UEFI](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) para obtener más información.
