@@ -2,7 +2,7 @@
 title: 安装UEFI(RK3588)
 description:
 published: true
-date: 2025-10-22T08:32:15.492Z
+date: 2025-10-23T06:14:27.097Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -71,7 +71,7 @@ sf 更新文件 <FIRMWARE.img> 0x0
 - 如果你的棋盘已经启动到 BredOS，可以通过运行以下命令在你的SPI 上安装UEFI：
 
 ```
-sudo dd if=/path/to/downloaded/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
+sudo dd if=/path/to/downloaded/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtd0
 ```
 
 > 我们建议接下来的章节[3。 Flashing the UEFI Firmware](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) to learn more.
