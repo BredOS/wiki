@@ -2,7 +2,7 @@
 title: UEFIのインストール
 description:
 published: true
-date: 2025-10-22T08:32:15.492Z
+date: 2025-10-23T06:14:27.097Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -72,7 +72,7 @@ sf updatefile <FIRMWARE.img> 0x0
 - BredOS でボードが起動されている場合、次のコマンドを実行することで、UEFI をSPIにインストールすることができます。
 
 ```
-sudo dd if=/path/to/download/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtdblock0
+sudo dd if=/path/to/download/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtd0
 ```
 
 > 以下のセクションをお勧めします。 詳細については、UEFI ファームウェアの書き込み](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) を行ってください。
