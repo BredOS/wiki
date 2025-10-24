@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-09-28T12:21:49.254Z
+date: 2025-10-24T05:45:33.133Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -47,6 +47,8 @@ This page contains Guides, tutorials, and tips on how to install or use certain 
 - [How to manage systemd-nspawn containers](/how-to/systemd-nspawn)
 
 - [How to manage services](/how-to/manage-services)
+
+- [How to enable DTBOs](/en/how-to/how-to-enable-dtbos)
 
 > Explore these guides to get the most out of BredOS!
 > {.is-info}
