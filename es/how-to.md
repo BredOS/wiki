@@ -48,7 +48,7 @@ Esta página contiene guías, tutoriales y consejos sobre cómo instalar o usar 
 
 - [Cómo administrar los servicios](/how-to/manage-services)
 
-- [How to enable DTBOs](/en/how-to/how-to-enable-dtbos)
+- [Cómo habilitar DTBOs](/en/how-to/how-to-enable-dtbos)
 
 > ¡Explora estas guías para sacar el máximo provecho de BredOS!
 > {.is-info}
