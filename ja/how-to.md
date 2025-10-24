@@ -2,7 +2,7 @@
 title: どのように!
 description: BredOS で特定のものをインストールまたは使用する方法についてのガイド、チュートリアル、ヒント
 published: true
-date: 2025-09-28T12:21:49.254Z
+date: 2025-10-24T05:45:33.133Z
 tags:
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -47,6 +47,8 @@ dateCreated: 2024-08-27T06:01:06.954Z
 - [How to manage systemd-nspawn containers](/how-to/systemd-nspawn)
 
 - [How to manage services](/how-to/manage-services)
+
+- [How to enable DTBOs](/en/how-to/how-to-enable-dtbos)
 
 > BredOSを最大限に活用するために、これらのガイドを探索してください！
 > {.is-info}
