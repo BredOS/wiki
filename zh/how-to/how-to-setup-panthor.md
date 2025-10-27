@@ -2,7 +2,7 @@
 title: 如何在马里安装Panthor GPU with RK3588
 description:
 published: true
-date: 2025-09-16T10：49：06.107Z
+date: 2025-10-27T17:58:06.243Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -27,7 +27,7 @@ sudo bredos-config
 > Do not reboot your system after the installation of the dtb overlay!
 > {.is-warning}
 
-bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_不能_ 更改uefi 设置。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。
+bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_不能_ 更改uefi 设置。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 用户必须做出的更改通过基本/叠加层数据库首次安装时的面包配置来显示。 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。 此操作必须由用户完成。 The changes the user has to make are shown by bredos-config on first installation of base/overlay dtbs. 更改也可以在 [设备树叠加层指南](/how-to/how-to-enable-dtbos) 中找到。
 
 > 不要在安装dtb 覆盖后重启系统！
 > {.is-warning}
