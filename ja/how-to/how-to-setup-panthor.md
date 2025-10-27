@@ -27,7 +27,7 @@ sudo bredos-config
 > 画面の指示に従ってください!
 > {.is-warning}
 
-bredos-config は dtbs をインストールして grub 設定を変更することができますが、起動時にそれらをロードするには _uefi 設定を変更できません_ 。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos). これはユーザーが行う必要があります。 The changes the user has to make are shown by bredos-config on first installation of base/overlay dtbs. The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos).
+bredos-config は dtbs をインストールして grub 設定を変更することができますが、起動時にそれらをロードするには _uefi 設定を変更できません_ 。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos). これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos).
 
 > dtb オーバーレイのインストール後、システムを再起動しないでください!
 > \`3で続行します。 Panfork グラフィックスを置き換えます。
