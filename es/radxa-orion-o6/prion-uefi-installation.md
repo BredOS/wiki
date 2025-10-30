@@ -28,7 +28,7 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 ## 3.1 Prerrequisitos
 
-- The `UEFI` installation .zip file found [here](/orion/bios.zip).
+- El archivo .zip de instalación `UEFI` encontró [here](/orion/bios.zip).
 - Para una `3.2 actualización en su lugar` -> USB con formato FAT32
 - Para `3.3 Update through flasher` -> A CH341A based flasher
 
