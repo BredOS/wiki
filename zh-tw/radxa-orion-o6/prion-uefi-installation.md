@@ -2,7 +2,7 @@
 title: Updating UEFI on Orion O6
 description:
 published: true
-date: 2025-09-21T10:45:11.948Z
+date: 2025-10-30T06:06:17.716Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -28,7 +28,7 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 ## 3.1 Prerequisites
 
-- The `UEFI` installtion .zip file
+- The `UEFI` installation .zip file found here.
 - For an `3.2 in-place update` -> FAT32 formated USB Stick
 - For `3.3 Update through flasher` -> A CH341A-based flasher
 
