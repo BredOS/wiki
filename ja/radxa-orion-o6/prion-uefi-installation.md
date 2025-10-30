@@ -28,7 +28,7 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 ## 3.1 前提条件
 
-- The `UEFI` installation .zip file found here.
+- `UEFI`インストール.zipファイルはここにあります。
 - `3.2 インプレースアップデート` -> FAT32 フォーマットされた USB スティック
 - `3.3 Update through flasher` -> A CH341A flasher
 
