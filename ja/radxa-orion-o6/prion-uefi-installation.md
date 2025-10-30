@@ -2,7 +2,7 @@
 title: Orion O6でUEFIを更新中
 description:
 published: true
-date: 2025-10-30T06:06:17.716Z
+date: 2025-10-30T12:49:48.767Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -28,7 +28,7 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 ## 3.1 前提条件
 
-- `UEFI`インストール.zipファイルはここにあります。
+- The `UEFI` installation .zip file found [here](/orion/bios.zip).
 - `3.2 インプレースアップデート` -> FAT32 フォーマットされた USB スティック
 - `3.3 Update through flasher` -> A CH341A flasher
 
