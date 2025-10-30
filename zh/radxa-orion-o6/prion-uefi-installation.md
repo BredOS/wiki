@@ -28,7 +28,7 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 ## 3.1 前提条件
 
-- The `UEFI` installation .zip file found here.
+- `UEFI`安装.zip文件在这里找到。
 - 对于一个 "3.2 现场更新" -> FAT32 格式化 USB Stick。
 - 对于`3.3 通过 flasher` -> 基于 CH341A的刷新器
 
