@@ -2,7 +2,7 @@
 title: BredOS 新闻
 description: 自定义这个非常复杂的软件。
 published: true
-date: 2025-10-06T07:18:15.049Z
+date: 2025-10-05T12:26:26.876Z
 tags:
 editor: markdown
 dateCreated: 2025-10-04T21:13:09.732 Z
@@ -10,7 +10,7 @@ dateCreated: 2025-10-04T21:13:09.732 Z
 
 # 2. 简介
 
-默认情况下，"bredos-news" 每次打开外壳时都会触发。 默认情况下，"bredos-news" 每次打开外壳时都会触发。 这是由 `~/.bashrc` 中的 `bredos-news|| true` 行和`/etc/profile.d/99-bredos-news.sh` 行设置的。
+默认情况下，"bredos-news" 每次打开外壳时都会触发。 默认情况下，"bredos-news" 每次打开外壳时都会触发。 默认情况下，"bredos-news" 每次打开外壳时都会触发。 这是由 `~/.bashrc` 中的 `bredos-news|| true` 行和`/etc/profile.d/99-bredos-news.sh` 行设置的。
 
 每一个 ' bredos-news' 副本都可以个性化，这意味着你可以完全配置你想要的特征以及它的主题。
 
@@ -22,12 +22,7 @@ Permenant (per user) 配置可以在 "~/.newsrc" 中完成。 一个permenant (�
 - 默认配置文件看起来像这样：
 
 ```
-"""
-BredOS-News Configuration
-
-Refer to `https://wiki.bredos.org/customizations/news`,
-for detailed instructions on how to configure.
-"""
+# BredOS-News Configuration
 
 # Accent = "\033[38;5;129m"
 # Accent_Secondary = "\033[38;5;104m"
@@ -39,30 +34,15 @@ for detailed instructions on how to configure.
 # Time_Refresh = 0.25
 # Onetime = False
 
-"""
-Shortcuts configuration
+# Shortcuts configuration
 
-Shell commands, using $SHELL, and python functions are fully supported.
-Only alphanumeric and symbol keys can be captured, no key combinations.
-Capital keys work and can be bound to seperate shortcuts from lowercase.
-"""
-
-def shortcuts_help() -> None:
-    print("Configured shortcuts:")
-    for i in shortcuts.keys():
-        shortcut = shortcuts[i]
-        if is_function(shortcut):
-            print(f" - {i}: Function {shortcut.__name__}")
-        else:
-            print(f' - {i}: "{shortcuts[i]}"')
-    print("\n")
-
-shortcuts["1"] = "bredos-config"
-shortcuts["0"] = "sudo sys-report"
-shortcuts["?"] = shortcuts_help
+# shortcuts = {
+#     "1": "bredos-config",
+# }
 ```
 
 > 要激活此配置文件中的参数，请在行开始处删除 <kbd>#</kbd>。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 
@@ -73,15 +53,16 @@ shortcuts["?"] = shortcuts_help
 > 关于ANSI逃避序列和示例的更多信息，请点击[此链接](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 常用样式：
 
-| 颜色    | 代码                                                                                        |
-| ----- | ----------------------------------------------------------------------------------------- |
-| 完美的紫色 | \\`Accent = "\033[38;5;129m""                                  |
-|       | \\`Accent_Second = "\033[38;5;104m""      |
-| 粗体    | \\`Accent = "\033[1m\033[38;5;124m"" |
-|       | \\`Accent_Second = "\033[38;5;160m""      |
+| 颜色    | 代码                                                                                          |
+| ----- | ------------------------------------------------------------------------------------------- |
+| 完美的紫色 | \\\`Accent = "\033[38;5;129m""                                  |
+|       | \\\`Accent_Second = "\033[38;5;104m""      |
+| 粗体    | \\\`Accent = "\033[1m\033[38;5;124m"" |
+|       | \\\`Accent_Second = "\033[38;5;160m""      |
 
 ## 禁用功能
 
@@ -107,6 +88,9 @@ shortcuts["?"] = shortcuts_help
 `shortcuts` 是一个可设置键绑定的字典。 快速拨打您的终端。 这基本上是快速拨打您的终端。 "快捷键" 数组是一个可设置键绑定的字典。 这基本上是快速拨打您的终端。 虽然`bredos-news`是循环它的动画，但按下一个配置的密钥将不会将该密钥传递给外壳，而是启动预配置的快捷方式。
 
 设置快捷键，如在示例中的显示方式，允许运行命令或python函数。 对于上面给出的示例，按下 <kbd>1</kbd> 将会启动工具“bredos-config”。 设置键像它在示例中显示的那样，允许运行命令或python函数。
+完全支持 Shell 操作，如更改目录和/或管道。
+当前不支持特殊键和组合。
+支持符号。 对于上面给出的示例，按下 <kbd>1</kbd> 将会启动工具“bredos-config”。 设置键像它在示例中显示的那样，允许运行命令或python函数。
 完全支持 Shell 操作，如更改目录和/或管道。
 当前不支持特殊键和组合。
 支持符号。
