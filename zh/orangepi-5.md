@@ -27,122 +27,102 @@ dateCreated: 2024-09-20T15:17:37.567Z
 
 #### Orange Pi 5
 
-> 我们把它命名为“_鸦片5_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名字“Orange Pi 5”——特别是当每个人都确切知道你还有什么意思时。
-> {.is-info}
-> {.is-info}
-> {.is-info}
+> 我们把它命名为"_鸦片5_"，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打字那可笑的长度， 不必要的正式、轻易令人烦恼的名字"Orange Pi 5"——特别是当每个人都确切知道你在说什么的时候。
 > {.is-info}
 
 规格：
 
-- SoC: Rockchip RK3588S, 8核心(4×CortexcrowA76 @ ~2.4GHz + 4×CorcortexA55 @ ~1.8GHz)
+- SoC: Rockchip RK3588S, 8核心(4×Cortex-A76 @ ~2.4GHz + 4×Cortex-A55 @ ~1.8GHz)
 - RAM： LPDDR4/x, 4/8/16/32 GB
-- 存储: microSD slot; M.2 NVMe through PCI; no eMMC socket 默认值(只是SPIcrossflash)
-- 视频/显示: HDMI2.1 up to 8K@60Hz; USBcrossC DisplayPort; 双倍MIPI DhocPHY 输出; 多重输出/显示
+- 存储: microSD 插槽; M.2 NVMe 通过 PCIe; 无 eMMC 插槽（仅 SPI flash）
+- 视频/显示: HDMI2.1 最高 8K@60Hz; USB-C DisplayPort; 双 MIPI D-PHY 输出; 多输出/显示
 - 连接：Gigabit 以太网，可选的 WiFi/BT 通过 M.2 或模块，取决于版本；其他端口等。
-- 能量： 5V/4A
-- 板大小 ~100 × 62 毫米.
+- 电源： 5V/4A
+- 板大小 ~100 × 62 毫米
 
 #### Orange Pi 5B
 
-> 我们把它命名为“_阿片5b_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名字“橙色Pi 5B”——特别是当每个人都确切知道你还有什么意思时。
-> {.is-info}
-> {.is-info}
-> {.is-info}
+> 我们把它命名为"_阿片5b_"，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打字那可笑的长度， 不必要的正式、轻易令人烦恼的名字"Orange Pi 5B"——特别是当每个人都确切知道你在说什么的时候。
 > {.is-info}
 
 规格：
 
-- SoC: Rockchip RK3588S, 8核心(4×CortexcrowA76 @ ~2.4GHz + 4×CorcortexA55 @ ~1.8GHz)
+- SoC: Rockchip RK3588S, 8核心(4×Cortex-A76 @ ~2.4GHz + 4×Cortex-A55 @ ~1.8GHz)
 - RAM： LPDDR4/x, 4/8/16/32 GB
-- 存储︰ 32GB eMMC 有许多变量；还有MicroSD；在某些模型中NVMe 没有M.2切割键槽？
-- 显示/视频： HDMI2.1 高达8K@60Hz; DisplayPort through USBcroc; MIPI lines等。
-- 连接：在WiFi6 + BT5.0 模块上；Gigabit 以太网等。
-- 能量： 5V/4A
-- 板大小 ~100 × 62 毫米.
+- 存储︰ 32GB eMMC 有多种选项；还有 MicroSD；某些型号中有 NVMe M.2 Key-M 插槽
+- 显示/视频： HDMI2.1 最高 8K@60Hz; DisplayPort 通过 USB-C; MIPI 接口等。
+- 连接：WiFi6 + BT5.0 模块；Gigabit 以太网等。
+- 电源： 5V/4A
+- 板大小 ~100 × 62 毫米
 
 #### Orange Pi 5 Plus
 
-> 我们把它命名为“_阿片5加_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名字“橙色Pi 5 Plus”——特别是当每个人都确切知道你还有什么意思时。
-> {.is-info}
-> {.is-info}
+> 我们把它命名为"_阿片5加_"，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打字那可笑的长度， 不必要的正式、轻易令人烦恼的名字"Orange Pi 5 Plus"——特别是当每个人都确切知道你在说什么的时候。
 > {.is-info}
 
 规格：
 
-- SoC：Rockchip RK3588 (noncrossS)，8colcore (4×CortescyA76 @ ~2.4GHz + 4×CortexcrotyA55 @ ~1.8GHz)
+- SoC：Rockchip RK3588 (non-S)，8核心 (4×Cortex-A76 @ ~2.4GHz + 4×Cortex-A55 @ ~1.8GHz)
 - RAM： LPDDR4/x, 4/8/16/32 GB
-- 存储：包括模块、 NVME 等。
-- 视频/显示：高分辨率、多的 HDMI / MIPI 等
-- 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0。
+- 存储：包括模块、NVMe 等。
+- 视频/显示：高分辨率、多个 HDMI / MIPI 等
+- 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0
 
 #### Orange Pi 5 Pro
 
-> 我们把它命名为“_阿片5pro_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名字“橙色Pi 5 Pro”——特别是当每个人都确切知道你还有什么意思时。
-> {.is-info}
-> {.is-info}
-> {.is-info}
+> 我们把它命名为"_阿片5pro_"，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打字那可笑的长度， 不必要的正式、轻易令人烦恼的名字"Orange Pi 5 Pro"——特别是当每个人都确切知道你在说什么的时候。
 > {.is-info}
 
 规格：
 
-- SoC：RK3588S (8nm)，8核心(4×CortexcrowA76 @ ~2.4GHz + 4×CorcortexA55 @ ~1.8GHz)
-- RAM: LPDDR5, 选项4/8/16 GB
-- 存储: MicroSD, eMMC 套接字或 SPI 烧录; M.2 Mcrotkey for NVMe/SATA 等。
-- 视频：双重HDMI (HDMI2.1 和 HDMI2.0)；最多支持 8K@60Hz；MIPI DSI 等。
-- 连接：Gigabit 以太网；WiFi5 + BT5.0；较小的棋盘(89×56 毫米) 超过普通的5/5B。
-- 电源和其他接口也发生了变化。
+- SoC：RK3588S (8nm)，8核心(4×Cortex-A76 @ ~2.4GHz + 4×Cortex-A55 @ ~1.8GHz)
+- RAM: LPDDR5, 可选 4/8/16 GB
+- 存储: MicroSD, eMMC 插槽或 SPI 烧录; M.2 Key-M 支持 NVMe/SATA 等。
+- 视频：双 HDMI (HDMI2.1 和 HDMI2.0)；最高支持 8K@60Hz；MIPI DSI 等。
+- 连接：Gigabit 以太网；WiFi5 + BT5.0；较小的板子(89×56 毫米) 相比普通的5/5B。
+- 电源和其他接口也有所变化。
 
 #### Orange Pi 5 Max
 
-> 我们把它命名为“_阿片5max_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名字“Orange Pi 5 Max”——特别是当每个人都确切知道你还有什么意思时。
-> {.is-info}
-> {.is-info}
-> {.is-info}
+> 我们把它命名为"_阿片5max_"，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打字那可笑的长度， 不必要的正式、轻易令人烦恼的名字"Orange Pi 5 Max"——特别是当每个人都确切知道你在说什么的时候。
 > {.is-info}
 
 规格：
 
-- SoC：Rockchip RK3588 (noncrossS)，8colcore (4×CortescyA76 @ ~2.4GHz + 4×CortexcrotyA55 @ ~1.8GHz)
-- RAM: LPDDR5, 选项4/8/16 GB
-- 存储：eMC套接口(32cymC256GB optional), microSD, M.2 NVMe 插槽。
-- 视频：2× HDMI2.1 到 8K@60Hz；MIPI DSI 等。
-- 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0。
-- 板大小 ~89×57 毫米。
+- SoC：Rockchip RK3588 (non-S)，8核心 (4×Cortex-A76 @ ~2.4GHz + 4×Cortex-A55 @ ~1.8GHz)
+- RAM: LPDDR5, 可选 4/8/16 GB
+- 存储：eMMC 插槽(32GB-256GB 可选), microSD, M.2 NVMe 插槽。
+- 视频：2× HDMI2.1 最高 8K@60Hz；MIPI DSI 等。
+- 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0
+- 板大小 ~89×57 毫米
 
 #### Orange Pi 5 Ultra
 
-> 我们把它命名为“_阿片5超文本_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名称“橙色Pi 5 Ultra”——特别是当每个人都确切知道你还有什么意思时。
-> {.is-info}
-> {.is-info}
-> {.is-info}
+> 我们把它命名为"_阿片5超_"，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打字那可笑的长度， 不必要的正式、轻易令人烦恼的名称"Orange Pi 5 Ultra"——特别是当每个人都确切知道你在说什么的时候。
 > {.is-info}
 
 规格：
 
-- SoC：Rockchip RK3588 (noncrossS)，8colcore (4×CortescyA76 @ ~2.4GHz + 4×CortexcrotyA55 @ ~1.8GHz)
-- RAM: LPDDR5, 选项4/8/16 GB
-- 存储：eMC套接口(32cymC256GB optional), microSD, M.2 NVMe 插槽。
-- 视频：2× HDMI2.1 到 8K@60Hz；MIPI DSI 等。
-- 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0。
-- 板大小 ~89×57 毫米。
+- SoC：Rockchip RK3588 (non-S)，8核心 (4×Cortex-A76 @ ~2.4GHz + 4×Cortex-A55 @ ~1.8GHz)
+- RAM: LPDDR5, 可选 4/8/16 GB
+- 存储：eMMC 插槽(32GB-256GB 可选), microSD, M.2 NVMe 插槽。
+- 视频：2× HDMI2.1 最高 8K@60Hz；MIPI DSI 等。
+- 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0
+- 板大小 ~89×57 毫米
 
 #### Orange Pi CM5
 
-> 我们把它命名为“_opicm5_”，因为它更短。
-> {.is-info}
-> {.is-info}
-> {.is-info}
+> 我们把它命名为"_opicm5_"，因为它更短。
 > {.is-info}
 
 规格：
 
 - SoC：RK3588S (8nm)
-- RAM： LPDDR4/4x, 选项： 2/4/8/16 GB
-- 存储：eMMC在板上（最多256GB），微SD，可在基础/载体板上通过M.2KeycrotM等方式扩展；根据接口支持SATA或PCIe。
-- 视频：HDMI2.1 或 eDP, MIPI DSI TX，等等；8K 视频支持；多个相机接口。
+- RAM： LPDDR4/4x, 可选： 2/4/8/16 GB
+- 存储：板载 eMMC（最多256GB），microSD，可在基板/载板上通过 M.2 Key-M 等方式扩展；根据接口支持 SATA 或 PCIe。
+- 视频：HDMI2.1 或 eDP, MIPI DSI TX 等；8K 视频支持；多个相机接口。
 - 连接：WiFi5 + BT5 (AP6256模块)、USB 端口等。
-- 物理：模块表单因子；需要基础板或载体；大小 ~40x55 mm 模块。
+- 物理：模块外形；需要基板或载板；模块大小 ~40x55 mm
 
 # 2. 下载
 

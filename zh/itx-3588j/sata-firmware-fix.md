@@ -30,15 +30,12 @@ https://www.aliexpress.com/item/3226327388.html
 
 另一方面，如果你有沉浸的经历，要去除和解析SPI芯片的八个粉丝并不是一个困难的任务。
 
-- SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
-  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
-  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
-  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+- SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为"JMB575"的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为"W25X40CL"，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg)
 
 <details><summary><b>SATA Controller and SPI Chip</b></summary>
 
-SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
-![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为"JMB575"的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为"W25X40CL"，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
 ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg)
 
 </details>
@@ -51,13 +48,11 @@ SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA �
 
 <details><summary><b>连接到 SPI</b></summary> 的片段方向
 
-如果它连接正确，你应该能够使用片段取消看板。
-如果它连接正确，你应该能够使用片段取消看板。
 ![spi-clip-connected-cut.jpg](/wiki-itx3588j-pics/spi-clip-connected-cut.jpg)
 
 </details>
 
-- 将电缆的另一端连接到烧录器。 将电缆的另一端连接到烧录器。 正确的方向如下：如果飞行器的 USB 连接器指向您。 电缆应该进入下面的四个洞，左上角的红线应该是红线。
+- 将电缆的另一端连接到烧录器。 正确的方向如下：如果飞行器的 USB 连接器指向您。 电缆应该进入下面的四个洞，左上角的红线应该是红线。
 
 <details><summary><b>连接到平面的</b></summary> 的片段方向
 
@@ -67,7 +62,7 @@ SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA �
 
 ## 2.2 或去除SPI芯片
 
-拿起一些卷起的狼和流感，加热你的铁，去除芯片。 你应该知道你在做什么！ 你应该知道你在做什么！ 你应该知道你在做什么！
+拿起一些卷起的狼和流感，加热你的铁，去除芯片。 你应该知道你在做什么！
 
 然后你就可以把芯片直接放到平面上(在平面背面上有一个平面)，然后你就可以把它放到平面上， 或使用上面提到的包中包含的适配板之一。
 应该有一个没有人居住的委员会和ZIF套接字作为包的一部分。 选择明智。
@@ -95,17 +90,10 @@ Pin 1在芯片上用一个小点标记，并在平面板或适配器板上贴上
 
 > 确保你的火焰被设置为3.3伏！
 > {.is-warning}
-> {.is-warning}
-> {.is-warning}
-> {.is-warning}
 
 检查所有电缆并确保您的 ITX-3588J 板在使用片段时断电。
 然后连接到您的Linux设备并运行以下命令。
 如果它报告了上述SPI芯片的名字，你很乐意去做。
-然后连接到您的Linux设备并运行以下命令。
-然后连接到您的Linux设备并运行以下命令。
-
-- 如果它报告了上述SPI芯片的名字，你很乐意去做。
 
 ```
 # sudo flashrom -p ch341a_spi --flash-name
@@ -116,12 +104,6 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 在 ch341a_spi 上发现Winbonds flash chip "W25X40" (512 kB, SPI)
 ```
 
-```
-在刷新一个新的ROM之前，支持现有的ROM是一个好主意。
-如果出现任何错误，您将能够使用这个备份恢复它。
-如果出现任何错误，您将能够使用这个备份恢复它。
-```
-
 如果没有，请检查素材的连接或检查您的嵌入工作，并验证所有连接器的方向。
 
 # 3. 闪光固件
@@ -130,14 +112,11 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 
 在刷新一个新的ROM之前，支持现有的ROM是一个好主意。
 如果出现任何错误，您将能够使用这个备份恢复它。
-如果出现任何错误，您将能够使用这个备份恢复它。
-如果出现任何错误，您将能够使用这个备份恢复它。
 
-- 用以下命令转储闪存：
+- 用以下命令转_dump_闪存：
 
 ```
-# sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
-# diff firmware_dump.bin firmware_dump-1.bin
+# sudo flashrom -p ch341a_spi -r firmware_dump.bin
 ```
 
 - 然后再次转储它并比较两个文件，以确保正确传输数据。
@@ -147,20 +126,12 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 # diff firmware_dump.bin firmware_dump-1.bin
 ```
 
-如果“diff”不产生输出, 你就好了。
-如果确实如此，请检查素材的连接或检查您的焊接工作，并验证所有连接器的方向。
+如果"diff"不产生输出, 你就好了。
 如果确实如此，请检查素材的连接或检查您的焊接工作，并验证所有连接器的方向。
 
 ## 3.2 刷新新固件
 
 - 正如标题所表明的那样简单：
-
-```
-所有的 SATA 端口都应该很好的工作！
-{.is-success}
-{.is-success}
-{.is-success}
-```
 
 ```
 # sudo flashrom -p ch341a_spi -w sata_adapter_EN25F40.bin 
@@ -183,10 +154,7 @@ Erase/write done from 0 to 7ffff
 Verifying flash... VERIFIED.
 ```
 
-如果您看到文本"VERIFIED"，固件已被正确刷入。 如果你使用了片段，简单地断开它的连接，你很好。 如果你去除芯片，你知道要做什么。 如果你使用了片段，简单地断开它的连接，你很好。 如果你去除芯片，你知道要做什么。
+如果您看到文本"VERIFIED"，固件已被正确刷入。 如果你使用了片段，简单地断开它的连接，你很好。 如果你去除芯片，你知道要做什么。
 
 > 所有的 SATA 端口都应该很好的工作！
-> {.is-success}
-> {.is-success}
-> {.is-success}
 > {.is-success}
