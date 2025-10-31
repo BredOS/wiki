@@ -63,9 +63,9 @@ sudo dnf install rkdeveloped tools
 
 ### 2.2.1 前提条件
 
-由于没有用于 macOS 的 "rkdeveloped tool" 的二进制包，我们需要自己编译它。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。
+由于没有用于 macOS 的 "rkdeveloped tool" 的二进制包，我们需要自己编译它。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。 为了做到这一点，我们需要通过 [Brew](https://brew.sh/)安装一些软件包。
 
-- 安装`autocake`、`autocconf`、`libbus`、`pkg-config`、`git`和\`wget\`\\\\` ，具有以下命令：
+- 安装`autocake`、`autocconf`、`libbus`、`pkg-config`、`git`和\`wget\`\\\\\` ，具有以下命令：
 
 ```
 brew install automake autoconf libusb pkg-config git wget
@@ -137,6 +137,7 @@ DevNo=1 Vid=0x2207, Pid=0x350b,LocationID=801 Maskrom
 > Maskrom 按钮应该在电源插入棋盘时按住 \*\*。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 > 使用USB-C到C电缆，或使用USB-C到电缆向后可能导致未被发现。
 > 使用USB-C到C电缆，或使用USB-C到电缆向后可能导致未被发现。
@@ -167,6 +168,7 @@ sudo rkdevelopmenttoold
 ```
 
 > 在刷入成功后，继续进行 [**First Setup**](/en/install/first-setup)。
+> {.is-success}
 > {.is-success}
 > {.is-success}
 > {.is-success}
