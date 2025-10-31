@@ -2,7 +2,7 @@
 title: 主页
 description:
 published: true
-date: 2025-10-06T09:38:43.497Z
+date: 2025-10-06T05:45:30.312Z
 tags:
 editor: markdown
 dateCreated: 2024-07-19T14:28:40.812Z
@@ -32,7 +32,7 @@ dateCreated: 2024-07-19T14:28:40.812Z
 - Bakery - [your guide to your own Bred](/install/first-setup)!
 - Bred-News - [the news channel about your Bred](/customizations/news)!
 - Bred-Tools - [你手上的swiss knife](/Tools)！
-- Bed-配置 - [就像皮-config，但是有更好的标记](/bredos-config) ！
+- Bed-配置 - [就像皮-config，但是有更好的味道！](/bredos-config)
 - Govctl - [控制您的 CPU](/how-to/govctl) ！
 
 # 🔁 3. 🛠️ 系统要求
@@ -44,13 +44,13 @@ dateCreated: 2024-07-19T14:28:40.812Z
 - **🧠 最小内存**：2 GB
 - **💾 存储**：16 GB 或更大的 microSD 卡
 
-# 🚀 4. 刷入
+# 5. 刷入
 
-我们的朋友[**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) 制作了一个关于BredOS的YouTube视频。 在这里查看： 在这里查看： 在这里查看： 在这里查看：
+我们的朋友[**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) 制作了一个关于BredOS的YouTube视频。 在这里查看： 在这里查看： 在这里查看： 在这里查看： 在这里查看：
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# 🔄 3. 安装
+# 🔄 3. 刷入
 
 您可以在我们的 [website](https://bredos.org/download.html) 中找到图像的下载链接！
 
@@ -91,7 +91,7 @@ If your device isn’t listed on our [download site](https://bredos.org/download
 
 # 10. 主播活动
 
-BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献：
+BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献：
 
 - 🐛 报告错误和问题
 - 💻 提交补丁和改进
