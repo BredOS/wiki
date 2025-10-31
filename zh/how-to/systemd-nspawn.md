@@ -41,6 +41,7 @@ mkdir 模板
 > 任何需要在容器内运行的命令，如果您不使用 BredOS，则必须根据您的发行版变量进行调整。
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 - [Ubuntu-base](https://cdimage.ubuntu.com/ubuntu-base/releases/) 查找您选择的版本，然后下载 .tar.gz 为您的 CPU 架构。
 - [Debian genericcloud](https://cloud.debian.org/images/cloud/) 向下滚动并点击您想要下载的版本，然后为您的 CPU 架构下载.tar.gz。
@@ -49,12 +50,14 @@ mkdir 模板
 - [Arch Linux ARM](https://archlinuxarm.org/os/) 用 `latest` 和 `arch64` 或 `armv7` 标签下载.tar.gz文件。
   {.links-list}
   {.links-list}
+  {.links-list}
 
 > BredOS rootfs 即将可用！
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
-下载您选中的 rootfs 沥青后，需要提取。 在此示例中，我们下载了Arch Linux ARM tarball并将其转换为BredOS。 当你下载了你的rootfs tarball后，我们需要提取它。 在此示例中，我们下载了Arch Linux ARM tarball并将其转换为BredOS。
+下载您选中的 rootfs 沥青后，需要提取。 在此示例中，我们下载了Arch Linux ARM tarball并将其转换为BredOS。 当你下载了你的rootfs tarball后，我们需要提取它。 在此示例中，我们下载了Arch Linux ARM tarball并将其转换为BredOS。 当你下载了你的rootfs tarball后，我们需要提取它。 在此示例中，我们下载了Arch Linux ARM tarball并将其转换为BredOS。
 
 - 仍然作为根提取tarball到 `/var/lib/orges/template`：
 
@@ -75,7 +78,7 @@ bin boot dev etc home lib mnt lease proc root runs sbin srv sys tmp usr var
 systemd-nspawn --machine="Template" --directory=/var/lib/organes/template
 ```
 
-参数`--machine`定义容器的名称，而`--directory`指向容器的位置。 离开容器， 使用 <kbd>Ctrl</kbd> + <kbd>D</kbd> 或输入 <kbd>Ctrl</kbd> + <kbd>]</kbd> 在一秒内使用三次。 参数`--machine`定义容器的名称，而`--directory`指向容器的位置。 To exit the container, use either <kbd>Ctrl</kbd> + <kbd>D</kbd> or type <kbd>Ctrl</kbd> + <kbd>]</kbd> three times within one second.
+参数`--machine`定义容器的名称，而`--directory`指向容器的位置。 离开容器， 使用 <kbd>Ctrl</kbd> + <kbd>D</kbd> 或输入 <kbd>Ctrl</kbd> + <kbd>]</kbd> 在一秒内使用三次。 参数`--machine`定义容器的名称，而`--directory`指向容器的位置。 To exit the container, use either <kbd>Ctrl</kbd> + <kbd>D</kbd> or type <kbd>Ctrl</kbd> + <kbd>]</kbd> three times within one second. 参数`--machine`定义容器的名称，而`--directory`指向容器的位置。 To exit the container, use either <kbd>Ctrl</kbd> + <kbd>D</kbd> or type <kbd>Ctrl</kbd> + <kbd>]</kbd> three times within one second.
 
 我们想要在容器内做的第一件事是初始化我们的包管理器并更新系统。
 
@@ -146,7 +149,8 @@ mkdir /var/lib/miles/template-veth
 rsync -avP /var/lib/miles/template/* /var/lib/meches/template-veth/
 ```
 
-> 为了简化本指南，我们将继续使用在 [2] 创建的模板。 为了简化本指南，我们将继续使用在 [2] 创建的模板。 创建容器模板](#h-3-create-container-template)。
+> 为了简化本指南，我们将继续使用在 [2] 创建的模板。 为了简化本指南，我们将继续使用在 [2] 创建的模板。 为了简化本指南，我们将继续使用在 [2] 创建的模板。 创建容器模板](#h-3-create-container-template)。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 
@@ -199,7 +203,8 @@ useradd <your username here>
 passwd <your username here>
 ```
 
-> 由于您可能想要使用您的虚拟网络设备进行实际网络连接，需要进行进一步的配置。 由于您可能想要使用您的虚拟网络设备进行实际网络连接，需要进行进一步的配置。 例如使用 [Open vSwitch](/how-to/open-vswitch) 或一个简单的桥接设备将虚拟网络设备连接到某些东西。
+> 由于您可能想要使用您的虚拟网络设备进行实际网络连接，需要进行进一步的配置。 由于您可能想要使用您的虚拟网络设备进行实际网络连接，需要进行进一步的配置。 由于您可能想要使用您的虚拟网络设备进行实际网络连接，需要进行进一步的配置。 例如使用 [Open vSwitch](/how-to/open-vswitch) 或一个简单的桥接设备将虚拟网络设备连接到某些东西。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 
@@ -238,7 +243,7 @@ WantedBy=multi-user。 arget
 
 ```
 
-如果你想要在你的容器上使用虚拟网络设备，`ExecStart=/usr/...`--network\\`。
+如果你想要在你的容器上使用虚拟网络设备，`ExecStart=/usr/...`--network\\\`。
 
 - 然后你可以开始容器：
 
@@ -266,7 +271,7 @@ sudo 机
 
 # 🔄 3. 从容器内存访问主机上的文件/文件夹
 
-如名称所示，容器通常无法访问您的主机系统。 如名称所示，容器通常无法访问您的主机系统。 这可以被修改，以允许容器访问您主机系统上的特定文件或文件夹； 例如，提供额外的存储空间或授予您的 GPU 容器访问权限。
+如名称所示，容器通常无法访问您的主机系统。 如名称所示，容器通常无法访问您的主机系统。 这可以被修改，以允许容器访问您主机系统上的特定文件或文件夹； 例如，提供额外的存储空间或授予您的 GPU 容器访问权限。 如名称所示，容器通常无法访问您的主机系统。 这可以被修改，以允许容器访问您主机系统上的特定文件或文件夹； 例如，提供额外的存储空间或授予您的 GPU 容器访问权限。
 
 - 访问文件/文件夹可以通过 "--bind" 参数缓存：
 
@@ -291,4 +296,4 @@ sudo 机
 
 # 5. 附加注释
 
-`systemd-nspawn`是一个极强大的工具。 What we covered here are just the basics. 我们在这里谈到的只是基本问题。 `systemd-nspawn`是一个极强大的工具。 我们在这里谈到的只是基本问题。 看看他们的 [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html)，如果你想要惊喜！
+`systemd-nspawn`是一个极强大的工具。 What we covered here are just the basics. 我们在这里谈到的只是基本问题。 我们在这里谈到的只是基本问题。 `systemd-nspawn`是一个极强大的工具。 我们在这里谈到的只是基本问题。 看看他们的 [man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-nspawn.html)，如果你想要惊喜！
