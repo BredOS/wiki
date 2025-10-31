@@ -28,7 +28,7 @@ sudo pacman -S widevine-aarch64
 
 ## 2.3 为Netflix 设置
 
-- 要观看Netflix，您需要弄乱您的用户代理。 使用以下用户代理字符串： 使用以下用户代理字符串： 使用以下用户代理字符串： 使用以下用户代理字符串：
+- 要观看Netflix，您需要弄乱您的用户代理。 使用以下用户代理字符串： 使用以下用户代理字符串： 使用以下用户代理字符串： 使用以下用户代理字符串： 使用以下用户代理字符串：
 
 ```
 Mozilla/5.0 (X11; CrOS aarch64 15236.80.0.0) AppleWebKit/537.36 (KHTML, such Gecko) Chrome/109.0.5414.125 Safari/537.36
