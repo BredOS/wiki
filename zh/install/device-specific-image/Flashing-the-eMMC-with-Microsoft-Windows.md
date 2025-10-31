@@ -48,9 +48,11 @@ dateCreated: 2025-09-16T09:55:34.272Z
 你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。 在你下载了那个.zip文件后，将其提取到你的预置位置。
 你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。 在你下载了那个.zip文件后，将其提取到你的预置位置。
 你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。 在你下载了那个.zip文件后，将其提取到你的预置位置。
+你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。 在你下载了那个.zip文件后，将其提取到你的预置位置。
 你会在其中找到工具`DriverInstall.exe`。 使用更高的权限执行它。
 
 > 如果您被问到：“您想要允许此应用更改您的设备吗？” ，点击“是”。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}
@@ -60,7 +62,7 @@ dateCreated: 2025-09-16T09:55:34.272Z
 
 # 3. 使用 RKDevTool 闪烁BredOS
 
-有了驱动程序，我们可以继续使用 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。
+有了驱动程序，我们可以继续使用 [RKDevTool](https://docs.radxa.com/en/compute-module/cm5/radxa-os/low-level-dev/rkdevtool)。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。 解压缩.zip文件并执行 `RKDevTool.exe`。
 
 在 `RKDevTool` 中，设置了以下配置并点击`RUN`：
 
@@ -70,6 +72,7 @@ dateCreated: 2025-09-16T09:55:34.272Z
 - 点击 `RUN`，等待进程完成
 
 > Maskrom 按钮应该在电源插入棋盘时按住 \*\*。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 
@@ -82,6 +85,7 @@ dateCreated: 2025-09-16T09:55:34.272Z
 等待它完成刷入过程，你很好。
 
 > 在刷入成功后，继续进行 [**First Setup**](/en/install/first-setup)。
+> {.is-success}
 > {.is-success}
 > {.is-success}
 > {.is-success}
