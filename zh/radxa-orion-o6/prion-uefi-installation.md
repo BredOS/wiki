@@ -2,7 +2,7 @@
 title: 更新Orion O6上的 UEFI
 description:
 published: true
-date: 2025-10-30T12：49：48.767Z
+date: 2025-10-30T06:06:17.716Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -28,7 +28,7 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 ## 3.1 前提条件
 
-- `UEFI`安装.zip 文件找到 [here](/orion/bios.zip)。
+- `UEFI`安装.zip文件在这里找到。
 - 对于一个 "3.2 现场更新" -> FAT32 格式化 USB Stick。
 - 对于`3.3 通过 flasher` -> 基于 CH341A的刷新器
 
@@ -61,6 +61,7 @@ VariableInfo.efi
 - 更新过程应该自动开始。
 
 > 更新成功后，关闭棋盘并断开电源至少10秒！
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
@@ -104,6 +105,7 @@ dd if=/dev/n0 bs=1 count=$(8388608- <your file size here>)) >> ./cix_flash_all.b
 ### 3.3.2 连接到SPI
 
 > 确保你的棋盘在移除或插入SPI芯片时断电！
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
