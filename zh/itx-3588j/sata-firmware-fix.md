@@ -30,10 +30,9 @@ https://www.aliexpress.com/item/3226327388.html
 
 另一方面，如果你有沉浸的经历，要去除和解析SPI芯片的八个粉丝并不是一个困难的任务。
 
-- SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
-  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
-  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为“JMB575”的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
-  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+- SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为"JMB575"的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为"W25X40CL"，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg) 接下来, 你会找到一个更小的 8 pin 芯片，标签为“W25X40CL”，也就是SPI 芯片。 SPI 芯片位于SATA 港口附近，紧靠mSATA 槽旁。 寻找标题为"JMB575"的方块芯片——这是SATA控制器。 接下来, 你会找到一个更小的 8 pin 芯片，标签为"W25X40CL"，也就是SPI 芯片。 SPI 芯片上的标签可能难以读取， 但一旦你找到了 SATA 控制器，它应该很容易识别SPI 芯片。
+  ![sata-controller-text-scaled.jpg](/wiki-itx3588j-pics/sata-controller-text-scaled.jpg)
 
 <details><summary><b>SATA Controller and SPI Chip</b></summary>
 
@@ -108,12 +107,9 @@ Pin 1在芯片上用一个小点标记，并在平面板或适配器板上贴上
 - 如果它报告了上述SPI芯片的名字，你很乐意去做。
 
 ```
-# sudo flashrom -p ch341a_spi --flash-name
-flashrom 1.4.0-devel (git:v1.2-1355-g9ccbf1cf) 在 Linux 6.15.7-1-BredOS (x86_64)
-flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
-
-使用 clock_gettime 来处理延迟循环 (clk_id: 1, resolution 1ns).
-在 ch341a_spi 上发现Winbonds flash chip "W25X40" (512 kB, SPI)
+检查所有电缆并确保您的 ITX-3588J 板在使用片段时断电。
+然后连接到您的Linux设备并运行以下命令。
+如果它报告了上述SPI芯片的名字，你很乐意去做。
 ```
 
 ```
@@ -133,7 +129,7 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 如果出现任何错误，您将能够使用这个备份恢复它。
 如果出现任何错误，您将能够使用这个备份恢复它。
 
-- 用以下命令转储闪存：
+- 用以下命令转_dump_闪存：
 
 ```
 # sudo flashrom -p ch341a_spi -r firmware_dump-1.bin
@@ -147,7 +143,7 @@ flashrom 是免费的软件，获取源代码在 https://flashrom 上。 rg
 # diff firmware_dump.bin firmware_dump-1.bin
 ```
 
-如果“diff”不产生输出, 你就好了。
+如果"diff"不产生输出, 你就好了。
 如果确实如此，请检查素材的连接或检查您的焊接工作，并验证所有连接器的方向。
 如果确实如此，请检查素材的连接或检查您的焊接工作，并验证所有连接器的方向。
 
