@@ -46,6 +46,7 @@ local/util-linux-libs 240.2-1
 要安装另一个内核，请先移除已安装的内核及其头部。
 要安装另一个内核，请先移除已安装的内核及其头部。
 要安装另一个内核，请先移除已安装的内核及其头部。
+要安装另一个内核，请先移除已安装的内核及其头部。
 
 # 2. 继续安装新内核。
 
@@ -128,11 +129,12 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` drachut 图像。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。
+`linux-rockchip-rkr3`内核生成了 `/boot/initramfs-linux-rockchip-rkr3.img` drachut 图像。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。 其它内核会生成不同的文件名。
 
 ## 3. 更新引导程序配置
 
 > 如果你在棋盘上看到一个 BredOS 标志，你正在使用 UEFI 。
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
@@ -160,6 +162,7 @@ label BredOS ARM
 您需要编辑内核`initrd`行来指向相同的文件名(无路径)。
 您还需要编辑内核行才能匹配。
 要验证文件名正确，您可以列出`/boot/`的内容：
+您还需要编辑内核行才能匹配。
 您还需要编辑内核行才能匹配。
 您还需要编辑内核行才能匹配。
 您还需要编辑内核行才能匹配。
