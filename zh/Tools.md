@@ -10,10 +10,7 @@ dateCreated: 2025-05-07T18:27:16.781Z
 
 # 1. 介绍信息
 
-这将作为`breddos-tools`，与任何系统架构兼容，发送到`BredOS-any`存储库中。
-它是BredOS的组成部分。 “bredos-tools”应默认安装。
-它是BredOS的组成部分。 “bredos-tools”应默认安装。
-它是BredOS的组成部分。 “bredos-tools”应默认安装。
+这将作为`bredos-tools`，与任何系统架构兼容，发送到`BredOS-any`存储库中。
 它是BredOS的组成部分。 “bredos-tools”应默认安装。
 它是BredOS的组成部分。 “bredos-tools”应默认安装。
 
@@ -61,32 +58,7 @@ sudo grub-password -d
 > 修改`/etc/grub.d/10_linux`，请不要手动恢复。
 > 配置保存在 `/etc/grub.d/99-bredos-grub-password` 中。
 > 脚本通过 `grub-mkconfig` 自动重新生成 GRUB 配置。
-> 修改 `/etc/grub.d/10_linux`，请不要手动恢复。
-> 配置保存在/etc/grub.d/99-bredos-grub-密码中。
-> 脚本通过 grub-mkconfig自动重新生成 GRUB配置。
-> 修改`/etc/grub.d/10_linux`，请不要手动恢复。
-> 配置保存在 `/etc/grub.d/99-bredos-grub-password` 中。
-> 脚本通过 `grub-mkconfig` 自动重新生成 GRUB 配置。
-> 修改 `/etc/grub.d/10_linux`，请不要手动恢复。
-> 配置保存在/etc/grub.d/99-bredos-grub-密码中。
-> 脚本通过 grub-mkconfig自动重新生成 GRUB配置。
-> 修改`/etc/grub.d/10_linux`，请不要手动恢复。
-> 配置保存在 `/etc/grub.d/99-bredos-grub-password` 中。
-> 脚本通过 `grub-mkconfig` 自动重新生成 GRUB 配置。
-> 修改 `/etc/grub.d/10_linux`，请不要手动恢复。
-> 配置保存在/etc/grub.d/99-bredos-grub-密码中。
-> 脚本通过 grub-mkconfig自动重新生成 GRUB配置。
-> 修改`/etc/grub.d/10_linux`，请不要手动恢复。
-> 配置保存在 `/etc/grub.d/99-bredos-grub-password` 中。
-> 脚本通过 `grub-mkconfig` 自动重新生成 GRUB 配置。
-> 修改 `/etc/grub.d/10_linux`，请不要手动恢复。
-> 配置保存在/etc/grub.d/99-bredos-grub-密码中。
-> 脚本通过 grub-mkconfig自动重新生成 GRUB配置。
-> 修改`/etc/grub.d/10_linux`，请不要手动恢复。
 > 这修改了 `/etc/grub.d/10_linux` ，不要手动还原它！
-> {.is-info}
-> {.is-info}
-> {.is-info}
 > {.is-info}
 > {.is-info}
 
@@ -137,7 +109,7 @@ yay -S dtc
 示例：dtsc my_device_tree.dts -o output.dtbo
 ```
 
-## 输入
+## 3.2 输入
 
 脚本需要输入 `.dts` 文件。如果没有指定输出，它生成匹配名称的 `.dtb` 文件。
 输出文件名可以用 `-o` 参数设置。 脚本需要输入 `.dts` 文件。如果没有指定输出，它生成匹配名称的 `.dtb` 文件。
