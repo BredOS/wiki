@@ -32,6 +32,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 规格：
 
@@ -46,6 +47,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 #### Orange Pi 5B
 
 > 我们把它命名为“_阿片5b_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名字“橙色Pi 5B”——特别是当每个人都确切知道你还有什么意思时。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}
@@ -67,6 +69,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 规格：
 
@@ -79,6 +82,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 #### Orange Pi 5 Pro
 
 > 我们把它命名为“_阿片5pro_”，因为坦率地说，没有人有时间、耐心， 或者甚至是一丝希望不断地说出或打破可笑的长度， 不必要的是正式的，轻易令人烦恼的名字“橙色Pi 5 Pro”——特别是当每个人都确切知道你还有什么意思时。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}
@@ -100,6 +104,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 规格：
 
@@ -117,6 +122,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 规格：
 
@@ -130,6 +136,7 @@ dateCreated: 2024-09-20T15:17:37.567Z
 #### Orange Pi CM5
 
 > 我们把它命名为“_opicm5_”，因为它更短。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}
