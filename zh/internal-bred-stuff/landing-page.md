@@ -14,7 +14,10 @@ dateCreated: 2025-09-19T15：05：44.344Z
 本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。
 文档将引导您安装、配置和使用 BredOS 。 欢迎来到 BredOS 文档！BredOS 是一个基于 Arch 的用户友好型 Linux 发行版，专门为基于 ARM 的单板计算机（SBC）设计。
 本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。
+文档将引导您安装、配置和使用 BredOS 。 欢迎来到 BredOS 文档！BredOS 是一个基于 Arch 的用户友好型 Linux 发行版，专门为基于 ARM 的单板计算机（SBC）设计。
+本文档将指导您完成 BredOS 的安装、配置和使用。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。
 文档将引导您安装、配置和使用 BredOS 。 BredOS 是一个方便用户的基于档案的Linux发行版，专门为ARM和RISC-V设计的单个板电脑(SBC)。
+文档将引导您安装、配置和使用 BredOS 。
 文档将引导您安装、配置和使用 BredOS 。
 文档将引导您安装、配置和使用 BredOS 。
 
@@ -45,13 +48,13 @@ dateCreated: 2025-09-19T15：05：44.344Z
 
 # 4. 故障排除
 
-我们的朋友[**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) 制作了一个关于BredOS的YouTube视频。 在这里查看： 在这里查看： 在这里查看： 在这里查看：
+我们的朋友[**DroidMaster**](https://www.youtube.com/@LinuxDroidMaster) 制作了一个关于BredOS的YouTube视频。 在这里查看： 在这里查看： 在这里查看： 在这里查看： 在这里查看：
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # 5. 安装
 
-为了便于您安装，我们为您铺设了一条线路，让您跟随。 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸
+为了便于您安装，我们为您铺设了一条线路，让您跟随。 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸 🍞 🔸🔸🔸
 
 > 如果你发现面包裹破损：small_orange_diamond：在我们的社区频道上让我们头部跳过。
 > {.is-info}
@@ -89,7 +92,7 @@ BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出�
 
 # 9. 贡献
 
-BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献：
+BredOS 是一个开源项目，欢迎贡献！您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献： 您可以通过以下方式做出贡献：
 
 - 报告错误和问题
 - 提交补丁和改进
