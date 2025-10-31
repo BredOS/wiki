@@ -18,4 +18,4 @@ dateCreated: 2025-06-21T08:33:57.285Z
 
 # 2. 下载
 
-您可以在我们的 [website](https://bredos.org/download.html) 中找到图像的下载链接！
+您可以在我们的 [网站](https://bredos.org/download.html) 中找到图像的下载链接！
