@@ -2,7 +2,7 @@
 title: Página web
 description:
 published: true
-date: 2025-10-06T05:41:19.201Z
+date: 2025-10-06T09:38:43.497Z
 tags:
 editor: markdown
 dateCreated: 2022-08-24T12:37:36.410Z
@@ -19,50 +19,50 @@ La documentación le guiará a través de la instalación, configuración y uso 
 # 3. 🚀 Características
 
 - Enviamos instalaciones funcionales, no configuraciones.
-- No se requiere experiencia. ¡Es fácil; todo está documentado y [nos encanta ayudar](#h-8-community-and-support)!
+- No se requiere experiencia. ¡Es fácil; todo está documentado y [nos encanta ayudar](#h-7-community-and-support)!
 - ¡Simple y simple por diseño! ¡Sin problemas, garantizando un sistema ligero y receptivo!
 - Arquero - con personalización hecha a medida para ser pulida y fácil de usar.
 
 ## 2.1 Herramientas destacadas
 
 - Pastelería - [tu guía para tu propio Bred](/install/first-setup)!
-- Bred-News - [the news channel about your Bred](/en/customizations/news)!
+- Bred-News - [el canal de noticias sobre tu Bred](/customizations/news)!
 - Bred-Tools - [el cuchillo suizo a tu mano](/Tools)!
-- Bred-Config - [como raspi-config, ¡pero con mejor gusto!](/bredos-config)
+- Bred-Config - [como raspi-config, pero con mejor gusto](/bredos-config)!
 - Govctl - [toma el control de tu CPU](/how-to/govctl)!
 
 # 4. [🛠️ Requisitos del sistema](#system-requirements)
 
-Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos tableros x86_64 intel/amd lámparas. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/en/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/en/table-of-supported-devices).
+Soportamos una amplia gama de dispositivos: desde emocionantes sistemas basados en ARM y configuraciones experimentales RISC-V hasta viejos paneles de intel/amd x86. Lo tenemos cubierto, si usas nuestra [línea principal . así instalación](/en/install/Installation-with-ISO) o consulte la lista de dispositivos que soportamos pasivamente en nuestra [tabla de dispositivos compatibles](/en/table-of-supported-devices).
 
 ## 🛠️ Requisitos del sistema
 
 - **🧠 RAM mínimo**: 2 GB
-- Almacenamiento: 8 GB de tarjeta microSD, eMMC/NVMe o más grande
+- **💾 Almacenamiento**: tarjeta microSD de 16 GB o mayor
 
-# 4. Instalación
+# 4. Contribuyendo
 
 Nuestro amigo **DroidMaster** hizo un video de YouTube sobre BredOS. Échale un vistazo aquí:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eoLE27xdtu4?si=ai-0QqLNyCYfTKfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# 🔁 4. Descargar
+# 8. Contribuyendo
 
 ¡Puedes encontrar enlaces de descarga para imágenes en nuestra [website](https://bredos.org/download.html)!
 
-# 8. Solución de problemas
+# 4. Instalación
 
 To make installation easy for you, we laid out a line of bred crumbs to follow.
 
 ## 5.1 Instalación de imagen específica del dispositivo
 
-Estos son los tableros que más nos gustan. Para instalar BredOS en ellos, inicie con nuestra guía de instalación [imagen específica del dispositivo](/en/install/device-specific-image). o dar un vistazo a la página del dispositivo en nuestra wiki, que se encuentra en la barra de navegación a la izquierda de esto.
+Estos son los tableros que más nos gustan. Para instalar estas imágenes BredOS en ellas, inicia con nuestra [imagen específica del dispositivo](/install/device-specific-image) guía de instalación, o dar un vistazo a la página del dispositivo en nuestra wiki, que se puede encontrar en la barra de navegación a la izquierda de esto.
 
 Visita nuestro [sitio de descargas](https://bredos.org/download.html) para averiguar si tu dispositivo es uno de ellos.
 
 ## 12.2 Instalación genérica
 
-Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/download.html) pero soporta el arranque de UEFI y se basa en la arquitectura x86_64 o ARM64, simplemente sigue nuestra guía para una instalación genérica disponible [here](/install/Installation-with-ISO).
+Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/download.html) pero soporta el arranque de UEFI y se basa en la arquitectura x86 o ARM64, simplemente sigue nuestra guía para una instalación genérica disponible [here](/install/Installation-with-ISO).
 
 ## 5.3 Instalación del contenedor Docker
 
@@ -72,11 +72,11 @@ Si tu dispositivo no aparece en nuestro [sitio de descargas](https://bredos.org/
 trituradores/bredos/bredos
 ```
 
-# 4. Contribuyendo
+# 8. Solución de problemas
 
-Eche un vistazo a las páginas del dispositivo en la barra de navegación de esta página para encontrar problemas conocidos específicos de su dispositivo. Si tu problema no está listado, no dudes en contactar con nosotros directamente a través de [nuestros canales de soporte](#h-8-community-and-support).
+Eche un vistazo a las páginas del dispositivo en la barra de navegación de esta página para encontrar problemas conocidos específicos de su dispositivo. Si tu problema no está listado, no dudes en contactar con nosotros directamente a través de [nuestros canales de soporte](#h-7-community-and-support).
 
-# 9. 🌐 Comunidad y soporte
+# 4. 🌐 Comunidad y soporte
 
 Únete a la comunidad BredOS para obtener apoyo, compartir ideas y contribuir al proyecto:
 
@@ -94,7 +94,7 @@ BredOS es un proyecto de código abierto, y las contribuciones son bienvenidas! 
 - 📄 Escribe y mejora la documentación
 - 🧑‍🤝‍🧑 Ayuda a otros usuarios en los foros de la comunidad y chatea
 
-# 10. Campaña principal
+# 9. Campaña principal
 
 Ahora mismo, las imágenes BredOS para dispositivos RK3588 dependen del crusty Rockchip BSP kernel — un abrazo, código codificado con ductos que es difícil de mantener, inseguro y siempre señala detrás de Linux.
 

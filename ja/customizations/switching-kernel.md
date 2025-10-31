@@ -45,6 +45,7 @@ local/util-linux-libs 2.40.2-1
 別のカーネルをインストールするには、最初にインストールされたカーネルとそのヘッダを削除します。
 別のカーネルをインストールする
 別のカーネルをインストールする
+別のカーネルをインストールする
 
 # 2. 新しいカーネルをインストールします。
 
@@ -127,11 +128,12 @@ dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' t
 dracut[I]: *** Moving image file '/boot/initramfs-linux-rockchip-rkr3.img.tmp' to '/boot/initramfs-linux-rockchip-rkr3.img' done ***
 ```
 
-`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。
+`linux-rockchip-rkr3`カーネルは`/boot/initramfs-linux-rockchip-rkr3.img`ドラクト画像を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。 他のカーネルは異なるファイル名を生成します。
 
 ## 3. ブートローダーの設定を更新する
 
 > ボードの電源投入中にBredOSのロゴが表示される場合は、UEFIを使用しています。
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}
@@ -158,6 +160,7 @@ label BredOS ARM
 カーネル`initrd`行を編集して同じファイル名を指すようにする必要があります (パスなし)。
 それに合わせてカーネル行を編集する必要があります。
 ファイル名が正しいことを確認するには、`/boot/`の内容をリストすることができます。
+それに合わせてカーネル行を編集する必要があります。
 それに合わせてカーネル行を編集する必要があります。
 それに合わせてカーネル行を編集する必要があります。
 それに合わせてカーネル行を編集する必要があります。

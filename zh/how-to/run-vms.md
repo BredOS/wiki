@@ -34,6 +34,7 @@ sudo pacman -S virt-manager virt-viewer qemu-Base qemu-system-aarch64 edk2-aarch
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ## 第 2 步：启用并启动 Libvirt 服务
 
@@ -66,7 +67,7 @@ sudo usermod -aG libvirt $(whoami)
 
 ## 3.4 配置网络
 
-- `virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
+- `virt-manager` 使用 `dnsmasq` 进行网络管理。 `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置： `virt-manager` 使用 `dnsmasq` 进行网络管理。 您可能想要确保使用 "libvirt" 的默认网络设置：
 
 ```bash
 sudo virsh net-start 默认
@@ -90,10 +91,11 @@ sudo virsh net-autostart
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ## 步骤6：启用 XML 编辑
 
-- 要启用 XML 编辑 (需要稍后) ，您需要打开 `virt-manager` ，然后导航到 `Edit` 然后导航到 `Preferences` 和 \\\`启用 XML 编辑'。
+- 要启用 XML 编辑 (需要稍后) ，您需要打开 `virt-manager` ，然后导航到 `Edit` 然后导航到 `Preferences` 和 \\\\`启用 XML 编辑'。
 
 # 4. 3.7 创建虚拟机
 
@@ -106,6 +108,7 @@ sudo virsh net-autostart
 - 按照向导分配CPU、RAM和您的虚拟机存储。 ⚙️
 
 > 在 RK3588 上，由于小的大架构，您可以分配每vm 最多4个核。
+> {.is-warning}
 > {.is-warning}
 > {.is-warning}
 > {.is-warning}

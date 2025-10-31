@@ -2,7 +2,7 @@
 title: Installation of UEFI
 description:
 published: true
-date: 2025-09-28T09:53:54.047Z
+date: 2025-10-23T06:14:27.097Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11:29:43.061Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-16T11:29:43.061Z
 
 # 1. 簡介
 
-Many of our supported devices do offer support for `UEFI`, which is a modern firmware interface that initializes hardware and starts the operating system. With the help of `UEFI` your device is capable of booting .iso files (written to a USB-Stick or burned to a DVD) as well as booting your OS directly from the NVMe drive or over the network via PXE.
+Many of our supported devices do offer support for `UEFI`, which is a modern firmware interface that initializes hardware and starts the operating system. With the help of `UEFI` your device is capable of booting .iso files (written to a USB-Stick or burned to a DVD) as well as booting your OS directly from the nVME drive or over the network via PXE.
 
 > Multiple installations of UEFI can cause problems when saving your UEFI settings.
 > {.is-warning}
@@ -35,16 +35,14 @@ Download the latest release matching your device, insert a SD Card of (almost) a
 > Insert your SD Card into your SBC and you are good to go!
 > {.is-success}
 
-## 3.2 Installation to SPI from within UEFI
+## 3.2 Installation to SPI
 
 > If you have skipped 3.1, go back. This step is needed for flashing to the SPI chip!
 > You can remove the SD Card afterwards
 > {.is-info}
 > {.is-info}
 > {.is-info}
-
-> This procedure is untested. If you have done it successfuly please report back on our Discord or Telegram channel.
-> {.is-warning}
+> {.is-info}
 
 Follow the steps down below to install `UEFI` to your SPI chip.
 
@@ -68,7 +66,17 @@ sf updatefile <FIRMWARE.img> 0x0
 
 ## 3.3 Installation to SPI from within BredOS
 
-If your board is booted into BredOS, it is possible to install UEFI on your SPI by following [this guide](/en/how-to/update-uefi-rk3588). Under section [3. Flashing the UEFI Firmware](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) use `/dev/mtdblock0` as your target device.
+- If your board is booted into BredOS, it is possible to install UEFI on your SPI by running the following command:
+
+```
+sudo dd if=/path/to/downloaded/uefi/<device-name>_UEFI_Release_vX.XX.X.img of=/dev/mtd0
+```
+
+> We recommend following section [3. Flashing the UEFI Firmware](/en/how-to/update-uefi-rk3588#h-3-flashing-the-uefi-firmware) to learn more.
+> {.is-danger}
+
+- Power down your SBC and remove the SD Card.
 
 > Now your device is capable of all the nice UEFI goodies!
+> 🚀\
 > {.is-success}

@@ -41,6 +41,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ## Updating Device Trees in U-Boot systems with extlinux
 
@@ -50,9 +51,10 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 fdt /dtbs/rockchip/xxx.dtb
 ```
 
-次に、デバイス ツリー パスに合わせて編集します。 保存してシステムを再起動します。 保存してシステムを再起動します。 保存してシステムを再起動します。
+次に、デバイス ツリー パスに合わせて編集します。 保存してシステムを再起動します。 保存してシステムを再起動します。 保存してシステムを再起動します。 保存してシステムを再起動します。
 
 > DTBは1つしか指定できません。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}

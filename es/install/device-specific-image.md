@@ -2,7 +2,7 @@
 title: Instalación con una imagen específica del dispositivo
 description:
 published: true
-date: 2025-10-03T04:59:17.765Z
+date: 2025-10-22T08:35:52.202Z
 tags:
 editor: markdown
 dateCreated: 2025-09-15T12:36:27.362Z
@@ -19,56 +19,42 @@ Para la instalación de BredOS proporcionamos imágenes específicas del disposi
 
 ¡Puedes encontrar enlaces de descarga para imágenes en nuestra [website](https://bredos.org/download.html)!
 
-# 3. Instalación
+# 3. Arrancar dispositivo
 
-La instalación varía de dispositivo a dispositivo y el medio en el que desea instalar BredOS. En esta guía cubriremos la instalación a
+- Elija el dispositivo de almacenamiento en el que desea instalar BredOS en:
 
-- `3.1 eMC` no extraíble
-- `3.2 removable eMMC y SD Card`
-- [3.3 NVMe](#h-33-nvme)
+### Tabset {.tabset}
 
-> Antes de comenzar, por favor compruebe qué opciones están disponibles en su dispositivo!
-> {.is-info}
+#### Tarjeta SD
 
-## 3.1 eMMC no extraíble
+<details><summary><b>Con el adaptador de tarjeta SD</b></summary>
 
-Para cubrir la variedad de sistemas operativos que se pueden utilizar para esto, decidimos dividir la instalación en eMC no extraíble en estas dos guías:
-
-- Flashear el eMMC con Linux o macOS
-- Flashear el eMMC con Microsoft Windows
-
-## 3.2 Tarjeta SD y eMMC extraíble
-
-> Si usted está familiarizado con flashear Raspberry OS no necesita leer más. Just grab your SD-Card or eMMC, your device specific image and flash with your preferred Tool.
-> {.is-info}
-
-En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee un adaptador adecuado deje el eMMC conectado a su SBC y siga `3.1 eMC` no extraíble.
-
-### 3.2.1 Prepare su eMMC extraíble
-
-> Salta a `3.2.2 Flashing eMMC / SD Card` si no estás usando el almacenamiento eMMC.
-> {.is-info}
-
-#### 3.2.1.1 con adaptador uSD
-
-- Como eMMC es básicamente una tarjeta SD que es (en su mayoría) de cable duro a la SBC hay adaptadores que puedes conectar tu eMMC para convertirlos en una tarjeta SD.
-
-<details><summary><b>uSD Adpater y eMMC</b></summary>
-
-![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
+Inserta tu tarjeta SD en tu lector de tarjeta SD de tu PC y continúa con [**4.1 con el adaptador de almacenamiento**](#h-41-with-storage-adapter)
 
 </details>
-- Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
 
-<details><summary><b>adaptador uSD conectado al lector</b></summary>
+<details><summary><b>Sin el adaptador de tarjeta SD</b></summary>
 
-![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+Inserta tu tarjeta SD en tu SBC y continúa con la guía de acuerdo al sistema operativo de tu PC encontrado en la sección [**4.2 con RKdeveloptool**](#h-4-2-with-rkdeveloptool).
 
-  </details>
+> Antes de flashear, debe establecer su dispositivo de destino a `tarjeta sd`. Para ello, echa un vistazo a [4.2 Cambiando destino flash](/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS#h-42-changing-flash-target).
+> {.is-info}
 
-#### 3.2.1.2 con adaptador USB a eMMC
+</details>
 
-- Como casi todos los USB conocidos comúnmente se basan en el almacenamiento eMMC, existen adaptadores USB a eMMC que son USB-Sticks pero con almacenamiento eMMC extraíble. Estos pueden ser usados para flashear BredOS también.
+#### eMMC no eliminable
+
+<details><summary><b>Con RKdeveloptool</b></summary>
+
+Continúa con la guía de acuerdo al sistema operativo de tu PC encontrado en la sección [**4.2 con RKdeveloptool**](#h-4-2-with-rkdeveloptool)
+
+</details>
+
+#### EMMC extraíble
+
+<details><summary><b>Con eMMC a USB Adapter</b></summary>
+
+Como casi todos los USB conocidos comúnmente se basan en el almacenamiento eMMC, existen adaptadores USB a eMMC que son USB-Sticks pero con almacenamiento eMMC extraíble. Estos pueden ser usados para flashear BredOS también. Conecte el eMMC a su Adapter como se muestra en la captura de pantalla de abajo.
 
 <details><summary><b>USB al adaptador eMMC</b></summary>
 
@@ -76,29 +62,68 @@ En los siguientes describimos cómo flashear eMC con un adaptador. Si no posee u
 
    </details>
 
-### 3.2.2 Flashear eMMC / Tarjeta SD
+Luego continúa con [**4.1 con adaptador de almacenamiento**](#h-41-with-storage-adapter).
+
+</details>
+
+<details><summary><b>With uSD Adapter</b></summary>
+As a eMMC is basically an SD Card which is (mostly) hardwired to the SBC there are adapters you can connect your eMMC to convert them into an SD Card.
+
+<details><summary><b>uSD Adpater y eMMC</b></summary>
+
+![usd-emmc-cut.png](/installation-dsi/usd-emmc-cut.png)
+
+</details>
+Firmly press the connector of the eMMC onto the uSD Adapter and connect them to your SD Card Reader.
+
+<details><summary><b>adaptador uSD conectado al lector</b></summary>
+
+![usd-connected-cut.png](/installation-dsi/usd-connected-cut.png)
+
+</details>
+
+Luego continúa con [**4.1 con adaptador de almacenamiento**](#h-41-with-storage-adapter).
+
+</details>
+
+<details><summary><b>Sin capítulo</b></summary>
+
+Conecta tu eMMC a tu SBC y continúa con la guía según el sistema operativo de tu PC encontrado en la sección [**4.2 con RKdeveloptool**](#h-4-2-with-rkdeveloptool).
+
+</details>
+
+#### NVMe
+
+> Como el arranque directo desde la unidad nVME no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que la UEFI es arrancada usted es capaz de arrancar desde la unidad NVMe directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
+> {.is-warning}
+
+<details><summary><b>Con USB Adapter</b></summary>
+
+Conecta la unidad a tu PC mediante un adaptador USB y continúa con [**4.1 con adaptador de almacenamiento**](#h-41-with-storage-adapter). Después de flashear, conecte la unidad al puerto NVMe de su SBC.
+
+</details>
+
+<details><summary><b>Sin capítulo</b></summary>
+
+Conecta tu unidad NVMe directamente a tu PC y continúa con [**4.1 con el adaptador de almacenamiento**](#h-41-with-storage-adapter). Puede que tenga que forzar su herramienta de parpadeo a escribir en un disco duro.
+
+</details>
+
+# 5. Parpadeando
+
+> Proporcionamos imágenes comprimidas como archivos .xz. ¡Asegúrate de descomprimirlos antes de parpadear!
+> {.is-warning}
+
+## 4.1 con el adaptador de almacenamiento
 
 Existen innumerables herramientas para flashear una tarjeta sd o eMMC. En esta guía cubriremos `BalenaEtcher` y `Raspberry Pi Imager`. Ambas herramientas ofrecen soporte para Linux, macOS y Microsoft Windows.
 
 - [BalenaEtcher](https://etcher.balena.io/)
 - Flashear con Raspberry Pi Imager
 
-> Proporcionamos imágenes comprimidas como archivos .xz. ¡Asegúrate de descomprimirlos antes de parpadear!
-> {.is-warning}
+## 4.2 con RKdeveloptool
 
-## 3.3 NVMe
+Para cubrir la variedad de sistemas operativos que puede utilizar para esto, decidimos dividir la instalación en estas dos guías:
 
-### 3.3.1 Prerrequisitos
-
-Como el arranque directo desde la unidad NVMe no está soportado por nuestros dispositivos, necesitamos instalar UEFI en un medio diferente. Después de que UEFI es arrancado usted es capaz de arrancar desde la unidad nVME directamente. Para instalar UEFI en tu tarjeta SPI o SD, sigue esta guía.
-
-### 3.3.2 Flashear NVMe
-
-Conecte la unidad a su PC, ya sea directamente o a través de un adaptador USB. Luego use una de las herramientas recomendadas en `3.2. Flashear eMMC / SD Card`, asegurándose de usar la letra de unidad correcta o la ruta de su unidad NVMe. Después de flashear, conecte la unidad al puerto NVMe de su SBC.
-
-### 3.3.3 Orden de Arranque
-
-La UEFI debería ser capaz de tomar la unidad por sí sola. Sin embargo, el orden de los dispositivos desde los que intentará arrancar puede ralentizar el proceso de arranque o incluso fallar completamente (p. ej. si tiene un servidor PXE en su red). si tiene un servidor PXE en su red). Para cambiar el orden de arranque siga este [guide](/en/how-to/change-default-boot-order-rk3588).
-
-> Después de la instalación exitosa, proceda con [**Primera configuración**](/en/install/first-setup)
-> {.is-success}
+- [Flashear con RKDevelop bajo Linux o macOS](/en/install/device-specific-image/Flashing-the-eMMC-with-Linux-or-macOS)
+- [Flashear con RKDevelop en Microsoft Windows](/en/install/device-specific-image/Flashing-the-eMMC-with-Microsoft-Windows)

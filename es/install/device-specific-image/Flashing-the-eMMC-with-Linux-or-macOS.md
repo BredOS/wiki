@@ -2,7 +2,7 @@
 title: Flashear el eMMC con Linux o macOS
 description:
 published: true
-date: 2025-10-05T06:59:09.446Z
+date: 2025-09-29T06:00:19.076Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T06:29:26.865Z
@@ -14,7 +14,7 @@ Esta guía describe cómo flashear un eMMC usando la herramienta `rkdeveloptool`
 
 Para la instalación de BredOS, se requieren tres cosas:
 
-1. Archivo del cargador SPL:
+1. Archivo del cargador SPL, por ejemplo para el RK3588: [`rk3588_spl_loader_v1.15.113.bin`](https://dl.radxa.com/rock5/sw/images/loader/rk3588_spl_loader_v1.15.113.bin)
 
 ### Tabset {.tabset}
 
@@ -24,7 +24,10 @@ Para la instalación de BredOS, se requieren tres cosas:
 
 #### RK3566
 
+\
+Por ejemplo, para el RK3566, el cargador SPL se puede encontrar aquí:
 [`rk356x_spl_loader_ddr1056_v1.10.111.bin`](https://dl.radxa.com/rock3/images/loader/rock-3a/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+{.is-info}
 
 ###
 

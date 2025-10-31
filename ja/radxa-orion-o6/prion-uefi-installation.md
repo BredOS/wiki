@@ -2,7 +2,7 @@
 title: Orion O6でUEFIを更新中
 description:
 published: true
-date: 2025-09-21T10:45:11.948Z
+date: 2025-10-30T12:49:48.767Z
 tags:
 editor: markdown
 dateCreated: 2025-09-17T06:45:47.183Z
@@ -28,7 +28,7 @@ dateCreated: 2025-09-17T06:45:47.183Z
 
 ## 3.1 前提条件
 
-- `UEFI`インストール.zipファイル
+- `UEFI`インストール .zip ファイルが見つかりました [here](/orion/bios.zip).
 - `3.2 インプレースアップデート` -> FAT32 フォーマットされた USB スティック
 - `3.3 Update through flasher` -> A CH341A flasher
 
@@ -55,7 +55,7 @@ startup.nsh
 VariableInfo.efi
 ```
 
-- ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 If you have trouble accessing the UEFI Settings, check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
+- ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 If you have trouble accessing the UEFI Settings, check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu). ボードを `UEFI` で起動します。 ボードを `UEFI` で起動します。 If you have trouble accessing the UEFI Settings, check [this guide](/en/how-to/change-default-boot-order-rk3588#2.1-Accessing-the-Boot-Menu).
 - コマンドラインインターフェースを入力するには、`Boot Manager` -> `UEFI Shell` に移動します。
 - 更新プロセスが自動的に開始されます。
 
@@ -92,7 +92,7 @@ du ./cix_flash_all.bin
 
 上の例では、ファイルサイズは `6288062` です。
 
-- チップの仕様に合わせるには、ファイルの最後に "0" を追加する必要があります。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。
+- チップの仕様に合わせるには、ファイルの最後に "0" を追加する必要があります。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 チップの仕様に合わせるには、ファイルの最後に "0" を追加する必要があります。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。 `<your file size here>`を上記のコマンドのファイルサイズに置き換えます。
 
 ```
 dd if=/dev/zero bs=1 count=$(((8388608 - <your file size here>)) >> ./cix_flash_all.bin

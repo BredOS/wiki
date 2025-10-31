@@ -26,3 +26,4 @@ dateCreated: 2024-09-20T19:27:46.217Z
 
 BredOS ニュースシェル歓迎プログラムを完全にカスタマイズできます。
 [this link](/customizations/news) に従ってガイドに移動します。
+[this link](/customizations/news) に従ってガイドに移動します。

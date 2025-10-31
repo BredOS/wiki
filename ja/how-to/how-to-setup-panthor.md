@@ -2,7 +2,7 @@
 title: Mali GPU上でRK3588を使用してPanthorを設定する方法
 description:
 published: true
-date: 2025-09-16T10:49:06.107Z
+date: 2025-10-27T17:58:06.243Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -16,18 +16,18 @@ dateCreated: 2024-08-31T15:03:26.994Z
 
 ## 🤖 1.1 自動
 
-- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを以下から起動します。 ツールを以下から起動します。 ツールを以下から起動します。
+- bredos-config ツールは、dtbo を有効/無効にする簡単な方法を提供します。 ツールを起動する ツールを以下から起動します。 ツールを以下から起動します。 ツールを以下から起動します。 ツールを以下から起動します。
 
 ```
 sudo bredos-config
 ```
 
-次に、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、`rockchip-rk3588-panthor-gpu` を有効にします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。
+次に、`Device Tree Manager` -> `Enable / Disable Overlays` に移動し、`rockchip-rk3588-panthor-gpu` を有効にします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。 次に、ツールはベースデバイスツリーと選択したオーバーレイをインストールします。
 
 > 画面の指示に従ってください!
 > {.is-warning}
 
-bredos-config は dtbs をインストールして grub 設定を変更することができますが、起動時にそれらをロードするには _uefi 設定を変更できません_ 。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos). これはユーザーが行う必要があります。 これはユーザーが行う必要があります。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos). The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos).
+bredos-config は dtbs をインストールして grub 設定を変更することができますが、起動時にそれらをロードするには _uefi 設定を変更できません_ 。 これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos). これはユーザーが行う必要があります。 ユーザーが行わなければならない変更は、base/overlay dtbsの最初のインストール時にbredos-configによって表示されます。 The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos).
 
 > dtb オーバーレイのインストール後、システムを再起動しないでください!
 > \`3で続行します。 Panfork グラフィックスを置き換えます。

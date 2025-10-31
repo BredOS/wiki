@@ -2,7 +2,7 @@
 title: How to setup Panthor on Mali GPUs with RK3588
 description:
 published: true
-date: 2025-09-16T10:49:06.107Z
+date: 2025-10-27T17:58:06.243Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -27,7 +27,7 @@ and navigate to `Device Tree Manager` -> `Enable / Disable Overlays` and enable 
 > Carefully follow the instructions on screen!
 > {.is-warning}
 
-While bredos-config is able to install dtbs and alter the grub config to load them on boot it _cannot_ alter uefi settings. This has to be done by the user. The changes the user has to made are shown by bredos-config on first installation of base/overlay dtbs. The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos).
+While bredos-config is able to install dtbs and alter the grub config to load them on boot it _cannot_ alter uefi settings. This has to be done by the user. The changes the user has to make are shown by bredos-config on first installation of base/overlay dtbs. The changes can also be found in the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos).
 
 > Do not reboot your system after the installation of the dtb overlay!
 > Continue with `3. Replace Panfork graphics`.

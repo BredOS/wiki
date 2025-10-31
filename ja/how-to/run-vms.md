@@ -55,7 +55,7 @@ sudo systemctl status libvirtd
 sudo usermod -aG libvirt $(whoami)
 ```
 
-> これにより、ユーザーレベルからVMを管理できます。 これは危険なことができます!
+> これにより、ユーザーレベルからVMを管理できます。 これは危険なことができます! これは危険なことができます!
 > {.is-warning}
 
 - 自分自身をグループに追加した後、ログアウトして変更を反映させるためにログインし直します。
@@ -83,6 +83,7 @@ virt-manager
 ![startvm.jpg](/vms/startvm.jpg)
 
 > ユーザーを `libvirt` グループに追加していない場合は、今すぐパスワードを入力する必要があります。
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}

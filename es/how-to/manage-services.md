@@ -2,7 +2,7 @@
 title: Cómo administrar los servicios
 description:
 published: true
-date: 2025-10-05T07:04:12.252Z
+date: 2025-10-10T06:09:36.168Z
 tags:
 editor: markdown
 dateCreated: 2025-09-30T10:31:51.284Z
@@ -10,7 +10,7 @@ dateCreated: 2025-09-30T10:31:51.284Z
 
 # 🎛️ 1. 📥 Instalar el Firmware
 
-La gestión de servicios es una parte central de la administración de un sistema Linux, y systemctl—parte de la suite systemd—es la herramienta principal para el trabajo en la mayoría de las distribuciones modernas, incluyendo BredOS. Si necesita iniciar un servicio, detenerlo, compruebe su estado. o configurarlo para que se ejecute al arranque, systemctl proporciona una interfaz consistente y potente. Esta guía le guiará a través de los comandos esenciales y ejemplos prácticos para ayudarle a tomar el control de los servicios del sistema con confianza.
+Managing services is a core part of administering a Linux system, and systemctl—part of the systemd suite—is the primary tool for the job on most modern distributions. Si necesita iniciar un servicio, detenerlo, compruebe su estado. o configurarlo para que se ejecute al arranque, systemctl proporciona una interfaz consistente y potente. Esta guía le guiará a través de los comandos esenciales y ejemplos prácticos para ayudarle a tomar el control de los servicios del sistema con confianza.
 
 # 3. Examine sus servicios
 
@@ -20,13 +20,13 @@ La gestión de servicios es una parte central de la administración de un sistem
 
 ![bredos-news.png](/systemd/bredos-news.png)
 
-Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Si acaba de arrancar su dispositivo, puede mostrar la advertencia "**X** services report activating" Esto es normal, como muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar. Esta advertencia debería desaparecer después de unos minutos.
+Al final de su salida, puede leer el texto "El sistema funciona normalmente". Esto significa que todos los servicios que se supone que se inician en el arranque han sido iniciados sin ningún error. Esta advertencia debería desaparecer después de unos minutos. Si acaba de arrancar su dispositivo, puede mostrar la advertencia "**X** services report activating" Esto es normal, como muchos servicios pueden iniciarse en paralelo, lo que puede provocar retrasos al iniciar.
 
-Si ves el mensaje de error, uno o más servicios no han podido iniciarse "**X** informes de estado fallido".
+Si ves el mensaje de error, "los servicios **X** han fallado" uno o más servicios han fallado.
 
 ## 2.2 Con `systemctl`
 
-- Para listar todos los servicios del sistema en su computadora, ejecute:
+- Para listar todos los servicios en su computadora ejecute:
 
 ```
 systemctl list-units --type=service
@@ -38,13 +38,13 @@ systemctl list-units --type=service
 systemctl list-units --type=service --user
 ```
 
-Esto genera una lista de servicios. Navega con tus teclas de flecha, o usa <kbd>espacio</kbd> para ir una página abajo. Sal con la tecla <kbd>Q</kbd>.
+Esto genera una lista de servicios. Navega con tus teclas de flecha, o usa <kbd>espacio</kbd> para ir una página abajo. Déjalo con la tecla <kbd>Q</kbd>.
 
 Los servicios pueden tener diferentes estados como se muestra en la fila "SUB". Pueden ser `running`, `exited`, o `failed`.
 
 - Un servicio `corriendo` realiza tareas de fondo para ti. Un buen ejemplo de esto es Network Manager. Este servicio administra la conectividad de red. Ya que siempre se puede conectar un cable Ethernet, el programa debe ejecutarse continuamente para gestionar la red en consecuencia. Esto se consigue mediante un servicio `ejecutando`.
 
-- Un servicio `exited` es uno que se ejecuta al arrancar, realiza su tarea y luego termina limpiamente. Un buen ejemplo de esto es el servicio systemd-tmpfiles-configuración. Comienza al arrancar, monta un ramdisk, lo monta a /tmp, y luego sale con gracia.
+- An `exited` service is one that runs at boot, performs its task, and then terminates cleanly. Un buen ejemplo de esto es el servicio systemd-tmpfiles-configuración. Comienza al arrancar, monta un ramdisk, lo monta a /tmp, y luego sale con gracia.
 
 - Un servicio `failed` no se inició correctamente o se encontró con un problema mientras se ejecutaba y se detuvo con un código de error. Esto no significa que su sistema esté dañado, pero corregirlo podría ser recomendable.
 

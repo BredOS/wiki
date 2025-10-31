@@ -71,6 +71,7 @@ Hint: "nmcli dev wifi show-password" shows the Wi-Fi name and password.
 > 如果你得到以下错误，请用sudo再次运行命令。
 > 如果你得到以下错误，请用sudo再次运行命令。
 > 如果你得到以下错误，请用sudo再次运行命令。
+> 如果你得到以下错误，请用sudo再次运行命令。
 > `Error: Failed to setup a Wi-Fi hotspot: Not authorized to control networking.`
 > {.is-info}
 
