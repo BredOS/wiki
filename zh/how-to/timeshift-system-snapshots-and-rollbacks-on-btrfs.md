@@ -94,6 +94,7 @@ yay -S tift-autosnap
 > `timeeshift-autosnap` 可能要求您在设备正常运行之前重新启动。
 > {.is-warning}
 > {.is-warning}
+> {.is-warning}
 
 ## 3.2：防止重复 GRUB 更新
 
@@ -110,6 +111,7 @@ sudo nano /etc/timeshift-autosnap.conf
 updateGrub=true
 
 > 拥有一个强大的快照系统可以在更新或系统更改过程中发生错误时节省您的日子。
+> {.is-success}
 > {.is-success}
 > {.is-success}
 
