@@ -44,18 +44,20 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 > {.is-info}
 > {.is-info}
 > {.is-info}
+> {.is-info}
 
 ## Updating Device Trees in U-Boot systems with extlinux
 
-- 编辑 extlinux 配置文件 `/boot/extlinux/extlinux.conf` 。 使用 fdt\`, 例如: 使用 fdt`, 例如: 使用 fdt\`, 例如: 使用 fdt`, 例如:
+- 编辑 extlinux 配置文件 `/boot/extlinux/extlinux.conf` 。 使用 fdt\`, 例如: 使用 fdt`, 例如: 使用 fdt\`, 例如: 使用 fdt`, 例如: 使用 fdt\`, 例如:
 
 ```bash
 fdt /dtbs/rockchip/xxx.dtb
 ```
 
-然后编辑以匹配您的设备树路径。 保存并重启您的系统。 保存并重启您的系统。 保存并重启您的系统。 保存并重启您的系统。
+然后编辑以匹配您的设备树路径。 保存并重启您的系统。 保存并重启您的系统。 保存并重启您的系统。 保存并重启您的系统。 保存并重启您的系统。
 
 > 只能指定一个 DTB
+> {.is-info}
 > {.is-info}
 > {.is-info}
 > {.is-info}
