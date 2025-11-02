@@ -2,7 +2,7 @@
 title: 已解释的图像类型
 description:
 published: false
-date: 2025-11-02T13:00:17.438Z
+date: 2025-11-02T13:00：17.438Z
 tags:
 editor: markdown
 dateCreated: 2025-10-25T18：12：07.047Z
@@ -10,33 +10,35 @@ dateCreated: 2025-10-25T18：12：07.047Z
 
 # 2. 介绍信息
 
-This page explains the differences between the available image types provided for our platform. Each image type is built using a different Linux kernel base or is tailored in a way that affects hardware support, stability, and update frequency. Understanding these differences will help you choose the image that best fits your development or production needs.
+此页解释了为我们的平台提供的可用图像类型之间的差异。 每个图像类型都是使用不同的Linux内核基础构建的，或者是以影响硬件支持、稳定性和更新频率的方式设计的。 理解这些差异将有助于您选择最适合您开发或生产需要的图像。
 
-# 2. Device Images
+# 1. 设备图像
 
-We offer so called "device images". These images are mostly based on a reference kernel made by the SOC manufacturer, ensuring optimal hardware support while relying on a kernel that is poorly maintained. Normally, these kernels function well at release but deteriorate over time as new features are added to the kernel and required by software.
+我们提供了所谓的“设备图像”。 这些图像主要是基于SOC制造商制作的参考内核。 确保最佳硬件支持，同时依靠维护不良的内核。 通常情况下，这些内核在释放时运行良好，但随着时间的推移，随着新功能被添加到内核并被软件所需要而恶化。
 
-Of course, we do all we can to address the degradation of the kernel, but there are limits to what can be done. Think of these images like Raspberry Pi's Raspberry OS .img file that one must flash onto an SD card — device images are basically that but not for a Raspberry Pi.
+当然，我们尽力解决内心退化问题，但可以做的工作是有限的。 想想像树莓派的树莓操作系统这样的图像。 必须刷入SD卡的 mg 文件 — 设备图像基本上是那些，但不是树莓派的图像。
 
-> We want to provide mainline support for a handful of devices we currently ship only device images for.
+> 我们想要为我们目前只运送设备图像的几个设备提供主线支持。
 > [Click here](/en/campaigns/mainline-campaign) for more info.
 > {.is-info}
 
-# 3. ISO Images
+# 4. ISO 图像
 
-If you have ever installed Ubuntu or Arch Linux on your PC, you should be familiar with ISO images. These are virtual CD images that can be booted by your UEFI-based system. Burn them onto a disk or USB stick, and your firmware should pick it up.
+如果您已经在您的PC上安装了 Ubuntu 或 Arch Linux，您应该熟悉ISO 图像。 这些是您基于 UEFI 的系统可以启动的虚拟CD图像。 将它们刻录在磁盘或 USB 棍棒上，您的固件应该拿起它。
 
-## 3.1 Legacy (stable)
+## 3.1 遗产（稳定）
 
-These ISO images are based on the reference (also known as BSP) kernel made by the manufacturer of your board and/or SOC. Like device images, they offer the best hardware support initially but deteriorate quickly.
+这些ISO图像基于您的棋盘制造商和/或SOC制造的引用(也称为BSP)。 像设备图像一样，它们最初提供最好的硬件支持，但很快下降。
 
-> Those images are **not** available for the x86_64 architecture, as mainline kernel support is fully fleshed out here.
+> 这些图像**没有**可供x86_64架构使用，因为主线内核支持在这里完全充实。
+> 快乐游戏！
+> {.is-success}
 > {.is-success}
 
-## 3.2 Cutting Edge
+## 3.2 切割边缘
 
-These ISO images are based on the linux-next branch of the mainline kernel. While hardware support may not be optimal, they do include the latest and most advanced features of the Linux kernel.
+这些ISO 图像基于主线内核的下一个分支。 虽然硬件支持可能不是最佳的，但它们确实包含Linux内核的最新和最先进的功能。
 
-# 4. What image may i use?
+# 5. 我可以使用什么图像？
 
-This decision depends on your board and the environment in which you want to use it. If you plan to use your board as a desktop, we generally recommend using legacy (also known as BSP) based images. If you are using your board as a server, we would suggest opting for cutting-edge (mainline-based) images, as they provide enhanced security and more bug fixes.
+此决定取决于您的董事会和您想要使用它的环境。 如果您打算使用您的版面作为桌面，我们通常建议使用旧版(也称为BSP)的图像。 如果你正在使用你的棋盘作为一个服务器，我们建议选择尖端(基于主线的)图像， 因为它们提供了更强大的安全和更多的错误修复。
