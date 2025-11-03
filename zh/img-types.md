@@ -2,7 +2,7 @@
 title: 已解释的图像类型
 description:
 published: false
-date: 2025-11-03T08:00:19.903Z
+date: 2025-11-03T08:00：19.903Z
 tags:
 editor: markdown
 dateCreated: 2025-10-25T18：12：07.047Z
@@ -39,8 +39,8 @@ dateCreated: 2025-10-25T18：12：07.047Z
 
 这些ISO 图像基于主线内核的下一个分支。 虽然硬件支持可能不是最佳的，但它们确实包含Linux内核的最新和最先进的功能。
 
-# 5. What image should i use?
+# 5. 我应该使用什么图像？
 
 此决定取决于您的董事会和您想要使用它的环境。 如果您打算使用您的版面作为桌面，我们通常建议使用旧版(也称为BSP)的图像。 如果你正在使用你的棋盘作为一个服务器，我们建议选择尖端(基于主线的)图像， 因为它们提供了更强大的安全和更多的错误修复。
 
-If you are unsure if a feature you need is supported with the mainline kernel, have a look at the device specific page for your board. For every board we ship a mainline kernel, there is a table about supported features.
+如果您不确定您需要的功能是否支持主线内核， 查看您的看板的设备特定页面。 对于我们运输一个主线内核的每个棋盘，都有一个关于支持功能的表。
