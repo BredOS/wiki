@@ -25,7 +25,7 @@ BredOS 在 [https://github.com/BredOS/linux-bredos](https://github.com/BredOS/li
 
 ## 2.2 使用 PKGBUILD 建造BredOS 内核
 
-Like any custom PKGBUILD for BredOS, the kernel PKGBUILD can also be found at [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds).
+就像任何自定义的 BredOS PKGBUILD一样，内核也可以在 [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds)找到。
 
 - 复制资源库：
 
@@ -33,7 +33,7 @@ Like any custom PKGBUILD for BredOS, the kernel PKGBUILD can also be found at [h
 git clone https://github.com/BredOS/sbc-pkgbuilding
 ```
 
-This creates a folder with the name `sbc-pkgbuilds` in your current directory, which holds any custom package from our repository, including the kernel PKGBUILD.
+这将创建一个名为`sbc-pkgbuilds`的文件夹，在当前目录中保存我们仓库中的任何自定义包，包括内核PKGBUILD。
 
 - 更改内核PKGBUILD目录：
 
@@ -42,7 +42,7 @@ cd sbc-pkgbuils
 cd linux-rockchip-rkr3
 ```
 
-- The contents of that folder should be as follows:
+- 该文件夹的内容应如下：
 
 ```
 PKGBUILD
@@ -58,14 +58,14 @@ linux.preset
 毫克-西文
 ```
 
-> While the parameter `-s` automatically installs all necessary dependencies, the parameter `-i` installs the package after successful compiling.
+> 虽然参数 `-s` 会自动安装所有必要的依赖关系，但参数 `-i` 会在编译成功后安装包。
 > {.is-info}
 
 ## 2.3 不使用 PKGBUILD 构建内核。
 
-It is also possible to build the kernel without using a PKGBUILD. This can be helpful if you wish to compile on a non-Arch-based Linux distribution, on Windows with WSL, or if you want to compile for a different CPU architecture.
+不使用PKGBUILD也可以建造内核。 如果您想要编译非基于Archy的 Linux 发行版，这将是有用的。 在 WSL 窗口上，或者如果您想要编译不同的 CPU 架构。
 
-- Install all necessary dependencies on your system. For Arch-based distribution the command is:
+- 安装所有必要的依赖于您的系统。 基于归档的分配命令是：
 
 ```
 sudo pacman -Syu base-devel
@@ -83,7 +83,7 @@ sudo pacman -S aarch64-linux-gnu-gcc
 git clone -b rk6.1-rkr3 https://github.com/BredOS/linux-bredos
 ```
 
-> If you want to build a different branch, such as `rk-mainline`, set the `-b` parameter accordingly.
+> 如果你想要构建一个不同的分支，例如`rk-mainline`, 相应设置`-b`参数。
 > {.is-info}
 
 - 更改目录：
@@ -92,13 +92,13 @@ git clone -b rk6.1-rkr3 https://github.com/BredOS/linux-bredos
 cd linux-bredos
 ```
 
-- If your compilation system is already based on the target CPU architecture, simply use:
+- 如果您的编译系统已经基于目标CPU结构，只需使用：
 
 ```bash
 make -j$(nproc)
 ```
 
-- If not, we need to cross-compile the kernel with (for building a aarch64 kernel):
+- 如果没有，我们需要用内核来交叉编译内核(用于构建无序64内核)：
 
 ```bash
 make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
