@@ -1,8 +1,8 @@
 ---
 title: Kernel modding
 description: 
-published: true
-date: 2025-09-17T09:55:53.063Z
+published: false
+date: 2025-11-03T08:37:36.045Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -10,26 +10,79 @@ dateCreated: 2024-11-11T11:49:44.206Z
 
 # 1. Introduction
 
-This guide primarily focuses on RK3588 and the `linux-rockchip-rkr3` kernel.
-This guide should however mostly carry over to other kernels.
+This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other Rockchip-based kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for ARM64 hardware, this article aims to provide a clear and practical starting point.
 
 # 2. Obtaining the kernel or it's source code
 ## 2.1 BredOS kernel Repository
 
-BredOS stores it's `linux-rockchip` kernel fork at:
-https://github.com/BredOS/linux-bredos
+BredOS stores it's `linux-rockchip` kernel fork at [https://github.com/BredOS/linux-bredos](https://github.com/BredOS/linux-bredos).
 
-The branch used for the rkr3 kernel is `rk6.1-rkr3`.
-The mainline variant is instead at `rk-mainline`.
+The branch used for the rkr3 kernel is `rk6.1-rkr3`, the mainline variant is instead at `rk-mainline`. While rkr3 (aka Legacy (stable) aka BSP) is the kernel we ship with our "device specific images", mainline is the most up-to-date kernel which still has bugs and missing features.
 
-## 2.2 BredOS kernel PKGBUILD
+> For more info have a look [here](/en/img-types).
+{.is-info}
 
-The kernel is built and packages with the PKGBUILDs from:
-https://github.com/BredOS/sbc-pkgbuilds
 
-## 2.3 Building the kernel
+## 2.2 Building BredOS kernel with PKGBUILD
+Like any costum PKGBUILD for BredOS, the kernel PKGBUILD can also be found at [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds). 
+- Clone the repository with:
+```
+git clone https://github.com/BredOS/sbc-pkgbuilds
+```
 
-- Under ARM systems, just use: 
+This creates a folder with the name `sbc-pkgbuilds` in your current directory, which holds any costum package from our repository including the kernel PKGBUILD.
+
+- Change directory to the kernel PKGBUILD with:
+```
+cd sbc-pkgbuilds
+cd linux-rockchip-rkr3
+```
+
+- The contents of that folder should be as the following:
+```
+PKGBUILD
+bredos-update-dtbs
+config
+dtb-update.hook
+linux.preset
+```
+
+- To compile and packages the kernel, run:
+```
+makepkg -si
+```
+
+> While the parameter `-s` automatically installs all needed dependencies, the parameter `-i` installs the package after successful compiling.
+{.is-info}
+
+
+## 2.3 Building the kernel without PKGBUILD
+It is also possible to build the kernel without the use of PKGBUILD. This can be helpful if you want to compile on a non-Arch-based linux distrubiution, on Windows with WSL, or if you want to compile on a different cpu architecture.
+
+- Install all needed dependencies on your system. For Arch-based distrobutions the command is:
+```
+sudo pacman -Syu base-devel
+```
+
+- If you want to cross-compile a aarch64 kernel on a x86_64 system install:
+```
+sudo pacman -S aarch64-linux-gnu-gcc
+```
+
+- Then clone our kernel repository with:
+```
+git clone -b rk6.1-rkr3 https://github.com/BredOS/linux-bredos
+```
+
+> If you want to build a different branch, for example `rk-mainline`, set the `-b` parameter accordingly.
+{.is-info}
+
+- Change directory with:
+```
+cd linux-bredos
+```
+
+- If your on a ARM system, just use: 
 ```bash
 make -j$(nproc)
 ```
@@ -48,5 +101,4 @@ You should find the kernel image in the `arch/arm64/boot/` directory.
 
 # 3. Compiling Device Trees and Overlays
 
-A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs is now available.
-Click [here](/Tools#dtsc-helper-script) to view it.
+A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs is now available. Click [here](/Tools#dtsc-helper-script) to view it.
