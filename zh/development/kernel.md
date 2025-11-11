@@ -2,7 +2,7 @@
 title: 内核moding
 description:
 published: false
-date: 2025-11-03T08:51:43.991Z
+date: 2025-11T07:11:29.959Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:49:44.206Z
@@ -23,9 +23,9 @@ BredOS 在 [https://github.com/BredOS/linux-bredos](https://github.com/BredOS/li
 > 更多信息有一个外观 [here](/en/img-types)。
 > {.is-info}
 
-## 2.2 使用 PKGBUILD 建造BredOS 内核
+## 2.2 Building BredOS 内核
 
-就像任何自定义的 BredOS PKGBUILD一样，内核也可以在 [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds)找到。
+就像任何自定义的 BredOS PKGBUILD一样，内核也可以在 [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds)找到。 在这个示例中，我们生成rkr3内核，但本指南适用于我们仓库中发现的所有Linux内核PKGBUILD。
 
 - 复制资源库：
 
@@ -61,55 +61,53 @@ linux.preset
 > 虽然参数 `-s` 会自动安装所有必要的依赖关系，但参数 `-i` 会在编译成功后安装包。
 > {.is-info}
 
-## 2.3 不使用 PKGBUILD 构建内核。
+## 2.3 用补丁构建内核。
 
-不使用PKGBUILD也可以建造内核。 如果您想要编译非基于Archy的 Linux 发行版，这将是有用的。 在 WSL 窗口上，或者如果您想要编译不同的 CPU 架构。
+要用补丁构建内核，我们需要实现补丁到PKGBUILD。 Follow the section [2.2 Building BredOS Kernel](/en/development/kernel#h-2-2-building-bredos-kernel) but dont run the command `makepkg -si` yet.
 
-- 安装所有必要的依赖于您的系统。 基于归档的分配命令是：
-
-```
-sudo pacman -Syu base-devel
-```
-
-- 如果您想要在一个x86_64 系统安装上交叉编译一个arch64内核：
+- 这是补丁的示例代码：
 
 ```
-sudo pacman -S aarch64-linux-gnu-gcc
+在这里添加补丁
 ```
 
-- 然后克隆我们的内核仓库：
+保存您的补丁到文件`PKGBUILD`旁边的.patch文件。 在这个示例中，我们将以上代码保存为 `example.patch` 。
+
+- 要实现补丁到PKGBUILD，请运行：
 
 ```
-git clone -b rk6.1-rkr3 https://github.com/BredOS/linux-bredos
+nano PKGBUILD
 ```
 
-> 如果你想要构建一个不同的分支，例如`rk-mainline`, 相应设置`-b`参数。
-> {.is-info}
-
-- 更改目录：
+- 查看 "Prepare" 部分。 看起来像这样：
 
 ```
-cd linux-bredos
+prepare() {
+  cd linux-bredos
+
+  cp ${srcdir}/config .config
+}
 ```
 
-- 如果您的编译系统已经基于目标CPU结构，只需使用：
+- 并在“cd linux-bredos”之后添加您的补丁：
 
-```bash
-make -j$(nproc)
+```
+prepare() {
+  cd linux-bredos
+
+  git apply ../../example.patch
+
+  cp ${srcdir}/config .config
+}
 ```
 
-- 如果没有，我们需要用内核来交叉编译内核(用于构建无序64内核)：
+使用 <kbd>CTRL</kbd> + <kbd>X</kbd>保存并关闭，然后使用 <kbd>Y</kbd> 保存。
 
-```bash
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
+- 要编译和打包内核，请运行：
+
 ```
-
-您应该在 `arch/arm64/boot/` 目录中看到图像。
-
-> 在 `sbc-pkgbuilds` 里有一个名为`linux-rockchip-rkr3`的文件夹。
-> 在构建过程中，它应作为当前的工作目录。
-> 在构建过程中，它应作为当前的工作目录。
-> {.is-info}
+毫克-西文
+```
 
 # 3. 编译设备树和叠加
 
