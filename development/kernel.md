@@ -2,7 +2,7 @@
 title: Kernel modding
 description: 
 published: false
-date: 2025-11-03T08:51:43.991Z
+date: 2025-11-11T07:11:29.959Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -23,8 +23,8 @@ The branch used for the rkr3 kernel is `rk6.1-rkr3`, the mainline variant is ins
 {.is-info}
 
 
-## 2.2 Building BredOS kernel with PKGBUILD
-Like any custom PKGBUILD for BredOS, the kernel PKGBUILD can also be found at [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds). 
+## 2.2 Building BredOS Kernel
+Like any custom PKGBUILD for BredOS, the kernel PKGBUILD can also be found at [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds). In this example we build the rkr3 kernel, but this guide applies to all linux-kernel PKGBUILDs found in our repository.
 - Clone the repository with:
 ```
 git clone https://github.com/BredOS/sbc-pkgbuilds
@@ -47,7 +47,7 @@ dtb-update.hook
 linux.preset
 ```
 
-- To compile and packages the kernel, run:
+- To compile and package the kernel, run:
 ```
 makepkg -si
 ```
@@ -56,48 +56,47 @@ makepkg -si
 {.is-info}
 
 
-## 2.3 Building the kernel without PKGBUILD
-It is also possible to build the kernel without using a PKGBUILD. This can be helpful if you wish to compile on a non-Arch-based Linux distribution, on Windows with WSL, or if you want to compile for a different CPU architecture.
+## 2.3 Building the kernel with patches
+To build the kernel with patches we need to implement the patch into PKGBUILD. Follow the section [2.2 Building BredOS Kernel](/en/development/kernel#h-2-2-building-bredos-kernel) but dont run the command `makepkg -si` yet.
 
-- Install all necessary dependencies on your system. For Arch-based distribution the command is:
+- This is the example code of a patch:
 ```
-sudo pacman -Syu base-devel
-```
-
-- If you want to cross-compile a aarch64 kernel on a x86_64 system install:
-```
-sudo pacman -S aarch64-linux-gnu-gcc
+pls add patch here
 ```
 
-- Then clone our kernel repository with:
-```
-git clone -b rk6.1-rkr3 https://github.com/BredOS/linux-bredos
-```
+Save your patch to a .patch file next to the file `PKGBUILD`. In this example we save the code above as `example.patch`.
 
-> If you want to build a different branch, such as `rk-mainline`, set the `-b` parameter accordingly.
-{.is-info}
-
-- Change directory with:
+- To implement the patch into PKGBUILD, run:
 ```
-cd linux-bredos
+nano PKGBUILD
 ```
 
-- If your compilation system is already based on the target CPU architecture, simply use: 
-```bash
-make -j$(nproc)
+- Look up the `prepare` section. It should look like this:
+```
+prepare() {
+  cd linux-bredos
+
+  cp ${srcdir}/config .config
+}
 ```
 
-- If not, we need to cross-compile the kernel with (for building a aarch64 kernel):
-```bash
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- -j$(nproc)
+- And add your patch after `cd linux-bredos`:
+```
+prepare() {
+  cd linux-bredos
+
+  git apply ../../example.patch
+
+  cp ${srcdir}/config .config
+}
 ```
 
-You should find the kernel image in the `arch/arm64/boot/` directory.
+Save and Close with <kbd>CTRL</kbd> + <kbd>X</kbd>, then save with <kbd>Y</kbd>.
 
-> Inside the `sbc-pkgbuilds` repository there is a folder named `linux-rockchip-rkr3`.
-> It should be used as the current working directory during building.
-{.is-info}
-
+- To compile and package the kernel, run:
+```
+makepkg -si
+```
 
 # 3. Compiling Device Trees and Overlays
 
