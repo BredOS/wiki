@@ -2,7 +2,7 @@
 title: 📸🔄 Btrfs Snapshots and Rollback, with Timeshift
 description: 使用 Timeshift 设置Btrfs 快照和系统回滚的综合指南
 published: true
-date: 2025-11-15T07:35:56.043Z
+date: 2025-11-15T07：35：56.043Z
 tags:
 editor: markdown
 dateCreated: 2024-09-27T19：19：08.209Z
@@ -91,7 +91,7 @@ sudo systemctl 启用 --now grub-btrfs.path
 yay -S tift-autosnap
 ```
 
-> `timeshift-autosnap` may require you to restart your device before it works like expected.
+> `timeeshift-autosnap` 可能要求您在设备正常工作之前重新启动。
 > {.is-warning}
 
 ## 3.2：防止重复 GRUB 更新
