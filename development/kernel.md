@@ -12,8 +12,13 @@ dateCreated: 2024-11-11T11:49:44.206Z
 
 This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other Rockchip-based kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for ARM64 hardware, this article aims to provide a clear and practical starting point.
 
+Generally, there are two architectures: ARM64(aarch64) RISC-V. Since many things are not upstreamed into mainline linux yet, vendors like rockchip or Spacemit provide their own kernel forks. 
+
 # 2. Obtaining the kernel or it's source code
 ## 2.1 BredOS kernel Repository
+Currently, BredOS put different kernel source code into different branches in the same repository.
+
+**ARM64 Rockchip devices:**
 
 BredOS stores it's `linux-rockchip` kernel fork at [https://github.com/BredOS/linux-bredos](https://github.com/BredOS/linux-bredos).
 
@@ -22,6 +27,9 @@ The branch used for the rkr3 kernel is `rk6.1-rkr3`, the mainline variant is ins
 > For more info have a look [here](/en/img-types).
 {.is-info}
 
+**RISC-V based devices:**
+
+For Spacemit K1, it's at [https://github.com/BredOS/linux-bredos/tree/k1-6.17.y]
 
 ## 2.2 Building BredOS Kernel
 Like any custom PKGBUILD for BredOS, the kernel PKGBUILD can also be found at [https://github.com/BredOS/sbc-pkgbuilds](https://github.com/BredOS/sbc-pkgbuilds). In this example we build the rkr3 kernel, but this guide applies to all linux-kernel PKGBUILDs found in our repository.
