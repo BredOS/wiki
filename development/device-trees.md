@@ -2,7 +2,7 @@
 title: Device Trees
 description: 
 published: true
-date: 2025-11-17T11:07:02.806Z
+date: 2025-11-17T11:11:01.559Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
@@ -178,9 +178,6 @@ Output: 100.292183593
 Pressure returned is in kPa units.
 ```
 
-# 4. Abbreviations
-```
 *[DT]: Device Tree
 *[DTB]: Device Tree Blob
 *[DTBO]: Device Tree Blob Overlay
-```
