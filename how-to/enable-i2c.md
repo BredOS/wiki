@@ -2,7 +2,7 @@
 title: Enable I2C Interface
 description: 
 published: false
-date: 2025-11-17T12:25:11.947Z
+date: 2025-11-17T12:34:37.968Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-17T10:52:11.550Z
@@ -30,8 +30,8 @@ There are various libraries that provide direct support for the bmp280 sensor.  
 | ![gpio-pin-layout.png](/enable-i2c/gpio-pin-layout.png) |
 
 - To connect your sensor to I2C bus M0 connect it like shown in this chart:
-| Sensor Pin | GPIO Function | GPIO Pin | Pin Color on Board | Pin Color on chart |
-| ---------- | ------------- | -------- | -------- | -------- |
+| Sensor Pin | GPIO Function | GPIO Pin |  Pin Color on Board | Pin Color on chart |
+| ---------- | ------------- | -------- | -------- |
 | VCC | 3.3v | GPIO Pin 1 | Yellow | Red |
 | GND | GND | Any Ground such as GPIO Pin 9 | Black | Blue |
 | SDA | i2c SDA (data) | GPIO Pin 3 | Blue | Pink |
