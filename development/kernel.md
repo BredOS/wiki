@@ -2,7 +2,7 @@
 title: Kernel modding
 description: 
 published: true
-date: 2025-11-17T08:35:19.506Z
+date: 2025-11-17T08:42:44.282Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -12,32 +12,29 @@ dateCreated: 2024-11-11T11:49:44.206Z
 
 This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for hardware, this article aims to provide a clear and practical starting point.
 
-> Check out the [table of branches](#h-211-table-of-branches) to find out which branch to use for your device.
-{.is-info}
-
 
 # 2. Obtaining the kernel or it's source code
 ## 2.1 BredOS kernel Repository
 
 BredOS stores it's `linux-rockchip` kernel fork at [https://github.com/BredOS/linux-bredos](https://github.com/BredOS/linux-bredos).
 
-The branch used for the rkr3 kernel is `rk6.1-rkr3`, the mainline variant is instead at `rk-mainline`. While rkr3 (aka Legacy (stable) aka BSP) is the kernel we ship with our "device specific images", mainline is the most up-to-date kernel which still has bugs and missing features.
+The branch used for the rkr3 kernel is `rk6.1-rkr3`, the mainline variant is instead at `rk-mainline`. 
 
-> For more info have a look [here](/en/img-types).
+> Check out the [table of branches](#h-211-table-of-branches) to find out which branch to use for your device.
 {.is-info}
 
 ### 2.1.1 Table of branches
 
-| Branch | Target Architecture | Target SBCs | Source base |
-|-------|-------|--------|--------|
-| rk6.1-rkr3 | ARM64 | all RK35xx based SBCs | rkr3 Rockchip 6.1 |
-| rk-mainline | ARM64 | all RK35xx based SBCs | linux-next |
-| k1-6.17.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.17 |
-| k1-6.15.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.15 |
-| 6.18.y | x86_64 / ARM64 | all UEFI based devices | linux-next |
-| 6.17.y | x86_64 / ARM64 | all UEFI based devices | linux-6.17 |
-| 6.6.y-cix | ARM64 | all CIX CD81xx based SBCs | cix 6.6 |
-| cix-acpi | ARM64 | all CIX CD81xx based SBCs | linux-next |
+| Branch | Target Architecture | Target SBCs | Source base | PKGBUILD name |
+|-------|-------|--------|--------|--------|
+| rk6.1-rkr3 | ARM64 | all RK35xx based SBCs | rkr3 Rockchip 6.1 | linux-rockchip-rkr3 |
+| rk-mainline | ARM64 | all RK35xx based SBCs | linux-next | linux-rockchip-mainline |
+| k1-6.17.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.17 | linux-spacemit-k1 |
+| k1-6.15.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.15 | linux-spacemit-k1 (need to edit branch) |
+| 6.18.y | x86_64 / ARM64 | all UEFI based devices | linux-next | linux |
+| 6.17.y | x86_64 / ARM64 | all UEFI based devices | linux-6.17 | linux (need to edit branch) |
+| 6.6.y-cix | ARM64 | all CIX CD81xx based SBCs | cix 6.6 | N/A |
+| cix-acpi | ARM64 | all CIX CD81xx based SBCs | linux-next | N/A |
 {.dense}
 
 ## 2.2 Building BredOS Kernel
