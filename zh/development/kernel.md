@@ -1,8 +1,8 @@
 ---
 title: 内核moding
 description:
-published: false
-date: 2025-11-17T07:09:29.628Z
+published: true
+date: 2025-11-17T08:42:44.282Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:49:44.206Z
@@ -10,10 +10,7 @@ dateCreated: 2024-11T11:49:44.206Z
 
 # 4. 重要目录
 
-This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for hardware, this article aims to provide a clear and practical starting point.
-
-> Check out the table of branches at the end of this article to find out which branch to use for your device.
-> {.is-info}
+本指南主要侧重于RK3588 和 linux-rockchip-rkr3 内核； 然而，一般进程和许多概念也应适用于其他内核和装置。 您是否正在开发自定义固件，有助于上游内核支持。 或只是设法了解Linux内核是如何为硬件构建的，本条旨在提供一个明确和实际的出发点。
 
 # 2. BredOS kernel PKGBUILD
 
@@ -21,10 +18,24 @@ This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; howev
 
 BredOS 在 [https://github.com/BredOS/linux-bredos](https://github.com/BredOS/linux-bredos) 存储它的 `linux-rockchip` 内核叉。
 
-用于rkr3内核的分支是 `rk6.1-rkr3`，主线变量则在 `rk-mainline` 处。 当rkr3(又名遗产(稳定)又名BSP)是我们用我们的“设备特定图像”运送的内核时， 主线是仍然有缺陷和缺失功能的最新内核。
+用于rkr3内核的分支是 `rk6.1-rkr3`，主线变量则在 `rk-mainline` 处。
 
-> 更多信息有一个外观 [here](/en/img-types)。
+> 查看[branches的表格](#h-211-table-of-branches) 来找出您设备要使用的分支。
 > {.is-info}
+
+### 2.1.1 分行表
+
+| 分支                                        | 目标结构                                | Target SBCs          | 源代码基础                             | PKGBUILD 名称                                   |
+| ----------------------------------------- | ----------------------------------- | -------------------- | --------------------------------- | --------------------------------------------- |
+| rk6.1-rkr3                | ARM64                               | 所有基于 RK35xx 的 SBC    | rkr3 Rockchip 6.1 | linux-rockchip-rkr3                           |
+| rk-主线                                     | ARM64                               | 所有基于 RK35xx 的 SBC    | 下一个 linux                         | linux-rockchip-mainline                       |
+| k1-6.17.y | RISC-V                              | 所有空格 K1/M1 基于 SBC    | linux-6.17        | linux-spacemit-k1                             |
+| k1-6.15.y | RISC-V                              | 所有空格 K1/M1 基于 SBC    | linux-6.15        | linux-spacemit-K1 (需要编辑分支) |
+| 6.18.y    | x86_64 / ARM64 | 所有基于 UEFI 的设备        | 下一个 linux                         | linux                                         |
+| 6.17.y    | x86_64 / ARM64 | 所有基于 UEFI 的设备        | linux-6.17        | linux (需要编辑分支)             |
+| 6.6.y-cix | ARM64                               | 所有 CIX CD81xx 基于 SBC | cix 6.6           | 无                                             |
+| ix-acpi                                   | ARM64                               | 所有 CIX CD81xx 基于 SBC | 下一个 linux                         | 无                                             |
+| {.dense}                  |                                     |                      |                                   |                                               |
 
 ## 2.2 Building BredOS 内核
 
@@ -71,8 +82,23 @@ linux.preset
 - 这是补丁的示例代码：
 
 ```
-在这里添加补丁
+diff --git a/init/version-timestamp.c b/init/version-timestamp.c
+index 1111111111..2222222222 100644
+--- a/init/version-timestamp.c
++++ b/init/version-timestamp.c
+@@ -29,8 +29,10 @@
+ 
+ /* FIXED STRINGS! Don't touch! */
+ const char linux_banner[] =
+-       "Linux version " UTS_RELEASE " (" LINUX_COMPILE_BY "@"
+-       LINUX_COMPILE_HOST ") (" LINUX_COMPILER ") " UTS_VERSION "\n";
++       "Linux version this-is-a-private-kernel-dont-touch ";
+ 
+-- 
 ```
+
+> 这个示例补丁设置了一个固定的名称，而不是生成给您编译的内核。
+> {.is-info}
 
 保存您的补丁到文件`PKGBUILD`旁边的.patch文件。 在这个示例中，我们将以上代码保存为 `example.patch` 。
 
@@ -117,15 +143,3 @@ prepare() {
 使用`dtsc`、BredOS工具编译DTB和DTBO的完整指南现已可供使用。
 点击 [here]/Tools#dtsc-helper-script) 查看它。 Click [here](/Tools#dtsc-helper-script) to view it.
 
-# 4. Table of branches
-
-| Branch                                    | Target Architecture                 | Target SBCs               | Source base                       |
-| ----------------------------------------- | ----------------------------------- | ------------------------- | --------------------------------- |
-| rk6.1-rkr3                | ARM64                               | all RK35xx based SBCs     | rkr3 Rockchip 6.1 |
-| rk-mainline                               | ARM64                               | all RK35xx based SBCs     | linux-next                        |
-| k1-6.17.y | RISC-V                              | all K1 based SBCs         | linux-6.17        |
-| k1-6.15.y | RISC-V                              | all K1 based SBCs         | linux-6.15        |
-| 6.18.y    | x86_64 / ARM64 | all UEFI based devices    | linux-next                        |
-| 6.17.y    | x86_64 / ARM64 | all UEFI based devices    | linux-6.17        |
-| 6.6.y-cix | ARM64                               | all CIX CD81xx based SBCs | cix 6.6           |
-| cix-acpi                                  | ARM64                               | all CIX CD81xx based SBCs | linux-next                        |
