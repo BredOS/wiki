@@ -2,7 +2,7 @@
 title: Kernel modding
 description: 
 published: true
-date: 2025-11-17T11:00:32.207Z
+date: 2025-11-17T11:05:30.229Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -133,4 +133,6 @@ makepkg -si
 # 3. Compiling Device Trees and Overlays
 
 A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs is now available. Click [here](/Tools#dtsc-helper-script) to view it.
+
+
 
