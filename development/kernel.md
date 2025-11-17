@@ -2,7 +2,7 @@
 title: Kernel modding
 description: 
 published: false
-date: 2025-11-11T07:11:29.959Z
+date: 2025-11-17T07:09:29.628Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -10,7 +10,11 @@ dateCreated: 2024-11-11T11:49:44.206Z
 
 # 1. Introduction
 
-This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other Rockchip-based kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for ARM64 hardware, this article aims to provide a clear and practical starting point.
+This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for hardware, this article aims to provide a clear and practical starting point.
+
+> Check out the table of branches at the end of this article to find out which branch to use for your device.
+{.is-info}
+
 
 # 2. Obtaining the kernel or it's source code
 ## 2.1 BredOS kernel Repository
@@ -101,3 +105,16 @@ makepkg -si
 # 3. Compiling Device Trees and Overlays
 
 A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs is now available. Click [here](/Tools#dtsc-helper-script) to view it.
+
+# 4. Table of branches
+
+| Branch | Target Architecture | Target SBCs | Source base |
+|-------|-------|--------|--------|
+| rk6.1-rkr3 | ARM64 | all RK35xx based SBCs | rkr3 Rockchip 6.1 |
+| rk-mainline | ARM64 | all RK35xx based SBCs | linux-next |
+| k1-6.17.y | RISC-V | all K1 based SBCs | linux-6.17 |
+| k1-6.15.y | RISC-V | all K1 based SBCs | linux-6.15 |
+| 6.18.y | x86_64 / ARM64 | all UEFI based devices | linux-next |
+| 6.17.y | x86_64 / ARM64 | all UEFI based devices | linux-6.17 |
+| 6.6.y-cix | ARM64 | all CIX CD81xx based SBCs | cix 6.6 |
+| cix-acpi | ARM64 | all CIX CD81xx based SBCs | linux-next |
