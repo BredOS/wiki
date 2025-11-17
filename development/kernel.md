@@ -2,7 +2,7 @@
 title: Kernel modding
 description: 
 published: true
-date: 2025-11-17T08:42:44.282Z
+date: 2025-11-17T08:51:20.277Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -119,6 +119,9 @@ prepare() {
   cp ${srcdir}/config .config
 }
 ```
+
+> The tool `makepkg` downloads the source code into `./src/linux-bredos`. Since we have stored the patch file next to the PKGBUILD, the path to our patch file must include `../../`.
+{.is-info}
 
 Save and Close with <kbd>CTRL</kbd> + <kbd>X</kbd>, then save with <kbd>Y</kbd>.
 
