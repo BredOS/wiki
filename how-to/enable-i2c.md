@@ -2,7 +2,7 @@
 title: Enable I2C Interface
 description: 
 published: false
-date: 2025-11-17T12:09:29.224Z
+date: 2025-11-17T12:16:39.960Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-17T10:52:11.550Z
@@ -24,8 +24,11 @@ There are various libraries that provide direct support for the bmp280 sensor.  
 {.is-info}
 
 # 3. Wiring
+- This is what most rk3588 devices Please refer to your specific device's documentation for pin layout
 
 ![gpio-pin-layout.png](/enable-i2c/gpio-pin-layout.png)
+
+- To connect your sensor to I2C bus M0 connect it like shown in this chart:
 | Sensor Pin | GPIO Function | GPIO Pin | Pin Color | 
 | ---------- | ------------- | -------- | -------- |
 | VCC | 3.3v | GPIO Pin 1 | Yellow |
