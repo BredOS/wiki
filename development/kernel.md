@@ -2,7 +2,7 @@
 title: Kernel modding
 description: 
 published: true
-date: 2025-11-17T08:32:12.597Z
+date: 2025-11-17T08:34:39.995Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -12,7 +12,7 @@ dateCreated: 2024-11-11T11:49:44.206Z
 
 This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for hardware, this article aims to provide a clear and practical starting point.
 
-> Check out the [table of branches](/en/development/kernel#h-2-1-1-table-of-branches) to find out which branch to use for your device.
+> Check out the [table of branches](#h-2-1-1-table-of-branches) to find out which branch to use for your device.
 {.is-info}
 
 
