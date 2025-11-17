@@ -2,7 +2,7 @@
 title: 内核moding
 description:
 published: true
-date: 2025-11-17T08:42:44.282Z
+date: 2025-11-17T08:51:20.277Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:49:44.206Z
@@ -129,6 +129,9 @@ prepare() {
   cp ${srcdir}/config .config
 }
 ```
+
+> 工具`makepkg` 下载源代码到 `./src/linux-bredos` 。 既然我们已经在PKGBUILD旁存储了补丁文件，我们的补丁文件路径必须包含 "../../"。
+> {.is-info}
 
 使用 <kbd>CTRL</kbd> + <kbd>X</kbd>保存并关闭，然后使用 <kbd>Y</kbd> 保存。
 
