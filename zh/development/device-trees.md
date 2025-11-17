@@ -2,7 +2,7 @@
 title: 设备树
 description:
 published: true
-date: 2025-11-17T10:48:34.875Z
+date: 2025-11-17T11：11：01.559Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:50:39.940Z
@@ -109,13 +109,13 @@ nano rk3588-bmp280.dts
 
 ```
 
-- 将 dt 源编译为二进制格式：
+- 将DT源编译为二进制格式：
 
 ```
 dtsc rk3588-bmp280.dts
 ```
 
-> To learn more about the dtsc helper script have a look [here](/Tools#h-3-dtsc-helper-script).
+> 要了解更多关于 dtsc 助手脚本的外观 [here](/Tools#h-3-dtsc-helper-script)。
 > {.is-info}
 
 - 然后移动二进制文件到您的叠加层文件夹：
@@ -206,3 +206,7 @@ cat /sys/devices/platform/feca0000.i2c/i2c-8/8-0076/iio:device1/in_presence_inpu
 
 返回的压力以千帕为单位。
 ```
+
+\*[DT]: Device Tree
+\*[DTB]: Device Tree Blob
+\*[DTBO]: Device Tree Blob Overlay
