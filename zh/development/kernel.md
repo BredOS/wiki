@@ -2,7 +2,7 @@
 title: 内核moding
 description:
 published: false
-date: 2025-11T07:11:29.959Z
+date: 2025-11-17T07:09:29.628Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:49:44.206Z
@@ -10,7 +10,10 @@ dateCreated: 2024-11T11:49:44.206Z
 
 # 4. 重要目录
 
-本指南主要侧重于RK3588 和 linux-rockchip-rkr3 内核； 然而，一般进程和许多概念也应适用于其他基于 Rockchip的内核和装置。 您是否正在开发自定义固件，有助于上游内核支持。 或只是设法了解Linux内核是如何为ARM64硬件构建的，本条旨在提供一个明确和实际的出发点。
+This guide primarily focuses on RK3588 and the linux-rockchip-rkr3 kernel; however, the general process and many of the concepts should also apply to other kernels and devices. Whether you are developing custom firmware, contributing to upstream kernel support, or simply seeking to understand how the Linux kernel is built for hardware, this article aims to provide a clear and practical starting point.
+
+> Check out the table of branches at the end of this article to find out which branch to use for your device.
+> {.is-info}
 
 # 2. BredOS kernel PKGBUILD
 
@@ -113,3 +116,16 @@ prepare() {
 
 使用`dtsc`、BredOS工具编译DTB和DTBO的完整指南现已可供使用。
 点击 [here]/Tools#dtsc-helper-script) 查看它。 Click [here](/Tools#dtsc-helper-script) to view it.
+
+# 4. Table of branches
+
+| Branch                                    | Target Architecture                 | Target SBCs               | Source base                       |
+| ----------------------------------------- | ----------------------------------- | ------------------------- | --------------------------------- |
+| rk6.1-rkr3                | ARM64                               | all RK35xx based SBCs     | rkr3 Rockchip 6.1 |
+| rk-mainline                               | ARM64                               | all RK35xx based SBCs     | linux-next                        |
+| k1-6.17.y | RISC-V                              | all K1 based SBCs         | linux-6.17        |
+| k1-6.15.y | RISC-V                              | all K1 based SBCs         | linux-6.15        |
+| 6.18.y    | x86_64 / ARM64 | all UEFI based devices    | linux-next                        |
+| 6.17.y    | x86_64 / ARM64 | all UEFI based devices    | linux-6.17        |
+| 6.6.y-cix | ARM64                               | all CIX CD81xx based SBCs | cix 6.6           |
+| cix-acpi                                  | ARM64                               | all CIX CD81xx based SBCs | linux-next                        |
