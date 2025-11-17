@@ -1,8 +1,8 @@
 ---
 title: Kernel modding
 description: 
-published: false
-date: 2025-11-17T07:09:29.628Z
+published: true
+date: 2025-11-17T08:17:37.109Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -65,8 +65,23 @@ To build the kernel with patches we need to implement the patch into PKGBUILD. F
 
 - This is the example code of a patch:
 ```
-pls add patch here
+diff --git a/init/version-timestamp.c b/init/version-timestamp.c
+index 1111111111..2222222222 100644
+--- a/init/version-timestamp.c
++++ b/init/version-timestamp.c
+@@ -29,8 +29,10 @@
+ 
+ /* FIXED STRINGS! Don't touch! */
+ const char linux_banner[] =
+-       "Linux version " UTS_RELEASE " (" LINUX_COMPILE_BY "@"
+-       LINUX_COMPILE_HOST ") (" LINUX_COMPILER ") " UTS_VERSION "\n";
++       "Linux version this-is-a-private-kernel-dont-touch ";
+ 
+-- 
 ```
+> This example patch set a fixed name instead of a generated one to your compiled kernel.
+{.is-info}
+
 
 Save your patch to a .patch file next to the file `PKGBUILD`. In this example we save the code above as `example.patch`.
 
@@ -112,8 +127,8 @@ A complete guide for using `dtsc`, the BredOS tool for compiling DTB and DTBOs i
 |-------|-------|--------|--------|
 | rk6.1-rkr3 | ARM64 | all RK35xx based SBCs | rkr3 Rockchip 6.1 |
 | rk-mainline | ARM64 | all RK35xx based SBCs | linux-next |
-| k1-6.17.y | RISC-V | all K1 based SBCs | linux-6.17 |
-| k1-6.15.y | RISC-V | all K1 based SBCs | linux-6.15 |
+| k1-6.17.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.17 |
+| k1-6.15.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.15 |
 | 6.18.y | x86_64 / ARM64 | all UEFI based devices | linux-next |
 | 6.17.y | x86_64 / ARM64 | all UEFI based devices | linux-6.17 |
 | 6.6.y-cix | ARM64 | all CIX CD81xx based SBCs | cix 6.6 |
