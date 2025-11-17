@@ -2,7 +2,7 @@
 title: 内核moding
 description:
 published: true
-date: 2025-11-17T08:51:20.277Z
+date: 2025-11-17T11:05:30.229Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:49:44.206Z
@@ -25,17 +25,17 @@ BredOS 在 [https://github.com/BredOS/linux-bredos](https://github.com/BredOS/li
 
 ### 2.1.1 分行表
 
-| 分支                                        | 目标结构                                | Target SBCs          | 源代码基础                             | PKGBUILD 名称                                   |
-| ----------------------------------------- | ----------------------------------- | -------------------- | --------------------------------- | --------------------------------------------- |
-| rk6.1-rkr3                | ARM64                               | 所有基于 RK35xx 的 SBC    | rkr3 Rockchip 6.1 | linux-rockchip-rkr3                           |
-| rk-主线                                     | ARM64                               | 所有基于 RK35xx 的 SBC    | 下一个 linux                         | linux-rockchip-mainline                       |
-| k1-6.17.y | RISC-V                              | 所有空格 K1/M1 基于 SBC    | linux-6.17        | linux-spacemit-k1                             |
-| k1-6.15.y | RISC-V                              | 所有空格 K1/M1 基于 SBC    | linux-6.15        | linux-spacemit-K1 (需要编辑分支) |
-| 6.18.y    | x86_64 / ARM64 | 所有基于 UEFI 的设备        | 下一个 linux                         | linux                                         |
-| 6.17.y    | x86_64 / ARM64 | 所有基于 UEFI 的设备        | linux-6.17        | linux (需要编辑分支)             |
-| 6.6.y-cix | ARM64                               | 所有 CIX CD81xx 基于 SBC | cix 6.6           | 无                                             |
-| ix-acpi                                   | ARM64                               | 所有 CIX CD81xx 基于 SBC | 下一个 linux                         | 无                                             |
-| {.dense}                  |                                     |                      |                                   |                                               |
+| 分支                                                                                                 | 目标结构                                | Target SBCs          | 源代码基础                             | PKGBUILD 名称                                                                                          |
+| -------------------------------------------------------------------------------------------------- | ----------------------------------- | -------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| [rk6.1-rkr3](https://github.com/BredOS/linux-bredos/tree/rk6.1-rkr3)               | ARM64                               | 所有基于 RK35xx 的 SBC    | rkr3 Rockchip 6.1 | [linux-rockchip-rkr3](https://github.com/BredOS/sbc-pkgbuilds/tree/main/linux-rockchip-rkr3)         |
+| [rk-mainline](https://github.com/BredOS/linux-bredos/tree/rk-mainline)                             | ARM64                               | 所有基于 RK35xx 的 SBC    | 下一个 linux                         | [linux-rockchip-mainline](https://github.com/BredOS/sbc-pkgbuilds/tree/main/linux-rockchip-mainline) |
+| [k1-6.17.y](https://github.com/BredOS/linux-bredos/tree/k1-6.17.y) | RISC-V                              | 所有空格 K1/M1 基于 SBC    | linux-6.17        | [linux-spacemit-k1](https://github.com/BredOS/sbc-pkgbuilds/tree/main/linux-spacemit-k1)             |
+| [k1-6.15.y](https://github.com/BredOS/linux-bredos/tree/k1-6.15.y) | RISC-V                              | 所有空格 K1/M1 基于 SBC    | linux-6.15        | linux-spacemit-K1 (需要编辑分支)                                                        |
+| [6.18.y](https://github.com/BredOS/linux-bredos/tree/6.18.y)       | x86_64 / ARM64 | 所有基于 UEFI 的设备        | 下一个 linux                         | [linux](https://github.com/BredOS/sbc-pkgbuilds/tree/main/linux)                                     |
+| [6.17.y](https://github.com/BredOS/linux-bredos/tree/6.17.y)       | x86_64 / ARM64 | 所有基于 UEFI 的设备        | linux-6.17        | linux (需要编辑分支)                                                                    |
+| [6.6.y-cix](https://github.com/BredOS/linux-bredos/tree/6.6.y-cix) | ARM64                               | 所有 CIX CD81xx 基于 SBC | cix 6.6           | 无                                                                                                    |
+| [cix-acpi](https://github.com/BredOS/linux-bredos/tree/cix-acpi)                                   | ARM64                               | 所有 CIX CD81xx 基于 SBC | 下一个 linux                         | 无                                                                                                    |
+| {.dense}                                                                           |                                     |                      |                                   |                                                                                                      |
 
 ## 2.2 Building BredOS 内核
 
@@ -145,4 +145,6 @@ prepare() {
 
 使用`dtsc`、BredOS工具编译DTB和DTBO的完整指南现已可供使用。
 点击 [here]/Tools#dtsc-helper-script) 查看它。 Click [here](/Tools#dtsc-helper-script) to view it.
+
+
 
