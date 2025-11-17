@@ -2,7 +2,7 @@
 title: Kernel modding
 description: 
 published: true
-date: 2025-11-17T08:51:20.277Z
+date: 2025-11-17T10:57:52.891Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:49:44.206Z
@@ -27,14 +27,14 @@ The branch used for the rkr3 kernel is `rk6.1-rkr3`, the mainline variant is ins
 
 | Branch | Target Architecture | Target SBCs | Source base | PKGBUILD name |
 |-------|-------|--------|--------|--------|
-| rk6.1-rkr3 | ARM64 | all RK35xx based SBCs | rkr3 Rockchip 6.1 | linux-rockchip-rkr3 |
-| rk-mainline | ARM64 | all RK35xx based SBCs | linux-next | linux-rockchip-mainline |
-| k1-6.17.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.17 | linux-spacemit-k1 |
-| k1-6.15.y | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.15 | linux-spacemit-k1 (need to edit branch) |
-| 6.18.y | x86_64 / ARM64 | all UEFI based devices | linux-next | linux |
-| 6.17.y | x86_64 / ARM64 | all UEFI based devices | linux-6.17 | linux (need to edit branch) |
-| 6.6.y-cix | ARM64 | all CIX CD81xx based SBCs | cix 6.6 | N/A |
-| cix-acpi | ARM64 | all CIX CD81xx based SBCs | linux-next | N/A |
+| [rk6.1-rkr3](https://github.com/BredOS/linux-bredos/tree/rk6.1-rkr3) | ARM64 | all RK35xx based SBCs | rkr3 Rockchip 6.1 | linux-rockchip-rkr3 |
+| [rk-mainline](https://github.com/BredOS/linux-bredos/tree/rk-mainline) | ARM64 | all RK35xx based SBCs | linux-next | linux-rockchip-mainline |
+| [k1-6.17.y](https://github.com/BredOS/linux-bredos/tree/k1-6.17.y) | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.17 | linux-spacemit-k1 |
+| [k1-6.15.y](https://github.com/BredOS/linux-bredos/tree/k1-6.15.y) | RISC-V | all Spacemit K1/M1 based SBCs | linux-6.15 | linux-spacemit-k1 (need to edit branch) |
+| [6.18.y](https://github.com/BredOS/linux-bredos/tree/6.18.y) | x86_64 / ARM64 | all UEFI based devices | linux-next | linux |
+| [6.17.y](https://github.com/BredOS/linux-bredos/tree/6.17.y) | x86_64 / ARM64 | all UEFI based devices | linux-6.17 | linux (need to edit branch) |
+| [6.6.y-cix](https://github.com/BredOS/linux-bredos/tree/6.6.y-cix) | ARM64 | all CIX CD81xx based SBCs | cix 6.6 | N/A |
+| [cix-acpi](https://github.com/BredOS/linux-bredos/tree/cix-acpi) | ARM64 | all CIX CD81xx based SBCs | linux-next | N/A |
 {.dense}
 
 ## 2.2 Building BredOS Kernel
