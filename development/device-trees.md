@@ -2,7 +2,7 @@
 title: Device Trees
 description: 
 published: true
-date: 2025-11-17T09:53:51.898Z
+date: 2025-11-17T10:44:55.079Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
@@ -90,7 +90,7 @@ nano rk3588-bmp280.dts
 - Compile the dt source to a binary format:
 
 ```
-dtsc -I dts -O dtb rk3588-bmp280.dts -o rk3588-bmp280.dtbo
+dtsc -o rk3588-bmp280.dtbo rk3588-bmp280.dts
 ```
 
 - Then move the binary to your overlay folder:
