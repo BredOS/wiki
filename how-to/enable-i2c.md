@@ -2,7 +2,7 @@
 title: Enable I2C Interface
 description: 
 published: false
-date: 2025-11-17T12:16:39.960Z
+date: 2025-11-17T12:23:21.661Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-17T10:52:11.550Z
@@ -24,18 +24,20 @@ There are various libraries that provide direct support for the bmp280 sensor.  
 {.is-info}
 
 # 3. Wiring
-- This is what most rk3588 devices Please refer to your specific device's documentation for pin layout
+- This is what most RK3588 devices GPIO layout is. Please refer to your specific device's documentation for pin layout!
 
-![gpio-pin-layout.png](/enable-i2c/gpio-pin-layout.png)
+![gpio-pin-layout.png](/enable-i2c/gpio-pin-layout.png =90%x)
 
 - To connect your sensor to I2C bus M0 connect it like shown in this chart:
-| Sensor Pin | GPIO Function | GPIO Pin | Pin Color | 
-| ---------- | ------------- | -------- | -------- |
-| VCC | 3.3v | GPIO Pin 1 | Yellow |
-| GND | GND | Any Ground such as GPIO Pin 9 | Black |
-| SDA | i2c SDA (data) | GPIO Pin 3 | Blue | 
-| SCL | i2c SCL (clock) | GPIO Pin 5 | Blue |
+| Sensor Pin | GPIO Function | GPIO Pin | Pin Color on Board | Pin Color on chart |
+| ---------- | ------------- | -------- | -------- | -------- |
+| VCC | 3.3v | GPIO Pin 1 | Yellow | Red |
+| GND | GND | Any Ground such as GPIO Pin 9 | Black | Blue |
+| SDA | i2c SDA (data) | GPIO Pin 3 | Blue | Pink |
+| SCL | i2c SCL (clock) | GPIO Pin 5 | Blue | Pink |
 
+> Please double-check the pin layout on your board. A wrongly wired sensor may not function properly or could even be damaged beyond repair!
+{.is-warning}
 
 
 
