@@ -2,7 +2,7 @@
 title: 启用 I2C 接口
 description:
 published: false
-date: 2025-11-17T10:52：11.550Z
+date: 2025-11-17T12:34:37.968Z
 tags:
 editor: markdown
 dateCreated: 2025-11-17T10:52：11.550Z
@@ -23,12 +23,20 @@ dateCreated: 2025-11-17T10:52：11.550Z
 
 # 4. Wiring
 
-| 传感器Pin | GPIO 功能                           | GPIO Pin           | 固定颜色 |
-| ------ | --------------------------------- | ------------------ | ---- |
-| VCC    | 3.3v              | GPIO Pin 1         | 黄色   |
-| GND    | GND                               | 任何地面，例如 GPIO Pin 9 | 黑色   |
-| SDA    | i2c SDA (data) | GPIO Pin 3         | 蓝色   |
-| SCL    | i2c SCL (时钟)   | GPIO Pin 5         | 蓝色   |
+- 这是最多的 RK3588 设备 GPIO 布局。 请参阅您特定设备的文档以供引脚布局！| Typical RK3588 GPIO Pin Layout                                          |
+  | ----------------------------------------------------------------------- |
+  | ![gpio-pin-layout.png](/enable-i2c/gpio-pin-layout.png) |
+
+- 若要将您的传感器连接到I2C bus M0，就要将它连接到此图表中显示的它：
+  \| 传感器Pin | GPIO 功能|GPIO Pin 板上的颜色|图表上的固定颜色|
+  \| ------------ | ------------ | -------- |
+  \| VCC | 3。 v | GPIO Pin 1 | 黄色| 红色|
+  \| GND | GND | GND | 任何地面，例如 GPIO Pin 9 | 黑色| 蓝色|
+  \| SDA | i2c SDA (数据) | GPIO Pin 3 | 蓝色|
+  \| SCL | i2c SCL (时钟) | GPIO Pin 5 | 蓝色| 粉红色|
+
+> 请仔细检查您面板上的引脚布局。 一个错误的有线传感器可能无法正常工作，甚至可能被损坏而无法修复！
+> {.is-info}
 
 # 5. 检查连接到哪个i2c总线？
 
