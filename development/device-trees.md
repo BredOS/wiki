@@ -2,7 +2,7 @@
 title: Device Trees
 description: 
 published: true
-date: 2025-11-17T09:34:50.502Z
+date: 2025-11-17T09:53:51.898Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
@@ -43,7 +43,7 @@ Then edit it to match your device tree path. Save and reboot your system.
 {.is-info}
 
 
-# 3. Generate a Device Tree Overlay
+# 3. Creating an device tree overlay from scratch
 
 > Please consider reviewing [How to enable DTBOs](/how-to/how-to-enable-dtbos) before proceeding with this article.
 {.is-info}
@@ -90,7 +90,7 @@ nano rk3588-bmp280.dts
 - Compile the dt source to a binary format:
 
 ```
-dtc -I dts -O dtb rk3588-bmp280.dts -o rk3588-bmp280.dtbo
+dtsc -I dts -O dtb rk3588-bmp280.dts -o rk3588-bmp280.dtbo
 ```
 
 - Then move the binary to your overlay folder:
