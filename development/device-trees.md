@@ -2,7 +2,7 @@
 title: Device Trees
 description: 
 published: true
-date: 2025-11-17T10:48:34.875Z
+date: 2025-11-17T11:07:02.806Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-11T11:50:39.940Z
@@ -87,7 +87,7 @@ nano rk3588-bmp280.dts
 
 ```
 
-- Compile the dt source to a binary format:
+- Compile the DT source to a binary format:
 
 ```
 dtsc rk3588-bmp280.dts
@@ -176,4 +176,11 @@ cat /sys/devices/platform/feca0000.i2c/i2c-8/8-0076/iio:device1/in_pressure_inpu
 Output: 100.292183593
 
 Pressure returned is in kPa units.
+```
+
+# 4. Abbreviations
+```
+*[DT]: Device Tree
+*[DTB]: Device Tree Blob
+*[DTBO]: Device Tree Blob Overlay
 ```
