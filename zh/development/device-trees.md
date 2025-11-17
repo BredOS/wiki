@@ -2,7 +2,7 @@
 title: 设备树
 description:
 published: true
-date: 2025-11-17T09:34:50.502Z
+date: 2025-11-17T10:48:34.875Z
 tags:
 editor: markdown
 dateCreated: 2024-11T11:50:39.940Z
@@ -63,7 +63,7 @@ fdt /dtbs/rockchip/xxx.dtb
 > {.is-info}
 > {.is-info}
 
-# 4. 生成设备树覆盖
+# 4. 从头创建设备树叠加
 
 > 在继续本篇文章之前，请考虑审查[如何启用 DTBOs](/how-to/how-to-enable-dtbos)。
 > {.is-info}
@@ -112,8 +112,11 @@ nano rk3588-bmp280.dts
 - 将 dt 源编译为二进制格式：
 
 ```
-dtc -I dts -O dtb rk3588-bmp280.dts -o rk3588-bmp280.dtbo
+dtsc rk3588-bmp280.dts
 ```
+
+> To learn more about the dtsc helper script have a look [here](/Tools#h-3-dtsc-helper-script).
+> {.is-info}
 
 - 然后移动二进制文件到您的叠加层文件夹：
 
