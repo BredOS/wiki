@@ -2,7 +2,7 @@
 title: Fydetab Duo
 description: 
 published: true
-date: 2025-11-18T06:25:42.080Z
+date: 2025-11-18T06:36:56.359Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -39,8 +39,8 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 For detailed instructions, refer to [How to install to eMMC](https://wiki.fydetabduo.com/Available-OS/BredOS/BredOS-intro#-installation).
 
 # 4. Optional LTE Module
-Fyde offers an optional LTE module, the Quectel EM05, which connects via NVMe and communicates over USB. It is well-supported by BredOS. For installation of that module [follow this guide](https://wiki.fydetabduo.com/Hacking-the-Fydetab-Duo/lte/).
-- After installation of the module, run:
+Fyde offers an optional LTE module, the Quectel EM05, which connects via NVMe and communicates over USB. Any other LTE module should work as long as it communicates via USB and is supported by the linux kernel. For installing a LTE module, [follow this guide](https://wiki.fydetabduo.com/Hacking-the-Fydetab-Duo/lte/). 
+- After installation of your module, run:
 ```
 yay -S modemmanager
 sudo systemctl enable --now ModemManager
