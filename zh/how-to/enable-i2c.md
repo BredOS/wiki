@@ -2,7 +2,7 @@
 title: 启用 I2C 接口
 description:
 published: false
-date: 2025-11-17T12:34:37.968Z
+date: 2025-11-18T07:56.994Z
 tags:
 editor: markdown
 dateCreated: 2025-11-17T10:52：11.550Z
@@ -27,13 +27,47 @@ dateCreated: 2025-11-17T10:52：11.550Z
   | ----------------------------------------------------------------------- |
   | ![gpio-pin-layout.png](/enable-i2c/gpio-pin-layout.png) |
 
-- 若要将您的传感器连接到I2C bus M0，就要将它连接到此图表中显示的它：
-  \| 传感器Pin | GPIO 功能|GPIO Pin 板上的颜色|图表上的固定颜色|
-  \| ------------ | ------------ | -------- |
-  \| VCC | 3。 v | GPIO Pin 1 | 黄色| 红色|
-  \| GND | GND | GND | 任何地面，例如 GPIO Pin 9 | 黑色| 蓝色|
-  \| SDA | i2c SDA (数据) | GPIO Pin 3 | 蓝色|
-  \| SCL | i2c SCL (时钟) | GPIO Pin 5 | 蓝色| 粉红色|
+- 要将您的传感器连接到I2C，就像在本图中显示的那样：
+
+### Tabset {.tabset}
+
+#### I2C Bus M0
+
+\| 传感器Pin| GPIO 功能 | GPIO Pin| 在棋盘上粘贴颜色 | 图表上粘贴颜色 |
+\| ---------- | ------------ | ------ | ------ |
+\| VCC | 3. v|GPIO Pin 1 | Yellow | Red |
+\| GND | GND | 任何地面，例如 GPIO Pin 9 | Blue |
+\| SDA | i2c SDA (数据) | GPIO Pin 3 | Blue | Pink |
+\| SCL | i2c SCL (时钟) | GPIO Pin 5 | Blue | Pink |
+
+#### I2C Bus M2
+
+\| 传感器Pin| GPIO 功能 | GPIO Pin| 在棋盘上粘贴颜色 | 图表上粘贴颜色 |
+\| ---------- | ------------ | ------ | ------ |
+\| VCC | 3. v|GPIO Pin 1 | Yellow | Red |
+\| GND | GND | 任何地面，例如 GPIO Pin 9 | Blue |
+\| SDA | i2c SDA (数据) | GPIO Pin 37 | Blue | Pink |
+\| SCL | i2c SCL (时钟) | GPIO Pin 12 | Blue | Pink |
+
+#### I2C Bus M3
+
+\| 传感器Pin| GPIO 功能 | GPIO Pin| 在棋盘上粘贴颜色 | 图表上粘贴颜色 |
+\| ---------- | ------------ | ------ | ------ |
+\| VCC | 3. v|GPIO Pin 1 | Yellow | Red |
+\| GND | GND | 任何地面，例如 GPIO Pin 9 | Blue |
+\| SDA | i2c SDA (数据) | GPIO Pin 15 | Blue | Pink |
+\| SCL | i2c SCL (时钟) | GPIO Pin 16 | Blue | Pink |
+
+#### I2C Bus M4
+
+\| 传感器Pin| GPIO 功能 | GPIO Pin| 在棋盘上粘贴颜色 | 图表上粘贴颜色 |
+\| ---------- | ------------ | ------ | ------ |
+\| VCC | 3. v|GPIO Pin 1 | Yellow | Red |
+\| GND | GND | 任何地面，例如 GPIO Pin 9 | Blue |
+\| SDA | i2c SDA (数据) | GPIO Pin 11 | Blue | Pink |
+\| SCL | i2c SCL (时钟) | GPIO Pin 13 | Blue | Pink |
+
+###
 
 > 请仔细检查您面板上的引脚布局。 一个错误的有线传感器可能无法正常工作，甚至可能被损坏而无法修复！
 > {.is-info}
