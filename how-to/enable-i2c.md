@@ -2,7 +2,7 @@
 title: Enable I2C Interface
 description: 
 published: false
-date: 2025-11-18T07:56:21.824Z
+date: 2025-11-18T07:56:56.994Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-17T10:52:11.550Z
@@ -60,6 +60,8 @@ There are various libraries that provide direct support for the bmp280 sensor.  
 | GND | GND | Any Ground such as GPIO Pin 9 | Black | Blue |
 | SDA | i2c SDA (data) | GPIO Pin 11 | Blue | Pink |
 | SCL | i2c SCL (clock) | GPIO Pin 13 | Blue | Pink |
+###
+
 
 > Please double-check the pin layout on your board. A wrongly wired sensor may not function properly or could even be damaged beyond repair!
 {.is-warning}
