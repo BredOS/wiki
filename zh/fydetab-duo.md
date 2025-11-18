@@ -2,7 +2,7 @@
 title: FydetabDuo
 description:
 published: true
-date: 2025-09-17T10：16：17.074Z
+date: 2025-11-18T06:25:42.080Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T19:37:43.624Z
@@ -45,7 +45,18 @@ sudo rkdeveloptool wl 0 ~/Downloads/BredOS.img
 
 详细说明请参阅 [📦 如何安装到 eMMC](https://wiki.fydetabduo.com/os-release-board/BredOS/BredOS-intro)
 
-# 4. 有用的链接
+# 4. Optional LTE Module
+
+Fyde offers an optional LTE module, the Quectel EM05, which connects via NVMe and communicates over USB. It is well-supported by BredOS. For installation of that module [follow this guide](https://wiki.fydetabduo.com/Hacking-the-Fydetab-Duo/lte/).
+
+- After installation of the module, run:
+
+```
+yay -S modemmanager
+sudo systemctl enable --now ModemManager
+```
+
+# 5. 有用的链接
 
 - [🐾 如何在 Mali GPU 上设置 Panthor (RK3588)](/how-to/how-to-setup-panthor)
 - [🎮 如何安装 Steam](/how-to/how-to-install-steam)
