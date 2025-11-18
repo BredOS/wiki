@@ -2,7 +2,7 @@
 title: Enable I2C Interface
 description: 
 published: false
-date: 2025-11-17T12:34:37.968Z
+date: 2025-11-18T07:56:12.875Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-17T10:52:11.550Z
@@ -30,12 +30,36 @@ There are various libraries that provide direct support for the bmp280 sensor.  
 | ![gpio-pin-layout.png](/enable-i2c/gpio-pin-layout.png) |
 
 - To connect your sensor to I2C bus M0 connect it like shown in this chart:
+
+### Tabset {.tabset}
+#### I2C Bus M0
 | Sensor Pin | GPIO Function | GPIO Pin |  Pin Color on Board | Pin Color on chart |
 | ---------- | ------------- | -------- | -------- |
 | VCC | 3.3v | GPIO Pin 1 | Yellow | Red |
 | GND | GND | Any Ground such as GPIO Pin 9 | Black | Blue |
 | SDA | i2c SDA (data) | GPIO Pin 3 | Blue | Pink |
 | SCL | i2c SCL (clock) | GPIO Pin 5 | Blue | Pink |
+#### I2C Bus M2
+| Sensor Pin | GPIO Function | GPIO Pin |  Pin Color on Board | Pin Color on chart |
+| ---------- | ------------- | -------- | -------- |
+| VCC | 3.3v | GPIO Pin 1 | Yellow | Red |
+| GND | GND | Any Ground such as GPIO Pin 9 | Black | Blue |
+| SDA | i2c SDA (data) | GPIO Pin 37 | Blue | Pink |
+| SCL | i2c SCL (clock) | GPIO Pin 12 | Blue | Pink |
+#### I2C Bus M3
+| Sensor Pin | GPIO Function | GPIO Pin |  Pin Color on Board | Pin Color on chart |
+| ---------- | ------------- | -------- | -------- |
+| VCC | 3.3v | GPIO Pin 1 | Yellow | Red |
+| GND | GND | Any Ground such as GPIO Pin 9 | Black | Blue |
+| SDA | i2c SDA (data) | GPIO Pin 15 | Blue | Pink |
+| SCL | i2c SCL (clock) | GPIO Pin 16 | Blue | Pink |
+#### I2C Bus M4
+| Sensor Pin | GPIO Function | GPIO Pin |  Pin Color on Board | Pin Color on chart |
+| ---------- | ------------- | -------- | -------- |
+| VCC | 3.3v | GPIO Pin 1 | Yellow | Red |
+| GND | GND | Any Ground such as GPIO Pin 9 | Black | Blue |
+| SDA | i2c SDA (data) | GPIO Pin 11 | Blue | Pink |
+| SCL | i2c SCL (clock) | GPIO Pin 13 | Blue | Pink |
 
 > Please double-check the pin layout on your board. A wrongly wired sensor may not function properly or could even be damaged beyond repair!
 {.is-warning}
