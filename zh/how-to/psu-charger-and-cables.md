@@ -2,7 +2,7 @@
 title: 如何赋予您的SBC 权力
 description:
 published: false
-date: 2025-11-24T08:13:30.345Z
+date: 2025-11-24T09:20:00.914Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -29,7 +29,42 @@ dateCreated: 2025-11-24T08:13:30.345Z
 
 不幸的是，无法可靠地确定你拥有哪种类型的电源砖。 然而，你可以作出一些假设来确定它。 一般来说，由于PSU需要更多的组件，它们往往更加沉重和更加昂贵。 这并不意味着昂贵的电源砖必然是一个PSU, 但你可以假设一个廉价或免费的电源砖(例如带着你的手机的电源)可能是充电器。
 
-现在，我们建议使用Orange Pi PD100W，这是一种100W USB-C PD 兼容的供电。 它确实使我们想起它的建造和处理电力供应的好坏。
+现在，我们建议使用 [橙色Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html)，这是一个100W USB-C PD 兼容的电力供应。 它确实使我们想起它的建造和处理电力供应的好坏。
 
-另一个很好的办法是购买Lenovo USB-C 65W膝上型计算机供电。 在使用过的市场上常常能够以合理的价格找到这些技术，并且与我们支持的附属机构非常有效。
+另一个很好的选项是购买[Lenovo USB-C 65W 笔记本电脑供电](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276)。 在使用过的市场上常常能够以合理的价格找到这些技术，并且与我们支持的附属机构非常有效。
 
+## 3.2 如何确定我积木的功率输出？
+
+虽然大部分充电器和供电器都刊登最大功率输出广告，但对它们所支持的所有电压却不是这样。 如果我们看看Orange Pi PD100W，它的规格就会在它们的产品页面和电源砖本身上列出。 要知道Watt中的电源输出, 你必须用Ampee乘坐电压。
+
+<br>
+
+$Voltage \* Ampere = Watt$
+
+<div style="display:flex; align-items:flex-start; gap:20px;">
+
+<div style="flex:1;">
+
+<br>
+
+| 电压  | Ampere | 瓦特   |
+| --- | ------ | ---- |
+| 5V  | 3A     | 15W  |
+| 9V  | 3A     | 27W  |
+| 12V | 3A     | 36W  |
+| 15V | 3A     | 45W  |
+| 20V | 5A     | 100W |
+
+通过这个列表我们可以告诉我们，这个砖块能够为橙色Pi 6 Plus提供动力， 因为它要求从积木中拿出20V件，因此能够处理100W。 其先前的Orange Pi 5 Plus从砖块上索取5V，并且拿到15W。 这几乎不足以使这个SBC强大，因为芯片(RK3588)可以自己画15W。 阿片5+产品页也表示其需要5V/4A或20W。
+
+</div>
+
+<img src="/psu-charger/100wpsu.png" style="max-width:350px;">
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+Tex
