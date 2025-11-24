@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T09:03:21.588Z
+date: 2025-11-24T09:04:31.097Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -48,3 +48,12 @@ $Voltage * Ampere = Watt$
 | 20V | 5A | 100W |
 
 With this list we can tell that this brick is capable of powering an Orange Pi 6 Plus, as it requests 20V from the brick, hence got 100W to work with. Its predeccessor, the Orange Pi 5 Plus, requests 5V from the brick and got 15W with this. This is barely enough to power this SBC as the chip (RK3588) can draw 15W on its own. Also the product page of the opi5plus states its power need of 5V/4A or 20W.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Tex
