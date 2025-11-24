@@ -2,7 +2,7 @@
 title: 橙色Pi 6 +
 description:
 published: true
-date: 2025-11-24T07：15：03.864Z
+date: 2025-11-24T09：25：07.461Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T07：14：51.932Z
@@ -23,7 +23,7 @@ PCIe 端口：
 - 2x M.2 M 键 (PCIe 4.0 4x 通道)
 - 1x M.2 E 键 (PCIe 4.0 2x 通道)
 
-> 我们把它命名为“_阿片6plus_”。
+> 我们把它命名为“_阿片6plus_”或“_op6p_”。
 > {.is-info}
 
 # 3. 刷入
