@@ -2,7 +2,7 @@
 title: Orange Pi 6 Plus
 description: 
 published: true
-date: 2025-11-24T07:15:03.864Z
+date: 2025-11-24T09:25:07.461Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T07:14:51.932Z
@@ -20,7 +20,7 @@ PCIe ports:
 - 2x M.2 M key (PCIe 4.0 4x lanes)
 - 1x M.2 E key (PCIe 4.0 2x lanes)
 
-> We nicknamed it "*opi6plus*".
+> We nicknamed it "*opi6plus*" or "*op6p*".
 {.is-info}
 
 
