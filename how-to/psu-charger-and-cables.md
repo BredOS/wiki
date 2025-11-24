@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T09:18:43.643Z
+date: 2025-11-24T09:20:00.914Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -35,10 +35,14 @@ Another great option is to purchase a [Lenovo USB-C 65W laptop power supply](htt
 ## 3.2 How to determine the power output of my brick?
 While most chargers and power supplies advertise their maximum power output this is not true for all voltages they support. If we take a look at the Orange Pi PD100W its specifications are listed on their product page and on the power brick itself. To know the power output in Watt you have to multiply Voltage with Ampere.
 
+<br>
+
 $Voltage * Ampere = Watt$
 <div style="display:flex; align-items:flex-start; gap:20px;">
 
 <div style="flex:1;">
+  
+<br>
   
 | Voltage | Ampere | Watt |
 | ------- | ------- | ------ |
