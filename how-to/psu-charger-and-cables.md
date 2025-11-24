@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T09:20:00.914Z
+date: 2025-11-24T10:17:20.293Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -32,8 +32,11 @@ For now, we recommend using the [Orange Pi PD100W](http://www.orangepi.org/html/
 
 Another great option is to purchase a [Lenovo USB-C 65W laptop power supply](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276). These can often be found at reasonable prices in the used market and work very well with our supported SBCs. 
 
+A third option is the PSU of an Apple Macbook, as long as you choose the [USB-C version](https://www.apple.com/uk/shop/product/mxn53b/a/70W%20USB-C%20Power%20Adapter) of it.
+
 ## 3.2 How to determine the power output of my brick?
-While most chargers and power supplies advertise their maximum power output this is not true for all voltages they support. If we take a look at the Orange Pi PD100W its specifications are listed on their product page and on the power brick itself. To know the power output in Watt you have to multiply Voltage with Ampere.
+
+While most chargers and power supplies advertise their maximum power output, this is not true for all voltages they support. If we examine the Orange Pi PD100W, its specifications are listed on both their product page and on the power brick itself. To determine the power output in watts, you need to multiply voltage by amperes.
 
 <br>
 
@@ -46,13 +49,13 @@ $Voltage * Ampere = Watt$
   
 | Voltage | Ampere | Watt |
 | ------- | ------- | ------ |
-| 5V | 3A | 15W |
-| 9V | 3A | 27W |
-| 12V | 3A | 36W |
-| 15V | 3A | 45W |
-| 20V | 5A | 100W |
+| 5 Volt | 3 Ampere | 15 Watt |
+| 9 Volt | 3 Ampere | 27 Watt |
+| 12 Volt | 3 Ampere | 36 Watt |
+| 15 Volt | 3 Ampere | 45 Watt |
+| 20 Volt | 5 Ampere | 100 Watt |
 
-  With this list we can tell that this brick is capable of powering an Orange Pi 6 Plus, as it requests 20V from the brick, hence got 100W to work with. Its predeccessor, the Orange Pi 5 Plus, requests 5V from the brick and got 15W with this. This is barely enough to power this SBC as the chip (RK3588) can draw 15W on its own. Also the product page of the opi5plus states its power need of 5V/4A or 20W.
+From this list, we can determine that this brick is capable of powering an Orange Pi 6 Plus, as it requests 20V from the brick, providing up to 100W for use. Its predecessor, the Orange Pi 5 Plus, requests 5V from the brick and receives only 15W with this power supply. This amount is barely sufficient to power this SBC since its chip (RK3588) can draw 15W on its own. Additionally, the product page of the Orange Pi 5 Plus states its power requirement as 5V/4A or 20W.
   
 </div>
 
@@ -60,11 +63,15 @@ $Voltage * Ampere = Watt$
 
 </div>
 
+## 3.3 What is USB-C Power Delivery and why does it matter?
+
+As shown in the table above, chargers and PSUs that adhere to the USB-C PD standard can offer multiple output voltages. If your power brick, SBC, and cable (more on cables later) all support PD, your devices have the capability to communicate over the USB-C cable to determine acceptable voltages and amperes for both the power brick and the SBC. This communication allows them to select the best possible combination. Not all devices correctly support or implement this feature. For example, the Orange Pi 5 Plus does not support USB-C PD despite using a USB-C port to power the board. In contrast, the Radxa Rock 5/5B supports USB-C PD at 9V/2A, 12V/2A, 15V/2A, and 20V/2A.
+
+As USB-C Power Delivery is part of the USB-C feature set it is not supported by USB-A. If USB-C PD communication does not happen your output voltage of your brick is 5 Volt.
+
+> The USB-C PD communication should always occur at 5 Volt, but there are power bricks that have implemented this feature incorrectly. These power bricks might attempt PD communication at the last known voltage, potentially damaging your SBC. Such bricks are rare but do exist.
+{.is-warning}
+
+# 4. Cables; aren't they all the same?
 
 
-
-<br>
-<br>
-<br>
-<br>
-Tex
