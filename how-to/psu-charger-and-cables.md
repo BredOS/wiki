@@ -1,8 +1,8 @@
 ---
 title: How to power your SBC
 description: 
-published: false
-date: 2025-11-24T12:43:37.267Z
+published: true
+date: 2025-11-24T13:10:55.907Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
