@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T11:16:33.545Z
+date: 2025-11-24T11:17:49.466Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -76,7 +76,7 @@ Since USB-C Power Delivery is part of the USB-C feature set, it is not supported
 
 As you might have already guessed, if all cables were the same, this chapter would not exist. USB cables differ in their copper wiring between both plugs, although not the plugs themselves. The following table shows which USB standards are supported by different copper connections.
 
-| USB standard | VCC & GND | Data Plus / Minus | SSTX+ / SSTX− & SSRX+ / SSRX− | CC1 / CC2 | SBU1 / SBU2 | TX1+ / TX1− & RX1+ / RX1− | TX2+ / TX2− & RX2+ / RX2− | GND_DRAIN / Shield | Suppoorted Power |
+| USB standard | VCC & GND | Data Plus / Minus | SSTX+ / SSTX− & SSRX+ / SSRX− | CC1 / CC2 | SBU1 / SBU2 | TX1+ / TX1− & RX1+ / RX1− | TX2+ / TX2− & RX2+ / RX2− | GND_DRAIN / Shield | Supported Power |
 | ------- | ------- | ------ | ------- | ------- | ------ | ------- | ------- | ------ |
 | USB 1.1 & 2.0 | X | X | | | | | | | 2.5 Watts |
 | USB 3.x | X | X | X | | | | | X | 15 Watts |
