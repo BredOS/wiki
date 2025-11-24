@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T11:33:01.821Z
+date: 2025-11-24T12:43:37.267Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -101,3 +101,20 @@ The simplest, but destructive, method is to peel away the cable's shielding and 
 Another method is to use a cable tester. These can be found inexpensively on platforms like AliExpress. Typically, you plug in both ends of your cable into the tester, and its LEDs will light up to indicate any copper connections present in the cable. 
 
 Neither of these methods can be performed in-store or if purchasing online. As a rule of thumb, check for ratings on the package or product page. Additionally, when buying cables at a local store, you can gauge their quality by feeling how stiff they are. Generally, more stiffness indicates better shielding and more copper connections inside the cable. At minimum, avoid purchasing the cheapest cables available or you will be disappointed.
+
+> The Youtube channel "GreatScott!" has made a great two part series about USB-C cables found [here (Part one)](https://www.youtube.com/watch?v=ZikvlsVDiQY) and [here (Part two)](https://www.youtube.com/watch?v=LOIVrVVYBfA).
+{.is-info}
+
+# 5. What to do with all this information?
+
+After reading all of this, you might conclude that this is quite complicated. You're correct! If you encounter issues as described in the section "2. When do I have to consider this?", check the product pages for your SBC, power brick, and cable. If you can't find any information about ratings, stop using that power brick or cable with your SBC. 
+
+If you read this article before purchasing a PSU, think about how you'll use your board. For instance, if you want to use an Orange Pi 5 Plus with two spinning hard drives rated at 5V/1A each, simply add those values:
+
+$20W+5W+5W=30W$
+
+Then, to ensure your power brick operates efficiently without being overburdened, calculate how much power it should provide so that its usage is around 80% normally:
+
+$30W / 0.8 =37.5W$
+
+In this case, we recommend a PSU rated at a minimum of 37.5 watts. 
