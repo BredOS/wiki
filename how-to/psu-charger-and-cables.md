@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T11:17:49.466Z
+date: 2025-11-24T11:33:01.821Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -90,7 +90,7 @@ While the table distinguishes between three types of USB-C cables, it ultimately
 {.is-warning}
 
 
-Another aspect to consider is the existence of a so-called "e-marker" chip. This chip enables the use of copper lines, typically used for data transmission, for power delivery instead. Without this chip, all power flows through VCC and GND. With 30 AWG copper connections, delivering 60 watts can be potentially dangerous; however, neither the power brick nor the SBC will detect this issue. The board might continue drawing 60 watts (if necessary) until the cables catch fire.
+Another aspect to consider is the existence of a so-called "e-marker" chip. This chips holds the information about what capabilities your cable have. Without this chip, a cable can deliver 60 Watts at max. With 30 AWG copper connections, delivering 60 watts can be potentially dangerous; however, neither the power brick nor the SBC will detect this issue. The board might continue drawing 60 watts (if necessary) until the cables catch fire. Cables that have the potenial to catch fire are forbidden in most countries, but that does not stop anyone from selling them.
 
 ## 4.1 How to determine which kind of cable i have?
 
@@ -100,3 +100,4 @@ The simplest, but destructive, method is to peel away the cable's shielding and 
 
 Another method is to use a cable tester. These can be found inexpensively on platforms like AliExpress. Typically, you plug in both ends of your cable into the tester, and its LEDs will light up to indicate any copper connections present in the cable. 
 
+Neither of these methods can be performed in-store or if purchasing online. As a rule of thumb, check for ratings on the package or product page. Additionally, when buying cables at a local store, you can gauge their quality by feeling how stiff they are. Generally, more stiffness indicates better shielding and more copper connections inside the cable. At minimum, avoid purchasing the cheapest cables available or you will be disappointed.
