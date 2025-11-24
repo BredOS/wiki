@@ -1,67 +1,67 @@
 ---
-title: Orange Pi 6 Plus
+title: 橙色Pi 6 +
 description:
 published: true
-date: 2025-11-24T07:15:03.864Z
+date: 2025-11-24T07：15：03.864Z
 tags:
 editor: markdown
-dateCreated: 2025-11-24T07:14:51.932Z
+dateCreated: 2025-11-24T07：14：51.932Z
 ---
 
 # 2. 介绍信息
 
-The Orange Pi 6 Plus is an ARM64 board with great specifications:
+Orange Pi 6 Plus是一个ARM64板，具有很高的规格：
 
-- SoC: CIX CD8160
-- CPU: 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
-- GPU: Immortals G720 MC10
-- NPU: 28.8 Tops
-- Network: 2x 5Gbit Ethernet (PCIe 4.0 1x lane each)
+- SoC：CIX CD8160
+- CPU： 4x A72 @ 2.6GHz + 4x A72 @ 2.4GHz + 4x A52 @ 1.8GHz
+- GPU： 不稳定的 G720 MC10
+- NPU： 28.8 Tops
+- 网络：2x 5Gbit 以太网 (PCIe 4.0 每个路由)
 
-PCIe ports:
+PCIe 端口：
 
-- 2x M.2 M key (PCIe 4.0 4x lanes)
-- 1x M.2 E key (PCIe 4.0 2x lanes)
+- 2x M.2 M 键 (PCIe 4.0 4x 通道)
+- 1x M.2 E 键 (PCIe 4.0 2x 通道)
 
-> We nicknamed it "_opi6plus_".
+> 我们把它命名为“_阿片6plus_”。
 > {.is-info}
 
-# 2. Download
+# 3. 刷入
 
-You can find download links for the aarch64 iso on our [Github page](https://github.com/BredOS/bredos-iso/releases/latest)!
+您可以在我们的 [Github 页面] (https://github.com/BredOS/bredos-iso/releases/latest )中找到无主文件的下载链接！
 
-Currently we offer one image based on the mainline kernel. This version does have missing drivers. A overview whats working on mainline and whats not can be found under [4. Mainline Support](#h-4-mainline-support).
+目前我们提供一个基于主线内核的图像。 此版本确实缺少驱动程序。 在主线上工作的概述和whats 找不到[4]。 主线支持](#h-4-mainline-support)。
 
-# 3. Installation
+# 4. 安装 rkdeveloptool
 
-The opi6plus supports installation from generic ISO images, unlike our other supported single-board computers (SBCs) which use device-specific images. Installation can be done using a USB stick or even a USB optical drive.
+阿片6plus支持来自通用ISO图像的安装，不像我们其他支持的单板计算机（SBCs），后者使用设备特定图像。 安装可以使用 USB 棍棒，甚至使用 USB 光学驱动器。
 
-## 3.1 Generic ISO Installation
+## 3.1 通用ISO 安装
 
-A guide for generic .iso installation is available [here](/install/Installation-with-ISO).
+通用.iso安装指南可用 [here](/en/install/Installation-with-ISO)。
 
-# 4. Mainline support
+# 5. PCIe
 
-| `linux`                   | Status  | Notes                                                                                                                   |
-| ------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
-| CPU                       | Works   |                                                                                                                         |
-| RAM                       | Works   |                                                                                                                         |
-| GPU                       | Broken  | No driver                                                                                                               |
-| NPU                       | Broken  | No driver                                                                                                               |
-| HW Encode                 | Broken  | No driver                                                                                                               |
-| HW Decode                 | Broken  | No driver                                                                                                               |
-| HDMI                      | Partial | EFI FB partially works (1080P@60Hz on most monitors) / 4K Monitors dont work while UEFI |
-| DP                        | Partial | Woks fine                                                                                                               |
-| USB-C DP                  | Partial | No Output while UEFI                                                                                                    |
-| Storage                   | Works   | M.2 SSDs work as expected                                                                               |
-| Ethernet                  | Works   |                                                                                                                         |
-| Front USB                 | Works   |                                                                                                                         |
-| Rear USB                  | Works   |                                                                                                                         |
-| Front audio               | Broken  | No driver                                                                                                               |
-| Rear audio                | Broken  | No driver                                                                                                               |
-| RTC                       | Works   | No driver                                                                                                               |
-| UART                      | Works   | `/dev/ttyS2` at boot                                                                                                    |
-| PCIe                      | Works   | Works fine                                                                                                              |
-| M.2 E Key | Works   |                                                                                                                         |
-| M.2 M Key | Works   |                                                                                                                         |
-| Fan control               | Works   | Auto fan control, No way to control from OS                                                                             |
+| `linux`                 | 状态  | 注释                                                                                  |
+| ----------------------- | --- | ----------------------------------------------------------------------------------- |
+| CPU                     | 工作  |                                                                                     |
+| RAM                     | 工作  |                                                                                     |
+| GPU                     | 断开  | 潜行者                                                                                 |
+| NPU                     | 断开  | 潜行者                                                                                 |
+| 硬件编码                    | 断开  | 潜行者                                                                                 |
+| 硬件编码                    | 断开  | 潜行者                                                                                 |
+| HDMI                    | 部分的 | EFI FB 局部工作 (1080P@60Hz 大部分监视器) / 4K 监视器在UEFI 期间不工作 |
+| 潜行者                     | 部分的 | 木头很好                                                                                |
+| USB-C DP                | 部分的 | UEFI时没有输出                                                                           |
+| 存储                      | 工作  | M.2 SSD按预期工作                                                        |
+| 以太网                     | 工作  |                                                                                     |
+| 后方USB                   | 工作  |                                                                                     |
+| 前方USB                   | 工作  |                                                                                     |
+| 后端音频                    | 断开  | 潜行者                                                                                 |
+| 前置音频                    | 断开  | 潜行者                                                                                 |
+| RTC                     | 工作  | 潜行者                                                                                 |
+| UART                    | 工作  | 开机时`ttyS2`                                                                          |
+| PCIe 稳定性                | 工作  | 正常工作                                                                                |
+| M.2M 键  | 工作  |                                                                                     |
+| M.2 E 键 | 工作  |                                                                                     |
+| 风扇控制                    | 工作  | 自动粉丝控制，不能控制操作系统                                                                     |
