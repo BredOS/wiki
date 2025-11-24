@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T10:17:20.293Z
+date: 2025-11-24T10:45:19.927Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -36,7 +36,7 @@ A third option is the PSU of an Apple Macbook, as long as you choose the [USB-C 
 
 ## 3.2 How to determine the power output of my brick?
 
-While most chargers and power supplies advertise their maximum power output, this is not true for all voltages they support. If we examine the Orange Pi PD100W, its specifications are listed on both their product page and on the power brick itself. To determine the power output in watts, you need to multiply voltage by amperes.
+While most chargers and power supplies advertise their maximum power output, this is not true for all voltages they support. If we examine the Orange Pi PD100W, its specifications are listed on both their product page and on the power brick itself. To determine the power output in watts, you need to multiply voltages by amperes.
 
 <br>
 
@@ -49,11 +49,11 @@ $Voltage * Ampere = Watt$
   
 | Voltage | Ampere | Watt |
 | ------- | ------- | ------ |
-| 5 Volt | 3 Ampere | 15 Watt |
-| 9 Volt | 3 Ampere | 27 Watt |
-| 12 Volt | 3 Ampere | 36 Watt |
-| 15 Volt | 3 Ampere | 45 Watt |
-| 20 Volt | 5 Ampere | 100 Watt |
+| 5 Volts | 3 Amperes | 15 Watts |
+| 9 Volts | 3 Amperes | 27 Watts |
+| 12 Volts | 3 Amperes | 36 Watts |
+| 15 Volts | 3 Amperes | 45 Watts |
+| 20 Volts | 5 Amperes | 100 Watts |
 
 From this list, we can determine that this brick is capable of powering an Orange Pi 6 Plus, as it requests 20V from the brick, providing up to 100W for use. Its predecessor, the Orange Pi 5 Plus, requests 5V from the brick and receives only 15W with this power supply. This amount is barely sufficient to power this SBC since its chip (RK3588) can draw 15W on its own. Additionally, the product page of the Orange Pi 5 Plus states its power requirement as 5V/4A or 20W.
   
@@ -67,11 +67,21 @@ From this list, we can determine that this brick is capable of powering an Orang
 
 As shown in the table above, chargers and PSUs that adhere to the USB-C PD standard can offer multiple output voltages. If your power brick, SBC, and cable (more on cables later) all support PD, your devices have the capability to communicate over the USB-C cable to determine acceptable voltages and amperes for both the power brick and the SBC. This communication allows them to select the best possible combination. Not all devices correctly support or implement this feature. For example, the Orange Pi 5 Plus does not support USB-C PD despite using a USB-C port to power the board. In contrast, the Radxa Rock 5/5B supports USB-C PD at 9V/2A, 12V/2A, 15V/2A, and 20V/2A.
 
-As USB-C Power Delivery is part of the USB-C feature set it is not supported by USB-A. If USB-C PD communication does not happen your output voltage of your brick is 5 Volt.
+Since USB-C Power Delivery is part of the USB-C feature set, it is not supported by USB-A. If USB-C PD communication does not occur, the output voltage from your power brick will be 5 Volts.
 
-> The USB-C PD communication should always occur at 5 Volt, but there are power bricks that have implemented this feature incorrectly. These power bricks might attempt PD communication at the last known voltage, potentially damaging your SBC. Such bricks are rare but do exist.
+> The USB-C PD communication should always occur at 5 Volts, but there are power bricks that have implemented this feature incorrectly. These power bricks might attempt PD communication at the last known voltage, potentially damaging your SBC. Such bricks are rare but do exist.
 {.is-warning}
 
 # 4. Cables; aren't they all the same?
+
+As you might already haved guessed, if all cables would be the same this chapter wouldn't exist. USB cables differ by there copper connection between both plugs, but not the plugs themselfs. The following table shows what USB standard is supported by copper connections.
+
+| USB standard | VCC & GND | Data Plus / Minus | SSTX+ / SSTX− & SSRX+ / SSRX− | CC1 / CC2 | SBU1 / SBU2 | TX1+ / TX1− & RX1+ / RX1− | TX2+ / TX2− & RX2+ / RX2− | GND_DRAIN / Shield |
+| ------- | ------- | ------ | ------- | ------- | ------ | ------- | ------- | ------ |
+| USB 1.1 & 2.0 | X | X | | | | | | | 
+| USB 3.x | X | X | X | | | | | X |
+| USB-C minimal | X | X | | X | X | | | |
+| USB-C full | X | X | | X | X | X | | X |
+| USB-C Thunderbolt | X | X | | X | X | X | X | X |
 
 
