@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T08:13:30.345Z
+date: 2025-11-24T09:03:03.548Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -28,7 +28,23 @@ A PSU (Power Supply Unit) is built to manage such situations. It incorporates ca
 
 Unfortunately, there isn't a reliable way to determine which type of power brick you have. However, you can make some assumptions to identify it. Generally, since a PSU requires more components, they tend to be heavier and more expensive. This doesn’t mean that an expensive power brick is necessarily a PSU, but you can assume that a cheap or free power brick (such as one that came with your phone) is likely a charger. 
 
-For now, we recommend using the Orange Pi PD100W, which is a 100W USB-C PD-compliant power supply. It did suppries us in how well it is built and handles power delivery. 
+For now, we recommend using the [Orange Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html), which is a 100W USB-C PD-compliant power supply. It did suppries us in how well it is built and handles power delivery. 
 
-Another great option is to purchase a Lenovo USB-C 65W laptop power supply. These can often be found at reasonable prices in the used market and work very well with our supported SBCs. 
+Another great option is to purchase a [Lenovo USB-C 65W laptop power supply](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276). These can often be found at reasonable prices in the used market and work very well with our supported SBCs. 
 
+## 3.2 How to determine the power output of my brick?
+While most chargers and power supplies advertise their maximum power output this is not true for all voltages they support. If we take a look at the Orange Pi PD100W its specifications are listed on their product page and on the power brick itself. To know the power output in Watt you have to multiply Voltage with Ampere.
+
+$Voltage * Ampere = Watt$
+
+
+![100wpsu.png](/psu-charger/100wpsu.png =40%x){.align-right}
+| Voltage | Ampere | Watt |
+| -------| -------|--------|
+| 5V | 3A | 15W |
+| 9V | 3A | 27W |
+| 12V | 3A | 36W |
+| 15V |3A | 45W |
+| 20V | 5A | 100W |
+
+With this list we can tell that this brick is capable of powering an Orange Pi 6 Plus, as it requests 20V from the brick, hence got 100W to work with. Its predeccessor, the Orange Pi 5 Plus, requests 5V from the brick and got 15W with this. This is barely enough to power this SBC as the chip (RK3588) can draw 15W on its own. Also the product page of the opi5plus states its power need of 5V/4A or 20W.
