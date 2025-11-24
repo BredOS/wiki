@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T09:03:03.548Z
+date: 2025-11-24T09:03:21.588Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -38,7 +38,7 @@ While most chargers and power supplies advertise their maximum power output this
 $Voltage * Ampere = Watt$
 
 
-![100wpsu.png](/psu-charger/100wpsu.png =40%x){.align-right}
+![100wpsu.png](/psu-charger/100wpsu.png){.align-right}
 | Voltage | Ampere | Watt |
 | -------| -------|--------|
 | 5V | 3A | 15W |
