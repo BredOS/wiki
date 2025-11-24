@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T10:45:19.927Z
+date: 2025-11-24T11:16:33.545Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -74,14 +74,29 @@ Since USB-C Power Delivery is part of the USB-C feature set, it is not supported
 
 # 4. Cables; aren't they all the same?
 
-As you might already haved guessed, if all cables would be the same this chapter wouldn't exist. USB cables differ by there copper connection between both plugs, but not the plugs themselfs. The following table shows what USB standard is supported by copper connections.
+As you might have already guessed, if all cables were the same, this chapter would not exist. USB cables differ in their copper wiring between both plugs, although not the plugs themselves. The following table shows which USB standards are supported by different copper connections.
 
-| USB standard | VCC & GND | Data Plus / Minus | SSTX+ / SSTX− & SSRX+ / SSRX− | CC1 / CC2 | SBU1 / SBU2 | TX1+ / TX1− & RX1+ / RX1− | TX2+ / TX2− & RX2+ / RX2− | GND_DRAIN / Shield |
+| USB standard | VCC & GND | Data Plus / Minus | SSTX+ / SSTX− & SSRX+ / SSRX− | CC1 / CC2 | SBU1 / SBU2 | TX1+ / TX1− & RX1+ / RX1− | TX2+ / TX2− & RX2+ / RX2− | GND_DRAIN / Shield | Suppoorted Power |
 | ------- | ------- | ------ | ------- | ------- | ------ | ------- | ------- | ------ |
-| USB 1.1 & 2.0 | X | X | | | | | | | 
-| USB 3.x | X | X | X | | | | | X |
-| USB-C minimal | X | X | | X | X | | | |
-| USB-C full | X | X | | X | X | X | | X |
-| USB-C Thunderbolt | X | X | | X | X | X | X | X |
+| USB 1.1 & 2.0 | X | X | | | | | | | 2.5 Watts |
+| USB 3.x | X | X | X | | | | | X | 15 Watts |
+| USB-C minimal | X | X | | X | X | | | | 60 Watts |
+| USB-C full | X | X | | X | X | X | | X | 240 Watts |
+| USB-C Thunderbolt | X | X | | X | X | X | X | X | 240 Watts |
 
+While the table distinguishes between three types of USB-C cables, it ultimately depends on the manufacturer how much copper they use in their cables. Since copper is expensive, as you might have guessed, many manufacturers cut costs with these cables. Additionally, just because a USB cable has USB-C plugs on both ends doesn't mean it supports any USB-C standard. You can simply manufacture a USB 2.0-compliant cable with USB-C plugs and sell them inexpensively. These types of cables are commonly sold at gas stations, airports, or grocery stores. They typically do not have any ratings printed on their packaging and usually provide only 2.5 watts, similar to "normal" USB 2.0 cables.
+
+> Do not buy this kind of cables! They are slow and have the potential to catch fire!
+{.is-warning}
+
+
+Another aspect to consider is the existence of a so-called "e-marker" chip. This chip enables the use of copper lines, typically used for data transmission, for power delivery instead. Without this chip, all power flows through VCC and GND. With 30 AWG copper connections, delivering 60 watts can be potentially dangerous; however, neither the power brick nor the SBC will detect this issue. The board might continue drawing 60 watts (if necessary) until the cables catch fire.
+
+## 4.1 How to determine which kind of cable i have?
+
+Apart from USB-A cables, which have a blue plug if they support USB 3 and any other color for USB 1.X or 2.0, there are only two ways to determine how they are constructed. 
+
+The simplest, but destructive, method is to peel away the cable's shielding and count the copper connections between both ends. If done carefully, the cable might still function afterward; however, since USB-C is designed for high-speed and high-frequency applications, this isn't guaranteed. 
+
+Another method is to use a cable tester. These can be found inexpensively on platforms like AliExpress. Typically, you plug in both ends of your cable into the tester, and its LEDs will light up to indicate any copper connections present in the cable. 
 
