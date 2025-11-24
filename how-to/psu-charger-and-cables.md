@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: false
-date: 2025-11-24T09:17:30.391Z
+date: 2025-11-24T09:18:43.643Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -36,19 +36,27 @@ Another great option is to purchase a [Lenovo USB-C 65W laptop power supply](htt
 While most chargers and power supplies advertise their maximum power output this is not true for all voltages they support. If we take a look at the Orange Pi PD100W its specifications are listed on their product page and on the power brick itself. To know the power output in Watt you have to multiply Voltage with Ampere.
 
 $Voltage * Ampere = Watt$
-<div style="float:right; margin-left:15px; width:350px;">
-  <img src="/psu-charger/100wpsu.png" style="width:100%;">
-</div>
+<div style="display:flex; align-items:flex-start; gap:20px;">
 
+<div style="flex:1;">
+  
 | Voltage | Ampere | Watt |
-| -------| -------|--------|
+| ------- | ------- | ------ |
 | 5V | 3A | 15W |
 | 9V | 3A | 27W |
 | 12V | 3A | 36W |
-| 15V |3A | 45W |
+| 15V | 3A | 45W |
 | 20V | 5A | 100W |
 
-With this list we can tell that this brick is capable of powering an Orange Pi 6 Plus, as it requests 20V from the brick, hence got 100W to work with. Its predeccessor, the Orange Pi 5 Plus, requests 5V from the brick and got 15W with this. This is barely enough to power this SBC as the chip (RK3588) can draw 15W on its own. Also the product page of the opi5plus states its power need of 5V/4A or 20W.
+  With this list we can tell that this brick is capable of powering an Orange Pi 6 Plus, as it requests 20V from the brick, hence got 100W to work with. Its predeccessor, the Orange Pi 5 Plus, requests 5V from the brick and got 15W with this. This is barely enough to power this SBC as the chip (RK3588) can draw 15W on its own. Also the product page of the opi5plus states its power need of 5V/4A or 20W.
+  
+</div>
+
+<img src="/psu-charger/100wpsu.png" style="max-width:350px;">
+
+</div>
+
+
 
 
 <br>
