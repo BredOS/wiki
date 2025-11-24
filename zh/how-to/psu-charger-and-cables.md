@@ -1,8 +1,8 @@
 ---
 title: 如何赋予您的SBC 权力
 description:
-published: false
-date: 2025-11-24T11:33：01.821Z
+published: true
+date: 2025-11-24T13：10：55.907Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -102,3 +102,20 @@ $Voltage \* Ampere = Watt$
 另一种方法是使用电缆测试器。 在像AliExpress这样的平台上可以找到这些成本低廉的东西。 典型的情况是，你将电缆两端插入测试器。 其LED灯能点燃以显示电缆中存在的任何铜连接。
 
 这两种方法都不能在店内或在网上购买。 作为缩略图的规则，请检查软件包或产品页面的评分。 此外，当在当地商店购买电缆时，你可以通过感受它们的强度来测量它们的质量。 一般而言，更加严格的情况表明电缆内有更好的防护和更多的铜连接。 至少避免购买现有最便宜的电缆或您将感到失望。
+
+> The Youtube channel "GreatScott!" has made a great two part series about USB-C cables found [here (Part one)](https://www.youtube.com/watch?v=ZikvlsVDiQY) and [here (Part two)](https://www.youtube.com/watch?v=LOIVrVVYBfA).
+> {.is-info}
+
+# 4. 如何处理所有这些信息？
+
+在阅读了所有这些之后，你可能会得出这样的结论，即这种情况相当复杂。 你是正确的！ 如果您遇到了“2”部分描述的问题。 什么时候我需要考虑这个？"，请检查您的SBC、电源积木和电缆的产品页面。 如果您找不到任何关于评分的信息，请停止使用那个电源积木或电缆。
+
+如果您在购买PSU之前阅读了这篇文章, 请考虑如何使用您的看板。 例如，如果你想要使用一个 Orange Pi 5 Plus, 带有两个旋转硬盘, 各为 5V/1A 级, 只需添加这些值:
+
+20W+5W+5W=30W$
+
+然后确保你的电砖不会负担过重， 计算它应提供多少功率以使其正常使用约80%：
+
+30 W / 0.8 =37.5W$
+
+在这种情况下，我们建议至少给予37.5瓦的PSU等级。
