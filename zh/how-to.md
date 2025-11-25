@@ -50,7 +50,7 @@ dateCreated: 2024-08-27T06:01:06.954Z
 
 - [如何启用 DTBOs](/en/how-to/how-to-enable-dtbos)
 
-- [How to power your SBC](/en/how-to/psu-charger-and-cables)
+- [如何让你的 SBC 获得电源](/en/how-to/psu-charger-and-cables)
 
 > ✨ 探索这些指南以获得最佳的 BredOS 体验！
 > {.is-info}
