@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: true
-date: 2025-11-26T07:12:03.319Z
+date: 2025-11-26T07:21:39.068Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -36,6 +36,9 @@ Unfortunately, there isn't a reliable way to determine which type of power brick
 <details>
 <summary><b>Recommended Power Supplies</b></summary>
   
+  > The links have been included for demonstration purposes only. We received no compensation for including them, nor do we endorse any specific purchasing sources.
+{.is-info}
+  
 We recommend using the [Orange Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html), which is a 100W USB-C PD-compliant power supply. It did suppried us in how well it is built and handles power delivery. 
 
 Another great option is to purchase a [Lenovo USB-C 65W laptop power supply](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276). These can often be found at reasonable prices in the used market and work very well with our supported SBCs. 
@@ -47,6 +50,9 @@ A third option is the PSU of an Apple Macbook, as long as you choose the USB-C v
   
 The PSU included with the FydeTab Duo is good too; however, it cannot be purchased separately.
 
+
+
+  
 </details>
   
 ## 3.2 How to determine the power output of my brick?
