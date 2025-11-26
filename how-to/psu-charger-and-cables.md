@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: true
-date: 2025-11-26T07:23:54.727Z
+date: 2025-11-26T09:00:03.817Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -119,7 +119,7 @@ While the table distinguishes between three types of USB-C cables, it ultimately
 Another aspect to consider is the existence of a so-called "e-marker" chip. This chips holds the information about what capabilities your cable have. Without this chip, a cable can deliver 60 Watts at max. With 30 AWG copper connections, delivering 60 watts can be potentially dangerous; however, neither the power brick nor the SBC will detect this issue. The board might continue drawing 60 watts (if necessary) until the cables catch fire. Cables that have the potenial to catch fire are forbidden in most countries, but that does not stop anyone from selling them.
 
 ## 4.1 Does cable length matter?
-In an ideal world, a USB-C cable should function perfectly up to a length of 3 meters; however, as demonstrated in the previous article, we don't live in such a perfect world. 
+In an ideal world, a USB-C cable should function perfectly up to a length of 3 meters; however, as demonstrated in the previous chapter, we don't live in such a perfect world. 
 
 Longer cables encounter two primary issues. First, any cable can act as an antenna if not properly shielded, ironically the shielding itself acts like an antenna by redirecting captured signals to ground, so those signals can not affect any internal wires. The longer the cable, the more effectively it functions as an antenna, making good shielding essential for both internal wire pairs and the entire cable. 
 
