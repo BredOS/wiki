@@ -2,7 +2,7 @@
 title: 如何赋予您的SBC 权力
 description:
 published: true
-date: 2025-11-26T07:21:39.068Z
+date: 2025-11-26T07:23:54.727Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -16,7 +16,7 @@ dateCreated: 2025-11-24T08:13:30.345Z
 
 当您有随机重启时出现问题时，内核恐慌， 和/或不起作用的外围设备(尤其是饥饿的电源设备，如硬盘驱动器)，您应该做的第一件事就是检查您的电源。 如果你的棋盘有足够和可靠的能量，我们提供的操作系统是岩石坚固的。
 
-> If you got send here please read this article carefully!
+> 如果您在这里发送，请仔细阅读这篇文章！
 > {.is-info}
 
 # 4. PSU 或充电？ 难道不同吗？
@@ -34,19 +34,19 @@ dateCreated: 2025-11-24T08:13:30.345Z
 
 <details><summary><b>Recommended Power Supplies</b></summary>
 
-> The links have been included for demonstration purposes only. We received no compensation for including them, nor do we endorse any specific purchasing sources.
+> 这些链接仅供示范使用。 我们没有因将其列入而得到任何补偿，我们也没有认可任何具体的采购来源。
 > {.is-info}
 
-We recommend using the [Orange Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html), which is a 100W USB-C PD-compliant power supply. It did suppried us in how well it is built and handles power delivery.
+我们建议使用 [橙色Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html)，这是一个100W USB-C PD 兼容的供电。 它确实使我们无法以何种方式建造和处理供电。
 
 另一个很好的选项是购买[Lenovo USB-C 65W 笔记本电脑供电](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276)。 在使用过的市场上常常能够以合理的价格找到这些技术，并且与我们支持的附属机构非常有效。
 
-A third option is the PSU of an Apple Macbook, as long as you choose the USB-C version of it.
-[35 Watts Version](https://www.apple.com/shop/product/mw2h3am/a/35w-dual-usb-c-port-compact-power-adapter)
-[70 Watts Version](https://www.apple.com/shop/product/mxn53am/a/70W%20USB-C%20Power%20Adapter)
-[140 Watts Version](https://www.apple.com/shop/product/mw2m3am/a/140w-usb-c-power-adapter)
+第三个选项是苹果Macbook的PSU，只要您选择它的 USB-C版本。
+[35 Watts 版本](https://www.apple.com/shop/product/mw2h3am/a/35w-dual-usb-c-port-compact-power-adapter)
+[70 Watts 版本](https://www.apple.com/shop/product/mxn53am/a/70W%20USB-C%20Power%20Adapter)
+[140 Watts 版本](https://www.apple.com/shop/product/mw2m3am/a/140w-usb-c-power-adapter)
 
-The PSU included with the FydeTab Duo is good too; however, it cannot be purchased separately.
+包含在FydeTab Duo的PSU也很好；但是，不能单独购买。
 
 </details>
 
@@ -89,11 +89,11 @@ $Voltage \* Ampere = Watt$
 > USB-C PD 通信应总是在5伏特发生，但有些电源积木不正确地实现了这一功能。 这些电源积木可能会在最后一个已知的电流中尝试PD通讯，从而潜在地破坏你的SBC。 这种积木很少，但确实存在。
 > {.is-info}
 
-## 3.4 What about multi-port chargers?
+## 3.4 多端口收费是什么？
 
-Some USB power supplies come with multiple ports, either USB-A or USB-C. As USB-A can only output 5 volts and therefore don't do USB-C PD, those ports are not problematic. However, if your PSU has multiple USB-C ports, the charger must handle USB-C PD for any connected device.
+某些USB电源带有多个端口，不管是USB-A，还是USB-C。 由于USB-A只能输出5伏，因此不使用 USB-C PD，这些端口没有问题。 然而，如果您的 PSU 有多个USB-C端口，充电器必须处理任何已连接设备的 USB-C PD 。
 
-Most PSUs implement this feature simply: they initiate the USB-C PD process whenever a new device is connected to any port. Therefore, if you're powering your SBC with one port and then connect another device, it will reset power to establish USB-C PD, which in turn resets your SBC as well. Thus, if you plan on using a multi-port brick, avoid connecting new devices while it powers your SBC.
+大多数PSU都很简单地实现了这个功能：当一个新设备连接到任何端口时，他们会启动 USB-C PD 进程。 因此，如果你用一个端口为你的 SBC 充电，然后连接另一个设备， 它将重置电源以建立USB-C PD，这反过来也会重置您的SBC 因此，如果你计划使用一个多端口积木，当你的 SBC 授权时，避免连接新设备。
 
 # 5. 电缆；它们也不是所有的
 
@@ -114,23 +114,23 @@ Most PSUs implement this feature simply: they initiate the USB-C PD process when
 
 需要考虑的另一个方面是存在着所谓的“电子标记”芯片。 此chips 拥有关于您有线电视的功能的信息。 没有这个芯片，电缆可以最大输送60瓦。 通过30个特设工作组铜的连接，运送60瓦可能具有潜在的危险；但是，电源砖和BBC都不会发现这个问题。 如有必要，委员会可继续绘制60瓦，直到电缆发生火灾。 大多数国家都禁止有抓获火力的电缆，但这并不阻止任何人出售电缆。
 
-## 4.1 Does cable length matter?
+## 4.1 电缆长度是否重要？
 
-In an ideal world, a USB-C cable should function perfectly up to a length of 3 meters; however, as demonstrated in the previous article, we don't live in such a perfect world.
+在一个理想的世界中，USB-C电缆应能完美地运行3米长； 然而，正如前一篇文章所表明的那样，我们生活在这样一个完美的世界中。
 
-Longer cables encounter two primary issues. First, any cable can act as an antenna if not properly shielded, ironically the shielding itself acts like an antenna by redirecting captured signals to ground, so those signals can not affect any internal wires. The longer the cable, the more effectively it functions as an antenna, making good shielding essential for both internal wire pairs and the entire cable.
+较长的电缆遇到两个主要问题。 第一，如果屏蔽不当，任何电缆都可以起天线的作用。 具有讽刺意味的是，把捕获的信号转向地面，以此保护自己就像天线一样行事，因此这些信号不会影响任何内部线路。 电缆越长，它就越有效地发挥天线的作用，这对内部电缆配对和整个电缆都是必不可少的。
 
-The second issue arises from the internal resistance of the copper connections. As previously discussed, manufacturers often reduce costs by omitting some copper connections. Another cost-saving measure is thinning these connections, which increases their internal resistance. This presents two problems: First, continuously drawing high power through thin cables generates heat. If this heat cannot dissipate—for example, if your cable is concealed in a duct—it could eventually lead to fire. The second, more common issue is that increased resistance affects voltage levels. Assuming a cheap cable has a resistance of 0.25 Ω and our SBC operates on 5V/2A, the calculation goes as follows:
+第二个问题产生于铜连接的内部抵抗力。 如前所述，制造商往往省去一些铜的连接，从而降低成本。 另一项节省开支的措施是削弱这些联系，从而增加了它们内部的抵制。 这就产生了两个问题：第一，通过薄电缆不断提取高能量产生热量。 如果这种热不能消散——例如，如果你的电缆被隐藏在管道里——它最终可能导致火灾。 第二个更常见的问题是，增强抗性会影响电压水平。 假定廉价电缆具有0.25欧亚的抗性，我们的SBC在5V/2A上运行，计算结果如下：
 
-$2 A × 0.25 Ω = 0.5 V$
+$2 A × 0.25 C = 0.5V$
 
-This results in a voltage drop of 0.5 volts. Thus, while the power brick outputs 5 volts, only 4.5 volts reach your SBC.
+这导致电压下降0.5伏。 因此，虽然电砖输出5伏，但只有4.5伏达到您的SBC。
 
-The rule of thumb is that the longer your cable, the better its construction must be. It's best to use the shortest cable possible for your setup, but don't exceed 1.5 meters of cable length.
+缩略图规则是你的电缆越长，它的构造就就越好。 它最好使用尽可能短的电缆进行设置，但不超过1.5米的电缆长度。
 
-If you really need to exceed 1.5 meters we recommend the use of an [Apple USB-C Cable](https://www.apple.com/shop/product/myqt3am/a/240w-usb-c-charge-cable-2-m).
+如果您确实需要超过1.5米，我们建议使用[Apple USB-C电缆](https://www.apple.com/shop/product/myqt3am/a/240w-usb-c-charge-cable-2-m)。
 
-## 4.2 How to determine which kind of cable i have?
+## 4.2 如何确定有哪种电缆i ？
 
 除了USB-A电缆之外，如果它们支持 USB 3 和任何其他的 USB 1颜色，它们有蓝色插拔。 或 2.0，只有两种方法来确定如何构建它们。
 
@@ -156,3 +156,8 @@ If you really need to exceed 1.5 meters we recommend the use of an [Apple USB-C 
 30 W / 0.8 =37.5W$
 
 在这种情况下，我们建议至少给予37.5瓦的PSU等级。
+
+> TL;DR 获取规格，执行数学，不使用廉价的电缆！
+> 快乐游戏！
+> {.is-success}
+> {.is-success}
