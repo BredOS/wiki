@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: true
-date: 2025-11-26T07:21:39.068Z
+date: 2025-11-26T07:23:54.727Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -159,3 +159,6 @@ Then, to ensure your power brick operates efficiently without being overburdened
 $30W / 0.8 =37.5W$
 
 In this case, we recommend a PSU rated at a minimum of 37.5 watts. 
+
+> TL;DR Get the specifications, do the math and don't use cheap cables!
+{.is-success}
