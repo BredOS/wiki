@@ -2,7 +2,7 @@
 title: 如何赋予您的SBC 权力
 description:
 published: true
-date: 2025-11-24T13：10：55.907Z
+date: 2025-11-26T07:21:39.068Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -15,6 +15,9 @@ dateCreated: 2025-11-24T08:13:30.345Z
 # 1. 我何时必须考虑这一点？
 
 当您有随机重启时出现问题时，内核恐慌， 和/或不起作用的外围设备(尤其是饥饿的电源设备，如硬盘驱动器)，您应该做的第一件事就是检查您的电源。 如果你的棋盘有足够和可靠的能量，我们提供的操作系统是岩石坚固的。
+
+> If you got send here please read this article carefully!
+> {.is-info}
 
 # 4. PSU 或充电？ 难道不同吗？
 
@@ -29,11 +32,23 @@ dateCreated: 2025-11-24T08:13:30.345Z
 
 不幸的是，无法可靠地确定你拥有哪种类型的电源砖。 然而，你可以作出一些假设来确定它。 一般来说，由于PSU需要更多的组件，它们往往更加沉重和更加昂贵。 这并不意味着昂贵的电源砖必然是一个PSU, 但你可以假设一个廉价或免费的电源砖(例如带着你的手机的电源)可能是充电器。
 
-现在，我们建议使用 [橙色Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html)，这是一个100W USB-C PD 兼容的电力供应。 它确实使我们想起它的建造和处理电力供应的好坏。
+<details><summary><b>Recommended Power Supplies</b></summary>
+
+> The links have been included for demonstration purposes only. We received no compensation for including them, nor do we endorse any specific purchasing sources.
+> {.is-info}
+
+We recommend using the [Orange Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html), which is a 100W USB-C PD-compliant power supply. It did suppried us in how well it is built and handles power delivery.
 
 另一个很好的选项是购买[Lenovo USB-C 65W 笔记本电脑供电](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276)。 在使用过的市场上常常能够以合理的价格找到这些技术，并且与我们支持的附属机构非常有效。
 
-第三个选项是苹果Macbook的 PSU ，只要您选择了 [USB-C 版本](https://www.apple.com/uk/shop/product/mxn53b/a/70W%20USB-C%20Power%20Adapter)。
+A third option is the PSU of an Apple Macbook, as long as you choose the USB-C version of it.
+[35 Watts Version](https://www.apple.com/shop/product/mw2h3am/a/35w-dual-usb-c-port-compact-power-adapter)
+[70 Watts Version](https://www.apple.com/shop/product/mxn53am/a/70W%20USB-C%20Power%20Adapter)
+[140 Watts Version](https://www.apple.com/shop/product/mw2m3am/a/140w-usb-c-power-adapter)
+
+The PSU included with the FydeTab Duo is good too; however, it cannot be purchased separately.
+
+</details>
 
 ## 3.2 如何确定我积木的功率输出？
 
@@ -74,6 +89,12 @@ $Voltage \* Ampere = Watt$
 > USB-C PD 通信应总是在5伏特发生，但有些电源积木不正确地实现了这一功能。 这些电源积木可能会在最后一个已知的电流中尝试PD通讯，从而潜在地破坏你的SBC。 这种积木很少，但确实存在。
 > {.is-info}
 
+## 3.4 What about multi-port chargers?
+
+Some USB power supplies come with multiple ports, either USB-A or USB-C. As USB-A can only output 5 volts and therefore don't do USB-C PD, those ports are not problematic. However, if your PSU has multiple USB-C ports, the charger must handle USB-C PD for any connected device.
+
+Most PSUs implement this feature simply: they initiate the USB-C PD process whenever a new device is connected to any port. Therefore, if you're powering your SBC with one port and then connect another device, it will reset power to establish USB-C PD, which in turn resets your SBC as well. Thus, if you plan on using a multi-port brick, avoid connecting new devices while it powers your SBC.
+
 # 5. 电缆；它们也不是所有的
 
 正如你们可能已经猜到的那样，如果所有电缆都是一样的，本章将不存在。 USB电缆在两个插件之间的铜线线路上有所不同，但不是插件本身。 下表显示了不同铜线路支持的USB标准。
@@ -93,7 +114,23 @@ $Voltage \* Ampere = Watt$
 
 需要考虑的另一个方面是存在着所谓的“电子标记”芯片。 此chips 拥有关于您有线电视的功能的信息。 没有这个芯片，电缆可以最大输送60瓦。 通过30个特设工作组铜的连接，运送60瓦可能具有潜在的危险；但是，电源砖和BBC都不会发现这个问题。 如有必要，委员会可继续绘制60瓦，直到电缆发生火灾。 大多数国家都禁止有抓获火力的电缆，但这并不阻止任何人出售电缆。
 
-## 4.1 如何确定有何种电缆i ？
+## 4.1 Does cable length matter?
+
+In an ideal world, a USB-C cable should function perfectly up to a length of 3 meters; however, as demonstrated in the previous article, we don't live in such a perfect world.
+
+Longer cables encounter two primary issues. First, any cable can act as an antenna if not properly shielded, ironically the shielding itself acts like an antenna by redirecting captured signals to ground, so those signals can not affect any internal wires. The longer the cable, the more effectively it functions as an antenna, making good shielding essential for both internal wire pairs and the entire cable.
+
+The second issue arises from the internal resistance of the copper connections. As previously discussed, manufacturers often reduce costs by omitting some copper connections. Another cost-saving measure is thinning these connections, which increases their internal resistance. This presents two problems: First, continuously drawing high power through thin cables generates heat. If this heat cannot dissipate—for example, if your cable is concealed in a duct—it could eventually lead to fire. The second, more common issue is that increased resistance affects voltage levels. Assuming a cheap cable has a resistance of 0.25 Ω and our SBC operates on 5V/2A, the calculation goes as follows:
+
+$2 A × 0.25 Ω = 0.5 V$
+
+This results in a voltage drop of 0.5 volts. Thus, while the power brick outputs 5 volts, only 4.5 volts reach your SBC.
+
+The rule of thumb is that the longer your cable, the better its construction must be. It's best to use the shortest cable possible for your setup, but don't exceed 1.5 meters of cable length.
+
+If you really need to exceed 1.5 meters we recommend the use of an [Apple USB-C Cable](https://www.apple.com/shop/product/myqt3am/a/240w-usb-c-charge-cable-2-m).
+
+## 4.2 How to determine which kind of cable i have?
 
 除了USB-A电缆之外，如果它们支持 USB 3 和任何其他的 USB 1颜色，它们有蓝色插拔。 或 2.0，只有两种方法来确定如何构建它们。
 
