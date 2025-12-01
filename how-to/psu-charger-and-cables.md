@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: true
-date: 2025-12-01T10:14:39.060Z
+date: 2025-12-01T10:15:22.503Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -50,7 +50,7 @@ A third option is the PSU of an Apple Macbook, as long as you choose the USB-C v
   
 The PSU included with the FydeTab Duo is good too; however, it cannot be purchased separately.
 
-[This UGREEN brick](https://eu.ugreen.com/products/ugreen-65w-usb-c-pd-charger-4-ports) is also a good option, as long as you take care of [3.4 What about multi-port chargers](#h-3-4-what-about-multi-port-chargers?)
+[This UGREEN brick](https://eu.ugreen.com/products/ugreen-65w-usb-c-pd-charger-4-ports) is also a good option, as long as you take care of [3.4 What about multi-port chargers](#h-34-what-about-multi-port-chargers)
 
   
 </details>
