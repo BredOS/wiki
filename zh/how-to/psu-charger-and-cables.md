@@ -2,7 +2,7 @@
 title: 如何赋予您的SBC 权力
 description:
 published: true
-date: 2025-11-26T09：00：03.817Z
+date: 2025-12-01T10：15：22.503Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -47,6 +47,8 @@ dateCreated: 2025-11-24T08:13:30.345Z
 [140 Watts 版本](https://www.apple.com/shop/product/mw2m3am/a/140w-usb-c-power-adapter)
 
 包含在FydeTab Duo的PSU也很好；但是，不能单独购买。
+
+[This UGREEN brick](https://eu.ugreen.com/products/ugreen-65w-usb-c-pd-charger-4-ports) is also a good option, as long as you take care of [3.4 What about multi-port chargers](#h-34-what-about-multi-port-chargers)
 
 </details>
 
