@@ -1,8 +1,8 @@
 ---
 title: 关于校验和
 description:
-published: false
-date: 2025-12-01T10：08：42.952Z
+published: true
+date: 2025-12-03T08：18：57.403Z
 tags:
 editor: markdown
 dateCreated: 2025-12-01T10：08：42.952Z
