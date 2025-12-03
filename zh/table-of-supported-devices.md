@@ -14,40 +14,40 @@ dateCreated: 2025-09-16T11：31：39.039Z
 
 # 2. 带有设备拼写图像的设备列表
 
-| 设备                       | UEFI | SPI 芯片                    | 已知问题                                | 安装类型                                                       | 指南                                       |
-| ------------------------ | ---- | ------------------------- | ----------------------------------- | ---------------------------------------------------------- | ---------------------------------------- |
-| 酷皮4 模型B                  | 否    | 指南                        | WiFi无法工作                            | [device-specific-image](/en/install/device-specific-image) |                                          |
-| FydeTab Duo              | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [FydetabDuo](/en/fydetab-duo)            |
-| Indiedroid Nova          | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| ITX-3588J                | 否    | 否                         | 很多人，看看设备页面                          | [device-specific-image](/en/install/device-specific-image) | [itx-3588j](/en/itx-3588j)               |
-| Khadas Edge 2            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Khadas VIM 4             | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Metotronics R58S         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Mekotronics R58X         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Metotronics R58X-4G      | ?    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Mekotronics R58X-Pro     | ?    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Milk V 木卫士               | 否    | 否                         | WiFi无法工作                            | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Orange Pi 5              | 否    | 否                         | SATA M.2 SSD 可能无法工作 | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)                 |
-| Orange Pi 5B             | 设备   | 是 (可选) | 使用 OPI5 镜像，需要 DTBO 才能工作             | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)                 |
-| Orange Pi 5 Max          | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)                 |
-| Orange Pi 5 Plus         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)                 |
-| Orange Pi 5 Pro          | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)                 |
-| Orange Pi 5 Ultra        | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)                 |
-| Orange Pi 6 Plus         | 否    | 否                         |                                     | [Installation-with-ISO](/en/install/Installation-with-ISO) | [Orange Pi 6 Plus](/en/orange-pi-6-plus) |
-| Orange Pi CM5            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)                 |
-| 橙色Pi RV2                 | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi RV 系列](/orangepi-rv)               |
-| Radxa CM5                | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa CM5 DTV 运营商        | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa NX5 套件             | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Radxa Rock 4C Plus       | 否    | No                        |                                     | [device-specific-image](/en/install/device-specific-image) |                                          |
-| Radxa Rock 5 ITX         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa Rock 5A            | 否    | 是[^1]                     |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa Rock 5B            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa Rock 5B+           | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa Rock 5C            | 已知问题 | 是[^1]                     |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa Rock 5D            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa Rock 5T            | 否    | 是 (可选) |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)                 |
-| Radxa Orion O6           | Yes  | Yes                       | PCIe Gen 4 设备导致棋盘变得不稳定              | [Installation with ISO](/install/Installation-with-ISO)    | [radxa-orion-o6](/radxa-orion-o6)        |
-| {.dense} |      |                           |                                     |                                                            |                                          |
+| 设备                       | UEFI | SPI 芯片                    | 已知问题                                | 安装类型                                                       | 指南                                  |
+| ------------------------ | ---- | ------------------------- | ----------------------------------- | ---------------------------------------------------------- | ----------------------------------- |
+| 酷皮4 模型B                  | 否    | 指南                        | WiFi无法工作                            | [device-specific-image](/en/install/device-specific-image) |                                     |
+| FydeTab Duo              | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [FydetabDuo](/en/fydetab-duo)       |
+| Indiedroid Nova          | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| ITX-3588J                | 否    | 否                         | 很多人，看看设备页面                          | [device-specific-image](/en/install/device-specific-image) | [itx-3588j](/en/itx-3588j)          |
+| Khadas Edge 2            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Khadas VIM 4             | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Metotronics R58S         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Mekotronics R58X         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Metotronics R58X-4G      | ?    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Mekotronics R58X-Pro     | ?    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Milk V 木卫士               | 否    | 否                         | WiFi无法工作                            | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Orange Pi 5              | 否    | 否                         | SATA M.2 SSD 可能无法工作 | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)            |
+| Orange Pi 5B             | 设备   | 是 (可选) | 使用 OPI5 镜像，需要 DTBO 才能工作             | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)            |
+| Orange Pi 5 Max          | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)            |
+| Orange Pi 5 Plus         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)            |
+| Orange Pi 5 Pro          | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)            |
+| Orange Pi 5 Ultra        | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)            |
+| 橙色Pi 6 +                 | 否    | 否                         |                                     | [Installation-with-ISO](/en/install/Installation-with-ISO) | [橙色Pi 6 Plus](/en/orange-pi-6-plus) |
+| Orange Pi CM5            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi 5 系列](/orangepi-5)            |
+| 橙色Pi RV2                 | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [橙色Pi RV 系列](/orangepi-rv)          |
+| Radxa CM5                | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa CM5 DTV 运营商        | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa NX5 套件             | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Radxa Rock 4C Plus       | 否    | 指南                        |                                     | [device-specific-image](/en/install/device-specific-image) |                                     |
+| Radxa Rock 5 ITX         | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa Rock 5A            | 否    | 是[^1]                     |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa Rock 5B            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa Rock 5B+           | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa Rock 5C            | 已知问题 | 是[^1]                     |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa Rock 5D            | 否    | 否                         |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa Rock 5T            | 否    | 是 (可选) |                                     | [device-specific-image](/en/install/device-specific-image) | [Rock 5 Series](/rock-5)            |
+| Radxa Orion O6           | 设备   | 设备                        | PCIe Gen 4 设备导致棋盘变得不稳定              | [Installation-with-ISO](/en/install/Installation-with-ISO) | [radxa-orion-o6](/radxa-orion-o6)   |
+| {.dense} |      |                           |                                     |                                                            |                                     |
 
 [^1]: 需要 [此模块](https://radxa.com/products/accessories/spi-flash-module/)。
