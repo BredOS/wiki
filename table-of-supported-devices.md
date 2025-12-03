@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: true
-date: 2025-09-23T09:38:18.182Z
+date: 2025-12-03T07:52:11.867Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -32,6 +32,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 |Orange Pi 5 Plus|	Yes |Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi 5 Pro|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi 5 Ultra|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
+|Orange Pi 6 Plus|Yes|Yes| |[Installation with ISO](/install/Installation-with-ISO)|[Orange Pi 6 Plus](/en/orange-pi-6-plus)|
 |Orange Pi CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) |
 |Orange Pi RV2|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi RV Series](/orangepi-rv) |
 |Radxa CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Rock 5 Series](/rock-5) |
