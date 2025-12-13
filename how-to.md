@@ -2,7 +2,7 @@
 title: How To!
 description: Guides, tutorials and tips on how to install or use certain things in BredOS
 published: true
-date: 2025-11-25T06:50:10.062Z
+date: 2025-12-13T21:40:48.601Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-27T06:01:06.954Z
@@ -49,6 +49,8 @@ This page contains Guides, tutorials, and tips on how to install or use certain 
 - [How to enable DTBOs](/en/how-to/how-to-enable-dtbos)
 
 - [How to power your SBC](/en/how-to/psu-charger-and-cables)
+
+- [How to maintain MicroSD Cards](/en/how-to/sdcard-maint)
 
 > Explore these guides to get the most out of BredOS!
 {.is-info}
