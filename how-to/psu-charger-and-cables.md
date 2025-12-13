@@ -2,7 +2,7 @@
 title: How to power your SBC
 description: 
 published: true
-date: 2025-12-01T10:15:22.503Z
+date: 2025-12-13T21:16:38.859Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -39,9 +39,9 @@ Unfortunately, there isn't a reliable way to determine which type of power brick
   > The links have been included for demonstration purposes only. We received no compensation for including them, nor do we endorse any specific purchasing sources.
 {.is-info}
   
-We recommend using the [Orange Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html), which is a 100W USB-C PD-compliant power supply. It did suppried us in how well it is built and handles power delivery. 
+We recommend using the [Orange Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html), which is a 100W USB-C PD-compliant power supply. It suprised us in how well it is built and handles power delivery.
 
-Another great option is to purchase a [Lenovo USB-C 65W laptop power supply](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276). These can often be found at reasonable prices in the used market and work very well with our supported SBCs. 
+Another great option is to purchase a [Lenovo USB-C 65W laptop power supply](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276). These can often be found at reasonable prices in the used market and work very well with our supported SBCs.
 
 A third option is the PSU of an Apple Macbook, as long as you choose the USB-C version of it.
 [35 Watts Version](https://www.apple.com/shop/product/mw2h3am/a/35w-dual-usb-c-port-compact-power-adapter)
@@ -94,9 +94,12 @@ Since USB-C Power Delivery is part of the USB-C feature set, it is not supported
 {.is-warning}
 
 ## 3.4 What about multi-port chargers?
-Some USB power supplies come with multiple ports, either USB-A or USB-C. As USB-A can only output 5 volts and therefore don't do USB-C PD, those ports are not problematic. However, if your PSU has multiple USB-C ports, the charger must handle USB-C PD for any connected device. 
+Some USB power supplies come with multiple ports, either USB-A or USB-C. If the brick supports any form of fast charging, USB Power Delivery, Qualcomm Quick Charge or anything similar, the PSU must handle the power distribution for any and all connected devices.
 
-Most PSUs implement this feature simply: they initiate the USB-C PD process whenever a new device is connected to any port. Therefore, if you're powering your SBC with one port and then connect another device, it will reset power to establish USB-C PD, which in turn resets your SBC as well. Thus, if you plan on using a multi-port brick, avoid connecting new devices while it powers your SBC. 
+Most such PSUs implement this feature by fully resetting themselves, cutting power momentarily on all of their ports, whenever **any** device is plugged or unplugged.
+This means your SBC will briefly & abruptly power off.
+
+Thus, if you plan on using a multi-port brick, avoid plugging or unplugging devices while the board is active.
 
 # 4. Cables; aren't they all the same?
 
