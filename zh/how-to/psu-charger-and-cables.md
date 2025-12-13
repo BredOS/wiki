@@ -2,7 +2,7 @@
 title: 如何赋予您的SBC 权力
 description:
 published: true
-date: 2025-12-01T10：15：22.503Z
+date: 2025-12-13T21:16:38.859Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -37,7 +37,7 @@ dateCreated: 2025-11-24T08:13:30.345Z
 > 这些链接仅供示范使用。 我们没有因将其列入而得到任何补偿，我们也没有认可任何具体的采购来源。
 > {.is-info}
 
-我们建议使用 [橙色Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html)，这是一个100W USB-C PD 兼容的供电。 它确实使我们无法以何种方式建造和处理供电。
+我们建议使用 [橙色Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html)，这是一个100W USB-C PD 兼容的供电。 It suprised us in how well it is built and handles power delivery.
 
 另一个很好的选项是购买[Lenovo USB-C 65W 笔记本电脑供电](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276)。 在使用过的市场上常常能够以合理的价格找到这些技术，并且与我们支持的附属机构非常有效。
 
@@ -93,9 +93,12 @@ $Voltage \* Ampere = Watt$
 
 ## 3.4 多端口收费是什么？
 
-某些USB电源带有多个端口，不管是USB-A，还是USB-C。 由于USB-A只能输出5伏，因此不使用 USB-C PD，这些端口没有问题。 然而，如果您的 PSU 有多个USB-C端口，充电器必须处理任何已连接设备的 USB-C PD 。
+某些USB电源带有多个端口，不管是USB-A，还是USB-C。 If the brick supports any form of fast charging, USB Power Delivery, Qualcomm Quick Charge or anything similar, the PSU must handle the power distribution for any and all connected devices.
 
-大多数PSU都很简单地实现了这个功能：当一个新设备连接到任何端口时，他们会启动 USB-C PD 进程。 因此，如果你用一个端口为你的 SBC 充电，然后连接另一个设备， 它将重置电源以建立USB-C PD，这反过来也会重置您的SBC 因此，如果你计划使用一个多端口积木，当你的 SBC 授权时，避免连接新设备。
+Most such PSUs implement this feature by fully resetting themselves, cutting power momentarily on all of their ports, whenever **any** device is plugged or unplugged.
+This means your SBC will briefly & abruptly power off.
+
+Thus, if you plan on using a multi-port brick, avoid plugging or unplugging devices while the board is active.
 
 # 5. 电缆；它们也不是所有的
 
