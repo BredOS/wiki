@@ -2,7 +2,7 @@
 title: 如何赋予您的SBC 权力
 description:
 published: true
-date: 2025-12-13T21:16:38.859Z
+date: 2025-12-13T21：16：38.859Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T08:13:30.345Z
@@ -37,7 +37,7 @@ dateCreated: 2025-11-24T08:13:30.345Z
 > 这些链接仅供示范使用。 我们没有因将其列入而得到任何补偿，我们也没有认可任何具体的采购来源。
 > {.is-info}
 
-我们建议使用 [橙色Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html)，这是一个100W USB-C PD 兼容的供电。 It suprised us in how well it is built and handles power delivery.
+我们建议使用 [橙色Pi PD100W](http://www.orangepi.org/html/hardWare/powerSuppliesAndCables/details/PD100W-EU.html)，这是一个100W USB-C PD 兼容的供电。 它告诉我们它是如何建造和处理电力供应的。
 
 另一个很好的选项是购买[Lenovo USB-C 65W 笔记本电脑供电](https://www.lenovo.com/gb/en/p/accessories-and-software/chargers-and-batteries/chargers/4x20m26276)。 在使用过的市场上常常能够以合理的价格找到这些技术，并且与我们支持的附属机构非常有效。
 
@@ -93,12 +93,12 @@ $Voltage \* Ampere = Watt$
 
 ## 3.4 多端口收费是什么？
 
-某些USB电源带有多个端口，不管是USB-A，还是USB-C。 If the brick supports any form of fast charging, USB Power Delivery, Qualcomm Quick Charge or anything similar, the PSU must handle the power distribution for any and all connected devices.
+某些USB电源带有多个端口，不管是USB-A，还是USB-C。 如果积木支持任何形式的快速充电，USB电源送电，二次充电或任何类似的设备， PSU 必须处理任何和所有已连接设备的电源配置。
 
-Most such PSUs implement this feature by fully resetting themselves, cutting power momentarily on all of their ports, whenever **any** device is plugged or unplugged.
-This means your SBC will briefly & abruptly power off.
+大多数这样的 PSUs 通过完全重置自己来实现这个功能，立即切断所有端口的电源，只要**任何**设备都已插入或断开。
+这意味着你的SBC会短暂地断电。
 
-Thus, if you plan on using a multi-port brick, avoid plugging or unplugging devices while the board is active.
+因此，如果您计划使用多端口积木，请在棋盘处于活动状态时避免插件或卸载设备。
 
 # 5. 电缆；它们也不是所有的
 
