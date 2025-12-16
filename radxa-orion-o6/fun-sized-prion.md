@@ -2,7 +2,7 @@
 title: Radxa Orion O6N
 description: 
 published: true
-date: 2025-12-15T10:04:49.416Z
+date: 2025-12-16T10:50:13.899Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:55:40.646Z
@@ -55,11 +55,11 @@ A guide for generic .iso installation is available [here](/install/Installation-
 | Rear audio   | Broken   | No driver|
 | RTC          | Works    | No driver|
 | UART         | Works    | `/dev/ttyS2` at boot|
-| PCIe (any M.2 Port)| Partial  | Works fine for most devices but some GPUs don't work as expected and freezes the entire system sometimes.|
+| PCIe (any M.2 Port)| Partial  | Works fine for most devices but some GPUs don't work as expected and freezes the entire system sometimes. See **5. PCIe** |
 | M.2 E Key    | Works    | |
 | M.2 M Key    | Works    | |
 | M.2 B Key    | Works    | |
 | Fan control  | Works    | Auto fan control, No way to control from OS |
 
 # 5. PCIe
-Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected.
+Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider setting the link speed to Gen. 3.
