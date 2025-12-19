@@ -76,6 +76,6 @@ sudo dd if=/usr/share/edk2/<device-name>/<device-name>_UEFI_Release_vX.XX.X.img 
 sudo dd if=/usr/share/edk2/fydetab-duo/fydetab-duo_UEFI_Release_v0.12.3.img of=/dev/mmcblk0 bs=512 skip=64 search=64 conv=notrunc
 ```
 
-> **Done!** Your device's UEFI firmware is now updated.
+> **完成！** 您的设备的 UEFI 固件现在已更新。
 > {.is-success}
 
