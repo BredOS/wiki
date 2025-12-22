@@ -2,7 +2,7 @@
 title: Mainline campaign
 description: 
 published: true
-date: 2025-12-22T06:53:41.252Z
+date: 2025-12-22T06:56:27.168Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -100,7 +100,7 @@ The bigger the budget at our disposal, the more time we can dedicate to BredOS.
 ## Sponsors
 We would like to sincerely thank our sponsors for their generous support. We are truly grateful for your partnership.
 
-![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}
-![sponsor-silver-tier-ameridroid.png](/sponsors/sponsor-silver-tier-ameridroid.png){.align-center}
+[![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}](http://www.orangepi.org)
+[![sponsor-silver-tier-ameridroid.png](/sponsors/sponsor-silver-tier-ameridroid.png){.align-center}](https://ameridroid.com)
 
 ---
