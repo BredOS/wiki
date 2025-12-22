@@ -2,7 +2,7 @@
 title: 软件包管理指南
 description: 欢迎使用 BredOS 软件包管理员指南！🚀 在这里，你会学习如何安装和管理应用程序。准备好控制您的系统应用！ 💻 在这里，您将学习如何安装和管理应用程序
 published: true
-date: 2025-09-15T09:53:59.847Z
+date: 2025-12-22T06:22:03.605Z
 tags:
 editor: markdown
 dateCreated: 2024-09-20T20：08：39.778Z
@@ -70,6 +70,23 @@ pacman -Q
 
 ```bash
 sudo pacman -Sc
+```
+
+## 2.7 Reset TrustDB
+
+If you have problems to install any package, because of the error `error: keyring: signature from "<name of signer here>" is unknown trust`, resetting the database containing the signature keys for pacman and rebuilding it, fixes it.
+
+- To remove the old database, run:
+
+```
+sudo rm -rf /etc/pacman.d/gnupg
+```
+
+- Then rebuild your database with:
+
+```
+sudo pacman-key --init
+sudo pacman-key --populate
 ```
 
 > Pacman是管理您的 BredOS 系统的重要工具——迅速、高效和强大！
