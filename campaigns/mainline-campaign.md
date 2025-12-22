@@ -2,7 +2,7 @@
 title: Mainline campaign
 description: 
 published: true
-date: 2025-12-22T06:48:06.084Z
+date: 2025-12-22T06:50:49.609Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -96,5 +96,7 @@ The bigger the budget at our disposal, the more time we can dedicate to BredOS.
 ### **[Support the RK3588 Mainline Milestone Now](https://ko-fi.com/Z8Z3I4J0P)**
 
 ## Sponors
-![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png) ![sponsor-silver-tier-ameridroid.png](/sponsors/sponsor-silver-tier-ameridroid.png)
+![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}
+![sponsor-silver-tier-ameridroid.png](/sponsors/sponsor-silver-tier-ameridroid.png){.align-center}
+
 ---
