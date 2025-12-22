@@ -2,7 +2,7 @@
 title: Mainline campaign
 description: 
 published: true
-date: 2025-12-22T06:50:49.609Z
+date: 2025-12-22T06:51:51.504Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -93,9 +93,11 @@ Mainline unlocks these **real, tangible improvements** for both developers and e
 
 The bigger the budget at our disposal, the more time we can dedicate to BredOS.
 
-### **[Support the RK3588 Mainline Milestone Now](https://ko-fi.com/Z8Z3I4J0P)**
+ ***[Support the RK3588 Mainline Milestone Now](https://ko-fi.com/Z8Z3I4J0P)***
 
-## Sponors
+
+
+## Sponsors
 ![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}
 ![sponsor-silver-tier-ameridroid.png](/sponsors/sponsor-silver-tier-ameridroid.png){.align-center}
 
