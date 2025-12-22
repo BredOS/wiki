@@ -2,7 +2,7 @@
 title: 主线活动
 description:
 published: true
-date: 2025-09-23T15：45：54.131Z
+date: 2025-12-22T06:56:27.168Z
 tags:
 editor: markdown
 dateCreated: 2025-09-22T19:14:24.174Z
@@ -107,6 +107,13 @@ dateCreated: 2025-09-22T19:14:24.174Z
 
 我们可以支配的预算越多，我们可以用更多的时间专用于布雷得奥斯。
 
-### **[现在支持 RK3588 主行里程碑](https://ko-fi.com/Z8Z3I4J0P)**
+_**[现在支持 RK3588 主行里程碑](https://ko-fi.com/Z8Z3I4J0P)**_
+
+## 赞助商
+
+我们要真诚感谢我们的提案国的慷慨支持。 我们确实感谢你们的合作。
+
+[![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}](http://www.orangepi.org)
+[![sponsor-silver-tier-ameridroid.png](/sponsors/sponsor-silver-tier-ameridroid.png){.align-center}](https://ameridroid.com)
 
 ---
