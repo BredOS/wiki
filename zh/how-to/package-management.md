@@ -74,15 +74,15 @@ sudo pacman -Sc
 
 ## 2.7 Reset TrustDB
 
-If you have problems to install any package, because of the error `error: keyring: signature from "<name of signer here>" is unknown trust`, resetting the database containing the signature keys for pacman and rebuilding it, fixes it.
+如果您安装任何软件包有问题，因为错误：“错误：键盘：来自“<name of signer here>的签名”是未知可信度， 重置包含签名密钥的数据库并重建它，修复它。
 
-- To remove the old database, run:
+- 要删除旧数据库，请运行：
 
 ```
 sudo rm -rf /etc/pacman.d/gnupg
 ```
 
-- Then rebuild your database with:
+- 然后通过以下方式重建您的数据库：
 
 ```
 sudo pacman-key --init
