@@ -2,7 +2,7 @@
 title: Setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2025-10-27T17:58:06.243Z
+date: 2025-12-22T06:38:20.247Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -11,6 +11,21 @@ dateCreated: 2024-08-31T15:03:26.994Z
 # 1. Introduction
 
 This guide walks you through the steps to enable Panthor and Vulkan on Mali GPUs present in boards with the RK3588 chipset.
+
+## 1.1 Whats the difference between Panthor and Panfork?
+Panthor is a new driver for Mali G*** gpus developed by the linux kernel developers, while Panfork is a fork from Panfrost which aimed to support Mali G610 when it was released. Even so Panfork performs better than Panthor, Panthor is the way to go forward as Panfork isnt supported anymore.
+
+ - Overview about performance on Panthor:
+```
+> EGL (2D acceleration) performance ~-40% (not measured, answering from day to day feel).
+> OpenGL (3D acceleration) performance -16%.
+> Vulkan is now almost fully supported.
+> You also see a bit more cpu usage (~5%) on heavy gpu usage.
+```
+
+> BredOS for RK35xx devices has Panfork enabled by default!
+{.is-info}
+
 
 # 2. Enable the Panthor DTBO
 ## 2.1 Automatically
