@@ -2,7 +2,7 @@
 title: 如何在马里安装Panthor GPU with RK3588
 description:
 published: true
-date: 2025-09-16T10：49：06.107Z
+date: 2025-12-22T06:38:20.247Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -11,6 +11,22 @@ dateCreated: 2024-08-31T15:03:26.994Z
 # 🎛️ 1. 简介
 
 这个指南使你走过让马里的Panthor GPU 存在于RK3588 chipset的板上。
+
+## 1.1 Panthor和Panfork之间的差别是什么？
+
+Panthor 是马里G\*\*\* gpus开发者开发的 linux 内核的一个新驱动程序。 潘福克是邦弗斯特的一个分叉，其目的是支持马里610集团获释后的工作。 即使如此，邦福克比潘索表现更好，潘托尔也是继续支持邦福克的道路。
+
+- Panthor的性能概述：
+
+```
+> EGL (2D acceleration) performance ~-40% (not measured, answering from day to day feel).
+> OpenGL (3D acceleration) performance -16%.
+> Vulkan is now almost fully supported.
+> You also see a bit more cpu usage (~5%) on heavy gpu usage.
+```
+
+> RK35xx 设备的 BredOS 默认启用了Panfork ！
+> {.is-info}
 
 # 🔄 2. 启用Panthor DTBO
 
