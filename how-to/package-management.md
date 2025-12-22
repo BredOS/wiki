@@ -1,8 +1,8 @@
 ---
-title: Package Managers Guide 
+title: Package Managers Guide
 description: Welcome to the BredOS Package Managers guide! Here, you'll learn how to install and manage applications
 published: true
-date: 2025-09-18T07:23:26.529Z
+date: 2025-12-22T06:22:03.605Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-20T20:08:39.778Z
@@ -56,6 +56,21 @@ pacman -Q
 ```bash
 sudo pacman -Sc
 ```
+
+## 2.7 Reset TrustDB
+If you have problems to install any package, because of the error `error: keyring: signature from "<name of signer here>" is unknown trust`, resetting the database containing the signature keys for pacman and rebuilding it, fixes it.
+
+- To remove the old database, run:
+```
+sudo rm -rf /etc/pacman.d/gnupg
+```
+
+- Then rebuild your database with:
+```
+sudo pacman-key --init
+sudo pacman-key --populate
+```
+
 
 > Pacman is an essential tool for managing your BredOS system — quick, efficient, and powerful!
 {.is-success}
