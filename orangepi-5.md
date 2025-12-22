@@ -2,11 +2,14 @@
 title: Orange Pi 5 Series
 description: This page contains links to useful guides/tweaks for the OPI 5 Series devices
 published: true
-date: 2025-12-22T06:57:10.202Z
+date: 2025-12-22T07:01:06.571Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
 ---
+
+
+[![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}](http://www.orangepi.org)
 
 # 1.  Supported Orange Pi 5 Series devices
 | Device            | UEFI  | Supported | Known Issues |
@@ -111,6 +114,3 @@ Specifications:
 # 2. Download
 You can find download links for images in our [website](https://bredos.org/download.html)!
 
----
-
-[![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}](http://www.orangepi.org)
