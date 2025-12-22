@@ -2,11 +2,13 @@
 title: Orange Pi 6 Plus
 description: 
 published: true
-date: 2025-11-24T09:25:07.461Z
+date: 2025-12-22T07:21:41.440Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-24T07:14:51.932Z
 ---
+
+[![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}](http://www.orangepi.org)
 
 # 1. Introduction
 The Orange Pi 6 Plus is an ARM64 board with great specifications:
