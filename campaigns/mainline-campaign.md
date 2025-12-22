@@ -2,7 +2,7 @@
 title: Mainline campaign
 description: 
 published: true
-date: 2025-12-22T06:51:51.504Z
+date: 2025-12-22T06:53:41.252Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-22T17:56:04.573Z
@@ -98,6 +98,8 @@ The bigger the budget at our disposal, the more time we can dedicate to BredOS.
 
 
 ## Sponsors
+We would like to sincerely thank our sponsors for their generous support. We are truly grateful for your partnership.
+
 ![sponsor-gold-tier-opi.png](/sponsors/sponsor-gold-tier-opi.png){.align-center}
 ![sponsor-silver-tier-ameridroid.png](/sponsors/sponsor-silver-tier-ameridroid.png){.align-center}
 
