@@ -2,7 +2,7 @@
 title: Rock 5 系列
 description:
 published: true
-date: 2025-09-17T09:37:33.486Z
+date: 2025-12-26T23:43:10.385Z
 tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -18,9 +18,10 @@ dateCreated: 2024-09-21T09:12:56.606Z
 | Rock 5C      | 否    | 否    | Wi-Fi 驱动程序数天后会崩溃 |
 | Rock 5C Lite | 否    | 否    | Wi-Fi 驱动程序数天后会崩溃 |
 | Rock 5D      | 否    | 否    | Wi-Fi 驱动程序数天后会崩溃 |
+| Rock 5T      | 否    | 否    |                  |
 | Rock 5 ITX   | 否    | 否    |                  |
 | CM5          | 否    | 否    |                  |
-| CM5 Lite     | 否    | 否    |                  |
+| CM5 Lite     | No   | Yes  |                  |
 
 ### Tabset {.tabset}
 
