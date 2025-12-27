@@ -18,10 +18,10 @@ dateCreated: 2024-09-21T09:12:56.606Z
 | Rock 5C      | 否    | 否    | Wi-Fi 驱动程序数天后会崩溃 |
 | Rock 5C Lite | 否    | 否    | Wi-Fi 驱动程序数天后会崩溃 |
 | Rock 5D      | 否    | 否    | Wi-Fi 驱动程序数天后会崩溃 |
-| Rock 5T      | 否    | 否    |                  |
+| 5T 摇动        | 否    | 否    |                  |
 | Rock 5 ITX   | 否    | 否    |                  |
 | CM5          | 否    | 否    |                  |
-| CM5 Lite     | No   | Yes  |                  |
+| CM5 Lite     | 指南   | 设备   |                  |
 
 ### Tabset {.tabset}
 
