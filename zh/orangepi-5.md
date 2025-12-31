@@ -103,8 +103,8 @@ dateCreated: 2024-09-20T15:17:37.567Z
 - 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0
 - 板大小 ~89×57 毫米
 
-> When you want to flash to the device via maskrom mode, connect a USB-A to USB-A cable to the upper USB 3.0 (blue) port. Alternatively, you can use a USB-A to USB-C cable and attach a USB-C to USB-A adapter at the USB-C end to make it USB-A to USB-A.
-> {.is-warning}
+> 当您想要通过 maskrom 模式刷入设备时，将 USB -A到 USB - A 电缆连接到顶部USB 3.0 (蓝色) 端口。 或者，， 你可以使用 USB-A到 USB-C 电缆，然后在 USB-C 末端将 USB-C 连接到 USB-C 适配器。
+> {.is-info}
 
 #### Orange Pi 5 Ultra
 
