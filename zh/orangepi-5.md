@@ -2,7 +2,7 @@
 title: Orange Pi 5 系列
 description: 此页面包含对 Orange Pi 5 系列设备有用指南/调整的链接
 published: true
-date: 2025-12-22T07:01:06.571Z
+date: 2025-12-31T08:35:55.315Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
@@ -102,6 +102,9 @@ dateCreated: 2024-09-20T15:17:37.567Z
 - 视频：2× HDMI2.1 最高 8K@60Hz；MIPI DSI 等。
 - 连接：2.5 Gbps 以太网(RTL8125BG)，WiFi6E + BT5.3/BLE；USB 3.0/2.0
 - 板大小 ~89×57 毫米
+
+> When you want to flash to the device via maskrom mode, connect a USB-A to USB-A cable to the upper USB 3.0 (blue) port. Alternatively, you can use a USB-A to USB-C cable and attach a USB-C to USB-A adapter at the USB-C end to make it USB-A to USB-A.
+> {.is-warning}
 
 #### Orange Pi 5 Ultra
 
