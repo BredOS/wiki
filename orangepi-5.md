@@ -2,7 +2,7 @@
 title: Orange Pi 5 Series
 description: This page contains links to useful guides/tweaks for the OPI 5 Series devices
 published: true
-date: 2025-12-22T07:01:06.571Z
+date: 2025-12-31T08:35:55.315Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
@@ -86,6 +86,10 @@ Specifications:
 - Video: 2× HDMI2.1 up to 8K@60Hz; MIPI DSI; etc. 
 - Connectivity: 2.5 Gbps Ethernet (RTL8125BG), WiFi6E + BT5.3/BLE; USB 3.0/2.0. 
 - Board size ~89×57 mm.
+
+> When you want to flash to the device via maskrom mode, connect a USB-A to USB-A cable to the upper USB 3.0 (blue) port. Alternatively, you can use a USB-A to USB-C cable and attach a USB-C to USB-A adapter at the USB-C end to make it USB-A to USB-A.
+{.is-warning}
+
 
 #### Orange Pi 5 Ultra
 > We nicknamed it "*opi5ultra*" because, honestly, no one has the time, patience, or even the slightest desire to constantly say or type out the ridiculously long, unnecessarily formal, and mildly annoying name "Orange Pi 5 Ultra" — especially when everyone knows exactly what you mean anyway.
