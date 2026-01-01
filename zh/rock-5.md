@@ -2,7 +2,7 @@
 title: Rock 5 系列
 description:
 published: true
-date: 2025-12-26T23:43:10.385Z
+date: 2026-01-01T10:35:20.365Z
 tags:
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -47,9 +47,5 @@ dateCreated: 2024-09-21T09:12:56.606Z
 
 您可以在我们的 [website](https://bredos.org/download.html) 中找到图像的下载链接！
 
-# 3. 有用的链接
 
-## 3.1 关于Rock 5B 和 Rock 5B Plus
-
-- [如何从 NVMe 启动 BredOS](/rock-5/how-to-boot-from-nvme)
 
