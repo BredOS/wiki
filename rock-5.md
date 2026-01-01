@@ -2,7 +2,7 @@
 title: Rock 5 Series
 description: 
 published: true
-date: 2025-12-26T23:43:10.385Z
+date: 2026-01-01T10:35:20.365Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-21T09:12:56.606Z
@@ -34,8 +34,5 @@ dateCreated: 2024-09-21T09:12:56.606Z
 # 2. Download
 You can find download links for images in our [website](https://bredos.org/download.html)!
 
-# 3. Useful links
-## 3.1 For Rock 5B and Rock 5B Plus
 
--   [How to boot BredOS from NVMe](/rock-5/how-to-boot-from-nvme)
 
