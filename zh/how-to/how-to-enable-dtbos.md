@@ -2,7 +2,7 @@
 title: 如何启用 DTBOs
 description:
 published: true
-date: 2025-09-16T10:44:14.092Z
+date: 2026-01-08T17:34:02.034Z
 tags:
 editor: markdown
 dateCreated: 2024-11-10T18：02：07.427Z
@@ -103,7 +103,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 - **更改为 `Enabled`** 支持 DTB 覆盖和叠加层\\\\\\\\\`
 
-![](/panthor/enable_tree_dtb_in_uefi.jpg)
+![bios-dtb-overlays.png](/panthor/bios-dtb-overlays.png)
 
 - 按 F10 键保存并重新启动到您的系统。
 
