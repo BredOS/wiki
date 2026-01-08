@@ -2,7 +2,7 @@
 title: Enable DTB overlays
 description: 
 published: true
-date: 2025-09-24T10:24:19.675Z
+date: 2026-01-08T17:34:02.034Z
 tags: 
 editor: markdown
 dateCreated: 2024-11-10T18:02:07.427Z
@@ -79,7 +79,7 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 - Set `Config Table Mode` to `Device Tree`
 - Change `Support DTB override & overlays` to `Enabled`
 
-![](/panthor/enable_tree_dtb_in_uefi.jpg)
+![bios-dtb-overlays.png](/panthor/bios-dtb-overlays.png)
 
 - Press F10 to save and reboot back into your system.
 
