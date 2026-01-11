@@ -2,7 +2,7 @@
 title: Table of supported devices
 description: 
 published: true
-date: 2026-01-11T06:50:54.108Z
+date: 2026-01-11T06:51:55.103Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-16T11:31:39.039Z
@@ -13,7 +13,7 @@ This page holds a table of our supported devices with known issues, hardware sup
 
 # 2. List of supported devices
 
-| Device            | UEFI  | SPI | Known Issues | Installation type |Guides | Nickname |
+| Device            | UEFI  | SPI | Known Issues | Installation type | Device Page | Nickname |
 |-------------------|-------|-----------|--------------|--|--|
 | Cool Pi 4 Model B       |  No   |   No   | Wifi doesn't work.| [Device specific image](/install/device-specific-image)| | |
 |FydeTab Duo|	Yes | No	|	|[Device specific image](/install/device-specific-image)|[Fydetab Duo](/en/fydetab-duo) | "FydeTube", "FDT", or "Duo" |
