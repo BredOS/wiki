@@ -2,7 +2,7 @@
 title: Sata Firmware Fix
 description: 
 published: true
-date: 2025-10-03T05:08:32.217Z
+date: 2026-01-11T07:04:16.198Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T09:18:06.486Z
@@ -16,8 +16,9 @@ dateCreated: 2025-09-12T09:18:06.486Z
 - Another device with Linux installed (Windows should work too, but is not covered here)
 
 A very handy pack including the flasher, clip, and other useful accessories can be ordered here:
- https://www.aliexpress.com/item/32263275388.html
- ![spi-flasher.png](/wiki-itx3588j-pics/spi-flasher.png)
+| https://www.aliexpress.com/item/32263275388.html |
+| --- |
+| ![spi-flasher.png](/wiki-itx3588j-pics/spi-flasher.png) |
  >If the link has expired, feel free to give us a heads-up on Discord or Telegram.
  
  # 2. Connect to SPI
