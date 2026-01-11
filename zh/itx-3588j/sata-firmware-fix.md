@@ -2,7 +2,7 @@
 title: Sata固件修复
 description:
 published: true
-date: 2025-09-19T05:01:28.982Z
+date: 2026-01-11T07:04:16198Z
 tags:
 editor: markdown
 dateCreated: 2025-09-12T09：18：06.486Z
@@ -15,9 +15,11 @@ dateCreated: 2025-09-12T09：18：06.486Z
 - 新的固件文件 (从 [here](/wiki-itx3588j-pics/satafw/sata_adapter_en25f40.bin) 下载)
 - 已安装Linux的另一台设备 (window也应该正常工作，但不在这里覆盖)
 
-这里可以订购一个非常便捷的包，包括烧录机、片段和其他有用的配件：
-https://www.aliexpress.com/item/3226327388.html
-[spi-flasher.png](/wiki-itx3588j-pics/spi-flasher.png)
+这里可以订购一个非常便捷的包，包括烧录机、片段和其他有用的附件：
+
+| https://www.ali高速公路.com/item/32263275388.html |
+| ------------------------------------------------------------------------------------------------------------- |
+| ![spi-flasher.png](/wiki-itx3588j-pics/spi-flasher.png)                                       |
 
 > 如果链接已过期，请随时在 Discord 或 Telegram 上给我们头部。
 
