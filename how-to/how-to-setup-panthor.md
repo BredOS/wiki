@@ -2,7 +2,7 @@
 title: Setup Panthor on Mali GPUs with RK3588
 description: 
 published: true
-date: 2025-12-22T06:38:20.247Z
+date: 2026-01-20T10:04:59.437Z
 tags: 
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -26,9 +26,9 @@ Panthor is a new driver for Mali G*** gpus developed by the linux kernel develop
 > BredOS for RK35xx devices has Panfork enabled by default!
 {.is-info}
 
-
-# 2. Enable the Panthor DTBO
-## 2.1 Automatically
+# 2. Install Panthor
+## 2.1 Enable the DTBO
+### 2.1.1 Automatically
 - The bredos-config tool offers a simple way to enable and disable dtbos. Start the tool with:
 ```
 sudo bredos-config
@@ -42,18 +42,17 @@ While bredos-config is able to install dtbs and alter the grub config to load th
 
 
 > Do not reboot your system after the installation of the dtb overlay!
-> Continue with `3. Replace Panfork graphics`.
+> Continue with `2.2 Replace Panfork graphics`.
 {.is-warning}
-## 2.2 Manually
-Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable
-`/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`
+### 2.1.2 Manually
+Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`.
 
 > Do not reboot your system after the installation of the dtb overlay!
-> Continue with `3. Replace Panfork graphics`.
+> Continue with `2.2 Replace Panfork graphics`.
 {.is-warning}
 
 
-# 3. Replace Panfork graphics
+## 2.2 Replace Panfork graphics
 
 - Replace the `mesa-panfork-git` package with the standard `mesa` package:
 
@@ -61,16 +60,45 @@ Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable
 sudo pacman -S mesa
 ```
 
-# 4. Enable Vulkan
+## 2.3 Enable Vulkan
 
 - Install the vulkan loader and driver:
 ```
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-# 5. Reboot Your System 
-- Reboot your System to apply the changes. If you want to validate if your graphics, you can do run the following:
+## 2.4 Reboot Your System 
+- Reboot your System to apply the changes. 
+
+## 2.5 Validate Installation
+- If you want to validate if your graphics, you can do run the following:
 ```
-sudo pacman -S inxi mesa-utils
-inxi -G
+lsmod | grep pan
 ```
+The output of the command above should indicate that the `panthor` module is loaded. If you still see the `panfrost` module listed, you may want to check if you have done all steps described in this article.
+
+# 3. Revert to Panfrost
+- To revert to `Panfork`, run the following commands:
+
+### Tabset {.tabset}
+#### UEFI-based System
+```
+sudo pacman -S mesa-panfork-git
+rm /boot/efi/dtb/overlays/rockchip-rk3588-panthor-gpu.dtbo
+sudo reboot
+```
+#### U-Boot-based System
+```
+sudo pacman -S mesa-panfork-git
+sudo nano /boot/extlinux/extlinux.conf
+```
+
+Remove the line `fdtoverlays /boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`. 
+Then Save and Close.
+
+- Reboot your system to apply your changes:
+
+```
+sudo reboot
+```
+
