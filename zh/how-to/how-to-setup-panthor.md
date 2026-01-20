@@ -2,7 +2,7 @@
 title: 如何在马里安装Panthor GPU with RK3588
 description:
 published: true
-date: 2025-12-22T06:38:20.247Z
+date: 2026-01-20T10:04:59.437Z
 tags:
 editor: markdown
 dateCreated: 2024-08-31T15:03:26.994Z
@@ -28,9 +28,11 @@ Panthor 是马里G\*\*\* gpus开发者开发的 linux 内核的一个新驱动�
 > RK35xx 设备的 BredOS 默认启用了Panfork ！
 > {.is-info}
 
-# 🔄 2. 启用Panthor DTBO
+# 🔄 2. Install Panthor
 
-## 🤖 1.1 自动使用
+## 2.1 Enable the DTBO
+
+### 2.1.1 Automatically
 
 - bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为 启动工具： 启动工具： 启动工具： 启动工具： 启动工具：
 
@@ -48,22 +50,18 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 > 不要在安装dtb 覆盖后重启系统！
 > {.is-warning}
 > {.is-warning}
-> 继续使用 \`3。 替换Panfork 图形。
+> Continue with `2.2 Replace Panfork graphics`.
 > {.is-warning}
 
-## 🦶 1.2 Manual
+### 2.1.2 Manually
 
-按照[设备树叠加层指南](/how-to/how-to-enable-dtbos)启用
-`/boot/dtbs/rockchip/overy/rockchip-rk3588-panthor-gpu.dtbo`
-**复制DTBO后，不要重启系统！**
+Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`.
 
-> 不要在安装dtb 覆盖后重启系统！
-> {.is-warning}
-> {.is-warning}
-> 继续使用 \`3。 替换Panfork 图形。
+> Do not reboot your system after the installation of the dtb overlay!
+> Continue with `2.2 Replace Panfork graphics`.
 > {.is-warning}
 
-# 🔁 3. 替换面板图形
+## 2.2 Replace Panfork graphics
 
 - 用标准的`mesa`软件包替换`mesa-panfork-git`软件包：
 
@@ -71,7 +69,7 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 sudo pacman -S mesa
 ```
 
-# 🔁 4. 重启您的系统
+## 2.3 Enable Vulkan
 
 - 安装vulkan加载器和驱动器：
 
@@ -79,11 +77,47 @@ sudo pacman -S mesa
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-# 5. 重启您的系统
+## 2.4 Reboot Your System
 
-- 重启系统以应用更改。 如果您想要验证您的图形，您可以运行以下操作：
+- 重启系统以应用更改。
+
+## 2.5 Validate Installation
+
+- 如果您想要验证您的图形，您可以运行以下操作：
 
 ```
-sudo pacman -S inxi mesa-utils
-inxi -G
+lsmod | grep pan
 ```
+
+The output of the command above should indicate that the `panthor` module is loaded. If you still see the `panfrost` module listed, you may want to check if you have done all steps described in this article.
+
+# 🔁 3. Revert to Panfrost
+
+- To revert to `Panfork`, run the following commands:
+
+### Tabset {.tabset}
+
+#### UEFI-based System
+
+```
+sudo pacman -S mesa-panfork-git
+rm /boot/efi/dtb/overlays/rockchip-rk3588-panthor-gpu.dtbo
+sudo reboot
+```
+
+#### U-Boot-based System
+
+```
+sudo pacman -S mesa-panfork-git
+sudo nano /boot/extlinux/extlinux.conf
+```
+
+Remove the line `fdtoverlays /boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`.
+Then Save and Close.
+
+- Reboot your system to apply your changes:
+
+```
+sudo reboot
+```
+
