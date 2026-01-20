@@ -30,9 +30,9 @@ Panthor 是马里G\*\*\* gpus开发者开发的 linux 内核的一个新驱动�
 
 # 🔄 2. Install Panthor
 
-## 2.1 Enable the DTBO
+## 2.1 启用 DTBO
 
-### 2.1.1 Automatically
+### 2.1.1 自动使用
 
 - bredos-config 工具提供了一种简单的方式来启用和禁用 dtbos。 启动工具为 启动工具： 启动工具： 启动工具： 启动工具： 启动工具：
 
@@ -50,18 +50,20 @@ bredos-config 能够安装 dtbs 并更改grub 配置以便在启动时加载它_
 > 不要在安装dtb 覆盖后重启系统！
 > {.is-warning}
 > {.is-warning}
-> Continue with `2.2 Replace Panfork graphics`.
+> 继续使用`2.2 替换面板图形`。
+> {.is-info}
+
+### 2.1.2 手动的
+
+按照[设备树叠加层指南](/how-to/how-to-enable-dtbos)启用`/boot/dtbs/rockchip/overy/rockchip-rk3588-panthor-gpu.dtbo`。
+
+> 不要在安装dtb 覆盖后重启系统！
+> {.is-warning}
+> {.is-warning}
+> 继续使用`2.2 替换面板图形`。
 > {.is-warning}
 
-### 2.1.2 Manually
-
-Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable `/boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`.
-
-> Do not reboot your system after the installation of the dtb overlay!
-> Continue with `2.2 Replace Panfork graphics`.
-> {.is-warning}
-
-## 2.2 Replace Panfork graphics
+## 2.2 替换面板图形
 
 - 用标准的`mesa`软件包替换`mesa-panfork-git`软件包：
 
@@ -69,7 +71,7 @@ Follow the [Device Tree Overlay guide](/how-to/how-to-enable-dtbos) to enable `/
 sudo pacman -S mesa
 ```
 
-## 2.3 Enable Vulkan
+## 2.3 Vulkan 启用
 
 - 安装vulkan加载器和驱动器：
 
@@ -77,45 +79,45 @@ sudo pacman -S mesa
 sudo pacman -S vulkan-icd-loader vulkan-panfrost
 ```
 
-## 2.4 Reboot Your System
+## 2.4 重新启动您的系统
 
 - 重启系统以应用更改。
 
-## 2.5 Validate Installation
+## 2.5 验证安装
 
 - 如果您想要验证您的图形，您可以运行以下操作：
 
 ```
-lsmod | grep pan
+lsomd | grep pan
 ```
 
-The output of the command above should indicate that the `panthor` module is loaded. If you still see the `panfrost` module listed, you may want to check if you have done all steps described in this article.
+上面命令的输出应表明`panthor`模块已加载。 如果您仍然看到列出的 panfrost\` 模块，您可能想要检查您是否已经完成了该文章描述的所有步骤。
 
-# 🔁 3. Revert to Panfrost
+# 🔁 3. 还原到Panfrost
 
-- To revert to `Panfork`, run the following commands:
+- 若要恢复到`Panfork`，请运行以下命令：
 
 ### Tabset {.tabset}
 
-#### UEFI-based System
+#### 基于UEFI的系统
 
 ```
 sudo pacman -S mesa-panfork-git
-rm /boot/efi/dtb/overlays/rockchip-rk3588-panthor-gpu.dtbo
+rm /boot/efi/dtb/overys/rockchip-rk3588-panthor-gpu.dtbo
 sudo reboot
 ```
 
-#### U-Boot-based System
+#### U-机器人系统
 
 ```
 sudo pacman -S mesa-panfork-git
 sudo nano /boot/extlinux/extlinux.conf
 ```
 
-Remove the line `fdtoverlays /boot/dtbs/rockchip/overlay/rockchip-rk3588-panthor-gpu.dtbo`.
-Then Save and Close.
+删除线“fdtovery/boot/dtbs/rockchip/overy/rockchip-rk3588-panthor-gpu.dtbo”。
+然后保存并关闭。
 
-- Reboot your system to apply your changes:
+- 重启系统以应用您的更改：
 
 ```
 sudo reboot
