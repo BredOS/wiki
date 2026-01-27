@@ -1,8 +1,8 @@
 ---
-title: Install STEAM on BredOS
+title: Install STEAM on BredOS (box64)
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2025-09-18T07:12:38.577Z
+date: 2026-01-27T08:34:28.631Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -11,6 +11,10 @@ dateCreated: 2024-09-08T09:55:58.661Z
 # 1. Introduction
 
 Welcome to the guide on how to install **Steam** on BredOS! Follow these simple steps to get Steam up and running on your system.
+
+> This article is intended for Single Board Computers (SBCs) based on an ARMv8 System-on-Chip (SoC), such as the RK3588. ARMv9 SoCs do not support the execution of 32-bit code. For ARMv9 SBCs, use FEX-Emu instead!
+{.is-info}
+
 
 # 2. Prerequisites
 > This how-to is meant for Rockchip RK35xx devices!
