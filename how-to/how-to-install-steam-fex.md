@@ -2,7 +2,7 @@
 title: Install Steam on BredOS (FEX-Emu)
 description: 
 published: false
-date: 2026-01-27T09:08:49.245Z
+date: 2026-01-27T09:21:08.862Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-27T09:08:49.245Z
@@ -18,14 +18,14 @@ Welcome to the guide on how to install **Steam** on BredOS! Follow these simple 
 
 # 2. Installatoin of FEX-Emu
 ## 2.1 Install FEX binary
-As of the time of writing you need to compile FEX-Emu by yourself. We prepared a PKGBUILD file to simplify things.
+As of the time of writing, you will need to compile FEX-Emu yourself. We have prepared a PKGBUILD file to simplify this process.
 
 - Clone our FEX-Repo:
 ```
 git clone https://github.com/BredOS/BredOS-FEX-Emu.git
 ```
 
-- To build the lastest release of FEX you need to alter the PKGBUILD file:
+- To build the latest release of FEX, you need to modify the PKGBUILD file:
 ```
 cd BredOS-FEX-Emu/BredOS
 nano PKGBUILD
@@ -44,7 +44,7 @@ license=(GPL3)
 [and so on ...]
 ```
 
-- Go to https://github.com/FEX-Emu/FEX and look up a valid tag. As of the time of writeing the latest release is from Januar of 2026. The Tag attached to this is 2601. Edit the `pkgver` accordingly:
+- Go to https://github.com/FEX-Emu/FEX  and look for a valid tag. As of the time of writing, the latest release is from January 2026. The tag associated with this release is 2601. Edit the `pkgver` accordingly:
 
 ```
 pkgver=2601
@@ -58,7 +58,7 @@ makepkg -si
 ```
 
 ## 2.2 Install x86_64 root filesystem
-To make the installation of a BredOS x86_64 root filesystem easier, why developed our own fex-config tool.
+To simplify the installation of a BredOS x86_64 root filesystem, we developed our own `fex-config` tool. 
 
 - To fetch the rootfs, run:
 ```
@@ -69,7 +69,7 @@ This will download and install BredOS to `~/.fex-emu/RootFS/bredos-chroot`
 
 
 
-# 3. Installation Steam
+# 3. Installation of Steam
 ## 3.1 Enable multilib
 You may need to add the **BredOS Multilib** repository to install Steam and the necessary translation layers. To do this, follow these steps:
 
@@ -95,15 +95,56 @@ You may need to add the **BredOS Multilib** repository to install Steam and the 
 
 # 4. GPU Acceleration
 ## 4.1 Intel and AMD
-Intel and AMD Graphics Card should work out of the box as long as your hostsystem has graphics accerleration enabled.
+Intel and AMD graphics cards should work out of the box, provided that your host system has graphics acceleration enabled. 
 
-> This is only tested for AMD. Feel free to share your experience if you have an Intel Card
+> This has only been tested with AMD cards. If you have an Intel card, please feel free to share your experience over at our Discord or Telegram channel. 
 {.is-warning}
 
 ## 4.2 NVidia
-Make sure you have installed the NVidia driver on your hostsystem. The open source nouveau driver does not work.
+Ensure that you have installed the proprietary NVIDIA driver on your host system. The open-source Nouveau driver will not work. 
 
+- To install the x86_64 NVidia driver inside the FEX-Container, run:
+```
+sudo bash ./cp-nvidia-driver.sh
+```
 
+> This Script can be found inside our FEX-Emu repository we cloned earlier.
+{.is-info}
+
+## 4.3 Any other GPU 
+If you wish to use the internal graphics card of your Single Board Computer (SBC), you need to enable thunking. Thunk libraries serve as intermediaries that translate GPU calls. 
+
+> Enabling thunks on FEX-Emu makes FEX extremly unstable!
+{.is-warning}
+
+- Edit the Config.json of FEX:
+```
+nano $HOME/.fex-emu/Config.json
+```
+
+- Locate the Thunks section of the configuration file:
+```
+  "ThunksDB": {
+    "fex_thunk_test": 0,
+    "asound": 0,
+    "drm": 0,
+    "Vulkan": 0,
+    "WaylandClient": 0,
+    "GL": 0
+  }
+```
+
+- And edit it to enable `Vulkan`, `WaylandClient` and `GL`:
+```
+  "ThunksDB": {
+    "fex_thunk_test": 0,
+    "asound": 0,
+    "drm": 0,
+    "Vulkan": 1,
+    "WaylandClient": 1,
+    "GL": 1
+  }
+```
 
 # 5. Launch Steam
 
