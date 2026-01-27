@@ -1,8 +1,8 @@
 ---
-title: Install STEAM on BredOS (box64)
+title: 在 BredOS 上安装 STEAM (box64)
 description: 一个在BredOS上安装Steam的简单指南，并对Panthorable和非Panthor的配置进行分步说明。
 published: true
-date: 2026-01-27T08:34:28.631Z
+date: 2026-01-27T09:21:31.565Z
 tags:
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -12,7 +12,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 欢迎来到关于如何在 BredOS 上安装 **Steam** 的指南！ 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。
 
-> This article is intended for Single Board Computers (SBCs) based on an ARMv8 System-on-Chip (SoC), such as the RK3588. ARMv9 SoCs do not support the execution of 32-bit code. For ARMv9 SBCs, use FEX-Emu instead!
+> 本文针对的是以ARMv8 System-on-Chip (SoC)为基础的单一板电脑，例如RK3588。 ARMv9 SOC不支持执行32位代码。 ARMv9 SBC, 请使用 FEX-Emu ！
 > {.is-info}
 
 # 📥 2. 必备条件
@@ -57,7 +57,7 @@ sudo bredos-config
    sudo pacman -Sy
 ```
 
-### :desktop_compute: 2.2.2 Steam 安装:
+### 3.2.2 Steam安装
 
 - 运行以下命令来安装 Steam：
 
