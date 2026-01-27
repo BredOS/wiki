@@ -2,7 +2,7 @@
 title: Install STEAM on BredOS (FEX-Emu)
 description: 
 published: false
-date: 2026-01-27T12:03:26.795Z
+date: 2026-01-27T12:47:29.889Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-27T09:08:49.245Z
@@ -16,7 +16,7 @@ Welcome to the guide on how to install **Steam** on BredOS! Follow these simple 
 {.is-info}
 
 
-# 2. Installatoin of FEX-Emu
+# 2. Installation of FEX-Emu
 ## 2.1 Install FEX binary
 As of the time of writing, you will need to compile FEX-Emu yourself. We have prepared a PKGBUILD file to simplify this process.
 
