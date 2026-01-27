@@ -2,7 +2,7 @@
 title: Install STEAM on BredOS (box64)
 description: A simple guide to install Steam on BredOS, with step-by-step instructions for both Panthor-enabled and non-Panthor configurations.
 published: true
-date: 2026-01-27T08:34:28.631Z
+date: 2026-01-27T09:21:31.565Z
 tags: 
 editor: markdown
 dateCreated: 2024-09-08T09:55:58.661Z
@@ -48,7 +48,7 @@ You may need to add the **BredOS Multilib** repository to install Steam and the 
    sudo pacman -Sy
 ```
 
-### 3.2.2 Steam Installation:
+### 3.2.2 Steam Installation
 
 
 - Run the following command to install Steam:
