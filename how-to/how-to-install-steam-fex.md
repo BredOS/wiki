@@ -1,8 +1,8 @@
 ---
-title: Install Steam on BredOS (FEX-Emu)
+title: Install STEAM on BredOS (FEX-Emu)
 description: 
 published: false
-date: 2026-01-27T09:21:08.862Z
+date: 2026-01-27T09:21:47.748Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-27T09:08:49.245Z
