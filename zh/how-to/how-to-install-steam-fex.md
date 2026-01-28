@@ -12,7 +12,7 @@ dateCreated: 2026-01-27T09：08：49.245Z
 
 欢迎来到关于如何在 BredOS 上安装 **Steam** 的指南！ 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。
 
-> 这篇文章是为了基于ARMv9 System-on-Chip而设计的，如Cix Pi 81x0。 ARMv8 SOC支持执行32位代码。 For ARMv8 SBCs, use [box64](/en/how-to/how-to-install-steam) instead!
+> 这篇文章是为了基于ARMv9 System-on-Chip而设计的，如Cix Pi 81x0。 ARMv8 SOC支持执行32位代码。 对于ARMv8 SBC，请使用 [box64](/en/how-to/how-to-install-steam) 代替！
 > {.is-info}
 
 # 3. 安装FEX-Emu
@@ -111,16 +111,16 @@ Intel 和 AMD 图形卡应该用盒子运行，只要您的主机系统启用了
 
 ## 4.2 NVidia
 
-确保您已经在您的主机系统上安装了专有的 NVIDIA 驱动程序。 开源的 Nouveau 驱动程序将无法工作。 As long as our `fex-config` tool can detect the NVIDIA driver version, it will automatically install the x86_64 driver for you.
+确保您已经在您的主机系统上安装了专有的 NVIDIA 驱动程序。 开源的 Nouveau 驱动程序将无法工作。 只要我们的 `fex-config` 工具能够检测到 NVIDIA 驱动程序，它就会自动为您安装x86_64 驱动程序。
 
-> Refer to [here](https://github.com/MitchellAugustin/fex_autoinstall/blob/main/fex_autoinstall_poc.sh) for information on how the driver is installed.
+> 请参阅 [here](https://github.com/MitchellAugustin/fex_autoinstall/blob/main/fex_autoinstall_poc.sh)，了解如何安装驱动程序。
 > {.is-info}
 
 ## 4.3 任何其他GPU
 
 如果您想要使用您单一看板电脑的内部图形卡，您需要启用导星。 Thunk图书馆充当翻译GPU呼叫的中介。
 
-> Enabling thunks on FEX-Emu makes FEX extremely unstable!
+> 在 FEX-Emu 上启用小块使得FEX 极难稳定！
 > {.is-info}
 
 - 编辑 FEX的 Config.json
