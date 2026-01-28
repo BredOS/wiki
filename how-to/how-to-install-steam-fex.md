@@ -2,7 +2,7 @@
 title: Install STEAM on BredOS (FEX-Emu)
 description: 
 published: false
-date: 2026-01-28T08:22:58.102Z
+date: 2026-01-28T08:28:51.251Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-27T09:08:49.245Z
@@ -101,20 +101,16 @@ Intel and AMD graphics cards should work out of the box, provided that your host
 {.is-warning}
 
 ## 4.2 NVidia
-Ensure that you have installed the proprietary NVIDIA driver on your host system. The open-source Nouveau driver will not work. 
+Ensure that you have installed the proprietary NVIDIA driver on your host system. The open-source Nouveau driver will not work. As long as our `fex-config` tool can detect the NVIDIA driver version, it will automatically install the x86_64 driver for you. 
 
-- To install the x86_64 NVidia driver inside the FEX-Container, run:
-```
-sudo bash ./cp-nvidia-driver.sh
-```
-
-> This Script can be found inside our FEX-Emu repository we cloned earlier.
+> Refer to [here](https://github.com/MitchellAugustin/fex_autoinstall/blob/main/fex_autoinstall_poc.sh) for information on how the driver is installed.
 {.is-info}
+
 
 ## 4.3 Any other GPU 
 If you wish to use the internal graphics card of your Single Board Computer (SBC), you need to enable thunking. Thunk libraries serve as intermediaries that translate GPU calls. 
 
-> Enabling thunks on FEX-Emu makes FEX extremly unstable!
+> Enabling thunks on FEX-Emu makes FEX extremely unstable!
 {.is-warning}
 
 - Edit the Config.json of FEX:
