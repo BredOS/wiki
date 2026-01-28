@@ -2,7 +2,7 @@
 title: Install STEAM on BredOS (FEX-Emu)
 description: 
 published: false
-date: 2026-01-27T12:47:29.889Z
+date: 2026-01-28T08:22:58.102Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-27T09:08:49.245Z
@@ -12,7 +12,7 @@ dateCreated: 2026-01-27T09:08:49.245Z
 
 Welcome to the guide on how to install **Steam** on BredOS! Follow these simple steps to get Steam up and running on your system.
 
-> This article is intended for SBCs based on an ARMv9 System-on-Chip, such as the Cix Pi 81x0. ARMv8 SoCs do support the execution of 32-bit code. For ARMv8 SBCs, use box64 instead!
+> This article is intended for SBCs based on an ARMv9 System-on-Chip, such as the Cix Pi 81x0. ARMv8 SoCs do support the execution of 32-bit code. For ARMv8 SBCs, use [box64](/en/how-to/how-to-install-steam) instead!
 {.is-info}
 
 
