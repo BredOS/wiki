@@ -12,7 +12,7 @@ dateCreated: 2024-09-08T09:55:58.661Z
 
 欢迎来到关于如何在 BredOS 上安装 **Steam** 的指南！ 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。 跟着这些简单的步骤来让Steam在您的系统上站起来。
 
-> 本文针对的是以ARMv8 System-on-Chip (SoC)为基础的单一板电脑，例如RK3588。 ARMv9 SOC不支持执行32位代码。 For ARMv9 SBCs, use [FEX-Emu](/en/how-to/how-to-install-steam-fex) instead!
+> 本文针对的是以ARMv8 System-on-Chip (SoC)为基础的单一板电脑，例如RK3588。 ARMv9 SOC不支持执行32位代码。 对于ARMv9 SBC，请使用 [FEX-Emu](/en/how-to/how-to-install-steam-fex) 代替！
 > {.is-info}
 
 # 📥 2. 必备条件
