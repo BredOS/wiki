@@ -2,7 +2,7 @@
 title: Install STEAM on BredOS (FEX-Emu)
 description: 
 published: false
-date: 2026-01-28T08:28:51.251Z
+date: 2026-02-03T09:17:38.531Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-27T09:08:49.245Z
@@ -153,5 +153,21 @@ steam
 > Happy gaming!
 {.is-success}
 
+# 6. Troubleshooting
+## 6.1 Steam hangs on start
+
+- If Steam does not start for you, but hangs at:
+```
+steam.sh[7285]: Running Steam on bredos rolling 64-bit
+steam.sh[7285]: STEAM_RUNTIME is enabled by the user
+setup.sh[7328]: Steam runtime environment up-to-date!
+```
+
+- Open a new Console and execute:
+```
+killall FEXServer
+```
+
+Steam will then continue to load normally.
 
 *[SBCs]: Single Board Computers
