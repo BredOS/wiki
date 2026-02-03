@@ -2,7 +2,7 @@
 title: 在 BredOS 上安装 STEAM (FEX-Emu)
 description:
 published: false
-date: 2026-02-03T09:17:38.531Z
+date: 2026-02-03T09：17：38.531Z
 tags:
 editor: markdown
 dateCreated: 2026-01-27T09：08：49.245Z
@@ -169,24 +169,24 @@ steam
 > {.is-success}
 > {.is-success}
 
-# 6. Troubleshooting
+# 🔄 3. 🤝 贡献
 
-## 6.1 Steam hangs on start
+## 6.1 Steam启动时挂起
 
-- If Steam does not start for you, but hangs at:
-
-```
-steam.sh[7285]: Running Steam on bredos rolling 64-bit
-steam.sh[7285]: STEAM_RUNTIME is enabled by the user
-setup.sh[7328]: Steam runtime environment up-to-date!
-```
-
-- Open a new Console and execute:
+- 如果Steam没有为您启动，但挂在：
 
 ```
-killall FEXServer
+steam.sh[7285]: 在 bredos 滚动64位
+steam 上运行Steam h[7285]: STEAM_RUNTIME 已被用户
+设置。setup.sh[7328]: Steam运行环境最新版本！
 ```
 
-Steam will then continue to load normally.
+- 打开新控制台并执行：
+
+```
+取消所有 FEXServer
+```
+
+然后，Steam将继续正常加载。
 
 \*[SBCs]: 单一板电脑
