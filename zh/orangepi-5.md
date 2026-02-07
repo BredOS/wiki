@@ -2,7 +2,7 @@
 title: Orange Pi 5 系列
 description: 此页面包含对 Orange Pi 5 系列设备有用指南/调整的链接
 published: true
-date: 2025-12-31T08:35:55.315Z
+date: 2026-02-07T14:48:31.235Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
@@ -18,8 +18,8 @@ dateCreated: 2024-09-20T15:17:37.567Z
 | Orange Pi 5B      | 设备   | 否    | 使用 OPI5 镜像，需要 DTBO 才能工作             |
 | Orange Pi 5 Plus  | 设备   | 否    |                                     |
 | Orange Pi 5 Pro   | 否    | 否    |                                     |
-| Orange Pi 5 Max   | 否    | 否    |                                     |
-| Orange Pi 5 Ultra | 否    | 否    |                                     |
+| Orange Pi 5 Max   | Yes  | 否    |                                     |
+| Orange Pi 5 Ultra | Yes  | 否    |                                     |
 | Orange Pi CM5     | 否    | 否    |                                     |
 
 > The Orange Pi 5, 5B and 5 Pro use RK3588S, while the 5 Plus and 5 Max use RK3588 (which have more PCIe and mipi lanes available)
