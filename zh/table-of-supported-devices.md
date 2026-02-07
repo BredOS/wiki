@@ -2,7 +2,7 @@
 title: 支持的设备表
 description:
 published: true
-date: 2026-01-11T06:51:55.103Z
+date: 2026-02-07T14:48:11.782Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11：31：39.039Z
@@ -29,10 +29,10 @@ dateCreated: 2025-09-16T11：31：39.039Z
 |Milk V Jupiter|No|Yes|	wifi doesn't work|[Device specific image](/install/device-specific-image)| | |
 |Orange Pi 5|Yes|Yes| Sata M.2 SSDs may not work	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5 |
 |Orange Pi 5B|Yes|Yes| Uses OPI5 image and requires DTBO for wifi to work	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5b |
-|Orange Pi 5 Max|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5max |
+|Orange Pi 5 Max|Yes|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5max |
 |Orange Pi 5 Plus|	Yes |Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5plus |
 |Orange Pi 5 Pro|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5pro |
-|Orange Pi 5 Ultra|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5ultra |
+|Orange Pi 5 Ultra|Yes|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opi5ultra |
 |Orange Pi 6 Plus|Yes|Yes| |[Installation with ISO](/install/Installation-with-ISO)|[Orange Pi 6 Plus](/en/orange-pi-6-plus)| opi6plus |
 |Orange Pi CM5|No|No|	|[Device specific image](/install/device-specific-image)|[Orange Pi 5 Series](/orangepi-5) | opicm5 |
 |Orange Pi RV2|No|Yes|	|[Device specific image](/install/device-specific-image)|[Orange Pi RV Series](/orangepi-rv) | opirv2 |
