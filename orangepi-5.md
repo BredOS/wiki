@@ -2,7 +2,7 @@
 title: Orange Pi 5 Series
 description: This page contains links to useful guides/tweaks for the OPI 5 Series devices
 published: true
-date: 2025-12-31T08:35:55.315Z
+date: 2026-02-07T14:48:31.235Z
 tags: opi, opi-5
 editor: markdown
 dateCreated: 2024-09-20T15:17:37.567Z
@@ -18,8 +18,8 @@ dateCreated: 2024-09-20T15:17:37.567Z
 | Orange Pi 5B      | Yes     | Yes        |Uses OPI5 image and requires DTBO for wifi to work|
 | Orange Pi 5 Plus  | Yes     | Yes        |              |
 | Orange Pi 5 Pro   |No      | Yes        |              |
-| Orange Pi 5 Max   |No      | Yes        |              |
-| Orange Pi 5 Ultra   |No      | Yes        |              |
+| Orange Pi 5 Max   |Yes      | Yes        |              |
+| Orange Pi 5 Ultra   |Yes| Yes        |              |
 | Orange Pi CM5   |No      | Yes        |              |
 
 > The Orange Pi 5, 5B and 5 Pro use RK3588S, while the 5 Plus and 5 Max use RK3588 (which have more PCIe and mipi lanes available)
