@@ -2,7 +2,7 @@
 title: 支持的设备表
 description:
 published: true
-date: 2026-02-07T14:48:11.782Z
+date: 2026-02-07T14：48：11.782Z
 tags:
 editor: markdown
 dateCreated: 2025-09-16T11：31：39.039Z
