@@ -2,7 +2,7 @@
 title: Radxa Orion O6N
 description:
 published: true
-date: 2025-12-16T10:50:13.899Z
+date: 2026-02-24T09:16:02.794Z
 tags:
 editor: markdown
 dateCreated: 2025-12-15T09：55：40.646Z
@@ -68,4 +68,7 @@ PCIe 端口：
 
 # 🔄 3. PCIe 稳定性
 
-一些测试者发现，当使用PCIe Gen4速度运行的设备连接时，该系统变得不稳定。 一些测试者发现，当使用PCIe Gen4速度运行的设备连接时，该系统变得不稳定。 如果你的棋盘不稳定，请考虑更新到我们的 UEFI 固件并设置链接速度到 3 基因。 一些测试者发现，当使用PCIe Gen4速度运行的设备连接时，该系统变得不稳定。 如果你的棋盘不稳定，请考虑更新到我们的 UEFI 固件并设置链接速度到 3 基因。 如果你的棋盘不稳定，请考虑设置链接速度到Gen3。
+```某些测试者发现当设备使用 PCIe Gen. 4 速度连接时，系统变得不稳定。 如果你的棋盘不稳定，请考虑设置链接速度到3\~\~
+```
+
+If you are experiencing issues with your PCIe devices, please refer to the [following article](/radxa-orion-o6/fix-pcie-issues).
