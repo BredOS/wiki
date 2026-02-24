@@ -2,7 +2,7 @@
 title: NPU
 description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
 published: false
-date: 2026-02-24T10:15:09.445Z
+date: 2026-02-24T10:39:13.265Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-18T09:54:15.539Z
@@ -42,7 +42,7 @@ The Rocket driver is installed by default starting from kernel version 6.18 onwa
 
 ### 2.2.1 Supported Software
 
-Since the Rocket driver utilizes standard protocols and device paths, it is already supported by several pieces of software:
+Since the Rocket driver utilizes standard protocols and device paths, it is already supported by several pieces of software.
 
 
 *[NPUs]: Neural Processing Units
