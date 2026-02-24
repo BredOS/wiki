@@ -2,7 +2,7 @@
 title: Contributors
 description: Credits to everyone who has contributed to the BredOS wiki!
 published: true
-date: 2026-02-24T10:49:18.029Z
+date: 2026-02-24T11:05:41.028Z
 tags: 
 editor: markdown
 dateCreated: 2025-09-12T10:43:44.656Z
