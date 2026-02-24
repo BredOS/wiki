@@ -2,7 +2,7 @@
 title: Rocket driver (Mainline Kernel)
 description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
 published: false
-date: 2026-02-24T09:30:17.110Z
+date: 2026-02-24T09:48:17.978Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:27:47.353Z
@@ -227,6 +227,10 @@ However, RKNN-Toolkit2:
 {.is-info}
 
 The RKNN-Toolkit2 repository is available at [github.com/airockchip/rknn-toolkit2](https://github.com/airockchip/rknn-toolkit2).
+
+> For more information have a look [here](/NPU/RKNN).
+{.is-info}
+
 
 # 8. Troubleshooting
 
