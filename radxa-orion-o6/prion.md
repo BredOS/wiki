@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: true
-date: 2025-12-15T10:04:32.072Z
+date: 2026-02-24T09:15:34.978Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:50:47.997Z
@@ -68,4 +68,6 @@ We have developed a custom UEFI based on Radxa’s source code. It supports the 
 | Fan control  | Works    | Auto fan control, No way to control from OS |
 
 # 5. PCIe
-Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider updating to our UEFI firmware and setting the link speed to Gen. 3.
+~~Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider updating to our UEFI firmware and setting the link speed to Gen. 3.~~
+
+If you are experiencing issues with your PCIe devices, please refer to the [following article](/radxa-orion-o6/fix-pcie-issues). 
