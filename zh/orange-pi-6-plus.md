@@ -2,7 +2,7 @@
 title: 橙色Pi 6 +
 description:
 published: true
-date: 2025-12-22T07:21:41.440Z
+date: 2026-02-24T09:17:00.321Z
 tags:
 editor: markdown
 dateCreated: 2025-11-24T07：14：51.932Z
@@ -63,7 +63,14 @@ PCIe 端口：
 | 前置音频                    | 断开  | 潜行者                                                                                 |
 | RTC                     | 工作  | 潜行者                                                                                 |
 | UART                    | 工作  | 开机时`ttyS2`                                                                          |
-| PCIe 稳定性                | 工作  | 正常工作                                                                                |
+| PCIe 稳定性                | 工作  | 见**5。 PCIe**                                                                        |
 | M.2M 键  | 工作  |                                                                                     |
 | M.2 E 键 | 工作  |                                                                                     |
 | 风扇控制                    | 工作  | 自动粉丝控制，不能控制操作系统                                                                     |
+
+# 4. PCIe 稳定性
+
+```某些测试者发现当设备使用 PCIe Gen. 4 速度连接时，系统变得不稳定。 如果你的棋盘不稳定，请考虑更新我们的 UEFI 固件并设置链接速度到 3.\~\~
+```
+
+If you are experiencing issues with your PCIe devices, please refer to the [following article](/radxa-orion-o6/fix-pcie-issues).
