@@ -1,8 +1,8 @@
 ---
 title: NPU
-description: 
+description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
 published: false
-date: 2026-02-24T09:11:06.338Z
+date: 2026-02-24T09:11:41.350Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-18T09:54:15.539Z
