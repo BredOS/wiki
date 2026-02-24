@@ -2,7 +2,7 @@
 title: Radxa Orion O6
 description: 
 published: true
-date: 2026-02-24T09:15:34.978Z
+date: 2026-02-24T10:18:09.554Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:50:47.997Z
@@ -62,7 +62,7 @@ We have developed a custom UEFI based on Radxa’s source code. It supports the 
 | Rear audio   | Broken   | No driver|
 | RTC          | Works    | No driver|
 | UART         | Works    | `/dev/ttyS2` at boot|
-| PCIe         | Partial  | Works fine for most devices but some GPUs don't work as expected. <br> Freezes the entire system sometimes. Consider using our bios.|
+| PCIe         | Partial  | Have a look at **5. PCIe**|
 | M.2 E Key    | Works    | |
 | M.2 M Key    | Works    | |
 | Fan control  | Works    | Auto fan control, No way to control from OS |
