@@ -1,8 +1,8 @@
 ---
-title: Fix PCIe issues in Cix P1 SoCs
+title: Fix PCIe issues on Cix P1 SoCs
 description: 
 published: true
-date: 2026-02-24T09:13:38.317Z
+date: 2026-02-24T09:17:17.061Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:13:38.317Z
