@@ -2,7 +2,7 @@
 title: Radxa Orion O6N
 description: 
 published: true
-date: 2025-12-16T10:50:13.899Z
+date: 2026-02-24T09:16:02.794Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-15T09:55:40.646Z
@@ -62,4 +62,7 @@ A guide for generic .iso installation is available [here](/install/Installation-
 | Fan control  | Works    | Auto fan control, No way to control from OS |
 
 # 5. PCIe
-Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider setting the link speed to Gen. 3.
+~~Some testers have found that the system becomes unstable when a device operating at PCIe Gen. 4 speeds is connected. If your board is unstable due to this, consider setting the link speed to Gen. 3.~~
+
+
+If you are experiencing issues with your PCIe devices, please refer to the [following article](/radxa-orion-o6/fix-pcie-issues). 
