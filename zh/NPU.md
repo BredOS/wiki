@@ -2,7 +2,7 @@
 title: NPU
 description: 使用 BredOS 在Rockchip SOC上设置和使用神经处理股
 published: false
-date: 2026-02-24T12：56：34.518Z
+date: 2026-02-24T19:46:29.573Z
 tags:
 editor: markdown
 dateCreated: 2026-02-18T09:54:15.539Z
@@ -44,4 +44,4 @@ RKNN 驱动程序被打包使用 BSP 内核6.1。 如果你安装了主线内核
 
 由于火箭驱动程序使用标准协议和设备路径，它已经得到几个软件的支持。
 
-\*[NPUs]: 神经处理单位
+\*[NPUs]: Neural Processing Unit
