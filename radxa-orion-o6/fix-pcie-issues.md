@@ -2,7 +2,7 @@
 title: Fix PCIe issues on Cix P1 SoCs
 description: 
 published: true
-date: 2026-02-24T09:17:17.061Z
+date: 2026-03-02T08:03:59.478Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:13:38.317Z
@@ -15,22 +15,9 @@ The Cix P1 81x0 SoCs firmware releases by different manufacturers have a bug in 
 # 2. The Fix
 While Eric provides an install script on his GitHub, it only applies to Debian-based systems. Since Bred is based on ArchLinuxARM, we need to perform the installation manually.
 
-- Install `devmem2`
+- Install `smmu-evtq-fix`
 ```
-sudo pacman -Syu devmem
-```
-
-- Clone Erics Github
-```
-git clone https://github.com/ErcinDedeoglu/orangepi-6plus-cix-sky1-smmu-fix.git
-```
-
-- Change directory and copy the files
-```
-cd orangepi-6plus-cix-sky1-smmu-fix
-sudo cp smmu-evtq-fix.sh /usr/local/sbin/smmu-evtq-fix.sh
-sudo chmod 755 /usr/local/sbin/smmu-evtq-fix.sh
-sudo cp smmu-evtq-fix.service /etc/systemd/system/smmu-evtq-fix.service
+sudo pacman -Syu smmu-evtq-fix
 ```
 
 - Enable and start the service
