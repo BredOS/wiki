@@ -2,7 +2,7 @@
 title: 在 Cix P1 SoC 修复PCI问题
 description:
 published: true
-date: 2026-03-02T08:03:59.478Z
+date: 2026-03-02T08:44.476Z
 tags:
 editor: markdown
 dateCreated: 2026-02-24T09:13:38.317Z
@@ -14,19 +14,12 @@ dateCreated: 2026-02-24T09:13:38.317Z
 
 # 1. 修复
 
-虽然Eric 在他的GitHub 上提供一个安装脚本，但它只适用于基于 Debian的系统。 由于Bred是基于 ArchLinuxARM 的，我们需要手动进行安装。
+虽然Eric 在他的GitHub 上提供一个安装脚本，但它只适用于基于 Debian的系统。 因为Bred 基于 ArchLinuxARM ，我们打包了所需的文件以方便您。
 
-- Install `smmu-evtq-fix`
+- 安装 `smmu-evtq-fix`
 
 ```
 sudo pacman -Syu smmu-evtq-fix
-```
-
-- 启用并启动服务
-
-```
-sudo systemctl daemon-reload
-sudo systemctl 启用--now smmu-evtq-fix.service 
 ```
 
 > 就是这样。 无需重启(除非您已经将您的 PCIe 速度限制为 3 级固件)。 在这种情况下，您需要重新启动您的机器并恢复此设置)。
