@@ -2,7 +2,7 @@
 title: 在 Cix P1 SoC 修复PCI问题
 description:
 published: true
-date: 2026-02-24T09：17：17.061Z
+date: 2026-03-02T08:03:59.478Z
 tags:
 editor: markdown
 dateCreated: 2026-02-24T09:13:38.317Z
@@ -16,25 +16,10 @@ dateCreated: 2026-02-24T09:13:38.317Z
 
 虽然Eric 在他的GitHub 上提供一个安装脚本，但它只适用于基于 Debian的系统。 由于Bred是基于 ArchLinuxARM 的，我们需要手动进行安装。
 
-- Install `devmem2`
+- Install `smmu-evtq-fix`
 
 ```
-sudo pacman -Syu devmem
-```
-
-- 克隆Erics Github
-
-```
-git clone https://github.com/ErcinDedeoglu/orangepi-6plus-cix-sky1-smmu-fix.git
-```
-
-- 更改目录并复制文件
-
-```
-cd orangepi-6plus-cix-sky1-smmu-fix
-sudo cp smmu-evtq-fix.sh /usr/local/sbin/smmu-evtq-fix.sh
-sudo chmod 755 /usr/local/sbin/smmmu-evtq-fix.sh
-sudo cp smmmu-evtq-fix.service /etc/systemd/smmu-evtq-fix.service
+sudo pacman -Syu smmu-evtq-fix
 ```
 
 - 启用并启动服务
