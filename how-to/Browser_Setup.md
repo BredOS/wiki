@@ -2,7 +2,7 @@
 title: Browser Setup
 description: Setting up a GPU-accelerated browser on ARM64 boards with BredOS
 published: true
-date: 2026-03-07T16:17:34.525Z
+date: 2026-03-07T16:35:11.784Z
 tags: browser, chromium, gpu, wayland, arm64
 editor: markdown
 dateCreated: 2026-03-07T16:08:59.754Z
@@ -223,8 +223,7 @@ If the device node is missing, check that the kernel module is loaded:
 lsmod | grep rockchip_vdec
 ```
 
-> For full RKVDEC2 setup instructions, see the [Video Decode](/en/video-decode) page.
-{.is-info}
+
 
 # 7. References
 
