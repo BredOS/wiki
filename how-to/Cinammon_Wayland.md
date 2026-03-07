@@ -1,8 +1,8 @@
 ---
 title: Cinnamon Wayland with GPU Acceleration on RK3588
 description: Switching Cinnamon from X11 to Wayland with hardware-accelerated rendering on RK3588 boards
-published: false
-date: 2026-03-07T16:06:02.389Z
+published: true
+date: 2026-03-07T16:07:08.925Z
 tags: cinnamon, wayland, gpu, panthor, rk3588
 editor: markdown
 dateCreated: 2026-03-07T16:06:02.388Z
