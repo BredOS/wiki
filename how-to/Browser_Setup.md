@@ -1,8 +1,8 @@
 ---
 title: Browser Setup
-description: etting up a GPU-accelerated browser on ARM64 boards with BredOS
+description: Setting up a GPU-accelerated browser on ARM64 boards with BredOS
 published: true
-date: 2026-03-07T16:08:59.754Z
+date: 2026-03-07T16:17:34.525Z
 tags: browser, chromium, gpu, wayland, arm64
 editor: markdown
 dateCreated: 2026-03-07T16:08:59.754Z
