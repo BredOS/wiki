@@ -2,7 +2,7 @@
 title: Cinnamon Wayland 与 GPU 加速 RK3588
 description: 用 RK3588 板上的硬件加速渲染从 X11 切换到Wayland
 published: true
-date: 2026-03-07T16：07：08.925Z
+date: 2026-03-08T15:53:07.801Z
 tags: 电影院, 航行, gpu, panthor, rk3588
 editor: markdown
 dateCreated: 2026-03-07T16：06：02.388Z
@@ -25,6 +25,8 @@ sudo pacman -S --need cinnamon muffin wayland xorg-xwayland libink pipewire mesa
 ```
 
 ## 2.2 内核和 GPU 驱动程序
+
+This guide assumes you already have the Panthor GPU driver enabled. If you are still using Panfork (the default on BredOS for RK35xx), follow the [Setup Panthor on Mali GPUs with RK3588](/en/how-to/how-to-setup-panthor) guide first, then return here.
 
 - 验证 panthor\` 模块已加载：
 
@@ -282,4 +284,5 @@ journalctl --user -b -u cinnamon-session
 - [Muffin 源代码](https://github.com/linuxmint/muffin) - Linux Mint
 - [完全多GPU支持](https://gitlab.gnome.org/GNOME/mutter) - GNOME
 - [Mesa Panthor driver](https://docs.mesa3d.org/drivers/panthor.html) - Mesa
+- [Setup Panthor on Mali GPUs with RK3588](https://wiki.bredos.org/en/how-to/how-to-setup-panthor) - BredOS Wiki
 - [Armbian RK3588 GPU 加速讨论](https://forum.armbian.com/topic/56374-expected-default-graphics-acceleration-for-rk3588/) - Armbian Forum
