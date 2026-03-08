@@ -2,7 +2,7 @@
 title: Cinnamon Wayland with GPU Acceleration on RK3588
 description: Switching Cinnamon from X11 to Wayland with hardware-accelerated rendering on RK3588 boards
 published: true
-date: 2026-03-07T16:07:08.925Z
+date: 2026-03-08T15:53:07.801Z
 tags: cinnamon, wayland, gpu, panthor, rk3588
 editor: markdown
 dateCreated: 2026-03-07T16:06:02.388Z
@@ -25,6 +25,8 @@ sudo pacman -S --needed cinnamon muffin wayland xorg-xwayland libinput pipewire 
 ```
 
 ## 2.2 Kernel and GPU Driver
+
+This guide assumes you already have the Panthor GPU driver enabled. If you are still using Panfork (the default on BredOS for RK35xx), follow the [Setup Panthor on Mali GPUs with RK3588](/en/how-to/how-to-setup-panthor) guide first, then return here.
 
 - Verify that the `panthor` module is loaded:
 
@@ -282,4 +284,5 @@ If Wayland does not work correctly, you can always switch back to X11 from the l
 - [Muffin source code](https://github.com/linuxmint/muffin) - Linux Mint
 - [Mutter multi-GPU support](https://gitlab.gnome.org/GNOME/mutter) - GNOME
 - [Mesa Panthor driver](https://docs.mesa3d.org/drivers/panthor.html) - Mesa
+- [Setup Panthor on Mali GPUs with RK3588](https://wiki.bredos.org/en/how-to/how-to-setup-panthor) - BredOS Wiki
 - [Armbian RK3588 GPU acceleration discussion](https://forum.armbian.com/topic/56374-expected-default-graphics-acceleration-for-rk3588/) - Armbian Forum
