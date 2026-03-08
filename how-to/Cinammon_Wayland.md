@@ -2,7 +2,7 @@
 title: Cinnamon Wayland with GPU Acceleration on RK3588
 description: Switching Cinnamon from X11 to Wayland with hardware-accelerated rendering on RK3588 boards
 published: true
-date: 2026-03-08T15:53:07.801Z
+date: 2026-03-08T15:58:02.631Z
 tags: cinnamon, wayland, gpu, panthor, rk3588
 editor: markdown
 dateCreated: 2026-03-07T16:06:02.388Z
@@ -43,6 +43,35 @@ sudo modprobe panthor
 ```
 
 > Panthor requires a BredOS kernel `6.12` or later. If the module is not available, update your kernel.
+{.is-warning}
+
+## 2.3 User Permissions
+
+Your user must belong to the `render` and `video` groups to access the GPU render node. Without these permissions, applications silently fall back to software rendering.
+
+- Check your current groups:
+
+```
+groups
+```
+
+If `render` or `video` are missing from the output, add your user to both groups:
+
+```
+sudo usermod -aG render,video $USER
+```
+
+- Log out and log back in for the group change to take effect.
+
+- Verify that the GPU render node exists and is accessible:
+
+```
+ls -la /dev/dri/
+```
+
+You should see at least `card0`, `card1`, and `renderD128`. The `renderD128` device should be owned by group `render` with permission `crw-rw----`.
+
+> If `/dev/dri/renderD128` is missing entirely, the Panthor driver failed to initialize. Check `dmesg | grep -i panthor` for errors.
 {.is-warning}
 
 # 3. Understanding the Dual-GPU Setup
@@ -217,25 +246,107 @@ This is expected on Wayland. The `glxinfo` command uses the GLX protocol which g
 DRI_PRIME=1 glxinfo -B
 ```
 
-## 7.2 Cinnamon Falls Back to Software Rendering
+## 7.2 Panthor Loaded but No GPU Rendering
 
-If `eglinfo` also shows `llvmpipe`:
+If `lsmod | grep panthor` shows the module is loaded but applications still use `llvmpipe`, work through these checks in order:
 
-- Verify the udev rule is applied (see [section 4.1](#h-41-create-a-udev-rule))
-- Check that your Mesa version supports Panthor (`mesa >= 24.1`)
-- Make sure no vendor `libMali` is installed, as it conflicts with Mesa:
+**Check 1: Render node exists**
+
+```
+ls -la /dev/dri/
+```
+
+If `renderD128` is missing, Panthor failed to initialize. Check the kernel log:
+
+```
+dmesg | grep -i panthor
+```
+
+Common causes:
+- Missing firmware: check `dmesg | grep -i firmware | grep -i mali`. The `mali-G610-firmware` package must be installed and the firmware files must be in `/lib/firmware/arm/mali/arch10.8/`
+- Device tree overlay not enabled: follow the [Setup Panthor](/en/how-to/how-to-setup-panthor) guide to enable the `rockchip-rk3588-panthor-gpu` DTBO
+
+**Check 2: User permissions**
+
+```
+ls -la /dev/dri/renderD128
+groups
+```
+
+If `renderD128` exists but your user is not in the `render` group, see [section 2.3](#h-23-user-permissions).
+
+**Check 3: Mesa detects the GPU**
+
+```
+eglinfo -B 2>/dev/null | grep -A5 "Device platform"
+```
+
+If the output shows empty devices or only `llvmpipe`, Mesa is not finding the Panthor driver. Verify that you are using the standard `mesa` package (not `mesa-panfork-git`):
+
+```
+pacman -Q mesa
+```
+
+If it shows `mesa-panfork-git`, replace it:
+
+```
+sudo pacman -S mesa
+```
+
+**Check 4: No conflicting libMali**
 
 ```
 pacman -Q | grep -i mali
 ```
 
-If any `libmali` package is found, remove it:
-
-- Remove the conflicting package:
+You should see `mali-G610-firmware` only. If any `libmali-valhall-g610` package is installed, it conflicts with Mesa's open source driver:
 
 ```
 sudo pacman -R libmali-valhall-g610
 ```
+
+**Check 5: Environment variable overrides**
+
+Stale or incorrect environment variables can force Mesa to use the wrong driver:
+
+```
+env | grep -iE "mesa|gallium|dri|gpu|libgl|egl"
+```
+
+If any of `MESA_LOADER_DRIVER_OVERRIDE`, `LIBGL_ALWAYS_SOFTWARE`, `GALLIUM_DRIVER`, or `__GLX_VENDOR_LIBRARY_NAME` are set, unset them or remove them from your environment configuration files.
+
+## 7.3 Vulkan Errors (VK_ERROR_INCOMPATIBLE_DRIVER)
+
+If you see errors like `ZINK: vkCreateInstance failed (VK_ERROR_INCOMPATIBLE_DRIVER)` when running graphical applications:
+
+- This means Mesa is trying to use the Zink driver (OpenGL-over-Vulkan) but no Vulkan driver is available. Install the Vulkan packages:
+
+```
+sudo pacman -S --needed vulkan-icd-loader vulkan-panfrost
+```
+
+- Verify that PanVK is detected:
+
+```
+vulkaninfo --summary 2>/dev/null | grep -A3 "GPU"
+```
+
+You should see `Mali-G610` or `panvk` in the output.
+
+> This error does not prevent GPU-accelerated OpenGL from working. If Panthor is correctly set up, Mesa uses the native Gallium driver for OpenGL without going through Zink/Vulkan. However, installing PanVK is recommended for applications that require Vulkan.
+{.is-info}
+
+## 7.4 Cinnamon Falls Back to Software Rendering
+
+If you have confirmed that Panthor works (the checks in [section 7.2](#h-72-panthor-loaded-but-no-gpu-rendering) all pass) but Cinnamon's compositor still uses software rendering:
+
+- Verify the udev rule is applied (see [section 4.1](#h-41-create-a-udev-rule)):
+
+```
+udevadm info -q all -n /dev/dri/card1 | grep mutter
+```
+
+- Check that `MUTTER_ALLOW_HYBRID_GPUS=1` is set (see [section 4.2](#h-42-set-environment-variables))
 
 - Check Muffin's log for errors:
 
@@ -243,7 +354,20 @@ sudo pacman -R libmali-valhall-g610
 journalctl --user -b | grep -i muffin
 ```
 
-## 7.3 Black Screen or Login Loop
+- Make sure compositing is not disabled:
+
+```
+dconf read /org/cinnamon/muffin/compositing-manager
+```
+
+If the output is `false` or empty, enable it:
+
+```
+dconf write /org/cinnamon/muffin/compositing-manager true
+```
+
+## 7.5 Black Screen or Login Loop
+
 
 If the Wayland session fails to start:
 
@@ -256,7 +380,7 @@ journalctl --user -b -u cinnamon-session
 
 - As a workaround, fall back to the X11 session from the login screen and verify your configuration
 
-## 7.4 Screen Tearing or Poor Performance
+## 7.6 Screen Tearing or Poor Performance
 
 If the session starts but performance is poor:
 
@@ -264,7 +388,7 @@ If the session starts but performance is poor:
 - Check that no Flatpak or Snap version of Cinnamon is overriding the system session
 - Try adding `CLUTTER_PAINT=disable-clipped-redraws:disable-culling` to `/etc/environment.d/90-rk3588-gpu.conf` if you see rendering artifacts
 
-## 7.5 Reverting to X11
+## 7.7 Reverting to X11
 
 If Wayland does not work correctly, you can always switch back to X11 from the login screen by selecting the `Cinnamon` session (without the "Wayland" label).
 
