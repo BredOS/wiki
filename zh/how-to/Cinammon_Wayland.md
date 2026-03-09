@@ -2,7 +2,7 @@
 title: Cinnamon Wayland 与 GPU 加速 RK3588
 description: 用 RK3588 板上的硬件加速渲染从 X11 切换到Wayland
 published: true
-date: 2026-03-09T10:07:14.898Z
+date: 2026-03-09T11：58：25.761Z
 tags: 电影院, 航行, gpu, panthor, rk3588
 editor: markdown
 dateCreated: 2026-03-07T16：06：02.388Z
@@ -308,13 +308,13 @@ dconf read /org/cinnamon/muffin/compositing-manager
 
 # 4. 🤝 贡献
 
-如果您遇到问题，首先生成完整的系统报告。 这将在一次枪口中收集所有硬件和软件信息，并且可以很容易地在 [BredOS Discord] (https://discord.gg/beSUnWGVH2 上获得帮助：
+- 如果您遇到问题，首先生成完整的系统报告。 这将在一次枪口中收集所有硬件和软件信息，并且可以很容易地在 [BredOS Discord] (https://discord.gg/beSUnWGVH2 上获得帮助：
 
 ```
 sudo sys-report
 ```
 
-此上传报表到 `termbin.com` 并打印您可以分享的 URL。 要保存本地版本：
+- 此上传报表到 `termbin.com` 并打印您可以分享的 URL。 要保存本地版本：
 
 ```
 sudo syss-report -l
@@ -446,7 +446,7 @@ journalctl --user -b | grep -i muffin
 dconf read /org/cinnamon/muffin/compositing-manager
 ```
 
-如果输出为 'false' 或 '空白' ，则启用它：
+- 如果输出为 'false' 或 '空白' ，则启用它：
 
 ```
 dconf write /org/cinnamon/muffin/compositing-manager true
