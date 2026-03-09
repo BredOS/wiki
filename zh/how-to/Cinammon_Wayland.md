@@ -71,277 +71,277 @@ ls -la /dev/dri/
 
 你应该至少看到`card0`、`card1`和`renderD128`。 `renderD128` 设备应该被`render` 组所拥有，并且必须有`crw-rw----`的权限。
 
-> 如果`/dev/dri/renderD128` 完全缺失，Panthor 驱动无法初始化。 Check `dmesg | grep -i panthor` for errors.
+> 如果`/dev/dri/renderD128` 完全缺失，Panthor 驱动无法初始化。 请检查`dmesg | grep -i panthor` 以了解错误。
 > {.is-info}
 
-# 4. Understanding the Dual-GPU Setup
+# 4. 理解双GPU设置
 
-On RK3588 boards, the kernel exposes two DRI card devices. This is the root cause of most GPU acceleration issues with Cinnamon Wayland.
+在 RK3588 板上，内核暴露了两个DRI 卡设备。 这是Cinnamon Wayland大多数GPU加速问题的根源。
 
-- The following table shows the role of each device:
+- 下表显示每个设备的角色：
 
-| 设备                       | Driver         | Role                                                                                                     |
-| ------------------------ | -------------- | -------------------------------------------------------------------------------------------------------- |
-| `/dev/dri/card0`         | `rockchip-drm` | Display controller (HDMI/DP output). No 3D rendering. |
-| `/dev/dri/card1`         | `panthor`      | GPU (Mali-G610). Handles all 3D rendering.            |
-| `/dev/dri/renderD128`    | `panthor`      | GPU render node (used by applications for 3D).                        |
-| {.dense} |                |                                                                                                          |
+| 设备                       | 驱动程序           | 作用                                                               |
+| ------------------------ | -------------- | ---------------------------------------------------------------- |
+| `/dev/dri/card0`         | `rockchip-drm` | 显示控制器 (HDMI/DP 输出). 没有 3D 渲染。 |
+| `/dev/dri/card1`         | `panthor`      | GPU (Mali-G610). 处理所有3D渲染。    |
+| `/dev/dri/renderD128`    | `panthor`      | GPU 渲染节点(3D)                                  |
+| {.dense} |                |                                                                  |
 
-The problem: `Muffin` (Cinnamon's compositor, a fork of GNOME's Mutter) tries to use `card0` for rendering by default. Since `rockchip-drm` has no 3D capabilities, it falls back to `llvmpipe` (CPU-based software rendering).
+问题: `Muffin` (Cinnamon's compositor, a fork of GNOME's Mutter) 尝试使用 `card0` 作为默认渲染。 因为`rockchip-drm`没有3D功能，它回落到`llvmpipe`(CPU软件渲染)。
 
-The solution: tell Muffin to use the `panthor` render node for GPU acceleration while keeping `rockchip-drm` for display output.
+解决方法：告诉Muffin使用 panthor` 渲染节点以加速GPU ，同时保持`rockchip-drm\` 以显示输出。
 
-- Verify your device layout:
+- 验证您的设备布局：
 
 ```
 ls -l /dev/dri/
 ```
 
-- Check which driver is behind each card:
+- 检查每张卡背面的驱动程序：
 
 ```
 udevadm info -q property -n /dev/dri/card0 | grep DRIVER
 udevadm info -q property -n /dev/dri/card1 | grep DRIVER
 ```
 
-# 5. Configure GPU Selection
+# 5. 配置 GPU 选择
 
-## 4.1 Create a Udev Rule
+## 4.1 创建 Udev 规则
 
-The most reliable method is a `udev` rule that tells Muffin which device to prefer for rendering.
+最可靠的方法是 `udev` 规则，它告诉Muffin 设备更喜欢渲染。
 
-- Create the udev rule file:
-
-```
-sudo nano /etc/udev/rules.d/61-mutter-panthor.rules
-```
-
-- Add the following content:
+- 创建 udev 规则文件：
 
 ```
-# RK3588: mark Panthor render node as preferred GPU for Mutter/Muffin
-SUBSYSTEM=="drm", KERNEL=="card1", DRIVERS=="panthor", TAG+="mutter-device-preferred-primary"
+sudo nano /etc/udev/rules.d/61-mutter-mutpanthor.rules
 ```
 
-- Reload udev rules:
+- 增加以下内容：
+
+```
+# RK3588: 将Panthor 渲染节点标记为Mutter/Muffin
+SUBSYSTEM=="drm", KERNEL=="card1", DRIVERS=="panthor", TAG+="mutter-device-heaved-primarary"
+```
+
+- 重新加载udev规则：
 
 ```
 sudo udevadm control --reload
 sudo udevadm trigger
 ```
 
-- Verify that the tag was applied:
+- 验证标签是否已应用：
 
 ```
 udevadm info -q all -n /dev/dri/card1 | grep mutter
 ```
 
-You should see `mutter-device-preferred-primary` in the output.
+你应该在输出中看到`mutter-device-chered-primary`。
 
-## 4.2 Set Environment Variables
+## 4.2 设置环境变量
 
-In addition to the udev rule, set environment variables that help Muffin and Mesa select the correct GPU.
+除了udev规则外，设置环境变量，帮助Muffin和Mesa选择正确的 GPU。
 
-- Create the environment configuration file:
+- 创建环境配置文件：
 
 ```
 sudo nano /etc/environment.d/90-rk3588-gpu.conf
 ```
 
-- Add the following content:
+- 增加以下内容：
 
 ```
-# RK3588 GPU selection for Mutter/Muffin Wayland
+# Mutter/Muffin Wayland
 MUTTER_ALLOW_HYBRID_GPUS=1
 ```
 
-> Do not set `WLR_DRM_DEVICES` - that variable is for wlroots-based compositors (Sway, Hyprland), not for Muffin. Setting it has no effect on Cinnamon.
-> {.is-warning}
+> 不设置 `WLR_DRM_DEVICES` - 变量适用于wlroot-based composator(Sway, Hyprland)，而不适用于Muffin。 设置它对 Cinnamon 没有影响。
+> {.is-info}
 
-## 4.3 Remove Incorrect Configuration
+## 4.3 删除不正确的配置
 
-If you previously created a `/etc/environment.d/gpu-wayland.conf` with variables like `WLR_DRM_DEVICES`, `MESA_LOADER_DRIVER_OVERRIDE`, or `MUTTER_DEBUG_FORCE_EGL_STREAM`, remove or rename it. These variables do not apply to Muffin and may cause unexpected behavior.
+如果你先前创建了一个 `/etc/environment.d/gpu-wayland.conf` 等变量，如`WLR_DRM_DEVICES`, `MESA_LOADER_DRIVER_OVERRIDE`, 或 `MUTTER_DEBUG_FORCE_EGL_STREAM`, 移除或重命名它。 这些变量不适用于Muffin，可能导致意外行为。
 
-- Check for stale configuration:
+- 检查旧配置：
 
 ```
 ls /etc/environment.d/
 ```
 
-- Remove any incorrect files:
+- 删除任何不正确的文件：
 
 ```
 sudo rm /etc/environment.d/gpu-wayland.conf
 ```
 
-# 5. Select the Wayland Session
+# 4. 选择航道会话
 
-## 5.1 From the Login Screen
+## 5.1 来自登录屏幕
 
-Most display managers (LightDM, GDM, SDDM) allow choosing the session type from the login screen.
+大多数显示管理器 (LightDM, GDM 允许从登录屏幕中选择会话类型。
 
-- Look for a gear icon or session selector on the login screen
-- Select `Cinnamon (Wayland)` instead of `Cinnamon`
-- Log in normally
+- 在登录屏幕上寻找一个装备图标或会话选择器
+- 选择 `Cinnamon (Wayland)` 而不是 `Cinnamon`
+- 正常登录
 
-## 5.2 Verify the Session Type
+## 5.2 验证会话类型
 
-After logging in:
+登录后：
 
-- Confirm you are running a Wayland session:
+- 确认您正在运行一个航道会话：
 
 ```
 echo $XDG_SESSION_TYPE
 ```
 
-The output should be `wayland`.
+产出应为“wayland”。
 
-# 6. Verify GPU Acceleration
+# 🔄 3. 验证 GPU 加速
 
-## 6.1 Check the Renderer
+## 6.1 检查渲染器
 
-On Wayland, you must use `eglinfo` to check GPU acceleration. The `glxinfo` command goes through XWayland and may incorrectly show `llvmpipe` even when the compositor is GPU-accelerated.
+在Wayland，您必须使用 `eglinfo` 来检查GPU 加速。 `glxinfo`命令穿过XWayland 并且可能不正确地显示`llvmpipe`，即使合成器加速GPU。
 
-- Install `eglinfo` if not present:
-
-```
-sudo pacman -S --needed mesa-utils
-```
-
-- Check the EGL renderer:
+- 安装`eglinfo` 如果不存在：
 
 ```
-eglinfo -B 2>/dev/null | grep -A2 "Device platform"
+sudo pacman -S --needmesa-utils
 ```
 
-You should see `Mali-G610` or `panthor` in the output, not `llvmpipe`.
-
-- Alternatively, check what Muffin reports in its logs:
+- 检查EGL 渲染器：
 
 ```
-journalctl --user -b -u cinnamon-session | grep -i "renderer\|gpu\|egl\|drm"
+eglinfo -B 2>/dev/null | grep -A2 "设备平台"
 ```
 
-## 6.2 Check Compositing Status
+你应该在输出中看到`Mali-G610`或`panthor`，而不是`llvmpipe`。
 
-- Open Cinnamon's System Settings, navigate to `General` and check that `Compositing` is enabled
-- Alternatively, check from terminal:
+- 或者，检查Muffin在其日志中的报告：
+
+```
+journalctl --user -b -u cinnamon-session | grep -i "render\|gpu\|egl\|drm"
+```
+
+## 6.2 检查合成状态
+
+- 打开 Cinnamon的系统设置，导航到 `General` 并检查是否启用 `Compositing`
+- 或者，从终端中检查：
 
 ```
 dconf read /org/cinnamon/muffin/compositing-manager
 ```
 
-The output should be `true`.
+输出应为“true”。
 
-# 7. Troubleshooting
+# 9. 🤝 贡献
 
 ## 7.1 glxinfo Still Shows llvmpipe
 
-This is expected on Wayland. The `glxinfo` command uses the GLX protocol which goes through XWayland. Even with a fully GPU-accelerated Wayland session, `glxinfo` may report `llvmpipe` because XWayland may not have access to the GPU render node.
+预期在韦兰会有这种情况。 `glxinfo`命令使用通过 XWayland 的 GLX 协议。 即使有完全GPU-加速的Wayland会话，`glxinfo`也可能会报告`llvmpipe`，因为XWayland可能无法访问 GPU 渲染节点。
 
 - Use `eglinfo` instead to verify the Wayland renderer (see [section 6.1](#h-61-check-the-renderer))
-- To fix `glxinfo` specifically for X11 applications running under XWayland, try:
+- 要修复在 XWayland 下运行的 X11 应用程序的 "glxinfo" ，请尝试：
 
 ```
 DRI_PRIME=1 glxinfo -B
 ```
 
-## 7.2 Panthor Loaded but No GPU Rendering
+## 7.2 Panthor loaded but no GPU Rendering
 
-If `lsmod | grep panthor` shows the module is loaded but applications still use `llvmpipe`, work through these checks in order:
+如果`lsomd | grep panthor` 显示该模块已加载，但应用程序仍然使用 `llvmpipe`，通过这些检查：
 
-**Check 1: Render node exists**
+**检查1：渲染节点存在**
 
 ```
 ls -la /dev/dri/
 ```
 
-- If `renderD128` is missing, Panthor failed to initialize. Check the kernel log:
+- 如果 `renderD128` 丢失，Panthor 无法初始化。 检查内核日志：
 
 ```
 dmesg | grep -i panthor
 ```
 
-Common causes:
+共同原因：
 
-- Missing firmware: check `dmesg | grep -i firmware | grep -i mali`. The `mali-G610-firmware` package must be installed and the firmware files must be in `/lib/firmware/arm/mali/arch10.8/`.
-- Device tree overlay not enabled: follow the [Setup Panthor](/en/how-to/how-to-setup-panthor) guide to enable the `rockchip-rk3588-panthor-gpu` DTBO if you are on kernel 6.1-rkr3.
+- 缺少固件：检查 `dmesg | grep -i 固件| grep -i mali` 。 必须安装 `mali-G610-firmware` 包，固件文件必须在 `/lib/firmware/arm/mali/arch10.8/` 中。
+- 未启用设备树叠加层：如果您在内核6.1-rkr3中，请按照[设置面板](/en/how-to/how-to-setup-panthor]指南启用`rockchip-rk3588-panthor-gpu`DTBO'。
 
-**Check 2: User permissions**
+**检查 2: 用户权限**
 
 ```
 ls -la /dev/dri/renderD128
-groups
+组
 ```
 
-If `renderD128` exists but your user is not in the `render` group, see [section 2.3](#h-23-user-permissions).
+如果存在`renderD128` 但您的用户不在`render` 组中，请参阅[2.3](#h-23-user-permissions)。
 
-**Check 3: Mesa detects the GPU**
+**勾选3： 网格检测到 GPU**
 
 ```
-eglinfo -B 2>/dev/null | grep -A5 "Device platform"
+eglinfo -B 2>/dev/null | grep -A5 "设备平台"
 ```
 
-- If the output shows empty devices or only `llvmpipe`, Mesa is not finding the Panthor driver. Verify that you are using the standard `mesa` package (not `mesa-panfork-git`):
+- 如果输出显示空设备或只有`llvmpipe`, Mesa没有找到Panthor驱动器。 验证您使用的是标准的`mesa`软件包(不是 `mesa-panfork-git`)：
 
 ```
 pacman -Q mesa
 ```
 
-- If it shows `mesa-panfork-git`, replace it:
+- 如果它显示 `mesa-panfork-git`, 替换它：
 
 ```
 sudo pacman -S mesa
 ```
 
-**Check 4: No conflicting libMali**
+**勾选4： 没有冲突的 libMali**
 
 ```
 pacman -Q | grep -i mali
 ```
 
-- You should see `mali-G610-firmware` only. If any `libmali-valhall-g610` package is installed, it conflicts with Mesa's open source driver:
+- 你只能看到`mali-G610-firmware'。 如果安装了任何`libmali-valhall-g610\`软件包，它与Mesa的开源驱动程序冲突：
 
 ```
 sudo pacman -R libmali-valhall-g610
 ```
 
-**Check 5: Environment variable overrides**
+**检查5：环境变量覆盖**
 
-- Stale or incorrect environment variables can force Mesa to use the wrong driver:
+- 旧或不正确的环境变量可以强制Mesa使用错误的驱动：
 
 ```
 env | grep -iE "mesa|gallium|dri|gpu|libgl|egl"
 ```
 
-If any of `MESA_LOADER_DRIVER_OVERRIDE`, `LIBGL_ALWAYS_SOFTWARE`, `GALLIUM_DRIVER`, or `__GLX_VENDOR_LIBRARY_NAME` are set, unset them or remove them from your environment configuration files.
+如果设置了任何`MESA_LOADER_DRIVER_OVERRIDE`, `LIBGL_ALWAYS_SOFTWARE`, `GALLIUM_DRIVER`, 或 `__GLX_VENDOR_LIBRARY_NAME` ，将其从您的环境配置文件中删除或将其设定。
 
-## 7.3 Vulkan Errors (VK_ERROR_INCOMPATIBLE_DRIVER)
+## 7.3 Vulkan 错误(VK_ERROR_INCOMPATIBLE_DRIVER)
 
-If you see errors like `ZINK: vkCreateInstance failed (VK_ERROR_INCOMPATIBLE_DRIVER)` when running graphical applications:
+如果你在运行图形应用程序时看到像`ZINK: vkCreateInstance 失败 (VK_ERROR_INCOMPATIBLE_DRIVER)` 错误：
 
-- This means Mesa is trying to use the Zink driver (OpenGL-over-Vulkan) but no Vulkan driver is available. Install the Vulkan packages:
+- 这意味着Mesa正在尝试使用 Zink 驱动程序(OpenGL-overVulkan)，但没有可用的 Vulkan 驱动程序。 安装 Vulkan 软件包：
 
 ```
-sudo pacman -S --needed vulkan-icd-loader vulkan-panfrost
+sudo pacman -S --need vulkan-icd-loader vulkan-panfrost
 ```
 
-- Verify that PanVK is detected:
+- 验证检测到 PanVK ：
 
 ```
 vulkaninfo --summary 2>/dev/null | grep -A3 "GPU"
 ```
 
-You should see `Mali-G610` or `panvk` in the output.
+你应该在输出中看到`Mali-G610`或`panvk`。
 
-> This error does not prevent GPU-accelerated OpenGL from working. If Panthor is correctly set up, Mesa uses the native Gallium driver for OpenGL without going through Zink/Vulkan. However, installing PanVK is recommended for applications that require Vulkan.
+> 此错误不会阻止GPU加速OpenGL 正常工作。 如果Panthor设置正确，Mesa会使用 OpenGL 的本机Gallium 驱动程序，而不要穿过Zink/Vulkan。 然而，建议为需要Vulkan的应用程序安装 PanVK 。
 > {.is-info}
 
-## 7.4 Cinnamon Falls Back to Software Rendering
+## 7.4 Cinnamon Falls 返回软件渲染中
 
-If you have confirmed that Panthor works (the checks in [section 7.2](#h-72-panthor-loaded-but-no-gpu-rendering) all pass) but Cinnamon's compositor still uses software rendering:
+如果您确认Panthor正常(检查[第7.2节](#h-72-panthor-loaded-but-no-gpu-rendering) 所有通过)，但Cinnamon的合成器仍然使用软件渲染：
 
-- Verify the udev rule is applied (see [section 4.1](#h-41-create-a-udev-rule)):
+- 验证 udev 规则已经应用(见[4.1节] (#h-41-create-a-udev-rule):
 
 ```
 udevadm info -q all -n /dev/dri/card1 | grep mutter
@@ -349,64 +349,64 @@ udevadm info -q all -n /dev/dri/card1 | grep mutter
 
 - Check that `MUTTER_ALLOW_HYBRID_GPUS=1` is set (see [section 4.2](#h-42-set-environment-variables))
 
-- Check Muffin's log for errors:
+- 查看 Muffin的日志错误：
 
 ```
 journalctl --user -b | grep -i muffin
 ```
 
-- Make sure compositing is not disabled:
+- 请确保合成未禁用：
 
 ```
 dconf read /org/cinnamon/muffin/compositing-manager
 ```
 
-If the output is `false` or empty, enable it:
+如果输出为 'false' 或 '空白' ，则启用它：
 
 ```
 dconf write /org/cinnamon/muffin/compositing-manager true
 ```
 
-## 7.5 Black Screen or Login Loop
+## 7.5 黑屏或登录循环
 
-If the Wayland session fails to start:
+如果Wayland会话未能开始：
 
-- Switch to a TTY with `Ctrl+Alt+F2` and log in
-- Check the session log:
+- 使用 `Ctrl+Alt+F2` 切换到TTY 并登录
+- 检查会话日志：
 
 ```
 journalctl --user -b -u cinnamon-session
 ```
 
-- As a workaround, fall back to the X11 session from the login screen and verify your configuration
+- 作为一个工作区，从登录界面回到X11会话并验证您的配置
 
-## 7.6 Screen Tearing or Poor Performance
+## 7.6 屏幕听力不足或性能差
 
-If the session starts but performance is poor:
+如果会话开始，但性能很差：
 
 - Verify compositing is enabled (see [section 6.2](#h-62-check-compositing-status))
-- Check that no Flatpak or Snap version of Cinnamon is overriding the system session
-- Try adding `CLUTTER_PAINT=disable-clipped-redraws:disable-culling` to `/etc/environment.d/90-rk3588-gpu.conf` if you see rendering artifacts
+- 检查系统会话是否覆盖了 Flatpak 或 Snap 版本
+- 如果你看到渲染伪影，请尝试将 `CLUTTER_PAINT=disable-culling` 添加到 `/etc/environment.d/90-rk3588-gpu.conf`
 
-## 7.7 Reverting to X11
+## 7.7 恢复到X11
 
-If Wayland does not work correctly, you can always switch back to X11 from the login screen by selecting the `Cinnamon` session (without the "Wayland" label).
+如果Wayland工作不正确， 您总是可以通过选择 `Cinnamon` 会话切换回X11 (没有"航行"标签)。
 
-# 8. Summary
+# 4. Summary
 
-- The following table summarizes the changes needed:
+- 下表汇总了所需的变化：
 
-| What                     | File                                        | Content                                          |
-| ------------------------ | ------------------------------------------- | ------------------------------------------------ |
-| Udev rule                | `/etc/udev/rules.d/61-mutter-panthor.rules` | Tag `card1` as `mutter-device-preferred-primary` |
-| Environment              | `/etc/environment.d/90-rk3588-gpu.conf`     | `MUTTER_ALLOW_HYBRID_GPUS=1`                     |
-| Session                  | Login screen                                | Select `Cinnamon (Wayland)`                      |
-| {.dense} |                                             |                                                  |
+| 什么                       | 文件                                          | 内容                           |
+| ------------------------ | ------------------------------------------- | ---------------------------- |
+| Udev 规则                  | `/etc/udev/rules.d/61-mutter-Panthor.rules` | 标记`card1`为`突变设备-首选原始`        |
+| 环境                       | `/etc/environment.d/90-rk3588-gpu.conf`     | `MUTTER_ALLOW_HYBRID_GPUS=1` |
+| 会议                       | 登录屏幕                                        | 选择 `Cinnamon (Wayland)`      |
+| {.dense} |                                             |                              |
 
-# 9. References
+# 10. 参考
 
-- [Muffin source code](https://github.com/linuxmint/muffin) - Linux Mint
-- [Mutter multi-GPU support](https://gitlab.gnome.org/GNOME/mutter) - GNOME
+- [Muffin 源代码](https://github.com/linuxmint/muffin) - Linux Mint
+- [完全多GPU支持](https://gitlab.gnome.org/GNOME/mutter) - GNOME
 - [Mesa Panthor driver](https://docs.mesa3d.org/drivers/panthor.html) - Mesa
-- [Setup Panthor on Mali GPUs with RK3588](https://wiki.bredos.org/en/how-to/how-to-setup-panthor) - BredOS Wiki
-- [Armbian RK3588 GPU acceleration discussion](https://forum.armbian.com/topic/56374-expected-default-graphics-acceleration-for-rk3588/) - Armbian Forum
+- [设置马里的Panthor 与 RK3588](https://wiki.bredos.org/en/how-to/how-to-setup-panthor) - BredOS Wiki
+- [Armbian RK3588 GPU 加速讨论](https://forum.armbian.com/topic/56374-expected-default-graphics-acceleration-for-rk3588/) - Armbian Forum
