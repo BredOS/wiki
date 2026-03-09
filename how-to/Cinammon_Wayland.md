@@ -2,7 +2,7 @@
 title: Cinnamon Wayland with GPU Acceleration on RK3588
 description: Switching Cinnamon from X11 to Wayland with hardware-accelerated rendering on RK3588 boards
 published: true
-date: 2026-03-08T15:58:02.631Z
+date: 2026-03-09T06:52:19.267Z
 tags: cinnamon, wayland, gpu, panthor, rk3588
 editor: markdown
 dateCreated: 2026-03-07T16:06:02.388Z
@@ -42,7 +42,7 @@ You should see `panthor` in the output. If not, load it manually:
 sudo modprobe panthor
 ```
 
-> Panthor requires a BredOS kernel `6.12` or later. If the module is not available, update your kernel.
+> Panthor requires a BredOS BSP kernel 6.1-rkr3 or mainline kernel `6.12` or later. If the module is not available, update your kernel.
 {.is-warning}
 
 ## 2.3 User Permissions
@@ -61,7 +61,7 @@ If `render` or `video` are missing from the output, add your user to both groups
 sudo usermod -aG render,video $USER
 ```
 
-- Log out and log back in for the group change to take effect.
+**Log out and log back in for the group change to take effect.**
 
 - Verify that the GPU render node exists and is accessible:
 
@@ -256,15 +256,15 @@ If `lsmod | grep panthor` shows the module is loaded but applications still use 
 ls -la /dev/dri/
 ```
 
-If `renderD128` is missing, Panthor failed to initialize. Check the kernel log:
+- If `renderD128` is missing, Panthor failed to initialize. Check the kernel log:
 
 ```
 dmesg | grep -i panthor
 ```
 
 Common causes:
-- Missing firmware: check `dmesg | grep -i firmware | grep -i mali`. The `mali-G610-firmware` package must be installed and the firmware files must be in `/lib/firmware/arm/mali/arch10.8/`
-- Device tree overlay not enabled: follow the [Setup Panthor](/en/how-to/how-to-setup-panthor) guide to enable the `rockchip-rk3588-panthor-gpu` DTBO
+- Missing firmware: check `dmesg | grep -i firmware | grep -i mali`. The `mali-G610-firmware` package must be installed and the firmware files must be in `/lib/firmware/arm/mali/arch10.8/`.
+- Device tree overlay not enabled: follow the [Setup Panthor](/en/how-to/how-to-setup-panthor) guide to enable the `rockchip-rk3588-panthor-gpu` DTBO if you are on kernel 6.1-rkr3.
 
 **Check 2: User permissions**
 
@@ -281,13 +281,13 @@ If `renderD128` exists but your user is not in the `render` group, see [section 
 eglinfo -B 2>/dev/null | grep -A5 "Device platform"
 ```
 
-If the output shows empty devices or only `llvmpipe`, Mesa is not finding the Panthor driver. Verify that you are using the standard `mesa` package (not `mesa-panfork-git`):
+- If the output shows empty devices or only `llvmpipe`, Mesa is not finding the Panthor driver. Verify that you are using the standard `mesa` package (not `mesa-panfork-git`):
 
 ```
 pacman -Q mesa
 ```
 
-If it shows `mesa-panfork-git`, replace it:
+- If it shows `mesa-panfork-git`, replace it:
 
 ```
 sudo pacman -S mesa
@@ -299,7 +299,7 @@ sudo pacman -S mesa
 pacman -Q | grep -i mali
 ```
 
-You should see `mali-G610-firmware` only. If any `libmali-valhall-g610` package is installed, it conflicts with Mesa's open source driver:
+- You should see `mali-G610-firmware` only. If any `libmali-valhall-g610` package is installed, it conflicts with Mesa's open source driver:
 
 ```
 sudo pacman -R libmali-valhall-g610
@@ -307,7 +307,7 @@ sudo pacman -R libmali-valhall-g610
 
 **Check 5: Environment variable overrides**
 
-Stale or incorrect environment variables can force Mesa to use the wrong driver:
+- Stale or incorrect environment variables can force Mesa to use the wrong driver:
 
 ```
 env | grep -iE "mesa|gallium|dri|gpu|libgl|egl"
