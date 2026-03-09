@@ -2,7 +2,7 @@
 title: Cinnamon Wayland with GPU Acceleration on RK3588
 description: Switching Cinnamon from X11 to Wayland with hardware-accelerated rendering on RK3588 boards
 published: true
-date: 2026-03-09T10:07:14.898Z
+date: 2026-03-09T11:58:25.761Z
 tags: cinnamon, wayland, gpu, panthor, rk3588
 editor: markdown
 dateCreated: 2026-03-07T16:06:02.388Z
@@ -308,13 +308,13 @@ The output should be `true`.
 
 # 8. Troubleshooting
 
-If you encounter issues, start by generating a full system report. This collects all hardware and software information in one shot and makes it easy to get help on the [BredOS Discord](https://discord.gg/beSUnWGVH2):
+- If you encounter issues, start by generating a full system report. This collects all hardware and software information in one shot and makes it easy to get help on the [BredOS Discord](https://discord.gg/beSUnWGVH2):
 
 ```
 sudo sys-report
 ```
 
-This uploads the report to `termbin.com` and prints a URL you can share. To save locally instead:
+- This uploads the report to `termbin.com` and prints a URL you can share. To save locally instead:
 
 ```
 sudo sys-report -l
@@ -445,7 +445,7 @@ journalctl --user -b | grep -i muffin
 dconf read /org/cinnamon/muffin/compositing-manager
 ```
 
-If the output is `false` or empty, enable it:
+- If the output is `false` or empty, enable it:
 
 ```
 dconf write /org/cinnamon/muffin/compositing-manager true
