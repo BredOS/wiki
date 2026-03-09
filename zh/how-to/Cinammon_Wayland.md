@@ -210,55 +210,55 @@ echo $XDG_SESSION_TYPE
 
 # 🔄 3. 配置硬件视频回放的 mpv
 
-On RK3588, `mpv` can use V4L2 Request API for hardware video decoding and Vulkan for rendering output. This bypasses the Wayland EGL path entirely, ensuring smooth playback regardless of the Muffin limitation described in the introduction.
+在 RK3588, `mpv` 可以使用 V4L2 请求API 进行硬件视频解码，Vulkan 进行渲染输出。 这完全绕过了Wayland EGL 的路径，确保播放顺利，不管导言中描述的Muffin 限制。
 
-- Install mpv and yt-dlp:
+- 安装 mpv 和 yt-dlp：
 
 ```
 sudo pacman -S --needed mpv yt-dlp
 ```
 
-- Create or edit the mpv configuration file:
+- 创建或编辑 mpv 配置文件：
 
 ```
 nano ~/.config/mpv/mpv.conf
 ```
 
-- Add the following content:
+- 增加以下内容：
 
 ```
 hwdec=v4l2request
-vo=gpu-next,gpu
+vo=gpu-next ,gpu
 gpu-api=vulkan
 gpu-context=waylandvk
-ytdl-format=bestvideo[height<=?1080]+bestaudio
+ytdl-格式=bestvideo[height<=?1080]+bestaudio
 ```
 
-| Option                   | Purpose                                                                               |
-| ------------------------ | ------------------------------------------------------------------------------------- |
-| `hwdec=v4l2request`      | Hardware video decoding via V4L2 stateless API (zero-copy DMA-BUF) |
-| `vo=gpu-next,gpu`        | Video output via libplacebo (falls back to gpu if needed)          |
-| `gpu-api=vulkan`         | Use PanVK Vulkan driver (works correctly, bypasses EGL)            |
-| `gpu-context=waylandvk`  | Vulkan WSI for Wayland (native, no XWayland)                       |
-| `ytdl-format=...`        | Limit YouTube to 1080p to avoid overloading the hardware decoder                      |
-| {.dense} |                                                                                       |
+| 选项                       | 目的                                                     |
+| ------------------------ | ------------------------------------------------------ |
+| `hwdec=v4l2request`      | 通过 V4L2 无条件API 解码硬件视频 (零复制 DMA-BUF) |
+| `vo=gpu-next,gpu`        | 通过 libplesbo 输出视频(如果需要，所有视频返回gpu )  |
+| `gpu-api=vulkan`         | 使用 PanVK Vulkan 驱动程序(工作正确，绕过EGL)    |
+| `gpu-context=waylandvk`  | Wayland Vulkan WSI(无XWayland)       |
+| `ytdl格式=...`             | 限制YouTube 到 1080p 以避免过多加载硬件解码器                         |
+| {.dense} |                                                        |
 
-- Test playback:
+- 测试播放：
 
 ```
 mpv --fs https://www.youtube.com/watch?v=LXb3EKWsInQ
 ```
 
-You should see `Using hardware decoding (v4l2request)` and `VO: [gpu-next]` in the output. The video should play smoothly without dropped frames.
+您应该在输出中看到`使用硬件解码 (v4l2request)` 和 `VO: [gpu-next]` 。 视频应在不放置帧的情况下顺利播放。
 
-> Without the Vulkan configuration, mpv defaults to OpenGL via the Wayland EGL path, which falls back to `llvmpipe` software rendering on Cinnamon. This causes severe frame drops (hundreds of dropped frames per minute). Always use the Vulkan configuration above.
+> 没有Vulkan 配置，mpv 默认为通过 Wayland EGL 路径的 OpenGL ，这个路径返回到 Cinnamon 的 `llvmpipe` 软件渲染。 这就造成了严重的框架滴（每分钟数百帧）。 总是使用上面的 Vulkan 配置。
 > {.is-info}
 
 # 9. 验证 GPU 加速
 
-## 7.1 Check the Renderer
+## 7.1 检查渲染器
 
-在Wayland，您必须使用 `eglinfo` 来检查GPU 加速。 The `glxinfo` command goes through XWayland and will show `llvmpipe` even when the compositor is GPU-accelerated (see [section 8.1](#h-81-glxinfo-still-shows-llvmpipe)).
+在Wayland，您必须使用 `eglinfo` 来检查GPU 加速。 `glxinfo`命令通过 XWayland 即使在合成器加速时也会显示 `llvmpipe` (见[第8.1节](#h-81-glxinfo-still-shows-llvmpipe))。
 
 - 安装`eglinfo` 如果不存在：
 
@@ -266,36 +266,36 @@ You should see `Using hardware decoding (v4l2request)` and `VO: [gpu-next]` in t
 sudo pacman -S --needmesa-utils
 ```
 
-- Check the GBM and Device renderers:
+- 检查 GBM 和设备渲染器：
 
 ```
-eglinfo -B 2>/dev/null | grep -A5 "GBM platform"
+eglinfo -B 2>/dev/null | grep -A5 "GBM 平台"
 ```
 
 ```
-eglinfo -B 2>/dev/null | grep -A10 "Device #0"
+eglinfo -B 2>/dev/null | grep -A10 "设备 #0"
 ```
 
-You should see `Mali-G610 MC4 (Panfrost)` in both outputs, not `llvmpipe`. The renderer name `Panfrost` is correct even when using the `panthor` kernel driver — Mesa's OpenGL driver is named Panfrost for all Mali Valhall GPUs.
+你应该在两项产出中看到`Mali-G610 MC4 (Panfrost)`，而不是`llvmpipe`。 渲染器名称 `Panfrost` 正确，即使使用了 `panthor` 内核驱动程序 — Mesa's OpenGL 驱动程序被命名为全马里Valhall GPU的 Panfrost。
 
-- Check the Wayland platform:
+- 检查Wayland平台：
 
 ```
-eglinfo -B 2>/dev/null | grep -A10 "Wayland platform"
+eglinfo -B 2>/dev/null | grep -A10 "Wayland 平台"
 ```
 
-> Due to the Muffin limitation described in the introduction, the Wayland platform may show `llvmpipe` even when the compositor is using the GPU. This is a known issue. Verify GPU acceleration using the GBM and Device platform checks above instead.
+> 由于导入中描述的 Muffin 限制，Wayland 平台可能会显示`llvmpipe`，即使合成器正在使用 GPU。 这是一个众所周知的问题。 使用上面的 GBM 和设备平台检查来验证 GPU 加速。
 > {.is-info}
 
-- Check Vulkan (should always work):
+- 检查 Vulkan (应该始终工作)：
 
 ```
 vulkaninfo --summary 2>/dev/null | grep -A3 "GPU"
 ```
 
-You should see `Mali-G610 MC4` with the `panvk` driver.
+你应该看到`panvk`驱动程序`Mali-G610 MC4`。
 
-## 7.2 Check Compositing Status
+## 7.2 检查合成状态
 
 - 打开 Cinnamon的系统设置，导航到 `General` 并检查是否启用 `Compositing`
 - 或者，从终端中检查：
@@ -308,30 +308,30 @@ dconf read /org/cinnamon/muffin/compositing-manager
 
 # 4. 🤝 贡献
 
-If you encounter issues, start by generating a full system report. This collects all hardware and software information in one shot and makes it easy to get help on the [BredOS Discord](https://discord.gg/beSUnWGVH2):
+如果您遇到问题，首先生成完整的系统报告。 这将在一次枪口中收集所有硬件和软件信息，并且可以很容易地在 [BredOS Discord] (https://discord.gg/beSUnWGVH2 上获得帮助：
 
 ```
 sudo sys-report
 ```
 
-This uploads the report to `termbin.com` and prints a URL you can share. To save locally instead:
+此上传报表到 `termbin.com` 并打印您可以分享的 URL。 要保存本地版本：
 
 ```
-sudo sys-report -l
+sudo syss-report -l
 ```
 
 ## 8.1 glxinfo Still Shows llvmpipe
 
 预期在韦兰会有这种情况。 `glxinfo`命令使用通过 XWayland 的 GLX 协议。 即使有完全GPU-加速的Wayland会话，`glxinfo`也可能会报告`llvmpipe`，因为XWayland可能无法访问 GPU 渲染节点。
 
-- Use `eglinfo` instead to verify the Wayland renderer (see [section 7.1](#h-71-check-the-renderer) and [section 8.8](#h-88-wayland-egl-clients-use-llvmpipe-known-muffin-limitation))
+- 使用 `eglinfo` 来验证 Wayland 渲染器(参见[第7.1节](#h-71-check-the-renderer) 和 [第8.8节](#h-88-wayland-egl-clients-use-llvmpipe-known-muffin-limitation))
 - 要修复在 XWayland 下运行的 X11 应用程序的 "glxinfo" ，请尝试：
 
 ```
 DRI_PRIME=1 glxinfo -B
 ```
 
-## 8.2 Panthor Loaded but No GPU Rendering
+## 8.2 Panthor loaded but no GPU Rendering
 
 如果`lsomd | grep panthor` 显示该模块已加载，但应用程序仍然使用 `llvmpipe`，通过这些检查：
 
@@ -401,7 +401,7 @@ env | grep -iE "mesa|gallium|dri|gpu|libgl|egl"
 
 如果设置了任何`MESA_LOADER_DRIVER_OVERRIDE`, `LIBGL_ALWAYS_SOFTWARE`, `GALLIUM_DRIVER`, 或 `__GLX_VENDOR_LIBRARY_NAME` ，将其从您的环境配置文件中删除或将其设定。
 
-## 8.3 Vulkan Errors (VK_ERROR_INCOMPATIBLE_DRIVER)
+## 8.3 Vulkan 错误(VK_ERROR_INCOMPATIBLE_DRIVER)
 
 如果你在运行图形应用程序时看到像`ZINK: vkCreateInstance 失败 (VK_ERROR_INCOMPATIBLE_DRIVER)` 错误：
 
@@ -422,9 +422,9 @@ vulkaninfo --summary 2>/dev/null | grep -A3 "GPU"
 > 此错误不会阻止GPU加速OpenGL 正常工作。 如果Panthor设置正确，Mesa会使用 OpenGL 的本机Gallium 驱动程序，而不要穿过Zink/Vulkan。 然而，建议为需要Vulkan的应用程序安装 PanVK 。
 > {.is-info}
 
-## 8.4 Cinnamon Falls Back to Software Rendering
+## 8.4 Cinnamon Falls 返回软件渲染中
 
-If you have confirmed that Panthor works (the checks in [section 8.2](#h-82-panthor-loaded-but-no-gpu-rendering) all pass) but Cinnamon's compositor still uses software rendering:
+如果您确认Panthor正常(检查[第8.2节](#h-82-panthor-loaded-but-no-gpu-rendering) 所有通过)，但Cinnamon的合成器仍然使用软件渲染：
 
 - 验证 udev 规则已经应用(见[4.1节] (#h-41-create-a-udev-rule):
 
@@ -452,7 +452,7 @@ dconf read /org/cinnamon/muffin/compositing-manager
 dconf write /org/cinnamon/muffin/compositing-manager true
 ```
 
-## 8.5 Black Screen or Login Loop
+## 8.5 黑屏或登录循环
 
 如果Wayland会话未能开始：
 
@@ -465,7 +465,7 @@ journalctl --user -b -u cinnamon-session
 
 - 作为一个工作区，从登录界面回到X11会话并验证您的配置
 
-## 8.6 Screen Tearing or Poor Performance
+## 8.6 屏幕窃听或性能差
 
 如果会话开始，但性能很差：
 
@@ -473,60 +473,60 @@ journalctl --user -b -u cinnamon-session
 - 检查系统会话是否覆盖了 Flatpak 或 Snap 版本
 - 如果你看到渲染伪影，请尝试将 `CLUTTER_PAINT=disable-culling` 添加到 `/etc/environment.d/90-rk3588-gpu.conf`
 
-## 8.7 Reverting to X11
+## 8.7 恢复到X11
 
 如果Wayland工作不正确， 您总是可以通过选择 `Cinnamon` 会话切换回X11 (没有"航行"标签)。
 
-## 8.8 Wayland EGL Clients Use llvmpipe (Known Muffin Limitation)
+## 8.8 Wayland EGL 客户使用llvmpipe (Known Muffin Limitation)
 
-If the GBM and Device platforms in `eglinfo` correctly show `Mali-G610 MC4 (Panfrost)` but the Wayland platform shows `llvmpipe`, this is a known limitation in Muffin `6.6.x`.
+如果`eglinfo`中的GBM和设备平台正确显示`Mali-G610 MC4(Panfrost)`，但Wayland平台却显示 `llvmpipe`， 这是Muffin `6中已知的限制。 .x`。
 
-**Explanation:** Muffin uses the GPU correctly for its own desktop compositing (via GBM). However, it advertises the wrong DRM device to Wayland clients via the `wl_drm` protocol. It announces `card0` (rockchip-drm, display controller with no 3D capabilities) instead of `card1`/`renderD128` (panthor, the GPU). All Wayland EGL clients inherit this wrong device and fall back to `llvmpipe`.
+**解释：** Muffin 正确地使用 GPU 进行自己的桌面构造(通过 GBM)。 然而，它通过“wl_drm”协议向Wayland客户端发布错误的DRM设备。 它宣布`card0` (rockchip-drm, 显示没有3D能力的控制器)，而不是`card1`/`renderD128` (Panthor, GPU)。 所有Wayland EGL 客户端继承这个错误的设备并退回到\`llvmpipe'。
 
-GNOME's Mutter solves this with the [`meta_is_udev_device_preferred_primary()`](https://gitlab.gnome.org/GNOME/mutter/-/blob/main/src/backends/meta-udev.c) function, which reads the `mutter-device-preferred-primary` udev tag. Muffin has not yet ported this function from upstream Mutter. The udev rule from [section 4.1](#h-41-create-a-udev-rule) is still recommended (other compositors and future Muffin versions will use it), but it has no effect on current Muffin versions.
+GNOME 的 Mutter 通过[`meta_is_udev_dev_device_hered_primarary()`](https://gitlab.gnome.org/GNOME/mutter/-/blob/main/src/backends/meta-udev.c) 函数解决了这个问题，该函数读取了 `mutter-device-heaved-primarary` udev 标签。 Muffin 尚未从上游Mutter移过此函数。 [第4节]的udev规则。 ](#h-41-create-a-udev-rule) 仍然被推荐(其他作曲家和未来的 Muffin 版本将使用它)，但它对当前的 Muffin 版本没有影响。
 
-- Verify the limitation by checking what DRM devices Muffin has open:
+- 通过检查 DRM 设备 Muffin 是否打开来验证限制：
 
 ```
-ls -la /proc/$(pgrep -f 'cinnamon --replace' -o)/fd 2>/dev/null | grep dri
+ls -la /proc/$(pgrep -f 'cinnamon --reples' -o)/fd 2>/dev/null | grep dri
 ```
 
-You should see both `card0` and `renderD128` open, confirming Muffin is using the GPU for compositing.
+你应该看到`card0`和`renderD128`打开，确认Muffin使用GPU进行复制。
 
-**What works despite this limitation:**
+**尽管有这种限制，什么还能起作用:**
 
-| Component                                              | Status                                 | Reason                      |
-| ------------------------------------------------------ | -------------------------------------- | --------------------------- |
-| Desktop compositing                                    | GPU-accelerated                        | Muffin uses GBM directly    |
-| Vulkan apps (mpv, vkmark, browsers) | GPU-accelerated                        | PanVK bypasses EGL entirely |
-| Wayland EGL apps (GTK OpenGL)       | Software (llvmpipe) | Wrong DRM device advertised |
-| {.dense}                               |                                        |                             |
+| 组件                                                   | 状态                               | 原因              |
+| ---------------------------------------------------- | -------------------------------- | --------------- |
+| 桌面组成                                                 | GPU加速                            | Muffin 直接使用 GBM |
+| Vulkan 应用 (mpv, vkmark, browsers) | GPU加速                            | PanVK 完全旁路 EGL  |
+| Wayland EGL 应用 (GTK OpenGL)       | 软件 (llvmpipe) | 错误的 DRM 设备广告    |
+| {.dense}                             |                                  |                 |
 
-**Workarounds:**
+**正常工作：**
 
 - Use Vulkan rendering where possible (see [section 6](#h-6-configure-mpv-for-hardware-video-playback) for mpv)
-- Use GNOME or KDE Wayland instead, which handle multi-GPU correctly on the same hardware
-- Track the upstream issue: [linuxmint/muffin](https://github.com/linuxmint/muffin/issues)
+- 使用 GNOME 或 KDE Wayland 代替，在相同的硬件上正确处理 multiGPU
+- 跟踪上游问题: [linuxmin/muffin](https://github.com/linuxmint/muffin/issues)
 
 # 10. Summary
 
 - 下表汇总了所需的变化：
 
-| 什么                       | 文件                                          | 内容                                                    |
-| ------------------------ | ------------------------------------------- | ----------------------------------------------------- |
-| Udev 规则                  | `/etc/udev/rules.d/61-mutter-Panthor.rules` | 标记`card1`为`突变设备-首选原始`                                 |
-| 环境                       | `/etc/environment.d/90-rk3588-gpu.conf`     | `MUTTER_ALLOW_HYBRID_GPUS=1` and `PAN_MESA_DEBUG=gl3` |
-| mpv config               | `~/.config/mpv/mpv.conf`                    | Vulkan rendering + V4L2 hardware decoding             |
-| 会议                       | 登录屏幕                                        | 选择 `Cinnamon (Wayland)`                               |
-| {.dense} |                                             |                                                       |
+| 什么                       | 文件                                          | 内容                                                  |
+| ------------------------ | ------------------------------------------- | --------------------------------------------------- |
+| Udev 规则                  | `/etc/udev/rules.d/61-mutter-Panthor.rules` | 标记`card1`为`突变设备-首选原始`                               |
+| 环境                       | `/etc/environment.d/90-rk3588-gpu.conf`     | `MUTTER_ALLOW_HYBRID_GPUS=1` 和 `PAN_MESA_DEBUG=gl3` |
+| mpv 配置                   | `~/.conf/mpv/mpv.conf`                      | Vulkan 渲染 + V4L2 硬件解码                               |
+| 会议                       | 登录屏幕                                        | 选择 `Cinnamon (Wayland)`                             |
+| {.dense} |                                             |                                                     |
 
 # 10. 参考
 
 - [Muffin 源代码](https://github.com/linuxmint/muffin) - Linux Mint
 - [完全多GPU支持](https://gitlab.gnome.org/GNOME/mutter) - GNOME
-- [Mutter `meta_is_udev_device_preferred_primary` implementation](https://gitlab.gnome.org/GNOME/mutter/-/blob/main/src/backends/meta-udev.c) - GNOME (missing in Muffin)
-- [Mesa Panfrost driver documentation](https://docs.mesa3d.org/drivers/panfrost.html) - Mesa
+- [Mutter `meta_is_udev_device_chered_primary` 实现](https://gitlab.gnome.org/GNOME/mutter/-/blob/main/src/backends/meta-udev.c) - GNOME (在Muffin中失踪)
+- [Mesa Panfrost 驱动文档](https://docs.mesa3d.org/drivers/panfrost.html) - Mesa
 - [设置马里的Panthor 与 RK3588](https://wiki.bredos.org/en/how-to/how-to-setup-panthor) - BredOS Wiki
-- [BredOS sys-report](https://github.com/BredOS/sys-report) - System diagnostics tool
+- [BredOS 系统报告](https://github.com/BredOS/sys-report) - 系统诊断工具
 - [kitty OpenGL 3.3 workaround](https://github.com/kovidgoyal/kitty/issues/2790#issuecomment-969195133) - PAN_MESA_DEBUG=gl3
 - [Armbian RK3588 GPU 加速讨论](https://forum.armbian.com/topic/56374-expected-default-graphics-acceleration-for-rk3588/) - Armbian Forum
