@@ -2,7 +2,7 @@
 title: 火箭驱动程序(主线Kernel)
 description: 使用 BredOS 在Rockchip SOC上设置和使用神经处理股
 published: false
-date: 2026-02-24T09:48:17.978Z
+date: 2026-03-19T13:28:53.204Z
 tags:
 editor: markdown
 dateCreated: 2026-02-24T09：27：47.353Z
@@ -13,9 +13,6 @@ dateCreated: 2026-02-24T09：27：47.353Z
 一些Rockchip SoC公司包括一个专用神经处理股（“NPU”），以加快机器学习推断。 `RK3588`集成了6个TOPS NPU，拥有3个核心，能够运行定量的神经网络模型比CPU本身快得多。
 
 由于内核`6.18`，Linux包含RK3588NPU的开源`Rocket`驱动程序。 在用户空间一侧，Mesa提供`Teflon`，TensorFlow Lite委托，向NPU硬件发送兼容的操作。 这两者结合在一起，允许在 BredOS 上运行 AI 推断，没有任何专利软件。
-
-> 本指南涵盖完全开源堆栈(Rocket + Teflon)。 关于来自Rockchip的专有RKNN-Toolkit2，见部分[7。 所有权替代(RKN)](#h-7-proprietary-alternative-rknn)。
-> {.is-info}
 
 # 3. 支持的硬件
 
@@ -31,7 +28,7 @@ dateCreated: 2026-02-24T09：27：47.353Z
 
 所有带有`RK3588`或`RK3588S`的蓝牙支持板可以使用NPU。 This includes the Rock 5B, Rock 5B Plus, Orange Pi 5 series, and others listed on the [supported devices](/en/table-of-supported-devices) page.
 
-# 4. 软件应用
+# 4. Software Stack (Open-Source)
 
 开源NPU堆栈有两个组件：
 
@@ -39,7 +36,7 @@ dateCreated: 2026-02-24T09：27：47.353Z
 
 `Rocket`驱动程序是一个加速器驱动程序(`grav`子系统')，用于管理NPU硬件：启动/关闭，分配内存缓冲器和提交工作。 它暴露在`/dev/grad/redded0`上。
 
-驱动程序是由Tomeu Vizoso开发的，并并入Linux `6.18`的主线。 BredOS 内核`6.18`，然后默认包括它。
+The driver was developed by [Tomeu Vizoso](https://blog.tomeuvizoso.net/) and merged into mainline Linux `6.18`. BredOS 内核`6.18`，然后默认包括它。
 
 ## 3.2 用户空间(Mesa Teflon)
 
@@ -191,9 +188,9 @@ NPU为这一模型提供了大约3-4倍的加速。
 
 # 🔄 3. 能力和限制
 
-## 6.1 什么是有效的
+## 6.1 What the Open-Source Stack Supports
 
-开源堆栈支持NPU上的以下TFLite操作：
+The Rocket + Teflon stack supports the following TFLite operations on the NPU:
 
 - Convolutions (most configurs)
 - 租户添加
@@ -202,39 +199,21 @@ NPU为这一模型提供了大约3-4倍的加速。
 
 已成功测试的模型包括“MobileNetV1”、“MobileNetV2”和“MobileDet”。
 
-## 6.2 目前的限制
+## 6.2 Current Limitations of the Open-Source Stack
 
-- 🔸 **数量化的模型** - NPU 硬件在固定点数学上运行。 浮点型号完全在 CPU 上运行。
-- 🔸 **有限操作** - 只有翻转、添加和融合的ReLU被卸载到NPU。 不支持的操作自动返回CPU。
-- 🔸 **没有高级活动** - 像SiLU (在 YOLOv8中使用) 这样的操作尚未实现。
-- 🔸 **Single-core execution** - 虽然RK3588拥有3个NPU核心，但当前驱动程序每次只使用一个核心。
-- 🔸 **CNN-focused** - 这个堆栈被优化用于复杂神经网络。 基于转换的模型不会加速。
-- 🔸 **早期阶段性能** - 开源堆栈在通过时与专有的 RKNN 驱动程序不匹配。
+- **Quantized models only** — The NPU hardware operates on fixed-point arithmetic. 浮点型号完全在 CPU 上运行。
+- **Limited operations** — Only convolution, addition, and fused ReLU are offloaded to the NPU. 不支持的操作自动返回CPU。
+- **No advanced activations** — Operations like SiLU (used in YOLOv8) are not yet implemented.
+- **Single-core execution** — While the RK3588 has 3 NPU cores, the current driver uses only one core at a time.
+- **CNN-focused** — The stack is optimized for convolutional neural networks. 基于转换的模型不会加速。
+- **Early-stage performance** — The open-source stack does not yet match the proprietary RKNN driver in throughput.
 
 > 对于不支持的操作，Teflon 代表自动返回CPU，所以混合操作的模型仍将正确运行，只要部分加速。
 > {.is-info}
 
-# 9. 所有权替代品(RKNN)
+# 9. 🤝 贡献
 
-Rockchip 提供 `RKNN-Toolkit2` ，一个NPU 内推的专有的 SDK 支持比当前开源堆栈更多的操作和更高的性能。 它包括模型转换工具 (ONX, TensorFlow, PyTorch 到 RKNN 格式)和运行时库。
-
-然而，RKNN-工具包2：
-
-- 需要供应商内核(`linux-rockchip-rkr3`)
-- 不是开源
-- 使用专有的二进制驱动
-
-> 如果您需要最大的NPU性能或对复杂型号的支持 (YOLO, 变压器)，包含供应商内核的RKNN-Toolkit2 目前是更加能量化的选项。 开源堆栈正在积极改进，并且是推荐的长期路径。
-> {.is-info}
-
-The RKNN-Toolkit2 repository is available at [github.com/airockchip/rknn-toolkit2](https://github.com/airockchip/rknn-toolkit2).
-
-> 欲了解更多信息的外观 [here](/NPU/RKNN)。
-> {.is-info}
-
-# 4. 🤝 贡献
-
-## 8.1 no /dev/grad/grading 0
+## 7.1 No /dev/accel/accel0
 
 - 在内核中验证火箭模块可用：
 
@@ -244,7 +223,7 @@ zgrep CONFIG_DRM_ACCEL_ROCKET /proc/config.gz
 
 输出应显示 `CONFIG_DRM_ACCEL_ROCKET=m` 或 `CONFIG_DRM_ACCEL_ROCKET=y`。 如果不是，你需要一个内核`6.18`，或此选项已启用。
 
-## 8.2 Teflon 代表加载失败
+## 7.2 Teflon Delegate Fails to Load
 
 - 检查使用Teflon 支持构建梅萨：
 
@@ -254,7 +233,7 @@ pacman -Ql mesa | grep teflon
 
 如果`libteflon.so`未列出, 已安装的Mesa版本可能不包括 Teflon。 更新网格或检查 BredOS 仓库的更新包。
 
-## 8.3 tfrete-runtime 安装失败
+## 7.3 tflite-runtime Installation Fails
 
 如果“pip install tflite-runtime”失败，则使用“no match distribution”错误，请验证您正在使用 `Python 3.11`：
 
@@ -266,9 +245,9 @@ python3.11 --version
 
 `tflite-runtime`软件包没有为所有Python版本提供轮子。 Python `3.11`是最新版本，并且已确认支持。
 
-# 10. 参考
+# 8. 参考
 
 - [Rockchip NPU 更新 6: 我们是主线！](https://blog.tomeuvizoso.net/2025/07/rockchip-npu-update-6-we-are-in-mainline.html) - Tomeu Vizoso
 - [grand/row火箭内核文档](https://docs.kernel.org/accel/rocket/index.html) - kernel.org
-- [RKNN-Toolkit2](https://github.com/airockchip/rknn-toolkit2) - Rockchip/Airockchip
 - [Collabora RK3588 mainline status](https://gitlab.collabora.com/hardware-enablement/rockchip-3588/notes-for-rockchip-3588/-/blob/main/mainline-status.md) - Collabora
+- [Running mainline Linux on Rockchip: a year in review](https://www.collabora.com/news-and-blog/blog/2026/03/02/running-mainline-linux-u-boot-and-mesa-on-rockchip-a-year-in-review/) - Collabora (FOSDEM 2026)
