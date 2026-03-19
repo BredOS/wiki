@@ -37,60 +37,60 @@ RKNN-Toolkit2 需要：
 | rknn_model_zoo | YOLOv5, v8, v10, v11  | 50+ FPS (YOLOV8n) | [airockchip/rknn_model_zoo](https://github.com/airockchip/rknn_model_zoo)       |
 | rknn-cpp-yolo                                            | YOLOv11 + RGA preproc | 25 FPS (YOLOv11s) | [yuunnn-w/rknn-cpp-yolo](https://github.com/yuunnn-w/rknn-cpp-yolo)                                                       |
 | YoloV5-NPU                                               | YOLOv5/v6/v7/v8       | 53 FPS (YOLOv8n)  | [Qengineering/YoloV5-NPU](https://github.com/Qengineering/YoloV5-NPU)                                                     |
-| ros_rknn_yolo  | YOLO as ROS node      | Real-time                            | [BluewhaleRobot/ros_rknn_yolo](https://github.com/BluewhaleRobot/ros_rknn_yolo) |
+| ros_rknn_yolo  | YOLO 作为ROS节点          | 实际时间                                 | [BluewhaleRobot/ros_rknn_yolo](https://github.com/BluewhaleRobot/ros_rknn_yolo) |
 | {.dense}                                 |                       |                                      |                                                                                                                           |
 
 ### LLM and Multimodal Inference
 
-Rockchip provides [rknn-llm](https://github.com/airockchip/rknn-llm), a dedicated toolkit for running large language models and vision-language models on the NPU:
+Rockchip 提供 [rknn-llm](https://github.com/airockchip/rknn-llm，一个用于在NPU上运行大型语言模型和视觉语言模型的专用工具包：
 
-- **Qwen2-VL**: multimodal vision-language model running entirely on NPU
-- **DeepSeek-R1-Distill-Qwen-1.5B**: distilled reasoning model
-- **rkllm_server**: local API server for LLM inference
-- **Multimodal dialogue**: interactive text+image conversations
+- **Qwen2-VL**：完全在NPU上运行的多式联运视觉语言模型
+- **DeepSeek-R1-Distill-Qwen-1.5B**：精炼推理模型
+- **rkllm_server**：LLM 内嵌本地API服务器
+- **多式对话**：交互式文本+图像对话
 
-### Speech and Audio
+### 语音和音频
 
-Available in [rknn_model_zoo](https://github.com/airockchip/rknn_model_zoo):
+[rknn_model_zoo](https://github.com/airockchip/rknn_model_zoo):
 
-- **Whisper**: speech-to-text transcription
-- **Zipformer**: streaming speech recognition
-- **MMS-TTS**: text-to-speech synthesis
-- **Wav2Vec**: speech representation learning
-- **YamNet**: audio event classification
+- **Whisper**: speeching to text translation
+- **Zipformer**：流媒体语音识别
+- **MMS-TTS**：文本到语音合成。
+- **Wav2Vec**：语音演示学习
+- **YamNet**：音频事件分类
 
-### Other Vision Tasks
+### 其他视觉任务
 
-- **RetinaFace**: face detection (243 FPS with mobile320 model)
-- **MobileSAM**: segment-anything on edge devices
-- **CLIP**: image-text matching and zero-shot classification
-- **PPOCR**: text detection and recognition (OCR)
-- **YOLOv8-Pose**: human pose estimation
-- **YOLOv8-OBB**: oriented bounding box detection
+- **RetinaFace**：面部检测(243 FPS 带有mobile320 模式)
+- **MobileSAM**：边缘设备上的任何片段
+- **CLIP**：图像文本匹配和零截图分类
+- **PPOCR**：文本检测和识别 (OCR)
+- **YOLOv8-pose**：人类的估计值
+- **YOLOv8-OBB**：定向边界框检测
 
-## 2.4 When to Use Which Stack
+## 2.4 何时使用哪个应用
 
-| Use Case                                                 | Recommended Stack                                       | BredOS Image                               |
-| -------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------ |
-| Simple CNN classification (MobileNet) | Rocket + Teflon (open-source)        | Cutting Edge (mainline) |
-| Object detection (YOLO)               | RKNN-Toolkit2                                           | Legacy (BSP)            |
-| LLM inference on NPU                                     | RKNN-LLM                                                | Legacy (BSP)            |
-| Speech recognition                                       | RKNN-Toolkit2                                           | Legacy (BSP)            |
-| Long-term mainline support                               | Rocket + Teflon (improving upstream) | Cutting Edge (mainline) |
-| {.dense}                                 |                                                         |                                            |
+| 使用大小写                                     | 推荐应用                                | BredOS 图像                   |
+| ----------------------------------------- | ----------------------------------- | --------------------------- |
+| 简单的 CNN 分类 (MobileNet) | 火箭+Teflon (开源)   | 剪切边缘(主线) |
+| 对象检测 (YOLO)            | RKNN-工具包2                           | 传统(BSP)  |
+| NPU上的 LLM 推文                              | RKNN-LLM                            | 传统(BSP)  |
+| 语音识别                                      | RKNN-工具包2                           | 传统(BSP)  |
+| 长期主线支持                                    | 火箭+Teflon (改进上游) | 剪切边缘(主线) |
+| {.dense}                  |                                     |                             |
 
-> If you need maximum NPU performance or support for complex models (YOLO, LLMs, transformers), the RKNN-Toolkit2 with a vendor BSP kernel is currently the more capable option. The open-source Rocket + Teflon stack is actively improving and is the recommended long-term path for mainline kernel users.
+> 如果您需要最大的NPU性能或对复杂模型的支持(YOLO, LLMs, 变压器) 带有供应商BSP 内核的 RKNN-Toolkit2 目前是更具能力的选项。 开源火箭+Teflon堆栈正在积极改进，是主线内核用户推荐的长期路径。
 > {.is-info}
 
 # 3. 🤝 贡献
 
-## 3.1 RKNN-Toolkit2 Does Not Work
+## 3.1 RKNN-工具包2 不工作
 
-RKNN-Toolkit2 requires the proprietary `rknpu.ko` driver, which is only available in BSP kernels. If you are running a BredOS **Cutting Edge** (mainline) image, switch to a **Legacy** (BSP) image or use the open-source Rocket + Teflon stack instead. See [section 7.2](#h-72-requirements).
+RKNN-Toolkit2 需要专有的 `rknpu.ko` 驱动器，这只能在 BSP 内核中使用。 如果您正在运行 BredOS **剪切边** (主线) 图像，请切换到 **Legacy** (BSP) 图像或使用开源火箭+Teflon 堆栈。 See [section 7.2](#h-72-requirements).
 
-# 5. References
+# 5. 参考
 
 - [RKNN-Toolkit2](https://github.com/airockchip/rknn-toolkit2) - Rockchip/Airockchip
 - [RKNN-LLM](https://github.com/airockchip/rknn-llm) - Rockchip/Airockchip (LLM inference on NPU)
-- [RKNN Model Zoo](https://github.com/airockchip/rknn_model_zoo) - Rockchip/Airockchip (official demos and benchmarks)
-- [rknpu2 userspace library](https://github.com/rockchip-linux/rknpu2) - Rockchip
+- [RKNN 模型动物园](https://github.com/airockchip/rknn_model_zoo) - Rockchip/Airockchip (官方演示和基准)
+- [rknpu2 用户空间库](https://github.com/rockchip-linux/rknpu2) - Rockchip
