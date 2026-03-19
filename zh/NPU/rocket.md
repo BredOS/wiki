@@ -28,7 +28,7 @@ dateCreated: 2026-02-24T09：27：47.353Z
 
 所有带有`RK3588`或`RK3588S`的蓝牙支持板可以使用NPU。 This includes the Rock 5B, Rock 5B Plus, Orange Pi 5 series, and others listed on the [supported devices](/en/table-of-supported-devices) page.
 
-# 4. Software Stack (Open-Source)
+# 4. 软件堆栈(开放源代码)
 
 开源NPU堆栈有两个组件：
 
@@ -36,7 +36,7 @@ dateCreated: 2026-02-24T09：27：47.353Z
 
 `Rocket`驱动程序是一个加速器驱动程序(`grav`子系统')，用于管理NPU硬件：启动/关闭，分配内存缓冲器和提交工作。 它暴露在`/dev/grad/redded0`上。
 
-The driver was developed by [Tomeu Vizoso](https://blog.tomeuvizoso.net/) and merged into mainline Linux `6.18`. BredOS 内核`6.18`，然后默认包括它。
+驱动程序是由 [Tomeu Vizoso](https://blog.tomeuvizoso.net/)开发的，并合并到 Linux `6.18` 主线。 BredOS 内核`6.18`，然后默认包括它。
 
 ## 3.2 用户空间(Mesa Teflon)
 
@@ -188,9 +188,9 @@ NPU为这一模型提供了大约3-4倍的加速。
 
 # 🔄 3. 能力和限制
 
-## 6.1 What the Open-Source Stack Supports
+## 6.1 开放源码应用支持什么
 
-The Rocket + Teflon stack supports the following TFLite operations on the NPU:
+火箭+Teflon堆栈支持在NPU上的下列TFLite操作：
 
 - Convolutions (most configurs)
 - 租户添加
@@ -199,21 +199,21 @@ The Rocket + Teflon stack supports the following TFLite operations on the NPU:
 
 已成功测试的模型包括“MobileNetV1”、“MobileNetV2”和“MobileDet”。
 
-## 6.2 Current Limitations of the Open-Source Stack
+## 6.2 开放源码头目前的限制
 
-- **Quantized models only** — The NPU hardware operates on fixed-point arithmetic. 浮点型号完全在 CPU 上运行。
-- **Limited operations** — Only convolution, addition, and fused ReLU are offloaded to the NPU. 不支持的操作自动返回CPU。
-- **No advanced activations** — Operations like SiLU (used in YOLOv8) are not yet implemented.
-- **Single-core execution** — While the RK3588 has 3 NPU cores, the current driver uses only one core at a time.
-- **CNN-focused** — The stack is optimized for convolutional neural networks. 基于转换的模型不会加速。
-- **Early-stage performance** — The open-source stack does not yet match the proprietary RKNN driver in throughput.
+- **仅限定数量的模型** - NPU硬件使用固定点算术。 浮点型号完全在 CPU 上运行。
+- **有限操作** - 只有潜入、添加和引爆的RELU卸载到NPU。 不支持的操作自动返回CPU。
+- **没有高级活动** - 像SiLU (在YOLOv8中使用)这样的操作尚未实现。
+- **单核执行** — 虽然RK3588拥有3个NPU核心，但当前驱动程序每次只使用一个核心。
+- **CNN焦点** — 堆栈优化用于复杂神经网络。 基于转换的模型不会加速。
+- **早期性能** - 开源堆栈在通过时与专有的 RKNN 驱动程序不匹配。
 
 > 对于不支持的操作，Teflon 代表自动返回CPU，所以混合操作的模型仍将正确运行，只要部分加速。
 > {.is-info}
 
 # 9. 🤝 贡献
 
-## 7.1 No /dev/accel/accel0
+## 7.1 没有/dev/grad/grading 0
 
 - 在内核中验证火箭模块可用：
 
@@ -223,7 +223,7 @@ zgrep CONFIG_DRM_ACCEL_ROCKET /proc/config.gz
 
 输出应显示 `CONFIG_DRM_ACCEL_ROCKET=m` 或 `CONFIG_DRM_ACCEL_ROCKET=y`。 如果不是，你需要一个内核`6.18`，或此选项已启用。
 
-## 7.2 Teflon Delegate Fails to Load
+## 7.2 Teflon 代表负载失败
 
 - 检查使用Teflon 支持构建梅萨：
 
@@ -233,7 +233,7 @@ pacman -Ql mesa | grep teflon
 
 如果`libteflon.so`未列出, 已安装的Mesa版本可能不包括 Teflon。 更新网格或检查 BredOS 仓库的更新包。
 
-## 7.3 tflite-runtime Installation Fails
+## 7.3 tflite-runtime 安装失败
 
 如果“pip install tflite-runtime”失败，则使用“no match distribution”错误，请验证您正在使用 `Python 3.11`：
 
@@ -245,9 +245,9 @@ python3.11 --version
 
 `tflite-runtime`软件包没有为所有Python版本提供轮子。 Python `3.11`是最新版本，并且已确认支持。
 
-# 8. 参考
+# 4. 参考
 
 - [Rockchip NPU 更新 6: 我们是主线！](https://blog.tomeuvizoso.net/2025/07/rockchip-npu-update-6-we-are-in-mainline.html) - Tomeu Vizoso
 - [grand/row火箭内核文档](https://docs.kernel.org/accel/rocket/index.html) - kernel.org
 - [Collabora RK3588 mainline status](https://gitlab.collabora.com/hardware-enablement/rockchip-3588/notes-for-rockchip-3588/-/blob/main/mainline-status.md) - Collabora
-- [Running mainline Linux on Rockchip: a year in review](https://www.collabora.com/news-and-blog/blog/2026/03/02/running-mainline-linux-u-boot-and-mesa-on-rockchip-a-year-in-review/) - Collabora (FOSDEM 2026)
+- [在 Rockchip上运行主线Linux : 一年审查](https://www.collabora.com/news-and-blog/blog/2026/03/02/running-mainline-linux-u-boot-and-mesa-on-rockchip-a-year-in-review/) - Collabora (FOSDEM 2026)
