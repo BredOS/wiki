@@ -1,14 +1,19 @@
 ---
 title: RKNN 驱动程序(BSP Kernel)
 description:
-published: false
-date: 2026-03-19T13：28：51.474Z
+published: true
+date: 2026-03-20T09：07：01.581Z
 tags:
 editor: markdown
 dateCreated: 2026-02-24T09:28:20.286Z
 ---
 
 # 2. 上岗培训
+
+Rockchip的RK35xx系列包括一个综合神经处理股，旨在加速嵌入式设备上的机器学习工作量。 与这种硬件的接口通常涉及RKN驱动程序，它提供用户空间应用与NPU之间的联系。 对于在这些平台上工作的开发者来说，了解驱动程序是如何结构是有用的， 它依赖于什么组件，以及它如何管理诸如模型执行和内存处理等任务。 这篇文章简要概述了RK35xx chips上的 RKNN 驱动程序及其在软件堆栈中的作用。
+
+> 本指南涵盖已关闭的源头堆栈(RKNN)。 将开启灵魂火箭驱动器改为我们关于 [Rocket](/en/NPU/rocket)的文章。
+> {.is-info}
 
 # 3. 专有堆栈(RKNN-Toolkit2)
 
@@ -20,7 +25,7 @@ Rockchip 提供 `RKNN-Toolkit2` ，一个NPU 内推的专有的 SDK 支持比当
 
 RKNN-Toolkit2 需要：
 
-- 一个 **BSP 内核** 和专有的 `rknpu.ko` 驱动程序（如：`linux-rockchip-rkr3` 或 `linux-rockchip-rkr6` 包在 BredOS Legacy上）
+- 一个 **BSP 内核** 和专有的 `rknpu.ko` 驱动程序(如`linux-rockchip-rkr3` 包在 BredOS Legacy)
 - The `rknpu2` userspace library from [rockchip-linux/rknpu2](https://github.com/rockchip-linux/rknpu2)
 
 > 在 BredOS, 专有的 `rknpu.ko` 驱动程序在 **Legacy** (BSP) 图像上可用。 如果您正在运行一个 **剪切边** (主线) 图像，则使用开源火箭驱动程序，RKNN Toolkit2 将无法工作。 使用"uname -r"检查您的内核轨迹-BSP 内核显示类似于"6.1.x-rkrX-bredos"的版本，而主内核则显示"6.19.x-bredos"或"7.x"。
@@ -68,25 +73,11 @@ Rockchip 提供 [rknn-llm](https://github.com/airockchip/rknn-llm，一个用于
 - **YOLOv8-pose**：人类的估计值
 - **YOLOv8-OBB**：定向边界框检测
 
-## 2.4 何时使用哪个应用
-
-| 使用大小写                                     | 推荐应用                                | BredOS 图像                   |
-| ----------------------------------------- | ----------------------------------- | --------------------------- |
-| 简单的 CNN 分类 (MobileNet) | 火箭+Teflon (开源)   | 剪切边缘(主线) |
-| 对象检测 (YOLO)            | RKNN-工具包2                           | 传统(BSP)  |
-| NPU上的 LLM 推文                              | RKNN-LLM                            | 传统(BSP)  |
-| 语音识别                                      | RKNN-工具包2                           | 传统(BSP)  |
-| 长期主线支持                                    | 火箭+Teflon (改进上游) | 剪切边缘(主线) |
-| {.dense}                  |                                     |                             |
-
-> 如果您需要最大的NPU性能或对复杂模型的支持(YOLO, LLMs, 变压器) 带有供应商BSP 内核的 RKNN-Toolkit2 目前是更具能力的选项。 开源火箭+Teflon堆栈正在积极改进，是主线内核用户推荐的长期路径。
-> {.is-info}
-
 # 3. 🤝 贡献
 
 ## 3.1 RKNN-工具包2 不工作
 
-RKNN-Toolkit2 需要专有的 `rknpu.ko` 驱动器，这只能在 BSP 内核中使用。 如果您正在运行 BredOS **剪切边** (主线) 图像，请切换到 **Legacy** (BSP) 图像或使用开源火箭+Teflon 堆栈。 See [section 7.2](#h-72-requirements).
+RKNN-Toolkit2 需要专有的 `rknpu.ko` 驱动器，这只能在 BSP 内核中使用。 如果您正在运行 BredOS **剪切边** (主线) 图像，请切换到 **Legacy** (BSP) 图像或使用开源火箭+Teflon 堆栈。
 
 # 5. 参考
 
