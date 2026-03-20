@@ -2,7 +2,7 @@
 title: NPU
 description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
 published: true
-date: 2026-03-20T09:07:00.041Z
+date: 2026-03-20T09:09:08.606Z
 tags: npu, rk3588, ai, machine-learning
 editor: markdown
 dateCreated: 2026-02-18T09:54:15.539Z
@@ -41,7 +41,7 @@ There are **two separate software stacks** for the RK3588 NPU, each with differe
 {.is-info}
 
 ## 2.2 Further Information
-To find futher information on how to use the NPU of your Chip refer to the article according to your driver.
+To find further information on how to use the NPU of your chip refer to the article according to your driver.
 
 - For BSP (Legacy) [click here](/NPU/RKNN).
 - For Mainline (cutting edge) [click here](/en/NPU/rocket).
