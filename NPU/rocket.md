@@ -1,8 +1,8 @@
 ---
 title: Rocket driver (Mainline Kernel)
 description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
-published: false
-date: 2026-03-20T09:04:42.909Z
+published: true
+date: 2026-03-20T09:07:03.178Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:27:47.353Z
