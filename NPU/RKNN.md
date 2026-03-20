@@ -2,13 +2,17 @@
 title: RKNN driver (BSP Kernel)
 description: 
 published: false
-date: 2026-03-19T13:28:51.474Z
+date: 2026-03-20T09:06:11.289Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:28:20.286Z
 ---
 
 # 1. Intoduction
+The RK35xx series from Rockchip includes an integrated Neural Processing Unit (NPU) designed to accelerate machine learning workloads on embedded devices. Interfacing with this hardware typically involves the RKNN driver, which provides the connection between user-space applications and the NPU. For developers working on these platforms, it is useful to understand how the driver is structured, what components it depends on, and how it manages tasks such as model execution and memory handling. This article gives a brief overview of the RKNN driver on RK35xx chips and its role within the software stack.
+
+> This guide covers the closed-source stack (RKNN). For the open-souce rocket driver, read our article on [Rocket](/en/NPU/rocket).
+{.is-info}
 
 # 2. Proprietary Stack (RKNN-Toolkit2)
 
@@ -20,7 +24,7 @@ Rockchip provides `RKNN-Toolkit2`, a proprietary SDK for NPU inference that supp
 
 RKNN-Toolkit2 requires:
 
-- A **BSP kernel** with the proprietary `rknpu.ko` driver (e.g., `linux-rockchip-rkr3` or `linux-rockchip-rkr6` packages on BredOS Legacy)
+- A **BSP kernel** with the proprietary `rknpu.ko` driver (e.g., `linux-rockchip-rkr3` packages on BredOS Legacy)
 - The `rknpu2` userspace library from [rockchip-linux/rknpu2](https://github.com/rockchip-linux/rknpu2)
 
 > On BredOS, the proprietary `rknpu.ko` driver is available on **Legacy** (BSP) images. If you are running a **Cutting Edge** (mainline) image, the open-source Rocket driver is used instead and RKNN-Toolkit2 will not work. Check your kernel track with `uname -r` — BSP kernels show versions like `6.1.x-rkrX-bredos`, while mainline kernels show `6.19.x-bredos` or `7.x`.
@@ -67,20 +71,6 @@ Available in [rknn_model_zoo](https://github.com/airockchip/rknn_model_zoo):
 - **PPOCR**: text detection and recognition (OCR)
 - **YOLOv8-Pose**: human pose estimation
 - **YOLOv8-OBB**: oriented bounding box detection
-
-## 2.4 When to Use Which Stack
-
-| Use Case | Recommended Stack | BredOS Image |
-|----------|-------------------|--------------|
-| Simple CNN classification (MobileNet) | Rocket + Teflon (open-source) | Cutting Edge (mainline) |
-| Object detection (YOLO) | RKNN-Toolkit2 | Legacy (BSP) |
-| LLM inference on NPU | RKNN-LLM | Legacy (BSP) |
-| Speech recognition | RKNN-Toolkit2 | Legacy (BSP) |
-| Long-term mainline support | Rocket + Teflon (improving upstream) | Cutting Edge (mainline) |
-{.dense}
-
-> If you need maximum NPU performance or support for complex models (YOLO, LLMs, transformers), the RKNN-Toolkit2 with a vendor BSP kernel is currently the more capable option. The open-source Rocket + Teflon stack is actively improving and is the recommended long-term path for mainline kernel users.
-{.is-info}
 
 # 3. Troubleshooting
 
