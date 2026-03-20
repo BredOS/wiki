@@ -2,7 +2,7 @@
 title: 火箭驱动程序(主线Kernel)
 description: 使用 BredOS 在Rockchip SOC上设置和使用神经处理股
 published: true
-date: 2026-03-20T09：07：03.178Z
+date: 2026-03-20T12:05:16.474Z
 tags:
 editor: markdown
 dateCreated: 2026-02-24T09：27：47.353Z
@@ -250,5 +250,4 @@ python3.11 --version
 
 - [Rockchip NPU 更新 6: 我们是主线！](https://blog.tomeuvizoso.net/2025/07/rockchip-npu-update-6-we-are-in-mainline.html) - Tomeu Vizoso
 - [grand/row火箭内核文档](https://docs.kernel.org/accel/rocket/index.html) - kernel.org
-- [RKNN-Toolkit2](https://github.com/airockchip/rknn-toolkit2) - Rockchip/Airockchip
 - [Collabora RK3588 mainline status](https://gitlab.collabora.com/hardware-enablement/rockchip-3588/notes-for-rockchip-3588/-/blob/main/mainline-status.md) - Collabora
