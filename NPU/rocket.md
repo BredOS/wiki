@@ -2,7 +2,7 @@
 title: Rocket driver (Mainline Kernel)
 description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
 published: true
-date: 2026-03-20T09:07:03.178Z
+date: 2026-03-20T12:05:16.474Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:27:47.353Z
@@ -249,5 +249,4 @@ The `tflite-runtime` package does not provide wheels for all Python versions. Py
 
 - [Rockchip NPU update 6: We are in mainline!](https://blog.tomeuvizoso.net/2025/07/rockchip-npu-update-6-we-are-in-mainline.html) - Tomeu Vizoso
 - [accel/rocket kernel documentation](https://docs.kernel.org/accel/rocket/index.html) - kernel.org
-- [RKNN-Toolkit2](https://github.com/airockchip/rknn-toolkit2) - Rockchip/Airockchip
 - [Collabora RK3588 mainline status](https://gitlab.collabora.com/hardware-enablement/rockchip-3588/notes-for-rockchip-3588/-/blob/main/mainline-status.md) - Collabora
