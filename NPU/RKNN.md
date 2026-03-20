@@ -2,7 +2,7 @@
 title: RKNN driver (BSP Kernel)
 description: 
 published: false
-date: 2026-03-20T09:06:11.289Z
+date: 2026-03-20T09:06:33.955Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:28:20.286Z
@@ -76,7 +76,7 @@ Available in [rknn_model_zoo](https://github.com/airockchip/rknn_model_zoo):
 
 ## 3.1 RKNN-Toolkit2 Does Not Work
 
-RKNN-Toolkit2 requires the proprietary `rknpu.ko` driver, which is only available in BSP kernels. If you are running a BredOS **Cutting Edge** (mainline) image, switch to a **Legacy** (BSP) image or use the open-source Rocket + Teflon stack instead. See [section 7.2](#h-72-requirements).
+RKNN-Toolkit2 requires the proprietary `rknpu.ko` driver, which is only available in BSP kernels. If you are running a BredOS **Cutting Edge** (mainline) image, switch to a **Legacy** (BSP) image or use the open-source Rocket + Teflon stack instead.
 
 
 # 4. References
