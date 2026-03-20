@@ -2,7 +2,7 @@
 title: Rocket driver (Mainline Kernel)
 description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
 published: false
-date: 2026-03-20T08:55:01.180Z
+date: 2026-03-20T09:04:42.909Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-24T09:27:47.353Z
@@ -26,7 +26,7 @@ Since kernel `6.18`, mainline Linux includes the open-source `Rocket` driver for
 > The Rocket driver currently supports only the `RK3588` family. Support for additional Rockchip SoCs is planned upstream.
 {.is-info}
 
-All BredOS-supported boards with an `RK3588` or `RK3588S` SoC can use the NPU. This includes the Rock 5B, Rock 5B Plus, Orange Pi 5 series, and others listed on the [supported devices](/en/table-of-supported-devices) page.
+All BredOS-supported boards with an `RK3588` or `RK3588S` SoC and support for mainline can use the NPU. This includes the Rock 5B, Rock 5B Plus, Orange Pi 5 series, and others listed on the [supported devices](/en/table-of-supported-devices) page.
 
 # 3. Software Stack
 
@@ -68,7 +68,7 @@ sudo modprobe rocket
 ls -l /dev/accel/accel0
 ```
 
-> If `/dev/accel/accel0` does not exist, your kernel may be older than `6.18` or missing the `CONFIG_DRM_ACCEL_ROCKET` option. Update to a recent BredOS kernel.
+> If `/dev/accel/accel0` does not exist, your kernel may be older than `6.18` or missing the `CONFIG_DRM_ACCEL_ROCKET` option. Update to a recent BredOS kernel and have a look at [7. Troubleshooting](#h-7-Troubleshooting).
 {.is-warning}
 
 ## 4.2 Install Userspace Packages
@@ -201,12 +201,12 @@ Models that have been tested successfully include `MobileNetV1`, `MobileNetV2`, 
 
 ## 6.2 Current Limitations
 
-- 🔸 **Quantized models only** - The NPU hardware operates on fixed-point arithmetic. Floating-point models run entirely on the CPU.
-- 🔸 **Limited operations** - Only convolution, addition, and fused ReLU are offloaded to the NPU. Unsupported operations fall back to CPU automatically.
-- 🔸 **No advanced activations** - Operations like SiLU (used in YOLOv8) are not yet implemented.
-- 🔸 **Single-core execution** - While the RK3588 has 3 NPU cores, the current driver uses only one core at a time.
-- 🔸 **CNN-focused** - The stack is optimized for convolutional neural networks. Transformer-based models are not accelerated.
-- 🔸 **Early-stage performance** - The open-source stack does not yet match the proprietary RKNN driver in throughput.
+- **Quantized models only** - The NPU hardware operates on fixed-point arithmetic. Floating-point models run entirely on the CPU.
+- **Limited operations** - Only convolution, addition, and fused ReLU are offloaded to the NPU. Unsupported operations fall back to CPU automatically.
+- **No advanced activations** - Operations like SiLU (used in YOLOv8) are not yet implemented.
+- **Single-core execution** - While the RK3588 has 3 NPU cores, the current driver uses only one core at a time.
+- **CNN-focused** - The stack is optimized for convolutional neural networks. Transformer-based models are not accelerated.
+- **Early-stage performance** - The open-source stack does not yet match the proprietary RKNN driver in throughput.
 
 > The Teflon delegate automatically falls back to CPU for unsupported operations, so models with mixed operations will still run correctly, just with partial acceleration.
 {.is-info}
