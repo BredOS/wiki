@@ -1,8 +1,8 @@
 ---
 title: NPU
 description: Setting up and using the Neural Processing Unit on Rockchip SoCs with BredOS
-published: false
-date: 2026-03-20T09:06:08.111Z
+published: true
+date: 2026-03-20T09:07:00.041Z
 tags: npu, rk3588, ai, machine-learning
 editor: markdown
 dateCreated: 2026-02-18T09:54:15.539Z
